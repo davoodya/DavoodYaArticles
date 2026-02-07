@@ -1,16 +1,165 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <title>
+        {{ if .IsHome }}
+        {{ .Site.Title }}
+        {{ else }}
+        {{ .Title }} | {{ .Site.Title }}
+        {{ end }}
+    </title>
+
+    <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    {{ $style := resources.Get "css/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+
+    <!-- ========================= -->
+    <!-- SCHEMA STRUCTURED DATA -->
+    <!-- ========================= -->
+
+    {{/* ----------------------------------- */}}
+    {{/* WebSite + Person (Home Only) */}}
+    {{/* ----------------------------------- */}}
+
+    {{ if .IsHome }}
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "{{ .Site.BaseURL }}#website",
+            "name": "{{ .Site.Title }}",
+            "url": "{{ .Site.BaseURL }}",
+            "description": "{{ .Site.Params.description }}",
+            "inLanguage": "fa-IR",
+            "publisher": {
+                "@type": "Person",
+                "@id": "{{ .Site.BaseURL }}#person"
+            }
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "@id": "{{ .Site.BaseURL }}#person",
+            "name": "Davood Yahya",
+            "url": "{{ .Site.BaseURL }}",
+            "jobTitle": "Cyber Security Consultant",
+            "sameAs": [
+                "https://github.com/davoodya",
+                "https://youtube.com/@YakuzaCyberSec"
+            ]
+        }
+    </script>
+
+    {{ end }}
+
+    {{/* ----------------------------------- */}}
+    {{/* Article Schema (Single Pages) */}}
+    {{/* ----------------------------------- */}}
+
+    {{ if and .IsPage (not .IsHome) }}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "{{ .Site.BaseURL }}#website",
+            "name": "{{ .Site.Title }}",
+            "url": "{{ .Site.BaseURL }}",
+            "description": "{{ .Site.Params.description }}",
+            "inLanguage": "fa-IR",
+            "publisher": {
+                "@type": "Person",
+                "@id": "{{ .Site.BaseURL }}#person"
+            }
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "@id": "{{ .Site.BaseURL }}#person",
+            "name": "Davood Yahya",
+            "url": "{{ .Site.BaseURL }}",
+            "jobTitle": "Cyber Security Consultant",
+            "sameAs": [
+                "https://github.com/davoodya",
+                "https://youtube.com/@YakuzaCyberSec"
+            ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "{{ .Permalink }}"
+            },
+            "headline": "{{ .Title }}",
+            "description": "{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}",
+            "author": {
+                "@type": "Person",
+                "@id": "{{ .Site.BaseURL }}#person"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "{{ .Site.Title }}",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "{{ "images/logo.png" | absURL }}"
+                }
+            },
+            "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+            "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+            "inLanguage": "fa-IR"
+        }
+    </script>
+
+    {{ end }}
+
+    {{/* ----------------------------------- */}}
+    {{/* CollectionPage Schema (Sections) */}}
+    {{/* ----------------------------------- */}}
+
+    {{ if .IsSection }}
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "{{ .Title }}",
+            "url": "{{ .Permalink }}",
+            "description": "{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}"
+        }
+    </script>
+
+    {{ end }}
+
 </head>
 
-<!-- <body class="section-{{ .Section }}"> ==> in /content/articles/ class== section-article | in /content/tools/ class== section-tools -->
-<body class="main-section">
+<body class="section-{{ .Section }} type-{{ .Kind }}">
 
+<header>
+    {{ partial "header.html" . }}
+</header>
+
+<main>
     {{ block "main" . }}{{ end }}
+</main>
+
+<footer>
+    {{ partial "footer.html" . }}
+</footer>
 
 </body>
 </html>

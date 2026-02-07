@@ -1,20 +1,10 @@
-<html>
-  <head>
-	<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "Article",
-	  "headline": "{{ .Title }}",
-	  "description": "{{ .Params.description }}",
-	  "datePublished": "{{ .Date }}",
-	  "author": {
-		"@type": "Person",
-		"name": "Davood Yahay"
-	  }
-	}
-	</script>
-  </head>
-  <body>
-    
-  </body>
-</html>
+{{ define "main" }}
+
+<article class="article-wrapper">
+    <h1 class="article-title">{{ .Title }}</h1>
+    <div class="article-content">
+        {{ .Content }}
+    </div>
+</article>
+
+{{ end }}
