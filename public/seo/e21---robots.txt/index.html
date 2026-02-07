@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Davood Yahay – Cybersecurity Specialist</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="
+TOC
+
+robots.txt File
+
+Whats robots.txt?
+robots.txt Parameters
+
+
+Control robots.txt Using Meta Tags
+
+Description
+Index, Follow
+Meta Tags for robots.txt Management
+
+
+Create robots.txt
+Writing  robots.txt for All Situations
+
+
+robots.txt File
+Whats robots.txt?
+
+وقتیکه خزنده های موتور جستجو به یک وبسایت میرسند در اولین قدم به سراغ فایلی بنام robots.txt میگردد:
+
+![[Pasted image 20260122212030.png]]
+
+
+در واقع robots.txt دستور العمل وبسایت برای موتور جستجو است که چگونه با این وبسایت برخورد کند.
+در واقع در robots.txt مشخص میکنیم کدام صفحات ایندکس شوند و کدام صفحات ایندکس نشوند.
+در واقع اگر میخواهیم تمام وبسایت ما توسط گوگل ایندکس شود وجود این فایل ضروری نیست(مثلا صفحات که برای مدیر هستند و بهتر است برای جلوگیری از نفوذ توسط گوگل ایندکس نشوند)
+اما در بعضی مواقع نمیخواهیم قسمتی از وبسایت ایندکس شود که در اینصورت باید که وجود داشته باشد.
+
+robots.txt Parameters
+
+user-agent
+
+در این قسمت نام ربات جستجو گر را مینویسیم تا بتوانیم رفتار مشخصی را برای هر ربات جستجو گر در نظر بگیریم:
+
+user-agent: googlebot Google Search Engine Bot
+user-agent: Googlebot-Image Google Image Search Engine Bot
+
+
+اگر هم از * استفاده کنیم به معنای تمام ربات هاست:
+
+user-agent: * All Bots
+
+
+در URL زیر میتوانیم نام ربات های جستجوگر را مشاهده کنیم که بیش از 300 ربات هستند که هر کدام نیز رفتار مشخصی دارند:
+
+https://robotstxt.org/db.html
+
+![[Pasted image 20260122212638.png]]
+
+
+
+
+
+
+allow:
+
+آدرس هایی که خزنده گوگل اجازه ایندکس آنها را دارد در این پارامتر مشخص میشود.
+allow: / Mean All Pages in domain
+
+
+disallow:
+
+آدرس هایی که خزنده گوگل اجازه ایندکس آنها را ندارد در این پارامتر مشخص میشود. مانند صفحات کاربری مدیر یا wp-admin که نیازی نیست توسط گوگل ایندکس شوند.
+
+
+sitemap:
+
+در این پارامتر نیز آدرس URL نقشه سایت Site Map قرار میگیرد.
+sitemap: https://site.com/sitemap.xml
+
+
+
+Control robots.txt Using Meta Tags
+Description
+روش دیگری که برای مدیریت پارامتر های robots.txt وجود دارد استفاده از Meta Tags های مربوط به robots.txt است که میتوانیم در هر صفحه از آنها استفاده کنیم:
+![[Pasted image 20260122213042.png]]">
+    <meta name="generator" content="Hugo 0.155.2">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.efe4d852f731d5d1fbb87718387202a97aafd768cdcdaed0662bbe6982e91824.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://davoodya.ir/seo/e21---robots.txt/">
+    
+
+    
+    
+    <meta property="og:url" content="https://davoodya.ir/seo/e21---robots.txt/">
+  <meta property="og:site_name" content="Davood Yahay – Cybersecurity Specialist">
+  <meta property="og:title" content="Davood Yahay – Cybersecurity Specialist">
+  <meta property="og:description" content="TOC robots.txt File Whats robots.txt? robots.txt Parameters Control robots.txt Using Meta Tags Description Index, Follow Meta Tags for robots.txt Management Create robots.txt Writing robots.txt for All Situations robots.txt File Whats robots.txt? وقتیکه خزنده های موتور جستجو به یک وبسایت میرسند در اولین قدم به سراغ فایلی بنام robots.txt میگردد: ![[Pasted image 20260122212030.png]] در واقع robots.txt دستور العمل وبسایت برای موتور جستجو است که چگونه با این وبسایت برخورد کند. در واقع در robots.txt مشخص میکنیم کدام صفحات ایندکس شوند و کدام صفحات ایندکس نشوند. در واقع اگر میخواهیم تمام وبسایت ما توسط گوگل ایندکس شود وجود این فایل ضروری نیست(مثلا صفحات که برای مدیر هستند و بهتر است برای جلوگیری از نفوذ توسط گوگل ایندکس نشوند) اما در بعضی مواقع نمیخواهیم قسمتی از وبسایت ایندکس شود که در اینصورت باید که وجود داشته باشد. robots.txt Parameters user-agent در این قسمت نام ربات جستجو گر را مینویسیم تا بتوانیم رفتار مشخصی را برای هر ربات جستجو گر در نظر بگیریم: user-agent: googlebot Google Search Engine Bot user-agent: Googlebot-Image Google Image Search Engine Bot اگر هم از * استفاده کنیم به معنای تمام ربات هاست: user-agent: * All Bots در URL زیر میتوانیم نام ربات های جستجوگر را مشاهده کنیم که بیش از 300 ربات هستند که هر کدام نیز رفتار مشخصی دارند: https://robotstxt.org/db.html ![[Pasted image 20260122212638.png]] allow: آدرس هایی که خزنده گوگل اجازه ایندکس آنها را دارد در این پارامتر مشخص میشود. allow: / Mean All Pages in domain disallow: آدرس هایی که خزنده گوگل اجازه ایندکس آنها را ندارد در این پارامتر مشخص میشود. مانند صفحات کاربری مدیر یا wp-admin که نیازی نیست توسط گوگل ایندکس شوند. sitemap: در این پارامتر نیز آدرس URL نقشه سایت Site Map قرار میگیرد. sitemap: https://site.com/sitemap.xml Control robots.txt Using Meta Tags Description روش دیگری که برای مدیریت پارامتر های robots.txt وجود دارد استفاده از Meta Tags های مربوط به robots.txt است که میتوانیم در هر صفحه از آنها استفاده کنیم: ![[Pasted image 20260122213042.png]]">
+  <meta property="og:locale" content="fa">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="seo">
+    <meta property="article:published_time" content="2026-01-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-22T00:00:00+00:00">
+    <meta property="article:tag" content="CyberSecurity">
+    <meta property="article:tag" content="Security">
+
+  <meta itemprop="name" content="Davood Yahay – Cybersecurity Specialist">
+  <meta itemprop="description" content="TOC robots.txt File Whats robots.txt? robots.txt Parameters Control robots.txt Using Meta Tags Description Index, Follow Meta Tags for robots.txt Management Create robots.txt Writing robots.txt for All Situations robots.txt File Whats robots.txt? وقتیکه خزنده های موتور جستجو به یک وبسایت میرسند در اولین قدم به سراغ فایلی بنام robots.txt میگردد: ![[Pasted image 20260122212030.png]] در واقع robots.txt دستور العمل وبسایت برای موتور جستجو است که چگونه با این وبسایت برخورد کند. در واقع در robots.txt مشخص میکنیم کدام صفحات ایندکس شوند و کدام صفحات ایندکس نشوند. در واقع اگر میخواهیم تمام وبسایت ما توسط گوگل ایندکس شود وجود این فایل ضروری نیست(مثلا صفحات که برای مدیر هستند و بهتر است برای جلوگیری از نفوذ توسط گوگل ایندکس نشوند) اما در بعضی مواقع نمیخواهیم قسمتی از وبسایت ایندکس شود که در اینصورت باید که وجود داشته باشد. robots.txt Parameters user-agent در این قسمت نام ربات جستجو گر را مینویسیم تا بتوانیم رفتار مشخصی را برای هر ربات جستجو گر در نظر بگیریم: user-agent: googlebot Google Search Engine Bot user-agent: Googlebot-Image Google Image Search Engine Bot اگر هم از * استفاده کنیم به معنای تمام ربات هاست: user-agent: * All Bots در URL زیر میتوانیم نام ربات های جستجوگر را مشاهده کنیم که بیش از 300 ربات هستند که هر کدام نیز رفتار مشخصی دارند: https://robotstxt.org/db.html ![[Pasted image 20260122212638.png]] allow: آدرس هایی که خزنده گوگل اجازه ایندکس آنها را دارد در این پارامتر مشخص میشود. allow: / Mean All Pages in domain disallow: آدرس هایی که خزنده گوگل اجازه ایندکس آنها را ندارد در این پارامتر مشخص میشود. مانند صفحات کاربری مدیر یا wp-admin که نیازی نیست توسط گوگل ایندکس شوند. sitemap: در این پارامتر نیز آدرس URL نقشه سایت Site Map قرار میگیرد. sitemap: https://site.com/sitemap.xml Control robots.txt Using Meta Tags Description روش دیگری که برای مدیریت پارامتر های robots.txt وجود دارد استفاده از Meta Tags های مربوط به robots.txt است که میتوانیم در هر صفحه از آنها استفاده کنیم: ![[Pasted image 20260122213042.png]]">
+  <meta itemprop="datePublished" content="2026-01-22T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2026-01-22T00:00:00+00:00">
+  <meta itemprop="wordCount" content="703">
+  <meta itemprop="keywords" content="CyberSecurity,Security">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Davood Yahay – Cybersecurity Specialist">
+  <meta name="twitter:description" content="TOC robots.txt File Whats robots.txt? robots.txt Parameters Control robots.txt Using Meta Tags Description Index, Follow Meta Tags for robots.txt Management Create robots.txt Writing robots.txt for All Situations robots.txt File Whats robots.txt? وقتیکه خزنده های موتور جستجو به یک وبسایت میرسند در اولین قدم به سراغ فایلی بنام robots.txt میگردد: ![[Pasted image 20260122212030.png]] در واقع robots.txt دستور العمل وبسایت برای موتور جستجو است که چگونه با این وبسایت برخورد کند. در واقع در robots.txt مشخص میکنیم کدام صفحات ایندکس شوند و کدام صفحات ایندکس نشوند. در واقع اگر میخواهیم تمام وبسایت ما توسط گوگل ایندکس شود وجود این فایل ضروری نیست(مثلا صفحات که برای مدیر هستند و بهتر است برای جلوگیری از نفوذ توسط گوگل ایندکس نشوند) اما در بعضی مواقع نمیخواهیم قسمتی از وبسایت ایندکس شود که در اینصورت باید که وجود داشته باشد. robots.txt Parameters user-agent در این قسمت نام ربات جستجو گر را مینویسیم تا بتوانیم رفتار مشخصی را برای هر ربات جستجو گر در نظر بگیریم: user-agent: googlebot Google Search Engine Bot user-agent: Googlebot-Image Google Image Search Engine Bot اگر هم از * استفاده کنیم به معنای تمام ربات هاست: user-agent: * All Bots در URL زیر میتوانیم نام ربات های جستجوگر را مشاهده کنیم که بیش از 300 ربات هستند که هر کدام نیز رفتار مشخصی دارند: https://robotstxt.org/db.html ![[Pasted image 20260122212638.png]] allow: آدرس هایی که خزنده گوگل اجازه ایندکس آنها را دارد در این پارامتر مشخص میشود. allow: / Mean All Pages in domain disallow: آدرس هایی که خزنده گوگل اجازه ایندکس آنها را ندارد در این پارامتر مشخص میشود. مانند صفحات کاربری مدیر یا wp-admin که نیازی نیست توسط گوگل ایندکس شوند. sitemap: در این پارامتر نیز آدرس URL نقشه سایت Site Map قرار میگیرد. sitemap: https://site.com/sitemap.xml Control robots.txt Using Meta Tags Description روش دیگری که برای مدیریت پارامتر های robots.txt وجود دارد استفاده از Meta Tags های مربوط به robots.txt است که میتوانیم در هر صفحه از آنها استفاده کنیم: ![[Pasted image 20260122213042.png]]">
+
+      
+      
+    
+	
+  </head><body class="ma0 avenir bg-near-white production is-page is-page page-E21 - robots.txt">
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Davood Yahay – Cybersecurity Specialist
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+
+  <article class="page-E21 - robots.txt flex-l mw7 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        سئو
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2026-01-22T00:00:00Z">ژانویهٔ 22, 2026</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l"><hr>
+<h2 id="toc">TOC</h2>
+<ul>
+<li><a href="#robots.txt%20File">robots.txt File</a>
+<ul>
+<li><a href="#Whats%20%60robots.txt%60?">Whats <code>robots.txt</code>?</a></li>
+<li><a href="#robots.txt%20Parameters">robots.txt Parameters</a></li>
+</ul>
+</li>
+<li><a href="#Control%20robots.txt%20Using%20Meta%20Tags">Control robots.txt Using Meta Tags</a>
+<ul>
+<li><a href="#Description">Description</a></li>
+<li><a href="#Index,%20Follow">Index, Follow</a></li>
+<li><a href="#Meta%20Tags%20for%20robots.txt%20Management">Meta Tags for robots.txt Management</a></li>
+</ul>
+</li>
+<li><a href="#Create%20robots.txt">Create robots.txt</a></li>
+<li><a href="#Writing%20%20robots.txt%20for%20All%20Situations">Writing  robots.txt for All Situations</a></li>
+</ul>
+<hr>
+<h3 id="robotstxt-file">robots.txt File</h3>
+<h4 id="whats-robotstxt">Whats <code>robots.txt</code>?</h4>
+<ol>
+<li>وقتیکه خزنده های موتور جستجو به یک وبسایت میرسند در اولین قدم به سراغ فایلی بنام <code>robots.txt</code> میگردد:
+<ol>
+<li>![[Pasted image 20260122212030.png]]</li>
+</ol>
+</li>
+<li>در واقع <code>robots.txt</code> دستور العمل وبسایت برای موتور جستجو است که چگونه با این وبسایت برخورد کند.</li>
+<li>در واقع در <code>robots.txt</code> مشخص میکنیم کدام صفحات ایندکس شوند و کدام صفحات ایندکس نشوند.</li>
+<li>در واقع اگر میخواهیم تمام وبسایت ما توسط گوگل ایندکس شود وجود این فایل ضروری نیست(مثلا صفحات که برای مدیر هستند و بهتر است برای جلوگیری از نفوذ توسط گوگل ایندکس نشوند)</li>
+<li>اما در بعضی مواقع نمیخواهیم قسمتی از وبسایت ایندکس شود که در اینصورت باید که وجود داشته باشد.</li>
+</ol>
+<h4 id="robotstxt-parameters">robots.txt Parameters</h4>
+<ol>
+<li><code>user-agent</code>
+<ol>
+<li>در این قسمت نام ربات جستجو گر را مینویسیم تا بتوانیم رفتار مشخصی را برای هر ربات جستجو گر در نظر بگیریم:
+<ol>
+<li><code>user-agent: googlebot</code> Google Search Engine Bot</li>
+<li><code>user-agent: Googlebot-Image</code> Google Image Search Engine Bot</li>
+</ol>
+</li>
+<li>اگر هم از <code>*</code> استفاده کنیم به معنای تمام ربات هاست:
+<ol>
+<li><code>user-agent: *</code> All Bots</li>
+</ol>
+</li>
+<li>در URL زیر میتوانیم نام ربات های جستجوگر را مشاهده کنیم که بیش از 300 ربات هستند که هر کدام نیز رفتار مشخصی دارند:
+<ol>
+<li><a href="https://robotstxt.org/db.html">https://robotstxt.org/db.html</a>
+<ol>
+<li>![[Pasted image 20260122212638.png]]</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><code>allow:</code>
+<ol>
+<li>آدرس هایی که خزنده گوگل اجازه ایندکس آنها را دارد در این پارامتر مشخص میشود.</li>
+<li><code>allow: /</code> Mean All Pages in domain</li>
+</ol>
+</li>
+<li><code>disallow:</code>
+<ol>
+<li>آدرس هایی که خزنده گوگل اجازه ایندکس آنها را ندارد در این پارامتر مشخص میشود. مانند صفحات کاربری مدیر یا <code>wp-admin</code> که نیازی نیست توسط گوگل ایندکس شوند.</li>
+</ol>
+</li>
+<li><code>sitemap:</code>
+<ol>
+<li>در این پارامتر نیز آدرس URL نقشه سایت Site Map قرار میگیرد.</li>
+<li><code>sitemap: https://site.com/sitemap.xml</code></li>
+</ol>
+</li>
+</ol>
+<h3 id="control-robotstxt-using-meta-tags">Control robots.txt Using Meta Tags</h3>
+<h4 id="description">Description</h4>
+<p>روش دیگری که برای مدیریت پارامتر های <code>robots.txt</code> وجود دارد استفاده از Meta Tags های مربوط به <code>robots.txt</code> است که میتوانیم در هر صفحه از آنها استفاده کنیم:
+![[Pasted image 20260122213042.png]]</p>
+<h4 id="index-follow">Index, Follow</h4>
+<ol>
+<li>Follow, No Follow
+<ol>
+<li>اگر Follow مقدار برای Meta Tags در نظر گرفته شود یعنی لینک های درون صفحه را دنبال کن(Internal, External)</li>
+<li>اگر No Follow برای Meta Tags در نظر گرفته شود یعنی لینک های درون صفحه را دنبال نکن(Internal, External)</li>
+</ol>
+</li>
+<li>Index, No Index
+<ol>
+<li>اگر Index برای Meta Tags در نظر گرفته شود یعنی صفحه مورد نظر را ایندکس کن.</li>
+<li>اگر No Index برای Meta Tags در نظر گرفته شود یعنی صفحه مورد نظر را ایندکس نکن.</li>
+</ol>
+</li>
+</ol>
+<h4 id="meta-tags-for-robotstxt-management">Meta Tags for robots.txt Management</h4>
+<p>بطور کلی Syntax نوشتن Meta Tags های مدیریت robots.txt به صورت زیر است:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">META</span> <span style="color:#a6e22e">NAME</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ROBOT-NAME&#34;</span> <span style="color:#a6e22e">CONTENT</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;FOLLOW, INDEX&#34;</span>&gt;
+</span></span></code></pre></div><p>بنابراین تگ های مدیریتی به شکل زیر میشوند:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">META</span> <span style="color:#a6e22e">NAME</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ROBOTS&#34;</span> <span style="color:#a6e22e">CONTENT</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;INDEX, FOLLOW&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">META</span> <span style="color:#a6e22e">NAME</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ROBOTS&#34;</span> <span style="color:#a6e22e">CONTENT</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;NOINDEX, FOLLOW&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">META</span> <span style="color:#a6e22e">NAME</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ROBOTS&#34;</span> <span style="color:#a6e22e">CONTENT</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;INDEX, NOFOLLOW&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">META</span> <span style="color:#a6e22e">NAME</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ROBOTS&#34;</span> <span style="color:#a6e22e">CONTENT</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;NOINDEX, NOFOLLOW&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">META</span> <span style="color:#a6e22e">NAME</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;googlebot&#34;</span> <span style="color:#a6e22e">CONTENT</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;INDEX, FOLLOW&#34;</span>&gt;
+</span></span></code></pre></div><ul>
+<li><em>تصویر:</em>
+<ul>
+<li>![[Pasted image 20260122213723.png]]</li>
+</ul>
+</li>
+<li><em>نکته:</em> نام ربات Google Images ها متفاوت از ربات اصلی گوگل است و نام آن <code>Googlebot-Image</code> است، بنابراین میتوان تصاویر یک صفحه را ایندکس نکرد اما محتوای آنرا ایندکس کرد.</li>
+</ul>
+<h3 id="create-robotstxt">Create robots.txt</h3>
+<ul>
+<li>فایل <code>robots.txt</code> حتما باید در Root پروژه ایجاد شود.</li>
+</ul>
+<ol>
+<li>Disallow Path in Website</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>User-Agent: *
+</span></span><span style="display:flex;"><span>disallow: */wp-admin/ #OR disallow: /wp-admin/
+</span></span></code></pre></div><ol start="2">
+<li>Disallow a Picture Indexing for <code>Googlebot-Image</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>User-Agent: Googlebot-Image
+</span></span><span style="display:flex;"><span>disallow: /Images/Logo.png
+</span></span><span style="display:flex;"><span>disallow: /Images/Admin/*
+</span></span></code></pre></div><ol start="3">
+<li>Disallow Type of Pictures(gif) for all bots</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>User-Agent: *
+</span></span><span style="display:flex;"><span>disallow: /*.gif$
+</span></span></code></pre></div><ul>
+<li><em>Picture:</em>
+<ul>
+<li>![[Pasted image 20260122214325.png]]</li>
+</ul>
+</li>
+</ul>
+<h3 id="writing--robotstxt-for-all-situations">Writing  robots.txt for All Situations</h3>
+<p>نوشتن <code>robots.txt</code> برای تمام حالت های ممکن یک امتیاز مثبت برای گوگل و سایر موتور جستجو ها محسوب میشود و باعث میشود موتور جستجو بصورت ریزبینانه به وبسایت ما بنگرد.</p>
+<ul>
+<li>همچنین برای افزایش امنیت وبسایت و جلوگیری از نفوذ به داشبورد ادمین هم استفاده از <code>robots.txt</code> بسیار کاربردی است زیرا که میتوانیم URL هایی که قرار نیست در دسترس عموم باشد را از نتایج موتور جستجو حذف کنیم.</li>
+</ul>
+<h3 id="robotstxt-sample">robots.txt Sample</h3>
+<p>در زیر نمونه یک فایل استاندارد <code>robots.txt</code> را مشاهده میکنید:</p>
+<pre tabindex="0"><code class="language-robot" data-lang="robot">User-agent: *
+Allow: /
+Sitemap: https://davoodya.com/sitemap.xml
+
+# Allow all web crawlers to access all content
+User-agent: *
+Disallow:
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Yandexbot
+Allow: /
+
+# Prevent crawling of certain file types
+User-agent: *
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /*.xls$
+Disallow: /*.xlsx$
+Disallow: /*.zip$
+Disallow: /*.rar$
+
+# Prevent crawling of admin or private areas
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Crawl delay to prevent server overload
+User-agent: *
+Crawl-delay: 10
+</code></pre><ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/cybersecurity/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">CyberSecurity</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/security/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Security</a>
+   </li>
+  
+</ul>
+
+      
+    </div></article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://davoodya.ir/" >
+    &copy;  Davood Yahay – Cybersecurity Specialist 2026 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

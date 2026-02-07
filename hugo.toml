@@ -1,0 +1,12 @@
+baseURL = "https://davoodya.ir/"
+languageCode = "fa"
+title = "Davood Yahay – Cybersecurity Specialist"
+defaultContentLanguage = "fa"
+theme = 'ananke'
+enableRobotsTXT = true
+
+
+# baseURL = 'https://example.org/'
+# languageCode = 'en-us'
+# title = 'My New Hugo Site'
+

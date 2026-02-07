@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Davood Yahay – Cybersecurity Specialist</title>
+    <link>https://davoodya.ir/tags/</link>
+    <description>Recent content in Tags on Davood Yahay – Cybersecurity Specialist</description>
+    <generator>Hugo</generator>
+    <language>fa</language>
+    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://davoodya.ir/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CyberSecurity</title>
+      <link>https://davoodya.ir/tags/cybersecurity/</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://davoodya.ir/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://davoodya.ir/tags/security/</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://davoodya.ir/tags/security/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

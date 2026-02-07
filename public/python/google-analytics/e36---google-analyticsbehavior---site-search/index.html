@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Davood Yahay – Cybersecurity Specialist</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="
+TOC
+
+Google Analytics =&gt; Behavior =&gt; Site Search Tab
+
+0. Description
+
+0.1: Site Search Description
+0.2: Enable Site Search
+0.3: Metrics
+
+
+1. Overview
+2. Usage
+3. Search Term
+4. Search Pages
+
+
+Search Topics
+
+
+Google Analytics =&gt; Behavior =&gt; Site Search Tab
+0. Description
+0.1: Site Search Description
+در این قسمت آماری از جستجو هایی که کاربران در داخل وبسایت ما انجام میدهند مشاهده میشود.
+
+نکته: این آمار ربطی که نتایج موتور جستجو ندارد و در واقع جستجو هاییست که کاربر درون وبسایت ما با استفاده از Search Form ها انجام داده است.
+نکته دوم: این گزینه بصورت پیشفرض فعال نیست و باید بصورت دستی فعال شود.
+
+0.2: Enable Site Search
+
+Left Sidebar =&gt; Click on Gear(goto Settings Panel) =&gt; View Settings
+
+![[Pasted image 20260129190012.png]]
+
+
+in View Settings =&gt; Scroll Down =&gt; Turn On =&gt; Site Search Tracking =&gt; Save
+
+![[Pasted image 20260129190117.png]]
+
+
+Now we Should Update gtag.js Code:
+
+در قدم بعدی باید اسکریپت gtag.js را که برای رهگیری وبسایت اضافه کردیم را بروز رسانی کنیم.
+برای اینکار نیاز داریم که آدرس صفحه جستجو وبسایت خود را بدست بیاوریم که کافیست درون وبسایت خود یک جستجو انجام دهیم و سپس قسمتی از URL که جستجو را انجام میدهد کپی کنیم:
+
+![[Pasted image 20260129190502.png]]
+
+
+حال تگ gtag.js را به شکل زیر بروز میکنیم و در واقع خط زیر را به تکه اسکریپت اضافه میکنیم:
+
+ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/Search?srch=keyword&#39;);
+
+![[Pasted image 20260129190710.png]]
+
+
+
+
+همانطور که گفتیم پارامتر جستجو در هر وبسایت متفاوت است و مثلا برای تاپ لرن باید خط به شکل زیر اضافه شود:
+
+ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/courses?search=keyword&#39; );
+
+![[Pasted image 20260129191159.png]]
+
+
+
+
+
+
+
+&lt;script&gt;
+	...
+	
+	// Add below line for Site Search
+	ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/Search?srch=keyword&#39;);
+	
+	...
+&lt;/script&gt;
+
+Note: keyword is static and should be add instead of query
+
+کلمه keyword حتما باید در در مقابل = وجود داشته باشد.
+
+
+Note 2: After Enable features, Metrics add within days
+
+پس از فعالسازی این گزینه آمار ها پس از چند روز نمایش داده میشود.
+
+
+Full Script Codes:
+
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+
+&lt;script async src=&#34;https://www.googletagmanager.com/gtag/js?id=UA-129154796-1&#34;&gt;&lt;/script&gt;
+	&lt;script&gt;
+	window.dataLayer = window.dataLayer | | [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag(&#39;js&#39;, new Date());
+	
+	// Add below line for Site Search
+	ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/courses?search=keyword&#39; );
+	
+	gtag(&#39;config&#39;, &#39;UA-129154796-1&#39;);
+&lt;/script&gt;
+0.3: Metrics
+
+Sessions with Search:
+
+تعداد کل جستجو ها
+
+
+Total Unique Search:
+
+تعداد جستجو های تک
+
+
+Result Pageview / Search:
+
+میانگین تعداد جستجو و مشاهده صفحه
+
+
+% Search Exit:
+
+تعداد درصد کاربرانی که پس از جستجو از وبسایت خارج شده اند.
+
+
+% Search Refinements:
+
+تعداد درصد کاربرانی که به نتیجه مورد نظر خود پس از جستجو رسیده اند.
+مهمترین پارامتر Site Search این پارامتر است.
+
+
+Time After Search:
+
+زمانیکه کاربر پس از جستجو درون وبسایت مانده است که هر چه بالاتر باشد بهتر است.
+
+
+Avg. Search Depth: Research Topic
+
+میانگین عمقی که کاربر با جستجو وارد وبسایت شده است.
+
+
+
+1. Overview
+
+Description:
+
+در این منو آماری کلی از جستجو درون وبسایتی کاربر مشاهده میشود:
+
+![[Pasted image 20260129191750.png]]
+
+
+
+
+Search Chart:
+
+در قسمت اول آماری از جستجو ها نشان داده میشود که بصورت پیشفرض بر روی Sessions with Search تنظیم است اما قابل عوض کردن و همچنین اضافه کردن رقیب برای بررسی هم وجود دارد:
+
+![[Pasted image 20260129191936.png]]
+
+
+
+
+Number Metric:
+
+در قسمت بعدی آمار های عددی Metric های Site Search قابل مشاهده است که در کنار آن نیز نمودار دایره ای از Site Search نیز قرار دارد:
+
+![[Pasted image 20260129192034.png]]
+
+
+
+
+Site Search Metrics Based on Search Terms, Site Search Category, Start Page:
+
+در قسمت Search Terms عبارت هایی که در وبسایت ما جستجو شده است را مشاهده میکنیم:
+
+![[Pasted image 20260129192147.png]]
+
+
+در قسمت Site Search Category دسته بندی ها یا همان دسته بندی جستجو ها را نمایش میدهد.
+در قسمت Start Page هم صفحاتی که کاربر جستجو را از داخل آنها شروع کرده است نمایش داده میشود.
+تصویر:
+
+![[Pasted image 20260129192305.png]]
+
+
+
+
+
+2. Usage
+
+در این گزینه تعداد کل کاربران که وارد وبسایت ما شده اند را در دو دسته بندی زیر نمایش میدهد:
+
+Visits without Search
+
+کاربرانی که وارد شده اند اما جستجو نکردند.
+
+
+Visits With Search
+
+کاربرانی که وارد شدند و جستجو کردند.
+
+
+Image:
+
+![[Pasted image 20260129192620.png]]
+
+
+
+
+
+
+Usage:
+
+از این قسمت میتوانیم متوجه شویم که آیا قسمت جستجو وبسایت موثر بوده یا نه؟
+آیا قسمت جستجو در جلوی چشم کاربر هست یا نه؟
+
+
+
+3. Search Term
+در این منو کلمات که کاربر آنها را در وبسایت جستجو کرده را مشاهده میکنیم:
+![[Pasted image 20260129192854.png]]
+2. Usage:
+1. میتوانیم متوجه شویم کدام مطلب ما بیشتر مورد توجه مخاطب است.
+2. و یا اینکه کدام مطلب را باید به جلوی چشم مخاطب بیاوریم.">
+    <meta name="generator" content="Hugo 0.155.2">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.efe4d852f731d5d1fbb87718387202a97aafd768cdcdaed0662bbe6982e91824.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://davoodya.ir/python/google-analytics/e36---google-analyticsbehavior---site-search/">
+    
+
+    
+    
+    <meta property="og:url" content="https://davoodya.ir/python/google-analytics/e36---google-analyticsbehavior---site-search/">
+  <meta property="og:site_name" content="Davood Yahay – Cybersecurity Specialist">
+  <meta property="og:title" content="Davood Yahay – Cybersecurity Specialist">
+  <meta property="og:description" content="TOC Google Analytics =&gt; Behavior =&gt; Site Search Tab 0. Description 0.1: Site Search Description 0.2: Enable Site Search 0.3: Metrics 1. Overview 2. Usage 3. Search Term 4. Search Pages Search Topics Google Analytics =&gt; Behavior =&gt; Site Search Tab 0. Description 0.1: Site Search Description در این قسمت آماری از جستجو هایی که کاربران در داخل وبسایت ما انجام میدهند مشاهده میشود.
+نکته: این آمار ربطی که نتایج موتور جستجو ندارد و در واقع جستجو هاییست که کاربر درون وبسایت ما با استفاده از Search Form ها انجام داده است. نکته دوم: این گزینه بصورت پیشفرض فعال نیست و باید بصورت دستی فعال شود. 0.2: Enable Site Search Left Sidebar =&gt; Click on Gear(goto Settings Panel) =&gt; View Settings ![[Pasted image 20260129190012.png]] in View Settings =&gt; Scroll Down =&gt; Turn On =&gt; Site Search Tracking =&gt; Save ![[Pasted image 20260129190117.png]] Now we Should Update gtag.js Code: در قدم بعدی باید اسکریپت gtag.js را که برای رهگیری وبسایت اضافه کردیم را بروز رسانی کنیم. برای اینکار نیاز داریم که آدرس صفحه جستجو وبسایت خود را بدست بیاوریم که کافیست درون وبسایت خود یک جستجو انجام دهیم و سپس قسمتی از URL که جستجو را انجام میدهد کپی کنیم: ![[Pasted image 20260129190502.png]] حال تگ gtag.js را به شکل زیر بروز میکنیم و در واقع خط زیر را به تکه اسکریپت اضافه میکنیم: ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/Search?srch=keyword&#39;); ![[Pasted image 20260129190710.png]] همانطور که گفتیم پارامتر جستجو در هر وبسایت متفاوت است و مثلا برای تاپ لرن باید خط به شکل زیر اضافه شود: ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/courses?search=keyword&#39; ); ![[Pasted image 20260129191159.png]] &lt;script&gt; ... // Add below line for Site Search ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/Search?srch=keyword&#39;); ... &lt;/script&gt; Note: keyword is static and should be add instead of query کلمه keyword حتما باید در در مقابل = وجود داشته باشد. Note 2: After Enable features, Metrics add within days پس از فعالسازی این گزینه آمار ها پس از چند روز نمایش داده میشود. Full Script Codes: &lt;!-- Global site tag (gtag.js) - Google Analytics --&gt; &lt;script async src=&#34;https://www.googletagmanager.com/gtag/js?id=UA-129154796-1&#34;&gt;&lt;/script&gt; &lt;script&gt; window.dataLayer = window.dataLayer | | []; function gtag(){dataLayer.push(arguments);} gtag(&#39;js&#39;, new Date()); // Add below line for Site Search ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/courses?search=keyword&#39; ); gtag(&#39;config&#39;, &#39;UA-129154796-1&#39;); &lt;/script&gt; 0.3: Metrics Sessions with Search: تعداد کل جستجو ها Total Unique Search: تعداد جستجو های تک Result Pageview / Search: میانگین تعداد جستجو و مشاهده صفحه % Search Exit: تعداد درصد کاربرانی که پس از جستجو از وبسایت خارج شده اند. % Search Refinements: تعداد درصد کاربرانی که به نتیجه مورد نظر خود پس از جستجو رسیده اند. مهمترین پارامتر Site Search این پارامتر است. Time After Search: زمانیکه کاربر پس از جستجو درون وبسایت مانده است که هر چه بالاتر باشد بهتر است. Avg. Search Depth: Research Topic میانگین عمقی که کاربر با جستجو وارد وبسایت شده است. 1. Overview Description: در این منو آماری کلی از جستجو درون وبسایتی کاربر مشاهده میشود: ![[Pasted image 20260129191750.png]] Search Chart: در قسمت اول آماری از جستجو ها نشان داده میشود که بصورت پیشفرض بر روی Sessions with Search تنظیم است اما قابل عوض کردن و همچنین اضافه کردن رقیب برای بررسی هم وجود دارد: ![[Pasted image 20260129191936.png]] Number Metric: در قسمت بعدی آمار های عددی Metric های Site Search قابل مشاهده است که در کنار آن نیز نمودار دایره ای از Site Search نیز قرار دارد: ![[Pasted image 20260129192034.png]] Site Search Metrics Based on Search Terms, Site Search Category, Start Page: در قسمت Search Terms عبارت هایی که در وبسایت ما جستجو شده است را مشاهده میکنیم: ![[Pasted image 20260129192147.png]] در قسمت Site Search Category دسته بندی ها یا همان دسته بندی جستجو ها را نمایش میدهد. در قسمت Start Page هم صفحاتی که کاربر جستجو را از داخل آنها شروع کرده است نمایش داده میشود. تصویر: ![[Pasted image 20260129192305.png]] 2. Usage در این گزینه تعداد کل کاربران که وارد وبسایت ما شده اند را در دو دسته بندی زیر نمایش میدهد: Visits without Search کاربرانی که وارد شده اند اما جستجو نکردند. Visits With Search کاربرانی که وارد شدند و جستجو کردند. Image: ![[Pasted image 20260129192620.png]] Usage: از این قسمت میتوانیم متوجه شویم که آیا قسمت جستجو وبسایت موثر بوده یا نه؟ آیا قسمت جستجو در جلوی چشم کاربر هست یا نه؟ 3. Search Term در این منو کلمات که کاربر آنها را در وبسایت جستجو کرده را مشاهده میکنیم: ![[Pasted image 20260129192854.png]] 2. Usage: 1. میتوانیم متوجه شویم کدام مطلب ما بیشتر مورد توجه مخاطب است. 2. و یا اینکه کدام مطلب را باید به جلوی چشم مخاطب بیاوریم.">
+  <meta property="og:locale" content="fa">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="python">
+    <meta property="article:published_time" content="2026-01-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-29T00:00:00+00:00">
+    <meta property="article:tag" content="CyberSecurity">
+    <meta property="article:tag" content="Security">
+
+  <meta itemprop="name" content="Davood Yahay – Cybersecurity Specialist">
+  <meta itemprop="description" content="TOC Google Analytics =&gt; Behavior =&gt; Site Search Tab 0. Description 0.1: Site Search Description 0.2: Enable Site Search 0.3: Metrics 1. Overview 2. Usage 3. Search Term 4. Search Pages Search Topics Google Analytics =&gt; Behavior =&gt; Site Search Tab 0. Description 0.1: Site Search Description در این قسمت آماری از جستجو هایی که کاربران در داخل وبسایت ما انجام میدهند مشاهده میشود.
+نکته: این آمار ربطی که نتایج موتور جستجو ندارد و در واقع جستجو هاییست که کاربر درون وبسایت ما با استفاده از Search Form ها انجام داده است. نکته دوم: این گزینه بصورت پیشفرض فعال نیست و باید بصورت دستی فعال شود. 0.2: Enable Site Search Left Sidebar =&gt; Click on Gear(goto Settings Panel) =&gt; View Settings ![[Pasted image 20260129190012.png]] in View Settings =&gt; Scroll Down =&gt; Turn On =&gt; Site Search Tracking =&gt; Save ![[Pasted image 20260129190117.png]] Now we Should Update gtag.js Code: در قدم بعدی باید اسکریپت gtag.js را که برای رهگیری وبسایت اضافه کردیم را بروز رسانی کنیم. برای اینکار نیاز داریم که آدرس صفحه جستجو وبسایت خود را بدست بیاوریم که کافیست درون وبسایت خود یک جستجو انجام دهیم و سپس قسمتی از URL که جستجو را انجام میدهد کپی کنیم: ![[Pasted image 20260129190502.png]] حال تگ gtag.js را به شکل زیر بروز میکنیم و در واقع خط زیر را به تکه اسکریپت اضافه میکنیم: ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/Search?srch=keyword&#39;); ![[Pasted image 20260129190710.png]] همانطور که گفتیم پارامتر جستجو در هر وبسایت متفاوت است و مثلا برای تاپ لرن باید خط به شکل زیر اضافه شود: ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/courses?search=keyword&#39; ); ![[Pasted image 20260129191159.png]] &lt;script&gt; ... // Add below line for Site Search ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/Search?srch=keyword&#39;); ... &lt;/script&gt; Note: keyword is static and should be add instead of query کلمه keyword حتما باید در در مقابل = وجود داشته باشد. Note 2: After Enable features, Metrics add within days پس از فعالسازی این گزینه آمار ها پس از چند روز نمایش داده میشود. Full Script Codes: &lt;!-- Global site tag (gtag.js) - Google Analytics --&gt; &lt;script async src=&#34;https://www.googletagmanager.com/gtag/js?id=UA-129154796-1&#34;&gt;&lt;/script&gt; &lt;script&gt; window.dataLayer = window.dataLayer | | []; function gtag(){dataLayer.push(arguments);} gtag(&#39;js&#39;, new Date()); // Add below line for Site Search ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/courses?search=keyword&#39; ); gtag(&#39;config&#39;, &#39;UA-129154796-1&#39;); &lt;/script&gt; 0.3: Metrics Sessions with Search: تعداد کل جستجو ها Total Unique Search: تعداد جستجو های تک Result Pageview / Search: میانگین تعداد جستجو و مشاهده صفحه % Search Exit: تعداد درصد کاربرانی که پس از جستجو از وبسایت خارج شده اند. % Search Refinements: تعداد درصد کاربرانی که به نتیجه مورد نظر خود پس از جستجو رسیده اند. مهمترین پارامتر Site Search این پارامتر است. Time After Search: زمانیکه کاربر پس از جستجو درون وبسایت مانده است که هر چه بالاتر باشد بهتر است. Avg. Search Depth: Research Topic میانگین عمقی که کاربر با جستجو وارد وبسایت شده است. 1. Overview Description: در این منو آماری کلی از جستجو درون وبسایتی کاربر مشاهده میشود: ![[Pasted image 20260129191750.png]] Search Chart: در قسمت اول آماری از جستجو ها نشان داده میشود که بصورت پیشفرض بر روی Sessions with Search تنظیم است اما قابل عوض کردن و همچنین اضافه کردن رقیب برای بررسی هم وجود دارد: ![[Pasted image 20260129191936.png]] Number Metric: در قسمت بعدی آمار های عددی Metric های Site Search قابل مشاهده است که در کنار آن نیز نمودار دایره ای از Site Search نیز قرار دارد: ![[Pasted image 20260129192034.png]] Site Search Metrics Based on Search Terms, Site Search Category, Start Page: در قسمت Search Terms عبارت هایی که در وبسایت ما جستجو شده است را مشاهده میکنیم: ![[Pasted image 20260129192147.png]] در قسمت Site Search Category دسته بندی ها یا همان دسته بندی جستجو ها را نمایش میدهد. در قسمت Start Page هم صفحاتی که کاربر جستجو را از داخل آنها شروع کرده است نمایش داده میشود. تصویر: ![[Pasted image 20260129192305.png]] 2. Usage در این گزینه تعداد کل کاربران که وارد وبسایت ما شده اند را در دو دسته بندی زیر نمایش میدهد: Visits without Search کاربرانی که وارد شده اند اما جستجو نکردند. Visits With Search کاربرانی که وارد شدند و جستجو کردند. Image: ![[Pasted image 20260129192620.png]] Usage: از این قسمت میتوانیم متوجه شویم که آیا قسمت جستجو وبسایت موثر بوده یا نه؟ آیا قسمت جستجو در جلوی چشم کاربر هست یا نه؟ 3. Search Term در این منو کلمات که کاربر آنها را در وبسایت جستجو کرده را مشاهده میکنیم: ![[Pasted image 20260129192854.png]] 2. Usage: 1. میتوانیم متوجه شویم کدام مطلب ما بیشتر مورد توجه مخاطب است. 2. و یا اینکه کدام مطلب را باید به جلوی چشم مخاطب بیاوریم.">
+  <meta itemprop="datePublished" content="2026-01-29T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2026-01-29T00:00:00+00:00">
+  <meta itemprop="wordCount" content="802">
+  <meta itemprop="keywords" content="CyberSecurity,Security">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Davood Yahay – Cybersecurity Specialist">
+  <meta name="twitter:description" content="TOC Google Analytics =&gt; Behavior =&gt; Site Search Tab 0. Description 0.1: Site Search Description 0.2: Enable Site Search 0.3: Metrics 1. Overview 2. Usage 3. Search Term 4. Search Pages Search Topics Google Analytics =&gt; Behavior =&gt; Site Search Tab 0. Description 0.1: Site Search Description در این قسمت آماری از جستجو هایی که کاربران در داخل وبسایت ما انجام میدهند مشاهده میشود.
+نکته: این آمار ربطی که نتایج موتور جستجو ندارد و در واقع جستجو هاییست که کاربر درون وبسایت ما با استفاده از Search Form ها انجام داده است. نکته دوم: این گزینه بصورت پیشفرض فعال نیست و باید بصورت دستی فعال شود. 0.2: Enable Site Search Left Sidebar =&gt; Click on Gear(goto Settings Panel) =&gt; View Settings ![[Pasted image 20260129190012.png]] in View Settings =&gt; Scroll Down =&gt; Turn On =&gt; Site Search Tracking =&gt; Save ![[Pasted image 20260129190117.png]] Now we Should Update gtag.js Code: در قدم بعدی باید اسکریپت gtag.js را که برای رهگیری وبسایت اضافه کردیم را بروز رسانی کنیم. برای اینکار نیاز داریم که آدرس صفحه جستجو وبسایت خود را بدست بیاوریم که کافیست درون وبسایت خود یک جستجو انجام دهیم و سپس قسمتی از URL که جستجو را انجام میدهد کپی کنیم: ![[Pasted image 20260129190502.png]] حال تگ gtag.js را به شکل زیر بروز میکنیم و در واقع خط زیر را به تکه اسکریپت اضافه میکنیم: ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/Search?srch=keyword&#39;); ![[Pasted image 20260129190710.png]] همانطور که گفتیم پارامتر جستجو در هر وبسایت متفاوت است و مثلا برای تاپ لرن باید خط به شکل زیر اضافه شود: ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/courses?search=keyword&#39; ); ![[Pasted image 20260129191159.png]] &lt;script&gt; ... // Add below line for Site Search ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/Search?srch=keyword&#39;); ... &lt;/script&gt; Note: keyword is static and should be add instead of query کلمه keyword حتما باید در در مقابل = وجود داشته باشد. Note 2: After Enable features, Metrics add within days پس از فعالسازی این گزینه آمار ها پس از چند روز نمایش داده میشود. Full Script Codes: &lt;!-- Global site tag (gtag.js) - Google Analytics --&gt; &lt;script async src=&#34;https://www.googletagmanager.com/gtag/js?id=UA-129154796-1&#34;&gt;&lt;/script&gt; &lt;script&gt; window.dataLayer = window.dataLayer | | []; function gtag(){dataLayer.push(arguments);} gtag(&#39;js&#39;, new Date()); // Add below line for Site Search ga(&#39;send&#39;, &#39;pageview&#39;, &#39;/courses?search=keyword&#39; ); gtag(&#39;config&#39;, &#39;UA-129154796-1&#39;); &lt;/script&gt; 0.3: Metrics Sessions with Search: تعداد کل جستجو ها Total Unique Search: تعداد جستجو های تک Result Pageview / Search: میانگین تعداد جستجو و مشاهده صفحه % Search Exit: تعداد درصد کاربرانی که پس از جستجو از وبسایت خارج شده اند. % Search Refinements: تعداد درصد کاربرانی که به نتیجه مورد نظر خود پس از جستجو رسیده اند. مهمترین پارامتر Site Search این پارامتر است. Time After Search: زمانیکه کاربر پس از جستجو درون وبسایت مانده است که هر چه بالاتر باشد بهتر است. Avg. Search Depth: Research Topic میانگین عمقی که کاربر با جستجو وارد وبسایت شده است. 1. Overview Description: در این منو آماری کلی از جستجو درون وبسایتی کاربر مشاهده میشود: ![[Pasted image 20260129191750.png]] Search Chart: در قسمت اول آماری از جستجو ها نشان داده میشود که بصورت پیشفرض بر روی Sessions with Search تنظیم است اما قابل عوض کردن و همچنین اضافه کردن رقیب برای بررسی هم وجود دارد: ![[Pasted image 20260129191936.png]] Number Metric: در قسمت بعدی آمار های عددی Metric های Site Search قابل مشاهده است که در کنار آن نیز نمودار دایره ای از Site Search نیز قرار دارد: ![[Pasted image 20260129192034.png]] Site Search Metrics Based on Search Terms, Site Search Category, Start Page: در قسمت Search Terms عبارت هایی که در وبسایت ما جستجو شده است را مشاهده میکنیم: ![[Pasted image 20260129192147.png]] در قسمت Site Search Category دسته بندی ها یا همان دسته بندی جستجو ها را نمایش میدهد. در قسمت Start Page هم صفحاتی که کاربر جستجو را از داخل آنها شروع کرده است نمایش داده میشود. تصویر: ![[Pasted image 20260129192305.png]] 2. Usage در این گزینه تعداد کل کاربران که وارد وبسایت ما شده اند را در دو دسته بندی زیر نمایش میدهد: Visits without Search کاربرانی که وارد شده اند اما جستجو نکردند. Visits With Search کاربرانی که وارد شدند و جستجو کردند. Image: ![[Pasted image 20260129192620.png]] Usage: از این قسمت میتوانیم متوجه شویم که آیا قسمت جستجو وبسایت موثر بوده یا نه؟ آیا قسمت جستجو در جلوی چشم کاربر هست یا نه؟ 3. Search Term در این منو کلمات که کاربر آنها را در وبسایت جستجو کرده را مشاهده میکنیم: ![[Pasted image 20260129192854.png]] 2. Usage: 1. میتوانیم متوجه شویم کدام مطلب ما بیشتر مورد توجه مخاطب است. 2. و یا اینکه کدام مطلب را باید به جلوی چشم مخاطب بیاوریم.">
+
+      
+      
+    
+	
+  </head><body class="ma0 avenir bg-near-white production is-page is-page page-E36 - Google Analytics(Behavior - Site Search)">
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Davood Yahay – Cybersecurity Specialist
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+
+  <article class="page-E36 - Google Analytics(Behavior - Site Search) flex-l mw7 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        پایتون
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2026-01-29T00:00:00Z">ژانویهٔ 29, 2026</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l"><hr>
+<h2 id="toc">TOC</h2>
+<ul>
+<li><a href="#Google%20Analytics%20=%3E%20Behavior%20=%3E%20Site%20Search%20Tab">Google Analytics =&gt; Behavior =&gt; Site Search Tab</a>
+<ul>
+<li><a href="#0.%20Description">0. Description</a>
+<ul>
+<li><a href="#0.1:%20Site%20Search%20Description">0.1: Site Search Description</a></li>
+<li><a href="#0.2:%20Enable%20Site%20Search">0.2: Enable Site Search</a></li>
+<li><a href="#0.3:%20Metrics">0.3: Metrics</a></li>
+</ul>
+</li>
+<li><a href="#1.%20Overview">1. Overview</a></li>
+<li><a href="#2.%20Usage">2. Usage</a></li>
+<li><a href="#3.%20Search%20Term">3. Search Term</a></li>
+<li><a href="#4.%20Search%20Pages">4. Search Pages</a></li>
+</ul>
+</li>
+<li><a href="#Search%20Topics">Search Topics</a></li>
+</ul>
+<hr>
+<h3 id="google-analytics--behavior--site-search-tab">Google Analytics =&gt; Behavior =&gt; Site Search Tab</h3>
+<h4 id="0-description">0. Description</h4>
+<h5 id="01-site-search-description">0.1: Site Search Description</h5>
+<p>در این قسمت آماری از جستجو هایی که کاربران در داخل وبسایت ما انجام میدهند مشاهده میشود.</p>
+<ul>
+<li><em>نکته:</em> این آمار ربطی که نتایج موتور جستجو ندارد و در واقع جستجو هاییست که کاربر درون وبسایت ما با استفاده از Search Form ها انجام داده است.</li>
+<li><em>نکته دوم:</em> این گزینه بصورت پیشفرض فعال نیست و باید بصورت دستی فعال شود.</li>
+</ul>
+<h5 id="02-enable-site-search">0.2: Enable Site Search</h5>
+<ol>
+<li><code>Left Sidebar =&gt; Click on Gear(goto Settings Panel) =&gt; View Settings</code>
+<ol>
+<li>![[Pasted image 20260129190012.png]]</li>
+</ol>
+</li>
+<li><code>in View Settings =&gt; Scroll Down =&gt; Turn On =&gt; Site Search Tracking =&gt; Save</code>
+<ol>
+<li>![[Pasted image 20260129190117.png]]</li>
+</ol>
+</li>
+<li><strong>Now we Should Update <code>gtag.js</code> Code:</strong>
+<ol>
+<li>در قدم بعدی باید اسکریپت <code>gtag.js</code> را که برای رهگیری وبسایت اضافه کردیم را بروز رسانی کنیم.</li>
+<li>برای اینکار نیاز داریم که آدرس صفحه جستجو وبسایت خود را بدست بیاوریم که کافیست درون وبسایت خود یک جستجو انجام دهیم و سپس قسمتی از URL که جستجو را انجام میدهد کپی کنیم:
+<ol>
+<li>![[Pasted image 20260129190502.png]]</li>
+</ol>
+</li>
+<li>حال تگ <code>gtag.js</code> را به شکل زیر بروز میکنیم و در واقع خط زیر را به تکه اسکریپت اضافه میکنیم:
+<ol>
+<li><code>ga('send', 'pageview', '/Search?srch=keyword');</code>
+<ol>
+<li>![[Pasted image 20260129190710.png]]</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>همانطور که گفتیم پارامتر جستجو در هر وبسایت متفاوت است و مثلا برای تاپ لرن باید خط به شکل زیر اضافه شود:
+<ol>
+<li><code>ga('send', 'pageview', '/courses?search=keyword' );</code>
+<ol>
+<li>![[Pasted image 20260129191159.png]]</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>	...
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Add below line for Site Search
+</span></span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">ga</span>(<span style="color:#e6db74">&#39;send&#39;</span>, <span style="color:#e6db74">&#39;pageview&#39;</span>, <span style="color:#e6db74">&#39;/Search?srch=keyword&#39;</span>);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	...
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><ol start="4">
+<li><strong>Note:</strong> <code>keyword</code> is static and should be add instead of query
+<ol>
+<li>کلمه <code>keyword</code> حتما باید در در مقابل <strong>=</strong> وجود داشته باشد.</li>
+</ol>
+</li>
+<li><strong>Note 2:</strong> After Enable features, Metrics add within days
+<ol>
+<li>پس از فعالسازی این گزینه آمار ها پس از چند روز نمایش داده میشود.</li>
+</ol>
+</li>
+<li><strong>Full Script Codes:</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.googletagmanager.com/gtag/js?id=UA-129154796-1&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>	window.<span style="color:#a6e22e">dataLayer</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">dataLayer</span> <span style="color:#f92672">|</span> <span style="color:#f92672">|</span> [];
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">gtag</span>(){<span style="color:#a6e22e">dataLayer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">arguments</span>);}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;js&#39;</span>, <span style="color:#66d9ef">new</span> Date());
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Add below line for Site Search
+</span></span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">ga</span>(<span style="color:#e6db74">&#39;send&#39;</span>, <span style="color:#e6db74">&#39;pageview&#39;</span>, <span style="color:#e6db74">&#39;/courses?search=keyword&#39;</span> );
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;config&#39;</span>, <span style="color:#e6db74">&#39;UA-129154796-1&#39;</span>);
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><h5 id="03-metrics">0.3: Metrics</h5>
+<ol>
+<li><strong>Sessions with Search:</strong>
+<ol>
+<li>تعداد کل جستجو ها</li>
+</ol>
+</li>
+<li><strong>Total Unique Search:</strong>
+<ol>
+<li>تعداد جستجو های تک</li>
+</ol>
+</li>
+<li><strong>Result Pageview / Search:</strong>
+<ol>
+<li>میانگین تعداد جستجو و مشاهده صفحه</li>
+</ol>
+</li>
+<li><strong>% Search Exit:</strong>
+<ol>
+<li>تعداد درصد کاربرانی که پس از جستجو از وبسایت خارج شده اند.</li>
+</ol>
+</li>
+<li><strong>% Search Refinements:</strong>
+<ol>
+<li>تعداد درصد کاربرانی که به نتیجه مورد نظر خود پس از جستجو رسیده اند.</li>
+<li>مهمترین پارامتر Site Search این پارامتر است.</li>
+</ol>
+</li>
+<li><strong>Time After Search:</strong>
+<ol>
+<li>زمانیکه کاربر پس از جستجو درون وبسایت مانده است که هر چه بالاتر باشد بهتر است.</li>
+</ol>
+</li>
+<li><strong>Avg. Search Depth:</strong> Research Topic
+<ol>
+<li>میانگین عمقی که کاربر با جستجو وارد وبسایت شده است.</li>
+</ol>
+</li>
+</ol>
+<h4 id="1-overview">1. Overview</h4>
+<ol>
+<li><strong>Description:</strong>
+<ol>
+<li>در این منو آماری کلی از جستجو درون وبسایتی کاربر مشاهده میشود:
+<ol>
+<li>![[Pasted image 20260129191750.png]]</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><strong>Search Chart:</strong>
+<ol>
+<li>در قسمت اول آماری از جستجو ها نشان داده میشود که بصورت پیشفرض بر روی Sessions with Search تنظیم است اما قابل عوض کردن و همچنین اضافه کردن رقیب برای بررسی هم وجود دارد:
+<ol>
+<li>![[Pasted image 20260129191936.png]]</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><strong>Number Metric:</strong>
+<ol>
+<li>در قسمت بعدی آمار های عددی Metric های Site Search قابل مشاهده است که در کنار آن نیز نمودار دایره ای از Site Search نیز قرار دارد:
+<ol>
+<li>![[Pasted image 20260129192034.png]]</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><strong>Site Search Metrics Based on Search Terms, Site Search Category, Start Page:</strong>
+<ol>
+<li>در قسمت Search Terms عبارت هایی که در وبسایت ما جستجو شده است را مشاهده میکنیم:
+<ol>
+<li>![[Pasted image 20260129192147.png]]</li>
+</ol>
+</li>
+<li>در قسمت Site Search Category دسته بندی ها یا همان دسته بندی جستجو ها را نمایش میدهد.</li>
+<li>در قسمت Start Page هم صفحاتی که کاربر جستجو را از داخل آنها شروع کرده است نمایش داده میشود.</li>
+<li><em>تصویر:</em>
+<ol>
+<li>![[Pasted image 20260129192305.png]]</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="2-usage">2. Usage</h4>
+<ul>
+<li>در این گزینه تعداد کل کاربران که وارد وبسایت ما شده اند را در دو دسته بندی زیر نمایش میدهد:
+<ol>
+<li>Visits without Search
+<ol>
+<li>کاربرانی که وارد شده اند اما جستجو نکردند.</li>
+</ol>
+</li>
+<li>Visits With Search
+<ol>
+<li>کاربرانی که وارد شدند و جستجو کردند.</li>
+</ol>
+</li>
+<li>Image:
+<ol>
+<li>![[Pasted image 20260129192620.png]]</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li><strong>Usage:</strong>
+<ol>
+<li>از این قسمت میتوانیم متوجه شویم که آیا قسمت جستجو وبسایت موثر بوده یا نه؟</li>
+<li>آیا قسمت جستجو در جلوی چشم کاربر هست یا نه؟</li>
+</ol>
+</li>
+</ol>
+<h4 id="3-search-term">3. Search Term</h4>
+<p>در این منو کلمات که کاربر آنها را در وبسایت جستجو کرده را مشاهده میکنیم:
+![[Pasted image 20260129192854.png]]
+2. <strong>Usage:</strong>
+1. میتوانیم متوجه شویم کدام مطلب ما بیشتر مورد توجه مخاطب است.
+2. و یا اینکه کدام مطلب را باید به جلوی چشم مخاطب بیاوریم.</p>
+<h4 id="4-search-pages">4. Search Pages</h4>
+<p>این منو هم نشان میدهد که جستجو های درون وبسایت ما از کدام صفحات شروع شده اند:
+![[Pasted image 20260129192947.png]]</p>
+<ol>
+<li><strong>Usage:</strong>
+<ol>
+<li>متوجه میشویم که در کدام صفحات چه لینک دهی بهتر است انجام شود.</li>
+</ol>
+</li>
+</ol>
+<h3 id="search-topics">Search Topics</h3>
+<ol>
+<li><strong>Avg. Search Depth:</strong>
+<ol>
+<li>مقدار <strong>Avg. Search Depth:</strong> که یکی از Metric های درون Google Analytics(Behavior - Site Search) میباشد دقیقا چه آماری را نشان میدهد؟</li>
+</ol>
+</li>
+</ol>
+<h3 id="heading">!</h3>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/cybersecurity/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">CyberSecurity</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/security/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Security</a>
+   </li>
+  
+</ul>
+
+      
+    </div></article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://davoodya.ir/" >
+    &copy;  Davood Yahay – Cybersecurity Specialist 2026 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

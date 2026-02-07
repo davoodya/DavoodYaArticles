@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<h1>دسته‌بندی‌ها</h1>
+
+<div style="display:flex; gap:20px; flex-wrap:wrap;">
+
+{{ range .Site.Sections }}
+  <div style="border:1px solid #ccc; padding:20px; width:250px;">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <p>{{ .Params.description }}</p>
+    <p><strong>{{ len .Pages }}</strong> مطلب</p>
+  </div>
+{{ end }}
+
+</div>
+
+{{ end }}

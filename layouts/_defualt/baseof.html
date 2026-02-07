@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+
+    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+</head>
+
+<!-- <body class="section-{{ .Section }}"> ==> in /content/articles/ class== section-article | in /content/tools/ class== section-tools -->
+<body class="main-section">
+
+    {{ block "main" . }}{{ end }}
+
+</body>
+</html>
