@@ -1,0 +1,82 @@
+<!-- ============================= -->
+<!-- Footer - Cyberpunk Theme -->
+<!-- ============================= -->
+
+<footer class="site-footer">
+    <div class="footer-container">
+        
+        <!-- Footer Top Section -->
+        <div class="footer-top">
+            
+            <!-- About Section -->
+            <div class="footer-section footer-about">
+                <h3 class="footer-title">{{ .Site.Title }}</h3>
+                <p class="footer-description">
+                    {{ with .Site.Params.description }}
+                        {{ . }}
+                    {{ else }}
+                        متخصص امنیت سایبری و مشاور IT
+                    {{ end }}
+                </p>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-section footer-links">
+                <h3 class="footer-title">لینک‌های سریع</h3>
+                <ul class="footer-menu">
+                    <li><a href="{{ .Site.BaseURL }}">خانه</a></li>
+                    {{ range .Site.Sections }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="footer-section footer-contact">
+                <h3 class="footer-title">ارتباط با من</h3>
+                <ul class="footer-social">
+                    <!-- این لینک‌ها را در مرحله بعد با لینک‌های واقعی جایگزین کنید -->
+                    <li>
+                        <a href="https://github.com/davoodya" target="_blank" rel="noopener" class="social-link">
+                            <span class="social-icon">💻</span>
+                            <span class="social-text">GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com/@YakuzaCyberSec" target="_blank" rel="noopener" class="social-link">
+                            <span class="social-icon">📺</span>
+                            <span class="social-text">YouTube</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@davoodya.ir" class="social-link">
+                            <span class="social-icon">📧</span>
+                            <span class="social-text">ایمیل</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>
+                    © {{ now.Year }} 
+                    <strong>{{ .Site.Title }}</strong> 
+                    - تمامی حقوق محفوظ است
+                </p>
+            </div>
+            <div class="footer-powered">
+                <p>
+                    ساخته شده با 
+                    <span class="heart">❤️</span> 
+                    و 
+                    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</footer>

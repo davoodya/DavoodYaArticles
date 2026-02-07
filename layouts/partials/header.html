@@ -1,0 +1,44 @@
+<!-- ============================= -->
+<!-- Header - Cyberpunk Theme -->
+<!-- ============================= -->
+
+<header class="site-header">
+    <div class="header-container">
+        <!-- Logo/Brand -->
+        <div class="site-brand">
+            <a href="{{ .Site.BaseURL }}" class="brand-link">
+                <span class="brand-icon">⚡</span>
+                <span class="brand-name">{{ .Site.Title }}</span>
+            </a>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="site-nav">
+            <ul class="nav-menu">
+                <li class="nav-item {{ if .IsHome }}active{{ end }}">
+                    <a href="{{ .Site.BaseURL }}" class="nav-link">
+                        <span class="nav-icon">🏠</span>
+                        <span class="nav-text">خانه</span>
+                    </a>
+                </li>
+                
+                {{ range .Site.Sections }}
+                <li class="nav-item {{ if eq $.Section .Section }}active{{ end }}">
+                    <a href="{{ .RelPermalink }}" class="nav-link">
+                        <span class="nav-text">{{ .Title }}</span>
+                    </a>
+                </li>
+                {{ end }}
+                
+                <!-- این قسمت را در مرحله بعد می‌توانید با منوهای دلخواه جایگزین کنید -->
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="منوی موبایل">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </div>
+</header>

@@ -15,7 +15,10 @@
     <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <link rel="canonical" href="{{ .Permalink }}">
 
-
+    <!-- Fonts -->
+    <link rel="stylesheet" href="/assets/css/fonts.css" type="text/css">
+    
+    <!-- Main Styles -->
     <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
 
     <!-- ========================= -->
@@ -149,17 +152,17 @@
 
 <body class="section-{{ .Section }} type-{{ .Kind }}">
 
-<!--<header>-->
-<!--    {{ partial "header.html" . }}-->
-<!--</header>-->
+<header>
+    {{ partial "header.html" . }}
+</header>
 
 <main>
     {{ block "main" . }}{{ end }}
 </main>
 
-<!--<footer>-->
-<!--    {{ partial "footer.html" . }}-->
-<!--</footer>-->
+<footer>
+    {{ partial "footer.html" . }}
+</footer>
 
 </body>
 </html>

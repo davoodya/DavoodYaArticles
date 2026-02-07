@@ -145,16 +145,55 @@ tags:
 ✅ RTL support
 ✅ SEO friendly (Schema Markup)
 
+## 🎨 فونت‌ها
+
+### فونت‌های نصب شده
+
+**فارسی:**
+- Vazir (متن اصلی) - `var(--Vazir)`
+- Shabnam (عنوان‌ها) - `var(--Shabnam)`
+- Sahel - `var(--Sahel)`
+- Yekan - `var(--Yekan)`
+
+**لاتین:**
+- Fira Code (کد) - `var(--terminal-font)`
+- Rajdhani - `var(--content-font)`
+
+### لود فونت‌ها
+
+فونت‌ها از طریق فایل `/assets/css/fonts.css` لود می‌شوند که در `baseof.html` لینک شده است.
+
+## 🏗️ Header و Footer
+
+### Header (`layouts/partials/header.html`)
+- لوگو و نام سایت با افکت glow
+- منوی اصلی با لینک به دسته‌بندی‌ها
+- منوی موبایل (hamburger menu)
+- Sticky header با backdrop blur
+
+### Footer (`layouts/partials/footer.html`)
+- بخش About
+- لینک‌های سریع (Quick Links)
+- شبکه‌های اجتماعی
+- Copyright و اطلاعات
+
 ## 🔧 توسعه بیشتر
 
-برای افزودن استایل‌های جدید:
+### افزودن استایل جدید
 1. فایل `assets/css/main.css` را باز کنید
 2. استایل‌های خود را اضافه کنید
-3. محتوای فایل را به `static/assets/css/main.css` کپی کنید
-4. سرور Hugo را reload کنید
+3. فایل را به static کپی کنید:
+   ```bash
+   copy "assets\css\main.css" "static\assets\css\main.css"
+   ```
+4. Hugo را reload کنید یا منتظر hot reload بمانید
+
+### سفارشی‌سازی Header/Footer
+فایل‌های `layouts/partials/header.html` و `footer.html` را ویرایش کنید.
 
 ## 📚 منابع
 
 - [مستندات Hugo](https://gohugo.io/documentation/)
 - [Template Variables](https://gohugo.io/variables/)
 - [Content Management](https://gohugo.io/content-management/)
+- [راهنمای توسعه کامل](DEVELOPMENT_GUIDE.md)
