@@ -5,13 +5,15 @@
 
   <div class="home-grid">
     {{ range .Site.Sections }}
-    <div class="category-card">
+    <article class="category-card">
       <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-      {{ if .Params.description }}
-      <p>{{ .Params.description }}</p>
+      {{ with .Params.description }}
+        <p class="category-description-text">{{ . }}</p>
       {{ end }}
-      <p><strong>{{ len .Pages }}</strong> مطلب</p>
-    </div>
+      <div class="category-meta">
+        <span class="category-count">📚 <strong>{{ len .Pages }}</strong> مطلب</span>
+      </div>
+    </article>
     {{ end }}
   </div>
 </div>

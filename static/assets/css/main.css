@@ -67,6 +67,8 @@ body {
   border-radius: 12px;
   transition: all 0.3s ease;
   text-align: right;
+  display: flex;
+  flex-direction: column;
 }
 
 .category-card:hover {
@@ -310,6 +312,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 250px;
 }
 
 .article-card:hover {
@@ -339,6 +342,7 @@ body {
   line-height: 1.8;
   margin-bottom: 1.5rem;
   flex-grow: 1;
+  font-size: 0.95rem;
 }
 
 .read-more-btn {
