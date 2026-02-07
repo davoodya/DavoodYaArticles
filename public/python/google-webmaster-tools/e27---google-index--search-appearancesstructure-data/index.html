@@ -1,166 +1,118 @@
 <!DOCTYPE html>
-<html lang="fa">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<html lang="fa" dir="rtl">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        
+         | Davood Yahay – Cybersecurity Specialist
+        
+    </title>
+
+    <meta name="description" content="">
+    <link rel="canonical" href="http://localhost:1313/python/google-webmaster-tools/e27---google-index--search-appearancesstructure-data/">
+
+
+    <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+
     
-    <title>Davood Yahay – Cybersecurity Specialist</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="
-TOC
-
-Google Index
-
-How Google Index Links?
-1. Google Index =&gt; Index Status
-2. Google Index =&gt; Blocked Resources
-3. Google Index =&gt; Remove URLs
-
-
-Search Appearance Implementation(Structure Data)
-
-Description
-Elements Can Use for Showing Website in Search Results
-Google Structure Data
-
-Description
-Ways to Implement
-
-
-http://schema.org - Schema Archive
-Structure Data Writing - JSON LD
-
-All Type of Structure Data
-1. Company Info in Right Side
-2. Product Rich Snippets
-Note for Other
-Best Structure Data
-
-
-Testing Structure Data
-
-
-Search Appearance Menu Description
-
-Search Appearance =&gt; Structured Data
-
-
-Research
-
-
-Google Index
-How Google Index Links?
-
-گوگل تمام لینک های یک وبسایت را با بررسی sitemap.xml و همچنین خزنده هایش Crawlers بدست می آورد و پردازش میکند.
-سپس لینک ها را درون دیتابیس موتور جستجو خود ثبت میکند.
-هنگامیکه لینک وبسایت درون دیتابیس ثبت شد، به معنای Index شدن لینک توسط گوگل است.
-
-1. Google Index =&gt; Index Status
-در این گزینه تعداد لینک هایی که از وبسایت ما درون دیتابیس گوگل ایندکس شده اند را میتوانیم مشاهده کنیم:
-![[Pasted image 20260124180915.png]]">
-    <meta name="generator" content="Hugo 0.155.2">
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
     
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-
     
-
-
-    
-      
-
     
 
     
 
     
-      <link rel="canonical" href="http://localhost:1313/python/google-webmaster-tools/e27---google-index--search-appearancesstructure-data/">
+    
+    
+
+    
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "http:\/\/localhost:1313\/#website",
+            "name": "Davood Yahay – Cybersecurity Specialist",
+            "url": "http:\/\/localhost:1313\/",
+            "description": "",
+            "inLanguage": "fa-IR",
+            "publisher": {
+                "@type": "Person",
+                "@id": "http:\/\/localhost:1313\/#person"
+            }
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "@id": "http:\/\/localhost:1313\/#person",
+            "name": "Davood Yahya",
+            "url": "http:\/\/localhost:1313\/",
+            "jobTitle": "Cyber Security Consultant",
+            "sameAs": [
+                "https://github.com/davoodya",
+                "https://youtube.com/@YakuzaCyberSec"
+            ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "http:\/\/localhost:1313\/python\/google-webmaster-tools\/e27---google-index--search-appearancesstructure-data\/"
+            },
+            "headline": "",
+            "description": "\u003chr\u003e\n\u003ch2 id=\u0022toc\u0022\u003eTOC\u003c\/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\u0022#Google%20Index\u0022\u003eGoogle Index\u003c\/a\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\u0022#How%20Google%20Index%20Links?\u0022\u003eHow Google Index Links?\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#1.%20Google%20Index%20=%3E%20Index%20Status\u0022\u003e1. Google Index =\u0026gt; Index Status\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#2.%20Google%20Index%20=%3E%20Blocked%20Resources\u0022\u003e2. Google Index =\u0026gt; Blocked Resources\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#3.%20Google%20Index%20=%3E%20Remove%20URLs\u0022\u003e3. Google Index =\u0026gt; Remove URLs\u003c\/a\u003e\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#Search%20Appearance%20Implementation(Structure%20Data)\u0022\u003eSearch Appearance Implementation(Structure Data)\u003c\/a\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\u0022#Description\u0022\u003eDescription\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#Elements%20Can%20Use%20for%20Showing%20Website%20in%20Search%20Results\u0022\u003eElements Can Use for Showing Website in Search Results\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#Google%20Structure%20Data\u0022\u003eGoogle Structure Data\u003c\/a\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\u0022#Description\u0022\u003eDescription\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#Ways%20to%20Implement\u0022\u003eWays to Implement\u003c\/a\u003e\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#http:\/\/schema.org%20-%20Schema%20Archive\u0022\u003ehttp:\/\/schema.org - Schema Archive\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#Structure%20Data%20Writing%20-%20JSON%20LD\u0022\u003eStructure Data Writing - JSON LD\u003c\/a\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\u0022#All%20Type%20of%20Structure%20Data\u0022\u003eAll Type of Structure Data\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#1.%20Company%20Info%20in%20Right%20Side\u0022\u003e1. Company Info in Right Side\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#2.%20Product%20Rich%20Snippets\u0022\u003e2. Product Rich Snippets\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#Note%20for%20Other\u0022\u003eNote for Other\u003c\/a\u003e\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#Best%20Structure%20Data\u0022\u003eBest Structure Data\u003c\/a\u003e\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#Testing%20Structure%20Data\u0022\u003eTesting Structure Data\u003c\/a\u003e\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#Search%20Appearance%20Menu%20Description\u0022\u003eSearch Appearance Menu Description\u003c\/a\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\u0022#Search%20Appearance%20=%3E%20Structured%20Data\u0022\u003eSearch Appearance =\u0026gt; Structured Data\u003c\/a\u003e\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003cli\u003e\u003ca href=\u0022#Research\u0022\u003eResearch\u003c\/a\u003e\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003chr\u003e\n\u003ch3 id=\u0022google-index\u0022\u003eGoogle Index\u003c\/h3\u003e\n\u003ch4 id=\u0022how-google-index-links\u0022\u003eHow Google Index Links?\u003c\/h4\u003e\n\u003col\u003e\n\u003cli\u003eگوگل تمام لینک های یک وبسایت را با بررسی \u003ccode\u003esitemap.xml\u003c\/code\u003e و همچنین خزنده هایش Crawlers بدست می آورد و پردازش میکند.\u003c\/li\u003e\n\u003cli\u003eسپس لینک ها را درون دیتابیس موتور جستجو خود ثبت میکند.\u003c\/li\u003e\n\u003cli\u003eهنگامیکه لینک وبسایت درون دیتابیس ثبت شد، به معنای Index شدن لینک توسط گوگل است.\u003c\/li\u003e\n\u003c\/ol\u003e\n\u003ch4 id=\u00221-google-index--index-status\u0022\u003e1. Google Index =\u0026gt; Index Status\u003c\/h4\u003e\n\u003cp\u003eدر این گزینه تعداد لینک هایی که از وبسایت ما درون دیتابیس گوگل ایندکس شده اند را میتوانیم مشاهده کنیم:\n![[Pasted image 20260124180915.png]]\u003c\/p\u003e",
+            "author": {
+                "@type": "Person",
+                "@id": "http:\/\/localhost:1313\/#person"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Davood Yahay – Cybersecurity Specialist",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "http:\/\/localhost:1313\/images\/logo.png"
+                }
+            },
+            "datePublished": "2026-01-24T00:00:00Z",
+            "dateModified": "2026-01-24T00:00:00Z",
+            "inLanguage": "fa-IR"
+        }
+    </script>
+
     
 
     
     
-    <meta property="og:url" content="http://localhost:1313/python/google-webmaster-tools/e27---google-index--search-appearancesstructure-data/">
-  <meta property="og:site_name" content="Davood Yahay – Cybersecurity Specialist">
-  <meta property="og:title" content="Davood Yahay – Cybersecurity Specialist">
-  <meta property="og:description" content="TOC Google Index How Google Index Links? 1. Google Index =&gt; Index Status 2. Google Index =&gt; Blocked Resources 3. Google Index =&gt; Remove URLs Search Appearance Implementation(Structure Data) Description Elements Can Use for Showing Website in Search Results Google Structure Data Description Ways to Implement http://schema.org - Schema Archive Structure Data Writing - JSON LD All Type of Structure Data 1. Company Info in Right Side 2. Product Rich Snippets Note for Other Best Structure Data Testing Structure Data Search Appearance Menu Description Search Appearance =&gt; Structured Data Research Google Index How Google Index Links? گوگل تمام لینک های یک وبسایت را با بررسی sitemap.xml و همچنین خزنده هایش Crawlers بدست می آورد و پردازش میکند. سپس لینک ها را درون دیتابیس موتور جستجو خود ثبت میکند. هنگامیکه لینک وبسایت درون دیتابیس ثبت شد، به معنای Index شدن لینک توسط گوگل است. 1. Google Index =&gt; Index Status در این گزینه تعداد لینک هایی که از وبسایت ما درون دیتابیس گوگل ایندکس شده اند را میتوانیم مشاهده کنیم: ![[Pasted image 20260124180915.png]]">
-  <meta property="og:locale" content="fa">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="python">
-    <meta property="article:published_time" content="2026-01-24T00:00:00+00:00">
-    <meta property="article:modified_time" content="2026-01-24T00:00:00+00:00">
-    <meta property="article:tag" content="CyberSecurity">
-    <meta property="article:tag" content="Security">
-
-  <meta itemprop="name" content="Davood Yahay – Cybersecurity Specialist">
-  <meta itemprop="description" content="TOC Google Index How Google Index Links? 1. Google Index =&gt; Index Status 2. Google Index =&gt; Blocked Resources 3. Google Index =&gt; Remove URLs Search Appearance Implementation(Structure Data) Description Elements Can Use for Showing Website in Search Results Google Structure Data Description Ways to Implement http://schema.org - Schema Archive Structure Data Writing - JSON LD All Type of Structure Data 1. Company Info in Right Side 2. Product Rich Snippets Note for Other Best Structure Data Testing Structure Data Search Appearance Menu Description Search Appearance =&gt; Structured Data Research Google Index How Google Index Links? گوگل تمام لینک های یک وبسایت را با بررسی sitemap.xml و همچنین خزنده هایش Crawlers بدست می آورد و پردازش میکند. سپس لینک ها را درون دیتابیس موتور جستجو خود ثبت میکند. هنگامیکه لینک وبسایت درون دیتابیس ثبت شد، به معنای Index شدن لینک توسط گوگل است. 1. Google Index =&gt; Index Status در این گزینه تعداد لینک هایی که از وبسایت ما درون دیتابیس گوگل ایندکس شده اند را میتوانیم مشاهده کنیم: ![[Pasted image 20260124180915.png]]">
-  <meta itemprop="datePublished" content="2026-01-24T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2026-01-24T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1631">
-  <meta itemprop="keywords" content="CyberSecurity,Security">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Davood Yahay – Cybersecurity Specialist">
-  <meta name="twitter:description" content="TOC Google Index How Google Index Links? 1. Google Index =&gt; Index Status 2. Google Index =&gt; Blocked Resources 3. Google Index =&gt; Remove URLs Search Appearance Implementation(Structure Data) Description Elements Can Use for Showing Website in Search Results Google Structure Data Description Ways to Implement http://schema.org - Schema Archive Structure Data Writing - JSON LD All Type of Structure Data 1. Company Info in Right Side 2. Product Rich Snippets Note for Other Best Structure Data Testing Structure Data Search Appearance Menu Description Search Appearance =&gt; Structured Data Research Google Index How Google Index Links? گوگل تمام لینک های یک وبسایت را با بررسی sitemap.xml و همچنین خزنده هایش Crawlers بدست می آورد و پردازش میکند. سپس لینک ها را درون دیتابیس موتور جستجو خود ثبت میکند. هنگامیکه لینک وبسایت درون دیتابیس ثبت شد، به معنای Index شدن لینک توسط گوگل است. 1. Google Index =&gt; Index Status در این گزینه تعداد لینک هایی که از وبسایت ما درون دیتابیس گوگل ایندکس شده اند را میتوانیم مشاهده کنیم: ![[Pasted image 20260124180915.png]]">
-
-	
-  </head><body class="ma0 avenir bg-near-white development is-page is-page page-E27 - Google Index &amp; Search Appearances(Structure Data)">
     
-   
-  
 
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l center items-center justify-between">
-    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
-      
-        Davood Yahay – Cybersecurity Specialist
-      
-    </a>
-    <div class="flex-l items-center">
-      
+    
 
-      
-      <div class="ananke-socials"></div>
+</head>
 
-    </div>
-  </div>
-</nav>
+<body class="section-python type-page">
 
-    </div>
-  </header>
+<header>
+    
+</header>
 
+<main>
+    
 
-
-    <main class="pb7" role="main">
-      
-  
-
-  <article class="page-E27 - Google Index &amp; Search Appearances(Structure Data) flex-l mw7 center ph3 flex-wrap justify-between">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked ttu">
-          
-        پایتون
-      </aside><div id="sharing" class="mt3 ananke-socials"></div>
-<h1 class="f1 athelas mt3 mb1"></h1>
-      
-      
-      
-      <time class="f6 mv4 dib tracked" datetime="2026-01-24T00:00:00Z">ژانویهٔ 24, 2026</time>
-      
-
-      
-      
-    </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l"><hr>
+<article class="article-wrapper">
+    <h1 class="article-title"></h1>
+    <div class="article-content">
+        <hr>
 <h2 id="toc">TOC</h2>
 <ul>
 <li><a href="#Google%20Index">Google Index</a>
@@ -570,31 +522,16 @@ How Google Index Links?
 <ol>
 <li>Best Structure Data for website to increase SEO scores</li>
 </ol>
-<ul class="pa0">
-  
-   <li class="list di">
-     <a href="/tags/cybersecurity/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">CyberSecurity</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/security/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Security</a>
-   </li>
-  
-</ul>
 
-      
-    </div></article>
+    </div>
+</article>
 
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
-    &copy;  Davood Yahay – Cybersecurity Specialist 2026 
-  </a>
-    <div><div class="ananke-socials"></div>
-</div>
-  </div>
+
+</main>
+
+<footer>
+    
 </footer>
 
-  </body>
+</body>
 </html>

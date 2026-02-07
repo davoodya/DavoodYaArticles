@@ -15,8 +15,8 @@
     <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <link rel="canonical" href="{{ .Permalink }}">
 
-    {{ $style := resources.Get "css/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+
+    <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
 
     <!-- ========================= -->
     <!-- SCHEMA STRUCTURED DATA -->
@@ -149,17 +149,17 @@
 
 <body class="section-{{ .Section }} type-{{ .Kind }}">
 
-<header>
-    {{ partial "header.html" . }}
-</header>
+<!--<header>-->
+<!--    {{ partial "header.html" . }}-->
+<!--</header>-->
 
 <main>
     {{ block "main" . }}{{ end }}
 </main>
 
-<footer>
-    {{ partial "footer.html" . }}
-</footer>
+<!--<footer>-->
+<!--    {{ partial "footer.html" . }}-->
+<!--</footer>-->
 
 </body>
 </html>

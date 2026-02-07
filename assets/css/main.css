@@ -1,0 +1,395 @@
+/* ============================= */
+/* Root Variables (Already Given) */
+/* ============================= */
+
+:root {
+  --dark-bg: #0a0a0a;
+  --darker-bg: #050505;
+  --main-text: #e0e0e0;
+  --accent-green: #00ff41;
+  --accent-blue: #3aaddf;
+  --accent-orange: #e06c11;
+  --glow-shadow: 0 0 10px rgba(0, 255, 65, 0.7);
+  --terminal-font: 'Fira Code', 'Courier New', monospace;
+  --content-font: 'Rajdhani', 'Segoe UI', sans-serif;
+  --Shabnam: 'Shabnam', sans-serif;
+  --Vazir: 'Vazir', sans-serif;
+  --Consolas: 'Consolas', 'Courier New', monospace;
+}
+
+/* ============================= */
+/* Global Reset + Base */
+/* ============================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--dark-bg);
+  color: var(--main-text);
+  font-family: var(--Vazir);
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+/* ============================= */
+/* Container */
+/* ============================= */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ============================= */
+/* Home Page Category Cards */
+/* ============================= */
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.category-card {
+  background: var(--darker-bg);
+  border: 1px solid rgba(0, 255, 65, 0.15);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-align: right;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-green);
+  box-shadow: var(--glow-shadow);
+}
+
+.category-card h2 {
+  font-family: var(--terminal-font);
+  color: var(--accent-green);
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.category-card p {
+  color: #bdbdbd;
+  font-size: 0.95rem;
+}
+
+/* ============================= */
+/* Article Wrapper */
+/* ============================= */
+
+.article-wrapper {
+  max-width: 850px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--darker-bg);
+  border-radius: 14px;
+  border: 1px solid rgba(58, 173, 223, 0.15);
+}
+
+/* ============================= */
+/* Headings (Inspired by Things Theme) */
+/* ============================= */
+
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  font-family: var(--Shabnam);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.article-content h1 {
+  font-size: 2rem;
+  color: var(--accent-green);
+  border-bottom: 1px solid rgba(0, 255, 65, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.article-content h2 {
+  font-size: 1.7rem;
+  color: var(--accent-blue);
+}
+
+.article-content h3 {
+  font-size: 1.4rem;
+  color: var(--accent-orange);
+}
+
+.article-content h4 {
+  font-size: 1.2rem;
+  color: #c678dd;
+}
+
+.article-content h5 {
+  font-size: 1.05rem;
+  color: #e5c07b;
+}
+
+.article-content h6 {
+  font-size: 0.95rem;
+  color: #98c379;
+}
+
+/* ============================= */
+/* Text Formatting */
+/* ============================= */
+
+.article-content p {
+  margin-bottom: 1.4rem;
+}
+
+.article-content strong {
+  color: var(--accent-green);
+  font-weight: 700;
+}
+
+.article-content em {
+  color: var(--accent-blue);
+  font-style: italic;
+}
+
+.article-content del {
+  opacity: 0.6;
+}
+
+/* ============================= */
+/* Links */
+/* ============================= */
+
+.article-content a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--accent-blue);
+}
+
+.article-content a:hover {
+  color: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+/* ============================= */
+/* Lists */
+/* ============================= */
+
+.article-content ul,
+.article-content ol {
+  padding-right: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-content li {
+  margin-bottom: 0.6rem;
+}
+
+/* ============================= */
+/* Code Blocks (Terminal Style) */
+/* ============================= */
+
+.article-content pre {
+  background: #000;
+  padding: 1.2rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  border: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.article-content code {
+  font-family: var(--terminal-font);
+  background: rgba(0, 255, 65, 0.08);
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: var(--accent-green);
+}
+
+.article-content pre code {
+  background: none;
+  padding: 0;
+  color: var(--accent-green);
+}
+
+/* ============================= */
+/* Blockquote */
+/* ============================= */
+
+.article-content blockquote {
+  border-right: 4px solid var(--accent-blue);
+  padding-right: 1rem;
+  margin: 2rem 0;
+  color: #c5c5c5;
+  background: rgba(58, 173, 223, 0.05);
+}
+
+/* ============================= */
+/* Tables */
+/* ============================= */
+
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.article-content th,
+.article-content td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.8rem;
+  text-align: right;
+}
+
+.article-content th {
+  background: rgba(0, 255, 65, 0.08);
+  color: var(--accent-green);
+}
+
+/* ============================= */
+/* Scrollbar (Optional Hacker Touch) */
+/* ============================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-green);
+}
+
+/* ============================= */
+/* List/Category Pages */
+/* ============================= */
+
+.category-title {
+  text-align: center;
+  color: var(--accent-green);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--Shabnam);
+}
+
+.category-description {
+  text-align: center;
+  color: #bdbdbd;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* ============================= */
+/* Article Card (در لیست دسته‌بندی‌ها) */
+/* ============================= */
+
+.article-card {
+  background: var(--darker-bg);
+  border: 1px solid rgba(58, 173, 223, 0.15);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 15px rgba(58, 173, 223, 0.4);
+}
+
+.article-card-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-family: var(--Shabnam);
+}
+
+.article-card-title a {
+  color: var(--accent-green);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.article-card-title a:hover {
+  color: var(--accent-blue);
+}
+
+.article-card-summary {
+  color: #c5c5c5;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.read-more-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+  color: #000;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: var(--Shabnam);
+  transition: all 0.3s ease;
+  text-align: center;
+  align-self: flex-start;
+}
+
+.read-more-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.6);
+}
+
+/* ============================= */
+/* Pagination */
+/* ============================= */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.pagination a,
+.pagination span {
+  background: var(--darker-bg);
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  color: var(--accent-green);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.pagination a:hover {
+  background: var(--accent-green);
+  color: #000;
+}
+
+.pagination .active {
+  background: var(--accent-green);
+  color: #000;
+  font-weight: 700;
+}
