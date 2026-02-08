@@ -33,6 +33,7 @@
 .search-icon {
     width: 18px;
     height: 18px;
+    color: var(--accent-orange);
 }
 
 /* ============================= */
@@ -328,8 +329,8 @@
     left: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--accent-green);
-    opacity: 0.6;
+    color: var(--accent-orange);
+    opacity: 0.8;
     pointer-events: none;
 }
 

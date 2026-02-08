@@ -50,7 +50,7 @@ body {
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding-top: 80px; /* فضای بیشتر برای header */
+    padding-top: 60px; /* فضای مناسب برای header */
 }
 
 /* ============================= */
@@ -76,7 +76,8 @@ body {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 3rem 1.5rem;
+    padding: 2rem 1.5rem;
+    margin-top: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -94,6 +95,7 @@ body {
     grid-template-columns: 350px 1fr;
     gap: 3rem;
     align-items: start;
+    margin-top: 80px;
 }
 
 .main-content {
@@ -245,12 +247,12 @@ body {
 }
 
 .category-card h2 {
-    font-family: var(--terminal-font);
+    font-family: var(--Shabnam);
     color: var(--accent-green);
     margin-top: 0;
     margin-bottom: 1rem;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.5px;
 }
 
@@ -488,8 +490,8 @@ body {
 
 .sidebar {
     position: sticky;
-    top: 110px;
-    max-height: calc(100vh - 130px);
+    top: 80px;
+    max-height: calc(100vh - 100px);
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--accent-green) var(--darker-bg);
@@ -568,7 +570,7 @@ body {
 }
 
 .category-icon {
-    color: var(--accent-green);
+    color: var(--accent-orange);
     font-size: 1rem;
 }
 
@@ -579,13 +581,14 @@ body {
 }
 
 .category-badge {
-    background: var(--accent-green);
-    color: #000;
+    background: rgba(0, 100, 20, 0.8);
+    color: var(--accent-orange);
     padding: 0.2rem 0.6rem;
     border-radius: 12px;
     font-size: 0.8rem;
     font-weight: 700;
     font-family: var(--terminal-font);
+    border: 1px solid var(--accent-orange);
 }
 
 /* Dropdown Styles */

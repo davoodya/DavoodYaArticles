@@ -86,7 +86,7 @@
 header {
   background-color: var(--darker-bg);
   border-bottom: 1px solid var(--accent-green);
-  padding: 10px 0;
+  padding: 5px 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -100,16 +100,19 @@ header {
   font-family: Consolas, monospace;
 }
 
-.logo h1 {
+.logo h1,
+.logo h2 {
   font-family: var(--terminal-font);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--accent-green);
   text-shadow: var(--glow-shadow);
   position: relative;
   overflow: hidden;
+  margin: 0;
 }
 
-.logo h1::before {
+.logo h1::before,
+.logo h2::before {
   content: '';
   position: absolute;
   top: 0;
@@ -157,9 +160,9 @@ nav {
   text-decoration: none;
   font-family: var(--Vazir);
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem;
   position: relative;
-  padding: 5px 0;
+  padding: 3px 0;
   transition: all 0.3s ease;
 }
 
