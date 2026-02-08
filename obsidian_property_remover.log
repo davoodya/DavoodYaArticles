@@ -1,0 +1,297 @@
+2026-02-08 15:14:26,841 - INFO - 
+======================================================================
+2026-02-08 15:14:26,841 - INFO - OBSIDIAN PROPERTY REMOVER SCRIPT STARTED
+2026-02-08 15:14:26,841 - INFO - ======================================================================
+
+2026-02-08 15:14:26,841 - INFO - No tracking file found, creating new one
+2026-02-08 15:14:26,842 - INFO - Found 12 markdown files to check
+2026-02-08 15:14:26,842 - INFO - Already processed: 0 files
+2026-02-08 15:14:26,842 - INFO - 
+============================================================
+2026-02-08 15:14:26,842 - INFO - Processing: @E16 to E21 - (Cracking Windows Password).md
+2026-02-08 15:14:26,842 - INFO - ============================================================
+2026-02-08 15:14:26,843 - INFO - Found properties in @E16 to E21 - (Cracking Windows Password).md from line 0 to line 15
+2026-02-08 15:14:26,843 - INFO - ✓ Successfully removed properties from: @E16 to E21 - (Cracking Windows Password).md
+2026-02-08 15:14:26,843 - INFO - 
+============================================================
+2026-02-08 15:14:26,843 - INFO - Processing: E0 to E6- (Introduction & Installation Kali Linux).md
+2026-02-08 15:14:26,843 - INFO - ============================================================
+2026-02-08 15:14:26,844 - INFO - Found properties in E0 to E6- (Introduction & Installation Kali Linux).md from line 0 to line 15
+2026-02-08 15:14:26,844 - INFO - ✓ Successfully removed properties from: E0 to E6- (Introduction & Installation Kali Linux).md
+2026-02-08 15:14:26,844 - INFO - 
+============================================================
+2026-02-08 15:14:26,845 - INFO - Processing: E22 to E27 (Cracking Compresses & Offices Files - Part1).md
+2026-02-08 15:14:26,845 - INFO - ============================================================
+2026-02-08 15:14:26,845 - INFO - Found properties in E22 to E27 (Cracking Compresses & Offices Files - Part1).md from line 0 to line 15
+2026-02-08 15:14:26,846 - INFO - ✓ Successfully removed properties from: E22 to E27 (Cracking Compresses & Offices Files - Part1).md
+2026-02-08 15:14:26,846 - INFO - 
+============================================================
+2026-02-08 15:14:26,846 - INFO - Processing: E28 to E31 (Cracking Offices & PDF Files - Part2).md
+2026-02-08 15:14:26,847 - INFO - ============================================================
+2026-02-08 15:14:26,847 - INFO - Found properties in E28 to E31 (Cracking Offices & PDF Files - Part2).md from line 0 to line 15
+2026-02-08 15:14:26,848 - INFO - ✓ Successfully removed properties from: E28 to E31 (Cracking Offices & PDF Files - Part2).md
+2026-02-08 15:14:26,848 - INFO - 
+============================================================
+2026-02-08 15:14:26,848 - INFO - Processing: E32 to E36 (Cracking Compresses & Offices - Part3).md
+2026-02-08 15:14:26,848 - INFO - ============================================================
+2026-02-08 15:14:26,848 - INFO - Found properties in E32 to E36 (Cracking Compresses & Offices - Part3).md from line 0 to line 15
+2026-02-08 15:14:26,849 - INFO - ✓ Successfully removed properties from: E32 to E36 (Cracking Compresses & Offices - Part3).md
+2026-02-08 15:14:26,849 - INFO - 
+============================================================
+2026-02-08 15:14:26,850 - INFO - Processing: E37 to E41 - (Wifi Hacking - Part 1).md
+2026-02-08 15:14:26,850 - INFO - ============================================================
+2026-02-08 15:14:26,850 - INFO - Found properties in E37 to E41 - (Wifi Hacking - Part 1).md from line 0 to line 15
+2026-02-08 15:14:26,851 - INFO - ✓ Successfully removed properties from: E37 to E41 - (Wifi Hacking - Part 1).md
+2026-02-08 15:14:26,851 - INFO - 
+============================================================
+2026-02-08 15:14:26,851 - INFO - Processing: E42 to E44 - (Automated Wifi Hacking - Part 2).md
+2026-02-08 15:14:26,851 - INFO - ============================================================
+2026-02-08 15:14:26,852 - INFO - Found properties in E42 to E44 - (Automated Wifi Hacking - Part 2).md from line 0 to line 15
+2026-02-08 15:14:26,852 - INFO - ✓ Successfully removed properties from: E42 to E44 - (Automated Wifi Hacking - Part 2).md
+2026-02-08 15:14:26,852 - INFO - 
+============================================================
+2026-02-08 15:14:26,853 - INFO - Processing: E45 to E49 - (Pentesting Module Concepts - Part 1).md
+2026-02-08 15:14:26,853 - INFO - ============================================================
+2026-02-08 15:14:26,853 - INFO - Found properties in E45 to E49 - (Pentesting Module Concepts - Part 1).md from line 0 to line 15
+2026-02-08 15:14:26,854 - INFO - ✓ Successfully removed properties from: E45 to E49 - (Pentesting Module Concepts - Part 1).md
+2026-02-08 15:14:26,854 - INFO - 
+============================================================
+2026-02-08 15:14:26,854 - INFO - Processing: E50 to E54 - (Pentesting Methodology - Part 2).md
+2026-02-08 15:14:26,854 - INFO - ============================================================
+2026-02-08 15:14:26,855 - INFO - Found properties in E50 to E54 - (Pentesting Methodology - Part 2).md from line 0 to line 15
+2026-02-08 15:14:26,856 - INFO - ✓ Successfully removed properties from: E50 to E54 - (Pentesting Methodology - Part 2).md
+2026-02-08 15:14:26,856 - INFO - 
+============================================================
+2026-02-08 15:14:26,856 - INFO - Processing: E55 to E57 - (Setup Try Hack Me & SMB, Telnet, FTP Exploitation).md
+2026-02-08 15:14:26,857 - INFO - ============================================================
+2026-02-08 15:14:26,857 - INFO - Found properties in E55 to E57 - (Setup Try Hack Me & SMB, Telnet, FTP Exploitation).md from line 0 to line 15
+2026-02-08 15:14:26,858 - INFO - ✓ Successfully removed properties from: E55 to E57 - (Setup Try Hack Me & SMB, Telnet, FTP Exploitation).md
+2026-02-08 15:14:26,858 - INFO - 
+============================================================
+2026-02-08 15:14:26,858 - INFO - Processing: E58 to E61 - (Setup Hack The Box & Hack Some Machines).md
+2026-02-08 15:14:26,858 - INFO - ============================================================
+2026-02-08 15:14:26,858 - INFO - Found properties in E58 to E61 - (Setup Hack The Box & Hack Some Machines).md from line 0 to line 15
+2026-02-08 15:14:26,859 - INFO - ✓ Successfully removed properties from: E58 to E61 - (Setup Hack The Box & Hack Some Machines).md
+2026-02-08 15:14:26,859 - INFO - 
+============================================================
+2026-02-08 15:14:26,859 - INFO - Processing: E7 to E15 - (Bypassing & Resetting Windows Password).md
+2026-02-08 15:14:26,859 - INFO - ============================================================
+2026-02-08 15:14:26,860 - INFO - Found properties in E7 to E15 - (Bypassing & Resetting Windows Password).md from line 0 to line 15
+2026-02-08 15:14:26,860 - INFO - ✓ Successfully removed properties from: E7 to E15 - (Bypassing & Resetting Windows Password).md
+2026-02-08 15:14:26,861 - INFO - Tracking file saved with 12 processed files
+2026-02-08 15:14:26,861 - INFO - 
+============================================================
+2026-02-08 15:14:26,861 - INFO - SUMMARY
+2026-02-08 15:14:26,861 - INFO - ============================================================
+2026-02-08 15:14:26,861 - INFO - Total files found: 12
+2026-02-08 15:14:26,861 - INFO - Already processed (skipped): 0
+2026-02-08 15:14:26,861 - INFO - Newly processed (properties removed): 12
+2026-02-08 15:14:26,861 - INFO - No properties found: 0
+2026-02-08 15:14:26,861 - INFO - ============================================================
+2026-02-08 15:14:26,862 - INFO - 
+✓ Report saved to: obsidian_property_remover_report.txt
+2026-02-08 15:14:26,862 - INFO - 
+======================================================================
+2026-02-08 15:14:26,862 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-08 15:14:26,862 - INFO - ======================================================================
+
+2026-02-08 15:15:06,362 - INFO - 
+======================================================================
+2026-02-08 15:15:06,362 - INFO - OBSIDIAN PROPERTY REMOVER SCRIPT STARTED
+2026-02-08 15:15:06,362 - INFO - ======================================================================
+
+2026-02-08 15:15:06,362 - INFO - Loaded tracking file with 12 processed files
+2026-02-08 15:15:06,363 - INFO - Found 12 markdown files to check
+2026-02-08 15:15:06,363 - INFO - Already processed: 12 files
+2026-02-08 15:15:06,363 - INFO - ⊙ Skipping already processed file: @E16 to E21 - (Cracking Windows Password).md
+2026-02-08 15:15:06,363 - INFO - ⊙ Skipping already processed file: E0 to E6- (Introduction & Installation Kali Linux).md
+2026-02-08 15:15:06,363 - INFO - ⊙ Skipping already processed file: E22 to E27 (Cracking Compresses & Offices Files - Part1).md
+2026-02-08 15:15:06,363 - INFO - ⊙ Skipping already processed file: E28 to E31 (Cracking Offices & PDF Files - Part2).md
+2026-02-08 15:15:06,363 - INFO - ⊙ Skipping already processed file: E32 to E36 (Cracking Compresses & Offices - Part3).md
+2026-02-08 15:15:06,363 - INFO - ⊙ Skipping already processed file: E37 to E41 - (Wifi Hacking - Part 1).md
+2026-02-08 15:15:06,363 - INFO - ⊙ Skipping already processed file: E42 to E44 - (Automated Wifi Hacking - Part 2).md
+2026-02-08 15:15:06,364 - INFO - ⊙ Skipping already processed file: E45 to E49 - (Pentesting Module Concepts - Part 1).md
+2026-02-08 15:15:06,364 - INFO - ⊙ Skipping already processed file: E50 to E54 - (Pentesting Methodology - Part 2).md
+2026-02-08 15:15:06,364 - INFO - ⊙ Skipping already processed file: E55 to E57 - (Setup Try Hack Me & SMB, Telnet, FTP Exploitation).md
+2026-02-08 15:15:06,364 - INFO - ⊙ Skipping already processed file: E58 to E61 - (Setup Hack The Box & Hack Some Machines).md
+2026-02-08 15:15:06,364 - INFO - ⊙ Skipping already processed file: E7 to E15 - (Bypassing & Resetting Windows Password).md
+2026-02-08 15:15:06,364 - INFO - Tracking file saved with 12 processed files
+2026-02-08 15:15:06,365 - INFO - 
+============================================================
+2026-02-08 15:15:06,365 - INFO - SUMMARY
+2026-02-08 15:15:06,365 - INFO - ============================================================
+2026-02-08 15:15:06,365 - INFO - Total files found: 12
+2026-02-08 15:15:06,365 - INFO - Already processed (skipped): 12
+2026-02-08 15:15:06,365 - INFO - Newly processed (properties removed): 0
+2026-02-08 15:15:06,365 - INFO - No properties found: 0
+2026-02-08 15:15:06,365 - INFO - ============================================================
+2026-02-08 15:15:06,366 - INFO - 
+✓ Report saved to: obsidian_property_remover_report.txt
+2026-02-08 15:15:06,366 - INFO - 
+======================================================================
+2026-02-08 15:15:06,366 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-08 15:15:06,366 - INFO - ======================================================================
+
+2026-02-08 15:26:15,229 - INFO - 
+======================================================================
+2026-02-08 15:26:15,229 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO FRONTMATTER ADDER
+2026-02-08 15:26:15,229 - INFO - SCRIPT STARTED
+2026-02-08 15:26:15,229 - INFO - ======================================================================
+
+2026-02-08 15:26:15,229 - INFO - No tracking file found, creating new one
+2026-02-08 15:26:15,230 - WARNING - No markdown files found in test\test-articles
+2026-02-08 15:26:15,230 - INFO - 
+======================================================================
+2026-02-08 15:26:15,230 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-08 15:26:15,230 - INFO - ======================================================================
+
+2026-02-08 15:27:45,846 - INFO - 
+======================================================================
+2026-02-08 15:27:45,846 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO FRONTMATTER ADDER
+2026-02-08 15:27:45,847 - INFO - SCRIPT STARTED
+2026-02-08 15:27:45,847 - INFO - ======================================================================
+
+2026-02-08 15:27:45,847 - INFO - No tracking file found, creating new one
+2026-02-08 15:27:45,848 - INFO - Found 12 markdown files to check
+2026-02-08 15:27:45,849 - INFO - Already processed: 0 files
+2026-02-08 15:27:45,849 - INFO - 
+============================================================
+2026-02-08 15:27:45,849 - INFO - Processing: @E16 to E21 - (Cracking Windows Password).md
+2026-02-08 15:27:45,849 - INFO - ============================================================
+2026-02-08 15:27:45,849 - INFO - Found Obsidian properties in @E16 to E21 - (Cracking Windows Password).md from line 0 to line 15
+2026-02-08 15:27:45,849 - INFO - ✓ Removed Obsidian properties from: @E16 to E21 - (Cracking Windows Password).md
+2026-02-08 15:27:47,829 - INFO - ✓ Added Hugo frontmatter to: @E16 to E21 - (Cracking Windows Password).md
+2026-02-08 15:27:47,829 - INFO - 
+============================================================
+2026-02-08 15:27:47,830 - INFO - Processing: E0 to E6- (Introduction & Installation Kali Linux).md
+2026-02-08 15:27:47,830 - INFO - ============================================================
+2026-02-08 15:27:47,830 - INFO - Found Obsidian properties in E0 to E6- (Introduction & Installation Kali Linux).md from line 0 to line 15
+2026-02-08 15:27:47,830 - INFO - ✓ Removed Obsidian properties from: E0 to E6- (Introduction & Installation Kali Linux).md
+2026-02-08 15:27:47,830 - INFO - ✓ Added Hugo frontmatter to: E0 to E6- (Introduction & Installation Kali Linux).md
+2026-02-08 15:27:47,831 - INFO - 
+============================================================
+2026-02-08 15:27:47,831 - INFO - Processing: E22 to E27 (Cracking Compresses & Offices Files - Part1).md
+2026-02-08 15:27:47,831 - INFO - ============================================================
+2026-02-08 15:27:47,832 - INFO - Found Obsidian properties in E22 to E27 (Cracking Compresses & Offices Files - Part1).md from line 0 to line 15
+2026-02-08 15:27:47,832 - INFO - ✓ Removed Obsidian properties from: E22 to E27 (Cracking Compresses & Offices Files - Part1).md
+2026-02-08 15:27:47,832 - INFO - ✓ Added Hugo frontmatter to: E22 to E27 (Cracking Compresses & Offices Files - Part1).md
+2026-02-08 15:27:47,833 - INFO - 
+============================================================
+2026-02-08 15:27:47,833 - INFO - Processing: E28 to E31 (Cracking Offices & PDF Files - Part2).md
+2026-02-08 15:27:47,833 - INFO - ============================================================
+2026-02-08 15:27:47,833 - INFO - Found Obsidian properties in E28 to E31 (Cracking Offices & PDF Files - Part2).md from line 0 to line 15
+2026-02-08 15:27:47,833 - INFO - ✓ Removed Obsidian properties from: E28 to E31 (Cracking Offices & PDF Files - Part2).md
+2026-02-08 15:27:47,833 - INFO - ✓ Added Hugo frontmatter to: E28 to E31 (Cracking Offices & PDF Files - Part2).md
+2026-02-08 15:27:47,834 - INFO - 
+============================================================
+2026-02-08 15:27:47,834 - INFO - Processing: E32 to E36 (Cracking Compresses & Offices - Part3).md
+2026-02-08 15:27:47,834 - INFO - ============================================================
+2026-02-08 15:27:47,834 - INFO - Found Obsidian properties in E32 to E36 (Cracking Compresses & Offices - Part3).md from line 0 to line 15
+2026-02-08 15:27:47,835 - INFO - ✓ Removed Obsidian properties from: E32 to E36 (Cracking Compresses & Offices - Part3).md
+2026-02-08 15:27:47,835 - INFO - ✓ Added Hugo frontmatter to: E32 to E36 (Cracking Compresses & Offices - Part3).md
+2026-02-08 15:27:47,835 - INFO - 
+============================================================
+2026-02-08 15:27:47,836 - INFO - Processing: E37 to E41 - (Wifi Hacking - Part 1).md
+2026-02-08 15:27:47,836 - INFO - ============================================================
+2026-02-08 15:27:47,836 - INFO - Found Obsidian properties in E37 to E41 - (Wifi Hacking - Part 1).md from line 0 to line 15
+2026-02-08 15:27:47,836 - INFO - ✓ Removed Obsidian properties from: E37 to E41 - (Wifi Hacking - Part 1).md
+2026-02-08 15:27:47,836 - INFO - ✓ Added Hugo frontmatter to: E37 to E41 - (Wifi Hacking - Part 1).md
+2026-02-08 15:27:47,837 - INFO - 
+============================================================
+2026-02-08 15:27:47,837 - INFO - Processing: E42 to E44 - (Automated Wifi Hacking - Part 2).md
+2026-02-08 15:27:47,838 - INFO - ============================================================
+2026-02-08 15:27:47,838 - INFO - Found Obsidian properties in E42 to E44 - (Automated Wifi Hacking - Part 2).md from line 0 to line 15
+2026-02-08 15:27:47,838 - INFO - ✓ Removed Obsidian properties from: E42 to E44 - (Automated Wifi Hacking - Part 2).md
+2026-02-08 15:27:47,838 - INFO - ✓ Added Hugo frontmatter to: E42 to E44 - (Automated Wifi Hacking - Part 2).md
+2026-02-08 15:27:47,839 - INFO - 
+============================================================
+2026-02-08 15:27:47,839 - INFO - Processing: E45 to E49 - (Pentesting Module Concepts - Part 1).md
+2026-02-08 15:27:47,839 - INFO - ============================================================
+2026-02-08 15:27:47,839 - INFO - Found Obsidian properties in E45 to E49 - (Pentesting Module Concepts - Part 1).md from line 0 to line 15
+2026-02-08 15:27:47,839 - INFO - ✓ Removed Obsidian properties from: E45 to E49 - (Pentesting Module Concepts - Part 1).md
+2026-02-08 15:27:47,840 - INFO - ✓ Added Hugo frontmatter to: E45 to E49 - (Pentesting Module Concepts - Part 1).md
+2026-02-08 15:27:47,840 - INFO - 
+============================================================
+2026-02-08 15:27:47,840 - INFO - Processing: E50 to E54 - (Pentesting Methodology - Part 2).md
+2026-02-08 15:27:47,841 - INFO - ============================================================
+2026-02-08 15:27:47,841 - INFO - Found Obsidian properties in E50 to E54 - (Pentesting Methodology - Part 2).md from line 0 to line 15
+2026-02-08 15:27:47,841 - INFO - ✓ Removed Obsidian properties from: E50 to E54 - (Pentesting Methodology - Part 2).md
+2026-02-08 15:27:47,841 - INFO - ✓ Added Hugo frontmatter to: E50 to E54 - (Pentesting Methodology - Part 2).md
+2026-02-08 15:27:47,842 - INFO - 
+============================================================
+2026-02-08 15:27:47,843 - INFO - Processing: E55 to E57 - (Setup Try Hack Me & SMB, Telnet, FTP Exploitation).md
+2026-02-08 15:27:47,843 - INFO - ============================================================
+2026-02-08 15:27:47,843 - INFO - Found Obsidian properties in E55 to E57 - (Setup Try Hack Me & SMB, Telnet, FTP Exploitation).md from line 0 to line 15
+2026-02-08 15:27:47,843 - INFO - ✓ Removed Obsidian properties from: E55 to E57 - (Setup Try Hack Me & SMB, Telnet, FTP Exploitation).md
+2026-02-08 15:27:47,843 - INFO - ✓ Added Hugo frontmatter to: E55 to E57 - (Setup Try Hack Me & SMB, Telnet, FTP Exploitation).md
+2026-02-08 15:27:47,844 - INFO - 
+============================================================
+2026-02-08 15:27:47,844 - INFO - Processing: E58 to E61 - (Setup Hack The Box & Hack Some Machines).md
+2026-02-08 15:27:47,844 - INFO - ============================================================
+2026-02-08 15:27:47,845 - INFO - Found Obsidian properties in E58 to E61 - (Setup Hack The Box & Hack Some Machines).md from line 0 to line 15
+2026-02-08 15:27:47,845 - INFO - ✓ Removed Obsidian properties from: E58 to E61 - (Setup Hack The Box & Hack Some Machines).md
+2026-02-08 15:27:47,845 - INFO - ✓ Added Hugo frontmatter to: E58 to E61 - (Setup Hack The Box & Hack Some Machines).md
+2026-02-08 15:27:47,845 - INFO - 
+============================================================
+2026-02-08 15:27:47,845 - INFO - Processing: E7 to E15 - (Bypassing & Resetting Windows Password).md
+2026-02-08 15:27:47,845 - INFO - ============================================================
+2026-02-08 15:27:47,846 - INFO - Found Obsidian properties in E7 to E15 - (Bypassing & Resetting Windows Password).md from line 0 to line 15
+2026-02-08 15:27:47,846 - INFO - ✓ Removed Obsidian properties from: E7 to E15 - (Bypassing & Resetting Windows Password).md
+2026-02-08 15:27:47,846 - INFO - ✓ Added Hugo frontmatter to: E7 to E15 - (Bypassing & Resetting Windows Password).md
+2026-02-08 15:27:47,847 - INFO - Tracking file saved with 12 processed files
+2026-02-08 15:27:47,848 - INFO - 
+============================================================
+2026-02-08 15:27:47,848 - INFO - SUMMARY
+2026-02-08 15:27:47,848 - INFO - ============================================================
+2026-02-08 15:27:47,848 - INFO - Total files found: 12
+2026-02-08 15:27:47,848 - INFO - Already processed (skipped): 0
+2026-02-08 15:27:47,848 - INFO - Newly processed (modified): 12
+2026-02-08 15:27:47,848 - INFO - No changes needed: 0
+2026-02-08 15:27:47,848 - INFO - Errors: 0
+2026-02-08 15:27:47,848 - INFO - ============================================================
+2026-02-08 15:27:47,849 - INFO - 
+✓ Report saved to: obsidian_property_remover_report.txt
+2026-02-08 15:27:47,849 - INFO - 
+======================================================================
+2026-02-08 15:27:47,849 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-08 15:27:47,849 - INFO - ======================================================================
+
+2026-02-08 15:28:39,723 - INFO - 
+======================================================================
+2026-02-08 15:28:39,723 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO FRONTMATTER ADDER
+2026-02-08 15:28:39,723 - INFO - SCRIPT STARTED
+2026-02-08 15:28:39,723 - INFO - ======================================================================
+
+2026-02-08 15:28:39,723 - INFO - Loaded tracking file with 12 processed files
+2026-02-08 15:28:39,723 - INFO - Found 12 markdown files to check
+2026-02-08 15:28:39,724 - INFO - Already processed: 12 files
+2026-02-08 15:28:39,724 - INFO - ⊙ Skipping already processed file: @E16 to E21 - (Cracking Windows Password).md
+2026-02-08 15:28:39,724 - INFO - ⊙ Skipping already processed file: E0 to E6- (Introduction & Installation Kali Linux).md
+2026-02-08 15:28:39,724 - INFO - ⊙ Skipping already processed file: E22 to E27 (Cracking Compresses & Offices Files - Part1).md
+2026-02-08 15:28:39,724 - INFO - ⊙ Skipping already processed file: E28 to E31 (Cracking Offices & PDF Files - Part2).md
+2026-02-08 15:28:39,724 - INFO - ⊙ Skipping already processed file: E32 to E36 (Cracking Compresses & Offices - Part3).md
+2026-02-08 15:28:39,724 - INFO - ⊙ Skipping already processed file: E37 to E41 - (Wifi Hacking - Part 1).md
+2026-02-08 15:28:39,724 - INFO - ⊙ Skipping already processed file: E42 to E44 - (Automated Wifi Hacking - Part 2).md
+2026-02-08 15:28:39,724 - INFO - ⊙ Skipping already processed file: E45 to E49 - (Pentesting Module Concepts - Part 1).md
+2026-02-08 15:28:39,724 - INFO - ⊙ Skipping already processed file: E50 to E54 - (Pentesting Methodology - Part 2).md
+2026-02-08 15:28:39,724 - INFO - ⊙ Skipping already processed file: E55 to E57 - (Setup Try Hack Me & SMB, Telnet, FTP Exploitation).md
+2026-02-08 15:28:39,724 - INFO - ⊙ Skipping already processed file: E58 to E61 - (Setup Hack The Box & Hack Some Machines).md
+2026-02-08 15:28:39,724 - INFO - ⊙ Skipping already processed file: E7 to E15 - (Bypassing & Resetting Windows Password).md
+2026-02-08 15:28:39,725 - INFO - Tracking file saved with 12 processed files
+2026-02-08 15:28:39,725 - INFO - 
+============================================================
+2026-02-08 15:28:39,725 - INFO - SUMMARY
+2026-02-08 15:28:39,725 - INFO - ============================================================
+2026-02-08 15:28:39,725 - INFO - Total files found: 12
+2026-02-08 15:28:39,725 - INFO - Already processed (skipped): 12
+2026-02-08 15:28:39,725 - INFO - Newly processed (modified): 0
+2026-02-08 15:28:39,725 - INFO - No changes needed: 0
+2026-02-08 15:28:39,725 - INFO - Errors: 0
+2026-02-08 15:28:39,725 - INFO - ============================================================
+2026-02-08 15:28:39,726 - INFO - 
+✓ Report saved to: obsidian_property_remover_report.txt
+2026-02-08 15:28:39,726 - INFO - 
+======================================================================
+2026-02-08 15:28:39,726 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-08 15:28:39,726 - INFO - ======================================================================
+
