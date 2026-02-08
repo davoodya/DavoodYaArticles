@@ -22,15 +22,15 @@ draft = false
 ### Virtualization
 #### Definitions
 0. Virtual Machines
-	1. ![Alt text](/images/cyber-security/Pastedimage20240620183121.png)
+	1. ![SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-1](/images/cyber-security/Pastedimage20240620183121.png)
 1. Virtualization Overview
-	1. ![Alt text](/images/cyber-security/Pastedimage20240620183204.png)
+	1. ![SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-2](/images/cyber-security/Pastedimage20240620183204.png)
 2. How Virtualization Works?
-	1. ![Alt text](/images/cyber-security/Pastedimage20240620183227.png)
+	1. ![SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-3](/images/cyber-security/Pastedimage20240620183227.png)
 3. Benefits & Users
-	1. ![Alt text](/images/cyber-security/Pastedimage20240620183242.png)
+	1. ![SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-4](/images/cyber-security/Pastedimage20240620183242.png)
 4. Virtual Machines Attacks
-	1. ![Alt text](/images/cyber-security/Pastedimage20240620183352.png)
+	1. ![SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-5](/images/cyber-security/Pastedimage20240620183352.png)
 #### Attacks against Virtualization
 1. *Hyperjacking*
 	1. *Takes Control of Hypervisor:*
@@ -38,7 +38,7 @@ draft = false
 	2. *Gain Access to all VMs:*
 		1. در این حملات، Attacker با نفوذ به Host اصلی سعی میکند کنترل تمام VM ها را بدست بگیرد و در واقع به تمام ماشین های مجازی دسترسی داشته باشد.
 		2. در واقع این نوع از حملات به یک لایه بالاتر نسب به حمله نوع اول انجام میشود:
-			1. ![Alt text](/images/cyber-security/Pastedimage20240620184519.png)
+			1. ![SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-6](/images/cyber-security/Pastedimage20240620184519.png)
 2. *VM Escapes*
 	1. *Guest OS Escaped Sandbox:*
 		1. در این حملات Attacker سعی میکند کنترل VM ها را در محیطی ایزوله در اختیار بگیرد.
@@ -59,14 +59,14 @@ draft = false
 		1. در این نوع حملات، Attacker با استفاده از آسیب پذیری هایی که در لایه بین Guest, Host قرار دارد برای نفوذ استفاده میکند
 	2. *Multiple sets of vulnerabilities* 
 		1. در این لایه میانی چندین آسیب پذیری وجود دارد که با استفاده از آن Attacker نفوذ خود را انجام میدهد.
-			1. ![Alt text](/images/cyber-security/Pastedimage20240620194028.png)
+			1. ![SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-7](/images/cyber-security/Pastedimage20240620194028.png)
 		2. تصویر
-			1. ![Alt text](/images/cyber-security/Pastedimage20240620194123.png)
+			1. ![SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-8](/images/cyber-security/Pastedimage20240620194123.png)
 6. *Other Attacks*
 	1. Hyper Jumping
 	2. Rowhammer
 	3. Blue Pill
-		1. ![Alt text](/images/cyber-security/Pastedimage20240620194240.png)
+		1. ![SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-9](/images/cyber-security/Pastedimage20240620194240.png)
 #### Defenses against Virtualization
 متدهایی که بوسیله آن میتوانیم Host و Guest ها را امن تر کنیم به شرح زیر است:
 1. logical Isolation
@@ -83,14 +83,14 @@ draft = false
 7. Use Private VLAN,s
 	1. استفاده از VLAN برای شبکه های VM ها
 8. Image
-	1. ![Alt text](/images/cyber-security/Pastedimage20240620194553.png)
+	1. ![SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-10](/images/cyber-security/Pastedimage20240620194553.png)
 #### Advance Virtualization
 1. VM Traffic Monitoring
 	1. از کارهای دیگری که میتوانیم برای افزایش امنیت VM ها انجام دهیم، مانیتورینگ ترافیک ورودی/خروجی به ماشین های مجازی است
 2. Virtual Network Devices
 	1. استفاده از دیوایس های شبکه مجازی مانند روتر مجازی، سوئیچ مجازی، فایروال مجازی هم باعث افزایش امنیت Guest & Host مجازی ساز ما میشود.
 3. Image
-	1. ![Alt text](/images/cyber-security/Pastedimage20240620195702.png)
+	1. ![SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-11](/images/cyber-security/Pastedimage20240620195702.png)
 ### Cloud Infrastructure
 #### Definitions
 امروزه از Cloud Infrastructure یا همان پردازش ابری بسیار استفاده میشود اما در ایران بدلیل امنیت از این سرویس ها هنوز استفاده زیادی نمیشود. نوع Cloud Types ها به شرح زیر است:
@@ -128,8 +128,8 @@ draft = false
 	1. در این نوع از حملات Attacker با سرقت اطلاعات یوزر VM و یا یوزر Hypervisor خود را بجای کاربر اصلی جا میزند و دسترسی خود را به VM یا Hypervisor میگیرد.
 	2. حملات Hijacking ]م از حملات شایعی است که Cloud Infrastructure ها انجام میشود.
 10. Image
-	1. ![Alt text](/images/cyber-security/Pastedimage20240620200538.png)
-	2. ![Alt text](/images/cyber-security/Pastedimage20240620201106.png)
+	1. ![SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-12](/images/cyber-security/Pastedimage20240620200538.png)
+	2. ![SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-13](/images/cyber-security/Pastedimage20240620201106.png)
 	3. 
 #### Advance Cloud Infrastructure
 از کارهایی که میتوانیم برای نظارت بر Cloud Infrastructure ها انجام دهیم تا در صورتیکه حمله ای به آنها صورت گرفت بتوانیم اقدامات لازم را انجام دهیم به شرح زیر هستند:
@@ -138,5 +138,5 @@ draft = false
 2. *API*
 	1. امن سازی API های سرویس Cloud Infrastructure بسیار مهم هستند.
 3. Image
-	1. ![Alt text](/images/cyber-security/Pastedimage20240620202009.png)
+	1. ![SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-14](/images/cyber-security/Pastedimage20240620202009.png)
 ### !
