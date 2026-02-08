@@ -275,7 +275,7 @@
 
 .result-link:hover {
     color: var(--accent-blue);
-    transform: translateX(-5px);
+    transform: translateX(5px);
 }
 
 .search-no-results {
@@ -389,7 +389,7 @@
 .search-result-inline:hover {
     background: rgba(0, 255, 65, 0.1);
     border-color: var(--accent-green);
-    transform: translateX(-5px);
+    transform: translateX(5px);
 }
 
 .result-title-inline {

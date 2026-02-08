@@ -2,6 +2,8 @@
 
 <div class="container">
     <div class="main-content-wrapper">
+        {{ partial "sidebar.html" . }}
+        
         <div class="main-content">
             <h1 class="category-title">{{ .Title }}</h1>
             
@@ -35,8 +37,6 @@
 
             {{ template "_internal/pagination.html" . }}
         </div>
-
-        {{ partial "sidebar.html" . }}
     </div>
 </div>
 

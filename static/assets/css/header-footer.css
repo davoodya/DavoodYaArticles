@@ -414,8 +414,8 @@ nav {
 }
 
 .footer-links a:hover {
-  color: var(--accent-green);
-  transform: translateX(-5px);
+    color: var(--accent-green);
+    transform: translateX(5px);
 }
 
 .footer-links a:hover::after {

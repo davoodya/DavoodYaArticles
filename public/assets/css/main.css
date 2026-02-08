@@ -50,7 +50,7 @@ body {
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding-top: 90px; /* فضای بیشتر برای header */
+    padding-top: 80px; /* فضای بیشتر برای header */
 }
 
 /* ============================= */
@@ -76,12 +76,12 @@ body {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 2rem 1.5rem;
+    padding: 3rem 1.5rem;
 }
 
 @media (max-width: 768px) {
     .container {
-        padding: 1.5rem 1rem;
+        padding: 2rem 1rem;
     }
 }
 
@@ -91,7 +91,7 @@ body {
 
 .main-content-wrapper {
     display: grid;
-    grid-template-columns: 1fr 350px;
+    grid-template-columns: 350px 1fr;
     gap: 3rem;
     align-items: start;
 }
@@ -120,19 +120,70 @@ body {
     text-shadow: 0 0 30px rgba(0, 255, 65, 0.5);
     letter-spacing: 1px;
     position: relative;
-    padding-bottom: 1.5rem;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--darker-bg) 0%, var(--card-bg) 100%);
+    border-radius: 20px;
+    border: 2px solid rgba(0, 255, 65, 0.2);
+    overflow: hidden;
 }
 
-.page-title::after {
+/* Animated Hacker Pattern Background */
+.page-title::before {
     content: '';
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
-    box-shadow: 0 0 10px var(--accent-green);
+    background-image: 
+        linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+        linear-gradient(45deg, rgba(58, 173, 223, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px, 50px 50px, 70px 70px;
+    animation: grid-move 20s linear infinite;
+    z-index: 0;
+}
+
+/* Binary Rain Effect */
+.page-title::after {
+    content: '01001000 01100001 01100011 01101011 01100101 01110010 00100000 01010011 01110100 01111001 01101100 01100101';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: var(--terminal-font);
+    font-size: 0.7rem;
+    color: rgba(0, 255, 65, 0.05);
+    word-wrap: break-word;
+    overflow: hidden;
+    z-index: 0;
+    line-height: 1.8;
+    padding: 1rem;
+    animation: binary-fade 8s ease-in-out infinite;
+}
+
+.page-title > * {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes grid-move {
+    0% {
+        background-position: 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: 50px 50px, 50px 50px, 70px 70px;
+    }
+}
+
+@keyframes binary-fade {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
+    }
 }
 
 /* ============================= */
@@ -258,6 +309,60 @@ body {
     font-family: var(--Shabnam);
     font-weight: 700;
     text-shadow: 0 0 25px rgba(0, 255, 65, 0.4);
+    position: relative;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, var(--darker-bg) 0%, var(--card-bg) 100%);
+    border-radius: 20px;
+    border: 2px solid rgba(0, 255, 65, 0.2);
+    overflow: hidden;
+}
+
+/* Animated Hacker Pattern Background */
+.category-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+        linear-gradient(45deg, rgba(58, 173, 223, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px, 50px 50px, 70px 70px;
+    animation: grid-move 20s linear infinite;
+    z-index: 0;
+}
+
+.category-title::after {
+    content: '< CYBERSECURITY /> < HACKING /> < SECURITY />';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    font-family: var(--terminal-font);
+    font-size: 0.6rem;
+    color: rgba(0, 255, 65, 0.05);
+    text-align: center;
+    z-index: 0;
+    animation: pulse-text 4s ease-in-out infinite;
+}
+
+.category-title > * {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes pulse-text {
+    0%, 100% {
+        opacity: 0.2;
+        letter-spacing: 0.1rem;
+    }
+    50% {
+        opacity: 0.4;
+        letter-spacing: 0.3rem;
+    }
 }
 
 .category-description {
@@ -373,7 +478,7 @@ body {
 }
 
 .read-more-btn:hover {
-    transform: translateX(-5px) scale(1.05);
+    transform: translateX(5px) scale(1.05);
     box-shadow: 0 6px 25px rgba(0, 255, 65, 0.5);
 }
 
@@ -459,7 +564,7 @@ body {
 .category-link:hover {
     background: rgba(0, 255, 65, 0.1);
     color: var(--accent-green);
-    transform: translateX(-5px);
+    transform: translateX(5px);
 }
 
 .category-icon {
@@ -599,13 +704,13 @@ body {
     color: var(--main-text);
     transition: all 0.3s ease;
     background: rgba(0, 255, 65, 0.03);
-    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
 }
 
 .recent-post-link:hover {
     background: rgba(0, 255, 65, 0.1);
-    border-left-color: var(--accent-green);
-    transform: translateX(-5px);
+    border-right-color: var(--accent-green);
+    transform: translateX(5px);
 }
 
 .recent-post-icon {

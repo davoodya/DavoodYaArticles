@@ -2,14 +2,14 @@
 
 <div class="container">
     <div class="main-content-wrapper">
+        {{ partial "sidebar.html" . }}
+        
         <article class="article-wrapper">
             <h1 class="article-title">{{ .Title }}</h1>
             <div class="article-content">
                 {{ .Content }}
             </div>
         </article>
-
-        {{ partial "sidebar.html" . }}
     </div>
 </div>
 

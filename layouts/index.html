@@ -2,8 +2,10 @@
 
 <div class="container">
   <div class="main-content-wrapper">
+    {{ partial "sidebar.html" . }}
+    
     <div class="main-content">
-      <h1 class="page-title">دسته‌بندی‌ها</h1>
+      <h1 class="page-title">دسته‌بندی مقالات</h1>
 
       <div class="home-grid">
         {{ range .Site.Sections }}
@@ -19,8 +21,6 @@
         {{ end }}
       </div>
     </div>
-
-    {{ partial "sidebar.html" . }}
   </div>
 </div>
 
