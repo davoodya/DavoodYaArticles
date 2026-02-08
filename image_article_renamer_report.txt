@@ -1,0 +1,32 @@
+Image Article Renamer Report
+============================================================
+Date: 2026-02-08 14:27:13
+============================================================
+
+Statistics:
+- Files scanned: 22
+- Files skipped (already processed): 0
+- Files modified: 3
+- Images found: 284
+- Images updated: 50
+- Images skipped: 186
+- Errors: 48
+- Total processed articles: 3
+
+Processed Articles:
+------------------------------------------------------------
+
+cyber-security\Cryptography\Basic-Encryption.md:
+  - Images found: 32
+  - Images updated: 32
+  - Last processed: 2026-02-08 14:27:13
+
+cyber-security\Cryptography\Malwares.md:
+  - Images found: 6
+  - Images updated: 6
+  - Last processed: 2026-02-08 14:27:13
+
+cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md:
+  - Images found: 12
+  - Images updated: 12
+  - Last processed: 2026-02-08 14:27:13

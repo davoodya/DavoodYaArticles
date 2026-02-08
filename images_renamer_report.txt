@@ -1,21 +1,221 @@
-Images Rename Report
+Images Rename Report (Physical Files Only)
 ============================================================
-Date: 2026-02-08 13:35:54
+Date: 2026-02-08 14:27:03
 ============================================================
 
 Statistics:
-- Files scanned: 20
-- Files modified: 5
-- Images found: 246
-- Images renamed: 60
-- Physical files renamed: 0
+- Files scanned: 22
+- Images found: 284
+- Images skipped (already processed): 186
+- Images skipped (already correct): 0
+- Physical files renamed: 38
 - Errors: 0
-- Total mappings: 5
+- Total mappings: 54
 
 Rename Mappings by Category:
 ------------------------------------------------------------
 
-CYBER-SECURITY (4 files):
+CYBER-SECURITY (53 files):
+  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-1]
+  Pastedimage20240620203510.png
+  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.png
+
+  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-2]
+  Pastedimage20240620203819.png
+  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-2.png
+
+  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-3]
+  Pastedimage20240620204019.png
+  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-3.png
+
+  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-4]
+  Pastedimage20240620204807.png
+  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-4.png
+
+  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-5]
+  Pastedimage20240620205025.png
+  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-5.png
+
+  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-6]
+  Pastedimage20240621164752.png
+  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-6.png
+
+  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-7]
+  Pastedimage20240621165857.png
+  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-7.png
+
+  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-8]
+  Pastedimage20240621170039.png
+  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-8.png
+
+  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-9]
+  Pastedimage20240621170041.png
+  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-9.png
+
+  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-10]
+  Pastedimage20240621170532.png
+  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-10.png
+
+  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-11]
+  Pastedimage20240621172255.png
+  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-11.png
+
+  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-12]
+  Pastedimage20240621172422.png
+  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-12.png
+
+  [Basic-Encryption-1]
+  Pastedimage20250713164152.png
+  -> Basic-Encryption-1.png
+
+  [Basic-Encryption-2]
+  Pastedimage20250713165744.png
+  -> Basic-Encryption-2.png
+
+  [Basic-Encryption-3]
+  Pastedimage20250713170247.png
+  -> Basic-Encryption-3.png
+
+  [Basic-Encryption-4]
+  Pastedimage20250713171340.png
+  -> Basic-Encryption-4.png
+
+  [Basic-Encryption-5]
+  Pastedimage20250713172246.png
+  -> Basic-Encryption-5.png
+
+  [Basic-Encryption-6]
+  Pastedimage20250713172811.png
+  -> Basic-Encryption-6.png
+
+  [Basic-Encryption-7]
+  Pastedimage20250713181517.png
+  -> Basic-Encryption-7.png
+
+  [Basic-Encryption-9]
+  Pastedimage20250713181931.png
+  -> Basic-Encryption-9.png
+
+  [Basic-Encryption-8]
+  Pastedimage20250713181952.png
+  -> Basic-Encryption-8.png
+
+  [Basic-Encryption-11]
+  Pastedimage20250713182430.png
+  -> Basic-Encryption-11.png
+
+  [Basic-Encryption-10]
+  Pastedimage20250713182443.png
+  -> Basic-Encryption-10.png
+
+  [Basic-Encryption-12]
+  Pastedimage20250713182716.png
+  -> Basic-Encryption-12.png
+
+  [Basic-Encryption-13]
+  Pastedimage20250713185909.png
+  -> Basic-Encryption-13.png
+
+  [Basic-Encryption-14]
+  Pastedimage20250713190307.png
+  -> Basic-Encryption-14.png
+
+  [Basic-Encryption-15]
+  Pastedimage20250713190542.png
+  -> Basic-Encryption-15.png
+
+  [Basic-Encryption-16]
+  Pastedimage20250715174328.png
+  -> Basic-Encryption-16.png
+
+  [Basic-Encryption-17]
+  Pastedimage20250715174640.png
+  -> Basic-Encryption-17.png
+
+  [Basic-Encryption-18]
+  Pastedimage20250715174808.png
+  -> Basic-Encryption-18.png
+
+  [Basic-Encryption-19]
+  Pastedimage20250715175155.png
+  -> Basic-Encryption-19.png
+
+  [Basic-Encryption-20]
+  Pastedimage20250715180644.png
+  -> Basic-Encryption-20.png
+
+  [Basic-Encryption-21]
+  Pastedimage20250715182644.png
+  -> Basic-Encryption-21.png
+
+  [Basic-Encryption-22]
+  Pastedimage20250716164001.png
+  -> Basic-Encryption-22.png
+
+  [Basic-Encryption-23]
+  Pastedimage20250716164250.png
+  -> Basic-Encryption-23.png
+
+  [Basic-Encryption-24]
+  Pastedimage20250716164420.png
+  -> Basic-Encryption-24.png
+
+  [Basic-Encryption-25]
+  Pastedimage20250716164544.png
+  -> Basic-Encryption-25.png
+
+  [Basic-Encryption-26]
+  Pastedimage20250716165150.png
+  -> Basic-Encryption-26.png
+
+  [Basic-Encryption-27]
+  Pastedimage20250716165524.png
+  -> Basic-Encryption-27.png
+
+  [Basic-Encryption-28]
+  Pastedimage20250716165641.png
+  -> Basic-Encryption-28.png
+
+  [Basic-Encryption-29]
+  Pastedimage20250716165756.png
+  -> Basic-Encryption-29.png
+
+  [Basic-Encryption-30]
+  Pastedimage20250716170043.png
+  -> Basic-Encryption-30.png
+
+  [Basic-Encryption-31]
+  Pastedimage20250716170612.png
+  -> Basic-Encryption-31.png
+
+  [Basic-Encryption-32]
+  Pastedimage20250716170855.png
+  -> Basic-Encryption-32.png
+
+  [Malwares-1]
+  Pastedimage20250716172851.png
+  -> Malwares-1.png
+
+  [Malwares-2]
+  Pastedimage20250716174502.png
+  -> Malwares-2.png
+
+  [Malwares-3]
+  Pastedimage20250716175728.png
+  -> Malwares-3.png
+
+  [Malwares-4]
+  Pastedimage20250716180045.png
+  -> Malwares-4.png
+
+  [Malwares-5]
+  Pastedimage20250716180357.png
+  -> Malwares-5.png
+
+  [Malwares-6]
+  Pastedimage20250716180909.png
+  -> Malwares-6.png
+
   [SANS-401-Defense-in-Depth (401.2)-1]
   SANS-401-Defense-in-Depth(401.2
   -> SANS-401-Defense-in-Depth(401.2)-1.2
@@ -27,10 +227,6 @@ CYBER-SECURITY (4 files):
   [SANS-401-Networking and Protocols (401.1)-1]
   SANS-401-NetworkingandProtocols(401.1
   -> SANS-401-NetworkingandProtocols(401.1)-1.1
-
-  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-1]
-  SANS-401-Wireless,Aircrack-ng,Wireshark(401.1
-  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
 
 
 SEO (1 files):

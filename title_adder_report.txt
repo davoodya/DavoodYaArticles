@@ -1,20 +1,26 @@
 Title Adder Report
 ============================================================
-Date: 2026-02-08 12:51:52
+Date: 2026-02-08 14:18:11
 ============================================================
 
 Statistics:
-- Files scanned: 20
-- Files modified: 3
-- Titles added: 3
-- Titles existed: 17
+- Files scanned: 22
+- Files modified: 2
+- Titles added: 2
+- Titles existed: 20
 - Errors: 0
-- Total articles: 20
+- Total articles: 22
 
 Article Titles:
 ------------------------------------------------------------
 
-CYBER-SECURITY (6 articles):
+CYBER-SECURITY (8 articles):
+  [cyber-security\Cryptography\Basic-Encryption.md]
+  Title: Basic-Encryption
+
+  [cyber-security\Cryptography\Malwares.md]
+  Title: Malwares
+
   [cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md]
   Title: SANS-401.0 Introduction & Prepare Lab
 

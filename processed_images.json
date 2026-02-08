@@ -982,5 +982,1501 @@
   "Pasted image 20260121190100.png": {
     "new_name": "Pastedimage20260121190100.png",
     "category": "seo"
+  },
+  "cyber-security/SANS-401.0Introduction&PrepareLab-1.png": {
+    "old_name": "SANS-401.0Introduction&PrepareLab-1.png",
+    "new_name": "SANS-401.0Introduction&PrepareLab-1.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401.0Introduction&PrepareLab-2.png": {
+    "old_name": "SANS-401.0Introduction&PrepareLab-2.png",
+    "new_name": "SANS-401.0Introduction&PrepareLab-2.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401.0Introduction&PrepareLab-3.png": {
+    "old_name": "SANS-401.0Introduction&PrepareLab-3.png",
+    "new_name": "SANS-401.0Introduction&PrepareLab-3.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401.0Introduction&PrepareLab-4.png": {
+    "old_name": "SANS-401.0Introduction&PrepareLab-4.png",
+    "new_name": "SANS-401.0Introduction&PrepareLab-4.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401.0Introduction&PrepareLab-5.png": {
+    "old_name": "SANS-401.0Introduction&PrepareLab-5.png",
+    "new_name": "SANS-401.0Introduction&PrepareLab-5.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401.0Introduction&PrepareLab-6.png": {
+    "old_name": "SANS-401.0Introduction&PrepareLab-6.png",
+    "new_name": "SANS-401.0Introduction&PrepareLab-6.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401.0Introduction&PrepareLab-7.png": {
+    "old_name": "SANS-401.0Introduction&PrepareLab-7.png",
+    "new_name": "SANS-401.0Introduction&PrepareLab-7.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401.0Introduction&PrepareLab-8.png": {
+    "old_name": "SANS-401.0Introduction&PrepareLab-8.png",
+    "new_name": "SANS-401.0Introduction&PrepareLab-8.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-1.png": {
+    "old_name": "SANS-401-PasswordCracking-1.png",
+    "new_name": "SANS-401-PasswordCracking-1.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-2.png": {
+    "old_name": "SANS-401-PasswordCracking-2.png",
+    "new_name": "SANS-401-PasswordCracking-2.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-3.png": {
+    "old_name": "SANS-401-PasswordCracking-3.png",
+    "new_name": "SANS-401-PasswordCracking-3.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-4.png": {
+    "old_name": "SANS-401-PasswordCracking-4.png",
+    "new_name": "SANS-401-PasswordCracking-4.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-5.png": {
+    "old_name": "SANS-401-PasswordCracking-5.png",
+    "new_name": "SANS-401-PasswordCracking-5.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-6.png": {
+    "old_name": "SANS-401-PasswordCracking-6.png",
+    "new_name": "SANS-401-PasswordCracking-6.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-7.png": {
+    "old_name": "SANS-401-PasswordCracking-7.png",
+    "new_name": "SANS-401-PasswordCracking-7.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-8.png": {
+    "old_name": "SANS-401-PasswordCracking-8.png",
+    "new_name": "SANS-401-PasswordCracking-8.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-9.png": {
+    "old_name": "SANS-401-PasswordCracking-9.png",
+    "new_name": "SANS-401-PasswordCracking-9.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-10.png": {
+    "old_name": "SANS-401-PasswordCracking-10.png",
+    "new_name": "SANS-401-PasswordCracking-10.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-11.png": {
+    "old_name": "SANS-401-PasswordCracking-11.png",
+    "new_name": "SANS-401-PasswordCracking-11.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-12.png": {
+    "old_name": "SANS-401-PasswordCracking-12.png",
+    "new_name": "SANS-401-PasswordCracking-12.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-13.png": {
+    "old_name": "SANS-401-PasswordCracking-13.png",
+    "new_name": "SANS-401-PasswordCracking-13.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-14.png": {
+    "old_name": "SANS-401-PasswordCracking-14.png",
+    "new_name": "SANS-401-PasswordCracking-14.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-15.png": {
+    "old_name": "SANS-401-PasswordCracking-15.png",
+    "new_name": "SANS-401-PasswordCracking-15.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-16.png": {
+    "old_name": "SANS-401-PasswordCracking-16.png",
+    "new_name": "SANS-401-PasswordCracking-16.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-17.png": {
+    "old_name": "SANS-401-PasswordCracking-17.png",
+    "new_name": "SANS-401-PasswordCracking-17.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-18.png": {
+    "old_name": "SANS-401-PasswordCracking-18.png",
+    "new_name": "SANS-401-PasswordCracking-18.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-19.png": {
+    "old_name": "SANS-401-PasswordCracking-19.png",
+    "new_name": "SANS-401-PasswordCracking-19.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-20.png": {
+    "old_name": "SANS-401-PasswordCracking-20.png",
+    "new_name": "SANS-401-PasswordCracking-20.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-21.png": {
+    "old_name": "SANS-401-PasswordCracking-21.png",
+    "new_name": "SANS-401-PasswordCracking-21.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-22.png": {
+    "old_name": "SANS-401-PasswordCracking-22.png",
+    "new_name": "SANS-401-PasswordCracking-22.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-23.png": {
+    "old_name": "SANS-401-PasswordCracking-23.png",
+    "new_name": "SANS-401-PasswordCracking-23.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-24.png": {
+    "old_name": "SANS-401-PasswordCracking-24.png",
+    "new_name": "SANS-401-PasswordCracking-24.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-25.png": {
+    "old_name": "SANS-401-PasswordCracking-25.png",
+    "new_name": "SANS-401-PasswordCracking-25.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-26.png": {
+    "old_name": "SANS-401-PasswordCracking-26.png",
+    "new_name": "SANS-401-PasswordCracking-26.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-27.png": {
+    "old_name": "SANS-401-PasswordCracking-27.png",
+    "new_name": "SANS-401-PasswordCracking-27.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-28.png": {
+    "old_name": "SANS-401-PasswordCracking-28.png",
+    "new_name": "SANS-401-PasswordCracking-28.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-29.png": {
+    "old_name": "SANS-401-PasswordCracking-29.png",
+    "new_name": "SANS-401-PasswordCracking-29.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "cyber-security/SANS-401-PasswordCracking-30.png": {
+    "old_name": "SANS-401-PasswordCracking-30.png",
+    "new_name": "SANS-401-PasswordCracking-30.png",
+    "category": "cyber-security",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-1.png": {
+    "old_name": "60CommandsHackerShouldKnowit-1.png",
+    "new_name": "60CommandsHackerShouldKnowit-1.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-2.png": {
+    "old_name": "60CommandsHackerShouldKnowit-2.png",
+    "new_name": "60CommandsHackerShouldKnowit-2.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-3.png": {
+    "old_name": "60CommandsHackerShouldKnowit-3.png",
+    "new_name": "60CommandsHackerShouldKnowit-3.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-4.png": {
+    "old_name": "60CommandsHackerShouldKnowit-4.png",
+    "new_name": "60CommandsHackerShouldKnowit-4.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-5.png": {
+    "old_name": "60CommandsHackerShouldKnowit-5.png",
+    "new_name": "60CommandsHackerShouldKnowit-5.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-6.png": {
+    "old_name": "60CommandsHackerShouldKnowit-6.png",
+    "new_name": "60CommandsHackerShouldKnowit-6.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-7.png": {
+    "old_name": "60CommandsHackerShouldKnowit-7.png",
+    "new_name": "60CommandsHackerShouldKnowit-7.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-8.png": {
+    "old_name": "60CommandsHackerShouldKnowit-8.png",
+    "new_name": "60CommandsHackerShouldKnowit-8.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-9.png": {
+    "old_name": "60CommandsHackerShouldKnowit-9.png",
+    "new_name": "60CommandsHackerShouldKnowit-9.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-10.png": {
+    "old_name": "60CommandsHackerShouldKnowit-10.png",
+    "new_name": "60CommandsHackerShouldKnowit-10.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-11.png": {
+    "old_name": "60CommandsHackerShouldKnowit-11.png",
+    "new_name": "60CommandsHackerShouldKnowit-11.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-12.png": {
+    "old_name": "60CommandsHackerShouldKnowit-12.png",
+    "new_name": "60CommandsHackerShouldKnowit-12.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-13.png": {
+    "old_name": "60CommandsHackerShouldKnowit-13.png",
+    "new_name": "60CommandsHackerShouldKnowit-13.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-14.png": {
+    "old_name": "60CommandsHackerShouldKnowit-14.png",
+    "new_name": "60CommandsHackerShouldKnowit-14.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-15.png": {
+    "old_name": "60CommandsHackerShouldKnowit-15.png",
+    "new_name": "60CommandsHackerShouldKnowit-15.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-16.png": {
+    "old_name": "60CommandsHackerShouldKnowit-16.png",
+    "new_name": "60CommandsHackerShouldKnowit-16.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-17.png": {
+    "old_name": "60CommandsHackerShouldKnowit-17.png",
+    "new_name": "60CommandsHackerShouldKnowit-17.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-18.png": {
+    "old_name": "60CommandsHackerShouldKnowit-18.png",
+    "new_name": "60CommandsHackerShouldKnowit-18.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-19.png": {
+    "old_name": "60CommandsHackerShouldKnowit-19.png",
+    "new_name": "60CommandsHackerShouldKnowit-19.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-20.png": {
+    "old_name": "60CommandsHackerShouldKnowit-20.png",
+    "new_name": "60CommandsHackerShouldKnowit-20.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-21.png": {
+    "old_name": "60CommandsHackerShouldKnowit-21.png",
+    "new_name": "60CommandsHackerShouldKnowit-21.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-22.png": {
+    "old_name": "60CommandsHackerShouldKnowit-22.png",
+    "new_name": "60CommandsHackerShouldKnowit-22.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-23.png": {
+    "old_name": "60CommandsHackerShouldKnowit-23.png",
+    "new_name": "60CommandsHackerShouldKnowit-23.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/60CommandsHackerShouldKnowit-24.png": {
+    "old_name": "60CommandsHackerShouldKnowit-24.png",
+    "new_name": "60CommandsHackerShouldKnowit-24.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "seo/SEOIntro,SearchEngines,Keywords-1.png": {
+    "old_name": "SEOIntro,SearchEngines,Keywords-1.png",
+    "new_name": "SEOIntro,SearchEngines,Keywords-1.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/SEOIntro,SearchEngines,Keywords-2.png": {
+    "old_name": "SEOIntro,SearchEngines,Keywords-2.png",
+    "new_name": "SEOIntro,SearchEngines,Keywords-2.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/SEOIntro,SearchEngines,Keywords-3.png": {
+    "old_name": "SEOIntro,SearchEngines,Keywords-3.png",
+    "new_name": "SEOIntro,SearchEngines,Keywords-3.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/SEOIntro,SearchEngines,Keywords-4.png": {
+    "old_name": "SEOIntro,SearchEngines,Keywords-4.png",
+    "new_name": "SEOIntro,SearchEngines,Keywords-4.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/SEOIntro,SearchEngines,Keywords-5.png": {
+    "old_name": "SEOIntro,SearchEngines,Keywords-5.png",
+    "new_name": "SEOIntro,SearchEngines,Keywords-5.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/SEOIntro,SearchEngines,Keywords-6.png": {
+    "old_name": "SEOIntro,SearchEngines,Keywords-6.png",
+    "new_name": "SEOIntro,SearchEngines,Keywords-6.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/SEOIntro,SearchEngines,Keywords-7.png": {
+    "old_name": "SEOIntro,SearchEngines,Keywords-7.png",
+    "new_name": "SEOIntro,SearchEngines,Keywords-7.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/SEOIntro,SearchEngines,Keywords-8.png": {
+    "old_name": "SEOIntro,SearchEngines,Keywords-8.png",
+    "new_name": "SEOIntro,SearchEngines,Keywords-8.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/SEOIntro,SearchEngines,Keywords-9.png": {
+    "old_name": "SEOIntro,SearchEngines,Keywords-9.png",
+    "new_name": "SEOIntro,SearchEngines,Keywords-9.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/SEOIntro,SearchEngines,Keywords-10.png": {
+    "old_name": "SEOIntro,SearchEngines,Keywords-10.png",
+    "new_name": "SEOIntro,SearchEngines,Keywords-10.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/SEOIntro,SearchEngines,Keywords-11.png": {
+    "old_name": "SEOIntro,SearchEngines,Keywords-11.png",
+    "new_name": "SEOIntro,SearchEngines,Keywords-11.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/ContentSEO,ImportantWebsitePages-1.png": {
+    "old_name": "ContentSEO,ImportantWebsitePages-1.png",
+    "new_name": "ContentSEO,ImportantWebsitePages-1.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/ContentSEO,ImportantWebsitePages-2.png": {
+    "old_name": "ContentSEO,ImportantWebsitePages-2.png",
+    "new_name": "ContentSEO,ImportantWebsitePages-2.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/ContentSEO,ImportantWebsitePages-3.png": {
+    "old_name": "ContentSEO,ImportantWebsitePages-3.png",
+    "new_name": "ContentSEO,ImportantWebsitePages-3.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/ContentSEO,ImportantWebsitePages-4.png": {
+    "old_name": "ContentSEO,ImportantWebsitePages-4.png",
+    "new_name": "ContentSEO,ImportantWebsitePages-4.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/ContentSEO,ImportantWebsitePages-5.png": {
+    "old_name": "ContentSEO,ImportantWebsitePages-5.png",
+    "new_name": "ContentSEO,ImportantWebsitePages-5.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/ContentSEO,ImportantWebsitePages-6.png": {
+    "old_name": "ContentSEO,ImportantWebsitePages-6.png",
+    "new_name": "ContentSEO,ImportantWebsitePages-6.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/ContentSEO,ImportantWebsitePages-7.png": {
+    "old_name": "ContentSEO,ImportantWebsitePages-7.png",
+    "new_name": "ContentSEO,ImportantWebsitePages-7.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/ContentSEO,ImportantWebsitePages-8.png": {
+    "old_name": "ContentSEO,ImportantWebsitePages-8.png",
+    "new_name": "ContentSEO,ImportantWebsitePages-8.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/ContentSEO,ImportantWebsitePages-9.png": {
+    "old_name": "ContentSEO,ImportantWebsitePages-9.png",
+    "new_name": "ContentSEO,ImportantWebsitePages-9.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/ContentSEO,ImportantWebsitePages-10.png": {
+    "old_name": "ContentSEO,ImportantWebsitePages-10.png",
+    "new_name": "ContentSEO,ImportantWebsitePages-10.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/GoodContentsforSEO-1.png": {
+    "old_name": "GoodContentsforSEO-1.png",
+    "new_name": "GoodContentsforSEO-1.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/GoodContentsforSEO-2.png": {
+    "old_name": "GoodContentsforSEO-2.png",
+    "new_name": "GoodContentsforSEO-2.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/GoodContentsforSEO-3.png": {
+    "old_name": "GoodContentsforSEO-3.png",
+    "new_name": "GoodContentsforSEO-3.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/PageRank-1.png": {
+    "old_name": "PageRank-1.png",
+    "new_name": "PageRank-1.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/PageRank-2.png": {
+    "old_name": "PageRank-2.png",
+    "new_name": "PageRank-2.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/PageAuthority&DomainAuthority-1.png": {
+    "old_name": "PageAuthority&DomainAuthority-1.png",
+    "new_name": "PageAuthority&DomainAuthority-1.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/PageAuthority&DomainAuthority-2.png": {
+    "old_name": "PageAuthority&DomainAuthority-2.png",
+    "new_name": "PageAuthority&DomainAuthority-2.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/PageAuthority&DomainAuthority-3.png": {
+    "old_name": "PageAuthority&DomainAuthority-3.png",
+    "new_name": "PageAuthority&DomainAuthority-3.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/Backlinks-1.png": {
+    "old_name": "Backlinks-1.png",
+    "new_name": "Backlinks-1.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-2.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-2.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-2.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-3.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-3.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-3.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-4.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-4.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-4.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-5.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-5.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-5.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-6.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-6.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-6.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-7.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-7.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-7.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-8.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-8.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-8.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-9.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-9.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-9.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-10.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-10.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-10.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-11.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-11.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-11.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-12.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-12.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-12.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-13.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-13.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-13.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-14.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-14.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-14.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-15.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-15.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-15.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-16.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-16.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-16.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-17.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-17.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-17.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-18.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-18.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-18.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-19.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-19.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-19.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-20.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-20.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-20.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-21.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-21.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-21.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-22.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-22.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-22.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-23.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-23.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-23.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-24.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-24.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-24.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-25.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-25.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-25.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-26.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-26.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-26.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-27.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-27.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-27.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-28.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-28.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-28.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-29.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-29.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-29.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-30.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-30.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-30.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-31.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-31.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-31.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-32.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-32.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-32.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-33.png": {
+    "old_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-33.png",
+    "new_name": "FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-33.png",
+    "category": "seo",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-1.png": {
+    "old_name": "MSFConsoleCommands-1.png",
+    "new_name": "MSFConsoleCommands-1.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-2.png": {
+    "old_name": "MSFConsoleCommands-2.png",
+    "new_name": "MSFConsoleCommands-2.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-3.png": {
+    "old_name": "MSFConsoleCommands-3.png",
+    "new_name": "MSFConsoleCommands-3.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-4.png": {
+    "old_name": "MSFConsoleCommands-4.png",
+    "new_name": "MSFConsoleCommands-4.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-5.png": {
+    "old_name": "MSFConsoleCommands-5.png",
+    "new_name": "MSFConsoleCommands-5.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-6.png": {
+    "old_name": "MSFConsoleCommands-6.png",
+    "new_name": "MSFConsoleCommands-6.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-7.png": {
+    "old_name": "MSFConsoleCommands-7.png",
+    "new_name": "MSFConsoleCommands-7.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-8.png": {
+    "old_name": "MSFConsoleCommands-8.png",
+    "new_name": "MSFConsoleCommands-8.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-9.png": {
+    "old_name": "MSFConsoleCommands-9.png",
+    "new_name": "MSFConsoleCommands-9.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-10.png": {
+    "old_name": "MSFConsoleCommands-10.png",
+    "new_name": "MSFConsoleCommands-10.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-11.png": {
+    "old_name": "MSFConsoleCommands-11.png",
+    "new_name": "MSFConsoleCommands-11.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-12.png": {
+    "old_name": "MSFConsoleCommands-12.png",
+    "new_name": "MSFConsoleCommands-12.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-13.png": {
+    "old_name": "MSFConsoleCommands-13.png",
+    "new_name": "MSFConsoleCommands-13.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-14.png": {
+    "old_name": "MSFConsoleCommands-14.png",
+    "new_name": "MSFConsoleCommands-14.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-15.png": {
+    "old_name": "MSFConsoleCommands-15.png",
+    "new_name": "MSFConsoleCommands-15.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-16.png": {
+    "old_name": "MSFConsoleCommands-16.png",
+    "new_name": "MSFConsoleCommands-16.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-17.png": {
+    "old_name": "MSFConsoleCommands-17.png",
+    "new_name": "MSFConsoleCommands-17.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-18.png": {
+    "old_name": "MSFConsoleCommands-18.png",
+    "new_name": "MSFConsoleCommands-18.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-19.png": {
+    "old_name": "MSFConsoleCommands-19.png",
+    "new_name": "MSFConsoleCommands-19.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-20.png": {
+    "old_name": "MSFConsoleCommands-20.png",
+    "new_name": "MSFConsoleCommands-20.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-21.png": {
+    "old_name": "MSFConsoleCommands-21.png",
+    "new_name": "MSFConsoleCommands-21.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-22.png": {
+    "old_name": "MSFConsoleCommands-22.png",
+    "new_name": "MSFConsoleCommands-22.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-23.png": {
+    "old_name": "MSFConsoleCommands-23.png",
+    "new_name": "MSFConsoleCommands-23.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-24.png": {
+    "old_name": "MSFConsoleCommands-24.png",
+    "new_name": "MSFConsoleCommands-24.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-25.png": {
+    "old_name": "MSFConsoleCommands-25.png",
+    "new_name": "MSFConsoleCommands-25.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-26.png": {
+    "old_name": "MSFConsoleCommands-26.png",
+    "new_name": "MSFConsoleCommands-26.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-27.png": {
+    "old_name": "MSFConsoleCommands-27.png",
+    "new_name": "MSFConsoleCommands-27.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-28.png": {
+    "old_name": "MSFConsoleCommands-28.png",
+    "new_name": "MSFConsoleCommands-28.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-29.png": {
+    "old_name": "MSFConsoleCommands-29.png",
+    "new_name": "MSFConsoleCommands-29.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-30.png": {
+    "old_name": "MSFConsoleCommands-30.png",
+    "new_name": "MSFConsoleCommands-30.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-31.png": {
+    "old_name": "MSFConsoleCommands-31.png",
+    "new_name": "MSFConsoleCommands-31.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-32.png": {
+    "old_name": "MSFConsoleCommands-32.png",
+    "new_name": "MSFConsoleCommands-32.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-33.png": {
+    "old_name": "MSFConsoleCommands-33.png",
+    "new_name": "MSFConsoleCommands-33.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-34.png": {
+    "old_name": "MSFConsoleCommands-34.png",
+    "new_name": "MSFConsoleCommands-34.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-35.png": {
+    "old_name": "MSFConsoleCommands-35.png",
+    "new_name": "MSFConsoleCommands-35.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-36.png": {
+    "old_name": "MSFConsoleCommands-36.png",
+    "new_name": "MSFConsoleCommands-36.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-37.png": {
+    "old_name": "MSFConsoleCommands-37.png",
+    "new_name": "MSFConsoleCommands-37.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-38.png": {
+    "old_name": "MSFConsoleCommands-38.png",
+    "new_name": "MSFConsoleCommands-38.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-39.png": {
+    "old_name": "MSFConsoleCommands-39.png",
+    "new_name": "MSFConsoleCommands-39.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-40.png": {
+    "old_name": "MSFConsoleCommands-40.png",
+    "new_name": "MSFConsoleCommands-40.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-41.png": {
+    "old_name": "MSFConsoleCommands-41.png",
+    "new_name": "MSFConsoleCommands-41.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-42.png": {
+    "old_name": "MSFConsoleCommands-42.png",
+    "new_name": "MSFConsoleCommands-42.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/MSFConsoleCommands-43.png": {
+    "old_name": "MSFConsoleCommands-43.png",
+    "new_name": "MSFConsoleCommands-43.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/1-InstallBurpsuite-1.png": {
+    "old_name": "1-InstallBurpsuite-1.png",
+    "new_name": "1-InstallBurpsuite-1.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/1-InstallBurpsuite-2.png": {
+    "old_name": "1-InstallBurpsuite-2.png",
+    "new_name": "1-InstallBurpsuite-2.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/1-InstallBurpsuite-3.png": {
+    "old_name": "1-InstallBurpsuite-3.png",
+    "new_name": "1-InstallBurpsuite-3.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/1-InstallBurpsuite-4.png": {
+    "old_name": "1-InstallBurpsuite-4.png",
+    "new_name": "1-InstallBurpsuite-4.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/1-InstallBurpsuite-5.png": {
+    "old_name": "1-InstallBurpsuite-5.png",
+    "new_name": "1-InstallBurpsuite-5.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/1-InstallBurpsuite-6.png": {
+    "old_name": "1-InstallBurpsuite-6.png",
+    "new_name": "1-InstallBurpsuite-6.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/1-InstallBurpsuite-7.png": {
+    "old_name": "1-InstallBurpsuite-7.png",
+    "new_name": "1-InstallBurpsuite-7.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/1-InstallBurpsuite-8.png": {
+    "old_name": "1-InstallBurpsuite-8.png",
+    "new_name": "1-InstallBurpsuite-8.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/1-InstallBurpsuite-9.png": {
+    "old_name": "1-InstallBurpsuite-9.png",
+    "new_name": "1-InstallBurpsuite-9.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/1-InstallBurpsuite-10.png": {
+    "old_name": "1-InstallBurpsuite-10.png",
+    "new_name": "1-InstallBurpsuite-10.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/1-InstallBurpsuite-11.png": {
+    "old_name": "1-InstallBurpsuite-11.png",
+    "new_name": "1-InstallBurpsuite-11.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/1-InstallBurpsuite-12.png": {
+    "old_name": "1-InstallBurpsuite-12.png",
+    "new_name": "1-InstallBurpsuite-12.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/2-ChangeHTTPData&BypassParameters-1.png": {
+    "old_name": "2-ChangeHTTPData&BypassParameters-1.png",
+    "new_name": "2-ChangeHTTPData&BypassParameters-1.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/2-ChangeHTTPData&BypassParameters-2.png": {
+    "old_name": "2-ChangeHTTPData&BypassParameters-2.png",
+    "new_name": "2-ChangeHTTPData&BypassParameters-2.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/2-ChangeHTTPData&BypassParameters-3.png": {
+    "old_name": "2-ChangeHTTPData&BypassParameters-3.png",
+    "new_name": "2-ChangeHTTPData&BypassParameters-3.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/2-ChangeHTTPData&BypassParameters-4.png": {
+    "old_name": "2-ChangeHTTPData&BypassParameters-4.png",
+    "new_name": "2-ChangeHTTPData&BypassParameters-4.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/2-ChangeHTTPData&BypassParameters-5.png": {
+    "old_name": "2-ChangeHTTPData&BypassParameters-5.png",
+    "new_name": "2-ChangeHTTPData&BypassParameters-5.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "tools/2-ChangeHTTPData&BypassParameters-6.png": {
+    "old_name": "2-ChangeHTTPData&BypassParameters-6.png",
+    "new_name": "2-ChangeHTTPData&BypassParameters-6.png",
+    "category": "tools",
+    "status": "already_correct"
+  },
+  "Pasted image 20250713164152.png": {
+    "new_name": "Pastedimage20250713164152.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250713165744.png": {
+    "new_name": "Pastedimage20250713165744.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250713170247.png": {
+    "new_name": "Pastedimage20250713170247.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250713171340.png": {
+    "new_name": "Pastedimage20250713171340.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250713172246.png": {
+    "new_name": "Pastedimage20250713172246.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250713172811.png": {
+    "new_name": "Pastedimage20250713172811.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250713181517.png": {
+    "new_name": "Pastedimage20250713181517.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250713181931.png": {
+    "new_name": "Pastedimage20250713181931.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250713181952.png": {
+    "new_name": "Pastedimage20250713181952.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250713182430.png": {
+    "new_name": "Pastedimage20250713182430.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250713182443.png": {
+    "new_name": "Pastedimage20250713182443.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250713182716.png": {
+    "new_name": "Pastedimage20250713182716.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250713185909.png": {
+    "new_name": "Pastedimage20250713185909.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250713190307.png": {
+    "new_name": "Pastedimage20250713190307.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250713190542.png": {
+    "new_name": "Pastedimage20250713190542.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250715174328.png": {
+    "new_name": "Pastedimage20250715174328.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250715174640.png": {
+    "new_name": "Pastedimage20250715174640.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250715174808.png": {
+    "new_name": "Pastedimage20250715174808.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250715175155.png": {
+    "new_name": "Pastedimage20250715175155.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250715180644.png": {
+    "new_name": "Pastedimage20250715180644.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250715182644.png": {
+    "new_name": "Pastedimage20250715182644.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716164001.png": {
+    "new_name": "Pastedimage20250716164001.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716164250.png": {
+    "new_name": "Pastedimage20250716164250.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716164420.png": {
+    "new_name": "Pastedimage20250716164420.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716164544.png": {
+    "new_name": "Pastedimage20250716164544.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716165150.png": {
+    "new_name": "Pastedimage20250716165150.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716165524.png": {
+    "new_name": "Pastedimage20250716165524.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716165641.png": {
+    "new_name": "Pastedimage20250716165641.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716165756.png": {
+    "new_name": "Pastedimage20250716165756.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716170043.png": {
+    "new_name": "Pastedimage20250716170043.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716170612.png": {
+    "new_name": "Pastedimage20250716170612.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716170855.png": {
+    "new_name": "Pastedimage20250716170855.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716172851.png": {
+    "new_name": "Pastedimage20250716172851.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716174502.png": {
+    "new_name": "Pastedimage20250716174502.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716175728.png": {
+    "new_name": "Pastedimage20250716175728.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716180045.png": {
+    "new_name": "Pastedimage20250716180045.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716180357.png": {
+    "new_name": "Pastedimage20250716180357.png",
+    "category": "cyber-security"
+  },
+  "Pasted image 20250716180909.png": {
+    "new_name": "Pastedimage20250716180909.png",
+    "category": "cyber-security"
+  },
+  "cyber-security/Pastedimage20250713164152.png": {
+    "old_name": "Pastedimage20250713164152.png",
+    "new_name": "Basic-Encryption-1.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250713165744.png": {
+    "old_name": "Pastedimage20250713165744.png",
+    "new_name": "Basic-Encryption-2.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250713170247.png": {
+    "old_name": "Pastedimage20250713170247.png",
+    "new_name": "Basic-Encryption-3.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250713171340.png": {
+    "old_name": "Pastedimage20250713171340.png",
+    "new_name": "Basic-Encryption-4.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250713172246.png": {
+    "old_name": "Pastedimage20250713172246.png",
+    "new_name": "Basic-Encryption-5.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250713172811.png": {
+    "old_name": "Pastedimage20250713172811.png",
+    "new_name": "Basic-Encryption-6.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250713181517.png": {
+    "old_name": "Pastedimage20250713181517.png",
+    "new_name": "Basic-Encryption-7.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250713181952.png": {
+    "old_name": "Pastedimage20250713181952.png",
+    "new_name": "Basic-Encryption-8.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250713181931.png": {
+    "old_name": "Pastedimage20250713181931.png",
+    "new_name": "Basic-Encryption-9.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250713182443.png": {
+    "old_name": "Pastedimage20250713182443.png",
+    "new_name": "Basic-Encryption-10.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250713182430.png": {
+    "old_name": "Pastedimage20250713182430.png",
+    "new_name": "Basic-Encryption-11.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250713182716.png": {
+    "old_name": "Pastedimage20250713182716.png",
+    "new_name": "Basic-Encryption-12.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250713185909.png": {
+    "old_name": "Pastedimage20250713185909.png",
+    "new_name": "Basic-Encryption-13.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250713190307.png": {
+    "old_name": "Pastedimage20250713190307.png",
+    "new_name": "Basic-Encryption-14.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250713190542.png": {
+    "old_name": "Pastedimage20250713190542.png",
+    "new_name": "Basic-Encryption-15.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250715174328.png": {
+    "old_name": "Pastedimage20250715174328.png",
+    "new_name": "Basic-Encryption-16.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250715174640.png": {
+    "old_name": "Pastedimage20250715174640.png",
+    "new_name": "Basic-Encryption-17.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250715174808.png": {
+    "old_name": "Pastedimage20250715174808.png",
+    "new_name": "Basic-Encryption-18.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250715175155.png": {
+    "old_name": "Pastedimage20250715175155.png",
+    "new_name": "Basic-Encryption-19.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250715180644.png": {
+    "old_name": "Pastedimage20250715180644.png",
+    "new_name": "Basic-Encryption-20.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250715182644.png": {
+    "old_name": "Pastedimage20250715182644.png",
+    "new_name": "Basic-Encryption-21.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716164001.png": {
+    "old_name": "Pastedimage20250716164001.png",
+    "new_name": "Basic-Encryption-22.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716164250.png": {
+    "old_name": "Pastedimage20250716164250.png",
+    "new_name": "Basic-Encryption-23.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716164420.png": {
+    "old_name": "Pastedimage20250716164420.png",
+    "new_name": "Basic-Encryption-24.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716164544.png": {
+    "old_name": "Pastedimage20250716164544.png",
+    "new_name": "Basic-Encryption-25.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716165150.png": {
+    "old_name": "Pastedimage20250716165150.png",
+    "new_name": "Basic-Encryption-26.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716165524.png": {
+    "old_name": "Pastedimage20250716165524.png",
+    "new_name": "Basic-Encryption-27.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716165641.png": {
+    "old_name": "Pastedimage20250716165641.png",
+    "new_name": "Basic-Encryption-28.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716165756.png": {
+    "old_name": "Pastedimage20250716165756.png",
+    "new_name": "Basic-Encryption-29.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716170043.png": {
+    "old_name": "Pastedimage20250716170043.png",
+    "new_name": "Basic-Encryption-30.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716170612.png": {
+    "old_name": "Pastedimage20250716170612.png",
+    "new_name": "Basic-Encryption-31.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716170855.png": {
+    "old_name": "Pastedimage20250716170855.png",
+    "new_name": "Basic-Encryption-32.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716172851.png": {
+    "old_name": "Pastedimage20250716172851.png",
+    "new_name": "Malwares-1.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716174502.png": {
+    "old_name": "Pastedimage20250716174502.png",
+    "new_name": "Malwares-2.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716175728.png": {
+    "old_name": "Pastedimage20250716175728.png",
+    "new_name": "Malwares-3.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716180045.png": {
+    "old_name": "Pastedimage20250716180045.png",
+    "new_name": "Malwares-4.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716180357.png": {
+    "old_name": "Pastedimage20250716180357.png",
+    "new_name": "Malwares-5.png",
+    "category": "cyber-security",
+    "status": "renamed"
+  },
+  "cyber-security/Pastedimage20250716180909.png": {
+    "old_name": "Pastedimage20250716180909.png",
+    "new_name": "Malwares-6.png",
+    "category": "cyber-security",
+    "status": "renamed"
   }
 }

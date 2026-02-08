@@ -35,14 +35,14 @@ draft = false
 1. WEP(Wired Equivalent Privacy)
 	1. این مدل از رمزنگاری Symmetric محسوب میشود از الگوریتم RC4 برای رمزنگاری استفاده میکند.
 	2. این مدل امروزه استفاده نمیشود زیرا الگوریتم آن کرک شده است.
-		1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-1](/images/cyber-security/Pastedimage20240620203510.png)
+		1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-1](/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.png)
 2. WPA 1
 	1. این رمزنگاری از پروتکل TKIP(Temporal Key Integrity protocol) استفاده میکند.
 	2. همچنین با استفاده از MIC(Message Integrity Check) هم یک لایه  امن سازی اضافه انجام میدهد.
-		1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-2](/images/cyber-security/Pastedimage20240620203819.png)
+		1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-2](/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-2.png)
 3. WPA 2
 	1. این مدل تقویت شده ورژن اول خود است که از الگوریتم AES(Advance Encryption Standard) برای رمزنگاری استفاده میکند.
-		1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-3](/images/cyber-security/Pastedimage20240620204019.png)
+		1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-3](/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-3.png)
 4. WPA 3
 	1. پیشرفته ترین الگوریتمی که امروزه میتوانیم از آن برای رمزنگاری استفاده کنیم این مورد است. 
 	2. این ورژن Compatibility با Wifi 6(802.11ax) دارد.
@@ -52,11 +52,11 @@ draft = false
 2. حال کاربر در اتصال مجدد بدلیل اینکه نام SSID Fake با SSID اصلی یکسان است، بصورت خودکار به SSID فیک متصل میشود. 
 3. سپس Attacker با ربودن بسته های Three Way Handshake بین کلاینت و SSID فیک سعی به کرک پسورد وایرلس و SSID اصلی میکند.
 4. حملات *Evil Twin* و یا *Rogue AP* از نوع شایع این حملات هستند.
-	1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-4](/images/cyber-security/Pastedimage20240620204807.png)
+	1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-4](/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-4.png)
 #### DoS and DDoS
 حملات DOS , DDOS هم به شبکه های وایرلسی بسیار صورت میگرد که میتواند خدمات دهی شبکه را از کار بیندازد.
 این حملات به Channel Wifi, Signal Wifi(jamming), AP Resources, ... انجام میشود که قصد از تمام آنها از کار انداختن سرویس دهی وایرلس است:
-	![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-5](/images/cyber-security/Pastedimage20240620205025.png)
+	![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-5](/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-5.png)
 
 > [!important] 
 > در کل پیشنهاد میشود از شبکه های وایرلسی تنها در صورت اجبار استفاده کنیم و تا میشود از  شبکه های سیمی بجای شبکه های بدون سیم استفاده کنیم.
@@ -79,7 +79,7 @@ draft = false
 	1. در اولین قدم باید کارت شبکه که میخواهیم شنود را انجام دهد به حالت مانیتورینگ ببریم. برای اینکار باید کارت شبکه وایرلسی ما `PHY` را ساپورت کند. 
 	2. برای فهمیدن موجود بودن PHY در کارت شبکه، کافیست کامند `airmon-ng` را خالی اجرا کنیم تا لیستی از کارت شبکه های وایرلسی را به همراه مشخصات آنها مشاهده کنیم.
 	3. در تصویر زیر مشاهده میکنید که کارت شبکه مورد نظر PHY را پشتیبانی نمیکند در نتیجه نمیتوان آنرا در حالت مانیتورینگ استفاد کرد.
-		1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-6](/images/cyber-security/Pastedimage20240621164752.png)
+		1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-6](/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-6.png)
 	4. کارت شبکه های برند Alpha بهترین کارت شبکه های وایرلسی برای مانیتورینگ و کرک شبکه های وایرلسی هستند.
 ```sh
 airmon-ng 
@@ -96,14 +96,14 @@ airodump-ng wlan0
 	2. نکته اینجاست اگر در شبکه وایرلسی کلاینتی Three Way Handshake را انجام نداده باشد، نمیتوانیم پسورد وایرلس را کرک کنیم.
 	3. در اینجا مجبوریم که حمله Rogue Access Point را پیاده سازی کنیم تا کاربر مجبور شود دوباره پسورد شبکه را وارد کند و به آن متصل شود.
 	4. در آزمایشگاه SANS SEC401 در ماشین لینوکسی به مسیر `/root/labs/401.1/` میرویم تا فایل های آزمایشگاه وایرلس را مشاهده و سپس کرک کنیم:
-		1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-7](/images/cyber-security/Pastedimage20240621165857.png)
+		1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-7](/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-7.png)
 	5. 
 ```sh
 cd /root/Labs/401.1 && ls
 aircrack-ng SEC401_WEP.cap
 ```
-	![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-8](/images/cyber-security/Pastedimage20240621170039.png)
-	![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-9](/images/cyber-security/Pastedimage20240621170041.png)
+	![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-8](/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-8.png)
+	![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-9](/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-9.png)
 4. Crack by Wordlist
 	1. برای کرک رمزنگاری WEP نیازی به Word List برای کرک نیست اما در رمزنگاری های WPA برای کرک Three Way Handshake ها نیازمند Word List هستیم.
 	2. برای معرفی لیست حروف از فلگ `w-` استفاده میکنیم. 
@@ -112,7 +112,7 @@ aircrack-ng SEC401_WEP.cap
 aircrack-ng -w /usr/share/rockyou.txt SEC401_WPA2PSK.pcap -e SEC401
 aircrack-ng -w all SEC401_WPA2PSK.pcap -e SEC401
 ```
-	![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-10](/images/cyber-security/Pastedimage20240621170532.png)
+	![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-10](/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-10.png)
 ### Wireshark
 #### Basic & Concepts
 از این ابزار کبرای شنود بسته های شبکه استفاده میشود. این ابزر میتواند Live Capturing أاشته باشد و یا میتواند فایل های cap, pcap را باز کند.
@@ -120,8 +120,8 @@ aircrack-ng -w all SEC401_WPA2PSK.pcap -e SEC401
 اگر میخواهیم Three Way Handshake را که در یک فایل cap, pcap قرار دارد را استخراج کنیم و رمزعبور شبکه وایرلسی را دربیاوریم >>
 1. فایل `pcap.` را در Wireshark باز میکنیم.
 2. اولین بسته Three Way Handshake را در لیست بسته های وایرلسی پیدا میکنیم و سپس بر روی آن راست کلیک میکنیم، و بر روی `Follow => TCP Stream` کلیک میکنیم تا بتوانیم محتویات ارتباطاتی کامل Three Way Handshake را مشاهده کنیم.
-	1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-11](/images/cyber-security/Pastedimage20240621172255.png)
+	1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-11](/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-11.png)
 3. اینکار میتوانیم برای یافتن پسورد های ارتباطات دیگری همچون tftp, telnet, .... هم انجام دهیم. اگر پروتکلی بر بستر UDP کار میکرد باید روی `Follow => UDP Stream` کلیک کنیم.
 4. در تصویر زیر UDP Stream مربوط به یک کانکشن tftp را مشاهده میکنیم.
-	1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-12](/images/cyber-security/Pastedimage20240621172422.png)
+	1. ![SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-12](/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-12.png)
 ### !

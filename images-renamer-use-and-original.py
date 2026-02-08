@@ -6,13 +6,10 @@ Date: 2026-02-08
 This script:
 1. Scans all markdown files
 2. Finds all images with their alt text
-3. Generates mapping of old names to new names (based on alt text)
-4. Renames ONLY physical image files in /static/images/ (NO markdown changes)
-5. Saves mapping to JSON for reference
-6. Tracks processed images to avoid re-processing
-
-Note: This script does NOT modify markdown files.
-      Use image-article-renamer.py to update markdown references.
+3. Renames images to match alt text (without spaces)
+4. Updates markdown files with new image names
+5. Renames physical image files in /static/images/
+6. Saves mapping to JSON for reference
 """
 
 import os
@@ -26,7 +23,6 @@ from datetime import datetime
 CONTENT_DIR = "content"
 STATIC_IMAGES_BASE = "static/images"
 RENAME_MAPPING_FILE = "images_rename_mapping.json"
-PROCESSED_IMAGES_FILE = "processed_images.json"
 LOG_FILE = "images_renamer.log"
 
 # Pattern to find markdown images
@@ -36,12 +32,11 @@ IMAGE_PATTERN = r'!\[([^\]]+)\]\((/images/([^/]+)/([^)]+))\)'
 # ==================== GLOBAL VARIABLES ====================
 
 rename_mapping = {}  # {old_name: {"new_name": "...", "category": "...", "alt": "..."}}
-processed_images = {}  # Track already processed images
 stats = {
     'files_scanned': 0,
+    'files_modified': 0,
     'images_found': 0,
-    'images_skipped_already_processed': 0,
-    'images_skipped_already_correct': 0,
+    'images_renamed': 0,
     'physical_files_renamed': 0,
     'errors': 0
 }
@@ -56,31 +51,6 @@ def log_message(message, level="INFO"):
     
     with open(LOG_FILE, 'a', encoding='utf-8') as f:
         f.write(log_entry + '\n')
-
-def load_processed_images():
-    """Load list of already processed images"""
-    global processed_images
-    
-    if os.path.exists(PROCESSED_IMAGES_FILE):
-        try:
-            with open(PROCESSED_IMAGES_FILE, 'r', encoding='utf-8') as f:
-                processed_images = json.load(f)
-            log_message(f"Loaded {len(processed_images)} processed image(s) from {PROCESSED_IMAGES_FILE}")
-        except Exception as e:
-            log_message(f"Error loading processed images: {e}", "WARNING")
-            processed_images = {}
-    else:
-        log_message(f"No processed images file found. Starting fresh.")
-        processed_images = {}
-
-def save_processed_images():
-    """Save processed images to JSON"""
-    try:
-        with open(PROCESSED_IMAGES_FILE, 'w', encoding='utf-8') as f:
-            json.dump(processed_images, f, ensure_ascii=False, indent=2)
-        log_message(f"Saved {len(processed_images)} processed images to {PROCESSED_IMAGES_FILE}")
-    except Exception as e:
-        log_message(f"Error saving processed images: {e}", "ERROR")
 
 def remove_spaces(text):
     """Remove all spaces from text"""
@@ -128,13 +98,82 @@ def generate_new_filename(alt_text, old_filename):
     
     return new_filename
 
-def scan_markdown_for_images():
+def update_markdown_file(file_path):
     """
-    Scan all markdown files to find images and build rename mapping
-    Does NOT modify markdown files
+    Update image references in a markdown file
+    
+    Returns: (modified: bool, images_processed: int)
     """
+    try:
+        # Read file
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Find all images
+        images = re.findall(IMAGE_PATTERN, content)
+        
+        if not images:
+            return False, 0
+        
+        log_message(f"  Found {len(images)} image(s)")
+        
+        modified = False
+        processed_count = 0
+        
+        # Process each image
+        for alt_text, full_path, category, old_filename in images:
+            stats['images_found'] += 1
+            
+            # Generate new filename from alt text
+            new_filename = generate_new_filename(alt_text, old_filename)
+            
+            # Check if rename is needed
+            if old_filename == new_filename:
+                log_message(f"    > Already correct: {old_filename}")
+                continue
+            
+            # Store mapping
+            if old_filename not in rename_mapping:
+                rename_mapping[old_filename] = {
+                    'new_name': new_filename,
+                    'category': category,
+                    'alt': alt_text
+                }
+            
+            # Old and new patterns in markdown
+            old_pattern = f"![{alt_text}](/images/{category}/{old_filename})"
+            new_pattern = f"![{alt_text}](/images/{category}/{new_filename})"
+            
+            # Replace in content
+            if old_pattern in content:
+                content = content.replace(old_pattern, new_pattern)
+                modified = True
+                processed_count += 1
+                
+                log_message(f"    + Renamed: {old_filename}")
+                log_message(f"      -> {new_filename}")
+                stats['images_renamed'] += 1
+            else:
+                log_message(f"    Warning: Pattern not found: {old_pattern}", "WARNING")
+        
+        # Save file if modified
+        if modified:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            log_message(f"  [Saved] {processed_count} image(s) renamed in markdown")
+            stats['files_modified'] += 1
+        
+        return modified, processed_count
+        
+    except Exception as e:
+        log_message(f"  X Error processing {file_path}: {e}", "ERROR")
+        stats['errors'] += 1
+        return False, 0
+
+def scan_and_update_markdown_files():
+    """Scan all markdown files and update image references"""
     log_message("="*60)
-    log_message("PHASE 1: Scanning markdown files for images...")
+    log_message("PHASE 1: Updating markdown files...")
     log_message("="*60)
     
     if not os.path.exists(CONTENT_DIR):
@@ -154,79 +193,7 @@ def scan_markdown_for_images():
                 log_message(f"\n[File] {rel_path}")
                 
                 # Process file
-                scan_single_file(file_path)
-
-def scan_single_file(file_path):
-    """
-    Scan a single markdown file for images and add to rename mapping
-    Does NOT modify the file
-    """
-    try:
-        # Read file
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Find all images
-        images = re.findall(IMAGE_PATTERN, content)
-        
-        if not images:
-            return
-        
-        log_message(f"  Found {len(images)} image(s)")
-        
-        # Process each image
-        for alt_text, full_path, category, old_filename in images:
-            stats['images_found'] += 1
-            
-            # Create unique key for this image (category + old_filename)
-            image_key = f"{category}/{old_filename}"
-            
-            # Check if already processed
-            if image_key in processed_images:
-                log_message(f"    > Already processed: {old_filename}")
-                stats['images_skipped_already_processed'] += 1
-                continue
-            
-            # Generate new filename from alt text
-            new_filename = generate_new_filename(alt_text, old_filename)
-            
-            # Check if rename is needed
-            if old_filename == new_filename:
-                log_message(f"    > Already correct: {old_filename}")
-                stats['images_skipped_already_correct'] += 1
-                # Mark as processed even if no change needed
-                processed_images[image_key] = {
-                    'old_name': old_filename,
-                    'new_name': new_filename,
-                    'category': category,
-                    'status': 'already_correct'
-                }
-                continue
-            
-            # Check if this old_filename already exists in mapping with different new_name
-            # This handles case where same image is used in multiple articles
-            if old_filename in rename_mapping:
-                existing_new_name = rename_mapping[old_filename]['new_name']
-                if existing_new_name != new_filename:
-                    log_message(f"    Warning: Image {old_filename} has conflicting new names:", "WARNING")
-                    log_message(f"      Existing: {existing_new_name}", "WARNING")
-                    log_message(f"      New: {new_filename}", "WARNING")
-                    log_message(f"      Keeping: {existing_new_name}", "WARNING")
-                continue
-            
-            # Store mapping (using old_filename as key for compatibility)
-            rename_mapping[old_filename] = {
-                'new_name': new_filename,
-                'category': category,
-                'alt': alt_text
-            }
-            
-            log_message(f"    + Will rename: {old_filename}")
-            log_message(f"      -> {new_filename}")
-        
-    except Exception as e:
-        log_message(f"  X Error processing {file_path}: {e}", "ERROR")
-        stats['errors'] += 1
+                update_markdown_file(file_path)
 
 def rename_physical_files():
     """Rename physical image files in /static/images/"""
@@ -235,7 +202,7 @@ def rename_physical_files():
     log_message("="*60)
     
     if not rename_mapping:
-        log_message("No new files to rename")
+        log_message("No files to rename")
         return
     
     log_message(f"Processing {len(rename_mapping)} file(s)")
@@ -264,9 +231,6 @@ def rename_physical_files():
             old_path = os.path.join(category_path, old_name)
             new_path = os.path.join(category_path, new_name)
             
-            # Create unique key for tracking
-            image_key = f"{category}/{old_name}"
-            
             # Check if source file exists
             if not os.path.exists(old_path):
                 log_message(f"  Warning: File not found: {old_name}", "WARNING")
@@ -277,13 +241,6 @@ def rename_physical_files():
                 if os.path.samefile(old_path, new_path):
                     log_message(f"  > Already renamed: {old_name}")
                     stats['physical_files_renamed'] += 1
-                    # Mark as processed
-                    processed_images[image_key] = {
-                        'old_name': old_name,
-                        'new_name': new_name,
-                        'category': category,
-                        'status': 'already_renamed'
-                    }
                     continue
                 else:
                     log_message(f"  Warning: Destination exists: {new_name}", "WARNING")
@@ -295,14 +252,6 @@ def rename_physical_files():
                 log_message(f"  + Renamed: {old_name}")
                 log_message(f"    -> {new_name}")
                 stats['physical_files_renamed'] += 1
-                
-                # Mark as processed
-                processed_images[image_key] = {
-                    'old_name': old_name,
-                    'new_name': new_name,
-                    'category': category,
-                    'status': 'renamed'
-                }
             except Exception as e:
                 log_message(f"  X Error renaming {old_name}: {e}", "ERROR")
                 stats['errors'] += 1
@@ -310,23 +259,9 @@ def rename_physical_files():
 def save_rename_mapping():
     """Save rename mapping to JSON"""
     try:
-        # Load existing mapping if it exists
-        existing_mapping = {}
-        if os.path.exists(RENAME_MAPPING_FILE):
-            try:
-                with open(RENAME_MAPPING_FILE, 'r', encoding='utf-8') as f:
-                    existing_mapping = json.load(f)
-            except:
-                pass
-        
-        # Merge with new mapping (new entries take priority)
-        merged_mapping = {**existing_mapping, **rename_mapping}
-        
-        # Save merged mapping
         with open(RENAME_MAPPING_FILE, 'w', encoding='utf-8') as f:
-            json.dump(merged_mapping, f, ensure_ascii=False, indent=2)
-        log_message(f"\n[JSON] Saved {len(merged_mapping)} total mappings to {RENAME_MAPPING_FILE}")
-        log_message(f"       ({len(rename_mapping)} new mappings added)")
+            json.dump(rename_mapping, f, ensure_ascii=False, indent=2)
+        log_message(f"\n[JSON] Saved {len(rename_mapping)} mappings to {RENAME_MAPPING_FILE}")
     except Exception as e:
         log_message(f"X Error saving JSON: {e}", "ERROR")
 
@@ -336,23 +271,20 @@ def print_statistics():
     log_message("FINAL STATISTICS:")
     log_message("="*60)
     log_message(f"Files scanned: {stats['files_scanned']}")
+    log_message(f"Files modified: {stats['files_modified']}")
     log_message(f"Images found: {stats['images_found']}")
-    log_message(f"Images skipped (already processed): {stats['images_skipped_already_processed']}")
-    log_message(f"Images skipped (already correct): {stats['images_skipped_already_correct']}")
+    log_message(f"Images renamed in markdown: {stats['images_renamed']}")
     log_message(f"Physical files renamed: {stats['physical_files_renamed']}")
     log_message(f"Errors: {stats['errors']}")
-    log_message(f"Total processed images tracked: {len(processed_images)}")
-    log_message(f"Total mappings in database: {len(rename_mapping)}")
+    log_message(f"Total mappings: {len(rename_mapping)}")
     log_message("="*60)
     
-    if stats['physical_files_renamed'] > 0:
-        log_message("\n[SUCCESS] Physical images renamed successfully!")
+    if stats['images_renamed'] > 0 or stats['physical_files_renamed'] > 0:
+        log_message("\n[SUCCESS] Images renamed successfully!")
         log_message(f"Mapping saved to: {RENAME_MAPPING_FILE}")
-        log_message(f"Processed images tracked in: {PROCESSED_IMAGES_FILE}")
         log_message(f"Full log: {LOG_FILE}")
-        log_message("\nNEXT STEP: Run image-article-renamer.py to update markdown references")
     else:
-        log_message("\n[INFO] No new images needed renaming")
+        log_message("\n[INFO] No images needed renaming")
 
 def create_summary_report():
     """Create a summary report"""
@@ -360,16 +292,16 @@ def create_summary_report():
     
     try:
         with open(report_file, 'w', encoding='utf-8') as f:
-            f.write("Images Rename Report (Physical Files Only)\n")
+            f.write("Images Rename Report\n")
             f.write("="*60 + "\n")
             f.write(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
             f.write("="*60 + "\n\n")
             
             f.write("Statistics:\n")
             f.write(f"- Files scanned: {stats['files_scanned']}\n")
+            f.write(f"- Files modified: {stats['files_modified']}\n")
             f.write(f"- Images found: {stats['images_found']}\n")
-            f.write(f"- Images skipped (already processed): {stats['images_skipped_already_processed']}\n")
-            f.write(f"- Images skipped (already correct): {stats['images_skipped_already_correct']}\n")
+            f.write(f"- Images renamed: {stats['images_renamed']}\n")
             f.write(f"- Physical files renamed: {stats['physical_files_renamed']}\n")
             f.write(f"- Errors: {stats['errors']}\n")
             f.write(f"- Total mappings: {len(rename_mapping)}\n\n")
@@ -398,6 +330,25 @@ def create_summary_report():
         
     except Exception as e:
         log_message(f"X Error creating report: {e}", "ERROR")
+
+def test_filename_generation():
+    """Test filename generation"""
+    log_message("\n" + "="*60)
+    log_message("Testing filename generation:")
+    log_message("="*60)
+    
+    test_cases = [
+        ("SANS-401-Networking and Protocols (401.1)-6", "Pastedimage20240620171105.png"),
+        ("My Test Image-1", "Pastedimage123.jpg"),
+        ("Test (With) Spaces-2", "oldname.png"),
+    ]
+    
+    for alt_text, old_name in test_cases:
+        new_name = generate_new_filename(alt_text, old_name)
+        log_message(f"  Alt: '{alt_text}'")
+        log_message(f"  Old: '{old_name}'")
+        log_message(f"  New: '{new_name}'")
+        log_message("")
 
 def verify_directories():
     """Verify that required directories exist"""
@@ -431,7 +382,7 @@ def verify_directories():
 def main():
     """Main function"""
     print("\n" + "="*60)
-    print("Images Renamer Tool (Physical Files Only)")
+    print("Images Renamer Tool")
     print("="*60)
     print(f"Author: Davood Yahya")
     print(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -439,31 +390,30 @@ def main():
     print("\nThis script will:")
     print("1. Scan all markdown files")
     print("2. Find images and their alt text")
-    print("3. Rename ONLY physical image files in static/images/")
-    print("4. Track processed images to avoid re-processing")
-    print("5. Save mapping to JSON")
-    print("\nNOTE: This script does NOT modify markdown files.")
-    print("      Run image-article-renamer.py afterwards to update references.")
+    print("3. Rename images based on alt text (no spaces)")
+    print("4. Update markdown files")
+    print("5. Rename physical image files")
+    print("6. Save mapping to JSON")
     print("\nExample:")
-    print("  Before: static/images/tools/Pastedimage123.png")
-    print("  After:  static/images/tools/MSFConsoleCommands-1.png")
+    print("  Before: ![Alt Text](/images/cat/Pastedimage123.png)")
+    print("  After:  ![Alt Text](/images/cat/AltText.png)")
     print("="*60 + "\n")
     
     # Start logging
     log_message("="*60)
-    log_message("Starting image rename process (physical files only)")
+    log_message("Starting image rename process")
     log_message("="*60)
     
-    # Load processed images
-    load_processed_images()
+    # Test filename generation
+    test_filename_generation()
     
     # Verify directories
     if not verify_directories():
         log_message("\nX Process stopped: Required directories not found", "ERROR")
         return
     
-    # Phase 1: Scan markdown files for images
-    scan_markdown_for_images()
+    # Phase 1: Update markdown files
+    scan_and_update_markdown_files()
     
     # Save mapping
     save_rename_mapping()
@@ -471,18 +421,22 @@ def main():
     # Phase 2: Rename physical files
     rename_physical_files()
     
-    # Save processed images
-    save_processed_images()
-    
     # Display statistics
     print_statistics()
     
     # Create summary report
-    if stats['physical_files_renamed'] > 0:
+    if stats['images_renamed'] > 0:
         create_summary_report()
     
     log_message("\n[COMPLETE] Process finished")
     log_message("="*60 + "\n")
+    
+    # Show warning if there are mismatches
+    if stats['images_renamed'] != stats['physical_files_renamed']:
+        log_message("\nWARNING: Mismatch between markdown updates and physical renames!", "WARNING")
+        log_message(f"  Markdown: {stats['images_renamed']}", "WARNING")
+        log_message(f"  Physical: {stats['physical_files_renamed']}", "WARNING")
+        log_message("  Please check the log file for details.", "WARNING")
 
 if __name__ == "__main__":
     try:
