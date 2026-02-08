@@ -13,6 +13,10 @@ hasCJKLanguage = true
 [pagination]
 pagerSize = 10
 
+# Output formats for search
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
 # baseURL = 'https://example.org/'
 # languageCode = 'en-us'
 # title = 'My New Hugo Site'

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=53181&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,7 +11,7 @@
     </title>
 
     <meta name="description" content="">
-    <link rel="canonical" href="http://localhost:1313/tags/cybersecurity/">
+    <link rel="canonical" href="http://localhost:53181/tags/cybersecurity/">
 
     
     <link rel="stylesheet" href="/assets/css/fonts.css" type="text/css">
@@ -21,6 +21,9 @@
     
     
     <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+    
+    
+    <link rel="stylesheet" href="/assets/css/search.css" type="text/css">
 
     
     
@@ -68,10 +71,62 @@
                 <li><a href="https://davoodya.ir/#services" title="صفحه خدمات وبسایت داوود یاحی davoodya.ir">سرویس ها</a></li>
                 <li><a href="https://davoodya.ir/#portfolio" title="صفحه نمونه کار ها وبسایت داوود یاحی davoodya.ir">نمونه ابزارها</a></li>
                 <li><a href="https://davoodya.ir/pages/courses.html" title="صفحه دوره ها وبسایت داوود یاحی davoodya.ir">دوره‌های آموزشی</a></li>
-                <li><a href="http://localhost:1313/" class="" title="صفحه مقالات وبسایت داوود یاحی davoodya.ir">مقالات</a></li>
+                <li><a href="http://localhost:53181/" class="" title="صفحه مقالات وبسایت داوود یاحی davoodya.ir">مقالات</a></li>
                 <li><a href="https://davoodya.ir/pages/skills.html" title="صفحه مهارت ها وبسایت داوود یاحی davoodya.ir">مهارت‌ها و مدارک</a></li>
                 <li><a href="https://davoodya.ir/#contact" title="صفحه تماس با من وبسایت داوود یاحی davoodya.ir">تماس با من</a></li>
             </ul>
+            
+            
+            
+<div class="search-container ">
+    
+    
+    <button class="search-trigger-btn" onclick="openSearchOverlay()" title="جستجو در مقالات">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+        </svg>
+        <span>جستجو</span>
+    </button>
+    
+    
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-overlay-header">
+            <h2 class="search-overlay-title">🔍 جستجو در مقالات</h2>
+            <button class="search-close-btn" onclick="closeSearchOverlay()" title="بستن">
+                <svg width="24" height="24" viewBox="0 0 384 512">
+                    <path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="search-overlay-content">
+            <div class="search-box-wrapper">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="عنوان مقاله یا تگ را جستجو کنید..."
+                    autocomplete="off"
+                >
+                <div class="search-filters">
+                    <select id="categoryFilter" class="search-filter-select">
+                        <option value="">همه دسته‌بندی‌ها</option>
+                        
+                    </select>
+                </div>
+            </div>
+            
+            <div id="searchResults" class="search-results"></div>
+            
+            <div id="searchLoading" class="search-loading" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p>در حال جستجو...</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
 
             
             <div class="hamburger">
@@ -348,6 +403,41 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="sidebar-widget">
+        <h3 class="sidebar-widget-title">🔍 جستجو</h3>
+        <div class="sidebar-widget-content">
+            
+<div class="search-container search-inline">
+    
+    
+    <div class="search-inline-wrapper">
+        <div class="search-box-inline">
+            <input 
+                type="text" 
+                id="searchInputInline" 
+                class="search-input-inline" 
+                placeholder="جستجو در مقالات..."
+                autocomplete="off"
+            >
+            <svg class="search-icon-inline" width="18" height="18" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+            </svg>
+        </div>
+        
+        <select id="categoryFilterInline" class="search-filter-inline">
+            <option value="">همه دسته‌بندی‌ها</option>
+            
+        </select>
+        
+        <div id="searchResultsInline" class="search-results-inline"></div>
+    </div>
+    
+</div>
+
+        </div>
+    </div>
+    
+    
+    <div class="sidebar-widget">
         <h3 class="sidebar-widget-title">📚 دسته‌بندی‌ها</h3>
         <div class="sidebar-widget-content">
             <ul class="category-list">
@@ -540,7 +630,7 @@ function toggleDropdown(type) {
                     <li><a href="https://davoodya.ir/#services" title="صفحه خدمات وبسایت داوود یاحی davoodya.ir">سرویس ها</a></li>
                     <li><a href="https://davoodya.ir/#portfolio" title="صفحه نمونه کارها وبسایت داوود یاحی davoodya.ir">نمونه ابزارها</a></li>
                     <li><a href="https://davoodya.ir/pages/courses.html" title="صفحه دوره ها وبسایت داوود یاحی davoodya.ir">دوره‌های آموزشی</a></li>
-                    <li><a href="http://localhost:1313/" title="صفحه مقالات وبسایت داوود یاحی davoodya.ir">مقالات</a></li>
+                    <li><a href="http://localhost:53181/" title="صفحه مقالات وبسایت داوود یاحی davoodya.ir">مقالات</a></li>
                     <li><a href="https://davoodya.ir/pages/skills.html" title="صفحه مهارت ها وبسایت داوود یاحی davoodya.ir">مهارت‌ها و مدارک</a></li>
                     <li><a href="https://davoodya.ir/#contact" title="صفحه تماس با من وبسایت داوود یاحی davoodya.ir">تماس با من</a></li>
                 </ul>
@@ -632,6 +722,9 @@ function toggleDropdown(type) {
 </footer>
 
 </footer>
+
+
+<script src="/assets/js/search.js"></script>
 
 </body>
 </html>

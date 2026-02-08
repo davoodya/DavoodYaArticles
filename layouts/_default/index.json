@@ -1,0 +1,17 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- range where .Site.RegularPages "Type" "in" (slice "cyber-security" "python" "seo" "tools") -}}
+  {{- $title := .Title -}}
+  {{- if not $title -}}
+    {{- $title = .File.ContentBaseName -}}
+  {{- end -}}
+  {{- $summary := "" -}}
+  {{- if .Description -}}
+    {{- $summary = .Description | plainify | truncate 150 -}}
+  {{- else if .Summary -}}
+    {{- $summary = .Summary | plainify | truncate 150 -}}
+  {{- else -}}
+    {{- $summary = .Content | plainify | truncate 150 -}}
+  {{- end -}}
+  {{- $.Scratch.Add "index" (dict "title" $title "category" .Section "tags" .Params.tags "permalink" .Permalink "summary" $summary "date" (.Date.Format "2006/01/02")) -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}

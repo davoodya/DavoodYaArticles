@@ -1,5 +1,13 @@
 <aside class="sidebar">
     
+    <!-- جستجو -->
+    <div class="sidebar-widget">
+        <h3 class="sidebar-widget-title">🔍 جستجو</h3>
+        <div class="sidebar-widget-content">
+            {{ partial "search.html" (dict "inline" true) }}
+        </div>
+    </div>
+    
     <!-- دسته‌بندی‌های مقالات -->
     <div class="sidebar-widget">
         <h3 class="sidebar-widget-title">📚 دسته‌بندی‌ها</h3>
