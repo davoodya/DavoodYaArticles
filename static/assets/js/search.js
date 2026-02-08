@@ -10,7 +10,11 @@ async function loadSearchData() {
     if (searchDataLoaded) return;
     
     try {
-        const response = await fetch('/index.json');
+        // Get base URL from meta tag or current path
+        const baseURL = document.querySelector('meta[name="base-url"]')?.content || '';
+        const indexURL = baseURL ? `${baseURL}index.json` : '/index.json';
+        
+        const response = await fetch(indexURL);
         searchData = await response.json();
         searchDataLoaded = true;
         console.log('Search data loaded:', searchData.length, 'articles');

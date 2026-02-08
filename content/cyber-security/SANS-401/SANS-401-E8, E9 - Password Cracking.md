@@ -2,7 +2,7 @@
 title = "SANS-401-Password Cracking"
 tags = ["CyberSecurity", "Pentest"]
 Category = "Cyber Security"
-draft = true
+draft = false
 +++
 
 -------

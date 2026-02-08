@@ -2,7 +2,7 @@
 title = "SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)"
 tags = ["CyberSecurity", "Pentest"]
 Category = "Cyber Security"
-draft = true
+draft = false
 +++
 
 -------

@@ -8,7 +8,7 @@
         {{ if .IsHome }}
         {{ .Site.Title }}
         {{ else }}
-        {{ .Title }} | {{ .Site.Title }}
+        L | {{ .Site.Title }}
         {{ end }}
     </title>
 
@@ -44,18 +44,21 @@
     <meta name="robots" content="index, follow">
     <meta name="language" content="Persian">
     <meta http-equiv="content-language" content="fa">
+    
+    <!-- Base URL for JavaScript -->
+    <meta name="base-url" content="{{ .Site.BaseURL }}">
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="/assets/css/fonts.css" type="text/css">
+    <link rel="stylesheet" href="{{ "assets/css/fonts.css" | relURL }}" type="text/css">
     
     <!-- Header & Footer Styles -->
-    <link rel="stylesheet" href="/assets/css/header-footer.css" type="text/css">
+    <link rel="stylesheet" href="{{ "assets/css/header-footer.css" | relURL }}" type="text/css">
     
     <!-- Main Styles -->
-    <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+    <link rel="stylesheet" href="{{ "assets/css/main.css" | relURL }}" type="text/css">
     
     <!-- Search Styles -->
-    <link rel="stylesheet" href="/assets/css/search.css" type="text/css">
+    <link rel="stylesheet" href="{{ "assets/css/search.css" | relURL }}" type="text/css">
 
     <!-- ========================= -->
     <!-- SCHEMA STRUCTURED DATA -->
@@ -225,7 +228,7 @@
 </footer>
 
 <!-- Search JavaScript -->
-<script src="/assets/js/search.js"></script>
+<script src="{{ "assets/js/search.js" | relURL }}"></script>
 
 </body>
 </html>

@@ -2,98 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/cybersecurity/</loc>
+    <loc>http://localhost:1313/articles/tags/cybersecurity/</loc>
     <lastmod>2024-06-20T12:38:14+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/pentest/</loc>
+    <loc>http://localhost:1313/articles/tags/pentest/</loc>
     <lastmod>2024-06-20T12:38:14+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-e0-e1---introduction--prepare-lab/</loc>
+    <loc>http://localhost:1313/articles/cyber-security/sans-401/sans-401-e0-e1---introduction--prepare-lab/</loc>
     <lastmod>2024-06-20T12:38:14+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/articles/tags/</loc>
     <lastmod>2024-06-20T12:38:14+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-security/</loc>
+    <loc>http://localhost:1313/articles/cyber-security/</loc>
     <lastmod>2024-06-20T12:38:14+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:1313/articles/</loc>
     <lastmod>2024-06-20T12:38:14+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/-readteam/</loc>
+    <loc>http://localhost:1313/articles/tags/-readteam/</loc>
   </url><url>
-    <loc>http://localhost:1313/tools/burpsuite/1-install-burpsuite/</loc>
+    <loc>http://localhost:1313/articles/tools/burpsuite/1-install-burpsuite/</loc>
   </url><url>
-    <loc>http://localhost:1313/tools/burpsuite/2-change-http-data--bypass-parameters/</loc>
+    <loc>http://localhost:1313/articles/tools/burpsuite/2-change-http-data--bypass-parameters/</loc>
   </url><url>
-    <loc>http://localhost:1313/linux/60-commands-hacker-should-know-it/</loc>
+    <loc>http://localhost:1313/articles/linux/60-commands-hacker-should-know-it/</loc>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e17---backlinks/</loc>
+    <loc>http://localhost:1313/articles/seo/0-seo-theories/e17---backlinks/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/bug_bounty/</loc>
+    <loc>http://localhost:1313/articles/tags/bug_bounty/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/burpsuite/</loc>
+    <loc>http://localhost:1313/articles/tags/burpsuite/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/articles/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/command_line/</loc>
+    <loc>http://localhost:1313/articles/tags/command_line/</loc>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e10-e11---content-seo-important-website-pages/</loc>
+    <loc>http://localhost:1313/articles/seo/0-seo-theories/e10-e11---content-seo-important-website-pages/</loc>
   </url><url>
-    <loc>http://localhost:1313/python/dir-buster-module/</loc>
+    <loc>http://localhost:1313/articles/python/dir-buster-module/</loc>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e6-to-e9---find-keywords--website-structure--necessary-html-tags-for-seo/</loc>
+    <loc>http://localhost:1313/articles/seo/0-seo-theories/e6-to-e9---find-keywords--website-structure--necessary-html-tags-for-seo/</loc>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e13---good-contents-for-seo/</loc>
+    <loc>http://localhost:1313/articles/seo/0-seo-theories/e13---good-contents-for-seo/</loc>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e14---links-in-seointernal--external/</loc>
+    <loc>http://localhost:1313/articles/seo/0-seo-theories/e14---links-in-seointernal--external/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/linux/</loc>
+    <loc>http://localhost:1313/articles/tags/linux/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/metasploit/</loc>
+    <loc>http://localhost:1313/articles/tags/metasploit/</loc>
   </url><url>
-    <loc>http://localhost:1313/tools/msfconsole-commands/</loc>
+    <loc>http://localhost:1313/articles/tools/msfconsole-commands/</loc>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e16---page-authority--domain-authority/</loc>
+    <loc>http://localhost:1313/articles/seo/0-seo-theories/e16---page-authority--domain-authority/</loc>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e15---page-rank/</loc>
+    <loc>http://localhost:1313/articles/seo/0-seo-theories/e15---page-rank/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/pentest_tool/</loc>
+    <loc>http://localhost:1313/articles/tags/pentest_tool/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/pentest_tools/</loc>
+    <loc>http://localhost:1313/articles/tags/pentest_tools/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
+    <loc>http://localhost:1313/articles/tags/python/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/red_team/</loc>
+    <loc>http://localhost:1313/articles/tags/red_team/</loc>
   </url><url>
-    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-e7--defense-in-depth-401.2/</loc>
+    <loc>http://localhost:1313/articles/cyber-security/sans-401/sans-401-e7--defense-in-depth-401.2/</loc>
   </url><url>
-    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-e3---virtualization--cloud-infrastructure401.1/</loc>
+    <loc>http://localhost:1313/articles/cyber-security/sans-401/sans-401-e3---virtualization--cloud-infrastructure401.1/</loc>
   </url><url>
-    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-e2---networking-and-protocols-401.1/</loc>
+    <loc>http://localhost:1313/articles/cyber-security/sans-401/sans-401-e2---networking-and-protocols-401.1/</loc>
   </url><url>
-    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-e8-e9---password-cracking/</loc>
+    <loc>http://localhost:1313/articles/cyber-security/sans-401/sans-401-e8-e9---password-cracking/</loc>
   </url><url>
-    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-e4-e5-e6---wireless-aircrack-ng-wireshark-401.1/</loc>
+    <loc>http://localhost:1313/articles/cyber-security/sans-401/sans-401-e4-e5-e6---wireless-aircrack-ng-wireshark-401.1/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/seo/</loc>
+    <loc>http://localhost:1313/articles/tags/seo/</loc>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e1-to-e5---seo-intro-search-engines-keywords/</loc>
+    <loc>http://localhost:1313/articles/seo/0-seo-theories/e1-to-e5---seo-intro-search-engines-keywords/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/web_developing/</loc>
+    <loc>http://localhost:1313/articles/tags/web_developing/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/web_pentest/</loc>
+    <loc>http://localhost:1313/articles/tags/web_pentest/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/webmaster/</loc>
+    <loc>http://localhost:1313/articles/tags/webmaster/</loc>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e12--woorankcheck-website-seo/</loc>
+    <loc>http://localhost:1313/articles/seo/0-seo-theories/e12--woorankcheck-website-seo/</loc>
   </url><url>
-    <loc>http://localhost:1313/tools/</loc>
+    <loc>http://localhost:1313/articles/tools/</loc>
   </url><url>
-    <loc>http://localhost:1313/python/</loc>
+    <loc>http://localhost:1313/articles/python/</loc>
   </url><url>
-    <loc>http://localhost:1313/seo/</loc>
+    <loc>http://localhost:1313/articles/seo/</loc>
   </url><url>
-    <loc>http://localhost:1313/linux/</loc>
+    <loc>http://localhost:1313/articles/linux/</loc>
   </url>
 </urlset>

@@ -2,7 +2,7 @@
 title = "60 Commands Hacker Should Know it"
 tags = ["Linux", "Command_Line"]
 Category = "Linux"
-draft = true
+draft = false
 +++
 
 -------

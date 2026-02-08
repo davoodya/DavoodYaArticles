@@ -2,7 +2,7 @@
 title = "2-Change HTTP Data & Bypass Parameters"
 tags = ["Pentest", "Web_Pentest", "Bug_Bounty", "Burpsuite", "Pentest_Tool"]
 Category = "Pentest, Web_Pentest"
-draft = true
+draft = false
 +++
 
 -------

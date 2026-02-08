@@ -2,7 +2,7 @@
 title = "1-Install Burpsuite"
 tags = ["Pentest", "Web_Pentest", "Bug_Bounty", "Burpsuite", "Pentest_Tool"]
 Category = "Pentest, Web_Pentest"
-draft = true
+draft = false
 +++
 
 -------

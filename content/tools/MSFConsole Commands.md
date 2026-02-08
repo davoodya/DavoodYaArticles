@@ -2,7 +2,7 @@
 title = "MSFConsole Commands"
 tags = ["Pentest", "Metasploit", ", Readteam"]
 Category = "Pentest, Metasploit, Readteam"
-draft = true
+draft = false
 +++
 
 -------

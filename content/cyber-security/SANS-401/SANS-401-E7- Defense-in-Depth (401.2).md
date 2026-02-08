@@ -2,7 +2,7 @@
 title = "SANS-401-Defense-in-Depth (401.2)"
 tags = ["CyberSecurity", "Pentest"]
 Category = "Cyber Security"
-draft = true
+draft = false
 +++
 
 -------

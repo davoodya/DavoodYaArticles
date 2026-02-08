@@ -3,7 +3,7 @@ title = "SANS-401.0 Introduction & Prepare Lab"
 tags = ["CyberSecurity", "Pentest"]
 category = "Cyber Security"
 date = "2024-06-20T12:38:14+03:30"
-draft = true
+draft = false
 
 +++
 
