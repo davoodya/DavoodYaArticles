@@ -50,7 +50,7 @@ body {
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding-top: 60px; /* فضای مناسب برای header */
+    padding-top: 50px; /* فضای مناسب برای header */
 }
 
 /* ============================= */
@@ -490,8 +490,8 @@ body {
 
 .sidebar {
     position: sticky;
-    top: 80px;
-    max-height: calc(100vh - 100px);
+    top: 70px;
+    max-height: calc(100vh - 90px);
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--accent-green) var(--darker-bg);
@@ -1139,10 +1139,28 @@ body {
 /* Responsive Design */
 /* ============================= */
 
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 2rem 1rem;
+    }
+    
+    .main-content-wrapper {
+        gap: 2rem;
+    }
+}
+
 @media (max-width: 1024px) {
     .home-grid,
     .articles-grid {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .page-title,
+    .category-title {
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+        padding: 2rem 1.5rem;
     }
 }
 
@@ -1151,20 +1169,48 @@ body {
         font-size: 15px;
     }
     
+    body {
+        padding-top: 45px;
+    }
+    
+    .container {
+        padding: 1.5rem 0.8rem;
+        margin-top: 0.5rem;
+    }
+    
+    .home-grid,
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    
+    .page-title,
+    .category-title {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
     .article-wrapper {
         border-radius: 12px;
+        padding: 2rem 1.2rem;
     }
     
     .article-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     
     .article-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
     
     .article-content pre {
         padding: 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .category-card,
+    .article-card {
+        padding: 1.5rem 1.2rem;
     }
 }
 
@@ -1173,9 +1219,32 @@ body {
         font-size: 14px;
     }
     
+    body {
+        padding-top: 40px;
+    }
+    
+    .container {
+        padding: 1rem 0.5rem;
+    }
+    
+    .page-title,
+    .category-title {
+        font-size: 1.3rem;
+        padding: 1.2rem 0.8rem;
+    }
+    
     .category-card,
     .article-card {
-        padding: 1.5rem;
+        padding: 1.2rem 1rem;
+    }
+    
+    .article-wrapper {
+        padding: 1.5rem 1rem;
+    }
+    
+    .read-more-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
     }
 }
 

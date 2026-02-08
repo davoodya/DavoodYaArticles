@@ -52,20 +52,20 @@ Next Episode: "[[E30 - Google Analytics Menus]]"
 	6. Reporting Time Zone
 	7. Check Necessary Ticks
 	8. *Image:*
-		1. ![[Pasted image 20260126214543.png]]
+		1. ![Pasted image 20260126214543.png](/images/python/Pasted image 20260126214543.png)
 3. Click on `Get Tracking ID`
 4. Check Necessary Ticks and Click on `I Accept`
-	1. ![[Pasted image 20260126214712.png]]
+	1. ![Pasted image 20260126214712.png](/images/python/Pasted image 20260126214712.png)
 ##### Copy `gtag.js` to all your Website Pages
 1. پس از ثبت نام در Google Analytics و اضافه کردن وبسایت، ابزار Google Analytics یک تکه کد Java Script را به من میدهد که این تکه کد را باید در تمامی صفحات وبسایت خود قرار دهیم:
-	1. ![[Pasted image 20260126215026.png]]
-	2. ![[Pasted image 20260126215238.png]]
+	1. ![Pasted image 20260126215026.png](/images/python/Pasted image 20260126215026.png)
+	2. ![Pasted image 20260126215238.png](/images/python/Pasted image 20260126215238.png)
 2. گوگل با استفاده از این تکه کد است که میتواند رفتار کاربر را در تمامی صفحات ما رهگیری کند و همچنین برای Verify کردن وبسایت ما نیز از این تکه کد استفاده میکند.
 3. به این کد Tracking Code گفته میشود.
 - **نکته:** در صفحات Admin و مدیریتی نیازی به قرار دادن این اسکریپت در صفحه نیست.
 ##### Access Google Analytics Dashboard
 پس از اضافه کردن Tracking Code به صفحات پروژه خود میتوانیم به تمام امکانات درون داشبورد Google Analytics دسترسی داشته باشیم:
-	![[Pasted image 20260126215422.png]]
+	![Pasted image 20260126215422.png](/images/python/Pasted image 20260126215422.png)
 - در صفحه Home ابزار Google Analytics میتوانیم خلاصه ای از فعالیت ها و رفتار های کاربران را مشاهده کنیم:
-	- ![[Pasted image 20260126215515.png]]
+	- ![Pasted image 20260126215515.png](/images/python/Pasted image 20260126215515.png)
 ### !

@@ -48,7 +48,7 @@ Next Episode: "[[E51, E52 - Google Algorithms]]"
 	1. هنگامیکه Manual Penalty یا Algorithm Penalty میشویم گوگل پیامی را در Google Webmaster مبنی بر پنالتی شدن به ما میدهد.
 	2. در این پیام علت پنالتی شدن را نیز به ما میدهد تا بتوانیم مشکل را رفع کنیم.
 	3. پیام های مبنی بر  Penalty شدن در این منو از Google Webmaster مشاهده میشود:
-		1. ![[Pasted image 20260205212135.png]]
+		1. ![Pasted image 20260205212135.png](/images/tools/Pasted image 20260205212135.png)
 #### Algorithm Penalty
 پنالتی Algorithm Penalty باز هم بی خطر تر از Manual Penalty است که با بروز رسانی الگوریتم ها رخ میدهد. در واقع کسانی که از Black SEO استفاده میکنند با بروز رسانی الگوریتم ها اصولا به Algorithm Penalty بر میخورند. علاوه بر آن مورد هایی نیز وجود دارند که در Algorithm Penalty شدن تاثیر دارند:
 1. Black SEO

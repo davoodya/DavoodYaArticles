@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Davood Yahay – Cybersecurity Specialist</title>
-    <link>http://localhost:52077/tags/</link>
-    <description>Recent content in Tags on Davood Yahay – Cybersecurity Specialist</description>
+    <title>Tags on مقالات داوود یحیی – Davood Yahya Articles</title>
+    <link>http://localhost:50393/tags/</link>
+    <description>Recent content in Tags on مقالات داوود یحیی – Davood Yahya Articles</description>
     <generator>Hugo</generator>
     <language>fa</language>
     <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:52077/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:50393/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CyberSecurity</title>
-      <link>http://localhost:52077/tags/cybersecurity/</link>
+      <link>http://localhost:50393/tags/cybersecurity/</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:52077/tags/cybersecurity/</guid>
+      <guid>http://localhost:50393/tags/cybersecurity/</guid>
       <description></description>
     </item>
     <item>
       <title>Security</title>
-      <link>http://localhost:52077/tags/security/</link>
+      <link>http://localhost:50393/tags/security/</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:52077/tags/security/</guid>
+      <guid>http://localhost:50393/tags/security/</guid>
       <description></description>
     </item>
   </channel>

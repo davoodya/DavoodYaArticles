@@ -34,7 +34,7 @@ Next Episode: "[[E44, E45 - Google Analytics(Conversion - Multi-Channel Funnels 
 #### Description
 گاهی اوقات در وبسایت خود تبلیغاتی را قرار میدهیم که محصول یا نوشته از وبسایت خود را تبلیغ میکنیم. به این تبلیغات از وبسایت خود Promotion گفته میشود.(Internal Marketing)
 - مثلا در وبسایت برنامه نویسان تبلیغاتی از دوره های تاپ لرن قرار دارد که همان Promotion ها هستند:
-	![[Pasted image 20260201235754.png]]
+	![Pasted image 20260201235754.png](/images/python/Pasted image 20260201235754.png)
 - نکته اینجاست که برای تبدیل یک تبلیغ معمولی به Promotion باید از لینک خاص Promotion استفاده کنیم که توانایی رهگیری توسط Google Analytics را داشته باشد.
 #### Create Promotion Link
 ##### Promotion Link
@@ -71,7 +71,7 @@ https://vapeclub3.com/oxva-xlim-sq-pro2?promotion_name=oxva-xlim&promotion_id=12
 #### 1. Internal Promotion
 1. **Description:**
 	1. در این منو آماری کلی از تمامی Promotion هایی که در وبسایت خود استفاده کرده ایم مشاهده میشود:
-		1. ![[Pasted image 20260202001136.png]]
+		1. ![Pasted image 20260202001136.png](/images/python/Pasted image 20260202001136.png)
 2. **Metrics:**
 	1. آمار هایی که در این منو مشاهده میشوند عبارتند از:
 	2. *Internal Promotion Views:*
@@ -85,7 +85,7 @@ https://vapeclub3.com/oxva-xlim-sq-pro2?promotion_name=oxva-xlim&promotion_id=12
 	6. *Revenue:*
 		1. مقدار سود حاصل از یک Promotion
 	7. *Image:*
-		1. ![[Pasted image 20260202001629.png]]
+		1. ![Pasted image 20260202001629.png](/images/python/Pasted image 20260202001629.png)
 3. **Notes:**
 	1. اگر آمار بازدید یک Promotion بالا بود اما آمار کلیک بر روی آن پایین بود، بدین معناست که مکان Promotion خوب نیست.
 	2. اگر آمار کلیک و بازدید یک Promotion بالا بود به معنای خوب بودن مکان Promotion است.
@@ -93,7 +93,7 @@ https://vapeclub3.com/oxva-xlim-sq-pro2?promotion_name=oxva-xlim&promotion_id=12
 #### 2. Order Coupons 
 1. **Description:**
 	1. در این منو آمار بازدید، کلیک و فروش محصولات با کد تخفیف بر روی فاکتور را مشخص میکنیم:
-		1. ![[Pasted image 20260202002045.png]]
+		1. ![Pasted image 20260202002045.png](/images/python/Pasted image 20260202002045.png)
 	2. در واقع در Promotion Link که میسازیم میتوانیم یک Order Coupon هم تعریف کنیم که مثلا برای هر فاکتور بصورت کلی 15 درصد تخفیف در نظر بگیریم.
 	3. اگر این Order Coupon را تعریف کنیم در این منو میتوانیم آمار آنها را مشاهده کنیم.
 2. **Usage:**
@@ -102,7 +102,7 @@ https://vapeclub3.com/oxva-xlim-sq-pro2?promotion_name=oxva-xlim&promotion_id=12
 #### 3. Product Coupons
 1. **Description:**
 	1. در این منو آمار بازدید، کلیک و فروش محصولات با کد تخفیف بر روی هر محصول را مشخص میکنیم:
-		1. ![[Pasted image 20260202002153.png]]
+		1. ![Pasted image 20260202002153.png](/images/python/Pasted image 20260202002153.png)
 	2. در واقع در Promotion Link که میسازیم میتوانیم یک Product Coupon هم تعریف کنیم که مثلا برای یک محصول 10 درصد تخفیف در نظر بگیریم.
 	3. اگر این Order Coupon را تعریف کنیم در این منو میتوانیم آمار آنها را مشاهده کنیم.
 2. **Usage:**

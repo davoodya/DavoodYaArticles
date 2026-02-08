@@ -37,19 +37,19 @@ Next Episode: "[[E37 - Google Analytics(Behavior - Events)]]"
 - *نکته دوم:* این گزینه بصورت پیشفرض فعال نیست و باید بصورت دستی فعال شود.
 ##### 0.2: Enable Site Search
 1. `Left Sidebar => Click on Gear(goto Settings Panel) => View Settings`
-	1. ![[Pasted image 20260129190012.png]]
+	1. ![Pasted image 20260129190012.png](/images/python/Pasted image 20260129190012.png)
 2. `in View Settings => Scroll Down => Turn On => Site Search Tracking => Save` 
-	1. ![[Pasted image 20260129190117.png]]
+	1. ![Pasted image 20260129190117.png](/images/python/Pasted image 20260129190117.png)
 3. **Now we Should Update `gtag.js` Code:**
 	1. در قدم بعدی باید اسکریپت `gtag.js` را که برای رهگیری وبسایت اضافه کردیم را بروز رسانی کنیم.
 	2. برای اینکار نیاز داریم که آدرس صفحه جستجو وبسایت خود را بدست بیاوریم که کافیست درون وبسایت خود یک جستجو انجام دهیم و سپس قسمتی از URL که جستجو را انجام میدهد کپی کنیم:
-		1. ![[Pasted image 20260129190502.png]]
+		1. ![Pasted image 20260129190502.png](/images/python/Pasted image 20260129190502.png)
 	3. حال تگ `gtag.js` را به شکل زیر بروز میکنیم و در واقع خط زیر را به تکه اسکریپت اضافه میکنیم:
 		1. `ga('send', 'pageview', '/Search?srch=keyword');`
-			1. ![[Pasted image 20260129190710.png]]
+			1. ![Pasted image 20260129190710.png](/images/python/Pasted image 20260129190710.png)
 	4. همانطور که گفتیم پارامتر جستجو در هر وبسایت متفاوت است و مثلا برای تاپ لرن باید خط به شکل زیر اضافه شود:
 		1. `ga('send', 'pageview', '/courses?search=keyword' );`
-			1. ![[Pasted image 20260129191159.png]]
+			1. ![Pasted image 20260129191159.png](/images/python/Pasted image 20260129191159.png)
 ```html
 <script>
 	...
@@ -99,20 +99,20 @@ Next Episode: "[[E37 - Google Analytics(Behavior - Events)]]"
 #### 1. Overview
 1. **Description:**
 	1. در این منو آماری کلی از جستجو درون وبسایتی کاربر مشاهده میشود:
-		1. ![[Pasted image 20260129191750.png]]
+		1. ![Pasted image 20260129191750.png](/images/python/Pasted image 20260129191750.png)
 2. **Search Chart:**
 	1. در قسمت اول آماری از جستجو ها نشان داده میشود که بصورت پیشفرض بر روی Sessions with Search تنظیم است اما قابل عوض کردن و همچنین اضافه کردن رقیب برای بررسی هم وجود دارد:
-		1. ![[Pasted image 20260129191936.png]]
+		1. ![Pasted image 20260129191936.png](/images/python/Pasted image 20260129191936.png)
 3. **Number Metric:**
 	1. در قسمت بعدی آمار های عددی Metric های Site Search قابل مشاهده است که در کنار آن نیز نمودار دایره ای از Site Search نیز قرار دارد:
-		1. ![[Pasted image 20260129192034.png]]
+		1. ![Pasted image 20260129192034.png](/images/python/Pasted image 20260129192034.png)
 4. **Site Search Metrics Based on Search Terms, Site Search Category, Start Page:**
 	1. در قسمت Search Terms عبارت هایی که در وبسایت ما جستجو شده است را مشاهده میکنیم:
-		1. ![[Pasted image 20260129192147.png]]
+		1. ![Pasted image 20260129192147.png](/images/python/Pasted image 20260129192147.png)
 	2. در قسمت Site Search Category دسته بندی ها یا همان دسته بندی جستجو ها را نمایش میدهد.
 	3. در قسمت Start Page هم صفحاتی که کاربر جستجو را از داخل آنها شروع کرده است نمایش داده میشود.
 	4. *تصویر:*
-		1. ![[Pasted image 20260129192305.png]]
+		1. ![Pasted image 20260129192305.png](/images/python/Pasted image 20260129192305.png)
 #### 2. Usage
 - در این گزینه تعداد کل کاربران که وارد وبسایت ما شده اند را در دو دسته بندی زیر نمایش میدهد:
 	1. Visits without Search
@@ -120,19 +120,19 @@ Next Episode: "[[E37 - Google Analytics(Behavior - Events)]]"
 	2. Visits With Search
 		1. کاربرانی که وارد شدند و جستجو کردند.
 	3. Image:
-		1. ![[Pasted image 20260129192620.png]]
+		1. ![Pasted image 20260129192620.png](/images/python/Pasted image 20260129192620.png)
 1. **Usage:**
 	1. از این قسمت میتوانیم متوجه شویم که آیا قسمت جستجو وبسایت موثر بوده یا نه؟
 	2. آیا قسمت جستجو در جلوی چشم کاربر هست یا نه؟
 #### 3. Search Term 
 در این منو کلمات که کاربر آنها را در وبسایت جستجو کرده را مشاهده میکنیم:
-	![[Pasted image 20260129192854.png]]
+	![Pasted image 20260129192854.png](/images/python/Pasted image 20260129192854.png)
 2. **Usage:**
 	1. میتوانیم متوجه شویم کدام مطلب ما بیشتر مورد توجه مخاطب است. 
 	2. و یا اینکه کدام مطلب را باید به جلوی چشم مخاطب بیاوریم.
 #### 4. Search Pages
 این منو هم نشان میدهد که جستجو های درون وبسایت ما از کدام صفحات شروع شده اند:
-	![[Pasted image 20260129192947.png]]
+	![Pasted image 20260129192947.png](/images/python/Pasted image 20260129192947.png)
 1. **Usage:**
 	1. متوجه میشویم که در کدام صفحات چه لینک دهی بهتر است انجام شود.
 ### Search Topics

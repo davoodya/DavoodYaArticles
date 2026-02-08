@@ -1,9 +1,11 @@
 baseURL = "https://davoodya.ir/"
 languageCode = "fa"
-title = "Davood Yahay – Cybersecurity Specialist"
+title = "مقالات داوود یحیی – Davood Yahya Articles"
 defaultContentLanguage = "fa"
 theme = 'ananke'
 enableRobotsTXT = true
+relativeURLs = false
+canonifyURLs = true
 
 # Summary settings
 summaryLength = 70
@@ -16,10 +18,6 @@ pagerSize = 10
 # Output formats for search
 [outputs]
 home = ["HTML", "RSS", "JSON"]
-
-# baseURL = 'https://example.org/'
-# languageCode = 'en-us'
-# title = 'My New Hugo Site'
 
 [markup]
   [markup.goldmark]

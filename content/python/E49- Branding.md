@@ -71,10 +71,10 @@ Next Episode: "[[E50 - Google Penalty]]"
 #### Stat Counter - See Internet Users Metrics
 - https://gs.statcounter.com
 	- این ابزار آماری کلی از کاربران کل اینترنت را به ما میدهد. در واقع نشان میدهد کاربران اینترنت از چه مرورگر ، چه سیستم عامل، چه دیوایس، چه کشور و شهری و .... استفاده میکنند:
-		- ![[Pasted image 20260205210215.png]]
+		- ![Pasted image 20260205210215.png](/images/python/Pasted image 20260205210215.png)
 - **See Results by Region: Iran**
 	- میتوانیم نتایج استفاده را شخصی سازی کنیم. برای اینکار در قسمت Region کشور ایران را انتخاب میکنیم تا آماری از مصرف کنندگان اینترنت ایران را مشاهده کنیم:
-		- ![[Pasted image 20260205210505.png]]
+		- ![Pasted image 20260205210505.png](/images/python/Pasted image 20260205210505.png)
 	- آمار مصرف کنندگان اینترنت ایران به شکل زیر میباشد:
-		- ![[Pasted image 20260205210410.png]]
+		- ![Pasted image 20260205210410.png](/images/python/Pasted image 20260205210410.png)
 ### !

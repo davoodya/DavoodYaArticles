@@ -32,6 +32,6 @@ Next Episode: "[[E39 - Conversion Definitions and Concepts]]"
 #### Enable Publisher(Google AdSense)
 در صورتیکه وبسایت پر بازدید داریم و آمار مشاهده آن زیاد است میتوانیم این سرویس را برای وبسایت خودمان فعال کنیم. برای اینکار:
 1. `Google Analytics => Behavior => Publisher => Overview => Click on Get Start`
-	1. ![[Pasted image 20260131153911.png]]
+	1. ![Pasted image 20260131153911.png](/images/python/Pasted image 20260131153911.png)
 2. After that google give publisher script and we should add it to our website
 ### !

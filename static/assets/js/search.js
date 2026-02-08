@@ -160,16 +160,8 @@ function initSearch() {
             clearTimeout(searchTimeout);
             searchTimeout = setTimeout(() => {
                 const query = this.value;
-                const category = categoryFilter ? categoryFilter.value : '';
-                searchArticles(query, category, false);
+                searchArticles(query, '', false);
             }, 300);
-        });
-    }
-    
-    if (categoryFilter) {
-        categoryFilter.addEventListener('change', function() {
-            const query = searchInput ? searchInput.value : '';
-            searchArticles(query, this.value, false);
         });
     }
     
@@ -206,16 +198,8 @@ function initSearch() {
             clearTimeout(searchTimeoutInline);
             searchTimeoutInline = setTimeout(() => {
                 const query = this.value;
-                const category = categoryFilterInline ? categoryFilterInline.value : '';
-                searchArticles(query, category, true);
+                searchArticles(query, '', true);
             }, 300);
-        });
-    }
-    
-    if (categoryFilterInline) {
-        categoryFilterInline.addEventListener('change', function() {
-            const query = searchInputInline ? searchInputInline.value : '';
-            searchArticles(query, this.value, true);
         });
     }
 }

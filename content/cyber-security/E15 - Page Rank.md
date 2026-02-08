@@ -37,9 +37,9 @@ Next Episode: "[[E16 - Page Authority & Domain Authority]]"
 برای بررسی Page Rank ابزار های متعددی وجود دارد که در زیر به برخی از آنها اشاره میکنیم:
 1. [checkpagerank](https://checkpagerank.net)
 	1. https://checkpagerank.net
-		1. ![[Pasted image 20260120195815.png]]
+		1. ![Pasted image 20260120195815.png](/images/cyber-security/Pasted image 20260120195815.png)
 	2. کافیست که URL صفحه را وارد کنیم و بر روی Submit کلیک کنیم تا امتیاز Page Rank را مشاهده کنیم:
-		1. ![[Pasted image 20260120195854.png]]
+		1. ![Pasted image 20260120195854.png](/images/cyber-security/Pasted image 20260120195854.png)
 ### How Increase Page Rank
 1. **تعامل لینک با وبسایت های دیگر بصورت دو طرفه:**
 	1. یعنی مثلا `وبسایت x` لینک `وبسایت y` را قرار میدهد و همچنین `وبسایت y` هم لینک `وبسایت x` را در خود قرار میدهد.

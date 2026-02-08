@@ -34,7 +34,7 @@ Next Episode: "[[E24 - Google Webmaster Tools(Search Console) Basics & Concepts]
 3. در واقع بهترین نقشه وبسایت برای کاربر، صفحه اصلی وبسایت است که بیشترین استفاده را از آن میبرد.
 4. نسخه XML نقشه وبسایت `sitemap.xml` باید در مسیر زیر قرار بگیرد:
 	1. https://website.com/sitemap.xml
-		1. ![[Pasted image 20260123175336.png]]
+		1. ![Pasted image 20260123175336.png](/images/seo/Pasted image 20260123175336.png)
 5. در `sitemap.xml` تمام لینک های وبسایت و بروز رسانی ها قرار میگیرند و برای موتور جستجو و همچنین Webmaster Toolkit نیز بسیار مهم است.
 6. نقشه سایت هر روز توسط موتور جستجو بررسی میشود تا اگر لینک و صفحه جدیدی به وبسایت اضافه شده بود در گوگل ایندکس شود. 
 #### Create Sitemap
@@ -76,11 +76,11 @@ Next Episode: "[[E24 - Google Webmaster Tools(Search Console) Basics & Concepts]
 ##### Automatic Creation - Online Tools
 - روش دیگر ساخت `sitemap.xml` استفاده از ابزار های آنلاین است که یکی از بهترین آنها ابزار [XML-Sitemap](https://www.xml-sitemaps.com) میباشد:
 	- https://www.xml-sitemaps.com
-		- ![[Pasted image 20260123181427.png]]
+		- ![Pasted image 20260123181427.png](/images/seo/Pasted image 20260123181427.png)
 - **Create Site Map using XML-Sitemap:**
 	- برای ساخت نقشه سایت کافیست URL را وارد کنیم و سپس Start را بزنیم. 
 	- سپس باید چند دقیقه صبر کنیم تا نقشه سایت را بصورت کامل برای ما بسازد و سپس نیز میتوانیم نقشه سایت را دانلود کنیم:
-		- ![[Pasted image 20260123182621.png]]
+		- ![Pasted image 20260123182621.png](/images/seo/Pasted image 20260123182621.png)
 	- در آخر نیز کافیست که  `sitemap.xml` را در Root وبسایت خودمان قرار دهیم.
 - **نکته:** وقتی با این روش نقشه سایت را ایجاد میکنیم صفحاتی که بر روی `noindex` تنظیم شده اند درون `sitemap.xml` قرار نمیگیرند.
 - **نکته دوم:** هنگامیکه به وبسایت صفحات جدید اضافه میشود و در واقع URL جدید به وبسایت اضافه میشود باید `sitemap.xml` را بروز کنیم. اینکار را حتما باید در بازه زمانی مشخصی انجام دهیم.

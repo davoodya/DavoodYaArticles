@@ -50,9 +50,9 @@ Next Episode: "[[E38 - Google Analytics(Behavior - Published)]]"
 5. چه محصولی بهترین محصول فروشگاه بوده است.
 #### Event Tracking
 - برای فعالسازی Events ها و رهگیری Events ها نیاز داریم که این قابلیت را در وبسایت خودمان فعال کنیم که برای اینکار باید از اسکریپت Event Tracking را به وبسایت خود اضافه کنیم:
-	- ![[Pasted image 20260131144829.png]]
+	- ![Pasted image 20260131144829.png](/images/python/Pasted image 20260131144829.png)
 - **نکته:** اسکریپت Event Tracking باید زیر اسکریپت اصلی `gtag.js` قرار بگیرد:
-	- ![[Pasted image 20260131144955.png]]
+	- ![Pasted image 20260131144955.png](/images/python/Pasted image 20260131144955.png)
 - همچنین برای اضافه کردن این اسکریپت میتوانیم از فانکشن کلی و سپس فراخوانی آن استفاده کنیم.
 - **Event Tracking Script:**
 ```js
@@ -86,7 +86,7 @@ function handleOutboundLinkClicks(event, eventCategory, eventAction) {
 	1. `eventCategory` - text - required
 		1. نوع شی که با کاربر با آن تعامل کرده است را مشاهده میکنیم.
 		2. مقداری که در این قسمت استفاده میکنیم در قسمت Event Categories مشاهده میشود:
-			1. ![[Pasted image 20260131150110.png]]
+			1. ![Pasted image 20260131150110.png](/images/python/Pasted image 20260131150110.png)
 	2. `eventAction` - text - required
 		1. نوع تعامل Interaction کاربر را مشخص میکند.
 	3. `eventLabel` - text - optional
@@ -95,9 +95,9 @@ function handleOutboundLinkClicks(event, eventCategory, eventAction) {
 		1. نمره عددی است که ارزش Event را مشخص میکند.
 	5. ***All Values supported in Google Analytics:***
 		1. `send, event, Videos, play, Fall Campaign`
-			1. ![[Pasted image 20260131145535.png]]
+			1. ![Pasted image 20260131145535.png](/images/python/Pasted image 20260131145535.png)
 	6. *Image:*
-		1. ![[Pasted image 20260131150724.png]]
+		1. ![Pasted image 20260131150724.png](/images/python/Pasted image 20260131150724.png)
 2. **Other Notes:**
 	1. `eventLabel = event.target.href`
 		1. ارسال آدرس URL المان به عنوان مقدار `eventLabel`
@@ -105,8 +105,8 @@ function handleOutboundLinkClicks(event, eventCategory, eventAction) {
 	3. به معنای خود المان است که در مثال بالا `<a>` است.
 #### Outbound Link Tracking
 اگر که بخواهیم Event را که وظیفه انتقال کاربر از یک صفحه به صفحه دیگری در وبسایت مان را بر عهده دارد رهگیری کنیم باید در `eventCategory` نوع را برابر `Outbound Link` قرار دهیم. در غیر این صورت رهگیری Event انجام نمیشود:
-	![[Pasted image 20260131151635.png]]
-	![[Pasted image 20260131152118.png]]
+	![Pasted image 20260131151635.png](/images/python/Pasted image 20260131151635.png)
+	![Pasted image 20260131152118.png](/images/python/Pasted image 20260131152118.png)
 ```js
 function handleOutboundLinkClicks(event) {
 	ga('send', 'event', {
@@ -128,7 +128,7 @@ function handleOutboundLinkClicks(event) {
 ```
 #### Non Interactive Events
 گاهی اوقات هم نیاز داریم که Event هایی را برای Google Analytics ارسال کنیم که Events های بدون تعامل یا Non Interactive نام دارند. برای ارسال این Events ها باید از تکه اسکریپت زیر استفاده کنیم:
-	![[Pasted image 20260131152048.png]]
+	![Pasted image 20260131152048.png](/images/python/Pasted image 20260131152048.png)
 ```js
 ga('send', 'event', 'Videos', 'play', 'Fall Campaign', {
 	nonInteraction: true
@@ -137,14 +137,14 @@ ga('send', 'event', 'Videos', 'play', 'Fall Campaign', {
 ### Google Analytics => Behavior => Events
 1. **Overview:**
 	1. در این تب هم آمار های کلی از Events ها را مشاهده میکنیم:
-		![[Pasted image 20260131151825.png]]
+		![Pasted image 20260131151825.png](/images/python/Pasted image 20260131151825.png)
 2. **Top Events:**
 	1. رویداد های برتر را نشان ما میدهد:
-		1. ![[Pasted image 20260131152409.png]]
+		1. ![Pasted image 20260131152409.png](/images/python/Pasted image 20260131152409.png)
 3. **Pages:**
 	1. در این منو رویداد ها بر اساس صفحات نمایش داده میشود:
-		1. ![[Pasted image 20260131152703.png]]
+		1. ![Pasted image 20260131152703.png](/images/python/Pasted image 20260131152703.png)
 4. **Events Flow:**
 	1. در این منو هم نمودار Flow رویداد ها را مشاهده میکنیم:
-		1. ![[Pasted image 20260131152741.png]]
+		1. ![Pasted image 20260131152741.png](/images/python/Pasted image 20260131152741.png)
 ### !

@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=52077&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=50393&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>
         
-        ابزار ها | Davood Yahay – Cybersecurity Specialist
+        ابزار ها | مقالات داوود یحیی – Davood Yahya Articles
         
-    </title>
+    </title><meta name="description" content="معرفی ابزار امنیتی">
+    <meta name="keywords" content="">
+    <meta name="author" content="Davood Yahya">
+    <link rel="canonical" href="http://localhost:50393/tools/">
+    
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:50393/tools/">
+    <meta property="og:title" content="ابزار ها | مقالات داوود یحیی – Davood Yahya Articles">
+    <meta property="og:description" content="معرفی ابزار امنیتی">
+    <meta property="og:site_name" content="مقالات داوود یحیی – Davood Yahya Articles">
+    <meta property="og:locale" content="fa_IR">
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="http://localhost:50393/tools/">
+    <meta name="twitter:title" content="ابزار ها | مقالات داوود یحیی – Davood Yahya Articles">
+    <meta name="twitter:description" content="معرفی ابزار امنیتی">
+    
+    
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Persian">
+    <meta http-equiv="content-language" content="fa">
 
-    <meta name="description" content="معرفی ابزار امنیتی">
-    <link rel="canonical" href="http://localhost:52077/tools/">
-
     
-    <link rel="stylesheet" href="/assets/css/fonts.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost:50393/assets/css/fonts.css" type="text/css">
     
     
-    <link rel="stylesheet" href="/assets/css/header-footer.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost:50393/assets/css/header-footer.css" type="text/css">
     
     
-    <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost:50393/assets/css/main.css" type="text/css">
     
     
-    <link rel="stylesheet" href="/assets/css/search.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost:50393/assets/css/search.css" type="text/css">
 
     
     
@@ -52,8 +71,30 @@
             "@context": "https://schema.org",
             "@type": "CollectionPage",
             "name": "ابزار ها",
-            "url": "http:\/\/localhost:52077\/tools\/",
-            "description": "معرفی ابزار امنیتی"
+            "url": "http:\/\/localhost:50393\/tools\/",
+            "description": "معرفی ابزار امنیتی",
+            "inLanguage": "fa-IR",
+            "isPartOf": {
+                "@type": "WebSite",
+                "@id": "http:\/\/localhost:50393\/#website"
+            },
+            "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "خانه",
+                        "item": "http:\/\/localhost:50393\/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "ابزار ها",
+                        "item": "http:\/\/localhost:50393\/tools\/"
+                    }
+                ]
+            }
         }
     </script>
 
@@ -83,7 +124,7 @@
                 <li><a href="https://davoodya.ir/#services" title="صفحه خدمات وبسایت داوود یاحی davoodya.ir">سرویس ها</a></li>
                 <li><a href="https://davoodya.ir/#portfolio" title="صفحه نمونه کار ها وبسایت داوود یاحی davoodya.ir">نمونه ابزارها</a></li>
                 <li><a href="https://davoodya.ir/pages/courses.html" title="صفحه دوره ها وبسایت داوود یاحی davoodya.ir">دوره‌های آموزشی</a></li>
-                <li><a href="http://localhost:52077/" class="" title="صفحه مقالات وبسایت داوود یاحی davoodya.ir">مقالات</a></li>
+                <li><a href="http://localhost:50393/" class="" title="صفحه مقالات وبسایت داوود یاحی davoodya.ir">مقالات</a></li>
                 <li><a href="https://davoodya.ir/pages/skills.html" title="صفحه مهارت ها وبسایت داوود یاحی davoodya.ir">مهارت‌ها و مدارک</a></li>
                 <li><a href="https://davoodya.ir/#contact" title="صفحه تماس با من وبسایت داوود یاحی davoodya.ir">تماس با من</a></li>
             </ul>
@@ -120,12 +161,6 @@
                     placeholder="عنوان مقاله یا تگ را جستجو کنید..."
                     autocomplete="off"
                 >
-                <div class="search-filters">
-                    <select id="categoryFilter" class="search-filter-select">
-                        <option value="">همه دسته‌بندی‌ها</option>
-                        
-                    </select>
-                </div>
             </div>
             
             <div id="searchResults" class="search-results"></div>
@@ -204,11 +239,6 @@ document.addEventListener('DOMContentLoaded', function() {
             </svg>
         </div>
         
-        <select id="categoryFilterInline" class="search-filter-inline">
-            <option value="">همه دسته‌بندی‌ها</option>
-            
-        </select>
-        
         <div id="searchResultsInline" class="search-results-inline"></div>
     </div>
     
@@ -236,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 
                     <li class="category-item">
-                        <a href="/python/" class="category-link">
+                        <a href="http://localhost:50393/python/" class="category-link">
                             <span class="category-icon">▸</span>
                             <span class="category-name">پایتون</span>
                             <span class="category-badge">28</span>
@@ -244,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </li>
                 
                     <li class="category-item">
-                        <a href="/tools/" class="category-link">
+                        <a href="http://localhost:50393/tools/" class="category-link">
                             <span class="category-icon">▸</span>
                             <span class="category-name">ابزار ها</span>
                             <span class="category-badge">16</span>
@@ -252,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </li>
                 
                     <li class="category-item">
-                        <a href="/seo/" class="category-link">
+                        <a href="http://localhost:50393/seo/" class="category-link">
                             <span class="category-icon">▸</span>
                             <span class="category-name">سئو</span>
                             <span class="category-badge">5</span>
@@ -260,7 +290,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </li>
                 
                     <li class="category-item">
-                        <a href="/cyber-security/" class="category-link">
+                        <a href="http://localhost:50393/cyber-security/" class="category-link">
                             <span class="category-icon">▸</span>
                             <span class="category-name">مقالات امنیت سایبری</span>
                             <span class="category-badge">9</span>
@@ -284,14 +314,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     
                         
-                            <a href="/tags/cybersecurity" class="tag-badge">
+                            <a href="http://localhost:50393/tags/cybersecurity" class="tag-badge">
                                 cybersecurity <span class="tag-count">57</span>
                             </a>
                             
                         
                     
                         
-                            <a href="/tags/security" class="tag-badge">
+                            <a href="http://localhost:50393/tags/security" class="tag-badge">
                                 security <span class="tag-count">57</span>
                             </a>
                             
@@ -315,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <ul class="recent-posts-list">
                     
                         <li class="recent-post-item">
-                            <a href="/python/my-first-post/" class="recent-post-link">
+                            <a href="http://localhost:50393/python/my-first-post/" class="recent-post-link">
                                 <span class="recent-post-icon">📄</span>
                                 <div class="recent-post-info">
                                     <h4 class="recent-post-title">My First Post</h4>
@@ -325,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </li>
                     
                         <li class="recent-post-item">
-                            <a href="/python/e49--branding/" class="recent-post-link">
+                            <a href="http://localhost:50393/python/e49--branding/" class="recent-post-link">
                                 <span class="recent-post-icon">📄</span>
                                 <div class="recent-post-info">
                                     <h4 class="recent-post-title"></h4>
@@ -335,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </li>
                     
                         <li class="recent-post-item">
-                            <a href="/python/e50---google-penalty/" class="recent-post-link">
+                            <a href="http://localhost:50393/python/e50---google-penalty/" class="recent-post-link">
                                 <span class="recent-post-icon">📄</span>
                                 <div class="recent-post-info">
                                     <h4 class="recent-post-title"></h4>
@@ -345,7 +375,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </li>
                     
                         <li class="recent-post-item">
-                            <a href="/python/e51-e52---google-algorithms/" class="recent-post-link">
+                            <a href="http://localhost:50393/python/e51-e52---google-algorithms/" class="recent-post-link">
                                 <span class="recent-post-icon">📄</span>
                                 <div class="recent-post-info">
                                     <h4 class="recent-post-title"></h4>
@@ -355,7 +385,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </li>
                     
                         <li class="recent-post-item">
-                            <a href="/tools/e49--branding/" class="recent-post-link">
+                            <a href="http://localhost:50393/tools/e49--branding/" class="recent-post-link">
                                 <span class="recent-post-icon">📄</span>
                                 <div class="recent-post-info">
                                     <h4 class="recent-post-title"></h4>
@@ -392,7 +422,7 @@ function toggleDropdown(type) {
                 
                     <article class="article-card">
                         <h2 class="article-card-title">
-                            <a href="/tools/e49--branding/"></a>
+                            <a href="http://localhost:50393/tools/e49--branding/"></a>
                         </h2>
                         
                         <div class="article-card-summary">
@@ -420,14 +450,14 @@ function toggleDropdown(type) {
                             
                         </div>
                         
-                        <a href="/tools/e49--branding/" class="read-more-btn">
+                        <a href="http://localhost:50393/tools/e49--branding/" class="read-more-btn">
                             ادامه مطلب ←
                         </a>
                     </article>
                 
                     <article class="article-card">
                         <h2 class="article-card-title">
-                            <a href="/tools/e50---google-penalty/"></a>
+                            <a href="http://localhost:50393/tools/e50---google-penalty/"></a>
                         </h2>
                         
                         <div class="article-card-summary">
@@ -452,14 +482,14 @@ function toggleDropdown(type) {
                             
                         </div>
                         
-                        <a href="/tools/e50---google-penalty/" class="read-more-btn">
+                        <a href="http://localhost:50393/tools/e50---google-penalty/" class="read-more-btn">
                             ادامه مطلب ←
                         </a>
                     </article>
                 
                     <article class="article-card">
                         <h2 class="article-card-title">
-                            <a href="/tools/e51-e52---google-algorithms/"></a>
+                            <a href="http://localhost:50393/tools/e51-e52---google-algorithms/"></a>
                         </h2>
                         
                         <div class="article-card-summary">
@@ -470,14 +500,14 @@ function toggleDropdown(type) {
                             
                         </div>
                         
-                        <a href="/tools/e51-e52---google-algorithms/" class="read-more-btn">
+                        <a href="http://localhost:50393/tools/e51-e52---google-algorithms/" class="read-more-btn">
                             ادامه مطلب ←
                         </a>
                     </article>
                 
                     <article class="article-card">
                         <h2 class="article-card-title">
-                            <a href="/tools/e46---alexa/"></a>
+                            <a href="http://localhost:50393/tools/e46---alexa/"></a>
                         </h2>
                         
                         <div class="article-card-summary">
@@ -506,14 +536,14 @@ function toggleDropdown(type) {
                             
                         </div>
                         
-                        <a href="/tools/e46---alexa/" class="read-more-btn">
+                        <a href="http://localhost:50393/tools/e46---alexa/" class="read-more-btn">
                             ادامه مطلب ←
                         </a>
                     </article>
                 
                     <article class="article-card">
                         <h2 class="article-card-title">
-                            <a href="/tools/e47--google-trends/"></a>
+                            <a href="http://localhost:50393/tools/e47--google-trends/"></a>
                         </h2>
                         
                         <div class="article-card-summary">
@@ -537,14 +567,14 @@ function toggleDropdown(type) {
                             
                         </div>
                         
-                        <a href="/tools/e47--google-trends/" class="read-more-btn">
+                        <a href="http://localhost:50393/tools/e47--google-trends/" class="read-more-btn">
                             ادامه مطلب ←
                         </a>
                     </article>
                 
                     <article class="article-card">
                         <h2 class="article-card-title">
-                            <a href="/tools/e48---off-page-seo/"></a>
+                            <a href="http://localhost:50393/tools/e48---off-page-seo/"></a>
                         </h2>
                         
                         <div class="article-card-summary">
@@ -569,14 +599,14 @@ function toggleDropdown(type) {
                             
                         </div>
                         
-                        <a href="/tools/e48---off-page-seo/" class="read-more-btn">
+                        <a href="http://localhost:50393/tools/e48---off-page-seo/" class="read-more-btn">
                             ادامه مطلب ←
                         </a>
                     </article>
                 
                     <article class="article-card">
                         <h2 class="article-card-title">
-                            <a href="/tools/e52--seo/"></a>
+                            <a href="http://localhost:50393/tools/e52--seo/"></a>
                         </h2>
                         
                         <div class="article-card-summary">
@@ -590,14 +620,14 @@ function toggleDropdown(type) {
                             
                         </div>
                         
-                        <a href="/tools/e52--seo/" class="read-more-btn">
+                        <a href="http://localhost:50393/tools/e52--seo/" class="read-more-btn">
                             ادامه مطلب ←
                         </a>
                     </article>
                 
                     <article class="article-card">
                         <h2 class="article-card-title">
-                            <a href="/tools/e53--seo/"></a>
+                            <a href="http://localhost:50393/tools/e53--seo/"></a>
                         </h2>
                         
                         <div class="article-card-summary">
@@ -611,14 +641,14 @@ function toggleDropdown(type) {
                             
                         </div>
                         
-                        <a href="/tools/e53--seo/" class="read-more-btn">
+                        <a href="http://localhost:50393/tools/e53--seo/" class="read-more-btn">
                             ادامه مطلب ←
                         </a>
                     </article>
                 
                     <article class="article-card">
                         <h2 class="article-card-title">
-                            <a href="/tools/e54--seo/"></a>
+                            <a href="http://localhost:50393/tools/e54--seo/"></a>
                         </h2>
                         
                         <div class="article-card-summary">
@@ -632,14 +662,14 @@ function toggleDropdown(type) {
                             
                         </div>
                         
-                        <a href="/tools/e54--seo/" class="read-more-btn">
+                        <a href="http://localhost:50393/tools/e54--seo/" class="read-more-btn">
                             ادامه مطلب ←
                         </a>
                     </article>
                 
                     <article class="article-card">
                         <h2 class="article-card-title">
-                            <a href="/tools/e55--seo/"></a>
+                            <a href="http://localhost:50393/tools/e55--seo/"></a>
                         </h2>
                         
                         <div class="article-card-summary">
@@ -653,7 +683,7 @@ function toggleDropdown(type) {
                             
                         </div>
                         
-                        <a href="/tools/e55--seo/" class="read-more-btn">
+                        <a href="http://localhost:50393/tools/e55--seo/" class="read-more-btn">
                             ادامه مطلب ←
                         </a>
                     </article>
@@ -672,13 +702,13 @@ function toggleDropdown(type) {
         <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
       </li>
       <li class="page-item">
-        <a href="/tools/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+        <a href="http://localhost:50393/tools/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
       </li>
       <li class="page-item">
-        <a href="/tools/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+        <a href="http://localhost:50393/tools/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/tools/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="http://localhost:50393/tools/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
         </div>
@@ -700,7 +730,7 @@ function toggleDropdown(type) {
             
             <div class="footer-logo">
                 <h3 class="logo-glitch-footer">DAVOOD<span>_</span>YAHAY</h3>
-                <img src="/images/davoodya200-213.png" alt="Davood Yahay Image" onerror="this.style.display='none'">
+                <img src="http://localhost:50393/images/davoodya200-213.png" alt="Davood Yahay Image" onerror="this.style.display='none'">
                 <p class="footer-desc">مشاور و مدرس امنیت سایبری، برنامه نویسی، شبکه‌های کامپیوتری و سیستم های عامل</p>
             </div>
 
@@ -713,7 +743,7 @@ function toggleDropdown(type) {
                     <li><a href="https://davoodya.ir/#services" title="صفحه خدمات وبسایت داوود یاحی davoodya.ir">سرویس ها</a></li>
                     <li><a href="https://davoodya.ir/#portfolio" title="صفحه نمونه کارها وبسایت داوود یاحی davoodya.ir">نمونه ابزارها</a></li>
                     <li><a href="https://davoodya.ir/pages/courses.html" title="صفحه دوره ها وبسایت داوود یاحی davoodya.ir">دوره‌های آموزشی</a></li>
-                    <li><a href="http://localhost:52077/" title="صفحه مقالات وبسایت داوود یاحی davoodya.ir">مقالات</a></li>
+                    <li><a href="http://localhost:50393/" title="صفحه مقالات وبسایت داوود یاحی davoodya.ir">مقالات</a></li>
                     <li><a href="https://davoodya.ir/pages/skills.html" title="صفحه مهارت ها وبسایت داوود یاحی davoodya.ir">مهارت‌ها و مدارک</a></li>
                     <li><a href="https://davoodya.ir/#contact" title="صفحه تماس با من وبسایت داوود یاحی davoodya.ir">تماس با من</a></li>
                 </ul>
@@ -807,7 +837,7 @@ function toggleDropdown(type) {
 </footer>
 
 
-<script src="/assets/js/search.js"></script>
+<script src="http://localhost:50393/assets/js/search.js"></script>
 
 </body>
 </html>
