@@ -1,0 +1,661 @@
+[2026-02-08 13:53:23] [INFO] ============================================================
+[2026-02-08 13:53:23] [INFO] Starting image article renamer process
+[2026-02-08 13:53:23] [INFO] ============================================================
+[2026-02-08 13:53:23] [INFO] 
+============================================================
+[2026-02-08 13:53:23] [INFO] Testing filename generation:
+[2026-02-08 13:53:23] [INFO] ============================================================
+[2026-02-08 13:53:23] [INFO]   Alt: 'MSFConsole Commands-1'
+[2026-02-08 13:53:23] [INFO]   Old: 'Pastedimage20250703164923.png'
+[2026-02-08 13:53:23] [INFO]   New: 'MSFConsoleCommands-1.png'
+[2026-02-08 13:53:23] [INFO] 
+[2026-02-08 13:53:23] [INFO]   Alt: 'SANS-401-Networking and Protocols (401.1)-12'
+[2026-02-08 13:53:23] [INFO]   Old: 'Pastedimage123.png'
+[2026-02-08 13:53:23] [INFO]   New: 'SANS-401-NetworkingandProtocols(401.1)-12.png'
+[2026-02-08 13:53:23] [INFO] 
+[2026-02-08 13:53:23] [INFO]   Alt: 'Page Rank-2'
+[2026-02-08 13:53:23] [INFO]   Old: 'oldimage.jpg'
+[2026-02-08 13:53:23] [INFO]   New: 'PageRank-2.jpg'
+[2026-02-08 13:53:23] [INFO] 
+[2026-02-08 13:53:23] [INFO] 
+============================================================
+[2026-02-08 13:53:23] [INFO] Verifying setup:
+[2026-02-08 13:53:23] [INFO] ============================================================
+[2026-02-08 13:53:23] [INFO] + Content directory: content
+[2026-02-08 13:53:23] [INFO] + Static images: static/images
+[2026-02-08 13:53:23] [INFO]   Categories: cyber-security, linux, seo, tools
+[2026-02-08 13:53:23] [INFO]     cyber-security: 86 images
+[2026-02-08 13:53:23] [INFO]     linux: 24 images
+[2026-02-08 13:53:23] [INFO]     seo: 75 images
+[2026-02-08 13:53:23] [INFO]     tools: 61 images
+[2026-02-08 13:53:23] [INFO]   Total images: 246
+[2026-02-08 13:53:23] [INFO] ============================================================
+[2026-02-08 13:53:23] [INFO] Image Article Renamer - Starting...
+[2026-02-08 13:53:23] [INFO] ============================================================
+[2026-02-08 13:53:23] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+[2026-02-08 13:53:23] [INFO]   Title: 'SANS-401.0 Introduction & Prepare Lab'
+[2026-02-08 13:53:23] [INFO]   Category: cyber-security
+[2026-02-08 13:53:23] [INFO]   Found 8 image(s)
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620162926.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401.0Introduction&PrepareLab-1.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620163247.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401.0Introduction&PrepareLab-2.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620163325.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401.0Introduction&PrepareLab-3.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620163445.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401.0Introduction&PrepareLab-4.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620163844.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401.0Introduction&PrepareLab-5.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620164103.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401.0Introduction&PrepareLab-6.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620164251.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401.0Introduction&PrepareLab-7.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620164453.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401.0Introduction&PrepareLab-8.png
+[2026-02-08 13:53:23] [INFO]   [Saved] 8 image(s) updated
+[2026-02-08 13:53:23] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+[2026-02-08 13:53:23] [INFO]   Title: 'SANS-401-Networking and Protocols (401.1)'
+[2026-02-08 13:53:23] [INFO]   Category: cyber-security
+[2026-02-08 13:53:23] [INFO]   Found 13 image(s)
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620165523.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-NetworkingandProtocols(401.1)-1.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620165923.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-NetworkingandProtocols(401.1)-2.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620170018.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-NetworkingandProtocols(401.1)-3.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620175636.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-NetworkingandProtocols(401.1)-4.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620170629.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-NetworkingandProtocols(401.1)-5.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620171105.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-NetworkingandProtocols(401.1)-6.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620174957.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-NetworkingandProtocols(401.1)-7.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620175001.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-NetworkingandProtocols(401.1)-8.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620180042.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-NetworkingandProtocols(401.1)-9.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620181147.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-NetworkingandProtocols(401.1)-10.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620181551.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-NetworkingandProtocols(401.1)-11.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620182037.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-NetworkingandProtocols(401.1)-12.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620182614.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-NetworkingandProtocols(401.1)-13.png
+[2026-02-08 13:53:23] [INFO]   [Saved] 13 image(s) updated
+[2026-02-08 13:53:23] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+[2026-02-08 13:53:23] [INFO]   Title: 'SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)'
+[2026-02-08 13:53:23] [INFO]   Category: cyber-security
+[2026-02-08 13:53:23] [INFO]   Found 14 image(s)
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620183121.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-1.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620183204.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-2.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620183227.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-3.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620183242.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-4.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620183352.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-5.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620184519.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-6.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620194028.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-7.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620194123.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-8.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620194240.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-9.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620194553.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-10.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620195702.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-11.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620200538.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-12.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620201106.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-13.png
+[2026-02-08 13:53:23] [INFO]     + Updated: Pastedimage20240620202009.png
+[2026-02-08 13:53:23] [INFO]       -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-14.png
+[2026-02-08 13:53:24] [INFO]   [Saved] 14 image(s) updated
+[2026-02-08 13:53:24] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+[2026-02-08 13:53:24] [INFO]   Title: 'SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)'
+[2026-02-08 13:53:24] [INFO]   Category: cyber-security
+[2026-02-08 13:53:24] [INFO]   Found 12 image(s)
+[2026-02-08 13:53:24] [WARNING]     Warning: New file doesn't exist: SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-1.png
+[2026-02-08 13:53:24] [WARNING]              Expected at: static/images\cyber-security\SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-1.png
+[2026-02-08 13:53:24] [WARNING]     Warning: New file doesn't exist: SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-2.png
+[2026-02-08 13:53:24] [WARNING]              Expected at: static/images\cyber-security\SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-2.png
+[2026-02-08 13:53:24] [WARNING]     Warning: New file doesn't exist: SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-3.png
+[2026-02-08 13:53:24] [WARNING]              Expected at: static/images\cyber-security\SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-3.png
+[2026-02-08 13:53:24] [WARNING]     Warning: New file doesn't exist: SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-4.png
+[2026-02-08 13:53:24] [WARNING]              Expected at: static/images\cyber-security\SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-4.png
+[2026-02-08 13:53:24] [WARNING]     Warning: New file doesn't exist: SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-5.png
+[2026-02-08 13:53:24] [WARNING]              Expected at: static/images\cyber-security\SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-5.png
+[2026-02-08 13:53:24] [WARNING]     Warning: New file doesn't exist: SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-6.png
+[2026-02-08 13:53:24] [WARNING]              Expected at: static/images\cyber-security\SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-6.png
+[2026-02-08 13:53:24] [WARNING]     Warning: New file doesn't exist: SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-7.png
+[2026-02-08 13:53:24] [WARNING]              Expected at: static/images\cyber-security\SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-7.png
+[2026-02-08 13:53:24] [WARNING]     Warning: New file doesn't exist: SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-8.png
+[2026-02-08 13:53:24] [WARNING]              Expected at: static/images\cyber-security\SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-8.png
+[2026-02-08 13:53:24] [WARNING]     Warning: New file doesn't exist: SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-9.png
+[2026-02-08 13:53:24] [WARNING]              Expected at: static/images\cyber-security\SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-9.png
+[2026-02-08 13:53:24] [WARNING]     Warning: New file doesn't exist: SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-10.png
+[2026-02-08 13:53:24] [WARNING]              Expected at: static/images\cyber-security\SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-10.png
+[2026-02-08 13:53:24] [WARNING]     Warning: New file doesn't exist: SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-11.png
+[2026-02-08 13:53:24] [WARNING]              Expected at: static/images\cyber-security\SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-11.png
+[2026-02-08 13:53:24] [WARNING]     Warning: New file doesn't exist: SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-12.png
+[2026-02-08 13:53:24] [WARNING]              Expected at: static/images\cyber-security\SANS-401:Wireless,Aircrack-ng,Wireshark(401.1)-12.png
+[2026-02-08 13:53:24] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+[2026-02-08 13:53:24] [INFO]   Title: 'SANS-401-Defense-in-Depth (401.2)'
+[2026-02-08 13:53:24] [INFO]   Category: cyber-security
+[2026-02-08 13:53:24] [INFO]   Found 9 image(s)
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240621173423.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-Defense-in-Depth(401.2)-1.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240621173706.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-Defense-in-Depth(401.2)-2.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240621180821.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-Defense-in-Depth(401.2)-3.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240621181416.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-Defense-in-Depth(401.2)-4.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240621181800.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-Defense-in-Depth(401.2)-5.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240621182040.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-Defense-in-Depth(401.2)-6.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240621182546.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-Defense-in-Depth(401.2)-7.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240621182838.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-Defense-in-Depth(401.2)-8.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240621184130.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-Defense-in-Depth(401.2)-9.png
+[2026-02-08 13:53:24] [INFO]   [Saved] 9 image(s) updated
+[2026-02-08 13:53:24] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+[2026-02-08 13:53:24] [INFO]   Title: 'SANS-401-Password Cracking'
+[2026-02-08 13:53:24] [INFO]   Category: cyber-security
+[2026-02-08 13:53:24] [INFO]   Found 30 image(s)
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624195037.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-1.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624195151.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-2.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624195533.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-3.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624204001.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-4.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624205403.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-5.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624205939.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-6.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624211241.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-7.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624210842.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-8.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624211100.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-9.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624211034.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-10.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624210955.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-11.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624211139.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-12.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624210729.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-13.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624211736.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-14.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624212005.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-15.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624212124.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-16.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624212250.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-17.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624212751.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-18.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624212900.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-19.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624213056.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-20.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624213224.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-21.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624213704.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-22.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624213812.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-23.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624213852.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-24.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624214101.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-25.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624214347.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-26.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624214522.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-27.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624214603.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-28.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624214731.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-29.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624214923.png
+[2026-02-08 13:53:24] [INFO]       -> SANS-401-PasswordCracking-30.png
+[2026-02-08 13:53:24] [INFO]   [Saved] 30 image(s) updated
+[2026-02-08 13:53:24] [INFO] 
+[File] linux\60 Commands Hacker Should Know it.md
+[2026-02-08 13:53:24] [INFO]   Title: '60 Commands Hacker Should Know it'
+[2026-02-08 13:53:24] [INFO]   Category: linux
+[2026-02-08 13:53:24] [INFO]   Found 24 image(s)
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201181732.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-1.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201181847.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-2.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201182046.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-3.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201182137.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-4.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201182336.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-5.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201182425.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-6.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201182611.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-7.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201182934.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-8.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201183204.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-9.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201183318.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-10.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201183534.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-11.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201183918.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-12.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201184053.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-13.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201184400.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-14.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201184619.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-15.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201184843.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-16.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201184925.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-17.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201185105.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-18.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201185334.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-19.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201185312.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-20.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201185841.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-21.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201190027.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-22.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201185958.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-23.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20251201190000.png
+[2026-02-08 13:53:24] [INFO]       -> 60CommandsHackerShouldKnowit-24.png
+[2026-02-08 13:53:24] [INFO]   [Saved] 24 image(s) updated
+[2026-02-08 13:53:24] [INFO] 
+[File] python\Dir-Buster-Module.md
+[2026-02-08 13:53:24] [INFO]   Title: 'Dir-Buster-Module'
+[2026-02-08 13:53:24] [INFO]   Category: python
+[2026-02-08 13:53:24] [INFO]   No images found
+[2026-02-08 13:53:24] [INFO] 
+[File] seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+[2026-02-08 13:53:24] [INFO]   Title: 'SEO Intro, Search Engines, Keywords'
+[2026-02-08 13:53:24] [INFO]   Category: seo
+[2026-02-08 13:53:24] [INFO]   Found 11 image(s)
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240621193526.png
+[2026-02-08 13:53:24] [INFO]       -> SEOIntro,SearchEngines,Keywords-1.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240621201236.png
+[2026-02-08 13:53:24] [INFO]       -> SEOIntro,SearchEngines,Keywords-2.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622164815.png
+[2026-02-08 13:53:24] [INFO]       -> SEOIntro,SearchEngines,Keywords-3.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622165434.png
+[2026-02-08 13:53:24] [INFO]       -> SEOIntro,SearchEngines,Keywords-4.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622165537.png
+[2026-02-08 13:53:24] [INFO]       -> SEOIntro,SearchEngines,Keywords-5.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622165713.png
+[2026-02-08 13:53:24] [INFO]       -> SEOIntro,SearchEngines,Keywords-6.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622170537.png
+[2026-02-08 13:53:24] [INFO]       -> SEOIntro,SearchEngines,Keywords-7.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622173011.png
+[2026-02-08 13:53:24] [INFO]       -> SEOIntro,SearchEngines,Keywords-8.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622173259.png
+[2026-02-08 13:53:24] [INFO]       -> SEOIntro,SearchEngines,Keywords-9.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622173409.png
+[2026-02-08 13:53:24] [INFO]       -> SEOIntro,SearchEngines,Keywords-10.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622173742.png
+[2026-02-08 13:53:24] [INFO]       -> SEOIntro,SearchEngines,Keywords-11.png
+[2026-02-08 13:53:24] [INFO]   [Saved] 11 image(s) updated
+[2026-02-08 13:53:24] [INFO] 
+[File] seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+[2026-02-08 13:53:24] [INFO]   Title: 'Content SEO, Important Website Pages'
+[2026-02-08 13:53:24] [INFO]   Category: seo
+[2026-02-08 13:53:24] [INFO]   Found 10 image(s)
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240623213450.png
+[2026-02-08 13:53:24] [INFO]       -> ContentSEO,ImportantWebsitePages-1.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240623224412.png
+[2026-02-08 13:53:24] [INFO]       -> ContentSEO,ImportantWebsitePages-2.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240623224528.png
+[2026-02-08 13:53:24] [INFO]       -> ContentSEO,ImportantWebsitePages-3.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240623224722.png
+[2026-02-08 13:53:24] [INFO]       -> ContentSEO,ImportantWebsitePages-4.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624191013.png
+[2026-02-08 13:53:24] [INFO]       -> ContentSEO,ImportantWebsitePages-5.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624191130.png
+[2026-02-08 13:53:24] [INFO]       -> ContentSEO,ImportantWebsitePages-6.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624192827.png
+[2026-02-08 13:53:24] [INFO]       -> ContentSEO,ImportantWebsitePages-7.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624192858.png
+[2026-02-08 13:53:24] [INFO]       -> ContentSEO,ImportantWebsitePages-8.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624193345.png
+[2026-02-08 13:53:24] [INFO]       -> ContentSEO,ImportantWebsitePages-9.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240624194253.png
+[2026-02-08 13:53:24] [INFO]       -> ContentSEO,ImportantWebsitePages-10.png
+[2026-02-08 13:53:24] [INFO]   [Saved] 10 image(s) updated
+[2026-02-08 13:53:24] [INFO] 
+[File] seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+[2026-02-08 13:53:24] [INFO]   Title: 'Woorank(Check Website SEO)'
+[2026-02-08 13:53:24] [INFO]   Category: seo
+[2026-02-08 13:53:24] [INFO]   Found 12 image(s)
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120173303.png
+[2026-02-08 13:53:24] [INFO]       -> Woorank(CheckWebsiteSEO)-1.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120175417.png
+[2026-02-08 13:53:24] [INFO]       -> Woorank(CheckWebsiteSEO)-2.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120173610.png
+[2026-02-08 13:53:24] [INFO]       -> Woorank(CheckWebsiteSEO)-3.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120174656.png
+[2026-02-08 13:53:24] [INFO]       -> Woorank(CheckWebsiteSEO)-4.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120174632.png
+[2026-02-08 13:53:24] [INFO]       -> Woorank(CheckWebsiteSEO)-5.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120174901.png
+[2026-02-08 13:53:24] [INFO]       -> Woorank(CheckWebsiteSEO)-6.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120175205.png
+[2026-02-08 13:53:24] [INFO]       -> Woorank(CheckWebsiteSEO)-7.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120175331.png
+[2026-02-08 13:53:24] [INFO]       -> Woorank(CheckWebsiteSEO)-8.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120175554.png
+[2026-02-08 13:53:24] [INFO]       -> Woorank(CheckWebsiteSEO)-9.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120180820.png
+[2026-02-08 13:53:24] [INFO]       -> Woorank(CheckWebsiteSEO)-10.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120180429.png
+[2026-02-08 13:53:24] [INFO]       -> Woorank(CheckWebsiteSEO)-11.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120181056.png
+[2026-02-08 13:53:24] [INFO]       -> Woorank(CheckWebsiteSEO)-12.png
+[2026-02-08 13:53:24] [INFO]   [Saved] 12 image(s) updated
+[2026-02-08 13:53:24] [INFO] 
+[File] seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+[2026-02-08 13:53:24] [INFO]   Title: 'Good Contents for SEO'
+[2026-02-08 13:53:24] [INFO]   Category: seo
+[2026-02-08 13:53:24] [INFO]   Found 3 image(s)
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120184940.png
+[2026-02-08 13:53:24] [INFO]       -> GoodContentsforSEO-1.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120190219.png
+[2026-02-08 13:53:24] [INFO]       -> GoodContentsforSEO-2.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120190249.png
+[2026-02-08 13:53:24] [INFO]       -> GoodContentsforSEO-3.png
+[2026-02-08 13:53:24] [INFO]   [Saved] 3 image(s) updated
+[2026-02-08 13:53:24] [INFO] 
+[File] seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+[2026-02-08 13:53:24] [INFO]   Title: 'Links in SEO(Internal & External)'
+[2026-02-08 13:53:24] [INFO]   Category: seo
+[2026-02-08 13:53:24] [INFO]   No images found
+[2026-02-08 13:53:24] [INFO] 
+[File] seo\0-SEO-Theories\E15 - Page Rank.md
+[2026-02-08 13:53:24] [INFO]   Title: 'Page Rank'
+[2026-02-08 13:53:24] [INFO]   Category: seo
+[2026-02-08 13:53:24] [INFO]   Found 2 image(s)
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120195815.png
+[2026-02-08 13:53:24] [INFO]       -> PageRank-1.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120195854.png
+[2026-02-08 13:53:24] [INFO]       -> PageRank-2.png
+[2026-02-08 13:53:24] [INFO]   [Saved] 2 image(s) updated
+[2026-02-08 13:53:24] [INFO] 
+[File] seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+[2026-02-08 13:53:24] [INFO]   Title: 'Page Authority & Domain Authority'
+[2026-02-08 13:53:24] [INFO]   Category: seo
+[2026-02-08 13:53:24] [INFO]   Found 3 image(s)
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120210415.png
+[2026-02-08 13:53:24] [INFO]       -> PageAuthority&DomainAuthority-1.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120210915.png
+[2026-02-08 13:53:24] [INFO]       -> PageAuthority&DomainAuthority-2.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260120210732.png
+[2026-02-08 13:53:24] [INFO]       -> PageAuthority&DomainAuthority-3.png
+[2026-02-08 13:53:24] [INFO]   [Saved] 3 image(s) updated
+[2026-02-08 13:53:24] [INFO] 
+[File] seo\0-SEO-Theories\E17 - Backlinks.md
+[2026-02-08 13:53:24] [INFO]   Title: 'Backlinks'
+[2026-02-08 13:53:24] [INFO]   Category: seo
+[2026-02-08 13:53:24] [INFO]   Found 1 image(s)
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20260121190100.png
+[2026-02-08 13:53:24] [INFO]       -> Backlinks-1.png
+[2026-02-08 13:53:24] [INFO]   [Saved] 1 image(s) updated
+[2026-02-08 13:53:24] [INFO] 
+[File] seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+[2026-02-08 13:53:24] [INFO]   Title: 'Find Keywords, Website Structure & Necessary HTML Tags for SEO'
+[2026-02-08 13:53:24] [INFO]   Category: seo
+[2026-02-08 13:53:24] [INFO]   Found 33 image(s)
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622202553.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622203718.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-2.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622203754.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-3.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622204050.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-4.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622205615.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-5.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622204601.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-6.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622204629.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-7.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622204951.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-8.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622210354.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-9.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622210607.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-10.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622210702.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-11.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622210835.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-12.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622211258.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-13.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622211351.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-14.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622211609.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-15.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622212132.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-16.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622230532.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-17.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622231205.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-18.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622231245.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-19.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622231644.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-20.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622233917.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-21.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622235442.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-22.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622235712.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-23.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622234913.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-24.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240622234916.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-25.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240623211107.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-26.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240623211223.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-27.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240623204152.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-28.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240623204902.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-29.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240623205050.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-30.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240623205615.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-31.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240623210733.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-32.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20240623210734.png
+[2026-02-08 13:53:24] [INFO]       -> FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-33.png
+[2026-02-08 13:53:24] [INFO]   [Saved] 33 image(s) updated
+[2026-02-08 13:53:24] [INFO] 
+[File] tools\MSFConsole Commands.md
+[2026-02-08 13:53:24] [INFO]   Title: 'MSFConsole Commands'
+[2026-02-08 13:53:24] [INFO]   Category: tools
+[2026-02-08 13:53:24] [INFO]   Found 43 image(s)
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703164923.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-1.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703164925.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-2.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703164927.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-3.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703164954.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-4.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703165130.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-5.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703165252.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-6.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703165421.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-7.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703165516.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-8.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703165711.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-9.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703165817.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-10.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703165945.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-11.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703170130.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-12.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703175515.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-13.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703175745.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-14.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703175959.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-15.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703180214.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-16.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703180345.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-17.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703180539.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-18.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703180616.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-19.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703180745.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-20.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703180931.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-21.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703181241.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-22.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703181503.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-23.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250703181559.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-24.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704163118.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-25.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704164158.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-26.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704164125.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-27.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704164628.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-28.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704164943.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-29.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704165334.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-30.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704165505.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-31.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704170455.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-32.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704163854.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-33.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704164604.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-34.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704165021.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-35.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704165108.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-36.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704165532.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-37.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704171310.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-38.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704171932.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-39.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704172410.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-40.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704172634.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-41.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704173452.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-42.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20250704173920.png
+[2026-02-08 13:53:24] [INFO]       -> MSFConsoleCommands-43.png
+[2026-02-08 13:53:24] [INFO]   [Saved] 43 image(s) updated
+[2026-02-08 13:53:24] [INFO] 
+[File] tools\Burpsuite\1-Install Burpsuite.md
+[2026-02-08 13:53:24] [INFO]   Title: '1-Install Burpsuite'
+[2026-02-08 13:53:24] [INFO]   Category: tools
+[2026-02-08 13:53:24] [INFO]   Found 12 image(s)
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206125905.png
+[2026-02-08 13:53:24] [INFO]       -> 1-InstallBurpsuite-1.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206130557.png
+[2026-02-08 13:53:24] [INFO]       -> 1-InstallBurpsuite-2.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206131615.png
+[2026-02-08 13:53:24] [INFO]       -> 1-InstallBurpsuite-3.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206131818.png
+[2026-02-08 13:53:24] [INFO]       -> 1-InstallBurpsuite-4.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206131938.png
+[2026-02-08 13:53:24] [INFO]       -> 1-InstallBurpsuite-5.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206132303.png
+[2026-02-08 13:53:24] [INFO]       -> 1-InstallBurpsuite-6.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206132745.png
+[2026-02-08 13:53:24] [INFO]       -> 1-InstallBurpsuite-7.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206132830.png
+[2026-02-08 13:53:24] [INFO]       -> 1-InstallBurpsuite-8.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206133019.png
+[2026-02-08 13:53:24] [INFO]       -> 1-InstallBurpsuite-9.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206133709.png
+[2026-02-08 13:53:24] [INFO]       -> 1-InstallBurpsuite-10.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206134110.png
+[2026-02-08 13:53:24] [INFO]       -> 1-InstallBurpsuite-11.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206134213.png
+[2026-02-08 13:53:24] [INFO]       -> 1-InstallBurpsuite-12.png
+[2026-02-08 13:53:24] [INFO]   [Saved] 12 image(s) updated
+[2026-02-08 13:53:24] [INFO] 
+[File] tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+[2026-02-08 13:53:24] [INFO]   Title: '2-Change HTTP Data & Bypass Parameters'
+[2026-02-08 13:53:24] [INFO]   Category: tools
+[2026-02-08 13:53:24] [INFO]   Found 6 image(s)
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206140108.png
+[2026-02-08 13:53:24] [INFO]       -> 2-ChangeHTTPData&BypassParameters-1.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206140614.png
+[2026-02-08 13:53:24] [INFO]       -> 2-ChangeHTTPData&BypassParameters-2.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206140859.png
+[2026-02-08 13:53:24] [INFO]       -> 2-ChangeHTTPData&BypassParameters-3.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206141110.png
+[2026-02-08 13:53:24] [INFO]       -> 2-ChangeHTTPData&BypassParameters-4.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206141215.png
+[2026-02-08 13:53:24] [INFO]       -> 2-ChangeHTTPData&BypassParameters-5.png
+[2026-02-08 13:53:24] [INFO]     + Updated: Pastedimage20231206142326.png
+[2026-02-08 13:53:24] [INFO]       -> 2-ChangeHTTPData&BypassParameters-6.png
+[2026-02-08 13:53:24] [INFO]   [Saved] 6 image(s) updated
+[2026-02-08 13:53:24] [INFO] 
+============================================================
+[2026-02-08 13:53:24] [INFO] FINAL STATISTICS:
+[2026-02-08 13:53:24] [INFO] ============================================================
+[2026-02-08 13:53:24] [INFO] Files scanned: 20
+[2026-02-08 13:53:24] [INFO] Files modified: 17
+[2026-02-08 13:53:24] [INFO] Images found: 246
+[2026-02-08 13:53:24] [INFO] Images updated: 234
+[2026-02-08 13:53:24] [INFO] Images skipped (already correct): 0
+[2026-02-08 13:53:24] [INFO] Errors: 12
+[2026-02-08 13:53:24] [INFO] ============================================================
+[2026-02-08 13:53:24] [INFO] 
+[SUCCESS] Image references updated successfully!
+[2026-02-08 13:53:24] [INFO] Full log: image_article_renamer.log
+[2026-02-08 13:53:24] [INFO] 
+[COMPLETE] Process finished
+[2026-02-08 13:53:24] [INFO] ============================================================
+

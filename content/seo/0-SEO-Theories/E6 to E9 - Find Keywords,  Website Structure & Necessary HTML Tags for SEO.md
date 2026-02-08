@@ -47,7 +47,7 @@ draft = false
 	1. in Section *4. Write your ad*
 		1. *Landing Page:*
 			1. در این فیلد آدرس وبسایتمان URL را وارد میکنیم.
-				1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-1](/images/seo/Pastedimage20240622202553.png)
+				1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-1](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png)
 			2. این فیلد را در دفعه اول که لاگین میکنیم اجباری است.
 			3. همچنین میتوانیم URL صفحه ای خاص از وبسایت را نیز مشخص کنیم.
 		2. *Headline:*
@@ -56,71 +56,71 @@ draft = false
 			1. توضیحات وبسایت را نیز در این فیلد مینویسیم.
 	2. in Section *3. Keywords:*
 		1. در این قسمت هم میتوانیم Keyword های پیدا شده در URL وارد شده را مشاهده کنیم:
-			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-2](/images/seo/Pastedimage20240622203718.png)
+			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-2](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-2.png)
 		2. با کلیک بر روی Edit با آیکون مداد میتوانیم این Keyword ها را با درصد آنها مشاهده کنیم:
-			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-3](/images/seo/Pastedimage20240622203754.png)
+			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-3](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-3.png)
 		3. در کنار هر Keyword امتیازی مشاهده میشود که در واقع امتیاز آن Keyword در وبسایت ماست و هرچه  بیشتر باشد به معنای سرچ بیشتر آن Keyword است. در تصویر زیر دو کلمه *visual studio 6.0* و *برنامه نویسی* از بیشترین امتیاز برخوردارد هستند:
-			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-4](/images/seo/Pastedimage20240622204050.png)
+			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-4](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-4.png)
 		4. کلمه *visual studio 6.0* به سئو جهانی مربوط میشود و *برنامه نویسی* به سئو ایران مربوط میشود، در نتیجه رقبایی که برای visual studio 6.0 وجود دارند وبسایت های جهانی هستند که زیاد بدرد وبسایت ما یعنی تاپ لرن هم نمیخورد، همچنین رقبای برنامه نویسی وبسایت های ایرانی هستند که اتفاقا باید در این سئو وبسایت ما رتبه اول تا سوم را داشته باشد.
 		5. اگر میخواهیم بصورت حرفه ای SEO انجام دهیم باید برای هر صفحه وبسایت این آنالیز را انجام دهیم و در واقع تک تک صفحات مهم وبسایت را باید سئو کرد.
 		6. پس از بررسی Keyword ها آنهایی که به صفحه مربوط هستند و امتیاز بالایی هم دارند را در جدول Keyword خود اضافه میکنیم.
 		7. نکته دیگری که وجود دارد انجام سئو محلی است. مثلا اگر آموزشگاه ما اصفهان قرار دارد باید عبارت *آموزش برنامه نویسی در اصفهان* با اینکه امتیاز کمی دارد اما وبسایت را باید برای این جستجو سئو کنیم و همچنین اولویت این عبارت هم باید برای ما بالا باشد.
-			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-5](/images/seo/Pastedimage20240622205615.png)
+			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-5](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-5.png)
 	3. in Section *3. Keywords* Add New word to See Keyword Rate
 		1. Enter Keyword in field front of Add Button end of Keywords Section:
 		2. Click `Add` 
-			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-6](/images/seo/Pastedimage20240622204601.png)
+			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-6](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-6.png)
 		3. Now see Keyword Rating *170*
-			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-7](/images/seo/Pastedimage20240622204629.png)
+			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-7](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-7.png)
 		4. Add all *Keywords* from Keyword List in this field to see Keyword rates, then Prioritize Keywords again base on Google Ads Rate results
-			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-8](/images/seo/Pastedimage20240622204951.png)
+			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-8](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-8.png)
 		5. **For Example:** "آموزش سئو" have best rating in Keyword list so is Priority 2 in my Keyword list after "آموزش برنامه نویسی"
 #### Competitor's
 ##### Basic & Concepts
 در مرحله بعد که امتیاز تمام Keyword ها را بدست آوردیم و در Keyword List آنها را بر اساس اولویتشان وارد کردیم حال وقت این است که رقبای هر Keyword را بدست بیاوریم تا بتوانیم وبسایت خودمان را با سئو جایگزین آنها کنیم.
 - برای اینکار در Keyword List یک ستون جدید بنام *رقبا* یا *Competitors* ایجاد میکنیم تا تعداد رقبا را در آن وارد کنیم.
-	- ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-9](/images/seo/Pastedimage20240622210354.png)
+	- ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-9](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-9.png)
 ##### Calculate Competitor's 
 0. Search Keyword normally in Google
 	1. در اولین قدم Keyword با بالاترین اولویت *برنامه نویسی* را در گوگل جستجو میکنیم تا تعداد رکورد های موجود برای آن Keyword را بدست بیاوریم.
-		1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-10](/images/seo/Pastedimage20240622210607.png)
+		1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-10](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-10.png)
 	2. با اینکه این عدد تعداد واقعی رقبا نیست اما این عدد را در Keyword List مینویسیم.
-		1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-11](/images/seo/Pastedimage20240622210702.png)
+		1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-11](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-11.png)
 1. Search Keyword in "Keyword" to Limit Competition 
 	0. برای بدست آوردن تعداد واقعی رقبا، باید Keyword را در "Keyword" دابل کوتیشن قرار دهیم و سپس جستجو کنیم:
-			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-12](/images/seo/Pastedimage20240622210835.png)
+			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-12](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-12.png)
 	1. میبینیم که تعداد رقبا از 29 ملیون به 15 ملیون کاهش یافت.
 2. Search Keyword in Titles: `allintitle:"برنامه نویسی"`
 	1. برای محدود تر کردن تعداد رقبا، جستجو را در عنوان وبسایت ها و صفحات انجام میدهیم.
 	2. میتوانیم مشاهده کنیم که تعداد رقبا از 15 ملیون به 500 هزار کاهش یافت و در واقع این تعداد واقعی رقبا وبسایت ماست.
-		1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-13](/images/seo/Pastedimage20240622211258.png)
+		1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-13](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-13.png)
 	3. تعداد واقعی رقبا را در جدول Keyword List در ستون *رقبا* وارد میکنیم و مقادیر وارد شده در قدم قبلی را نیز حذف میکنیم:
-		1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-14](/images/seo/Pastedimage20240622211351.png)
+		1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-14](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-14.png)
 3. Repeat Step 3 for All Keywords in Keyword List and calculate all keywords competitor's 
 	1. در این مرحله باید تعداد رقبا تمام Keyword هایی که میخواهی در وبسایتمان استفاده کنیم را بدست بیاوریم و در جدول Keyword List وارد کنیم.
-		1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-15](/images/seo/Pastedimage20240622211609.png)
+		1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-15](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-15.png)
 	2. *نکته:* 
 		1. کلمه کلیدی هایی که زیر 1000 رقیب دارند جز رقبای ضعیف حساب میشوند.
 		2. کلمه کلیدی هایی که بین 3000 الی 5000 رقیب دارند جز رقبای متوسط حساب میشوند.
 		3. کلمه کلیدی هایی که بالای 5000 رقیب دارند جز رقبای قوی حساب میشوند.
 > حال Keyword که اولویت بالایی دارد و همچنین رقیب آن هم متوسط یا زیاد هستند  را انتخاب میکنیم تا بر روی سئو آن کلمه کار کنیم، در اینجا ما میخواهیم بر روی آموزش سی شارپ کار کنیم:
-	![Find Keywords, Website Structure & Necessary HTML Tags for SEO-16](/images/seo/Pastedimage20240622212132.png)
+	![Find Keywords, Website Structure & Necessary HTML Tags for SEO-16](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-16.png)
 ### Website Structure
 #### Basic & Concepts
 - در بحث سئو چیدمان عناصر و نحوه نمایش عناصر که در صفحه اصلی وبسایت و یا سایر صفحات وبسایت استفاده میکنیم بسیار مهم است. یک وبسایت شامل بخش های Navigation Menu, Blog, Articles, Admin Panel , Home Page , ... میشود که باید تمامی این عناصر از فیلتر SEO عبور کنند.
-	![Find Keywords, Website Structure & Necessary HTML Tags for SEO-17](/images/seo/Pastedimage20240622230532.png)
+	![Find Keywords, Website Structure & Necessary HTML Tags for SEO-17](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-17.png)
 - همچنین عناوینی که برای هر صفحه از وبسایت انتخاب میکنیم نیز بسیار مهم هستند. مثلا شاید در جایی طی بررسی که از کلمات کلیدی و رقبا داشتیم بهتر است از عنوان *آموزش گیت جامع* برای عنوان استفاده کنیم و در همان وبسایت در جایی دیگر بهتر است از *آموزش صفر تا صد C#* استفاده کنیم تا صفحه ما بازدید بیشتری بخورد.
 #### Alexa Extension
 - یکی از افزونه هایی که با استفاده از آن میتوانیم رتبه بندی سئو یک وبسایت را بررسی کنیم افزونه Alexa است.
 - برای بررسی سئو یک صفحه وبسایت کافیست در مرورگر به مسیر آن URL برویم و سپس با استفاده از افزونه Alexa رتبه آن وبسایت را مشاهده کنیم.
-	- ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-18](/images/seo/Pastedimage20240622231205.png)
-	- ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-19](/images/seo/Pastedimage20240622231245.png)
+	- ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-18](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-18.png)
+	- ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-19](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-19.png)
 #### Good Website for SEO Must Have?
 یک وبسایت خوب از نظر سئو و موتور جستجو باید نکات زیر را رعایت کند >>
 1. *وبسایت باید ساده و User friendly باشد.*
 2. *از تعداد کلیک های کاربر بکاهیم:*
 	1. در واقع کاربر برای رسیدن به صفحه مورد نظر خود نباید تعداد کلیک زیادی کند. مثلا در وبسایت تاپ لرن کافیست بر روی عنوان دوره کلیک کنیم تا وارد صفحه دوره شویم.
-	2. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-20](/images/seo/Pastedimage20240622231644.png)
+	2. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-20](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-20.png)
 4. *محتوا باید در دسترس و دید کاربر باشد:*
 	1. این موضوع بدین معناست که کاربر به هر صفحه ای که میخواهد دسترسی داشته باشد باید در کمترین زمان ممکن بتواند به آن صفحه برود.
 	2. دقت کنید که رعایت این موضوع نباید باعث شلوغ شدن صفحه و گیج شدن کاربر بشود.
@@ -155,7 +155,7 @@ draft = false
 </body>
 </html>
 ```
-	![Find Keywords, Website Structure & Necessary HTML Tags for SEO-21](/images/seo/Pastedimage20240622233917.png)
+	![Find Keywords, Website Structure & Necessary HTML Tags for SEO-21](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-21.png)
 ##### Tags Description
 1. `<html lang="en">`
 	1. تگ اصلی که قلمرو صفحه html هم محسوب میشود را باید با پارامتر Lang که مشخص کننده زبان صفحه است در کدهای صفحه قرار دهیم.
@@ -168,10 +168,10 @@ draft = false
 		2. در واقع تگ meta description شرحی از صفحه است که نباید از 160 کارکتر بیشتر باشد. فاصله های خالی هم جز کاراکتر ها محسوب میشوند.
 		3. استفاده از تگ meta description هم واجب است.
 		4. مثلا در تصویر زیر یک شرح مناسب برای عنوان آموزش برنامه نویسی در نظر گرفته ایم:
-			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-22](/images/seo/Pastedimage20240622235442.png)
+			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-22](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-22.png)
 	3. `<meta name="Keywords" content="">`
 		1. در تگ meta keywords هم کلمات کلیدی وبسایت را قرار میدهیم. کلمات کلیدی میتوانند از کلمات چند بخشی تشکیل شوند.
-			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-23](/images/seo/Pastedimage20240622235712.png)
+			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-23](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-23.png)
 		2. هر کلمه کلیدی با استفاده از کاما `,` از هم جدا میشوند. 
 		3. این تگ منسوخ شده محسوب میشود اما استفاده از آن هم ضرری ندارد.
 4. `<title>`
@@ -180,8 +180,8 @@ draft = false
 	3. عنوان صفحات باید با یکدیگر متفاوت باشند و در واقع دو صفحه نباید عنوان یکسان داشته باشند.
 	4. هر عنوان حداکثر 65 کاراکتر میتواند داشته باشد و حداقل هم باید 3 بخش باشد مثلا *آموزش برنامه نویسی* و یا *آموزش سی شارپ* هر دو سه بخش و کمتر از 65 کاراکتر هستند و بسیار برای هنوان صفحه مناسب میباشند.
 	5. در واقع موتور جستجو محتویات این تگ هر صفحه را ایندکس میکند و در نتایج جستجو عنوان صفحات را نشان میدهد.
-		1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-24](/images/seo/Pastedimage20240622234913.png)
-		2. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-25](/images/seo/Pastedimage20240622234916.png)
+		1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-24](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-24.png)
+		2. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-25](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-25.png)
 5. `<body>`
 	1. در این تگ هم محتویاتی که کاربر مشاهده میکند را قرار میدهیم. اگر این تگ در صفحه وجود نداشته باشد صفحه در جستجو های گوگل ایندکس نمیشود.
 	2. `<H1>`
@@ -192,9 +192,9 @@ draft = false
 ##### Use H1 & H2
 استفاده از عبارت هایی که میدانیم کاربر برای رسیدن به وبسایت ما آنها را در گوگل جستجو کند در این دو تگ بر طبق اولویت میتواند تاثیر بسزایی در افزایش رتبه SEO وبسایت داشته باشد.
 مثلا در صفحه آموزش برنامه نویسی سی شارپ باید این دو تگ را مانند زیر استفاده کنیم:
-	![Find Keywords, Website Structure & Necessary HTML Tags for SEO-26](/images/seo/Pastedimage20240623211107.png)
+	![Find Keywords, Website Structure & Necessary HTML Tags for SEO-26](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-26.png)
 *بنابراین عبارت هایی که میدانیم کاربر با جستجوی آنها وارد وبسایت ما میشود را در این دو تگ مینویسیم.*
-	![Find Keywords, Website Structure & Necessary HTML Tags for SEO-27](/images/seo/Pastedimage20240623211223.png)
+	![Find Keywords, Website Structure & Necessary HTML Tags for SEO-27](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-27.png)
 #### SEO Friendly Link Defines 🔗
 ##### Basic & Concepts
 بصورت پیشفرض هنگامیکه میخواهیم لینک دهی را در صفحه html انجام دهیم باید از تگ `<a href>` استفاده کنیم:
@@ -213,7 +213,7 @@ draft = false
 *برای استفاده عنوان صفحه در URL صفحه دو نظریه مطرح است:*
 1. استفاده متن عنوان در URL
 	1. https://toplear.com/courses/c#/دوره-آموزش-پیشرفته-سی-شارپ/
-		1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-28](/images/seo/Pastedimage20240623204152.png)
+		1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-28](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-28.png)
 2. استفاده نکردن متن عنوان در URL
 	1. https://toplear.com/courses/c#/advanced-course
 برای موتور گوگل استفاده از URL هر چه کوتاه تر باشد بهینه تر است اما از آنطرف اگر متن عنوان صفحه را در URL استفاده کنیم میتواند در SEO تاثیر داشته باشد. بنابراین بهترین راه حل استفاده از این دو لینک دهی در کنار یکدیگر است.
@@ -223,14 +223,14 @@ draft = false
 	3. *مزیت های این روش:*
 		1. با اینکار هم عنوان صفحه در لینک است و هم موتور گوگل لینک کوتاه را با امتیاز بیشتری ایندکس میکند. همچنین هر صفحه ما دو لینک دارد و بهتر در گوگل ایندکس میشود.
 		2. مثال استفاده از این روش را در وبسایت تاپ لرن میتوانید مشاهده کنید:
-			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-29](/images/seo/Pastedimage20240623204902.png)
+			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-29](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-29.png)
 		3. میتوانیم مشاهده کنیم که گوگل لینک های کوتاه را بسیار بهتر از لینک های بلند ایندکس میکند:
-			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-30](/images/seo/Pastedimage20240623205050.png)
+			1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-30](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-30.png)
 ##### URL Shortener
 قانون لینک های کوتاه این است که لینک به اندازه ای کوتاه باشد که بتوانیم آنرا در پیام کوتاه برای فردی به راحتی بخوانیم.
 برای کوتاه کردن لینک از ابزار های متفاوت و یا اسکریپت های متفاوتی میتوانیم استفاده کنیم که معروف ترین آنها به شرح زیر است >>
 1. https://goo.gl
-	1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-31](/images/seo/Pastedimage20240623205615.png)
+	1. ![Find Keywords, Website Structure & Necessary HTML Tags for SEO-31](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-31.png)
 ##### Define Link in HTML 
 حال که هم URL به همراه عنوان و هم URL کوتاه شده داریم، اگر میخواهیم در صفحه HTML از لینکی را تعریف کنیم و یا میخواهیم لینک های تعریف شده را برای سئو بهینه کنیم، باید تعریف لینک را با URL کوتاه انجام دهیم تا به بهترین شکل توسط گوگل ایندکس شود.
 - بنابراین اگر بخواهیم لینک دهی مثال بالا را انجام دهیم، ابتدا URL کوتاه شده، URL عنوان دار را بدست میاوریم و سپس >>
@@ -243,7 +243,7 @@ draft = false
 ##### Title in `<a title="">`
 استفاده از فلگ title در تگ `<a>` هم میتواند باعث افزایش رتبه بندی سئو وبسایت شود. در واقع در صفحه UI وبسایت در هنگام Link Hover نیز میتوانیم این title را مشاهده کنیم. 
 > اما استفاده از این title در افزایش رتبه سئو تاثییر بسرایی دارد زیرا موتور گوگل ابتدا محتویان این تگ را به عنوان تایتل صفحه میشناسد و اگر این تگ خالی باشد به سراغ متن بین تگ میرود در نتیجه استفاده از این فلگ میتواند تاثییر بسزایی در افزایش rating و سرع ایندکس شدن توسط گوگل وبسایت داشته باشد.
-	![Find Keywords, Website Structure & Necessary HTML Tags for SEO-32](/images/seo/Pastedimage20240623210733.png)![Find Keywords, Website Structure & Necessary HTML Tags for SEO-33](/images/seo/Pastedimage20240623210734.png)
+	![Find Keywords, Website Structure & Necessary HTML Tags for SEO-32](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-32.png)![Find Keywords, Website Structure & Necessary HTML Tags for SEO-33](/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-33.png)
 #### SEO Friendly Images
 ##### Images Functionality in Search Engines
 نحوه لود شدن یک تصویر در گوگل >>

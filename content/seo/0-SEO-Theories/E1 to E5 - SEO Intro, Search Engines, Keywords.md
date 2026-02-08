@@ -29,7 +29,7 @@ draft = false
 - همچنین اگر وبسایتی را برای موتور جستجو گوگل بهینه کنیم بدین معناست برای تمامی موتور های جستجو وبسایت را بهینه کردیم زیرا سایر موتور های جستجو از الگوریتم های گوگل برای Indexing و سپس Rating وبسایت ها استفاده میکنند. 
 - میتوان گفت SEO امری تجربی است و بسیاری از موارد آنرا بسختی میتوانیم در آموزش ها پیدا کنیم.
 - *این دوره در بخش های زیر تدریس میشود:*
-	- ![SEO Intro, Search Engines, Keywords-1](/images/seo/Pastedimage20240621193526.png)
+	- ![SEO Intro, Search Engines, Keywords-1](/images/seo/SEOIntro,SearchEngines,Keywords-1.png)
 #### SEO Advantages
 - میتوان گفت برنامه نویسی در SEO ده درصد اهمیت دارد و بهینه سازی محتوا 90 درصد اهمیت دارد. در واقع SEO همان Digital Marketing در دنیای اینترنت است که درآمد بسیار بالایی هم دارد. 
 - اگر یک وبسایت میخواهد همیشه در SEO بالا باشد و در دتبه یک الی سوم جستجو ها در گوگل باشد باید کارشناس SEO همیشه و بصورت دائم آن وبسایت را بالا نگه دارد در نتیجه میتوان گفته SEOشغلی تضمینی و دائمی است، همچنین وبسایت های با رنک بالا تبلیغات زیادی هم میتوانند پذیرش کنند که این هم در آمد بسیار بالایی برای افراد SEO کار دارد.
@@ -64,7 +64,7 @@ draft = false
 - *اولین قدم برای SEO وبسایت اضافه کردن وبسایت دیتابیس Search Engine Google میباشد:*
 	- برای معرفی وبسایت به Search Engine باید لینک وبسایت را در مکانی قرار دهیم که میدانیم توسط گوگل index شده اند و در واقع Crawler Google آن وبسایت واسط را بررسی میکند.
 	- در وبسایت های مطرح و پربازدید مانند Soft98, PCDownload, ... قسمتی بنام *لینکدونی* وجود دارد که در آن لینک وبسایت ها و مقاله هایی را میتوان مشاهده کرد. اصولا وبسایت ها مبالغی را هم برای اضافه کردن لینک وبسایت به لینکدونی خود دریافت میکنند که البته ارزش دارد.
-		![SEO Intro, Search Engines, Keywords-2](/images/seo/Pastedimage20240621201236.png)
+		![SEO Intro, Search Engines, Keywords-2](/images/seo/SEOIntro,SearchEngines,Keywords-2.png)
 
 > شاید کاربران اصلا این لینک ها را مشاهده نکنند، اما با اینکار در واقع لینک وبسایتمان را سر راه Crawler Google قرار دادیم که خوب Crawler Google هم آنرا در دیتابیس SE ذخیره میکند. با اینکار وبسایتمان به دیتابیس Search Engine Google اضافه میشود و در جستجو های خود وبسایت ما را هم Index میکند.
 #### 1. Off Page & On Page Contents
@@ -91,22 +91,22 @@ draft = false
 
 ##### Example
 مثلا اگر وبسایت تاپ لرن را در نظر بگیریم، کاربران با جستجو *آموزش C#* اولین رکوردی که مشاهده میکنند وبسایت تاپ لرن است در نتیجه *آموزش C#* در واقع یکی از کلمات کلیدی وبسایت تاپ لرن است.
-	![SEO Intro, Search Engines, Keywords-3](/images/seo/Pastedimage20240622164815.png)
+	![SEO Intro, Search Engines, Keywords-3](/images/seo/SEOIntro,SearchEngines,Keywords-3.png)
 ##### Tools to Analyze Keywords
 1. https://www.wordtracker.com
 	1. وب اپلیکیشن بررسی کلمات کلیدی استفاده شده در وبسایت
-		1. ![SEO Intro, Search Engines, Keywords-4](/images/seo/Pastedimage20240622165434.png)
+		1. ![SEO Intro, Search Engines, Keywords-4](/images/seo/SEOIntro,SearchEngines,Keywords-4.png)
 2. https://www.keyworddiscovery.co.uk
-	1. ![SEO Intro, Search Engines, Keywords-5](/images/seo/Pastedimage20240622165537.png)
+	1. ![SEO Intro, Search Engines, Keywords-5](/images/seo/SEOIntro,SearchEngines,Keywords-5.png)
 3. https://ads.google.com
 	1. یکی از بهترین ابزار ها برای بررسی کلمات کلیدی درون یک وبسایت و همچنین آمار بازدید از سمت هر کلمه کلیدی استفاده شده Google Ads میباشد.
 	2. برای استفاده از این ابزار باید از فیلترشکن استفاده کنیم.
-		1. ![SEO Intro, Search Engines, Keywords-6](/images/seo/Pastedimage20240622165713.png)
+		1. ![SEO Intro, Search Engines, Keywords-6](/images/seo/SEOIntro,SearchEngines,Keywords-6.png)
 ##### Create Keyword List
 برای ایجاد لیست کلمات کلیدی روشی که پیشنهاد میشود به شرح زیر است >>
 0. *برنامه ای را برای نوشتن کلمات کلیدی انتخاب کنید(Excel, Obsidian, Notion, ...)*
 	1. بهتر است این برنامه بصورت Cross platform باشد تا بتوان در صورت به ذهن رسیدن کلمه کلیدی سریعا آنرا یادداشت کرد.
-		1. ![SEO Intro, Search Engines, Keywords-7](/images/seo/Pastedimage20240622170537.png)
+		1. ![SEO Intro, Search Engines, Keywords-7](/images/seo/SEOIntro,SearchEngines,Keywords-7.png)
 1. *کاربران هدف و تارگت وبسایت را مشخص میکنیم:*
 	1. مثلا هدف وبسایت تاپ لرن برنامه نویسان است و هدف وبسیات فروش لوازم آرایشی هم زنان و دختران هستند.
 2. *بازه جغرافیایی کابران وبسایت را مشخص میکنیم:*
@@ -134,13 +134,13 @@ draft = false
 	1. پس از سئو وبسایت باید کلمات کلیدی استفاده شده را نیز سئو کنیم. برای اینکار بار باید بار دیگر لیست نهایی خود را بررسی کنیم.
 	2. سپس کلماتی که در بررسی ثانویه مناسب نیستند را از لیست حذف میکنیم(میتوانیم این کلمات را حذف نکنیم و پایین ترین اولویت را به آنها اعطا کنیم.)
 	3. سپس کلماتی که اولویت بالاتری نسبت به سایرین دارند را در اول لیست قرار میدهیم.
-		1. ![SEO Intro, Search Engines, Keywords-8](/images/seo/Pastedimage20240622173011.png)
+		1. ![SEO Intro, Search Engines, Keywords-8](/images/seo/SEOIntro,SearchEngines,Keywords-8.png)
 10. *رقبای هر کلمه کلیدی را پیدا کنید:*
 	1. پس از مشخص شدن اولویت کلمات کلیدی باید از کلمه اولویت اول شروع به آنالیز آنها و بررسی رقبای آن کلمه کلیدی در گوگل کنیم. 
 	2. در مثال ما کلمه *آموزش برنامه نویسی* اولویت اول است، کافیست آنرا در گوگل سرچ کنیم تا رقبایی که برای این کلمه وجود دارند را بیابیم:
-		1. ![SEO Intro, Search Engines, Keywords-9](/images/seo/Pastedimage20240622173259.png)
+		1. ![SEO Intro, Search Engines, Keywords-9](/images/seo/SEOIntro,SearchEngines,Keywords-9.png)
 	3. یا رقبای کلمات کلیدی اولیت دوم *اصول برنامه نویسی* را در تصویر زیر میبینید. در واقع حدود 7 ملیون رقیب برای این کلمه وجود دارد که سه رقیب که در رتبه اول تا سوم گوگل قرار دارد برای ما مهم است:
-		1. ![SEO Intro, Search Engines, Keywords-10](/images/seo/Pastedimage20240622173409.png)
+		1. ![SEO Intro, Search Engines, Keywords-10](/images/seo/SEOIntro,SearchEngines,Keywords-10.png)
 	4. پس از مشخص کردن رقبای هر یک از کلمات کلیدی، در فایل لیست کلمات کلیدی ستونی جدید بنام *رقابتی* در نظر میگیریم و بر اساس رقبایی که هر کلمه دارند امتیازی به کلمات کلیدی میدهیم. مثلا اگر رقیب های کلمه کلیدی *زیاد* بودند امتیاز *3* و اگر *کم* بودند امتیاز *1* میدهیم:
-		1. ![SEO Intro, Search Engines, Keywords-11](/images/seo/Pastedimage20240622173742.png)
+		1. ![SEO Intro, Search Engines, Keywords-11](/images/seo/SEOIntro,SearchEngines,Keywords-11.png)
 ### !

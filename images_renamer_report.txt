@@ -1,0 +1,40 @@
+Images Rename Report
+============================================================
+Date: 2026-02-08 13:35:54
+============================================================
+
+Statistics:
+- Files scanned: 20
+- Files modified: 5
+- Images found: 246
+- Images renamed: 60
+- Physical files renamed: 0
+- Errors: 0
+- Total mappings: 5
+
+Rename Mappings by Category:
+------------------------------------------------------------
+
+CYBER-SECURITY (4 files):
+  [SANS-401-Defense-in-Depth (401.2)-1]
+  SANS-401-Defense-in-Depth(401.2
+  -> SANS-401-Defense-in-Depth(401.2)-1.2
+
+  [SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-1]
+  SANS-401-E3-Virtualization&CloudInfrastructure(401.1
+  -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-1.1
+
+  [SANS-401-Networking and Protocols (401.1)-1]
+  SANS-401-NetworkingandProtocols(401.1
+  -> SANS-401-NetworkingandProtocols(401.1)-1.1
+
+  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-1]
+  SANS-401-Wireless,Aircrack-ng,Wireshark(401.1
+  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+
+
+SEO (1 files):
+  [Woorank(Check Website SEO)-1]
+  Woorank(CheckWebsiteSEO
+  -> Woorank(CheckWebsiteSEO)-1
+

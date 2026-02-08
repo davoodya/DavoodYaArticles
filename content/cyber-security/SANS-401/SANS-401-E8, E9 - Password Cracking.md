@@ -14,13 +14,13 @@ draft = false
 cd /eoot/Labs/401.2
 ls 
 ```
-	![SANS-401-Password Cracking-1](/images/cyber-security/Pastedimage20240624195037.png)
+	![SANS-401-Password Cracking-1](/images/cyber-security/SANS-401-PasswordCracking-1.png)
 برای استفاده از ابزار کافیست کامند `john` را استفاده کنید:
 ```sh
 john --help
 john | grep mode
 ```
-	![SANS-401-Password Cracking-2](/images/cyber-security/Pastedimage20240624195151.png)
+	![SANS-401-Password Cracking-2](/images/cyber-security/SANS-401-PasswordCracking-2.png)
 #### John Modes & Modes Flags 🚩
 0. `john | grep mode `
 1. *Single => Single Crack Mode* `john --single`
@@ -28,7 +28,7 @@ john | grep mode
 	2. در واقع بصورت خودکار میتواند فایل `etc/shadow/` و `etc/passwd/` را بخواند و آنرا کرک کند.
 2. *Word List* `john --wordlist[=FILE] --stdin` , `john --stdin`
 	1. استفاده از فایل لیست کلمات و یا از Std In برای کرک پسورد و پیاده سازی حمله Dictionary Attack
-		1. ![SANS-401-Password Cracking-3](/images/cyber-security/Pastedimage20240624195533.png)
+		1. ![SANS-401-Password Cracking-3](/images/cyber-security/SANS-401-PasswordCracking-3.png)
 3. *Prince* `john --prince[=FILE]` 
 	1. استفاده از فایل لیست کلمات برای کرک پسورد
 4. *Rules* `john --rules[=SECTION]` 
@@ -60,7 +60,7 @@ unshadow passwd shadow > ./unshadow.txt
 ```sh
 john ./unshadow.txt
 ```
-	![SANS-401-Password Cracking-4](/images/cyber-security/Pastedimage20240624204001.png)
+	![SANS-401-Password Cracking-4](/images/cyber-security/SANS-401-PasswordCracking-4.png)
 #### John Logs
 1. تمام پسورد هایی که `john` آنها را کرک میکند، در لاگ فایل `john` ذخیره میشود و این فایل را میتوانیم در مسیر زیر مشاهده کنیم:
 ```sh
@@ -78,7 +78,7 @@ grep cracked /root/.john/john.log
 2. محافظت از اطلاعات درون ماشین های درون سازمان
 3. مشخص کردن مرز و محدوه برای کارمندان و سازمان که میتواند باعث نظارت بهتر و افزایش امنیت شود.
 4. *تصویر*
-	2. ![SANS-401-Password Cracking-5](/images/cyber-security/Pastedimage20240624205403.png)
+	2. ![SANS-401-Password Cracking-5](/images/cyber-security/SANS-401-PasswordCracking-5.png)
 #### Security Policies Must Have ...
 1. *Purpose *
 	1. اهداف مشخص
@@ -97,7 +97,7 @@ grep cracked /root/.john/john.log
 8. *Action*
 	1. سیاست باید واکنش مناسب در زمان خود نشان دهد.
 9. *Image*
-	1. ![SANS-401-Password Cracking-6](/images/cyber-security/Pastedimage20240624205939.png)
+	1. ![SANS-401-Password Cracking-6](/images/cyber-security/SANS-401-PasswordCracking-6.png)
 #### NDA(Non-Disclosure Agreements)
 این سیاست که باید بصورت Enforce تدوین و بین طرفین قرار داد اجرا شود میگوید هیچ یک از طرفین قرار داد نمیتوانند اطلاعات محرمانه که مخصوص شرکت هستند را منتشر کنند و یا استفاده های شخصی از این اطلاعات کنند.
 > در واقع این قرارداد محرمانه بودن اطلاعات را بین دو طرف قرار داد مشخص میکند و عدم افشای اطلاعات شرکت توسط طرفین و محرمانه بودن اطاعات هدف اصلی این قرار داد است.
@@ -109,73 +109,73 @@ grep cracked /root/.john/john.log
  از امکاناتی که این ابزار دارد میتوان به موارد زیر اشاره کرد:
 1. *Password Cracker*
 	1. Cracker tab
-		1. ![SANS-401-Password Cracking-7](/images/cyber-security/Pastedimage20240624211241.png)
+		1. ![SANS-401-Password Cracking-7](/images/cyber-security/SANS-401-PasswordCracking-7.png)
 	2. 
 2. Sniffer
 	1. Start/Stop Sniffer
-		1. ![SANS-401-Password Cracking-8](/images/cyber-security/Pastedimage20240624210842.png)
+		1. ![SANS-401-Password Cracking-8](/images/cyber-security/SANS-401-PasswordCracking-8.png)
 	2. Cisco Devices Passwords Decoder
-		1. ![SANS-401-Password Cracking-9](/images/cyber-security/Pastedimage20240624211100.png)
+		1. ![SANS-401-Password Cracking-9](/images/cyber-security/SANS-401-PasswordCracking-9.png)
 	3. 
 3. Decoder
 	1. Base64 Decoder
-		1. ![SANS-401-Password Cracking-10](/images/cyber-security/Pastedimage20240624211034.png)
+		1. ![SANS-401-Password Cracking-10](/images/cyber-security/SANS-401-PasswordCracking-10.png)
 	2. 
 4. Network Tools
 	1. Start/Stop ARP Cache Pois
-		1. ![SANS-401-Password Cracking-11](/images/cyber-security/Pastedimage20240624210955.png)
+		1. ![SANS-401-Password Cracking-11](/images/cyber-security/SANS-401-PasswordCracking-11.png)
 	2. 
 5. Wireless Tools
 6. etc ...
 	1. RSA SecureID Calculator
-		1. ![SANS-401-Password Cracking-12](/images/cyber-security/Pastedimage20240624211139.png)
+		1. ![SANS-401-Password Cracking-12](/images/cyber-security/SANS-401-PasswordCracking-12.png)
 	2. 
 7. Image
-	1. ![SANS-401-Password Cracking-13](/images/cyber-security/Pastedimage20240624210729.png)
+	1. ![SANS-401-Password Cracking-13](/images/cyber-security/SANS-401-PasswordCracking-13.png)
 #### Crack NTLM Hashing
 برای کرک کردن فایل پسورد ویندوز بوسیله Cain میتوانیم از یک فایل استخراج شده استفاده میکنیم و یا میتوانیم از Local System فایل را ابتدا بخوانیم و سپس کرک کنیم. همچنین میتوانیم مستقیما فایل دیتابیس SAM را به ابزار معرفی کنیم.
 > برای اینکار بر روی `+` کلیک میکنیم: 
-	![SANS-401-Password Cracking-14](/images/cyber-security/Pastedimage20240624211736.png)
+	![SANS-401-Password Cracking-14](/images/cyber-security/SANS-401-PasswordCracking-14.png)
 1. *Use Local System Accounts*
 	1. با انتخاب این گزینه تمام اکانت های که بر روی این ماشین ویندوزی فعال هستند را میتوان مشاهده کرد:
-		1. ![SANS-401-Password Cracking-15](/images/cyber-security/Pastedimage20240624212005.png)
+		1. ![SANS-401-Password Cracking-15](/images/cyber-security/SANS-401-PasswordCracking-15.png)
 	2. سپس بر روی هر اکانتی که میخواهیم پسورد آنرا کرک کنیم راست کلیک میکنیم و سپس نوع حمله را انتخاب میکنیم:
-		1. ![SANS-401-Password Cracking-16](/images/cyber-security/Pastedimage20240624212124.png)
+		1. ![SANS-401-Password Cracking-16](/images/cyber-security/SANS-401-PasswordCracking-16.png)
 	3. همچنین در منو راست کلیک با استفاده از گزینه `Test Password` میتوانیم عملیات کرک پسورد را بصورت Password Guessing یا حدس زدن انجام دهیم.
-		1. ![SANS-401-Password Cracking-17](/images/cyber-security/Pastedimage20240624212250.png)
+		1. ![SANS-401-Password Cracking-17](/images/cyber-security/SANS-401-PasswordCracking-17.png)
 #### Cain Attack Types
 *حملات مرسوم و پراستفاده در Cain عبارتند از:*
 1.  `Dictionay Attack => NTLM Hashes` Normal NTLM Cracking
 	1. ساده ترین مدل حمله  است، در این حمله ابتدا باید Wordlist جامع را به ابزار معرفی کنیم تا با جستجو عبارت های درون آن فایل و امتحان آنها بر روی فایل هش شده بتوان پسور مورد نظر را کرک کرد.
-		1. ![SANS-401-Password Cracking-18](/images/cyber-security/Pastedimage20240624212751.png)
+		1. ![SANS-401-Password Cracking-18](/images/cyber-security/SANS-401-PasswordCracking-18.png)
 	2. ابزار Cain خود یک Wordlist نسبتا جامع دارد که در فولدر محل نصب ابزار قابل مشاهده است. اما پیشنهاد میشود ابتدا توسط ابزاری مانند Crunch لیست  مورد نظر خود را بسازید و سپس آنرا در این محل انتخاب کنید.
-		1. ![SANS-401-Password Cracking-19](/images/cyber-security/Pastedimage20240624212900.png)
+		1. ![SANS-401-Password Cracking-19](/images/cyber-security/SANS-401-PasswordCracking-19.png)
 	3. پس از انتخاب فایل باید Option های حمله از جمله Lower, Upper Case و .... را مشخص کنیم:
-		1. ![SANS-401-Password Cracking-20](/images/cyber-security/Pastedimage20240624213056.png)
+		1. ![SANS-401-Password Cracking-20](/images/cyber-security/SANS-401-PasswordCracking-20.png)
 	4. با کلیک بر روی `Start` هم برنامه شروع به کرک پسورد میکند:
-		1. ![SANS-401-Password Cracking-21](/images/cyber-security/Pastedimage20240624213224.png)
+		1. ![SANS-401-Password Cracking-21](/images/cyber-security/SANS-401-PasswordCracking-21.png)
 	5. میتوانیم چندین اکانت را با هم انتخاب کنیم و سپس حمله را بر روی تمامی این اکانت ها انجام دهیم.
 2. `Cracker => Cisco Typer-7 Password Decoder Hashes => +` Cisco Typer-7 Password Decoder
 	1. از این ویژگی میتوانیم برای Decode کردن پسورد روتر ها و سوئیچ های سیسکو استفاده کنیم که اینکار را با استفاده از فایل `router config` آن دیوایس انجام میدهیم: 
-		1. ![SANS-401-Password Cracking-22](/images/cyber-security/Pastedimage20240624213704.png)
+		1. ![SANS-401-Password Cracking-22](/images/cyber-security/SANS-401-PasswordCracking-22.png)
 	2. برای اینکار فایل `router_config` دیوایس را باز میکنیم و سپس مقدار متغیر `password 7` که بصورت هش شده است را کپی میکنیم و سپس در فیلد مربوط در ابزار Paste میکنیم:
-		1. ![SANS-401-Password Cracking-23](/images/cyber-security/Pastedimage20240624213812.png)
+		1. ![SANS-401-Password Cracking-23](/images/cyber-security/SANS-401-PasswordCracking-23.png)
 	3. به محض Paste کردن عبارت در ابزار میتوانیم مقدار دقیق پسورد را مشاهده کنیم:
-		1. ![SANS-401-Password Cracking-24](/images/cyber-security/Pastedimage20240624213852.png)
+		1. ![SANS-401-Password Cracking-24](/images/cyber-security/SANS-401-PasswordCracking-24.png)
 3. `Cracker => Cisco IOS-Md5 Hashes => +` Cisco IOS-Md5 Hashes 
 	1. در بعضی از فایل های `router_config` ممکن است پسورد بصورت هش شده با فرمت Md5 هم موجود است. این مقدار را در متغیر `enable secret 5` میتوان مشاهده کرد:
-		1. ![SANS-401-Password Cracking-25](/images/cyber-security/Pastedimage20240624214101.png)
+		1. ![SANS-401-Password Cracking-25](/images/cyber-security/SANS-401-PasswordCracking-25.png)
 	2. برای کرک کردن این نوع از پسورد ها، کافیست به تب `Cracker => Cisco IOS-Md5 Hashes ` برویم و سپس بر روی `+` کلیک کنیم:
-		1. ![SANS-401-Password Cracking-26](/images/cyber-security/Pastedimage20240624214347.png)
+		1. ![SANS-401-Password Cracking-26](/images/cyber-security/SANS-401-PasswordCracking-26.png)
 	3. حال میتوانیم عبارت کپی شده از فایل `router_config` را در فیلد اول پیست کنیم و یا میتوانیم فایل `router_config` را مستقیما `Import`  کنیم.
 		1. *Manual Hashing*
-			1. ![SANS-401-Password Cracking-27](/images/cyber-security/Pastedimage20240624214522.png)
+			1. ![SANS-401-Password Cracking-27](/images/cyber-security/SANS-401-PasswordCracking-27.png)
 		2. *From Configuration File*
-			1. ![SANS-401-Password Cracking-28](/images/cyber-security/Pastedimage20240624214603.png)
+			1. ![SANS-401-Password Cracking-28](/images/cyber-security/SANS-401-PasswordCracking-28.png)
 	4. حال که عبارات هش شده در ابزار وارد شده کافیست بر روی یکی از آنها کلیک راست کنیم و سپس نوع حمله `Dictionary | Bruteforce` را انتخاب کنیم:
-		1. ![SANS-401-Password Cracking-29](/images/cyber-security/Pastedimage20240624214731.png)
+		1. ![SANS-401-Password Cracking-29](/images/cyber-security/SANS-401-PasswordCracking-29.png)
 	5. سپس هم در پنجره حمله Option های حمله  و یا Wordlist مورد استفاده در حمله را انتخاب میکنیم.
-		1. ![SANS-401-Password Cracking-30](/images/cyber-security/Pastedimage20240624214923.png)
+		1. ![SANS-401-Password Cracking-30](/images/cyber-security/SANS-401-PasswordCracking-30.png)
 4. *Cryptanalysis Attacks*
 	1. در این حملات میتوانیم از هر دو نوع حمله `Dictionary | Bruteforce` بصورت همزمان استفاده کنیم تا عملیات کرک را بصورت هدفمند و با دقت بیشتری انجام شود.
 	2. در واقع میتوان گفت نوعی از `Hybrid Attack` میباشد.

@@ -1,0 +1,27 @@
+{
+  "SANS-401-NetworkingandProtocols(401.1": {
+    "new_name": "SANS-401-NetworkingandProtocols(401.1)-1.1",
+    "category": "cyber-security",
+    "alt": "SANS-401-Networking and Protocols (401.1)-1"
+  },
+  "SANS-401-E3-Virtualization&CloudInfrastructure(401.1": {
+    "new_name": "SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-1.1",
+    "category": "cyber-security",
+    "alt": "SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-1"
+  },
+  "SANS-401-Wireless,Aircrack-ng,Wireshark(401.1": {
+    "new_name": "SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1",
+    "category": "cyber-security",
+    "alt": "SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-1"
+  },
+  "SANS-401-Defense-in-Depth(401.2": {
+    "new_name": "SANS-401-Defense-in-Depth(401.2)-1.2",
+    "category": "cyber-security",
+    "alt": "SANS-401-Defense-in-Depth (401.2)-1"
+  },
+  "Woorank(CheckWebsiteSEO": {
+    "new_name": "Woorank(CheckWebsiteSEO)-1",
+    "category": "seo",
+    "alt": "Woorank(Check Website SEO)-1"
+  }
+}
