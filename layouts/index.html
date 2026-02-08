@@ -1,20 +1,26 @@
 {{ define "main" }}
 
 <div class="container">
-  <h1 class="page-title">دسته‌بندی‌ها</h1>
+  <div class="main-content-wrapper">
+    <div class="main-content">
+      <h1 class="page-title">دسته‌بندی‌ها</h1>
 
-  <div class="home-grid">
-    {{ range .Site.Sections }}
-    <article class="category-card">
-      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-      {{ with .Params.description }}
-        <p class="category-description-text">{{ . }}</p>
-      {{ end }}
-      <div class="category-meta">
-        <span class="category-count">📚 <strong>{{ len .Pages }}</strong> مطلب</span>
+      <div class="home-grid">
+        {{ range .Site.Sections }}
+        <article class="category-card">
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ with .Params.description }}
+            <p class="category-description-text">{{ . }}</p>
+          {{ end }}
+          <div class="category-meta">
+            <span class="category-count">📚 <strong>{{ len .Pages }}</strong> مطلب</span>
+          </div>
+        </article>
+        {{ end }}
       </div>
-    </article>
-    {{ end }}
+    </div>
+
+    {{ partial "sidebar.html" . }}
   </div>
 </div>
 

@@ -1,0 +1,124 @@
+<aside class="sidebar">
+    
+    <!-- دسته‌بندی‌های مقالات -->
+    <div class="sidebar-widget">
+        <h3 class="sidebar-widget-title">📚 دسته‌بندی‌ها</h3>
+        <div class="sidebar-widget-content">
+            <ul class="category-list">
+                {{ $categories := slice }}
+                {{ range .Site.Sections }}
+                    {{ $categories = $categories | append . }}
+                {{ end }}
+                
+                {{ $visibleCount := 5 }}
+                {{ range first $visibleCount $categories }}
+                    <li class="category-item">
+                        <a href="{{ .RelPermalink }}" class="category-link">
+                            <span class="category-icon">▸</span>
+                            <span class="category-name">{{ .Title }}</span>
+                            <span class="category-badge">{{ len .Pages }}</span>
+                        </a>
+                    </li>
+                {{ end }}
+                
+                {{ if gt (len $categories) $visibleCount }}
+                    <li class="category-item dropdown-toggle">
+                        <button class="dropdown-btn" onclick="toggleDropdown('categories')">
+                            <span class="category-icon">▾</span>
+                            <span class="category-name">سایر دسته‌بندی‌ها</span>
+                        </button>
+                        <ul class="dropdown-content" id="categories-dropdown">
+                            {{ range after $visibleCount $categories }}
+                                <li class="category-item">
+                                    <a href="{{ .RelPermalink }}" class="category-link">
+                                        <span class="category-icon">▸</span>
+                                        <span class="category-name">{{ .Title }}</span>
+                                        <span class="category-badge">{{ len .Pages }}</span>
+                                    </a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+
+    <!-- تگ‌های مقالات -->
+    <div class="sidebar-widget">
+        <h3 class="sidebar-widget-title">🏷️ تگ‌ها</h3>
+        <div class="sidebar-widget-content">
+            {{ with .Site.Taxonomies.tags }}
+                {{ $tags := . }}
+                <div class="tags-container">
+                    {{ $visibleTagsCount := 8 }}
+                    {{ $count := 0 }}
+                    {{ range $name, $taxonomy := $tags }}
+                        {{ if lt $count $visibleTagsCount }}
+                            <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" class="tag-badge">
+                                {{ $name }} <span class="tag-count">{{ len $taxonomy.Pages }}</span>
+                            </a>
+                            {{ $count = add $count 1 }}
+                        {{ end }}
+                    {{ end }}
+                    
+                    {{ if gt (len $tags) $visibleTagsCount }}
+                        <button class="dropdown-btn tags-dropdown-btn" onclick="toggleDropdown('tags')">
+                            <span>سایر تگ‌ها ▾</span>
+                        </button>
+                        <div class="tags-dropdown-content" id="tags-dropdown">
+                            {{ $count = 0 }}
+                            {{ range $name, $taxonomy := $tags }}
+                                {{ if ge $count $visibleTagsCount }}
+                                    <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" class="tag-badge">
+                                        {{ $name }} <span class="tag-count">{{ len $taxonomy.Pages }}</span>
+                                    </a>
+                                {{ end }}
+                                {{ $count = add $count 1 }}
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                </div>
+            {{ else }}
+                <p class="no-items">هیچ تگی موجود نیست</p>
+            {{ end }}
+        </div>
+    </div>
+
+    <!-- نوشته‌های تازه -->
+    <div class="sidebar-widget">
+        <h3 class="sidebar-widget-title">📝 نوشته‌های تازه</h3>
+        <div class="sidebar-widget-content">
+            {{ $recentPosts := where .Site.RegularPages "Type" "in" (slice "cyber-security" "python" "seo" "tools") }}
+            {{ $recentPosts = first 5 (sort $recentPosts "Date" "desc") }}
+            
+            {{ if gt (len $recentPosts) 0 }}
+                <ul class="recent-posts-list">
+                    {{ range $recentPosts }}
+                        <li class="recent-post-item">
+                            <a href="{{ .RelPermalink }}" class="recent-post-link">
+                                <span class="recent-post-icon">📄</span>
+                                <div class="recent-post-info">
+                                    <h4 class="recent-post-title">{{ .Title }}</h4>
+                                    <span class="recent-post-date">{{ .Date.Format "2006/01/02" }}</span>
+                                </div>
+                            </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            {{ else }}
+                <p class="no-items">هیچ نوشته‌ای موجود نیست</p>
+            {{ end }}
+        </div>
+    </div>
+
+</aside>
+
+<script>
+function toggleDropdown(type) {
+    const dropdown = document.getElementById(type + '-dropdown');
+    if (dropdown) {
+        dropdown.classList.toggle('active');
+    }
+}
+</script>
