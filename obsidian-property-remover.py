@@ -4,12 +4,13 @@
 Obsidian Property Remover & Hugo Frontmatter Adder
 ==================================================
 This script:
-1. Removes Obsidian frontmatter properties (between first --- and second ---)
-2. Adds Hugo TOML frontmatter (between +++ and +++) with:
+1. Extracts Date, tags, and Category from Obsidian properties
+2. Removes Obsidian frontmatter properties (between first --- and second ---)
+3. Adds Hugo TOML frontmatter (between +++ and +++) with:
    - title (from filename, similar to title-adder.py logic)
-   - tags (from directory name)
-   - category (from directory name)
-   - date (current datetime)
+   - tags (directory name + extracted Obsidian tags)
+   - category (directory name)
+   - date (Obsidian date + current time)
    - draft = false
 
 Author: Automated Script
@@ -111,6 +112,18 @@ def get_directory_name(file_path):
     return parent_dir
 
 
+def get_current_time_str():
+    """
+    Get current time in HH:MM:SS format with Tehran timezone.
+    Format: "12:38:14"
+    """
+    # Tehran timezone
+    tehran_tz = pytz.timezone('Asia/Tehran')
+    now = datetime.now(tehran_tz)
+    
+    return now.strftime("%H:%M:%S")
+
+
 def get_current_datetime_str():
     """
     Get current datetime in Hugo format with Tehran timezone.
@@ -129,21 +142,154 @@ def get_current_datetime_str():
     return dt_str
 
 
-def generate_hugo_frontmatter(file_path):
+def parse_obsidian_properties(lines, first_line, second_line):
+    """
+    Parse Obsidian properties from frontmatter lines.
+    Extracts: Date, tags, Category
+    
+    Returns: dict with keys: date, tags (list), category
+    
+    Example Obsidian properties:
+        Date: 2023-11-20
+        tags:
+          - tag1
+          - tag2
+        Category: category1
+    """
+    properties = {
+        'date': None,
+        'tags': [],
+        'category': None
+    }
+    
+    # Process lines between first_line and second_line
+    i = first_line + 1
+    while i < second_line:
+        line = lines[i].strip()
+        
+        # Skip empty lines
+        if not line:
+            i += 1
+            continue
+        
+        # Parse Date
+        if line.lower().startswith('date:'):
+            date_value = line.split(':', 1)[1].strip()
+            properties['date'] = date_value
+            logger.debug(f"  Found Date: {date_value}")
+            i += 1
+            continue
+        
+        # Parse Category
+        if line.lower().startswith('category:'):
+            category_value = line.split(':', 1)[1].strip()
+            properties['category'] = category_value
+            logger.debug(f"  Found Category: {category_value}")
+            i += 1
+            continue
+        
+        # Parse tags (can be multi-line)
+        if line.lower().startswith('tags:'):
+            # Check if tags are on same line or next lines
+            tags_value = line.split(':', 1)[1].strip()
+            
+            if tags_value:
+                # Tags on same line (e.g., "tags: tag1, tag2")
+                # Could be array format: [tag1, tag2]
+                if tags_value.startswith('[') and tags_value.endswith(']'):
+                    # Array format
+                    tags_str = tags_value[1:-1]
+                    tags_list = [t.strip().strip('"').strip("'") for t in tags_str.split(',')]
+                    properties['tags'].extend([t for t in tags_list if t])
+                else:
+                    # Comma separated
+                    tags_list = [t.strip() for t in tags_value.split(',')]
+                    properties['tags'].extend([t for t in tags_list if t])
+            else:
+                # Tags on next lines (YAML list format)
+                i += 1
+                while i < second_line:
+                    next_line = lines[i].strip()
+                    
+                    # Check if line starts with dash (list item)
+                    if next_line.startswith('- '):
+                        tag = next_line[2:].strip()
+                        properties['tags'].append(tag)
+                        logger.debug(f"  Found tag: {tag}")
+                        i += 1
+                    elif next_line.startswith('-'):
+                        tag = next_line[1:].strip()
+                        properties['tags'].append(tag)
+                        logger.debug(f"  Found tag: {tag}")
+                        i += 1
+                    else:
+                        # Not a list item, break
+                        break
+                continue
+        
+        i += 1
+    
+    logger.info(f"  Extracted properties: date={properties['date']}, tags={properties['tags']}, category={properties['category']}")
+    
+    return properties
+
+
+def generate_hugo_frontmatter(file_path, obsidian_props):
     """
     Generate Hugo TOML frontmatter for the file.
+    Uses Obsidian properties if available.
+    
+    Args:
+        file_path: Path to the markdown file
+        obsidian_props: dict with 'date', 'tags', 'category' from Obsidian
     
     Returns: string with frontmatter content
     """
     filename = file_path.name
     title = extract_title_from_filename(filename)
     directory = get_directory_name(file_path)
-    date_str = get_current_datetime_str()
+    
+    # Build tags list: directory + obsidian tags
+    tags_list = [directory]
+    if obsidian_props['tags']:
+        tags_list.extend(obsidian_props['tags'])
+    
+    # Format tags for TOML
+    tags_str = ', '.join([f'"{tag}"' for tag in tags_list])
+    
+    # Build date: Obsidian date + current time
+    if obsidian_props['date']:
+        # Parse Obsidian date (format: 2023-11-20)
+        try:
+            date_part = obsidian_props['date']
+            # Remove any time component if present
+            if 'T' in date_part:
+                date_part = date_part.split('T')[0]
+            
+            time_part = get_current_time_str()
+            
+            # Get timezone
+            tehran_tz = pytz.timezone('Asia/Tehran')
+            now = datetime.now(tehran_tz)
+            tz_str = now.strftime("%z")
+            # Insert colon: +0330 -> +03:30
+            if len(tz_str) >= 2:
+                tz_str = tz_str[:-2] + ':' + tz_str[-2:]
+            
+            date_str = f"{date_part}T{time_part}{tz_str}"
+        except Exception as e:
+            logger.warning(f"  Error parsing Obsidian date '{obsidian_props['date']}': {e}")
+            date_str = get_current_datetime_str()
+    else:
+        date_str = get_current_datetime_str()
+    
+    # Use directory as category (ignore Obsidian category for now)
+    category = directory
     
     frontmatter = f'''+++
 title = "{title}"
-tags = ["{directory}"]
-category = "{directory}"
+tags = [{tags_str}]
+category = "{category}"
 date = "{date_str}"
 draft = false
 +++
@@ -209,6 +355,7 @@ def has_hugo_frontmatter(lines):
 def remove_obsidian_properties_and_add_hugo_frontmatter(file_path):
     """
     Remove Obsidian properties from a markdown file and add Hugo TOML frontmatter.
+    Extracts Date, tags, Category from Obsidian properties before removal.
     Returns: True if file was modified, False otherwise
     """
     try:
@@ -226,8 +373,18 @@ def remove_obsidian_properties_and_add_hugo_frontmatter(file_path):
         # Check if file has Obsidian properties
         has_props, first_line, second_line = has_obsidian_properties(lines)
         
+        # Default properties if no Obsidian properties found
+        obsidian_props = {
+            'date': None,
+            'tags': [],
+            'category': None
+        }
+        
         if has_props:
             logger.info(f"Found Obsidian properties in {file_path.name} from line {first_line} to line {second_line}")
+            
+            # Extract properties before removal
+            obsidian_props = parse_obsidian_properties(lines, first_line, second_line)
             
             # Remove lines from first_line to second_line (inclusive)
             lines = lines[:first_line] + lines[second_line + 1:]
@@ -237,8 +394,8 @@ def remove_obsidian_properties_and_add_hugo_frontmatter(file_path):
         else:
             logger.info(f"No Obsidian properties found in: {file_path.name}")
         
-        # Generate Hugo frontmatter
-        frontmatter = generate_hugo_frontmatter(file_path)
+        # Generate Hugo frontmatter with extracted properties
+        frontmatter = generate_hugo_frontmatter(file_path, obsidian_props)
         
         # Add Hugo frontmatter at the beginning
         lines.insert(0, frontmatter)

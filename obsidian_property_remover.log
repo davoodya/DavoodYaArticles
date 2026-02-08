@@ -295,3 +295,384 @@
 2026-02-08 15:28:39,726 - INFO - SCRIPT EXECUTION COMPLETED
 2026-02-08 15:28:39,726 - INFO - ======================================================================
 
+2026-02-08 18:43:51,137 - INFO - 
+======================================================================
+2026-02-08 18:43:51,137 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO FRONTMATTER ADDER
+2026-02-08 18:43:51,137 - INFO - SCRIPT STARTED
+2026-02-08 18:43:51,137 - INFO - ======================================================================
+
+2026-02-08 18:43:51,138 - INFO - Loaded tracking file with 12 processed files
+2026-02-08 18:43:51,138 - INFO - Found 14 markdown files to check
+2026-02-08 18:43:51,138 - INFO - Already processed: 12 files
+2026-02-08 18:43:51,138 - INFO - 
+============================================================
+2026-02-08 18:43:51,138 - INFO - Processing: E10 - (Module 6 - System Hacking).md
+2026-02-08 18:43:51,138 - INFO - ============================================================
+2026-02-08 18:43:51,139 - INFO - Found Obsidian properties in E10 - (Module 6 - System Hacking).md from line 0 to line 15
+2026-02-08 18:43:51,139 - INFO - ✓ Removed Obsidian properties from: E10 - (Module 6 - System Hacking).md
+2026-02-08 18:43:51,200 - INFO - ✓ Added Hugo frontmatter to: E10 - (Module 6 - System Hacking).md
+2026-02-08 18:43:51,201 - INFO - 
+============================================================
+2026-02-08 18:43:51,201 - INFO - Processing: E11 - Escalation Privilege, Covering Track & Malware Threads.md
+2026-02-08 18:43:51,201 - INFO - ============================================================
+2026-02-08 18:43:51,201 - INFO - Found Obsidian properties in E11 - Escalation Privilege, Covering Track & Malware Threads.md from line 0 to line 17
+2026-02-08 18:43:51,201 - INFO - ✓ Removed Obsidian properties from: E11 - Escalation Privilege, Covering Track & Malware Threads.md
+2026-02-08 18:43:51,201 - INFO - ✓ Added Hugo frontmatter to: E11 - Escalation Privilege, Covering Track & Malware Threads.md
+2026-02-08 18:43:51,202 - INFO - 
+============================================================
+2026-02-08 18:43:51,202 - INFO - Processing: E12 - Module 08 - Sniffing.md
+2026-02-08 18:43:51,202 - INFO - ============================================================
+2026-02-08 18:43:51,203 - INFO - Found Obsidian properties in E12 - Module 08 - Sniffing.md from line 0 to line 16
+2026-02-08 18:43:51,203 - INFO - ✓ Removed Obsidian properties from: E12 - Module 08 - Sniffing.md
+2026-02-08 18:43:51,203 - INFO - ✓ Added Hugo frontmatter to: E12 - Module 08 - Sniffing.md
+2026-02-08 18:43:51,203 - INFO - 
+============================================================
+2026-02-08 18:43:51,203 - INFO - Processing: E13 - Modules 08-Sniffing, 09-Social Engineering, 10-Denial-of-Service.md
+2026-02-08 18:43:51,204 - INFO - ============================================================
+2026-02-08 18:43:51,204 - INFO - Found Obsidian properties in E13 - Modules 08-Sniffing, 09-Social Engineering, 10-Denial-of-Service.md from line 0 to line 17
+2026-02-08 18:43:51,204 - INFO - ✓ Removed Obsidian properties from: E13 - Modules 08-Sniffing, 09-Social Engineering, 10-Denial-of-Service.md
+2026-02-08 18:43:51,204 - INFO - ✓ Added Hugo frontmatter to: E13 - Modules 08-Sniffing, 09-Social Engineering, 10-Denial-of-Service.md
+2026-02-08 18:43:51,205 - INFO - 
+============================================================
+2026-02-08 18:43:51,205 - INFO - Processing: E14 - Module 11-Session Hijacking & Module 12-IDS, IPS, Firewalls.md
+2026-02-08 18:43:51,205 - INFO - ============================================================
+2026-02-08 18:43:51,205 - INFO - Found Obsidian properties in E14 - Module 11-Session Hijacking & Module 12-IDS, IPS, Firewalls.md from line 0 to line 15
+2026-02-08 18:43:51,205 - INFO - ✓ Removed Obsidian properties from: E14 - Module 11-Session Hijacking & Module 12-IDS, IPS, Firewalls.md
+2026-02-08 18:43:51,205 - INFO - ✓ Added Hugo frontmatter to: E14 - Module 11-Session Hijacking & Module 12-IDS, IPS, Firewalls.md
+2026-02-08 18:43:51,206 - INFO - 
+============================================================
+2026-02-08 18:43:51,206 - INFO - Processing: E15 - Module 13 Hacking Webservers, Module 14 Web Application Hacking.md
+2026-02-08 18:43:51,206 - INFO - ============================================================
+2026-02-08 18:43:51,206 - INFO - Found Obsidian properties in E15 - Module 13 Hacking Webservers, Module 14 Web Application Hacking.md from line 0 to line 13
+2026-02-08 18:43:51,206 - INFO - ✓ Removed Obsidian properties from: E15 - Module 13 Hacking Webservers, Module 14 Web Application Hacking.md
+2026-02-08 18:43:51,207 - INFO - ✓ Added Hugo frontmatter to: E15 - Module 13 Hacking Webservers, Module 14 Web Application Hacking.md
+2026-02-08 18:43:51,207 - INFO - 
+============================================================
+2026-02-08 18:43:51,207 - INFO - Processing: E16 - Web Application Hacking Methodology.md
+2026-02-08 18:43:51,207 - INFO - ============================================================
+2026-02-08 18:43:51,208 - INFO - Found Obsidian properties in E16 - Web Application Hacking Methodology.md from line 0 to line 15
+2026-02-08 18:43:51,208 - INFO - ✓ Removed Obsidian properties from: E16 - Web Application Hacking Methodology.md
+2026-02-08 18:43:51,208 - INFO - ✓ Added Hugo frontmatter to: E16 - Web Application Hacking Methodology.md
+2026-02-08 18:43:51,209 - INFO - 
+============================================================
+2026-02-08 18:43:51,209 - INFO - Processing: E3 - (UFW,FTP,SSH in Linux & Start Hack Phases Info Gathering).md
+2026-02-08 18:43:51,209 - INFO - ============================================================
+2026-02-08 18:43:51,209 - INFO - Found Obsidian properties in E3 - (UFW,FTP,SSH in Linux & Start Hack Phases Info Gathering).md from line 0 to line 17
+2026-02-08 18:43:51,209 - INFO - ✓ Removed Obsidian properties from: E3 - (UFW,FTP,SSH in Linux & Start Hack Phases Info Gathering).md
+2026-02-08 18:43:51,209 - INFO - ✓ Added Hugo frontmatter to: E3 - (UFW,FTP,SSH in Linux & Start Hack Phases Info Gathering).md
+2026-02-08 18:43:51,210 - INFO - 
+============================================================
+2026-02-08 18:43:51,210 - INFO - Processing: E4 - (Information Gathering - Machine Foot Printing).md
+2026-02-08 18:43:51,210 - INFO - ============================================================
+2026-02-08 18:43:51,210 - INFO - No Obsidian properties found in: E4 - (Information Gathering - Machine Foot Printing).md
+2026-02-08 18:43:51,210 - INFO - ✓ Added Hugo frontmatter to: E4 - (Information Gathering - Machine Foot Printing).md
+2026-02-08 18:43:51,211 - INFO - 
+============================================================
+2026-02-08 18:43:51,211 - INFO - Processing: E5 - (Website Footprinting).md
+2026-02-08 18:43:51,211 - INFO - ============================================================
+2026-02-08 18:43:51,212 - INFO - No Obsidian properties found in: E5 - (Website Footprinting).md
+2026-02-08 18:43:51,212 - INFO - ✓ Added Hugo frontmatter to: E5 - (Website Footprinting).md
+2026-02-08 18:43:51,212 - INFO - 
+============================================================
+2026-02-08 18:43:51,212 - INFO - Processing: E6 - (Email & DNS & Network Foot Printing).md
+2026-02-08 18:43:51,212 - INFO - ============================================================
+2026-02-08 18:43:51,213 - INFO - Found Obsidian properties in E6 - (Email & DNS & Network Foot Printing).md from line 0 to line 19
+2026-02-08 18:43:51,213 - INFO - ✓ Removed Obsidian properties from: E6 - (Email & DNS & Network Foot Printing).md
+2026-02-08 18:43:51,213 - INFO - ✓ Added Hugo frontmatter to: E6 - (Email & DNS & Network Foot Printing).md
+2026-02-08 18:43:51,213 - INFO - 
+============================================================
+2026-02-08 18:43:51,213 - INFO - Processing: E7 - (Footprinting & Network Scanning).md
+2026-02-08 18:43:51,214 - INFO - ============================================================
+2026-02-08 18:43:51,214 - INFO - No Obsidian properties found in: E7 - (Footprinting & Network Scanning).md
+2026-02-08 18:43:51,214 - INFO - ✓ Added Hugo frontmatter to: E7 - (Footprinting & Network Scanning).md
+2026-02-08 18:43:51,215 - INFO - 
+============================================================
+2026-02-08 18:43:51,215 - INFO - Processing: E8 - Enumeration - Ports & Services Enum.md
+2026-02-08 18:43:51,215 - INFO - ============================================================
+2026-02-08 18:43:51,216 - INFO - Found Obsidian properties in E8 - Enumeration - Ports & Services Enum.md from line 0 to line 19
+2026-02-08 18:43:51,216 - INFO - ✓ Removed Obsidian properties from: E8 - Enumeration - Ports & Services Enum.md
+2026-02-08 18:43:51,216 - INFO - ✓ Added Hugo frontmatter to: E8 - Enumeration - Ports & Services Enum.md
+2026-02-08 18:43:51,217 - INFO - 
+============================================================
+2026-02-08 18:43:51,217 - INFO - Processing: E9 - (Module 5 - Vulnerability Analysis).md
+2026-02-08 18:43:51,217 - INFO - ============================================================
+2026-02-08 18:43:51,217 - INFO - No Obsidian properties found in: E9 - (Module 5 - Vulnerability Analysis).md
+2026-02-08 18:43:51,217 - INFO - ✓ Added Hugo frontmatter to: E9 - (Module 5 - Vulnerability Analysis).md
+2026-02-08 18:43:51,218 - INFO - Tracking file saved with 26 processed files
+2026-02-08 18:43:51,218 - INFO - 
+============================================================
+2026-02-08 18:43:51,218 - INFO - SUMMARY
+2026-02-08 18:43:51,218 - INFO - ============================================================
+2026-02-08 18:43:51,218 - INFO - Total files found: 14
+2026-02-08 18:43:51,218 - INFO - Already processed (skipped): 0
+2026-02-08 18:43:51,218 - INFO - Newly processed (modified): 14
+2026-02-08 18:43:51,218 - INFO - No changes needed: 0
+2026-02-08 18:43:51,218 - INFO - Errors: 0
+2026-02-08 18:43:51,219 - INFO - ============================================================
+2026-02-08 18:43:51,219 - INFO - 
+✓ Report saved to: obsidian_property_remover_report.txt
+2026-02-08 18:43:51,219 - INFO - 
+======================================================================
+2026-02-08 18:43:51,219 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-08 18:43:51,219 - INFO - ======================================================================
+
+2026-02-08 18:57:32,672 - INFO - 
+======================================================================
+2026-02-08 18:57:32,673 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO FRONTMATTER ADDER
+2026-02-08 18:57:32,673 - INFO - SCRIPT STARTED
+2026-02-08 18:57:32,673 - INFO - ======================================================================
+
+2026-02-08 18:57:32,673 - INFO - No tracking file found, creating new one
+2026-02-08 18:57:32,674 - INFO - Found 26 markdown files to check
+2026-02-08 18:57:32,674 - INFO - Already processed: 0 files
+2026-02-08 18:57:32,674 - INFO - 
+============================================================
+2026-02-08 18:57:32,674 - INFO - Processing: @E16 to E21 - (Cracking Windows Password).md
+2026-02-08 18:57:32,674 - INFO - ============================================================
+2026-02-08 18:57:32,674 - INFO - Found Obsidian properties in @E16 to E21 - (Cracking Windows Password).md from line 0 to line 15
+2026-02-08 18:57:32,675 - INFO -   Extracted properties: date=2024-06-29, tags=['CyberSecurity', 'hacking'], category=Cyber Security
+2026-02-08 18:57:32,675 - INFO - ✓ Removed Obsidian properties from: @E16 to E21 - (Cracking Windows Password).md
+2026-02-08 18:57:32,750 - INFO - ✓ Added Hugo frontmatter to: @E16 to E21 - (Cracking Windows Password).md
+2026-02-08 18:57:32,753 - INFO - 
+============================================================
+2026-02-08 18:57:32,753 - INFO - Processing: E0 to E6- (Introduction & Installation Kali Linux).md
+2026-02-08 18:57:32,753 - INFO - ============================================================
+2026-02-08 18:57:32,753 - INFO - Found Obsidian properties in E0 to E6- (Introduction & Installation Kali Linux).md from line 0 to line 15
+2026-02-08 18:57:32,753 - INFO -   Extracted properties: date=2024-06-25, tags=['CyberSecurity', 'hacking'], category=Cyber Security
+2026-02-08 18:57:32,753 - INFO - ✓ Removed Obsidian properties from: E0 to E6- (Introduction & Installation Kali Linux).md
+2026-02-08 18:57:32,754 - INFO - ✓ Added Hugo frontmatter to: E0 to E6- (Introduction & Installation Kali Linux).md
+2026-02-08 18:57:32,754 - INFO - 
+============================================================
+2026-02-08 18:57:32,754 - INFO - Processing: E10 - (Module 6 - System Hacking).md
+2026-02-08 18:57:32,754 - INFO - ============================================================
+2026-02-08 18:57:32,755 - INFO - Hugo frontmatter already exists in: E10 - (Module 6 - System Hacking).md
+2026-02-08 18:57:32,755 - INFO - 
+============================================================
+2026-02-08 18:57:32,755 - INFO - Processing: E11 - Escalation Privilege, Covering Track & Malware Threads.md
+2026-02-08 18:57:32,755 - INFO - ============================================================
+2026-02-08 18:57:32,755 - INFO - Hugo frontmatter already exists in: E11 - Escalation Privilege, Covering Track & Malware Threads.md
+2026-02-08 18:57:32,756 - INFO - 
+============================================================
+2026-02-08 18:57:32,756 - INFO - Processing: E12 - Module 08 - Sniffing.md
+2026-02-08 18:57:32,756 - INFO - ============================================================
+2026-02-08 18:57:32,756 - INFO - Hugo frontmatter already exists in: E12 - Module 08 - Sniffing.md
+2026-02-08 18:57:32,756 - INFO - 
+============================================================
+2026-02-08 18:57:32,756 - INFO - Processing: E13 - Modules 08-Sniffing, 09-Social Engineering, 10-Denial-of-Service.md
+2026-02-08 18:57:32,756 - INFO - ============================================================
+2026-02-08 18:57:32,757 - INFO - Hugo frontmatter already exists in: E13 - Modules 08-Sniffing, 09-Social Engineering, 10-Denial-of-Service.md
+2026-02-08 18:57:32,757 - INFO - 
+============================================================
+2026-02-08 18:57:32,757 - INFO - Processing: E14 - Module 11-Session Hijacking & Module 12-IDS, IPS, Firewalls.md
+2026-02-08 18:57:32,757 - INFO - ============================================================
+2026-02-08 18:57:32,757 - INFO - Hugo frontmatter already exists in: E14 - Module 11-Session Hijacking & Module 12-IDS, IPS, Firewalls.md
+2026-02-08 18:57:32,758 - INFO - 
+============================================================
+2026-02-08 18:57:32,758 - INFO - Processing: E15 - Module 13 Hacking Webservers, Module 14 Web Application Hacking.md
+2026-02-08 18:57:32,758 - INFO - ============================================================
+2026-02-08 18:57:32,758 - INFO - Hugo frontmatter already exists in: E15 - Module 13 Hacking Webservers, Module 14 Web Application Hacking.md
+2026-02-08 18:57:32,758 - INFO - 
+============================================================
+2026-02-08 18:57:32,758 - INFO - Processing: E16 - Web Application Hacking Methodology.md
+2026-02-08 18:57:32,758 - INFO - ============================================================
+2026-02-08 18:57:32,759 - INFO - Hugo frontmatter already exists in: E16 - Web Application Hacking Methodology.md
+2026-02-08 18:57:32,759 - INFO - 
+============================================================
+2026-02-08 18:57:32,759 - INFO - Processing: E22 to E27 (Cracking Compresses & Offices Files - Part1).md
+2026-02-08 18:57:32,759 - INFO - ============================================================
+2026-02-08 18:57:32,759 - INFO - Found Obsidian properties in E22 to E27 (Cracking Compresses & Offices Files - Part1).md from line 0 to line 15
+2026-02-08 18:57:32,759 - INFO -   Extracted properties: date=2024-07-01, tags=['CyberSecurity', 'hacking'], category=Cyber Security
+2026-02-08 18:57:32,760 - INFO - ✓ Removed Obsidian properties from: E22 to E27 (Cracking Compresses & Offices Files - Part1).md
+2026-02-08 18:57:32,760 - INFO - ✓ Added Hugo frontmatter to: E22 to E27 (Cracking Compresses & Offices Files - Part1).md
+2026-02-08 18:57:32,760 - INFO - 
+============================================================
+2026-02-08 18:57:32,760 - INFO - Processing: E28 to E31 (Cracking Offices & PDF Files - Part2).md
+2026-02-08 18:57:32,761 - INFO - ============================================================
+2026-02-08 18:57:32,761 - INFO - Found Obsidian properties in E28 to E31 (Cracking Offices & PDF Files - Part2).md from line 0 to line 15
+2026-02-08 18:57:32,761 - INFO -   Extracted properties: date=2024-07-03, tags=['CyberSecurity', 'hacking'], category=Cyber Security
+2026-02-08 18:57:32,761 - INFO - ✓ Removed Obsidian properties from: E28 to E31 (Cracking Offices & PDF Files - Part2).md
+2026-02-08 18:57:32,761 - INFO - ✓ Added Hugo frontmatter to: E28 to E31 (Cracking Offices & PDF Files - Part2).md
+2026-02-08 18:57:32,762 - INFO - 
+============================================================
+2026-02-08 18:57:32,762 - INFO - Processing: E3 - (UFW,FTP,SSH in Linux & Start Hack Phases Info Gathering).md
+2026-02-08 18:57:32,762 - INFO - ============================================================
+2026-02-08 18:57:32,762 - INFO - Hugo frontmatter already exists in: E3 - (UFW,FTP,SSH in Linux & Start Hack Phases Info Gathering).md
+2026-02-08 18:57:32,762 - INFO - 
+============================================================
+2026-02-08 18:57:32,763 - INFO - Processing: E32 to E36 (Cracking Compresses & Offices - Part3).md
+2026-02-08 18:57:32,763 - INFO - ============================================================
+2026-02-08 18:57:32,763 - INFO - Found Obsidian properties in E32 to E36 (Cracking Compresses & Offices - Part3).md from line 0 to line 15
+2026-02-08 18:57:32,763 - INFO -   Extracted properties: date=2024-07-05, tags=['CyberSecurity', 'hacking'], category=Cyber Security
+2026-02-08 18:57:32,763 - INFO - ✓ Removed Obsidian properties from: E32 to E36 (Cracking Compresses & Offices - Part3).md
+2026-02-08 18:57:32,763 - INFO - ✓ Added Hugo frontmatter to: E32 to E36 (Cracking Compresses & Offices - Part3).md
+2026-02-08 18:57:32,764 - INFO - 
+============================================================
+2026-02-08 18:57:32,764 - INFO - Processing: E37 to E41 - (Wifi Hacking - Part 1).md
+2026-02-08 18:57:32,764 - INFO - ============================================================
+2026-02-08 18:57:32,764 - INFO - Found Obsidian properties in E37 to E41 - (Wifi Hacking - Part 1).md from line 0 to line 15
+2026-02-08 18:57:32,765 - INFO -   Extracted properties: date=2024-07-06, tags=['CyberSecurity', 'hacking'], category=Cyber Security
+2026-02-08 18:57:32,765 - INFO - ✓ Removed Obsidian properties from: E37 to E41 - (Wifi Hacking - Part 1).md
+2026-02-08 18:57:32,765 - INFO - ✓ Added Hugo frontmatter to: E37 to E41 - (Wifi Hacking - Part 1).md
+2026-02-08 18:57:32,766 - INFO - 
+============================================================
+2026-02-08 18:57:32,766 - INFO - Processing: E4 - (Information Gathering - Machine Foot Printing).md
+2026-02-08 18:57:32,766 - INFO - ============================================================
+2026-02-08 18:57:32,766 - INFO - Hugo frontmatter already exists in: E4 - (Information Gathering - Machine Foot Printing).md
+2026-02-08 18:57:32,766 - INFO - 
+============================================================
+2026-02-08 18:57:32,766 - INFO - Processing: E42 to E44 - (Automated Wifi Hacking - Part 2).md
+2026-02-08 18:57:32,766 - INFO - ============================================================
+2026-02-08 18:57:32,767 - INFO - Found Obsidian properties in E42 to E44 - (Automated Wifi Hacking - Part 2).md from line 0 to line 15
+2026-02-08 18:57:32,767 - INFO -   Extracted properties: date=2024-07-09, tags=['CyberSecurity', 'hacking'], category=Cyber Security
+2026-02-08 18:57:32,767 - INFO - ✓ Removed Obsidian properties from: E42 to E44 - (Automated Wifi Hacking - Part 2).md
+2026-02-08 18:57:32,767 - INFO - ✓ Added Hugo frontmatter to: E42 to E44 - (Automated Wifi Hacking - Part 2).md
+2026-02-08 18:57:32,768 - INFO - 
+============================================================
+2026-02-08 18:57:32,768 - INFO - Processing: E45 to E49 - (Pentesting Module Concepts - Part 1).md
+2026-02-08 18:57:32,768 - INFO - ============================================================
+2026-02-08 18:57:32,768 - INFO - Found Obsidian properties in E45 to E49 - (Pentesting Module Concepts - Part 1).md from line 0 to line 15
+2026-02-08 18:57:32,768 - INFO -   Extracted properties: date=2024-07-10, tags=['CyberSecurity', 'hacking'], category=Cyber Security
+2026-02-08 18:57:32,768 - INFO - ✓ Removed Obsidian properties from: E45 to E49 - (Pentesting Module Concepts - Part 1).md
+2026-02-08 18:57:32,768 - INFO - ✓ Added Hugo frontmatter to: E45 to E49 - (Pentesting Module Concepts - Part 1).md
+2026-02-08 18:57:32,769 - INFO - 
+============================================================
+2026-02-08 18:57:32,769 - INFO - Processing: E5 - (Website Footprinting).md
+2026-02-08 18:57:32,769 - INFO - ============================================================
+2026-02-08 18:57:32,769 - INFO - Hugo frontmatter already exists in: E5 - (Website Footprinting).md
+2026-02-08 18:57:32,770 - INFO - 
+============================================================
+2026-02-08 18:57:32,770 - INFO - Processing: E50 to E54 - (Pentesting Methodology - Part 2).md
+2026-02-08 18:57:32,770 - INFO - ============================================================
+2026-02-08 18:57:32,770 - INFO - Found Obsidian properties in E50 to E54 - (Pentesting Methodology - Part 2).md from line 0 to line 15
+2026-02-08 18:57:32,770 - INFO -   Extracted properties: date=2024-07-12, tags=['CyberSecurity', 'hacking'], category=Cyber Security
+2026-02-08 18:57:32,770 - INFO - ✓ Removed Obsidian properties from: E50 to E54 - (Pentesting Methodology - Part 2).md
+2026-02-08 18:57:32,771 - INFO - ✓ Added Hugo frontmatter to: E50 to E54 - (Pentesting Methodology - Part 2).md
+2026-02-08 18:57:32,772 - INFO - 
+============================================================
+2026-02-08 18:57:32,772 - INFO - Processing: E55 to E57 - (Setup Try Hack Me & SMB, Telnet, FTP Exploitation).md
+2026-02-08 18:57:32,772 - INFO - ============================================================
+2026-02-08 18:57:32,772 - INFO - Found Obsidian properties in E55 to E57 - (Setup Try Hack Me & SMB, Telnet, FTP Exploitation).md from line 0 to line 15
+2026-02-08 18:57:32,772 - INFO -   Extracted properties: date=2024-07-16, tags=['CyberSecurity', 'hacking'], category=Cyber Security
+2026-02-08 18:57:32,773 - INFO - ✓ Removed Obsidian properties from: E55 to E57 - (Setup Try Hack Me & SMB, Telnet, FTP Exploitation).md
+2026-02-08 18:57:32,773 - INFO - ✓ Added Hugo frontmatter to: E55 to E57 - (Setup Try Hack Me & SMB, Telnet, FTP Exploitation).md
+2026-02-08 18:57:32,773 - INFO - 
+============================================================
+2026-02-08 18:57:32,774 - INFO - Processing: E58 to E61 - (Setup Hack The Box & Hack Some Machines).md
+2026-02-08 18:57:32,774 - INFO - ============================================================
+2026-02-08 18:57:32,774 - INFO - Found Obsidian properties in E58 to E61 - (Setup Hack The Box & Hack Some Machines).md from line 0 to line 15
+2026-02-08 18:57:32,774 - INFO -   Extracted properties: date=2024-07-19, tags=['CyberSecurity', 'hacking'], category=Cyber Security
+2026-02-08 18:57:32,774 - INFO - ✓ Removed Obsidian properties from: E58 to E61 - (Setup Hack The Box & Hack Some Machines).md
+2026-02-08 18:57:32,774 - INFO - ✓ Added Hugo frontmatter to: E58 to E61 - (Setup Hack The Box & Hack Some Machines).md
+2026-02-08 18:57:32,775 - INFO - 
+============================================================
+2026-02-08 18:57:32,775 - INFO - Processing: E6 - (Email & DNS & Network Foot Printing).md
+2026-02-08 18:57:32,775 - INFO - ============================================================
+2026-02-08 18:57:32,775 - INFO - Hugo frontmatter already exists in: E6 - (Email & DNS & Network Foot Printing).md
+2026-02-08 18:57:32,776 - INFO - 
+============================================================
+2026-02-08 18:57:32,776 - INFO - Processing: E7 - (Footprinting & Network Scanning).md
+2026-02-08 18:57:32,776 - INFO - ============================================================
+2026-02-08 18:57:32,776 - INFO - Hugo frontmatter already exists in: E7 - (Footprinting & Network Scanning).md
+2026-02-08 18:57:32,776 - INFO - 
+============================================================
+2026-02-08 18:57:32,776 - INFO - Processing: E7 to E15 - (Bypassing & Resetting Windows Password).md
+2026-02-08 18:57:32,776 - INFO - ============================================================
+2026-02-08 18:57:32,777 - INFO - Found Obsidian properties in E7 to E15 - (Bypassing & Resetting Windows Password).md from line 0 to line 15
+2026-02-08 18:57:32,777 - INFO -   Extracted properties: date=2024-06-27, tags=['CyberSecurity', 'hacking'], category=Cyber Security
+2026-02-08 18:57:32,777 - INFO - ✓ Removed Obsidian properties from: E7 to E15 - (Bypassing & Resetting Windows Password).md
+2026-02-08 18:57:32,777 - INFO - ✓ Added Hugo frontmatter to: E7 to E15 - (Bypassing & Resetting Windows Password).md
+2026-02-08 18:57:32,778 - INFO - 
+============================================================
+2026-02-08 18:57:32,778 - INFO - Processing: E8 - Enumeration - Ports & Services Enum.md
+2026-02-08 18:57:32,778 - INFO - ============================================================
+2026-02-08 18:57:32,779 - INFO - Hugo frontmatter already exists in: E8 - Enumeration - Ports & Services Enum.md
+2026-02-08 18:57:32,779 - INFO - 
+============================================================
+2026-02-08 18:57:32,779 - INFO - Processing: E9 - (Module 5 - Vulnerability Analysis).md
+2026-02-08 18:57:32,779 - INFO - ============================================================
+2026-02-08 18:57:32,779 - INFO - Hugo frontmatter already exists in: E9 - (Module 5 - Vulnerability Analysis).md
+2026-02-08 18:57:32,780 - INFO - Tracking file saved with 12 processed files
+2026-02-08 18:57:32,780 - INFO - 
+============================================================
+2026-02-08 18:57:32,780 - INFO - SUMMARY
+2026-02-08 18:57:32,780 - INFO - ============================================================
+2026-02-08 18:57:32,780 - INFO - Total files found: 26
+2026-02-08 18:57:32,780 - INFO - Already processed (skipped): 0
+2026-02-08 18:57:32,780 - INFO - Newly processed (modified): 12
+2026-02-08 18:57:32,780 - INFO - No changes needed: 14
+2026-02-08 18:57:32,780 - INFO - Errors: 0
+2026-02-08 18:57:32,780 - INFO - ============================================================
+2026-02-08 18:57:32,781 - INFO - 
+✓ Report saved to: obsidian_property_remover_report.txt
+2026-02-08 18:57:32,781 - INFO - 
+======================================================================
+2026-02-08 18:57:32,781 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-08 18:57:32,781 - INFO - ======================================================================
+
+2026-02-08 19:05:54,075 - INFO - 
+======================================================================
+2026-02-08 19:05:54,075 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO FRONTMATTER ADDER
+2026-02-08 19:05:54,076 - INFO - SCRIPT STARTED
+2026-02-08 19:05:54,076 - INFO - ======================================================================
+
+2026-02-08 19:05:54,076 - INFO - Loaded tracking file with 12 processed files
+2026-02-08 19:05:54,076 - INFO - Found 5 markdown files to check
+2026-02-08 19:05:54,077 - INFO - Already processed: 12 files
+2026-02-08 19:05:54,077 - INFO - 
+============================================================
+2026-02-08 19:05:54,077 - INFO - Processing: E47- Google Trends.md
+2026-02-08 19:05:54,077 - INFO - ============================================================
+2026-02-08 19:05:54,077 - INFO - Found Obsidian properties in E47- Google Trends.md from line 0 to line 17
+2026-02-08 19:05:54,077 - INFO -   Extracted properties: date=2026-01-21, tags=['CyberSecurity', 'Security'], category=
+2026-02-08 19:05:54,077 - INFO - ✓ Removed Obsidian properties from: E47- Google Trends.md
+2026-02-08 19:05:54,127 - INFO - ✓ Added Hugo frontmatter to: E47- Google Trends.md
+2026-02-08 19:05:54,127 - INFO - 
+============================================================
+2026-02-08 19:05:54,128 - INFO - Processing: E48 - OFF Page SEO.md
+2026-02-08 19:05:54,128 - INFO - ============================================================
+2026-02-08 19:05:54,128 - INFO - Found Obsidian properties in E48 - OFF Page SEO.md from line 0 to line 17
+2026-02-08 19:05:54,128 - INFO -   Extracted properties: date=2026-01-21, tags=['CyberSecurity', 'Security'], category=
+2026-02-08 19:05:54,128 - INFO - ✓ Removed Obsidian properties from: E48 - OFF Page SEO.md
+2026-02-08 19:05:54,128 - INFO - ✓ Added Hugo frontmatter to: E48 - OFF Page SEO.md
+2026-02-08 19:05:54,129 - INFO - 
+============================================================
+2026-02-08 19:05:54,129 - INFO - Processing: E49- Branding.md
+2026-02-08 19:05:54,129 - INFO - ============================================================
+2026-02-08 19:05:54,129 - INFO - Found Obsidian properties in E49- Branding.md from line 0 to line 17
+2026-02-08 19:05:54,129 - INFO -   Extracted properties: date=2026-02-05T00:00:00, tags=['CyberSecurity', 'Security'], category=
+2026-02-08 19:05:54,129 - INFO - ✓ Removed Obsidian properties from: E49- Branding.md
+2026-02-08 19:05:54,129 - INFO - ✓ Added Hugo frontmatter to: E49- Branding.md
+2026-02-08 19:05:54,130 - INFO - 
+============================================================
+2026-02-08 19:05:54,130 - INFO - Processing: E50 - Google Penalty.md
+2026-02-08 19:05:54,130 - INFO - ============================================================
+2026-02-08 19:05:54,130 - INFO - Found Obsidian properties in E50 - Google Penalty.md from line 0 to line 17
+2026-02-08 19:05:54,130 - INFO -   Extracted properties: date=2026-02-05T00:00:00, tags=['CyberSecurity', 'Security'], category=
+2026-02-08 19:05:54,130 - INFO - ✓ Removed Obsidian properties from: E50 - Google Penalty.md
+2026-02-08 19:05:54,130 - INFO - ✓ Added Hugo frontmatter to: E50 - Google Penalty.md
+2026-02-08 19:05:54,131 - INFO - 
+============================================================
+2026-02-08 19:05:54,131 - INFO - Processing: E51, E52 - Google Algorithms.md
+2026-02-08 19:05:54,131 - INFO - ============================================================
+2026-02-08 19:05:54,131 - INFO - Found Obsidian properties in E51, E52 - Google Algorithms.md from line 0 to line 17
+2026-02-08 19:05:54,131 - INFO -   Extracted properties: date=2026-02-05T00:00:00, tags=['CyberSecurity', 'Security'], category=
+2026-02-08 19:05:54,131 - INFO - ✓ Removed Obsidian properties from: E51, E52 - Google Algorithms.md
+2026-02-08 19:05:54,131 - INFO - ✓ Added Hugo frontmatter to: E51, E52 - Google Algorithms.md
+2026-02-08 19:05:54,132 - INFO - Tracking file saved with 17 processed files
+2026-02-08 19:05:54,132 - INFO - 
+============================================================
+2026-02-08 19:05:54,132 - INFO - SUMMARY
+2026-02-08 19:05:54,132 - INFO - ============================================================
+2026-02-08 19:05:54,132 - INFO - Total files found: 5
+2026-02-08 19:05:54,132 - INFO - Already processed (skipped): 0
+2026-02-08 19:05:54,132 - INFO - Newly processed (modified): 5
+2026-02-08 19:05:54,133 - INFO - No changes needed: 0
+2026-02-08 19:05:54,133 - INFO - Errors: 0
+2026-02-08 19:05:54,133 - INFO - ============================================================
+2026-02-08 19:05:54,133 - INFO - 
+✓ Report saved to: obsidian_property_remover_report.txt
+2026-02-08 19:05:54,133 - INFO - 
+======================================================================
+2026-02-08 19:05:54,133 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-08 19:05:54,133 - INFO - ======================================================================
+

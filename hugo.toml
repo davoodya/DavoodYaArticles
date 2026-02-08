@@ -13,7 +13,7 @@ hasCJKLanguage = true
 
 # Pagination
 [pagination]
-pagerSize = 10
+pagerSize = 6
 
 # Output formats for search
 [outputs]

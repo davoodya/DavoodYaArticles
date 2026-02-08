@@ -13,18 +13,18 @@
 
             <div class="articles-grid">
                 {{ range .Paginator.Pages }}
-                    <article class="article-card">
+                    <article class="article-card" data-article-url="{{ .RelPermalink }}">
                         <h2 class="article-card-title">
                             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                         </h2>
                         
                         <div class="article-card-summary">
                             {{ if .Params.description }}
-                                {{ .Params.description }}
+                                {{ .Params.description | truncate 200 }}
                             {{ else if .Summary }}
-                                {{ .Summary | plainify | truncate 200 }}
+                                {{ .Summary | truncate 200 }}
                             {{ else }}
-                                {{ .Content | plainify | truncate 200 }}
+                                {{ .Content | truncate 200 }}
                             {{ end }}
                         </div>
                         

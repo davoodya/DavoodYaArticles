@@ -1,17 +1,22 @@
 {
   "processed_files": [
-    "E58 to E61 - (Setup Hack The Box & Hack Some Machines).md",
+    "E50 to E54 - (Pentesting Methodology - Part 2).md",
     "E7 to E15 - (Bypassing & Resetting Windows Password).md",
     "E32 to E36 (Cracking Compresses & Offices - Part3).md",
-    "E45 to E49 - (Pentesting Module Concepts - Part 1).md",
-    "E22 to E27 (Cracking Compresses & Offices Files - Part1).md",
-    "@E16 to E21 - (Cracking Windows Password).md",
-    "E0 to E6- (Introduction & Installation Kali Linux).md",
-    "E42 to E44 - (Automated Wifi Hacking - Part 2).md",
-    "E50 to E54 - (Pentesting Methodology - Part 2).md",
-    "E37 to E41 - (Wifi Hacking - Part 1).md",
+    "E55 to E57 - (Setup Try Hack Me & SMB, Telnet, FTP Exploitation).md",
     "E28 to E31 (Cracking Offices & PDF Files - Part2).md",
-    "E55 to E57 - (Setup Try Hack Me & SMB, Telnet, FTP Exploitation).md"
+    "E50 - Google Penalty.md",
+    "E58 to E61 - (Setup Hack The Box & Hack Some Machines).md",
+    "E51, E52 - Google Algorithms.md",
+    "E37 to E41 - (Wifi Hacking - Part 1).md",
+    "E49- Branding.md",
+    "E22 to E27 (Cracking Compresses & Offices Files - Part1).md",
+    "E48 - OFF Page SEO.md",
+    "E47- Google Trends.md",
+    "E0 to E6- (Introduction & Installation Kali Linux).md",
+    "E45 to E49 - (Pentesting Module Concepts - Part 1).md",
+    "@E16 to E21 - (Cracking Windows Password).md",
+    "E42 to E44 - (Automated Wifi Hacking - Part 2).md"
   ],
-  "last_run": "2026-02-08T15:28:39.724802"
+  "last_run": "2026-02-08T19:05:54.132276"
 }
