@@ -22,7 +22,7 @@
                             {{ if .Params.description }}
                                 {{ .Params.description }}
                             {{ else if .Summary }}
-                                {{ .Summary | truncate 200 }}
+                                {{ .Summary | plainify | truncate 200 }}
                             {{ else }}
                                 {{ .Content | plainify | truncate 200 }}
                             {{ end }}
