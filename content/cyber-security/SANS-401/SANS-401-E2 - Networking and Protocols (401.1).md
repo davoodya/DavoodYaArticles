@@ -1,11 +1,8 @@
 +++
-tags:
-  - CyberSecurity
-  - Pentest
-Category: Cyber Security
-date = '2024-06-20T12:38:14+03:30'
+title = "SANS-401-Networking and Protocols (401.1)"
+tags = ["CyberSecurity", "Pentest"]
+Category = "Cyber Security"
 draft = true
-title = 'SANS-401.1 Networking and Protocols'
 +++
 
 -------
@@ -25,7 +22,7 @@ title = 'SANS-401.1 Networking and Protocols'
 ### Basic & Concepts
 - از پروتکل هایی که بیشترین استفاده در شبکه را دارند میتوان به IP , ICMP در لایه سوم و TCP, UDP در لایه چهارم اشاره کرد. 
 - اگر بخواهیم این پروتکل ها را بصورت تخصصی آنالیز کنیم و یا داده هایی که در این پروتکل های جابجا میشوند را مشاهده و بررسی کنیم باید از ابزار های خاص بررسی مانند، `tcpdump` در ترمینال و یا `Wireshark` که نسخه GUI دارد استفاده کنیم.
-	- ![[Pasted image 20240620165523.png]]
+	- ![Alt text](/images/cyber-security/Pastedimage20240620165523.png)
 - در واقع بوسیله ابزار هایی مانند `Wireshark` یا `tcpdump` میتوانیم به Sniffing داده های رد و بدل شده بپردازیم.
 ### tcpdump
 #### Definitions & Installation 
@@ -35,12 +32,12 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt install tcpdump
 tcpdump --help
 ```
-	![[Pasted image 20240620165923.png]]
+	![Alt text](/images/cyber-security/Pastedimage20240620165923.png)
 #### Basic Usages
 ##### 0. tcpdump Flags & Conditions
 ###### 0.1 Flags
 0. `tcpdump -h`
-	1. ![[Pasted image 20240620170018.png]]
+	1. ![Alt text](/images/cyber-security/Pastedimage20240620170018.png)
 1. `tcpdump -i eth0`
 	1. مشخص کردن اینترفیس برای کپچر اطلاعات آن اینترفیس
 2. `tcpdump port 23`
@@ -49,7 +46,7 @@ tcpdump --help
 	1. مشخص کردن تعداد پکت هایی که میخواهیم کپچر شود.
 4. `tcpdump -X`
 	1. جواب Capturing را بصورت ASCI Code(Binary) نشان میدهد:
-		1. ![[Pasted image 20240620175636.png]]
+		1. ![Alt text](/images/cyber-security/Pastedimage20240620175636.png)
 5. `tcpdump -a`
 	1. با این فلگ Capturing بصورت Anonymous صورت میگرد.
 6. 
@@ -65,9 +62,9 @@ tcpdump --help
 #loopback interface go Listening mode
 tcpdump -i lo
 ```
-	![[Pasted image 20240620170629.png]]
+	![Alt text](/images/cyber-security/Pastedimage20240620170629.png)
 حال اگر ترافیکی از این ماشین عبور کند و یا ترافیکی به این ماشین وارد شود، پکت های ترافیک توسط tcpdump بصورت Capture میشوند، ساده ترین روش تولید ترافیک هم پینگ گرفتن یک مقصد خاص است. در واقع اگر در ترمینال جدیدی در ماشین لینوکسی `ping 127.0.0.1 -c 1` را بگیریم میتوانیم مشاهده کنیم که بسته پینگ توسط `tcpdump` کپچر شده است:
-	![[Pasted image 20240620171105.png]]
+	![Alt text](/images/cyber-security/Pastedimage20240620171105.png)
 حال اگر بخواهیم بسته کپچر شده را آنالیز کنیم >> 
 1. ابتدا بسته Echo Request از ماشین لینوکسی برای 127.0.0.1 ارسال شده است.
 2. سپس 127.0.0.1 جواب Echo Replay را با موفقیت برای ماشین لینوکسی میفرستد.
@@ -81,8 +78,8 @@ tcpdump -i eth0 port 21 -c 3
 #Terminal 2 => Send FTP traffics from linux to windows
 ftp 10.10.10.10
 ```
-	![[Pasted image 20240620174957.png]]
-	![[Pasted image 20240620175001.png]]
+	![Alt text](/images/cyber-security/Pastedimage20240620174957.png)
+	![Alt text](/images/cyber-security/Pastedimage20240620175001.png)
 حال با اجرای خط اول ماشین لینوکسی به حالت FTP Listening میرود، و با اجرای خط دوم هم ترافیک های ftp را از لینوکس برای ویندوز میفرستیم تا تعداد 3 عدد از این پکت های FTP توسط tcpdump کپچر شوند.
 - *آنالیز بسته های کپچر شده >>*
 	- در بسته اول از ماشین کالی به ویندوز بسته FTP  با فلگ S(Sequence) ارسال میشود.
@@ -92,7 +89,7 @@ ftp 10.10.10.10
 ```sh
 tcpdump -X -i eth0 port 21 -c 4
 ```
-	![[Pasted image 20240620180042.png]]
+	![Alt text](/images/cyber-security/Pastedimage20240620180042.png)
 ##### 3. Sniffing Anonymous FTP by Src
 میخواهیم بسته های ftp که مبدا آنها 10.10.10.20 یعنی ماشین لینوکسی است و همچنین با یوزر anonymous لاگین میکنند را کپچر کنیم. برای اینکار >>
 ```sh
@@ -105,14 +102,14 @@ Name: anonymous
 Password: #empty
 ftp>
 ```
-	![[Pasted image 20240620181147.png]]
+	![Alt text](/images/cyber-security/Pastedimage20240620181147.png)
 *حال در نتایج شنود میتوانیم لاگین anonymous به ftp را مشاهده کنیم. آنالیز این شنود به شرح زیر است:*
 1. از بسته اول الی پنجم بسته های ارتباطی پروتکل شنود شده است.
 2. در کپچر ششم، بسته ای که در آن یوزر anonymous احراز هویت شده است را مشاهده میکنیم.
 3. در کپچر هفتم، بسته ای که در آن پسورد anonymous احراز هویت شده است را که یک رشته خالی است را مشاهده میکنیم. 
 4. در کپچر هفتم است که `PASS` را مشاهده میکنیم که به معنای برقراری موفقیت ارتباط میان کلاینت ftp و سرور ftp است.
 5. در کپچر بعدی، هم مشاهده میکنیم که یوزر anonymous به پروتکل ftp ماشین لینوکسی با موفقیت لاگین کرده است.
-	1. ![[Pasted image 20240620181551.png]]
+	1. ![Alt text](/images/cyber-security/Pastedimage20240620181551.png)
 ##### 4. Sniffing Custom Port
 برای تولید ترافیک در پورت دلخواه از ابزار net cat(`nc`) استفاده میکنیم.
 ```sh
@@ -122,9 +119,9 @@ tcpdump -i lo port 313
 #Generate traffics on 313 port
 nc 127.0.0.1 333
 ```
-	![[Pasted image 20240620182037.png]]
+	![Alt text](/images/cyber-security/Pastedimage20240620182037.png)
 *آنالیز این کپچر به شرح زیر است:*
 1. در اولین کپچر بسته tcp را با فلگ `S` Sequence که از سمت ماشین لینوکسی به سمت 127.0.0.1:333 ارسال شده است. بسته ای که با فلگ `S` ارسال میشود به معنای این است که Three Way Handshake بین این دو مبدا و مقصد در حال برقراری است.
 2. در کپچر دوم مشاهده میکنیم که بسته TCP با فلگ `R` Reset از سمت 127.0.0.1:333 به سمت ماشین لینوکسی ارسال شده است. فلگ `R` نشان میدهد که Three Way Handshake بین مبدا و مقصد برقرار نشده است و به مراتب کانکشن TCP هم Reset شده است.
-	![[Pasted image 20240620182614.png]]
+	![Alt text](/images/cyber-security/Pastedimage20240620182614.png)
 ### !

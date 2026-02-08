@@ -1,12 +1,8 @@
 +++
-tags:
-  - SEO
-  - Webmaster
-  - Web_Developing
-Category: SEO, Webmaster, Web_Developing
-date = '2024-06-24T12:38:14+03:30'
+title = "Backlinks"
+tags = ["SEO", "Webmaster", "Web_Developing"]
+Category = "SEO, Webmaster, Web_Developing"
 draft = true
-title = 'What is Backlinks?'
 +++
 
 -------
@@ -24,7 +20,7 @@ title = 'What is Backlinks?'
 	2. با اینکار سایر وبسایت ها و یا خودمان در انجمن ها میتوانیم به این مطلب Backlink بدهیم.
 3. *خرید رپورتاژ تبلیغاتی:*
 	1. یکی دیگر از عوامل مهم نیز خرید رپورتاژ های تبلیغاتی از وبسایت هایی مانند P30 Download است که قیمت بالایی هم دارند:
-		1. ![[Pasted image 20260121190100.png]]
+		1. ![Alt text](/images/seo/Pastedimage20260121190100.png)
 	2. دقت کنید که مهم است که وبسایت را از کجا میخریم. در واقع مکانی که میخواهیم لینک را از آن بخریم باید معتبر باشد، هم صنف وبسایت ما باشد، لینک اسپم نباشد(یعنی از وبلاگ های فیک نباشد)
 	3. *نکته:* وقتی Backlink خریداری میکنیم باید به فروشنده بگوییم که تگ `support` را در مکان استفاده به لینک بدهد.
 ### Bad SEO Notes

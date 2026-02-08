@@ -1,0 +1,764 @@
+Image Migration Report - Phase 1 & 2
+============================================================
+Date: 2026-02-08 12:18:23
+============================================================
+
+Statistics:
+- Files scanned: 20
+- Image references found: 246
+- Images copied: 246
+- Images renamed: 246
+- Images skipped: 0
+- Errors: 0
+- Total processed: 246
+
+Processed Images:
+------------------------------------------------------------
+  [tools] Pasted image 20231206125905.png
+  -> Pastedimage20231206125905.png
+
+  [tools] Pasted image 20231206130557.png
+  -> Pastedimage20231206130557.png
+
+  [tools] Pasted image 20231206131615.png
+  -> Pastedimage20231206131615.png
+
+  [tools] Pasted image 20231206131818.png
+  -> Pastedimage20231206131818.png
+
+  [tools] Pasted image 20231206131938.png
+  -> Pastedimage20231206131938.png
+
+  [tools] Pasted image 20231206132303.png
+  -> Pastedimage20231206132303.png
+
+  [tools] Pasted image 20231206132745.png
+  -> Pastedimage20231206132745.png
+
+  [tools] Pasted image 20231206132830.png
+  -> Pastedimage20231206132830.png
+
+  [tools] Pasted image 20231206133019.png
+  -> Pastedimage20231206133019.png
+
+  [tools] Pasted image 20231206133709.png
+  -> Pastedimage20231206133709.png
+
+  [tools] Pasted image 20231206134110.png
+  -> Pastedimage20231206134110.png
+
+  [tools] Pasted image 20231206134213.png
+  -> Pastedimage20231206134213.png
+
+  [tools] Pasted image 20231206140108.png
+  -> Pastedimage20231206140108.png
+
+  [tools] Pasted image 20231206140614.png
+  -> Pastedimage20231206140614.png
+
+  [tools] Pasted image 20231206140859.png
+  -> Pastedimage20231206140859.png
+
+  [tools] Pasted image 20231206141110.png
+  -> Pastedimage20231206141110.png
+
+  [tools] Pasted image 20231206141215.png
+  -> Pastedimage20231206141215.png
+
+  [tools] Pasted image 20231206142326.png
+  -> Pastedimage20231206142326.png
+
+  [cyber-security] Pasted image 20240620162926.png
+  -> Pastedimage20240620162926.png
+
+  [cyber-security] Pasted image 20240620163247.png
+  -> Pastedimage20240620163247.png
+
+  [cyber-security] Pasted image 20240620163325.png
+  -> Pastedimage20240620163325.png
+
+  [cyber-security] Pasted image 20240620163445.png
+  -> Pastedimage20240620163445.png
+
+  [cyber-security] Pasted image 20240620163844.png
+  -> Pastedimage20240620163844.png
+
+  [cyber-security] Pasted image 20240620164103.png
+  -> Pastedimage20240620164103.png
+
+  [cyber-security] Pasted image 20240620164251.png
+  -> Pastedimage20240620164251.png
+
+  [cyber-security] Pasted image 20240620164453.png
+  -> Pastedimage20240620164453.png
+
+  [cyber-security] Pasted image 20240620165523.png
+  -> Pastedimage20240620165523.png
+
+  [cyber-security] Pasted image 20240620165923.png
+  -> Pastedimage20240620165923.png
+
+  [cyber-security] Pasted image 20240620170018.png
+  -> Pastedimage20240620170018.png
+
+  [cyber-security] Pasted image 20240620170629.png
+  -> Pastedimage20240620170629.png
+
+  [cyber-security] Pasted image 20240620171105.png
+  -> Pastedimage20240620171105.png
+
+  [cyber-security] Pasted image 20240620174957.png
+  -> Pastedimage20240620174957.png
+
+  [cyber-security] Pasted image 20240620175001.png
+  -> Pastedimage20240620175001.png
+
+  [cyber-security] Pasted image 20240620175636.png
+  -> Pastedimage20240620175636.png
+
+  [cyber-security] Pasted image 20240620180042.png
+  -> Pastedimage20240620180042.png
+
+  [cyber-security] Pasted image 20240620181147.png
+  -> Pastedimage20240620181147.png
+
+  [cyber-security] Pasted image 20240620181551.png
+  -> Pastedimage20240620181551.png
+
+  [cyber-security] Pasted image 20240620182037.png
+  -> Pastedimage20240620182037.png
+
+  [cyber-security] Pasted image 20240620182614.png
+  -> Pastedimage20240620182614.png
+
+  [cyber-security] Pasted image 20240620183121.png
+  -> Pastedimage20240620183121.png
+
+  [cyber-security] Pasted image 20240620183204.png
+  -> Pastedimage20240620183204.png
+
+  [cyber-security] Pasted image 20240620183227.png
+  -> Pastedimage20240620183227.png
+
+  [cyber-security] Pasted image 20240620183242.png
+  -> Pastedimage20240620183242.png
+
+  [cyber-security] Pasted image 20240620183352.png
+  -> Pastedimage20240620183352.png
+
+  [cyber-security] Pasted image 20240620184519.png
+  -> Pastedimage20240620184519.png
+
+  [cyber-security] Pasted image 20240620194028.png
+  -> Pastedimage20240620194028.png
+
+  [cyber-security] Pasted image 20240620194123.png
+  -> Pastedimage20240620194123.png
+
+  [cyber-security] Pasted image 20240620194240.png
+  -> Pastedimage20240620194240.png
+
+  [cyber-security] Pasted image 20240620194553.png
+  -> Pastedimage20240620194553.png
+
+  [cyber-security] Pasted image 20240620195702.png
+  -> Pastedimage20240620195702.png
+
+  [cyber-security] Pasted image 20240620200538.png
+  -> Pastedimage20240620200538.png
+
+  [cyber-security] Pasted image 20240620201106.png
+  -> Pastedimage20240620201106.png
+
+  [cyber-security] Pasted image 20240620202009.png
+  -> Pastedimage20240620202009.png
+
+  [cyber-security] Pasted image 20240620203510.png
+  -> Pastedimage20240620203510.png
+
+  [cyber-security] Pasted image 20240620203819.png
+  -> Pastedimage20240620203819.png
+
+  [cyber-security] Pasted image 20240620204019.png
+  -> Pastedimage20240620204019.png
+
+  [cyber-security] Pasted image 20240620204807.png
+  -> Pastedimage20240620204807.png
+
+  [cyber-security] Pasted image 20240620205025.png
+  -> Pastedimage20240620205025.png
+
+  [cyber-security] Pasted image 20240621164752.png
+  -> Pastedimage20240621164752.png
+
+  [cyber-security] Pasted image 20240621165857.png
+  -> Pastedimage20240621165857.png
+
+  [cyber-security] Pasted image 20240621170039.png
+  -> Pastedimage20240621170039.png
+
+  [cyber-security] Pasted image 20240621170041.png
+  -> Pastedimage20240621170041.png
+
+  [cyber-security] Pasted image 20240621170532.png
+  -> Pastedimage20240621170532.png
+
+  [cyber-security] Pasted image 20240621172255.png
+  -> Pastedimage20240621172255.png
+
+  [cyber-security] Pasted image 20240621172422.png
+  -> Pastedimage20240621172422.png
+
+  [cyber-security] Pasted image 20240621173423.png
+  -> Pastedimage20240621173423.png
+
+  [cyber-security] Pasted image 20240621173706.png
+  -> Pastedimage20240621173706.png
+
+  [cyber-security] Pasted image 20240621180821.png
+  -> Pastedimage20240621180821.png
+
+  [cyber-security] Pasted image 20240621181416.png
+  -> Pastedimage20240621181416.png
+
+  [cyber-security] Pasted image 20240621181800.png
+  -> Pastedimage20240621181800.png
+
+  [cyber-security] Pasted image 20240621182040.png
+  -> Pastedimage20240621182040.png
+
+  [cyber-security] Pasted image 20240621182546.png
+  -> Pastedimage20240621182546.png
+
+  [cyber-security] Pasted image 20240621182838.png
+  -> Pastedimage20240621182838.png
+
+  [cyber-security] Pasted image 20240621184130.png
+  -> Pastedimage20240621184130.png
+
+  [seo] Pasted image 20240621193526.png
+  -> Pastedimage20240621193526.png
+
+  [seo] Pasted image 20240621201236.png
+  -> Pastedimage20240621201236.png
+
+  [seo] Pasted image 20240622164815.png
+  -> Pastedimage20240622164815.png
+
+  [seo] Pasted image 20240622165434.png
+  -> Pastedimage20240622165434.png
+
+  [seo] Pasted image 20240622165537.png
+  -> Pastedimage20240622165537.png
+
+  [seo] Pasted image 20240622165713.png
+  -> Pastedimage20240622165713.png
+
+  [seo] Pasted image 20240622170537.png
+  -> Pastedimage20240622170537.png
+
+  [seo] Pasted image 20240622173011.png
+  -> Pastedimage20240622173011.png
+
+  [seo] Pasted image 20240622173259.png
+  -> Pastedimage20240622173259.png
+
+  [seo] Pasted image 20240622173409.png
+  -> Pastedimage20240622173409.png
+
+  [seo] Pasted image 20240622173742.png
+  -> Pastedimage20240622173742.png
+
+  [seo] Pasted image 20240622202553.png
+  -> Pastedimage20240622202553.png
+
+  [seo] Pasted image 20240622203718.png
+  -> Pastedimage20240622203718.png
+
+  [seo] Pasted image 20240622203754.png
+  -> Pastedimage20240622203754.png
+
+  [seo] Pasted image 20240622204050.png
+  -> Pastedimage20240622204050.png
+
+  [seo] Pasted image 20240622204601.png
+  -> Pastedimage20240622204601.png
+
+  [seo] Pasted image 20240622204629.png
+  -> Pastedimage20240622204629.png
+
+  [seo] Pasted image 20240622204951.png
+  -> Pastedimage20240622204951.png
+
+  [seo] Pasted image 20240622205615.png
+  -> Pastedimage20240622205615.png
+
+  [seo] Pasted image 20240622210354.png
+  -> Pastedimage20240622210354.png
+
+  [seo] Pasted image 20240622210607.png
+  -> Pastedimage20240622210607.png
+
+  [seo] Pasted image 20240622210702.png
+  -> Pastedimage20240622210702.png
+
+  [seo] Pasted image 20240622210835.png
+  -> Pastedimage20240622210835.png
+
+  [seo] Pasted image 20240622211258.png
+  -> Pastedimage20240622211258.png
+
+  [seo] Pasted image 20240622211351.png
+  -> Pastedimage20240622211351.png
+
+  [seo] Pasted image 20240622211609.png
+  -> Pastedimage20240622211609.png
+
+  [seo] Pasted image 20240622212132.png
+  -> Pastedimage20240622212132.png
+
+  [seo] Pasted image 20240622230532.png
+  -> Pastedimage20240622230532.png
+
+  [seo] Pasted image 20240622231205.png
+  -> Pastedimage20240622231205.png
+
+  [seo] Pasted image 20240622231245.png
+  -> Pastedimage20240622231245.png
+
+  [seo] Pasted image 20240622231644.png
+  -> Pastedimage20240622231644.png
+
+  [seo] Pasted image 20240622233917.png
+  -> Pastedimage20240622233917.png
+
+  [seo] Pasted image 20240622234913.png
+  -> Pastedimage20240622234913.png
+
+  [seo] Pasted image 20240622234916.png
+  -> Pastedimage20240622234916.png
+
+  [seo] Pasted image 20240622235442.png
+  -> Pastedimage20240622235442.png
+
+  [seo] Pasted image 20240622235712.png
+  -> Pastedimage20240622235712.png
+
+  [seo] Pasted image 20240623204152.png
+  -> Pastedimage20240623204152.png
+
+  [seo] Pasted image 20240623204902.png
+  -> Pastedimage20240623204902.png
+
+  [seo] Pasted image 20240623205050.png
+  -> Pastedimage20240623205050.png
+
+  [seo] Pasted image 20240623205615.png
+  -> Pastedimage20240623205615.png
+
+  [seo] Pasted image 20240623210733.png
+  -> Pastedimage20240623210733.png
+
+  [seo] Pasted image 20240623210734.png
+  -> Pastedimage20240623210734.png
+
+  [seo] Pasted image 20240623211107.png
+  -> Pastedimage20240623211107.png
+
+  [seo] Pasted image 20240623211223.png
+  -> Pastedimage20240623211223.png
+
+  [seo] Pasted image 20240623213450.png
+  -> Pastedimage20240623213450.png
+
+  [seo] Pasted image 20240623224412.png
+  -> Pastedimage20240623224412.png
+
+  [seo] Pasted image 20240623224528.png
+  -> Pastedimage20240623224528.png
+
+  [seo] Pasted image 20240623224722.png
+  -> Pastedimage20240623224722.png
+
+  [seo] Pasted image 20240624191013.png
+  -> Pastedimage20240624191013.png
+
+  [seo] Pasted image 20240624191130.png
+  -> Pastedimage20240624191130.png
+
+  [seo] Pasted image 20240624192827.png
+  -> Pastedimage20240624192827.png
+
+  [seo] Pasted image 20240624192858.png
+  -> Pastedimage20240624192858.png
+
+  [seo] Pasted image 20240624193345.png
+  -> Pastedimage20240624193345.png
+
+  [seo] Pasted image 20240624194253.png
+  -> Pastedimage20240624194253.png
+
+  [cyber-security] Pasted image 20240624195037.png
+  -> Pastedimage20240624195037.png
+
+  [cyber-security] Pasted image 20240624195151.png
+  -> Pastedimage20240624195151.png
+
+  [cyber-security] Pasted image 20240624195533.png
+  -> Pastedimage20240624195533.png
+
+  [cyber-security] Pasted image 20240624204001.png
+  -> Pastedimage20240624204001.png
+
+  [cyber-security] Pasted image 20240624205403.png
+  -> Pastedimage20240624205403.png
+
+  [cyber-security] Pasted image 20240624205939.png
+  -> Pastedimage20240624205939.png
+
+  [cyber-security] Pasted image 20240624210729.png
+  -> Pastedimage20240624210729.png
+
+  [cyber-security] Pasted image 20240624210842.png
+  -> Pastedimage20240624210842.png
+
+  [cyber-security] Pasted image 20240624210955.png
+  -> Pastedimage20240624210955.png
+
+  [cyber-security] Pasted image 20240624211034.png
+  -> Pastedimage20240624211034.png
+
+  [cyber-security] Pasted image 20240624211100.png
+  -> Pastedimage20240624211100.png
+
+  [cyber-security] Pasted image 20240624211139.png
+  -> Pastedimage20240624211139.png
+
+  [cyber-security] Pasted image 20240624211241.png
+  -> Pastedimage20240624211241.png
+
+  [cyber-security] Pasted image 20240624211736.png
+  -> Pastedimage20240624211736.png
+
+  [cyber-security] Pasted image 20240624212005.png
+  -> Pastedimage20240624212005.png
+
+  [cyber-security] Pasted image 20240624212124.png
+  -> Pastedimage20240624212124.png
+
+  [cyber-security] Pasted image 20240624212250.png
+  -> Pastedimage20240624212250.png
+
+  [cyber-security] Pasted image 20240624212751.png
+  -> Pastedimage20240624212751.png
+
+  [cyber-security] Pasted image 20240624212900.png
+  -> Pastedimage20240624212900.png
+
+  [cyber-security] Pasted image 20240624213056.png
+  -> Pastedimage20240624213056.png
+
+  [cyber-security] Pasted image 20240624213224.png
+  -> Pastedimage20240624213224.png
+
+  [cyber-security] Pasted image 20240624213704.png
+  -> Pastedimage20240624213704.png
+
+  [cyber-security] Pasted image 20240624213812.png
+  -> Pastedimage20240624213812.png
+
+  [cyber-security] Pasted image 20240624213852.png
+  -> Pastedimage20240624213852.png
+
+  [cyber-security] Pasted image 20240624214101.png
+  -> Pastedimage20240624214101.png
+
+  [cyber-security] Pasted image 20240624214347.png
+  -> Pastedimage20240624214347.png
+
+  [cyber-security] Pasted image 20240624214522.png
+  -> Pastedimage20240624214522.png
+
+  [cyber-security] Pasted image 20240624214603.png
+  -> Pastedimage20240624214603.png
+
+  [cyber-security] Pasted image 20240624214731.png
+  -> Pastedimage20240624214731.png
+
+  [cyber-security] Pasted image 20240624214923.png
+  -> Pastedimage20240624214923.png
+
+  [tools] Pasted image 20250703164923.png
+  -> Pastedimage20250703164923.png
+
+  [tools] Pasted image 20250703164925.png
+  -> Pastedimage20250703164925.png
+
+  [tools] Pasted image 20250703164927.png
+  -> Pastedimage20250703164927.png
+
+  [tools] Pasted image 20250703164954.png
+  -> Pastedimage20250703164954.png
+
+  [tools] Pasted image 20250703165130.png
+  -> Pastedimage20250703165130.png
+
+  [tools] Pasted image 20250703165252.png
+  -> Pastedimage20250703165252.png
+
+  [tools] Pasted image 20250703165421.png
+  -> Pastedimage20250703165421.png
+
+  [tools] Pasted image 20250703165516.png
+  -> Pastedimage20250703165516.png
+
+  [tools] Pasted image 20250703165711.png
+  -> Pastedimage20250703165711.png
+
+  [tools] Pasted image 20250703165817.png
+  -> Pastedimage20250703165817.png
+
+  [tools] Pasted image 20250703165945.png
+  -> Pastedimage20250703165945.png
+
+  [tools] Pasted image 20250703170130.png
+  -> Pastedimage20250703170130.png
+
+  [tools] Pasted image 20250703175515.png
+  -> Pastedimage20250703175515.png
+
+  [tools] Pasted image 20250703175745.png
+  -> Pastedimage20250703175745.png
+
+  [tools] Pasted image 20250703175959.png
+  -> Pastedimage20250703175959.png
+
+  [tools] Pasted image 20250703180214.png
+  -> Pastedimage20250703180214.png
+
+  [tools] Pasted image 20250703180345.png
+  -> Pastedimage20250703180345.png
+
+  [tools] Pasted image 20250703180539.png
+  -> Pastedimage20250703180539.png
+
+  [tools] Pasted image 20250703180616.png
+  -> Pastedimage20250703180616.png
+
+  [tools] Pasted image 20250703180745.png
+  -> Pastedimage20250703180745.png
+
+  [tools] Pasted image 20250703180931.png
+  -> Pastedimage20250703180931.png
+
+  [tools] Pasted image 20250703181241.png
+  -> Pastedimage20250703181241.png
+
+  [tools] Pasted image 20250703181503.png
+  -> Pastedimage20250703181503.png
+
+  [tools] Pasted image 20250703181559.png
+  -> Pastedimage20250703181559.png
+
+  [tools] Pasted image 20250704163118.png
+  -> Pastedimage20250704163118.png
+
+  [tools] Pasted image 20250704163854.png
+  -> Pastedimage20250704163854.png
+
+  [tools] Pasted image 20250704164125.png
+  -> Pastedimage20250704164125.png
+
+  [tools] Pasted image 20250704164158.png
+  -> Pastedimage20250704164158.png
+
+  [tools] Pasted image 20250704164604.png
+  -> Pastedimage20250704164604.png
+
+  [tools] Pasted image 20250704164628.png
+  -> Pastedimage20250704164628.png
+
+  [tools] Pasted image 20250704164943.png
+  -> Pastedimage20250704164943.png
+
+  [tools] Pasted image 20250704165021.png
+  -> Pastedimage20250704165021.png
+
+  [tools] Pasted image 20250704165108.png
+  -> Pastedimage20250704165108.png
+
+  [tools] Pasted image 20250704165334.png
+  -> Pastedimage20250704165334.png
+
+  [tools] Pasted image 20250704165505.png
+  -> Pastedimage20250704165505.png
+
+  [tools] Pasted image 20250704165532.png
+  -> Pastedimage20250704165532.png
+
+  [tools] Pasted image 20250704170455.png
+  -> Pastedimage20250704170455.png
+
+  [tools] Pasted image 20250704171310.png
+  -> Pastedimage20250704171310.png
+
+  [tools] Pasted image 20250704171932.png
+  -> Pastedimage20250704171932.png
+
+  [tools] Pasted image 20250704172410.png
+  -> Pastedimage20250704172410.png
+
+  [tools] Pasted image 20250704172634.png
+  -> Pastedimage20250704172634.png
+
+  [tools] Pasted image 20250704173452.png
+  -> Pastedimage20250704173452.png
+
+  [tools] Pasted image 20250704173920.png
+  -> Pastedimage20250704173920.png
+
+  [linux] Pasted image 20251201181732.png
+  -> Pastedimage20251201181732.png
+
+  [linux] Pasted image 20251201181847.png
+  -> Pastedimage20251201181847.png
+
+  [linux] Pasted image 20251201182046.png
+  -> Pastedimage20251201182046.png
+
+  [linux] Pasted image 20251201182137.png
+  -> Pastedimage20251201182137.png
+
+  [linux] Pasted image 20251201182336.png
+  -> Pastedimage20251201182336.png
+
+  [linux] Pasted image 20251201182425.png
+  -> Pastedimage20251201182425.png
+
+  [linux] Pasted image 20251201182611.png
+  -> Pastedimage20251201182611.png
+
+  [linux] Pasted image 20251201182934.png
+  -> Pastedimage20251201182934.png
+
+  [linux] Pasted image 20251201183204.png
+  -> Pastedimage20251201183204.png
+
+  [linux] Pasted image 20251201183318.png
+  -> Pastedimage20251201183318.png
+
+  [linux] Pasted image 20251201183534.png
+  -> Pastedimage20251201183534.png
+
+  [linux] Pasted image 20251201183918.png
+  -> Pastedimage20251201183918.png
+
+  [linux] Pasted image 20251201184053.png
+  -> Pastedimage20251201184053.png
+
+  [linux] Pasted image 20251201184400.png
+  -> Pastedimage20251201184400.png
+
+  [linux] Pasted image 20251201184619.png
+  -> Pastedimage20251201184619.png
+
+  [linux] Pasted image 20251201184843.png
+  -> Pastedimage20251201184843.png
+
+  [linux] Pasted image 20251201184925.png
+  -> Pastedimage20251201184925.png
+
+  [linux] Pasted image 20251201185105.png
+  -> Pastedimage20251201185105.png
+
+  [linux] Pasted image 20251201185312.png
+  -> Pastedimage20251201185312.png
+
+  [linux] Pasted image 20251201185334.png
+  -> Pastedimage20251201185334.png
+
+  [linux] Pasted image 20251201185841.png
+  -> Pastedimage20251201185841.png
+
+  [linux] Pasted image 20251201185958.png
+  -> Pastedimage20251201185958.png
+
+  [linux] Pasted image 20251201190000.png
+  -> Pastedimage20251201190000.png
+
+  [linux] Pasted image 20251201190027.png
+  -> Pastedimage20251201190027.png
+
+  [seo] Pasted image 20260120173303.png
+  -> Pastedimage20260120173303.png
+
+  [seo] Pasted image 20260120173610.png
+  -> Pastedimage20260120173610.png
+
+  [seo] Pasted image 20260120174632.png
+  -> Pastedimage20260120174632.png
+
+  [seo] Pasted image 20260120174656.png
+  -> Pastedimage20260120174656.png
+
+  [seo] Pasted image 20260120174901.png
+  -> Pastedimage20260120174901.png
+
+  [seo] Pasted image 20260120175205.png
+  -> Pastedimage20260120175205.png
+
+  [seo] Pasted image 20260120175331.png
+  -> Pastedimage20260120175331.png
+
+  [seo] Pasted image 20260120175417.png
+  -> Pastedimage20260120175417.png
+
+  [seo] Pasted image 20260120175554.png
+  -> Pastedimage20260120175554.png
+
+  [seo] Pasted image 20260120180429.png
+  -> Pastedimage20260120180429.png
+
+  [seo] Pasted image 20260120180820.png
+  -> Pastedimage20260120180820.png
+
+  [seo] Pasted image 20260120181056.png
+  -> Pastedimage20260120181056.png
+
+  [seo] Pasted image 20260120184940.png
+  -> Pastedimage20260120184940.png
+
+  [seo] Pasted image 20260120190219.png
+  -> Pastedimage20260120190219.png
+
+  [seo] Pasted image 20260120190249.png
+  -> Pastedimage20260120190249.png
+
+  [seo] Pasted image 20260120195815.png
+  -> Pastedimage20260120195815.png
+
+  [seo] Pasted image 20260120195854.png
+  -> Pastedimage20260120195854.png
+
+  [seo] Pasted image 20260120210415.png
+  -> Pastedimage20260120210415.png
+
+  [seo] Pasted image 20260120210732.png
+  -> Pastedimage20260120210732.png
+
+  [seo] Pasted image 20260120210915.png
+  -> Pastedimage20260120210915.png
+
+  [seo] Pasted image 20260121190100.png
+  -> Pastedimage20260121190100.png
+
+============================================================
+Conversion Details:
+- Files converted: 18
+- Links converted: 246
+
+Paths:
+- Obsidian source: H:\Files\Obsidian\Handouts\VaultData\Attachments
+- Destination: static/images/category-name/
+- JSON tracking: processed_images.json
+- Log file: image_migration.log

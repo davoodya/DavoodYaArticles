@@ -1,0 +1,33 @@
+============================================================
+Front Matter Fix - Starting...
+============================================================
+  [FIXED] content\cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+  [FIXED] content\cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+  [FIXED] content\cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+  [FIXED] content\cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+  [FIXED] content\cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+  [FIXED] content\cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+  [FIXED] content\linux\60 Commands Hacker Should Know it.md
+  [FIXED] content\python\Dir-Buster-Module.md
+  [FIXED] content\seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+  [FIXED] content\seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+  [FIXED] content\seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+  [FIXED] content\seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+  [FIXED] content\seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+  [FIXED] content\seo\0-SEO-Theories\E15 - Page Rank.md
+  [FIXED] content\seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+  [FIXED] content\seo\0-SEO-Theories\E17 - Backlinks.md
+  [FIXED] content\seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+  [FIXED] content\tools\MSFConsole Commands.md
+  [FIXED] content\tools\Burpsuite\1-Install Burpsuite.md
+  [FIXED] content\tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+
+============================================================
+STATISTICS:
+============================================================
+Files scanned: 20
+Files fixed: 20
+Errors: 0
+============================================================
+
+[SUCCESS] Front matter fixed successfully!

@@ -1,12 +1,8 @@
 +++
-tags:
-  - SEO
-  - Webmaster
-  - Web_Developing
-Category: SEO, Webmaster, Web_Developing
-date = '2024-06-21T12:38:14+03:30'
+title = "Links in SEO(Internal & External)"
+tags = ["SEO", "Webmaster", "Web_Developing"]
+Category = "SEO, Webmaster, Web_Developing"
 draft = true
-title = 'Links in SEO'
 +++
 
 -------

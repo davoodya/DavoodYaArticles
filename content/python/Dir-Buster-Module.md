@@ -1,12 +1,8 @@
 +++
-tags:
-  - Python
-  - Pentest_Tools
-  - Red_Team
-Category: Cyber Security, Python
-date = '2025-06-21T12:38:14+03:30'
+title = "Dir-Buster-Module"
+tags = ["Python", "Pentest_Tools", "Red_Team"]
+Category = "Cyber Security, Python"
 draft = true
-title = 'Design and Develop Directory Buster Module'
 +++
 
 ----

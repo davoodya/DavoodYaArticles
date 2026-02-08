@@ -1,14 +1,14 @@
 """
-اسکریپت تبدیل و مدیریت تصاویر Obsidian به Hugo
-نویسنده: Davood Yahya
-تاریخ: 2026-02-08
+Image Migration Script - Step 1, 2 & 3
+Author: Davood Yahya
+Date: 2026-02-08
 
-این اسکریپت:
-1. تمام فایل‌های markdown را اسکن می‌کند
-2. لینک‌های تصویر Obsidian (![[image.png]]) را به فرمت استاندارد Markdown تبدیل می‌کند
-3. دایرکتوری‌های مورد نیاز را ایجاد می‌کند
-4. تصاویر را از پوشه Obsidian به پوشه static کپی می‌کند
-5. از تکرار عملیات جلوگیری می‌کند (اگر قبلاً انجام شده باشد)
+This script:
+1. Scans all markdown files for Obsidian image links
+2. Finds images in H:\Files\Obsidian\Handouts\VaultData\Attachments\
+3. Copies them to /static/images/category-name/
+4. Renames them by removing spaces (e.g., "Pasted image.png" -> "Pastedimage.png")
+5. Converts Obsidian format to standard Markdown with correct paths
 """
 
 import os
@@ -18,44 +18,47 @@ import json
 from pathlib import Path
 from datetime import datetime
 
-# ==================== تنظیمات ====================
+# ==================== SETTINGS ====================
 
-# مسیر پوشه تصاویر Obsidian
+# Obsidian images directory path
 OBSIDIAN_IMAGES_DIR = r"H:\Files\Obsidian\Handouts\VaultData\Attachments"
 
-# مسیر پوشه محتوا
+# Content folder path
 CONTENT_DIR = "content"
 
-# مسیر پوشه static برای تصاویر
+# Static images base path
 STATIC_IMAGES_BASE = "static/images"
 
-# فایل JSON برای ذخیره تصاویر پردازش شده
+# JSON file to track processed images
 PROCESSED_IMAGES_FILE = "processed_images.json"
 
-# فایل log
-LOG_FILE = "image_conversion.log"
+# Log file
+LOG_FILE = "image_migration.log"
 
-# Pattern برای پیدا کردن لینک‌های Obsidian
-# مثال: ![[Pasted image 20260205202337.png]]
+# Pattern to find Obsidian image links
+# Example: ![[Pasted image 20260205202337.png]]
 OBSIDIAN_IMAGE_PATTERN = r'!\[\[([^\]]+?\.(png|jpg|jpeg|gif|webp|svg|bmp|tiff))\]\]'
 
-# ==================== متغیرهای Global ====================
+# ==================== GLOBAL VARIABLES ====================
 
-processed_images = {}  # {image_name: category}
+# Track images: {original_name_with_spaces: {"new_name": "...", "category": "..."}}
+processed_images = {}
+
 stats = {
     'files_scanned': 0,
-    'files_modified': 0,
     'images_found': 0,
-    'images_converted': 0,
     'images_copied': 0,
+    'images_renamed': 0,
     'images_skipped': 0,
+    'files_converted': 0,
+    'links_converted': 0,
     'errors': 0
 }
 
-# ==================== توابع کمکی ====================
+# ==================== HELPER FUNCTIONS ====================
 
 def log_message(message, level="INFO"):
-    """لاگ پیام‌ها"""
+    """Log messages to console and file"""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     log_entry = f"[{timestamp}] [{level}] {message}"
     print(log_entry)
@@ -64,52 +67,42 @@ def log_message(message, level="INFO"):
         f.write(log_entry + '\n')
 
 def load_processed_images():
-    """بارگذاری لیست تصاویر پردازش شده"""
+    """Load previously processed images"""
     global processed_images
     
     if os.path.exists(PROCESSED_IMAGES_FILE):
         try:
             with open(PROCESSED_IMAGES_FILE, 'r', encoding='utf-8') as f:
                 processed_images = json.load(f)
-            log_message(f"تعداد {len(processed_images)} تصویر پردازش شده قبلی بارگذاری شد")
+            log_message(f"Loaded {len(processed_images)} previously processed images")
         except Exception as e:
-            log_message(f"خطا در بارگذاری فایل JSON: {e}", "ERROR")
+            log_message(f"Error loading JSON: {e}", "ERROR")
             processed_images = {}
     else:
         processed_images = {}
-        log_message("فایل JSON پردازش شده وجود ندارد - شروع از ابتدا")
+        log_message("No previous JSON file found - starting fresh")
 
 def save_processed_images():
-    """ذخیره لیست تصاویر پردازش شده"""
+    """Save processed images to JSON"""
     try:
         with open(PROCESSED_IMAGES_FILE, 'w', encoding='utf-8') as f:
             json.dump(processed_images, f, ensure_ascii=False, indent=2)
-        log_message(f"تعداد {len(processed_images)} تصویر در JSON ذخیره شد")
+        log_message(f"Saved {len(processed_images)} images to JSON")
     except Exception as e:
-        log_message(f"خطا در ذخیره فایل JSON: {e}", "ERROR")
+        log_message(f"Error saving JSON: {e}", "ERROR")
 
-def is_image_processed(image_name, category):
-    """بررسی اینکه آیا تصویر قبلاً پردازش شده است"""
-    return image_name in processed_images and processed_images[image_name] == category
-
-def mark_image_as_processed(image_name, category):
-    """علامت‌گذاری تصویر به عنوان پردازش شده"""
-    processed_images[image_name] = category
-
-def create_category_directory(category):
-    """ایجاد دایرکتوری برای دسته‌بندی"""
-    category_path = os.path.join(STATIC_IMAGES_BASE, category)
-    
-    if not os.path.exists(category_path):
-        os.makedirs(category_path, exist_ok=True)
-        log_message(f"دایرکتوری ایجاد شد: {category_path}")
-    
-    return category_path
+def remove_spaces_from_filename(filename):
+    """Remove all spaces from filename"""
+    # Split into name and extension
+    name, ext = os.path.splitext(filename)
+    # Remove spaces
+    name_no_spaces = name.replace(' ', '')
+    # Return filename without spaces
+    return name_no_spaces + ext
 
 def get_category_from_path(file_path):
-    """استخراج نام دسته‌بندی از مسیر فایل"""
-    # مثال: content/cyber-security/article.md -> cyber-security
-    # با پشتیبانی از فاصله در نام فایل/پوشه
+    """Extract category name from file path"""
+    # Example: content/cyber-security/article.md -> cyber-security
     parts = Path(file_path).parts
     
     if len(parts) >= 2 and parts[0] == 'content':
@@ -117,327 +110,456 @@ def get_category_from_path(file_path):
     
     return None
 
-def copy_image_from_obsidian(image_name, category):
-    """کپی تصویر از پوشه Obsidian به static"""
-    source_path = os.path.join(OBSIDIAN_IMAGES_DIR, image_name)
-    dest_dir = os.path.join(STATIC_IMAGES_BASE, category)
-    dest_path = os.path.join(dest_dir, image_name)
-    
-    # بررسی وجود فایل در Obsidian
-    if not os.path.exists(source_path):
-        log_message(f"❌ تصویر در Obsidian پیدا نشد: {image_name}", "WARNING")
-        stats['errors'] += 1
-        return False
-    
-    # بررسی اینکه آیا قبلاً کپی شده
-    if os.path.exists(dest_path):
-        # بررسی اندازه فایل‌ها برای اطمینان از یکسان بودن
-        if os.path.getsize(source_path) == os.path.getsize(dest_path):
-            log_message(f"⏩ تصویر از قبل موجود است: {image_name}")
-            stats['images_skipped'] += 1
+def is_image_already_processed(original_name, category):
+    """Check if image has been processed before"""
+    if original_name in processed_images:
+        data = processed_images[original_name]
+        if isinstance(data, dict):
+            return data.get('category') == category
+        else:
+            # Old format compatibility
             return True
+    return False
+
+def get_new_filename(original_name):
+    """Get new filename (without spaces) for an image"""
+    if original_name in processed_images:
+        data = processed_images[original_name]
+        if isinstance(data, dict):
+            return data.get('new_name', remove_spaces_from_filename(original_name))
+        else:
+            # Old format - data is the new name
+            return data
+    else:
+        # Generate new name by removing spaces
+        return remove_spaces_from_filename(original_name)
+
+def copy_and_rename_image(original_name, category):
+    """
+    Copy image from Obsidian to static/images/category-name/ and rename by removing spaces
     
-    # ایجاد دایرکتوری مقصد
-    create_category_directory(category)
+    Args:
+        original_name: Original filename (may contain spaces)
+        category: Category name for subdirectory
+        
+    Returns:
+        tuple: (success: bool, new_name: str)
+    """
+    # Generate new filename without spaces
+    new_name = remove_spaces_from_filename(original_name)
     
-    # کپی فایل
+    # Source path in Obsidian
+    source_path = os.path.join(OBSIDIAN_IMAGES_DIR, original_name)
+    
+    # Destination directory: static/images/category-name/
+    dest_dir = os.path.join(STATIC_IMAGES_BASE, category)
+    dest_path = os.path.join(dest_dir, new_name)
+    
+    # Check if source exists
+    if not os.path.exists(source_path):
+        log_message(f"  X Image not found in Obsidian: {original_name}", "WARNING")
+        stats['errors'] += 1
+        return False, None
+    
+    # Check if already copied
+    if os.path.exists(dest_path):
+        # Verify file size to ensure it's the same file
+        if os.path.getsize(source_path) == os.path.getsize(dest_path):
+            log_message(f"  > Already exists (skipped): {new_name}")
+            stats['images_skipped'] += 1
+            return True, new_name
+    
+    # Create static/images/category-name/ directory if it doesn't exist
+    if not os.path.exists(dest_dir):
+        os.makedirs(dest_dir, exist_ok=True)
+        log_message(f"+ Created directory: {dest_dir}")
+    
+    # Copy file
     try:
         shutil.copy2(source_path, dest_path)
-        log_message(f"✓ کپی شد: {image_name} → {category}/")
+        log_message(f"  + Copied: {original_name}")
+        log_message(f"    -> {new_name}")
         stats['images_copied'] += 1
-        return True
+        
+        # If name changed (had spaces)
+        if original_name != new_name:
+            stats['images_renamed'] += 1
+            log_message(f"    (Renamed: removed spaces)")
+        
+        return True, new_name
+        
     except Exception as e:
-        log_message(f"❌ خطا در کپی {image_name}: {e}", "ERROR")
+        log_message(f"  X Error copying {original_name}: {e}", "ERROR")
         stats['errors'] += 1
-        return False
+        return False, None
 
-def convert_markdown_file(file_path):
-    """تبدیل لینک‌های تصویر در یک فایل markdown"""
-    category = get_category_from_path(file_path)
-    
-    if not category:
-        log_message(f"⚠️  دسته‌بندی برای {file_path} پیدا نشد", "WARNING")
-        return
-    
-    stats['files_scanned'] += 1
-    
-    # خواندن محتوا
+def find_images_in_file(file_path):
+    """Find all Obsidian image references in a markdown file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
+        
+        # Find all image references
+        images = re.findall(OBSIDIAN_IMAGE_PATTERN, content, re.IGNORECASE)
+        
+        # Return list of image names (first group from regex)
+        return [img[0] for img in images]
+        
     except Exception as e:
-        log_message(f"❌ خطا در خواندن {file_path}: {e}", "ERROR")
+        log_message(f"X Error reading {file_path}: {e}", "ERROR")
         stats['errors'] += 1
+        return []
+
+def convert_markdown_file(file_path):
+    """Convert Obsidian image links to standard Markdown format"""
+    category = get_category_from_path(file_path)
+    
+    if not category:
+        log_message(f"Warning: No category found for {file_path}", "WARNING")
         return
     
-    # پیدا کردن تمام تصاویر
-    images = re.findall(OBSIDIAN_IMAGE_PATTERN, content, re.IGNORECASE)
-    
-    if not images:
-        return  # فایل بدون تصویر
-    
-    log_message(f"\n📄 {file_path}")
-    log_message(f"   دسته‌بندی: {category}")
-    log_message(f"   تعداد تصاویر: {len(images)}")
-    
-    modified = False
-    
-    # پردازش هر تصویر
-    for image_name, ext in images:
-        stats['images_found'] += 1
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
         
-        # بررسی اینکه آیا قبلاً پردازش شده
-        if is_image_processed(image_name, category):
-            log_message(f"   ⏩ از قبل پردازش شده: {image_name}")
-            continue
+        # Find all image references
+        images = re.findall(OBSIDIAN_IMAGE_PATTERN, content, re.IGNORECASE)
         
-        # مسیر جدید برای Hugo - فرمت استاندارد Markdown
-        # static/images/category_name/image.png
-        hugo_path = f"static/images/{category}/{image_name}"
+        if not images:
+            return  # No images in this file
         
-        # الگوی قدیمی و جدید
-        old_pattern = f"![[{image_name}]]"
-        new_pattern = f"![{image_name}]({hugo_path})"
+        modified = False
+        converted_count = 0
         
-        # جایگزینی در محتوا
-        if old_pattern in content:
-            content = content.replace(old_pattern, new_pattern)
-            modified = True
+        for image_name, ext in images:
+            # Get new filename (without spaces)
+            new_name = get_new_filename(image_name)
             
-            log_message(f"   ✓ تبدیل شد: {image_name}")
-            log_message(f"      از: {old_pattern}")
-            log_message(f"      به: {new_pattern}")
-            stats['images_converted'] += 1
+            # Old pattern: ![[Pasted image 20260205202337.png]]
+            old_pattern = f"![[{image_name}]]"
             
-            # ایجاد دایرکتوری برای دسته‌بندی
-            create_category_directory(category)
+            # New pattern: ![Alt text](/images/category-name/Pastedimage20260205202337.png)
+            # Path starts with /images/ (not /static/images/)
+            new_pattern = f"![Alt text](/images/{category}/{new_name})"
             
-            # ذخیره اطلاعات تصویر برای کپی بعدی
-            mark_image_as_processed(image_name, category)
-    
-    # ذخیره فایل اگر تغییر کرده
-    if modified:
-        try:
+            # Replace in content
+            if old_pattern in content:
+                content = content.replace(old_pattern, new_pattern)
+                modified = True
+                converted_count += 1
+                log_message(f"    Converted: {image_name}")
+                log_message(f"    -> {new_pattern}")
+        
+        # Save file if modified
+        if modified:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            log_message(f"   💾 فایل ذخیره شد")
-            stats['files_modified'] += 1
-        except Exception as e:
-            log_message(f"   ❌ خطا در ذخیره {file_path}: {e}", "ERROR")
-            stats['errors'] += 1
+            log_message(f"  [Saved] {converted_count} link(s) converted")
+            stats['files_converted'] += 1
+            stats['links_converted'] += converted_count
+            
+    except Exception as e:
+        log_message(f"X Error converting {file_path}: {e}", "ERROR")
+        stats['errors'] += 1
 
-def scan_content_directory():
-    """اسکن تمام فایل‌های markdown در content"""
+def scan_and_copy_images():
+    """Scan all markdown files and copy images"""
     log_message("\n" + "="*60)
-    log_message("🔍 مرحله 1: اسکن فایل‌های markdown و تبدیل فرمت...")
+    log_message("PHASE 1: Scanning markdown files for images...")
     log_message("="*60)
     
     if not os.path.exists(CONTENT_DIR):
-        log_message(f"❌ پوشه {CONTENT_DIR} وجود ندارد!", "ERROR")
+        log_message(f"X Directory {CONTENT_DIR} does not exist!", "ERROR")
         return
     
-    # پیمایش تمام فایل‌های .md
+    # Collect images with their categories: {image_name: [categories]}
+    images_by_category = {}
+    
+    # Walk through all .md files
     for root, dirs, files in os.walk(CONTENT_DIR):
         for file in files:
             if file.endswith('.md') and not file.startswith('_'):
                 file_path = os.path.join(root, file)
-                convert_markdown_file(file_path)
-
-def copy_all_processed_images():
-    """کپی تمام تصاویر پردازش شده از Obsidian"""
-    log_message("\n" + "="*60)
-    log_message("🔍 مرحله 2: کپی تصاویر از Obsidian...")
+                stats['files_scanned'] += 1
+                
+                category = get_category_from_path(file_path)
+                if not category:
+                    continue
+                
+                # Find images in this file
+                images = find_images_in_file(file_path)
+                
+                if images:
+                    log_message(f"\n[File] {file_path}")
+                    log_message(f"  Category: {category}")
+                    log_message(f"  Found {len(images)} image(s)")
+                    
+                    for img in images:
+                        if img not in images_by_category:
+                            images_by_category[img] = set()
+                        images_by_category[img].add(category)
+                        stats['images_found'] += 1
+    
+    # Summary of found images
+    unique_images = len(images_by_category)
+    log_message(f"\n" + "="*60)
+    log_message(f"SUMMARY: Found {stats['images_found']} image references")
+    log_message(f"         ({unique_images} unique images)")
     log_message("="*60)
     
-    if not processed_images:
-        log_message("هیچ تصویری برای کپی وجود ندارد")
+    # Now copy all images to their respective categories
+    log_message("\n" + "="*60)
+    log_message("PHASE 2: Copying images from Obsidian...")
+    log_message("="*60)
+    
+    if not images_by_category:
+        log_message("No images to copy")
         return
     
-    log_message(f"تعداد {len(processed_images)} تصویر برای کپی")
-    
-    # پیمایش تمام تصاویر پردازش شده
-    for image_name, category in processed_images.items():
-        copy_image_from_obsidian(image_name, category)
+    for original_name, categories in sorted(images_by_category.items()):
+        # If image is used in multiple categories, use the first one
+        category = sorted(categories)[0]
+        
+        if len(categories) > 1:
+            log_message(f"\n  Note: {original_name} used in multiple categories: {categories}")
+            log_message(f"        Using category: {category}")
+        
+        # Check if already processed
+        if is_image_already_processed(original_name, category):
+            data = processed_images[original_name]
+            if isinstance(data, dict):
+                new_name = data.get('new_name')
+            else:
+                new_name = data
+            log_message(f"  > Already processed: {original_name} -> {new_name}")
+            stats['images_skipped'] += 1
+            continue
+        
+        # Copy and rename
+        success, new_name = copy_and_rename_image(original_name, category)
+        
+        if success and new_name:
+            # Mark as processed
+            processed_images[original_name] = {
+                'new_name': new_name,
+                'category': category
+            }
 
 def verify_obsidian_directory():
-    """بررسی وجود دایرکتوری Obsidian"""
+    """Verify Obsidian directory exists"""
     if not os.path.exists(OBSIDIAN_IMAGES_DIR):
-        log_message(f"❌ دایرکتوری Obsidian پیدا نشد: {OBSIDIAN_IMAGES_DIR}", "ERROR")
-        log_message("لطفاً مسیر را در اسکریپت بررسی کنید", "ERROR")
+        log_message(f"X Obsidian directory not found: {OBSIDIAN_IMAGES_DIR}", "ERROR")
+        log_message("Please check the path in the script", "ERROR")
         return False
     
-    log_message(f"✓ دایرکتوری Obsidian پیدا شد: {OBSIDIAN_IMAGES_DIR}")
+    log_message(f"+ Obsidian directory found: {OBSIDIAN_IMAGES_DIR}")
     
-    # شمارش تصاویر موجود
+    # Count available images
     image_extensions = ('.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg', '.bmp', '.tiff')
     try:
         image_count = len([f for f in os.listdir(OBSIDIAN_IMAGES_DIR) 
                            if f.lower().endswith(image_extensions)])
-        log_message(f"✓ تعداد تصاویر موجود در Obsidian: {image_count}")
+        log_message(f"+ Total images in Obsidian: {image_count}")
     except Exception as e:
-        log_message(f"⚠️  خطا در خواندن تصاویر Obsidian: {e}", "WARNING")
+        log_message(f"Warning: Error reading Obsidian images: {e}", "WARNING")
     
     return True
 
-def create_base_directories():
-    """ایجاد دایرکتوری پایه برای تصاویر"""
-    if not os.path.exists(STATIC_IMAGES_BASE):
-        os.makedirs(STATIC_IMAGES_BASE, exist_ok=True)
-        log_message(f"✓ دایرکتوری پایه ایجاد شد: {STATIC_IMAGES_BASE}")
-
-def print_statistics():
-    """نمایش آمار نهایی"""
+def convert_all_markdown_files():
+    """Convert Obsidian image links to Markdown in all files"""
     log_message("\n" + "="*60)
-    log_message("📊 آمار نهایی:")
-    log_message("="*60)
-    log_message(f"📁 فایل‌های اسکن شده: {stats['files_scanned']}")
-    log_message(f"📝 فایل‌های ویرایش شده: {stats['files_modified']}")
-    log_message(f"🖼️  تصاویر پیدا شده: {stats['images_found']}")
-    log_message(f"🔄 تصاویر تبدیل شده: {stats['images_converted']}")
-    log_message(f"📦 تصاویر کپی شده: {stats['images_copied']}")
-    log_message(f"⏩ تصاویر رد شده (از قبل موجود): {stats['images_skipped']}")
-    log_message(f"❌ خطاها: {stats['errors']}")
-    log_message(f"📋 تعداد کل تصاویر در JSON: {len(processed_images)}")
+    log_message("PHASE 3: Converting image links in markdown files...")
     log_message("="*60)
     
-    if stats['images_converted'] > 0 or stats['images_copied'] > 0:
-        log_message("\n✅ تبدیل موفقیت‌آمیز بود!")
-        log_message(f"📋 تصاویر پردازش شده در: {PROCESSED_IMAGES_FILE}")
-        log_message(f"📋 لاگ کامل در: {LOG_FILE}")
-    else:
-        log_message("\nℹ️  هیچ تصویر جدیدی برای تبدیل پیدا نشد")
-
-def create_summary_report():
-    """ایجاد گزارش خلاصه"""
-    report_file = "image_conversion_report.txt"
-    
-    with open(report_file, 'w', encoding='utf-8') as f:
-        f.write("گزارش تبدیل تصاویر Obsidian به Hugo\n")
-        f.write("="*60 + "\n")
-        f.write(f"تاریخ: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write("="*60 + "\n\n")
-        
-        f.write("آمار:\n")
-        f.write(f"- فایل‌های اسکن شده: {stats['files_scanned']}\n")
-        f.write(f"- فایل‌های ویرایش شده: {stats['files_modified']}\n")
-        f.write(f"- تصاویر پیدا شده: {stats['images_found']}\n")
-        f.write(f"- تصاویر تبدیل شده: {stats['images_converted']}\n")
-        f.write(f"- تصاویر کپی شده: {stats['images_copied']}\n")
-        f.write(f"- تصاویر رد شده: {stats['images_skipped']}\n")
-        f.write(f"- خطاها: {stats['errors']}\n")
-        f.write(f"- تعداد کل تصاویر در JSON: {len(processed_images)}\n\n")
-        
-        f.write("تصاویر پردازش شده بر اساس دسته‌بندی:\n")
-        f.write("-"*60 + "\n")
-        
-        # گروه‌بندی بر اساس دسته‌بندی
-        categories = {}
-        for img, cat in processed_images.items():
-            if cat not in categories:
-                categories[cat] = []
-            categories[cat].append(img)
-        
-        for cat, imgs in sorted(categories.items()):
-            f.write(f"\n{cat.upper()} ({len(imgs)} تصویر):\n")
-            for img in sorted(imgs):
-                f.write(f"  - {img}\n")
-        
-        # اطلاعات مسیر تصاویر
-        f.write("\n" + "="*60 + "\n")
-        f.write("مسیرها:\n")
-        f.write(f"- Obsidian: {OBSIDIAN_IMAGES_DIR}\n")
-        f.write(f"- Static: {STATIC_IMAGES_BASE}\n")
-        f.write(f"- JSON: {PROCESSED_IMAGES_FILE}\n")
-        f.write(f"- Log: {LOG_FILE}\n")
-    
-    log_message(f"\n📄 گزارش خلاصه ایجاد شد: {report_file}")
-
-def verify_paths():
-    """بررسی و نمایش اطلاعات مسیرها"""
-    log_message("\n" + "="*60)
-    log_message("📂 بررسی مسیرها:")
-    log_message("="*60)
-    
-    # مسیر فعلی
-    current_dir = os.getcwd()
-    log_message(f"📍 دایرکتوری فعلی: {current_dir}")
-    
-    # بررسی content
-    content_path = os.path.join(current_dir, CONTENT_DIR)
-    if os.path.exists(content_path):
-        log_message(f"✓ دایرکتوری content: {content_path}")
-    else:
-        log_message(f"❌ دایرکتوری content پیدا نشد: {content_path}", "ERROR")
-    
-    # بررسی static
-    static_path = os.path.join(current_dir, STATIC_IMAGES_BASE)
-    log_message(f"📁 دایرکتوری static: {static_path}")
-    
-    # بررسی Obsidian
-    if os.path.exists(OBSIDIAN_IMAGES_DIR):
-        log_message(f"✓ دایرکتوری Obsidian: {OBSIDIAN_IMAGES_DIR}")
-    else:
-        log_message(f"❌ دایرکتوری Obsidian پیدا نشد: {OBSIDIAN_IMAGES_DIR}", "ERROR")
-    
-    log_message("="*60)
-
-# ==================== تابع اصلی ====================
-
-def main():
-    """تابع اصلی"""
-    print("\n" + "="*60)
-    print("🖼️  ابزار تبدیل تصاویر Obsidian به Hugo")
-    print("="*60)
-    print(f"نویسنده: Davood Yahya")
-    print(f"تاریخ: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print("="*60 + "\n")
-    
-    # شروع لاگ
-    log_message("="*60)
-    log_message("شروع فرآیند تبدیل تصاویر")
-    log_message("="*60)
-    
-    # بررسی مسیرها
-    verify_paths()
-    
-    # بررسی دایرکتوری Obsidian
-    if not verify_obsidian_directory():
-        log_message("\n❌ فرآیند متوقف شد به دلیل عدم وجود دایرکتوری Obsidian", "ERROR")
+    if not os.path.exists(CONTENT_DIR):
+        log_message(f"X Directory {CONTENT_DIR} does not exist!", "ERROR")
         return
     
-    # ایجاد دایرکتوری‌های پایه
-    create_base_directories()
+    # Walk through all .md files
+    for root, dirs, files in os.walk(CONTENT_DIR):
+        for file in files:
+            if file.endswith('.md') and not file.startswith('_'):
+                file_path = os.path.join(root, file)
+                
+                # Get category
+                category = get_category_from_path(file_path)
+                if not category:
+                    continue
+                
+                # Find images in this file first
+                images = find_images_in_file(file_path)
+                
+                if images:
+                    log_message(f"\n[File] {file_path}")
+                    log_message(f"  Category: {category}")
+                    convert_markdown_file(file_path)
+
+def print_statistics():
+    """Display final statistics"""
+    log_message("\n" + "="*60)
+    log_message("FINAL STATISTICS:")
+    log_message("="*60)
+    log_message(f"Files scanned: {stats['files_scanned']}")
+    log_message(f"Image references found: {stats['images_found']}")
+    log_message(f"Images copied: {stats['images_copied']}")
+    log_message(f"Images renamed (spaces removed): {stats['images_renamed']}")
+    log_message(f"Images skipped (already exist): {stats['images_skipped']}")
+    log_message(f"Files converted: {stats['files_converted']}")
+    log_message(f"Links converted: {stats['links_converted']}")
+    log_message(f"Errors: {stats['errors']}")
+    log_message(f"Total processed images: {len(processed_images)}")
+    log_message("="*60)
     
-    # بارگذاری تصاویر پردازش شده قبلی
+    if stats['images_copied'] > 0 or stats['files_converted'] > 0:
+        log_message("\n[SUCCESS] Process completed successfully!")
+        log_message(f"Images saved to: {STATIC_IMAGES_BASE}/category-name/")
+        log_message(f"Tracking data: {PROCESSED_IMAGES_FILE}")
+        log_message(f"Full log: {LOG_FILE}")
+    else:
+        log_message("\n[INFO] No new images to process")
+
+def create_summary_report():
+    """Create a summary report"""
+    report_file = "image_migration_report.txt"
+    
+    with open(report_file, 'w', encoding='utf-8') as f:
+        f.write("Image Migration Report - Phase 1 & 2\n")
+        f.write("="*60 + "\n")
+        f.write(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write("="*60 + "\n\n")
+        
+        f.write("Statistics:\n")
+        f.write(f"- Files scanned: {stats['files_scanned']}\n")
+        f.write(f"- Image references found: {stats['images_found']}\n")
+        f.write(f"- Images copied: {stats['images_copied']}\n")
+        f.write(f"- Images renamed: {stats['images_renamed']}\n")
+        f.write(f"- Images skipped: {stats['images_skipped']}\n")
+        f.write(f"- Errors: {stats['errors']}\n")
+        f.write(f"- Total processed: {len(processed_images)}\n\n")
+        
+        f.write("Processed Images:\n")
+        f.write("-"*60 + "\n")
+        
+        for original, data in sorted(processed_images.items()):
+            if isinstance(data, dict):
+                new_name = data.get('new_name', original)
+                category = data.get('category', 'unknown')
+                if original != new_name:
+                    f.write(f"  [{category}] {original}\n  -> {new_name}\n\n")
+                else:
+                    f.write(f"  [{category}] {original} (no rename needed)\n\n")
+            else:
+                # Old format
+                if original != data:
+                    f.write(f"  {original}\n  -> {data}\n\n")
+                else:
+                    f.write(f"  {original} (no rename needed)\n\n")
+        
+        f.write("="*60 + "\n")
+        f.write("Conversion Details:\n")
+        f.write(f"- Files converted: {stats['files_converted']}\n")
+        f.write(f"- Links converted: {stats['links_converted']}\n\n")
+        
+        f.write("Paths:\n")
+        f.write(f"- Obsidian source: {OBSIDIAN_IMAGES_DIR}\n")
+        f.write(f"- Destination: {STATIC_IMAGES_BASE}/category-name/\n")
+        f.write(f"- JSON tracking: {PROCESSED_IMAGES_FILE}\n")
+        f.write(f"- Log file: {LOG_FILE}\n")
+    
+    log_message(f"\n[Report] Summary report created: {report_file}")
+
+def verify_paths():
+    """Verify and display path information"""
+    log_message("\n" + "="*60)
+    log_message("PATH VERIFICATION:")
+    log_message("="*60)
+    
+    current_dir = os.getcwd()
+    log_message(f"Current directory: {current_dir}")
+    
+    # Check content directory
+    content_path = os.path.join(current_dir, CONTENT_DIR)
+    if os.path.exists(content_path):
+        log_message(f"+ Content directory: {content_path}")
+    else:
+        log_message(f"X Content directory not found: {content_path}", "ERROR")
+    
+    # Check static directory (will be created if needed)
+    static_path = os.path.join(current_dir, STATIC_IMAGES_BASE)
+    if os.path.exists(static_path):
+        log_message(f"+ Static directory: {static_path}")
+    else:
+        log_message(f"  Static directory (will be created): {static_path}")
+    
+    # Check Obsidian directory
+    if os.path.exists(OBSIDIAN_IMAGES_DIR):
+        log_message(f"+ Obsidian directory: {OBSIDIAN_IMAGES_DIR}")
+    else:
+        log_message(f"X Obsidian directory not found: {OBSIDIAN_IMAGES_DIR}", "ERROR")
+    
+    log_message("="*60)
+
+# ==================== MAIN FUNCTION ====================
+
+def main():
+    """Main function"""
+    print("\n" + "="*60)
+    print("Image Migration Tool - Complete")
+    print("="*60)
+    print(f"Author: Davood Yahya")
+    print(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("="*60)
+    print("\nThis script will:")
+    print("1. Find all images used in markdown files")
+    print("2. Copy them from Obsidian to /static/images/category-name/")
+    print("3. Remove spaces from filenames")
+    print("4. Convert Obsidian links to standard Markdown")
+    print("   Format: ![Alt text](/images/category-name/image.png)")
+    print("="*60 + "\n")
+    
+    # Start logging
+    log_message("="*60)
+    log_message("Starting image migration process")
+    log_message("="*60)
+    
+    # Verify paths
+    verify_paths()
+    
+    # Verify Obsidian directory
+    if not verify_obsidian_directory():
+        log_message("\nX Process stopped: Obsidian directory not found", "ERROR")
+        return
+    
+    # Load previously processed images
     load_processed_images()
     
-    # مرحله 1: اسکن و تبدیل فایل‌های markdown
-    scan_content_directory()
+    # Phase 1 & 2: Scan and copy images
+    scan_and_copy_images()
     
-    # ذخیره تصاویر پردازش شده بعد از تبدیل
+    # Save processed images after copying
     save_processed_images()
     
-    # مرحله 2: کپی تصاویر از Obsidian
-    copy_all_processed_images()
+    # Phase 3: Convert markdown files
+    convert_all_markdown_files()
     
-    # نمایش آمار
+    # Display statistics
     print_statistics()
     
-    # ایجاد گزارش خلاصه
-    if stats['images_converted'] > 0 or len(processed_images) > 0:
+    # Create summary report
+    if stats['images_copied'] > 0 or len(processed_images) > 0:
         create_summary_report()
     
-    log_message("\n✅ فرآیند به پایان رسید")
+    log_message("\n[COMPLETE] Process finished")
     log_message("="*60 + "\n")
 
 if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\n\n⚠️  فرآیند توسط کاربر متوقف شد")
-        log_message("فرآیند توسط کاربر متوقف شد", "WARNING")
+        print("\n\nWarning: Process stopped by user")
+        log_message("Process stopped by user", "WARNING")
     except Exception as e:
-        print(f"\n\n❌ خطای غیرمنتظره: {e}")
-        log_message(f"خطای غیرمنتظره: {e}", "ERROR")
+        print(f"\n\nX Unexpected error: {e}")
+        log_message(f"Unexpected error: {e}", "ERROR")
         import traceback
         log_message(traceback.format_exc(), "ERROR")

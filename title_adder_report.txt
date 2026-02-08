@@ -1,0 +1,85 @@
+Title Adder Report
+============================================================
+Date: 2026-02-08 12:51:52
+============================================================
+
+Statistics:
+- Files scanned: 20
+- Files modified: 3
+- Titles added: 3
+- Titles existed: 17
+- Errors: 0
+- Total articles: 20
+
+Article Titles:
+------------------------------------------------------------
+
+CYBER-SECURITY (6 articles):
+  [cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md]
+  Title: SANS-401.0 Introduction & Prepare Lab
+
+  [cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md]
+  Title: SANS-401-Networking and Protocols (401.1)
+
+  [cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md]
+  Title: SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)
+
+  [cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md]
+  Title: SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)
+
+  [cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md]
+  Title: SANS-401-Defense-in-Depth (401.2)
+
+  [cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md]
+  Title: SANS-401-Password Cracking
+
+
+LINUX (1 articles):
+  [linux\60 Commands Hacker Should Know it.md]
+  Title: 60 Commands Hacker Should Know it
+
+
+PYTHON (1 articles):
+  [python\Dir-Buster-Module.md]
+  Title: Dir-Buster-Module
+
+
+SEO (9 articles):
+  [seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md]
+  Title: SEO Intro, Search Engines, Keywords
+
+  [seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md]
+  Title: Content SEO, Important Website Pages
+
+  [seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md]
+  Title: Woorank(Check Website SEO)
+
+  [seo\0-SEO-Theories\E13 - Good Contents for SEO.md]
+  Title: Good Contents for SEO
+
+  [seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md]
+  Title: Links in SEO(Internal & External)
+
+  [seo\0-SEO-Theories\E15 - Page Rank.md]
+  Title: Page Rank
+
+  [seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md]
+  Title: Page Authority & Domain Authority
+
+  [seo\0-SEO-Theories\E17 - Backlinks.md]
+  Title: Backlinks
+
+  [seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md]
+  Title: Find Keywords, Website Structure & Necessary HTML Tags for SEO
+
+
+TOOLS (3 articles):
+  [tools\Burpsuite\1-Install Burpsuite.md]
+  Title: 1-Install Burpsuite
+
+  [tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md]
+  Title: 2-Change HTTP Data & Bypass Parameters
+
+  [tools\MSFConsole Commands.md]
+  Title: MSFConsole Commands
+

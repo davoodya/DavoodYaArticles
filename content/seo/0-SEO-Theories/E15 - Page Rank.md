@@ -1,12 +1,8 @@
 +++
-tags:
-  - SEO
-  - Webmaster
-  - Web_Developing
-Category: SEO, Webmaster, Web_Developing
-date = '2024-06-21T12:38:14+03:30'
+title = "Page Rank"
+tags = ["SEO", "Webmaster", "Web_Developing"]
+Category = "SEO, Webmaster, Web_Developing"
 draft = true
-title = 'What is Page Rank?'
 +++
 
 -------
@@ -30,9 +26,9 @@ title = 'What is Page Rank?'
 برای بررسی Page Rank ابزار های متعددی وجود دارد که در زیر به برخی از آنها اشاره میکنیم:
 1. [checkpagerank](https://checkpagerank.net)
 	1. https://checkpagerank.net
-		1. ![[Pasted image 20260120195815.png]]
+		1. ![Alt text](/images/seo/Pastedimage20260120195815.png)
 	2. کافیست که URL صفحه را وارد کنیم و بر روی Submit کلیک کنیم تا امتیاز Page Rank را مشاهده کنیم:
-		1. ![[Pasted image 20260120195854.png]]
+		1. ![Alt text](/images/seo/Pastedimage20260120195854.png)
 ### How Increase Page Rank
 1. **تعامل لینک با وبسایت های دیگر بصورت دو طرفه:**
 	1. یعنی مثلا `وبسایت x` لینک `وبسایت y` را قرار میدهد و همچنین `وبسایت y` هم لینک `وبسایت x` را در خود قرار میدهد.

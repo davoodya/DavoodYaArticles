@@ -1,11 +1,8 @@
 +++
-tags:
-  - CyberSecurity
-  - Pentest
-Category: Cyber Security
-date = '2024-06-20T12:38:14+03:30'
+title = "SANS-401-Defense-in-Depth (401.2)"
+tags = ["CyberSecurity", "Pentest"]
+Category = "Cyber Security"
 draft = true
-title = 'SANS-401.4 Defense-in-Depth'
 +++
 
 -------
@@ -36,10 +33,10 @@ title = 'SANS-401.4 Defense-in-Depth'
 	2. هر شناسایی که صورت گرفت باید بلافاصله واکنشی مناسب با آن انجام شود.
 	3. برنامه برای مقابله و مسدود کردن حملات بلافاصله پس از شناسایی حمله از مزیت های Solution است که میخواهد Defense-in-Depth را عرضه کند.
 3. *تصویر:*
-	1. ![[Pasted image 20240621173423.png]]
+	1. ![Alt text](/images/cyber-security/Pastedimage20240621173423.png)
 #### Key Focus of Risk
 در مبحث Defense-in-Depth هم رعایت مثلث *CIA(Confidentiality, Integrity, Availability)* از واجبات است و بر حسب هر پروژه میتوان ضریب هر ضلع را افزایش و کاهش داد:
-	![[Pasted image 20240621173706.png]]
+	![Alt text](/images/cyber-security/Pastedimage20240621173706.png)
 - *Confidentiality*
 	- محرمانه بودن اطلاعات برای جلوگیری از دسترسی های غیر مجاز
 - *Integrity*
@@ -71,7 +68,7 @@ title = 'SANS-401.4 Defense-in-Depth'
 6. Token Based
 	1. در این روش لیستی نوشته میشود که دسترسی هر Principle در آن لیست مشخص میشود.
 7. Image
-	1. ![[Pasted image 20240621180821.png]]
+	1. ![Alt text](/images/cyber-security/Pastedimage20240621180821.png)
 #### Managing Access
 پس از انتخاب تکنیک مناسب باید یوزر ها در دسته های زیر دسته بندی کنیم:
 1. Account Administration
@@ -85,7 +82,7 @@ title = 'SANS-401.4 Defense-in-Depth'
 	1. برای این گروه که شامل یوزر های استفاده کننده است باید تمام دسترسی های غیر لازم را برداریم و فقط دسترسی هایی که نیاز دارند مانند read, write برای آنها در موقع نیاز صادر شود.
 	2. اینکار اصولا بوسیله تیم Monitoring انجام میشود.
 5. *Image:*
-	1. ![[Pasted image 20240621181416.png]]
+	1. ![Alt text](/images/cyber-security/Pastedimage20240621181416.png)
 #### Single-Sign-On (SSO)
 *از این تکنیک برای احراز هویت کاربران و مدیریت آن استفاده میشود که یکی از بهترین روش ها هم محسوب میشود:*
 - در این روش یوزر با یکبار لاگین میتواند به تمام سرویس های آن مجموعه دسترسی داشته باشد.
@@ -93,12 +90,12 @@ title = 'SANS-401.4 Defense-in-Depth'
 - در این روش Credential وارد شده یوزر فقط یکبار اعتبار دارد و ذخیره هم نمیشود.
 - این روش را میتوانیم با Multi-Factor-Authentication هم پیاده سازی کنیم.
 - *تصویر:*
-	- ![[Pasted image 20240621181800.png]]
+	- ![Alt text](/images/cyber-security/Pastedimage20240621181800.png)
 ### Password Management
 #### Whats Password Cracking?
 با استفاده از ابزار های کرک پسورد مانند John the Ripper و یا استفاده از روش های کرک پسورد مانند Rainbow Table میتوانیم پسورد هایی که بصورت plain text و یا hash شده ذخیره شده اند را کرک کنیم. 
 این کرک میتواند براساس Wordlist و یا بصورت کور Bruteforce باشد.
-	![[Pasted image 20240621182040.png]]
+	![Alt text](/images/cyber-security/Pastedimage20240621182040.png)
 #### Password Cracker Methods
 1. *Dictionary Attack*
 	1. حمله با استفاده از یک wordlist, pass list انجام میشود.
@@ -109,13 +106,13 @@ title = 'SANS-401.4 Defense-in-Depth'
 4. *Pre-Computing Brute-Force Attacks (Rainbow Tables)*
 	1. در این نوع حمله Bruteforce بر اساس الگوریتم Rainbow و دیتابیس Rainbow Table انجام میشود که میتواند سرعت کرک پسورد را بسیار کاهش دهد.
 5. Image:
-	1. ![[Pasted image 20240621182546.png]]
+	1. ![Alt text](/images/cyber-security/Pastedimage20240621182546.png)
 #### Password Cracker Tools
 ##### John the Ripper
 این ابزار که در CLI استفاده میشود، یکی از ابزار های مهمی که در Password Cracking استفاده میشود John the Ripper است. در ادامه در آزمایشگاه با این ابزار کار میکنیم.
 ##### Cain
 یکی از ابزار های دیگر برای کرک پسورد Cain است که بصورت GUI و در ویندوز استفاده میشود. از این ابزار برای کرک پسورد های ویندوزی با هش NTLM بسیار استفاده میشود. 
-	![[Pasted image 20240621182838.png]]
+	![Alt text](/images/cyber-security/Pastedimage20240621182838.png)
 در واقع میتوان دیتابیس LDAP را در ویندوز برداریم و سپس با این دستور پسورد تمام یوزر های درون اکتیو دایرکتوری را کرک کنیم.
 این ابزار میتواند از هر دو روش Dictionary و Bruteforce برای حملات خود استفاده کند.
 #### Protect Against Password Cracking
@@ -139,6 +136,6 @@ title = 'SANS-401.4 Defense-in-Depth'
 		3. کاهش هزینه های پیاده سازی و
 		4. کاهش هزینه های نگهداری 
 	5. *تصویر:*
-			1. ![[Pasted image 20240621184130.png]]
+			1. ![Alt text](/images/cyber-security/Pastedimage20240621184130.png)
 
 ### !

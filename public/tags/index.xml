@@ -2,24 +2,122 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on مقالات داوود یحیی – Davood Yahya Articles</title>
-    <link>http://localhost:50393/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on مقالات داوود یحیی – Davood Yahya Articles</description>
     <generator>Hugo</generator>
     <language>fa</language>
-    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:50393/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Jun 2024 12:38:14 +0330</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CyberSecurity</title>
-      <link>http://localhost:50393/tags/cybersecurity/</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:50393/tags/cybersecurity/</guid>
+      <link>http://localhost:1313/tags/cybersecurity/</link>
+      <pubDate>Thu, 20 Jun 2024 12:38:14 +0330</pubDate>
+      <guid>http://localhost:1313/tags/cybersecurity/</guid>
       <description></description>
     </item>
     <item>
-      <title>Security</title>
-      <link>http://localhost:50393/tags/security/</link>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:50393/tags/security/</guid>
+      <title>Pentest</title>
+      <link>http://localhost:1313/tags/pentest/</link>
+      <pubDate>Thu, 20 Jun 2024 12:38:14 +0330</pubDate>
+      <guid>http://localhost:1313/tags/pentest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>, Readteam</title>
+      <link>http://localhost:1313/tags/-readteam/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/-readteam/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bug_Bounty</title>
+      <link>http://localhost:1313/tags/bug_bounty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/bug_bounty/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Burpsuite</title>
+      <link>http://localhost:1313/tags/burpsuite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/burpsuite/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Command_Line</title>
+      <link>http://localhost:1313/tags/command_line/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/command_line/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/tags/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Metasploit</title>
+      <link>http://localhost:1313/tags/metasploit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/metasploit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pentest_Tool</title>
+      <link>http://localhost:1313/tags/pentest_tool/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/pentest_tool/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pentest_Tools</title>
+      <link>http://localhost:1313/tags/pentest_tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/pentest_tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Red_Team</title>
+      <link>http://localhost:1313/tags/red_team/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/red_team/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SEO</title>
+      <link>http://localhost:1313/tags/seo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/seo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web_Developing</title>
+      <link>http://localhost:1313/tags/web_developing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/web_developing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web_Pentest</title>
+      <link>http://localhost:1313/tags/web_pentest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/web_pentest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webmaster</title>
+      <link>http://localhost:1313/tags/webmaster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/webmaster/</guid>
       <description></description>
     </item>
   </channel>

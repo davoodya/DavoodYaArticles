@@ -1,0 +1,1436 @@
+[2026-02-08 12:18:22] [INFO] ============================================================
+[2026-02-08 12:18:22] [INFO] Starting image migration process
+[2026-02-08 12:18:22] [INFO] ============================================================
+[2026-02-08 12:18:22] [INFO] 
+============================================================
+[2026-02-08 12:18:22] [INFO] PATH VERIFICATION:
+[2026-02-08 12:18:22] [INFO] ============================================================
+[2026-02-08 12:18:22] [INFO] Current directory: H:\Repo\Hugo\davoodya
+[2026-02-08 12:18:22] [INFO] + Content directory: H:\Repo\Hugo\davoodya\content
+[2026-02-08 12:18:22] [INFO] + Static directory: H:\Repo\Hugo\davoodya\static/images
+[2026-02-08 12:18:22] [INFO] + Obsidian directory: H:\Files\Obsidian\Handouts\VaultData\Attachments
+[2026-02-08 12:18:22] [INFO] ============================================================
+[2026-02-08 12:18:22] [INFO] + Obsidian directory found: H:\Files\Obsidian\Handouts\VaultData\Attachments
+[2026-02-08 12:18:22] [INFO] + Total images in Obsidian: 11084
+[2026-02-08 12:18:22] [INFO] No previous JSON file found - starting fresh
+[2026-02-08 12:18:22] [INFO] 
+============================================================
+[2026-02-08 12:18:22] [INFO] PHASE 1: Scanning markdown files for images...
+[2026-02-08 12:18:22] [INFO] ============================================================
+[2026-02-08 12:18:22] [INFO] 
+[File] content\cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+[2026-02-08 12:18:22] [INFO]   Category: cyber-security
+[2026-02-08 12:18:22] [INFO]   Found 8 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+[2026-02-08 12:18:22] [INFO]   Category: cyber-security
+[2026-02-08 12:18:22] [INFO]   Found 13 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+[2026-02-08 12:18:22] [INFO]   Category: cyber-security
+[2026-02-08 12:18:22] [INFO]   Found 14 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+[2026-02-08 12:18:22] [INFO]   Category: cyber-security
+[2026-02-08 12:18:22] [INFO]   Found 12 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+[2026-02-08 12:18:22] [INFO]   Category: cyber-security
+[2026-02-08 12:18:22] [INFO]   Found 9 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+[2026-02-08 12:18:22] [INFO]   Category: cyber-security
+[2026-02-08 12:18:22] [INFO]   Found 30 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\linux\60 Commands Hacker Should Know it.md
+[2026-02-08 12:18:22] [INFO]   Category: linux
+[2026-02-08 12:18:22] [INFO]   Found 24 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]   Found 11 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]   Found 10 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]   Found 12 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]   Found 3 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E15 - Page Rank.md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]   Found 2 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]   Found 3 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E17 - Backlinks.md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]   Found 1 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]   Found 33 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\tools\MSFConsole Commands.md
+[2026-02-08 12:18:22] [INFO]   Category: tools
+[2026-02-08 12:18:22] [INFO]   Found 43 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\tools\Burpsuite\1-Install Burpsuite.md
+[2026-02-08 12:18:22] [INFO]   Category: tools
+[2026-02-08 12:18:22] [INFO]   Found 12 image(s)
+[2026-02-08 12:18:22] [INFO] 
+[File] content\tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+[2026-02-08 12:18:22] [INFO]   Category: tools
+[2026-02-08 12:18:22] [INFO]   Found 6 image(s)
+[2026-02-08 12:18:22] [INFO] 
+============================================================
+[2026-02-08 12:18:22] [INFO] SUMMARY: Found 246 image references
+[2026-02-08 12:18:22] [INFO]          (246 unique images)
+[2026-02-08 12:18:22] [INFO] ============================================================
+[2026-02-08 12:18:22] [INFO] 
+============================================================
+[2026-02-08 12:18:22] [INFO] PHASE 2: Copying images from Obsidian...
+[2026-02-08 12:18:22] [INFO] ============================================================
+[2026-02-08 12:18:22] [INFO] + Created directory: static/images\tools
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206125905.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206125905.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206130557.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206130557.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206131615.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206131615.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206131818.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206131818.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206131938.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206131938.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206132303.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206132303.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206132745.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206132745.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206132830.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206132830.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206133019.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206133019.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206133709.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206133709.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206134110.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206134110.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206134213.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206134213.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206140108.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206140108.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206140614.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206140614.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206140859.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206140859.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206141110.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206141110.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206141215.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206141215.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20231206142326.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20231206142326.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO] + Created directory: static/images\cyber-security
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620162926.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620162926.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620163247.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620163247.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620163325.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620163325.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620163445.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620163445.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620163844.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620163844.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620164103.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620164103.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620164251.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620164251.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620164453.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620164453.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620165523.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620165523.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620165923.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620165923.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620170018.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620170018.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620170629.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620170629.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620171105.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620171105.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620174957.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620174957.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620175001.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620175001.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620175636.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620175636.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620180042.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620180042.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620181147.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620181147.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620181551.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620181551.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620182037.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620182037.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620182614.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620182614.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620183121.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620183121.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620183204.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620183204.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620183227.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620183227.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620183242.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620183242.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620183352.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620183352.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620184519.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620184519.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620194028.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620194028.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620194123.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620194123.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620194240.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620194240.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620194553.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620194553.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620195702.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620195702.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620200538.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620200538.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620201106.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620201106.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620202009.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620202009.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620203510.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620203510.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620203819.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620203819.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620204019.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620204019.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620204807.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620204807.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240620205025.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240620205025.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621164752.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621164752.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621165857.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621165857.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621170039.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621170039.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621170041.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621170041.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621170532.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621170532.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621172255.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621172255.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621172422.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621172422.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621173423.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621173423.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621173706.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621173706.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621180821.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621180821.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621181416.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621181416.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621181800.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621181800.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621182040.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621182040.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621182546.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621182546.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621182838.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621182838.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621184130.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621184130.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO] + Created directory: static/images\seo
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621193526.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621193526.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240621201236.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240621201236.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622164815.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622164815.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622165434.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622165434.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622165537.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622165537.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622165713.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622165713.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622170537.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622170537.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622173011.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622173011.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622173259.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622173259.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622173409.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622173409.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622173742.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622173742.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622202553.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622202553.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622203718.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622203718.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622203754.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622203754.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622204050.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622204050.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622204601.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622204601.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622204629.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622204629.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622204951.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622204951.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622205615.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622205615.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622210354.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622210354.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622210607.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622210607.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622210702.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622210702.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622210835.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622210835.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622211258.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622211258.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622211351.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622211351.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622211609.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622211609.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622212132.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622212132.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622230532.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622230532.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622231205.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622231205.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622231245.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622231245.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622231644.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622231644.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622233917.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622233917.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622234913.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622234913.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622234916.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622234916.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622235442.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622235442.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240622235712.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240622235712.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240623204152.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240623204152.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240623204902.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240623204902.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240623205050.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240623205050.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240623205615.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240623205615.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240623210733.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240623210733.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240623210734.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240623210734.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240623211107.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240623211107.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240623211223.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240623211223.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240623213450.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240623213450.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240623224412.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240623224412.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240623224528.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240623224528.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240623224722.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240623224722.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624191013.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624191013.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624191130.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624191130.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624192827.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624192827.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624192858.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624192858.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624193345.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624193345.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624194253.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624194253.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624195037.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624195037.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624195151.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624195151.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624195533.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624195533.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624204001.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624204001.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624205403.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624205403.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624205939.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624205939.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624210729.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624210729.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624210842.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624210842.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624210955.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624210955.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624211034.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624211034.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624211100.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624211100.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624211139.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624211139.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624211241.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624211241.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624211736.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624211736.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624212005.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624212005.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624212124.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624212124.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624212250.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624212250.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624212751.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624212751.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624212900.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624212900.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624213056.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624213056.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624213224.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624213224.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624213704.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624213704.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624213812.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624213812.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624213852.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624213852.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624214101.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624214101.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624214347.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624214347.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624214522.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624214522.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624214603.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624214603.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624214731.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624214731.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20240624214923.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20240624214923.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703164923.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703164923.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703164925.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703164925.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703164927.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703164927.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703164954.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703164954.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703165130.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703165130.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703165252.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703165252.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703165421.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703165421.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703165516.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703165516.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703165711.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703165711.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703165817.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703165817.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703165945.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703165945.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703170130.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703170130.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703175515.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703175515.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703175745.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703175745.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703175959.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703175959.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703180214.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703180214.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703180345.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703180345.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703180539.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703180539.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703180616.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703180616.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703180745.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703180745.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703180931.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703180931.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703181241.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703181241.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703181503.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703181503.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250703181559.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250703181559.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704163118.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704163118.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704163854.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704163854.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704164125.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704164125.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704164158.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704164158.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704164604.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704164604.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704164628.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704164628.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704164943.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704164943.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704165021.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704165021.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704165108.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704165108.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704165334.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704165334.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704165505.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704165505.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704165532.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704165532.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704170455.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704170455.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704171310.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704171310.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704171932.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704171932.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704172410.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704172410.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704172634.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704172634.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704173452.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704173452.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20250704173920.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20250704173920.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO] + Created directory: static/images\linux
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201181732.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201181732.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201181847.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201181847.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201182046.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201182046.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201182137.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201182137.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201182336.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201182336.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201182425.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201182425.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201182611.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201182611.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201182934.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201182934.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201183204.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201183204.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201183318.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201183318.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201183534.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201183534.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201183918.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201183918.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201184053.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201184053.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201184400.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201184400.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201184619.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201184619.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201184843.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201184843.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201184925.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201184925.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201185105.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201185105.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201185312.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201185312.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201185334.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201185334.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201185841.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201185841.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201185958.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201185958.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201190000.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201190000.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20251201190027.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20251201190027.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120173303.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120173303.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120173610.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120173610.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120174632.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120174632.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120174656.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120174656.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120174901.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120174901.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120175205.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120175205.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120175331.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120175331.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120175417.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120175417.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120175554.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120175554.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120180429.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120180429.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120180820.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120180820.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120181056.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120181056.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120184940.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120184940.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120190219.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120190219.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120190249.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120190249.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120195815.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120195815.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120195854.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120195854.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120210415.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120210415.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120210732.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120210732.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260120210915.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260120210915.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO]   + Copied: Pasted image 20260121190100.png
+[2026-02-08 12:18:22] [INFO]     -> Pastedimage20260121190100.png
+[2026-02-08 12:18:22] [INFO]     (Renamed: removed spaces)
+[2026-02-08 12:18:22] [INFO] Saved 246 images to JSON
+[2026-02-08 12:18:22] [INFO] 
+============================================================
+[2026-02-08 12:18:22] [INFO] PHASE 3: Converting image links in markdown files...
+[2026-02-08 12:18:22] [INFO] ============================================================
+[2026-02-08 12:18:22] [INFO] 
+[File] content\cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+[2026-02-08 12:18:22] [INFO]   Category: cyber-security
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620162926.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620162926.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620163247.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620163247.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620163325.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620163325.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620163445.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620163445.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620163844.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620163844.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620164103.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620164103.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620164251.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620164251.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620164453.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620164453.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 8 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+[2026-02-08 12:18:22] [INFO]   Category: cyber-security
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620165523.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620165523.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620165923.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620165923.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620170018.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620170018.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620175636.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620175636.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620170629.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620170629.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620171105.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620171105.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620174957.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620174957.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620175001.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620175001.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620180042.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620180042.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620181147.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620181147.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620181551.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620181551.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620182037.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620182037.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620182614.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620182614.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 13 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+[2026-02-08 12:18:22] [INFO]   Category: cyber-security
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620183121.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620183121.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620183204.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620183204.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620183227.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620183227.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620183242.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620183242.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620183352.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620183352.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620184519.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620184519.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620194028.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620194028.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620194123.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620194123.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620194240.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620194240.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620194553.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620194553.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620195702.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620195702.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620200538.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620200538.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620201106.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620201106.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620202009.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620202009.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 14 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+[2026-02-08 12:18:22] [INFO]   Category: cyber-security
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620203510.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620203510.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620203819.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620203819.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620204019.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620204019.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620204807.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620204807.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240620205025.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240620205025.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621164752.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621164752.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621165857.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621165857.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621170039.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621170039.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621170041.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621170041.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621170532.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621170532.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621172255.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621172255.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621172422.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621172422.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 12 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+[2026-02-08 12:18:22] [INFO]   Category: cyber-security
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621173423.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621173423.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621173706.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621173706.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621180821.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621180821.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621181416.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621181416.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621181800.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621181800.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621182040.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621182040.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621182546.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621182546.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621182838.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621182838.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621184130.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240621184130.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 9 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+[2026-02-08 12:18:22] [INFO]   Category: cyber-security
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624195037.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624195037.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624195151.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624195151.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624195533.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624195533.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624204001.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624204001.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624205403.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624205403.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624205939.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624205939.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624211241.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624211241.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624210842.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624210842.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624211100.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624211100.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624211034.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624211034.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624210955.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624210955.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624211139.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624211139.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624210729.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624210729.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624211736.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624211736.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624212005.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624212005.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624212124.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624212124.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624212250.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624212250.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624212751.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624212751.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624212900.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624212900.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624213056.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624213056.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624213224.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624213224.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624213704.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624213704.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624213812.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624213812.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624213852.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624213852.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624214101.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624214101.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624214347.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624214347.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624214522.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624214522.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624214603.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624214603.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624214731.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624214731.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624214923.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/cyber-security/Pastedimage20240624214923.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 30 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\linux\60 Commands Hacker Should Know it.md
+[2026-02-08 12:18:22] [INFO]   Category: linux
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201181732.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201181732.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201181847.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201181847.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201182046.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201182046.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201182137.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201182137.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201182336.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201182336.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201182425.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201182425.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201182611.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201182611.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201182934.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201182934.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201183204.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201183204.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201183318.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201183318.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201183534.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201183534.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201183918.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201183918.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201184053.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201184053.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201184400.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201184400.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201184619.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201184619.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201184843.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201184843.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201184925.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201184925.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201185105.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201185105.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201185334.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201185334.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201185312.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201185312.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201185841.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201185841.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201190027.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201190027.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201185958.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201185958.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20251201190000.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/linux/Pastedimage20251201190000.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 24 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621193526.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240621193526.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240621201236.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240621201236.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622164815.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622164815.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622165434.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622165434.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622165537.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622165537.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622165713.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622165713.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622170537.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622170537.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622173011.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622173011.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622173259.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622173259.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622173409.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622173409.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622173742.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622173742.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 11 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240623213450.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240623213450.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240623224412.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240623224412.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240623224528.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240623224528.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240623224722.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240623224722.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624191013.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240624191013.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624191130.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240624191130.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624192827.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240624192827.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624192858.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240624192858.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624193345.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240624193345.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240624194253.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240624194253.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 10 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120173303.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120173303.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120175417.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120175417.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120173610.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120173610.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120174656.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120174656.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120174632.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120174632.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120174901.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120174901.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120175205.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120175205.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120175331.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120175331.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120175554.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120175554.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120180820.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120180820.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120180429.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120180429.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120181056.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120181056.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 12 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120184940.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120184940.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120190219.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120190219.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120190249.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120190249.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 3 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E15 - Page Rank.md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120195815.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120195815.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120195854.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120195854.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 2 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120210415.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120210415.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120210915.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120210915.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260120210732.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260120210732.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 3 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E17 - Backlinks.md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20260121190100.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20260121190100.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 1 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+[2026-02-08 12:18:22] [INFO]   Category: seo
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622202553.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622202553.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622203718.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622203718.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622203754.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622203754.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622204050.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622204050.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622205615.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622205615.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622204601.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622204601.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622204629.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622204629.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622204951.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622204951.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622210354.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622210354.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622210607.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622210607.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622210702.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622210702.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622210835.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622210835.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622211258.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622211258.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622211351.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622211351.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622211609.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622211609.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622212132.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622212132.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622230532.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622230532.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622231205.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622231205.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622231245.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622231245.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622231644.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622231644.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622233917.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622233917.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622235442.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622235442.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622235712.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622235712.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622234913.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622234913.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240622234916.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240622234916.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240623211107.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240623211107.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240623211223.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240623211223.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240623204152.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240623204152.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240623204902.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240623204902.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240623205050.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240623205050.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240623205615.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240623205615.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240623210733.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240623210733.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20240623210734.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/seo/Pastedimage20240623210734.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 33 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\tools\MSFConsole Commands.md
+[2026-02-08 12:18:22] [INFO]   Category: tools
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703164923.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703164923.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703164925.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703164925.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703164927.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703164927.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703164954.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703164954.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703165130.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703165130.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703165252.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703165252.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703165421.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703165421.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703165516.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703165516.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703165711.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703165711.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703165817.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703165817.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703165945.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703165945.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703170130.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703170130.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703175515.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703175515.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703175745.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703175745.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703175959.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703175959.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703180214.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703180214.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703180345.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703180345.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703180539.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703180539.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703180616.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703180616.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703180745.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703180745.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703180931.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703180931.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703181241.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703181241.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703181503.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703181503.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250703181559.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250703181559.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704163118.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704163118.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704164158.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704164158.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704164125.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704164125.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704164628.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704164628.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704164943.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704164943.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704165334.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704165334.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704165505.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704165505.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704170455.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704170455.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704163854.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704163854.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704164604.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704164604.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704165021.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704165021.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704165108.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704165108.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704165532.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704165532.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704171310.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704171310.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704171932.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704171932.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704172410.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704172410.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704172634.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704172634.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704173452.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704173452.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20250704173920.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20250704173920.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 43 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\tools\Burpsuite\1-Install Burpsuite.md
+[2026-02-08 12:18:22] [INFO]   Category: tools
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206125905.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206125905.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206130557.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206130557.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206131615.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206131615.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206131818.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206131818.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206131938.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206131938.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206132303.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206132303.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206132745.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206132745.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206132830.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206132830.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206133019.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206133019.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206133709.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206133709.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206134110.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206134110.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206134213.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206134213.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 12 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+[File] content\tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+[2026-02-08 12:18:22] [INFO]   Category: tools
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206140108.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206140108.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206140614.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206140614.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206140859.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206140859.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206141110.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206141110.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206141215.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206141215.png)
+[2026-02-08 12:18:22] [INFO]     Converted: Pasted image 20231206142326.png
+[2026-02-08 12:18:22] [INFO]     -> ![Alt text](/images/tools/Pastedimage20231206142326.png)
+[2026-02-08 12:18:22] [INFO]   [Saved] 6 link(s) converted
+[2026-02-08 12:18:22] [INFO] 
+============================================================
+[2026-02-08 12:18:22] [INFO] FINAL STATISTICS:
+[2026-02-08 12:18:23] [INFO] ============================================================
+[2026-02-08 12:18:23] [INFO] Files scanned: 20
+[2026-02-08 12:18:23] [INFO] Image references found: 246
+[2026-02-08 12:18:23] [INFO] Images copied: 246
+[2026-02-08 12:18:23] [INFO] Images renamed (spaces removed): 246
+[2026-02-08 12:18:23] [INFO] Images skipped (already exist): 0
+[2026-02-08 12:18:23] [INFO] Files converted: 18
+[2026-02-08 12:18:23] [INFO] Links converted: 246
+[2026-02-08 12:18:23] [INFO] Errors: 0
+[2026-02-08 12:18:23] [INFO] Total processed images: 246
+[2026-02-08 12:18:23] [INFO] ============================================================
+[2026-02-08 12:18:23] [INFO] 
+[SUCCESS] Process completed successfully!
+[2026-02-08 12:18:23] [INFO] Images saved to: static/images/category-name/
+[2026-02-08 12:18:23] [INFO] Tracking data: processed_images.json
+[2026-02-08 12:18:23] [INFO] Full log: image_migration.log
+[2026-02-08 12:18:23] [INFO] 
+[Report] Summary report created: image_migration_report.txt
+[2026-02-08 12:18:23] [INFO] 
+[COMPLETE] Process finished
+[2026-02-08 12:18:23] [INFO] ============================================================
+

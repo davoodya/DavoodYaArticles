@@ -1,12 +1,8 @@
 +++
-tags:
-  - SEO
-  - Webmaster
-  - Web_Developing
-Category: SEO, Webmaster, Web_Developing
-date = '2024-06-21T12:38:14+03:30'
+title = "Page Authority & Domain Authority"
+tags = ["SEO", "Webmaster", "Web_Developing"]
+Category = "SEO, Webmaster, Web_Developing"
 draft = true
-title = 'Page Authority(PA) & Domain Authority(DA)'
 +++
 
 -------
@@ -23,13 +19,13 @@ title = 'Page Authority(PA) & Domain Authority(DA)'
 برای بررسی اعتبار دامنه و صفحه ابزار های زیادی وجود دارد که در زیر به برخی از آنها اشاره میکنیم:
 1. https://smallseotools.com
 	1. دامنه را وارد میکنیم و بر روی `Check Authority` کلیک میکنیم و سپس میتوانیم اعتبار صفحه و دامنه را مشاهده کنیم:
-		1. ![[Pasted image 20260120210415.png]]
+		1. ![Alt text](/images/seo/Pastedimage20260120210415.png)
 	2. با کلیک بر روی More Info میتوانیم تعداد صفحاتی از وبسایت که توسط گوگل ایندکس شده و همچنین صفحه ای از وبسایت که توسط گوگل کش شده را نیز مشاهده کنیم:
-		1. ![[Pasted image 20260120210915.png]]
+		1. ![Alt text](/images/seo/Pastedimage20260120210915.png)
 #### See Indexed Pages by Google
 برای مشاهده اینکه چند صفحه از وبسایت ما توسط گوگل ایندکس شده است میتوانیم از Google Dork زیر استفاده کنیم:
 - `site: https://website.com`
-	- ![[Pasted image 20260120210732.png]]
+	- ![Alt text](/images/seo/Pastedimage20260120210732.png)
 #### Page Authority & Domain Authority Factors
 1. لینک های استفاده شده External & Internal Links
 2. معرفی وبسایت و صفحات در شبکه های اجتماعی
