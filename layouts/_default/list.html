@@ -18,6 +18,27 @@
                             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                         </h2>
 
+                        {{/* تصویر شاخص مقاله */}}
+                        {{ $featuredImage := "" }}
+                        {{ if .Params.featured_image }}
+                            {{ $featuredImage = .Params.featured_image }}
+                        {{ else if .Params.images }}
+                            {{ if reflect.IsSlice .Params.images }}
+                                {{ $featuredImage = index .Params.images 0 }}
+                            {{ else }}
+                                {{ $featuredImage = .Params.images }}
+                            {{ end }}
+                        {{ end }}
+                        
+                        {{ if $featuredImage }}
+                            <div class="article-card-image">
+                                <a href="{{ .RelPermalink }}">
+                                    <img src="{{ $featuredImage | relURL }}" 
+                                         alt="{{ .Title }}" 
+                                         loading="lazy">
+                                </a>
+                            </div>
+                        {{ end }}
                         
                         <div class="article-card-summary">
                             {{ if .Params.description }}

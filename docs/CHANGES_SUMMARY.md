@@ -355,6 +355,34 @@ type image_article_renamer.log
 
 ---
 
+---
+
+## 📝 به‌روزرسانی: 09 فوریه 2026
+
+### تغییرات جدید اضافه شده:
+
+#### 1. رفع مشکل Layout موبایل ✅
+- **مشکل**: در موبایل Sidebar ابتدا و محتوا بعد نمایش داده می‌شد
+- **راه‌حل**: استفاده از CSS Flexbox Order
+- **نتیجه**: در موبایل محتوا ابتدا و Sidebar بعد نمایش داده می‌شود
+- **فایل تغییر یافته**: `assets/css/main.css`
+- **مستندات**: `docs/MOBILE_LAYOUT_FIX.md`
+
+#### 2. اضافه شدن تصویر شاخص به کارت‌های مقاله ✅
+- **ویژگی**: نمایش تصویر شاخص در صفحات دسته‌بندی
+- **منبع تصویر**: `featured_image` یا `images` در frontmatter
+- **اندازه ثابت**: 200px در Desktop، Responsive در موبایل
+- **ویژگی‌ها**: Object-fit Cover, Lazy Loading, Hover Effects
+- **فایل‌های تغییر یافته**: 
+  - `layouts/_default/list.html`
+  - `assets/css/main.css`
+- **مستندات**: 
+  - `docs/FEATURED_IMAGE_GUIDE.md`
+  - `docs/FEATURED_IMAGE_SUMMARY.md`
+
+---
+
 **نویسنده**: Davood Yahya  
-**تاریخ**: 2026-02-08  
-**نسخه**: 2.0
+**تاریخ اولیه**: 2026-02-08  
+**آخرین به‌روزرسانی**: 2026-02-09  
+**نسخه**: 2.1

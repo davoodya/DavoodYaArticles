@@ -15,8 +15,8 @@ author = "Davood Yahay"
 robots = "index, follow"
 canonical = "https://davoodya.ir/SANS-401/sans-401-defense-in-depth-4012/"
 
-featured_image = "/images/cyber-security/SANS-401-Defense-in-Depth(401.2"
-images = ["/images/cyber-security/SANS-401-Defense-in-Depth(401.2"]
+featured_image = "/images/cyber-security/SANS-401-Defense-in-Depth(401.2)-1.png"
+images = ["/images/cyber-security/SANS-401-Defense-in-Depth(401.2)-1.png"]
 
 [params.opengraph]
   title = "SANS-401-Defense-in-Depth (401.2)"
@@ -42,24 +42,7 @@ type = "posts"
 +++
 
 -------
-#CyberSecurity #Security
-## E6 - Defense-in-Depth (401.2)
-- [Definitions](#Definitions)
-	- [Whats Defense-in-Depth?](#Whats%20Defense-in-Depth?)
-	- [Key Focus of Risk](#Key%20Focus%20of%20Risk)
-- [Access Controlling](#Access%20Controlling)
-	- [Access Control Parameters](#Access%20Control%20Parameters)
-	- [Access Control Techniques](#Access%20Control%20Techniques)
-	- [Managing Access](#Managing%20Access)
-	- [Single-Sign-On (SSO)](#Single-Sign-On%20(SSO))
-- [Password Management](#Password%20Management)
-	- [Whats Password Cracking?](#Whats%20Password%20Cracking?)
-	- [Password Cracker Methods](#Password%20Cracker%20Methods)
-	- [Password Cracker Tools](#Password%20Cracker%20Tools)
-		- [John the Ripper](#John%20the%20Ripper)
-		- [Cain](#Cain)
-	- [Protect Against Password Cracking](#Protect%20Against%20Password%20Cracking)
----
+
 ### Definitions
 #### Whats Defense-in-Depth?
 دفاع در عمق و یا Defense-in-Depth بدین معناست که برای Security Solution که میخواهیم استفاده کنیم باید >>
