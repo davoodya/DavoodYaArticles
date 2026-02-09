@@ -1,0 +1,176 @@
+2026-02-09 08:29:57,200 - INFO - 
+======================================================================
+2026-02-09 08:29:57,200 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO ENHANCED FRONTMATTER ADDER
+2026-02-09 08:29:57,201 - INFO - SCRIPT STARTED
+2026-02-09 08:29:57,201 - INFO - ======================================================================
+
+2026-02-09 08:29:57,201 - INFO - No tracking file found, creating new one
+2026-02-09 08:29:57,202 - INFO - Found 5 markdown files to check
+2026-02-09 08:29:57,202 - INFO - Already processed: 0 files
+2026-02-09 08:29:57,202 - INFO - 
+============================================================
+2026-02-09 08:29:57,202 - INFO - Processing: E47- Google Trends.md
+2026-02-09 08:29:57,202 - INFO - ============================================================
+2026-02-09 08:29:57,203 - INFO - Hugo frontmatter already exists in: E47- Google Trends.md
+2026-02-09 08:29:57,203 - INFO - 
+============================================================
+2026-02-09 08:29:57,203 - INFO - Processing: E48 - OFF Page SEO.md
+2026-02-09 08:29:57,203 - INFO - ============================================================
+2026-02-09 08:29:57,203 - INFO - Hugo frontmatter already exists in: E48 - OFF Page SEO.md
+2026-02-09 08:29:57,203 - INFO - 
+============================================================
+2026-02-09 08:29:57,204 - INFO - Processing: E49- Branding.md
+2026-02-09 08:29:57,204 - INFO - ============================================================
+2026-02-09 08:29:57,204 - INFO - Hugo frontmatter already exists in: E49- Branding.md
+2026-02-09 08:29:57,204 - INFO - 
+============================================================
+2026-02-09 08:29:57,205 - INFO - Processing: E50 - Google Penalty.md
+2026-02-09 08:29:57,205 - INFO - ============================================================
+2026-02-09 08:29:57,205 - INFO - Hugo frontmatter already exists in: E50 - Google Penalty.md
+2026-02-09 08:29:57,205 - INFO - 
+============================================================
+2026-02-09 08:29:57,205 - INFO - Processing: E51, E52 - Google Algorithms.md
+2026-02-09 08:29:57,205 - INFO - ============================================================
+2026-02-09 08:29:57,205 - INFO - Hugo frontmatter already exists in: E51, E52 - Google Algorithms.md
+2026-02-09 08:29:57,206 - INFO - Tracking file saved with 0 processed files
+2026-02-09 08:29:57,206 - INFO - 
+============================================================
+2026-02-09 08:29:57,206 - INFO - SUMMARY
+2026-02-09 08:29:57,206 - INFO - ============================================================
+2026-02-09 08:29:57,206 - INFO - Total files found: 5
+2026-02-09 08:29:57,206 - INFO - Already processed (skipped): 0
+2026-02-09 08:29:57,206 - INFO - Newly processed (modified): 0
+2026-02-09 08:29:57,207 - INFO - No changes needed: 5
+2026-02-09 08:29:57,207 - INFO - Errors: 0
+2026-02-09 08:29:57,207 - INFO - ============================================================
+2026-02-09 08:29:57,207 - INFO - 
+✓ Report saved to: obsidian_property_remover_enhanced_report.txt
+2026-02-09 08:29:57,207 - INFO - 
+======================================================================
+2026-02-09 08:29:57,207 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-09 08:29:57,207 - INFO - ======================================================================
+
+2026-02-09 08:31:03,928 - INFO - 
+======================================================================
+2026-02-09 08:31:03,928 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO ENHANCED FRONTMATTER ADDER
+2026-02-09 08:31:03,928 - INFO - SCRIPT STARTED
+2026-02-09 08:31:03,928 - INFO - ======================================================================
+
+2026-02-09 08:31:03,929 - INFO - Loaded tracking file with 0 processed files
+2026-02-09 08:31:03,929 - INFO - Found 5 markdown files to check
+2026-02-09 08:31:03,929 - INFO - Already processed: 0 files
+2026-02-09 08:31:03,929 - INFO - 
+============================================================
+2026-02-09 08:31:03,929 - INFO - Processing: E47- Google Trends.md
+2026-02-09 08:31:03,929 - INFO - ============================================================
+2026-02-09 08:31:03,930 - INFO - Found old Hugo frontmatter in E47- Google Trends.md from line 0 to line 6
+2026-02-09 08:31:03,930 - INFO - ✓ Removed old Hugo frontmatter from: E47- Google Trends.md
+2026-02-09 08:31:06,600 - INFO - ✓ Added Enhanced Hugo frontmatter to: E47- Google Trends.md
+2026-02-09 08:31:06,602 - INFO - 
+============================================================
+2026-02-09 08:31:06,604 - INFO - Processing: E48 - OFF Page SEO.md
+2026-02-09 08:31:06,609 - INFO - ============================================================
+2026-02-09 08:31:06,611 - INFO - Found old Hugo frontmatter in E48 - OFF Page SEO.md from line 0 to line 6
+2026-02-09 08:31:06,611 - INFO - ✓ Removed old Hugo frontmatter from: E48 - OFF Page SEO.md
+2026-02-09 08:31:06,612 - INFO - ✓ Added Enhanced Hugo frontmatter to: E48 - OFF Page SEO.md
+2026-02-09 08:31:06,613 - INFO - 
+============================================================
+2026-02-09 08:31:06,617 - INFO - Processing: E49- Branding.md
+2026-02-09 08:31:06,619 - INFO - ============================================================
+2026-02-09 08:31:06,620 - INFO - Found old Hugo frontmatter in E49- Branding.md from line 0 to line 6
+2026-02-09 08:31:06,620 - INFO - ✓ Removed old Hugo frontmatter from: E49- Branding.md
+2026-02-09 08:31:06,621 - INFO - ✓ Added Enhanced Hugo frontmatter to: E49- Branding.md
+2026-02-09 08:31:06,624 - INFO - 
+============================================================
+2026-02-09 08:31:06,627 - INFO - Processing: E50 - Google Penalty.md
+2026-02-09 08:31:06,628 - INFO - ============================================================
+2026-02-09 08:31:06,629 - INFO - Found old Hugo frontmatter in E50 - Google Penalty.md from line 0 to line 6
+2026-02-09 08:31:06,629 - INFO - ✓ Removed old Hugo frontmatter from: E50 - Google Penalty.md
+2026-02-09 08:31:06,630 - INFO - ✓ Added Enhanced Hugo frontmatter to: E50 - Google Penalty.md
+2026-02-09 08:31:06,630 - INFO - 
+============================================================
+2026-02-09 08:31:06,631 - INFO - Processing: E51, E52 - Google Algorithms.md
+2026-02-09 08:31:06,631 - INFO - ============================================================
+2026-02-09 08:31:06,632 - INFO - Found old Hugo frontmatter in E51, E52 - Google Algorithms.md from line 0 to line 6
+2026-02-09 08:31:06,633 - INFO - ✓ Removed old Hugo frontmatter from: E51, E52 - Google Algorithms.md
+2026-02-09 08:31:06,633 - INFO - ✓ Added Enhanced Hugo frontmatter to: E51, E52 - Google Algorithms.md
+2026-02-09 08:31:06,635 - INFO - Tracking file saved with 5 processed files
+2026-02-09 08:31:06,636 - INFO - 
+============================================================
+2026-02-09 08:31:06,638 - INFO - SUMMARY
+2026-02-09 08:31:06,639 - INFO - ============================================================
+2026-02-09 08:31:06,642 - INFO - Total files found: 5
+2026-02-09 08:31:06,646 - INFO - Already processed (skipped): 0
+2026-02-09 08:31:06,646 - INFO - Newly processed (modified): 5
+2026-02-09 08:31:06,647 - INFO - No changes needed: 0
+2026-02-09 08:31:06,647 - INFO - Errors: 0
+2026-02-09 08:31:06,647 - INFO - ============================================================
+2026-02-09 08:31:06,647 - INFO - 
+✓ Report saved to: obsidian_property_remover_enhanced_report.txt
+2026-02-09 08:31:06,648 - INFO - 
+======================================================================
+2026-02-09 08:31:06,648 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-09 08:31:06,649 - INFO - ======================================================================
+
+2026-02-09 08:32:09,570 - INFO - 
+======================================================================
+2026-02-09 08:32:09,570 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO ENHANCED FRONTMATTER ADDER
+2026-02-09 08:32:09,570 - INFO - SCRIPT STARTED
+2026-02-09 08:32:09,570 - INFO - ======================================================================
+
+2026-02-09 08:32:09,571 - INFO - No tracking file found, creating new one
+2026-02-09 08:32:09,571 - INFO - Found 5 markdown files to check
+2026-02-09 08:32:09,571 - INFO - Already processed: 0 files
+2026-02-09 08:32:09,571 - INFO - 
+============================================================
+2026-02-09 08:32:09,571 - INFO - Processing: E47- Google Trends.md
+2026-02-09 08:32:09,571 - INFO - ============================================================
+2026-02-09 08:32:09,572 - INFO - Found old Hugo frontmatter in E47- Google Trends.md from line 0 to line 41
+2026-02-09 08:32:09,572 - INFO - ✓ Removed old Hugo frontmatter from: E47- Google Trends.md
+2026-02-09 08:32:09,667 - INFO - ✓ Added Enhanced Hugo frontmatter to: E47- Google Trends.md
+2026-02-09 08:32:09,668 - INFO - 
+============================================================
+2026-02-09 08:32:09,668 - INFO - Processing: E48 - OFF Page SEO.md
+2026-02-09 08:32:09,668 - INFO - ============================================================
+2026-02-09 08:32:09,668 - INFO - Found old Hugo frontmatter in E48 - OFF Page SEO.md from line 0 to line 41
+2026-02-09 08:32:09,668 - INFO - ✓ Removed old Hugo frontmatter from: E48 - OFF Page SEO.md
+2026-02-09 08:32:09,668 - INFO - ✓ Added Enhanced Hugo frontmatter to: E48 - OFF Page SEO.md
+2026-02-09 08:32:09,669 - INFO - 
+============================================================
+2026-02-09 08:32:09,669 - INFO - Processing: E49- Branding.md
+2026-02-09 08:32:09,669 - INFO - ============================================================
+2026-02-09 08:32:09,669 - INFO - Found old Hugo frontmatter in E49- Branding.md from line 0 to line 41
+2026-02-09 08:32:09,670 - INFO - ✓ Removed old Hugo frontmatter from: E49- Branding.md
+2026-02-09 08:32:09,670 - INFO - ✓ Added Enhanced Hugo frontmatter to: E49- Branding.md
+2026-02-09 08:32:09,671 - INFO - 
+============================================================
+2026-02-09 08:32:09,671 - INFO - Processing: E50 - Google Penalty.md
+2026-02-09 08:32:09,671 - INFO - ============================================================
+2026-02-09 08:32:09,671 - INFO - Found old Hugo frontmatter in E50 - Google Penalty.md from line 0 to line 41
+2026-02-09 08:32:09,671 - INFO - ✓ Removed old Hugo frontmatter from: E50 - Google Penalty.md
+2026-02-09 08:32:09,671 - INFO - ✓ Added Enhanced Hugo frontmatter to: E50 - Google Penalty.md
+2026-02-09 08:32:09,672 - INFO - 
+============================================================
+2026-02-09 08:32:09,672 - INFO - Processing: E51, E52 - Google Algorithms.md
+2026-02-09 08:32:09,672 - INFO - ============================================================
+2026-02-09 08:32:09,672 - INFO - Found old Hugo frontmatter in E51, E52 - Google Algorithms.md from line 0 to line 41
+2026-02-09 08:32:09,672 - INFO - ✓ Removed old Hugo frontmatter from: E51, E52 - Google Algorithms.md
+2026-02-09 08:32:09,673 - INFO - ✓ Added Enhanced Hugo frontmatter to: E51, E52 - Google Algorithms.md
+2026-02-09 08:32:09,674 - INFO - Tracking file saved with 5 processed files
+2026-02-09 08:32:09,674 - INFO - 
+============================================================
+2026-02-09 08:32:09,674 - INFO - SUMMARY
+2026-02-09 08:32:09,674 - INFO - ============================================================
+2026-02-09 08:32:09,674 - INFO - Total files found: 5
+2026-02-09 08:32:09,674 - INFO - Already processed (skipped): 0
+2026-02-09 08:32:09,674 - INFO - Newly processed (modified): 5
+2026-02-09 08:32:09,674 - INFO - No changes needed: 0
+2026-02-09 08:32:09,674 - INFO - Errors: 0
+2026-02-09 08:32:09,674 - INFO - ============================================================
+2026-02-09 08:32:09,674 - INFO - 
+✓ Report saved to: obsidian_property_remover_enhanced_report.txt
+2026-02-09 08:32:09,675 - INFO - 
+======================================================================
+2026-02-09 08:32:09,675 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-09 08:32:09,675 - INFO - ======================================================================
+

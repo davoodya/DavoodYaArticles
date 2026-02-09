@@ -60,6 +60,10 @@
     {{ $main := resources.Get "css/main.css" | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}">
     
+    <!-- Code Highlighting Styles -->
+    {{ $codeHighlight := resources.Get "css/code-highlighting.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $codeHighlight.RelPermalink }}" integrity="{{ $codeHighlight.Data.Integrity }}">
+    
     <!-- Custom Page Styles -->
     {{ $customPages := resources.Get "css/custom-pages.css" | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $customPages.RelPermalink }}" integrity="{{ $customPages.Data.Integrity }}">

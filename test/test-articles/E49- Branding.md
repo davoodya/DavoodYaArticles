@@ -1,9 +1,44 @@
 +++
 title = "Branding"
-tags = ["test-articles", "CyberSecurity", "Security"]
-category = "test-articles"
-date = "2026-02-05T19:05:54+03:30"
+slug = "branding"
+date = "2026-02-05T08:32:09+03:30"
+lastmod = "2026-02-09T08:32:09+03:30"
 draft = false
+
+categories = ["test-articles"]
+tags = ["test-articles", "CyberSecurity", "Security"]
+series = ["test-articles"]
+
+description = "فرآیند برندینگ به اسم سازی گفته میشود که در واقع به اسمی از یک برند یا شخص اشاره دارد که بر سر زبان ها گفته میشود. مثلا دیجی کالا یا جادی یا..."
+keywords = ["Branding", "test-articles", "CyberSecurity", "Security", "e49-branding"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/test-articles/branding/"
+
+featured_image = "/images/test-articles/pasted-image-20260205210215.png"
+images = ["/images/test-articles/pasted-image-20260205210215.png"]
+
+[params.opengraph]
+  title = "Branding"
+  description = "فرآیند برندینگ به اسم سازی گفته میشود که در واقع به اسمی از یک برند یا شخص اشاره دارد که بر سر زبان ها گفته میشود. مثلا دیجی کالا یا جادی یا..."
+  image = "/images/test-articles/pasted-image-20260205210215.png"
+  url = "https://davoodya.ir/test-articles/branding/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "Branding"
+  description = "فرآیند برندینگ به اسم سازی گفته میشود که در واقع به اسمی از یک برند یا شخص اشاره دارد که بر سر زبان ها گفته میشود. مثلا دیجی کالا یا جادی یا..."
+  image = "/images/test-articles/pasted-image-20260205210215.png"
+
+readingTime = 4
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 -------
 ## TOC

@@ -167,9 +167,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Rajdhani', sans-serif;
 }
 
-/* Code blocks - فونت Fira Code */
+/* Code blocks - استفاده از فونت‌های خوانا برای کد */
 code, pre, .code-block, pre code {
-    font-family: 'Fira Code', 'Consolas', 'Courier New', monospace !important;
+    font-family: 'Consolas', 'Monaco', 'Menlo', 'Courier New', monospace !important;
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 /* Article content - ترکیب فونت‌های فارسی و انگلیسی */
@@ -197,7 +199,9 @@ code, pre, .code-block, pre code {
 .article-content code,
 .article-content pre,
 .article-content pre code {
-    font-family: 'Fira Code', 'Consolas', 'Courier New', monospace !important;
+    font-family: 'Consolas', 'Monaco', 'Menlo', 'Courier New', monospace !important;
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 /* Header & Navigation */

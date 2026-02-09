@@ -1,9 +1,44 @@
 +++
 title = "OFF Page SEO"
-tags = ["test-articles", "CyberSecurity", "Security"]
-category = "test-articles"
-date = "2026-01-21T19:05:54+03:30"
+slug = "off-page-seo"
+date = "2026-01-21T08:32:09+03:30"
+lastmod = "2026-02-09T08:32:09+03:30"
 draft = false
+
+categories = ["test-articles"]
+tags = ["test-articles", "CyberSecurity", "Security"]
+series = ["test-articles"]
+
+description = "همانطور که گفتیم سئو خارجی وبسایت را Off Page میگویند که تاثیر زیادی در سئو وبسایت ما نیز دارد. - در واقع بسیاری از سئو کار ها بحث Off Page را فقط به..."
+keywords = ["OFF Page SEO", "test-articles", "CyberSecurity", "Security", "e48-off-page-seo"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/test-articles/off-page-seo/"
+
+featured_image = "/images/test-articles/pasted-image-20260205201928.png"
+images = ["/images/test-articles/pasted-image-20260205201928.png"]
+
+[params.opengraph]
+  title = "OFF Page SEO"
+  description = "همانطور که گفتیم سئو خارجی وبسایت را Off Page میگویند که تاثیر زیادی در سئو وبسایت ما نیز دارد. - در واقع بسیاری از سئو کار ها بحث Off Page را فقط به..."
+  image = "/images/test-articles/pasted-image-20260205201928.png"
+  url = "https://davoodya.ir/test-articles/off-page-seo/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "OFF Page SEO"
+  description = "همانطور که گفتیم سئو خارجی وبسایت را Off Page میگویند که تاثیر زیادی در سئو وبسایت ما نیز دارد. - در واقع بسیاری از سئو کار ها بحث Off Page را فقط به..."
+  image = "/images/test-articles/pasted-image-20260205201928.png"
+
+readingTime = 5
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 -------
 ## TOC

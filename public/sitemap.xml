@@ -31,7 +31,7 @@
   </url><url>
     <loc>http://localhost:1313/tags/-readteam/</loc>
   </url><url>
-    <loc>http://localhost:1313/tools/burpsuite/1-install-burpsuite/</loc>
+    <loc>http://localhost:1313/tools/burpsuite/installing-burp-suite/</loc>
   </url><url>
     <loc>http://localhost:1313/tools/burpsuite/2-change-http-data--bypass-parameters/</loc>
   </url><url>
@@ -48,6 +48,8 @@
     <loc>http://localhost:1313/tags/command_line/</loc>
   </url><url>
     <loc>http://localhost:1313/seo/0-seo-theories/e10-e11---content-seo-important-website-pages/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/cyber-security/</loc>
   </url><url>
     <loc>http://localhost:1313/python/dir-buster-module/</loc>
   </url><url>
@@ -66,6 +68,8 @@
     <loc>http://localhost:1313/seo/0-seo-theories/e16---page-authority--domain-authority/</loc>
   </url><url>
     <loc>http://localhost:1313/seo/0-seo-theories/e15---page-rank/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/pentest/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/pentest_tool/</loc>
   </url><url>
@@ -90,6 +94,8 @@
     <loc>http://localhost:1313/seo/0-seo-theories/e1-to-e5---seo-intro-search-engines-keywords/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/web_developing/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/web_pentest/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/web_pentest/</loc>
   </url><url>

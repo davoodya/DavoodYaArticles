@@ -45,7 +45,7 @@ body,
     font-family: 'Rajdhani', sans-serif !important;
 }
 
-/* Code Blocks - Always Fira Code */
+/* Code Blocks - فونت‌های خوانا و واضح */
 code,
 pre,
 pre code,
@@ -57,7 +57,9 @@ kbd,
 samp,
 tt,
 var {
-    font-family: 'Fira Code', 'Consolas', 'Courier New', monospace !important;
+    font-family: 'Consolas', 'Monaco', 'Menlo', 'Courier New', monospace !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.3px !important;
 }
 
 /* Terminal/Monospace Elements */
@@ -67,7 +69,8 @@ var {
 .logo-glitch-footer,
 .terminal,
 .command-line {
-    font-family: 'Fira Code', 'Consolas', monospace !important;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+    font-weight: 600 !important;
 }
 
 /* Buttons */

@@ -1,9 +1,44 @@
 +++
 title = "Google Trends"
-tags = ["test-articles", "CyberSecurity", "Security"]
-category = "test-articles"
-date = "2026-01-21T19:05:54+03:30"
+slug = "google-trends"
+date = "2026-01-21T08:32:09+03:30"
+lastmod = "2026-02-09T08:32:09+03:30"
 draft = false
+
+categories = ["test-articles"]
+tags = ["test-articles", "CyberSecurity", "Security"]
+series = ["test-articles"]
+
+description = "ابزار Google Trends ترند ترین یا پر بازدید ترین موضوعات را بر اساس دنیا، قاره یا کشور خاصی نمایش میدهد: یکی از امکانات ویژه Google Trends انتخاب کشور..."
+keywords = ["Google Trends", "test-articles", "CyberSecurity", "Security", "e47-google-trends"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/test-articles/google-trends/"
+
+featured_image = "/images/test-articles/pasted-image-20260203212022.png"
+images = ["/images/test-articles/pasted-image-20260203212022.png"]
+
+[params.opengraph]
+  title = "Google Trends"
+  description = "ابزار Google Trends ترند ترین یا پر بازدید ترین موضوعات را بر اساس دنیا، قاره یا کشور خاصی نمایش میدهد: یکی از امکانات ویژه Google Trends انتخاب کشور..."
+  image = "/images/test-articles/pasted-image-20260203212022.png"
+  url = "https://davoodya.ir/test-articles/google-trends/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "Google Trends"
+  description = "ابزار Google Trends ترند ترین یا پر بازدید ترین موضوعات را بر اساس دنیا، قاره یا کشور خاصی نمایش میدهد: یکی از امکانات ویژه Google Trends انتخاب کشور..."
+  image = "/images/test-articles/pasted-image-20260203212022.png"
+
+readingTime = 6
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 -------
 ## TOC

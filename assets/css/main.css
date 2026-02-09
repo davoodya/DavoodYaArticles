@@ -16,12 +16,12 @@
     --accent-yellow: #e5c07b;
     --glow-shadow: 0 0 10px rgba(0, 255, 65, 0.7);
     --glow-shadow-blue: 0 0 10px rgba(58, 173, 223, 0.6);
-    --terminal-font: 'Fira Code', 'Consolas', 'Courier New', monospace;
+    --terminal-font: 'Consolas', 'Monaco', 'Menlo', 'Courier New', monospace;
     --content-font: 'Rajdhani', 'Segoe UI', sans-serif;
     --persian-heading: 'Shabnam', 'Vazir', sans-serif;
     --persian-text: 'Vazir', 'Shabnam', sans-serif;
     --english-font: 'Rajdhani', sans-serif;
-    --code-font: 'Fira Code', 'Consolas', 'Courier New', monospace;
+    --code-font: 'Consolas', 'Monaco', 'Menlo', 'Courier New', monospace;
 }
 
 /* ============================= */
@@ -457,9 +457,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 300px;
-    max-height: 300px;
-    height: 300px;
+    min-height: 350px;
+    max-height: 350px;
+    height: 350px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -1153,39 +1153,57 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Code Blocks - Terminal Style */
+/* Code Blocks - Terminal Style - بهبود خوانایی */
 .article-content pre {
-    background: #000;
-    padding: 1.5rem;
+    background: #0d1117;
+    padding: 1.8rem;
     border-radius: 12px;
     overflow-x: auto;
     overflow-y: hidden;
-    border: 2px solid rgba(0, 255, 65, 0.2);
+    border: 2px solid rgba(0, 255, 65, 0.25);
     margin: 2rem 0;
-    box-shadow: inset 0 0 20px rgba(0, 255, 65, 0.1);
+    box-shadow: inset 0 0 25px rgba(0, 255, 65, 0.12),
+                0 4px 20px rgba(0, 0, 0, 0.4);
     max-width: 100%;
     white-space: pre;
     word-wrap: normal;
+    position: relative;
+}
+
+/* افزودن یک خط سبز در بالای کد بلاک برای جذابیت بیشتر */
+.article-content pre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-green), var(--accent-blue), var(--accent-green));
+    border-radius: 12px 12px 0 0;
 }
 
 .article-content code {
-    font-family: var(--code-font) !important;
-    background: rgba(0, 255, 65, 0.1);
-    padding: 3px 8px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+    background: rgba(0, 255, 65, 0.12);
+    padding: 4px 10px;
     border-radius: 6px;
-    color: var(--accent-green);
-    font-size: 0.9em;
-    border: 1px solid rgba(0, 255, 65, 0.2);
+    color: #7ee787;
+    font-size: 0.96em;
+    border: 1px solid rgba(0, 255, 65, 0.25);
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 .article-content pre code {
-    font-family: var(--code-font) !important;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
     background: none;
     padding: 0;
-    color: var(--accent-green);
+    color: #c9d1d9;
     border: none;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 1.02rem;
+    line-height: 1.85;
+    font-weight: 500;
+    letter-spacing: 0.4px;
 }
 
 /* Blockquote - Things Style */
@@ -1480,8 +1498,17 @@ body {
     }
     
     .article-content pre {
-        padding: 1rem;
-        font-size: 0.85rem;
+        padding: 1.2rem;
+    }
+    
+    .article-content pre code {
+        font-size: 0.92rem;
+        line-height: 1.7;
+    }
+    
+    .article-content code {
+        font-size: 0.88em;
+        padding: 3px 8px;
     }
     
     .category-card,

@@ -1,9 +1,44 @@
 +++
 title = "Google Penalty"
-tags = ["test-articles", "CyberSecurity", "Security"]
-category = "test-articles"
-date = "2026-02-05T19:05:54+03:30"
+slug = "google-penalty"
+date = "2026-02-05T08:32:09+03:30"
+lastmod = "2026-02-09T08:32:09+03:30"
 draft = false
+
+categories = ["test-articles"]
+tags = ["test-articles", "CyberSecurity", "Security"]
+series = ["test-articles"]
+
+description = "وقتیکه در حال راه اندازی سئو وبسایت و افزایش ترافیک های ورودی وبسایت هستیم اگر که گوگل تخلفی را از وبسایت ما مشاهده کند به وبسایت یک Penalty میدهد که..."
+keywords = ["Google Penalty", "test-articles", "CyberSecurity", "Security", "e50-google-penalty"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/test-articles/google-penalty/"
+
+featured_image = "/images/test-articles/pasted-image-20260205212135.png"
+images = ["/images/test-articles/pasted-image-20260205212135.png"]
+
+[params.opengraph]
+  title = "Google Penalty"
+  description = "وقتیکه در حال راه اندازی سئو وبسایت و افزایش ترافیک های ورودی وبسایت هستیم اگر که گوگل تخلفی را از وبسایت ما مشاهده کند به وبسایت یک Penalty میدهد که..."
+  image = "/images/test-articles/pasted-image-20260205212135.png"
+  url = "https://davoodya.ir/test-articles/google-penalty/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "Google Penalty"
+  description = "وقتیکه در حال راه اندازی سئو وبسایت و افزایش ترافیک های ورودی وبسایت هستیم اگر که گوگل تخلفی را از وبسایت ما مشاهده کند به وبسایت یک Penalty میدهد که..."
+  image = "/images/test-articles/pasted-image-20260205212135.png"
+
+readingTime = 3
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 -------
 ## TOC

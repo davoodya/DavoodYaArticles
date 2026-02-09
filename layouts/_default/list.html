@@ -20,11 +20,11 @@
                         
                         <div class="article-card-summary">
                             {{ if .Params.description }}
-                                {{ .Params.description | truncate 200 }}
+                                {{ .Params.description | truncate 600 }}
                             {{ else if .Summary }}
-                                {{ .Summary | truncate 200 }}
+                                {{ .Summary | truncate 600 }}
                             {{ else }}
-                                {{ .Content | truncate 200 }}
+                                {{ .Content | truncate 600 }}
                             {{ end }}
                         </div>
                         

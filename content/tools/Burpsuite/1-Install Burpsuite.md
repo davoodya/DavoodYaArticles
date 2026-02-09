@@ -1,8 +1,18 @@
 +++
 title = "1-Install Burpsuite"
 tags = ["Pentest", "Web_Pentest", "Bug_Bounty", "Burpsuite", "Pentest_Tool"]
-Category = "Pentest, Web_Pentest"
+categories = ["cyber-security", "pentest", "web_pentest"]
+series = ["bug bounty"]
+# Category = "Pentest, Web_Pentest"
 draft = false
+readingTime = 12
+difficulty = "intermediate"
+toc = true
+math = false
+lab_required = true
+course = "Burpsuite begginer to advance"
+
+slug = "installing-burp-suite"
 +++
 
 -------

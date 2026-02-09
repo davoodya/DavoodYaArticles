@@ -37,7 +37,7 @@
 
     
     
-    <link rel="stylesheet" href="../css/fonts.0e1dd574844028de1239a7da4d5a7c7c6171d770539745e0bfb4fc8112c53e69.css" integrity="sha256-Dh3VdIRAKN4SOafaTVp8fGFx13BTl0Xgv7T8gRLFPmk=">
+    <link rel="stylesheet" href="../css/fonts.3ec37eff5b52b94350d84321961afb9b5cc723e139b86dd13f50e9f160272eb9.css" integrity="sha256-PsN&#43;/1tSuUNQ2EMhlhr7m1zHI&#43;E5uG3RP1Dp8WAnLrk=">
     
     
     
@@ -45,7 +45,11 @@
     
     
     
-    <link rel="stylesheet" href="../css/main.7d317b7797f1cb3a7524e01bf4c4ec0cb8e0b977546a46bbff9a14c42b89aa70.css" integrity="sha256-fTF7d5fxyzp1JOAb9MTsDLjguXdUaka7/5oUxCuJqnA=">
+    <link rel="stylesheet" href="../css/main.c42c8fad734d507987eace1b82ffbe6793afe6ac44684638bcada60ee7efc295.css" integrity="sha256-xCyPrXNNUHmH6s4bgv&#43;&#43;Z5Ov5qxEaEY4vK2mDufvwpU=">
+    
+    
+    
+    <link rel="stylesheet" href="../css/code-highlighting.d88b47ac13e35ece5aa792a0b021bf33f8530d2aabedde69493260a28acfbab5.css" integrity="sha256-2ItHrBPjXs5ap5KgsCG/M/hTDSqr7d5pSTJgoorPurU=">
     
     
     
@@ -57,7 +61,7 @@
     
     
     
-    <link rel="stylesheet" href="../css/font-fixes.371358acd1442c19eeee976234cb97027316d4609abb399db6ad922c55ef1109.css" integrity="sha256-NxNYrNFELBnu7pdiNMuXAnMW1GCauzmdtq2SLFXvEQk=">
+    <link rel="stylesheet" href="../css/font-fixes.5f7cd32fe64f3b2c0425f23e54869ea0761d8075f5577a767dd3c8cdffb9e424.css" integrity="sha256-X3zTL&#43;ZPOywEJfI&#43;VIaeoHYdgHX1V3p2fdPIzf&#43;55CQ=">
 
     
     
@@ -555,7 +559,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </li>
                     
                         <li class="recent-post-item">
-                            <a href="../tools/burpsuite/1-install-burpsuite/" class="recent-post-link">
+                            <a href="../tools/burpsuite/installing-burp-suite/" class="recent-post-link">
                                 <span class="recent-post-icon">📄</span>
                                 <div class="recent-post-info">
                                     <h4 class="recent-post-title">1-Install Burpsuite</h4>
@@ -600,9 +604,9 @@ function toggleDropdown(type) {
 
             <div class="articles-grid">
                 
-                    <article class="article-card" data-article-url="../tools/burpsuite/1-install-burpsuite/">
+                    <article class="article-card" data-article-url="../tools/burpsuite/installing-burp-suite/">
                         <h2 class="article-card-title">
-                            <a href="../tools/burpsuite/1-install-burpsuite/">1-Install Burpsuite</a>
+                            <a href="../tools/burpsuite/installing-burp-suite/">1-Install Burpsuite</a>
                         </h2>
                         
                         <div class="article-card-summary">
@@ -612,11 +616,14 @@ function toggleDropdown(type) {
 <p>Requirements =&gt; JDK v9.04
 نسخه از ابزار ممکن است با JDK 21 کار نکند همچنین با JDK زیر 9 هم نمیتواند کار کند.
 <img src="../images/tools/1-InstallBurpsuite-1.png" alt="1-Install Burpsuite-1">
-برای نصب کافیست از وبسایت soft98 ابزار Burpsuite را دانلود …</p>
+برای نصب کافیست از وبسایت soft98 ابزار Burpsuite را دانلود کنیم و سپس آنرا از loader موجود نصب کنیم.</p>
+<h3 id="work-with-burpsuite">Work with Burpsuite</h3>
+<p><img src="../images/tools/1-InstallBurpsuite-2.png" alt="1-Install Burpsuite-2">
+وقتیکه که Burpsuite را باز میکنیم 2 Task بصورت پیشفرض در حال اجرا هستند که تیک آنها نیز خورده است. اگر Inspector در Proxy روشن باشد این Task ها بصورت اتوماتیک بر روی هر وبسایت که باز  میشود انجام میشود.</p>
                             
                         </div>
                         
-                        <a href="../tools/burpsuite/1-install-burpsuite/" class="read-more-btn">
+                        <a href="../tools/burpsuite/installing-burp-suite/" class="read-more-btn">
                             ادامه مطلب ←
                         </a>
                     </article>
@@ -632,7 +639,10 @@ function toggleDropdown(type) {
 <h3 id="change-product-price-in-stores">Change Product Price in Stores</h3>
 <h4 id="describe-the-scenario">Describe the Scenario</h4>
 <p><a href="https://akofamily.com/Main/">https://akofamily.com/Main/</a>
-در فروشگاه های آنلاین قیمت محصولات بر اساس تعداد انتخاب آنها صورت میگیرد. مثلا 2 عدد عینک که قیمت هر کدام 7 هزار تومان …</p>
+در فروشگاه های آنلاین قیمت محصولات بر اساس تعداد انتخاب آنها صورت میگیرد. مثلا 2 عدد عینک که قیمت هر کدام 7 هزار تومان میشود 14 هزار تومان. حال میتوانیم به جای انتخاب 2 عدد 0.01 محصول را انتخاب کنیم که میشود 700 تومان.
+فروشگاه های آنلاین اصولا اجازه اینکار را نمیدهند و اینکار را باید بوسیله Burpsuite انجام میدهیم. در واقع با تغییر داده ها باید عدد 2 را به 0.01 تغییر دهیم تا بتوانیم محصول را با قیمت بسیار پایین خریداری کنیم.
+در مثال زیر میخواهیم این عینک را 0.1 آن را به مبلغ 16 هزار تومان خریداری کنیم.
+<img src="../images/tools/2-ChangeHTTPData&amp;BypassParameters-1.png" alt="2-Change HTTP Data &amp; Bypass Parameters-1"></p>
                             
                         </div>
                         
@@ -661,7 +671,33 @@ function toggleDropdown(type) {
 <li><a href="#E36:%20MSFConsole%20Commands%20-%20Part%201">E36: MSFConsole Commands - Part 1</a>
 <ul>
 <li><a href="#MSFConsole%20Commands%20Summary">MSFConsole Commands Summary</a></li>
-<li><a href="#See%20MSFConsole%20Commands%20in%20Action">See MSFConsole …</a></li></ul></li></li></ul></li></ul></li></ul>
+<li><a href="#See%20MSFConsole%20Commands%20in%20Action">See MSFConsole Commands in Action</a></li>
+</ul>
+</li>
+<li><a href="#E37:%20MSFConsole%20Commands%20-%20Part%202">E37: MSFConsole Commands - Part 2</a>
+<ul>
+<li><a href="#Commands%20Used%20After%20Select%20Exploit">Commands Used After Select Exploit</a></li>
+<li><a href="#Find%20Suitable%20Exploit">Find Suitable Exploit</a></li>
+<li><a href="#Using%20%60show%60%20Commands%20after%20Select%20Exploit">Using <code>show</code> Commands after Select Exploit</a></li>
+</ul>
+</li>
+<li><a href="#E38:%20MSFConsole%20Commands%20-%20Part%203">E38: MSFConsole Commands - Part 3</a>
+<ul>
+<li><a href="#Advance%20Exploit%20Example%20with%20%60multi/http/tomcat_mgr_deploy%60">Advance Exploit Example with <code>multi/http/tomcat_mgr_deploy</code></a></li>
+<li><a href="#%60pushm%60%20&amp;%20%60pupm%60%20Commands"><code>pushm</code> &amp; <code>pupm</code> Commands</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="msfconsole-basic-commands">MSFConsole Basic Commands</h3>
+<h4 id="e35-msfconsole-commands-description">E35: MSFConsole Commands Description</h4>
+<h5 id="msfconsole-help">MSFConsole Help</h5>
+<ol>
+<li><strong>See MSFConsole Commands with <code>help</code></strong>
+<ol>
+<li>در …</li></ol></li></ol></li></ul></li></li></ul></li></li></ul></li></li></ul></li></ul></li></ul>
                             
                         </div>
                         
