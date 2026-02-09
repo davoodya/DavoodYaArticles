@@ -6,12 +6,86 @@
         
         <article class="article-wrapper{{ if .Params.custom_class }} {{ .Params.custom_class }}{{ end }}">
             <h1 class="article-title">{{ .Title }}</h1>
+            
+            {{/* Table of Contents - فهرست مطالب */}}
+            {{ if .TableOfContents }}
+                <div class="toc-container">
+                    <h2 class="toc-title">فهرست مطالب</h2>
+                    <button class="toc-toggle" onclick="toggleTOC()">نمایش/مخفی کردن فهرست</button>
+                    <nav id="TableOfContents">
+                        {{ .TableOfContents }}
+                    </nav>
+                </div>
+            {{ end }}
+            
             <div class="article-content{{ if .Params.custom_class }} {{ .Params.custom_class }}-content{{ end }}">
-
                 {{ .Content }}
             </div>
         </article>
     </div>
 </div>
+
+{{/* JavaScript for TOC */}}
+<script>
+    // Toggle TOC در موبایل
+    function toggleTOC() {
+        const toc = document.getElementById('TableOfContents');
+        const toggle = document.querySelector('.toc-toggle');
+        
+        if (toc && toggle) {
+            toc.classList.toggle('show');
+            toggle.classList.toggle('active');
+        }
+    }
+    
+    // Highlight active heading در TOC
+    function highlightActiveHeading() {
+        const headings = document.querySelectorAll('.article-content h1, .article-content h2, .article-content h3, .article-content h4, .article-content h5, .article-content h6');
+        const tocLinks = document.querySelectorAll('#TableOfContents a');
+        
+        if (headings.length === 0 || tocLinks.length === 0) return;
+        
+        let currentActive = null;
+        const scrollPosition = window.scrollY + 150;
+        
+        headings.forEach((heading) => {
+            if (heading.offsetTop <= scrollPosition) {
+                currentActive = heading;
+            }
+        });
+        
+        tocLinks.forEach((link) => {
+            link.classList.remove('active');
+            
+            if (currentActive && link.getAttribute('href') === '#' + currentActive.id) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    // Smooth scroll با offset
+    document.querySelectorAll('#TableOfContents a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                const offsetTop = targetElement.offsetTop - 100;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+                
+                // Update URL without scrolling
+                history.pushState(null, null, '#' + targetId);
+            }
+        });
+    });
+    
+    // Highlight on scroll
+    window.addEventListener('scroll', highlightActiveHeading);
+    window.addEventListener('load', highlightActiveHeading);
+</script>
 
 {{ end }}

@@ -11,6 +11,9 @@ toc = true
 math = false
 lab_required = true
 course = "Burpsuite begginer to advance"
+# featured_image = "/images/tools/1-InstallBurpsuite-1.png"
+images = ["/images/tools/1-InstallBurpsuite-1.png"]
+image = "/images/tools/1-InstallBurpsuite-1.png"
 
 slug = "installing-burp-suite"
 +++

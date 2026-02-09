@@ -1,0 +1,443 @@
+/* ============================= */
+/* Table of Contents (TOC) - فهرست مطالب */
+/* ============================= */
+
+/* ============================= */
+/* 1. TOC Container - کانتینر اصلی */
+/* ============================= */
+
+.toc-container {
+    background: linear-gradient(135deg, rgba(13, 17, 23, 0.95) 0%, rgba(15, 15, 15, 0.95) 100%);
+    border: 2px solid rgba(0, 255, 65, 0.25);
+    border-radius: 16px;
+    padding: 1.8rem;
+    margin: 2.5rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4),
+                inset 0 0 25px rgba(0, 255, 65, 0.08);
+}
+
+/* خط رنگی در بالا */
+.toc-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        rgba(0, 255, 65, 0.8) 0%, 
+        rgba(58, 173, 223, 0.8) 50%, 
+        rgba(0, 255, 65, 0.8) 100%);
+    border-radius: 16px 16px 0 0;
+}
+
+/* الگوی پس‌زمینه */
+.toc-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(90deg, rgba(0, 255, 65, 0.02) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(0, 255, 65, 0.02) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ============================= */
+/* 2. TOC Title - عنوان فهرست */
+/* ============================= */
+
+.toc-title {
+    font-family: 'Shabnam', 'Vazir', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--accent-green);
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(0, 255, 65, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+}
+
+.toc-title::before {
+    content: '📑';
+    font-size: 1.5rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* ============================= */
+/* 3. TOC Navigation - محتوای فهرست */
+/* ============================= */
+
+#TableOfContents {
+    position: relative;
+    z-index: 1;
+    direction: rtl;
+    text-align: right;
+}
+
+/* تمام لیست‌ها */
+#TableOfContents ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* لیست اصلی (سطح 1) */
+#TableOfContents > ul {
+    padding-right: 0;
+}
+
+/* لیست‌های تو در تو */
+#TableOfContents ul ul {
+    padding-right: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-right: 2px solid rgba(0, 255, 65, 0.15);
+}
+
+/* ============================= */
+/* 4. TOC Items - آیتم‌های فهرست */
+/* ============================= */
+
+#TableOfContents li {
+    margin-bottom: 0.6rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+#TableOfContents li:last-child {
+    margin-bottom: 0;
+}
+
+/* لینک‌ها */
+#TableOfContents a {
+    display: block;
+    color: var(--main-text);
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    background: rgba(0, 255, 65, 0.03);
+    border-right: 3px solid transparent;
+    transition: all 0.3s ease;
+    font-family: 'Vazir', 'Shabnam', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    position: relative;
+    overflow: hidden;
+}
+
+/* نقطه قبل از لینک */
+#TableOfContents a::before {
+    content: '▸';
+    position: absolute;
+    right: 0.5rem;
+    color: var(--accent-green);
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+/* Hover state */
+#TableOfContents a:hover {
+    background: rgba(0, 255, 65, 0.1);
+    border-right-color: var(--accent-green);
+    color: var(--accent-green);
+    transform: translateX(5px);
+    padding-right: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 255, 65, 0.2);
+}
+
+#TableOfContents a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Active link */
+#TableOfContents a.active,
+#TableOfContents a:active {
+    background: rgba(0, 255, 65, 0.15);
+    border-right-color: var(--accent-blue);
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+
+/* ============================= */
+/* 5. Different Levels - سطوح مختلف */
+/* ============================= */
+
+/* سطح 1 - H1 */
+#TableOfContents > ul > li > a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent-green);
+}
+
+/* سطح 2 - H2 */
+#TableOfContents > ul > li > ul > li > a {
+    font-size: 0.95rem;
+    color: var(--accent-blue);
+}
+
+/* سطح 3 - H3 */
+#TableOfContents > ul > li > ul > li > ul > li > a {
+    font-size: 0.9rem;
+    color: var(--accent-orange);
+}
+
+/* سطح 4 - H4 */
+#TableOfContents > ul > li > ul > li > ul > li > ul > li > a {
+    font-size: 0.88rem;
+    color: var(--accent-purple);
+}
+
+/* سطح 5 - H5 */
+#TableOfContents > ul > li > ul > li > ul > li > ul > li > ul > li > a {
+    font-size: 0.85rem;
+    color: var(--accent-yellow);
+}
+
+/* سطح 6 - H6 */
+#TableOfContents > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > a {
+    font-size: 0.82rem;
+    color: #98c379;
+}
+
+/* ============================= */
+/* 6. Sticky TOC - فهرست چسبان */
+/* ============================= */
+
+.toc-sticky {
+    position: sticky;
+    top: 80px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-green) transparent;
+}
+
+.toc-sticky::-webkit-scrollbar {
+    width: 6px;
+}
+
+.toc-sticky::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.toc-sticky::-webkit-scrollbar-thumb {
+    background: var(--accent-green);
+    border-radius: 3px;
+}
+
+/* ============================= */
+/* 7. Collapsible TOC - فهرست قابل بستن */
+/* ============================= */
+
+.toc-toggle {
+    display: none;
+    width: 100%;
+    background: rgba(0, 255, 65, 0.1);
+    border: 2px solid rgba(0, 255, 65, 0.3);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    color: var(--accent-green);
+    font-family: 'Shabnam', 'Vazir', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.toc-toggle:hover {
+    background: rgba(0, 255, 65, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 255, 65, 0.3);
+}
+
+.toc-toggle::after {
+    content: '▼';
+    float: left;
+    transition: transform 0.3s ease;
+}
+
+.toc-toggle.active::after {
+    transform: rotate(180deg);
+}
+
+/* ============================= */
+/* 8. Responsive - موبایل */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .toc-container {
+        padding: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .toc-title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* نمایش دکمه toggle در موبایل */
+    .toc-toggle {
+        display: block;
+    }
+    
+    /* مخفی کردن محتوا به صورت پیش‌فرض */
+    #TableOfContents {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+    
+    #TableOfContents.show {
+        max-height: 1000px;
+    }
+    
+    #TableOfContents ul ul {
+        padding-right: 1rem;
+    }
+    
+    #TableOfContents a {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .toc-container {
+        padding: 1.2rem;
+        border-radius: 12px;
+    }
+    
+    .toc-title {
+        font-size: 1.1rem;
+    }
+    
+    #TableOfContents ul ul {
+        padding-right: 0.8rem;
+    }
+    
+    #TableOfContents a {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.7rem;
+    }
+}
+
+/* ============================= */
+/* 9. Print Styles */
+/* ============================= */
+
+@media print {
+    .toc-container {
+        background: #fff;
+        border: 1px solid #ccc;
+        box-shadow: none;
+    }
+    
+    .toc-container::before,
+    .toc-container::after {
+        display: none;
+    }
+    
+    .toc-title {
+        color: #000;
+        text-shadow: none;
+    }
+    
+    #TableOfContents a {
+        color: #000;
+        background: transparent;
+    }
+    
+    .toc-toggle {
+        display: none;
+    }
+    
+    #TableOfContents {
+        max-height: none !important;
+    }
+}
+
+/* ============================= */
+/* 10. Smooth Scroll به Heading */
+/* ============================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Offset برای heading ها (برای فضای header) */
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+    scroll-margin-top: 100px;
+}
+
+/* ============================= */
+/* 11. Animation برای Heading Highlight */
+/* ============================= */
+
+.article-content h1:target,
+.article-content h2:target,
+.article-content h3:target,
+.article-content h4:target,
+.article-content h5:target,
+.article-content h6:target {
+    animation: highlight 2s ease-in-out;
+}
+
+@keyframes highlight {
+    0%, 100% {
+        background: transparent;
+    }
+    50% {
+        background: rgba(0, 255, 65, 0.1);
+        box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+    }
+}
+
+/* ============================= */
+/* 12. Empty TOC - فهرست خالی */
+/* ============================= */
+
+.toc-container:empty {
+    display: none;
+}
+
+#TableOfContents:empty {
+    display: none;
+}
+
+#TableOfContents:empty + .toc-title::after {
+    content: ' (هیچ سرفصلی یافت نشد)';
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    font-weight: 400;
+}

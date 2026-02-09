@@ -1,0 +1,100 @@
+2026-02-09 08:58:33,771 - INFO - 
+======================================================================
+2026-02-09 08:58:33,772 - INFO - TOC REMOVER FOR HUGO ARTICLES
+2026-02-09 08:58:33,772 - INFO - SCRIPT STARTED
+2026-02-09 08:58:33,772 - INFO - ======================================================================
+
+2026-02-09 08:58:33,772 - INFO - No tracking file found, creating new one
+2026-02-09 08:58:33,772 - INFO - Found 4 markdown files to check
+2026-02-09 08:58:33,772 - INFO - Already processed: 0 files
+2026-02-09 08:58:33,773 - INFO - 
+============================================================
+2026-02-09 08:58:33,773 - INFO - Processing: E1 to E4 - (DevOps Basics & Concepts).md
+2026-02-09 08:58:33,773 - INFO - ============================================================
+2026-02-09 08:58:33,773 - INFO - Found TOC in E1 to E4 - (DevOps Basics & Concepts).md from line 64 to line 76
+2026-02-09 08:58:33,774 - INFO - ✓ Successfully removed TOC from: E1 to E4 - (DevOps Basics & Concepts).md
+2026-02-09 08:58:33,774 - INFO -   Removed 13 lines
+2026-02-09 08:58:33,774 - INFO - 
+============================================================
+2026-02-09 08:58:33,774 - INFO - Processing: E15 to E - (AWS Setup and Start Virtualization).md
+2026-02-09 08:58:33,774 - INFO - ============================================================
+2026-02-09 08:58:33,774 - INFO - No TOC found in: E15 to E - (AWS Setup and Start Virtualization).md
+2026-02-09 08:58:33,774 - INFO - 
+============================================================
+2026-02-09 08:58:33,775 - INFO - Processing: E5 to E6 - (CI-Continuous Integration & CD-Continuous Delivery).md
+2026-02-09 08:58:33,775 - INFO - ============================================================
+2026-02-09 08:58:33,775 - INFO - Found TOC in E5 to E6 - (CI-Continuous Integration & CD-Continuous Delivery).md from line 64 to line 85
+2026-02-09 08:58:33,776 - INFO - ✓ Successfully removed TOC from: E5 to E6 - (CI-Continuous Integration & CD-Continuous Delivery).md
+2026-02-09 08:58:33,776 - INFO -   Removed 22 lines
+2026-02-09 08:58:33,776 - INFO - 
+============================================================
+2026-02-09 08:58:33,776 - INFO - Processing: E9 to E14 - (Pre-Requires Tools & Accounts for DevOps Course).md
+2026-02-09 08:58:33,776 - INFO - ============================================================
+2026-02-09 08:58:33,776 - INFO - Found TOC in E9 to E14 - (Pre-Requires Tools & Accounts for DevOps Course).md from line 64 to line 81
+2026-02-09 08:58:33,777 - INFO - ✓ Successfully removed TOC from: E9 to E14 - (Pre-Requires Tools & Accounts for DevOps Course).md
+2026-02-09 08:58:33,777 - INFO -   Removed 18 lines
+2026-02-09 08:58:33,778 - INFO - Tracking file saved with 4 processed files
+2026-02-09 08:58:33,778 - INFO - 
+============================================================
+2026-02-09 08:58:33,778 - INFO - SUMMARY
+2026-02-09 08:58:33,778 - INFO - ============================================================
+2026-02-09 08:58:33,778 - INFO - Total files found: 4
+2026-02-09 08:58:33,778 - INFO - Already processed (skipped): 0
+2026-02-09 08:58:33,779 - INFO - TOC removed: 3
+2026-02-09 08:58:33,779 - INFO - No TOC found: 1
+2026-02-09 08:58:33,779 - INFO - Errors: 0
+2026-02-09 08:58:33,779 - INFO - ============================================================
+2026-02-09 08:58:33,779 - INFO - 
+✓ Report saved to: toc_remover_report.txt
+2026-02-09 08:58:33,779 - INFO - 
+======================================================================
+2026-02-09 08:58:33,779 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-09 08:58:33,780 - INFO - ======================================================================
+
+2026-02-09 08:59:38,747 - INFO - 
+======================================================================
+2026-02-09 08:59:38,747 - INFO - TOC REMOVER FOR HUGO ARTICLES
+2026-02-09 08:59:38,748 - INFO - SCRIPT STARTED
+2026-02-09 08:59:38,748 - INFO - ======================================================================
+
+2026-02-09 08:59:38,748 - INFO - No tracking file found, creating new one
+2026-02-09 08:59:38,748 - INFO - Found 4 markdown files to check
+2026-02-09 08:59:38,748 - INFO - Already processed: 0 files
+2026-02-09 08:59:38,749 - INFO - 
+============================================================
+2026-02-09 08:59:38,749 - INFO - Processing: E1 to E4 - (DevOps Basics & Concepts).md
+2026-02-09 08:59:38,749 - INFO - ============================================================
+2026-02-09 08:59:38,749 - INFO - No TOC found in: E1 to E4 - (DevOps Basics & Concepts).md
+2026-02-09 08:59:38,749 - INFO - 
+============================================================
+2026-02-09 08:59:38,749 - INFO - Processing: E15 to E - (AWS Setup and Start Virtualization).md
+2026-02-09 08:59:38,749 - INFO - ============================================================
+2026-02-09 08:59:38,750 - INFO - No TOC found in: E15 to E - (AWS Setup and Start Virtualization).md
+2026-02-09 08:59:38,750 - INFO - 
+============================================================
+2026-02-09 08:59:38,750 - INFO - Processing: E5 to E6 - (CI-Continuous Integration & CD-Continuous Delivery).md
+2026-02-09 08:59:38,750 - INFO - ============================================================
+2026-02-09 08:59:38,750 - INFO - No TOC found in: E5 to E6 - (CI-Continuous Integration & CD-Continuous Delivery).md
+2026-02-09 08:59:38,750 - INFO - 
+============================================================
+2026-02-09 08:59:38,750 - INFO - Processing: E9 to E14 - (Pre-Requires Tools & Accounts for DevOps Course).md
+2026-02-09 08:59:38,751 - INFO - ============================================================
+2026-02-09 08:59:38,751 - INFO - No TOC found in: E9 to E14 - (Pre-Requires Tools & Accounts for DevOps Course).md
+2026-02-09 08:59:38,751 - INFO - Tracking file saved with 4 processed files
+2026-02-09 08:59:38,752 - INFO - 
+============================================================
+2026-02-09 08:59:38,752 - INFO - SUMMARY
+2026-02-09 08:59:38,752 - INFO - ============================================================
+2026-02-09 08:59:38,752 - INFO - Total files found: 4
+2026-02-09 08:59:38,752 - INFO - Already processed (skipped): 0
+2026-02-09 08:59:38,752 - INFO - TOC removed: 0
+2026-02-09 08:59:38,752 - INFO - No TOC found: 4
+2026-02-09 08:59:38,752 - INFO - Errors: 0
+2026-02-09 08:59:38,752 - INFO - ============================================================
+2026-02-09 08:59:38,753 - INFO - 
+✓ Report saved to: toc_remover_report.txt
+2026-02-09 08:59:38,753 - INFO - 
+======================================================================
+2026-02-09 08:59:38,753 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-09 08:59:38,753 - INFO - ======================================================================
+

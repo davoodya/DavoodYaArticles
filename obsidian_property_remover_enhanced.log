@@ -174,3 +174,50 @@
 2026-02-09 08:32:09,675 - INFO - SCRIPT EXECUTION COMPLETED
 2026-02-09 08:32:09,675 - INFO - ======================================================================
 
+2026-02-09 08:52:02,815 - INFO - 
+======================================================================
+2026-02-09 08:52:02,815 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO ENHANCED FRONTMATTER ADDER
+2026-02-09 08:52:02,815 - INFO - SCRIPT STARTED
+2026-02-09 08:52:02,815 - INFO - ======================================================================
+
+2026-02-09 08:52:02,816 - INFO - Loaded tracking file with 5 processed files
+2026-02-09 08:52:02,816 - INFO - Found 4 markdown files to check
+2026-02-09 08:52:02,816 - INFO - Already processed: 5 files
+2026-02-09 08:52:02,816 - INFO - 
+============================================================
+2026-02-09 08:52:02,816 - INFO - Processing: E1 to E4 - (DevOps Basics & Concepts).md
+2026-02-09 08:52:02,816 - INFO - ============================================================
+2026-02-09 08:52:02,895 - INFO - ✓ Added Enhanced Hugo frontmatter to: E1 to E4 - (DevOps Basics & Concepts).md
+2026-02-09 08:52:02,896 - INFO - 
+============================================================
+2026-02-09 08:52:02,896 - INFO - Processing: E15 to E - (AWS Setup and Start Virtualization).md
+2026-02-09 08:52:02,896 - INFO - ============================================================
+2026-02-09 08:52:02,896 - INFO - ✓ Added Enhanced Hugo frontmatter to: E15 to E - (AWS Setup and Start Virtualization).md
+2026-02-09 08:52:02,897 - INFO - 
+============================================================
+2026-02-09 08:52:02,897 - INFO - Processing: E5 to E6 - (CI-Continuous Integration & CD-Continuous Delivery).md
+2026-02-09 08:52:02,897 - INFO - ============================================================
+2026-02-09 08:52:02,897 - INFO - ✓ Added Enhanced Hugo frontmatter to: E5 to E6 - (CI-Continuous Integration & CD-Continuous Delivery).md
+2026-02-09 08:52:02,898 - INFO - 
+============================================================
+2026-02-09 08:52:02,898 - INFO - Processing: E9 to E14 - (Pre-Requires Tools & Accounts for DevOps Course).md
+2026-02-09 08:52:02,898 - INFO - ============================================================
+2026-02-09 08:52:02,898 - INFO - ✓ Added Enhanced Hugo frontmatter to: E9 to E14 - (Pre-Requires Tools & Accounts for DevOps Course).md
+2026-02-09 08:52:02,899 - INFO - Tracking file saved with 9 processed files
+2026-02-09 08:52:02,899 - INFO - 
+============================================================
+2026-02-09 08:52:02,900 - INFO - SUMMARY
+2026-02-09 08:52:02,900 - INFO - ============================================================
+2026-02-09 08:52:02,900 - INFO - Total files found: 4
+2026-02-09 08:52:02,900 - INFO - Already processed (skipped): 0
+2026-02-09 08:52:02,900 - INFO - Newly processed (modified): 4
+2026-02-09 08:52:02,900 - INFO - No changes needed: 0
+2026-02-09 08:52:02,900 - INFO - Errors: 0
+2026-02-09 08:52:02,900 - INFO - ============================================================
+2026-02-09 08:52:02,900 - INFO - 
+✓ Report saved to: obsidian_property_remover_enhanced_report.txt
+2026-02-09 08:52:02,900 - INFO - 
+======================================================================
+2026-02-09 08:52:02,901 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-09 08:52:02,901 - INFO - ======================================================================
+

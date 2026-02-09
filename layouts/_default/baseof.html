@@ -64,6 +64,10 @@
     {{ $codeHighlight := resources.Get "css/code-highlighting.css" | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $codeHighlight.RelPermalink }}" integrity="{{ $codeHighlight.Data.Integrity }}">
     
+    <!-- Table of Contents Styles -->
+    {{ $toc := resources.Get "css/toc.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $toc.RelPermalink }}" integrity="{{ $toc.Data.Integrity }}">
+    
     <!-- Custom Page Styles -->
     {{ $customPages := resources.Get "css/custom-pages.css" | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $customPages.RelPermalink }}" integrity="{{ $customPages.Data.Integrity }}">
@@ -251,6 +255,9 @@
 
 <!-- Font Detector - Auto Apply Fonts -->
 <script src="{{ "assets/js/font-detector.js" | relURL }}"></script>
+
+<!-- Heading IDs Generator -->
+<script src="{{ "assets/js/heading-ids.js" | relURL }}"></script>
 
 </body>
 </html>
