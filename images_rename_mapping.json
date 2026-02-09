@@ -5,14 +5,14 @@
     "alt": "SANS-401-Networking and Protocols (401.1)-1"
   },
   "SANS-401-E3-Virtualization&CloudInfrastructure(401.1": {
-    "new_name": "SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-1.1",
+    "new_name": "SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1",
     "category": "cyber-security",
-    "alt": "SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-1"
+    "alt": "SANS-401-Virtualization & Cloud Infrastructure(401.1)-1"
   },
   "SANS-401-Wireless,Aircrack-ng,Wireshark(401.1": {
     "new_name": "SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1",
     "category": "cyber-security",
-    "alt": "SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-1"
+    "alt": "SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)-1"
   },
   "SANS-401-Defense-in-Depth(401.2": {
     "new_name": "SANS-401-Defense-in-Depth(401.2)-1.2",
@@ -273,5 +273,360 @@
     "new_name": "Malwares-6.png",
     "category": "cyber-security",
     "alt": "Malwares-6"
+  },
+  "Pastedimage20240325144303.png": {
+    "new_name": "IP-MacAddressBasicandConcepts-1.png",
+    "category": "network",
+    "alt": "IP-Mac Address Basic and Concepts-1"
+  },
+  "Pastedimage20240325144616.png": {
+    "new_name": "IP-MacAddressBasicandConcepts-2.png",
+    "category": "network",
+    "alt": "IP-Mac Address Basic and Concepts-2"
+  },
+  "Pastedimage20240325144624.png": {
+    "new_name": "IP-MacAddressBasicandConcepts-3.png",
+    "category": "network",
+    "alt": "IP-Mac Address Basic and Concepts-3"
+  },
+  "Pastedimage20240325144714.png": {
+    "new_name": "IP-MacAddressBasicandConcepts-4.png",
+    "category": "network",
+    "alt": "IP-Mac Address Basic and Concepts-4"
+  },
+  "Pastedimage20240325145116.png": {
+    "new_name": "IP-MacAddressBasicandConcepts-5.png",
+    "category": "network",
+    "alt": "IP-Mac Address Basic and Concepts-5"
+  },
+  "Pastedimage20240325145021.png": {
+    "new_name": "IP-MacAddressBasicandConcepts-6.png",
+    "category": "network",
+    "alt": "IP-Mac Address Basic and Concepts-6"
+  },
+  "Pastedimage20240325145030.png": {
+    "new_name": "IP-MacAddressBasicandConcepts-7.png",
+    "category": "network",
+    "alt": "IP-Mac Address Basic and Concepts-7"
+  },
+  "Pastedimage20240325145052.png": {
+    "new_name": "IP-MacAddressBasicandConcepts-8.png",
+    "category": "network",
+    "alt": "IP-Mac Address Basic and Concepts-8"
+  },
+  "Pastedimage20240325145331.png": {
+    "new_name": "IP-MacAddressBasicandConcepts-9.png",
+    "category": "network",
+    "alt": "IP-Mac Address Basic and Concepts-9"
+  },
+  "Pastedimage20240325145329.png": {
+    "new_name": "IP-MacAddressBasicandConcepts-10.png",
+    "category": "network",
+    "alt": "IP-Mac Address Basic and Concepts-10"
+  },
+  "Pastedimage20240325150746.png": {
+    "new_name": "IP-MacAddressBasicandConcepts-11.png",
+    "category": "network",
+    "alt": "IP-Mac Address Basic and Concepts-11"
+  },
+  "Pastedimage20240325150755.png": {
+    "new_name": "IP-MacAddressBasicandConcepts-12.png",
+    "category": "network",
+    "alt": "IP-Mac Address Basic and Concepts-12"
+  },
+  "Pastedimage20240406230317.png": {
+    "new_name": "IP-MacAddressBasicandConcepts-13.png",
+    "category": "network",
+    "alt": "IP-Mac Address Basic and Concepts-13"
+  },
+  "Pastedimage20240325141535.png": {
+    "new_name": "NetworkBasics-Terminology-Topology-1.png",
+    "category": "network",
+    "alt": "Network Basics-Terminology-Topology-1"
+  },
+  "Pastedimage20240325141548.png": {
+    "new_name": "NetworkBasics-Terminology-Topology-2.png",
+    "category": "network",
+    "alt": "Network Basics-Terminology-Topology-2"
+  },
+  "Pastedimage20240325141501.png": {
+    "new_name": "NetworkBasics-Terminology-Topology-3.png",
+    "category": "network",
+    "alt": "Network Basics-Terminology-Topology-3"
+  },
+  "Pastedimage20240325141520.png": {
+    "new_name": "NetworkBasics-Terminology-Topology-4.png",
+    "category": "network",
+    "alt": "Network Basics-Terminology-Topology-4"
+  },
+  "Pastedimage20240325141624.png": {
+    "new_name": "NetworkBasics-Terminology-Topology-5.png",
+    "category": "network",
+    "alt": "Network Basics-Terminology-Topology-5"
+  },
+  "Pastedimage20240325141614.png": {
+    "new_name": "NetworkBasics-Terminology-Topology-6.png",
+    "category": "network",
+    "alt": "Network Basics-Terminology-Topology-6"
+  },
+  "Pastedimage20240325140633.png": {
+    "new_name": "NetworkBasics-Terminology-Topology-7.png",
+    "category": "network",
+    "alt": "Network Basics-Terminology-Topology-7"
+  },
+  "Pastedimage20240325140833.png": {
+    "new_name": "NetworkBasics-Terminology-Topology-8.png",
+    "category": "network",
+    "alt": "Network Basics-Terminology-Topology-8"
+  },
+  "Pastedimage20240325140528.png": {
+    "new_name": "NetworkBasics-Terminology-Topology-9.png",
+    "category": "network",
+    "alt": "Network Basics-Terminology-Topology-9"
+  },
+  "Pastedimage20240406230619.png": {
+    "new_name": "NetworkCableandComponents-1.png",
+    "category": "network",
+    "alt": "Network Cable and Components-1"
+  },
+  "Pastedimage20240325141055.png": {
+    "new_name": "NetworkCableandComponents-2.png",
+    "category": "network",
+    "alt": "Network Cable and Components-2"
+  },
+  "Pastedimage20240325141107.png": {
+    "new_name": "NetworkCableandComponents-3.png",
+    "category": "network",
+    "alt": "Network Cable and Components-3"
+  },
+  "Pastedimage20240325141114.png": {
+    "new_name": "NetworkCableandComponents-4.png",
+    "category": "network",
+    "alt": "Network Cable and Components-4"
+  },
+  "Pastedimage20240325141207.png": {
+    "new_name": "NetworkCableandComponents-5.png",
+    "category": "network",
+    "alt": "Network Cable and Components-5"
+  },
+  "Pastedimage20240406230340.png": {
+    "new_name": "NetworkCableandComponents-7.png",
+    "category": "network",
+    "alt": "Network Cable and Components-7"
+  },
+  "Pastedimage20240406230353.png": {
+    "new_name": "NetworkCableandComponents-8.png",
+    "category": "network",
+    "alt": "Network Cable and Components-8"
+  },
+  "Pastedimage20240406230421.png": {
+    "new_name": "NetworkCableandComponents-9.png",
+    "category": "network",
+    "alt": "Network Cable and Components-9"
+  },
+  "Pastedimage20240406230439.png": {
+    "new_name": "NetworkCableandComponents-10.png",
+    "category": "network",
+    "alt": "Network Cable and Components-10"
+  },
+  "Pastedimage20240406230505.png": {
+    "new_name": "NetworkCableandComponents-11.png",
+    "category": "network",
+    "alt": "Network Cable and Components-11"
+  },
+  "Pastedimage20240406230537.png": {
+    "new_name": "NetworkCableandComponents-12.png",
+    "category": "network",
+    "alt": "Network Cable and Components-12"
+  },
+  "Pastedimage20240406230541.png": {
+    "new_name": "NetworkCableandComponents-13.png",
+    "category": "network",
+    "alt": "Network Cable and Components-13"
+  },
+  "Pastedimage20240406230549.png": {
+    "new_name": "NetworkCableandComponents-14.png",
+    "category": "network",
+    "alt": "Network Cable and Components-14"
+  },
+  "Pastedimage20240406230552.png": {
+    "new_name": "NetworkCableandComponents-15.png",
+    "category": "network",
+    "alt": "Network Cable and Components-15"
+  },
+  "Pastedimage20240406230646.png": {
+    "new_name": "NetworkCableandComponents-16.png",
+    "category": "network",
+    "alt": "Network Cable and Components-16"
+  },
+  "Pastedimage20240406230658.png": {
+    "new_name": "NetworkCableandComponents-17.png",
+    "category": "network",
+    "alt": "Network Cable and Components-17"
+  },
+  "Pastedimage20240325142031.png": {
+    "new_name": "NetworkCableandComponents-18.png",
+    "category": "network",
+    "alt": "Network Cable and Components-18"
+  },
+  "Pastedimage20240325142133.png": {
+    "new_name": "NetworkCableandComponents-19.png",
+    "category": "network",
+    "alt": "Network Cable and Components-19"
+  },
+  "Pastedimage20240325142125.png": {
+    "new_name": "NetworkCableandComponents-20.png",
+    "category": "network",
+    "alt": "Network Cable and Components-20"
+  },
+  "Pastedimage20240406230723.png": {
+    "new_name": "NetworkCableandComponents-21.png",
+    "category": "network",
+    "alt": "Network Cable and Components-21"
+  },
+  "Pastedimage20240406230726.png": {
+    "new_name": "NetworkCableandComponents-22.png",
+    "category": "network",
+    "alt": "Network Cable and Components-22"
+  },
+  "Pastedimage20240406230935.png": {
+    "new_name": "NetworkCableandComponents-23.png",
+    "category": "network",
+    "alt": "Network Cable and Components-23"
+  },
+  "Pastedimage20240406230938.png": {
+    "new_name": "NetworkCableandComponents-24.png",
+    "category": "network",
+    "alt": "Network Cable and Components-24"
+  },
+  "Pastedimage20240406230748.png": {
+    "new_name": "NetworkCableandComponents-25.png",
+    "category": "network",
+    "alt": "Network Cable and Components-25"
+  },
+  "Pastedimage20240406230752.png": {
+    "new_name": "NetworkCableandComponents-26.png",
+    "category": "network",
+    "alt": "Network Cable and Components-26"
+  },
+  "Pastedimage20240406223913.png": {
+    "new_name": "NetworkCableandComponents-27.png",
+    "category": "network",
+    "alt": "Network Cable and Components-27"
+  },
+  "Pastedimage20240406224158.png": {
+    "new_name": "NetworkCableandComponents-28.png",
+    "category": "network",
+    "alt": "Network Cable and Components-28"
+  },
+  "Pastedimage20240406224126.png": {
+    "new_name": "NetworkCableandComponents-29.png",
+    "category": "network",
+    "alt": "Network Cable and Components-29"
+  },
+  "Pastedimage20240406224149.png": {
+    "new_name": "NetworkCableandComponents-30.png",
+    "category": "network",
+    "alt": "Network Cable and Components-30"
+  },
+  "Pastedimage20240406224347.png": {
+    "new_name": "NetworkCableandComponents-31.png",
+    "category": "network",
+    "alt": "Network Cable and Components-31"
+  },
+  "Pastedimage20240406224400.png": {
+    "new_name": "NetworkCableandComponents-32.png",
+    "category": "network",
+    "alt": "Network Cable and Components-32"
+  },
+  "Pastedimage20240406224406.png": {
+    "new_name": "NetworkCableandComponents-33.png",
+    "category": "network",
+    "alt": "Network Cable and Components-33"
+  },
+  "Pastedimage20240325142959.png": {
+    "new_name": "NetworkModels-OSIandTCPIP-1.png",
+    "category": "network",
+    "alt": "Network Models-OSI and TCPIP-1"
+  },
+  "Pastedimage20240325142910.png": {
+    "new_name": "NetworkModels-OSIandTCPIP-2.png",
+    "category": "network",
+    "alt": "Network Models-OSI and TCPIP-2"
+  },
+  "Pastedimage20240325142914.png": {
+    "new_name": "NetworkModels-OSIandTCPIP-3.png",
+    "category": "network",
+    "alt": "Network Models-OSI and TCPIP-3"
+  },
+  "Pastedimage20240325143619.png": {
+    "new_name": "NetworkModels-OSIandTCPIP-4.png",
+    "category": "network",
+    "alt": "Network Models-OSI and TCPIP-4"
+  },
+  "Pastedimage20240325143628.png": {
+    "new_name": "NetworkModels-OSIandTCPIP-5.png",
+    "category": "network",
+    "alt": "Network Models-OSI and TCPIP-5"
+  },
+  "Pastedimage20240325150435.png": {
+    "new_name": "NetworkModels-OSIandTCPIP-6.png",
+    "category": "network",
+    "alt": "Network Models-OSI and TCPIP-6"
+  },
+  "Pastedimage20240325150445.png": {
+    "new_name": "NetworkModels-OSIandTCPIP-7.png",
+    "category": "network",
+    "alt": "Network Models-OSI and TCPIP-7"
+  },
+  "Pastedimage20240325150455.png": {
+    "new_name": "NetworkModels-OSIandTCPIP-8.png",
+    "category": "network",
+    "alt": "Network Models-OSI and TCPIP-8"
+  },
+  "Pastedimage20240325150519.png": {
+    "new_name": "NetworkModels-OSIandTCPIP-9.png",
+    "category": "network",
+    "alt": "Network Models-OSI and TCPIP-9"
+  },
+  "Pastedimage20240325150534.png": {
+    "new_name": "NetworkModels-OSIandTCPIP-10.png",
+    "category": "network",
+    "alt": "Network Models-OSI and TCPIP-10"
+  },
+  "Pastedimage20240325150548.png": {
+    "new_name": "NetworkModels-OSIandTCPIP-11.png",
+    "category": "network",
+    "alt": "Network Models-OSI and TCPIP-11"
+  },
+  "Pastedimage20240608232002.png": {
+    "new_name": "NetworkModels-OSIandTCPIP-12.png",
+    "category": "network",
+    "alt": "Network Models-OSI and TCPIP-12"
+  },
+  "Pastedimage20240406230157.png": {
+    "new_name": "NetworkModels-OSIandTCPIP-13.png",
+    "category": "network",
+    "alt": "Network Models-OSI and TCPIP-13"
+  },
+  "Pastedimage20240406230215.png": {
+    "new_name": "NetworkModels-OSIandTCPIP-14.png",
+    "category": "network",
+    "alt": "Network Models-OSI and TCPIP-14"
+  },
+  "Pastedimage20240608215246.png": {
+    "new_name": "NetworkServices(DHCP-DNS,-VLAN)-1.png",
+    "category": "network",
+    "alt": "Network Services(DHCP-DNS,-VLAN)-1"
+  },
+  "Pastedimage20240525223258.png": {
+    "new_name": "WindowsNetworking-1.png",
+    "category": "network",
+    "alt": "Windows Networking-1"
+  },
+  "Pastedimage20240525222946.png": {
+    "new_name": "WindowsNetworking-2.png",
+    "category": "network",
+    "alt": "Windows Networking-2"
   }
 }

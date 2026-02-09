@@ -13,5 +13,35 @@
     "image_count": 12,
     "updated_count": 12,
     "last_processed": "2026-02-08 14:27:13"
+  },
+  "network\\IP-Mac Address Basic and Concepts.md": {
+    "image_count": 13,
+    "updated_count": 13,
+    "last_processed": "2026-02-09 15:40:51"
+  },
+  "network\\Network Basics-Terminology-Topology.md": {
+    "image_count": 9,
+    "updated_count": 9,
+    "last_processed": "2026-02-09 15:40:51"
+  },
+  "network\\Network Cable and Components.md": {
+    "image_count": 33,
+    "updated_count": 32,
+    "last_processed": "2026-02-09 15:40:51"
+  },
+  "network\\Network Models-OSI and TCPIP.md": {
+    "image_count": 14,
+    "updated_count": 14,
+    "last_processed": "2026-02-09 15:40:51"
+  },
+  "network\\Network Services(DHCP-DNS,-VLAN).md": {
+    "image_count": 1,
+    "updated_count": 1,
+    "last_processed": "2026-02-09 15:40:51"
+  },
+  "network\\Windows Networking.md": {
+    "image_count": 2,
+    "updated_count": 2,
+    "last_processed": "2026-02-09 15:40:51"
   }
 }

@@ -1,16 +1,16 @@
 Image Migration Report - Phase 1 & 2
 ============================================================
-Date: 2026-02-08 14:17:25
+Date: 2026-02-09 15:39:57
 ============================================================
 
 Statistics:
-- Files scanned: 22
-- Image references found: 38
-- Images copied: 38
-- Images renamed: 38
+- Files scanned: 30
+- Image references found: 72
+- Images copied: 71
+- Images renamed: 71
 - Images skipped: 0
 - Errors: 0
-- Total processed: 470
+- Total processed: 579
 
 Processed Images:
 ------------------------------------------------------------
@@ -67,6 +67,219 @@ Processed Images:
 
   [tools] Pasted image 20231206142326.png
   -> Pastedimage20231206142326.png
+
+  [network] Pasted image 20240325140528.png
+  -> Pastedimage20240325140528.png
+
+  [network] Pasted image 20240325140633.png
+  -> Pastedimage20240325140633.png
+
+  [network] Pasted image 20240325140833.png
+  -> Pastedimage20240325140833.png
+
+  [network] Pasted image 20240325141055.png
+  -> Pastedimage20240325141055.png
+
+  [network] Pasted image 20240325141107.png
+  -> Pastedimage20240325141107.png
+
+  [network] Pasted image 20240325141114.png
+  -> Pastedimage20240325141114.png
+
+  [network] Pasted image 20240325141207.png
+  -> Pastedimage20240325141207.png
+
+  [network] Pasted image 20240325141501.png
+  -> Pastedimage20240325141501.png
+
+  [network] Pasted image 20240325141520.png
+  -> Pastedimage20240325141520.png
+
+  [network] Pasted image 20240325141535.png
+  -> Pastedimage20240325141535.png
+
+  [network] Pasted image 20240325141548.png
+  -> Pastedimage20240325141548.png
+
+  [network] Pasted image 20240325141614.png
+  -> Pastedimage20240325141614.png
+
+  [network] Pasted image 20240325141624.png
+  -> Pastedimage20240325141624.png
+
+  [network] Pasted image 20240325142031.png
+  -> Pastedimage20240325142031.png
+
+  [network] Pasted image 20240325142125.png
+  -> Pastedimage20240325142125.png
+
+  [network] Pasted image 20240325142133.png
+  -> Pastedimage20240325142133.png
+
+  [network] Pasted image 20240325142910.png
+  -> Pastedimage20240325142910.png
+
+  [network] Pasted image 20240325142914.png
+  -> Pastedimage20240325142914.png
+
+  [network] Pasted image 20240325142959.png
+  -> Pastedimage20240325142959.png
+
+  [network] Pasted image 20240325143619.png
+  -> Pastedimage20240325143619.png
+
+  [network] Pasted image 20240325143628.png
+  -> Pastedimage20240325143628.png
+
+  [network] Pasted image 20240325144303.png
+  -> Pastedimage20240325144303.png
+
+  [network] Pasted image 20240325144616.png
+  -> Pastedimage20240325144616.png
+
+  [network] Pasted image 20240325144624.png
+  -> Pastedimage20240325144624.png
+
+  [network] Pasted image 20240325144714.png
+  -> Pastedimage20240325144714.png
+
+  [network] Pasted image 20240325145021.png
+  -> Pastedimage20240325145021.png
+
+  [network] Pasted image 20240325145030.png
+  -> Pastedimage20240325145030.png
+
+  [network] Pasted image 20240325145052.png
+  -> Pastedimage20240325145052.png
+
+  [network] Pasted image 20240325145116.png
+  -> Pastedimage20240325145116.png
+
+  [network] Pasted image 20240325145329.png
+  -> Pastedimage20240325145329.png
+
+  [network] Pasted image 20240325145331.png
+  -> Pastedimage20240325145331.png
+
+  [network] Pasted image 20240325150435.png
+  -> Pastedimage20240325150435.png
+
+  [network] Pasted image 20240325150445.png
+  -> Pastedimage20240325150445.png
+
+  [network] Pasted image 20240325150455.png
+  -> Pastedimage20240325150455.png
+
+  [network] Pasted image 20240325150519.png
+  -> Pastedimage20240325150519.png
+
+  [network] Pasted image 20240325150534.png
+  -> Pastedimage20240325150534.png
+
+  [network] Pasted image 20240325150548.png
+  -> Pastedimage20240325150548.png
+
+  [network] Pasted image 20240325150746.png
+  -> Pastedimage20240325150746.png
+
+  [network] Pasted image 20240325150755.png
+  -> Pastedimage20240325150755.png
+
+  [network] Pasted image 20240406223913.png
+  -> Pastedimage20240406223913.png
+
+  [network] Pasted image 20240406224126.png
+  -> Pastedimage20240406224126.png
+
+  [network] Pasted image 20240406224149.png
+  -> Pastedimage20240406224149.png
+
+  [network] Pasted image 20240406224158.png
+  -> Pastedimage20240406224158.png
+
+  [network] Pasted image 20240406224347.png
+  -> Pastedimage20240406224347.png
+
+  [network] Pasted image 20240406224400.png
+  -> Pastedimage20240406224400.png
+
+  [network] Pasted image 20240406224406.png
+  -> Pastedimage20240406224406.png
+
+  [network] Pasted image 20240406230157.png
+  -> Pastedimage20240406230157.png
+
+  [network] Pasted image 20240406230215.png
+  -> Pastedimage20240406230215.png
+
+  [network] Pasted image 20240406230317.png
+  -> Pastedimage20240406230317.png
+
+  [network] Pasted image 20240406230340.png
+  -> Pastedimage20240406230340.png
+
+  [network] Pasted image 20240406230353.png
+  -> Pastedimage20240406230353.png
+
+  [network] Pasted image 20240406230421.png
+  -> Pastedimage20240406230421.png
+
+  [network] Pasted image 20240406230439.png
+  -> Pastedimage20240406230439.png
+
+  [network] Pasted image 20240406230505.png
+  -> Pastedimage20240406230505.png
+
+  [network] Pasted image 20240406230537.png
+  -> Pastedimage20240406230537.png
+
+  [network] Pasted image 20240406230541.png
+  -> Pastedimage20240406230541.png
+
+  [network] Pasted image 20240406230549.png
+  -> Pastedimage20240406230549.png
+
+  [network] Pasted image 20240406230552.png
+  -> Pastedimage20240406230552.png
+
+  [network] Pasted image 20240406230619.png
+  -> Pastedimage20240406230619.png
+
+  [network] Pasted image 20240406230646.png
+  -> Pastedimage20240406230646.png
+
+  [network] Pasted image 20240406230658.png
+  -> Pastedimage20240406230658.png
+
+  [network] Pasted image 20240406230723.png
+  -> Pastedimage20240406230723.png
+
+  [network] Pasted image 20240406230726.png
+  -> Pastedimage20240406230726.png
+
+  [network] Pasted image 20240406230748.png
+  -> Pastedimage20240406230748.png
+
+  [network] Pasted image 20240406230752.png
+  -> Pastedimage20240406230752.png
+
+  [network] Pasted image 20240406230935.png
+  -> Pastedimage20240406230935.png
+
+  [network] Pasted image 20240406230938.png
+  -> Pastedimage20240406230938.png
+
+  [network] Pasted image 20240525222946.png
+  -> Pastedimage20240525222946.png
+
+  [network] Pasted image 20240525223258.png
+  -> Pastedimage20240525223258.png
+
+  [network] Pasted image 20240608215246.png
+  -> Pastedimage20240608215246.png
+
+  [network] Pasted image 20240608232002.png
+  -> Pastedimage20240608232002.png
 
   [cyber-security] Pasted image 20240620162926.png
   -> Pastedimage20240620162926.png
@@ -866,6 +1079,120 @@ Processed Images:
   [seo] Pasted image 20260121190100.png
   -> Pastedimage20260121190100.png
 
+  [cyber-security] cyber-security/Pastedimage20250713164152.png
+  -> Basic-Encryption-1.png
+
+  [cyber-security] cyber-security/Pastedimage20250713165744.png
+  -> Basic-Encryption-2.png
+
+  [cyber-security] cyber-security/Pastedimage20250713170247.png
+  -> Basic-Encryption-3.png
+
+  [cyber-security] cyber-security/Pastedimage20250713171340.png
+  -> Basic-Encryption-4.png
+
+  [cyber-security] cyber-security/Pastedimage20250713172246.png
+  -> Basic-Encryption-5.png
+
+  [cyber-security] cyber-security/Pastedimage20250713172811.png
+  -> Basic-Encryption-6.png
+
+  [cyber-security] cyber-security/Pastedimage20250713181517.png
+  -> Basic-Encryption-7.png
+
+  [cyber-security] cyber-security/Pastedimage20250713181931.png
+  -> Basic-Encryption-9.png
+
+  [cyber-security] cyber-security/Pastedimage20250713181952.png
+  -> Basic-Encryption-8.png
+
+  [cyber-security] cyber-security/Pastedimage20250713182430.png
+  -> Basic-Encryption-11.png
+
+  [cyber-security] cyber-security/Pastedimage20250713182443.png
+  -> Basic-Encryption-10.png
+
+  [cyber-security] cyber-security/Pastedimage20250713182716.png
+  -> Basic-Encryption-12.png
+
+  [cyber-security] cyber-security/Pastedimage20250713185909.png
+  -> Basic-Encryption-13.png
+
+  [cyber-security] cyber-security/Pastedimage20250713190307.png
+  -> Basic-Encryption-14.png
+
+  [cyber-security] cyber-security/Pastedimage20250713190542.png
+  -> Basic-Encryption-15.png
+
+  [cyber-security] cyber-security/Pastedimage20250715174328.png
+  -> Basic-Encryption-16.png
+
+  [cyber-security] cyber-security/Pastedimage20250715174640.png
+  -> Basic-Encryption-17.png
+
+  [cyber-security] cyber-security/Pastedimage20250715174808.png
+  -> Basic-Encryption-18.png
+
+  [cyber-security] cyber-security/Pastedimage20250715175155.png
+  -> Basic-Encryption-19.png
+
+  [cyber-security] cyber-security/Pastedimage20250715180644.png
+  -> Basic-Encryption-20.png
+
+  [cyber-security] cyber-security/Pastedimage20250715182644.png
+  -> Basic-Encryption-21.png
+
+  [cyber-security] cyber-security/Pastedimage20250716164001.png
+  -> Basic-Encryption-22.png
+
+  [cyber-security] cyber-security/Pastedimage20250716164250.png
+  -> Basic-Encryption-23.png
+
+  [cyber-security] cyber-security/Pastedimage20250716164420.png
+  -> Basic-Encryption-24.png
+
+  [cyber-security] cyber-security/Pastedimage20250716164544.png
+  -> Basic-Encryption-25.png
+
+  [cyber-security] cyber-security/Pastedimage20250716165150.png
+  -> Basic-Encryption-26.png
+
+  [cyber-security] cyber-security/Pastedimage20250716165524.png
+  -> Basic-Encryption-27.png
+
+  [cyber-security] cyber-security/Pastedimage20250716165641.png
+  -> Basic-Encryption-28.png
+
+  [cyber-security] cyber-security/Pastedimage20250716165756.png
+  -> Basic-Encryption-29.png
+
+  [cyber-security] cyber-security/Pastedimage20250716170043.png
+  -> Basic-Encryption-30.png
+
+  [cyber-security] cyber-security/Pastedimage20250716170612.png
+  -> Basic-Encryption-31.png
+
+  [cyber-security] cyber-security/Pastedimage20250716170855.png
+  -> Basic-Encryption-32.png
+
+  [cyber-security] cyber-security/Pastedimage20250716172851.png
+  -> Malwares-1.png
+
+  [cyber-security] cyber-security/Pastedimage20250716174502.png
+  -> Malwares-2.png
+
+  [cyber-security] cyber-security/Pastedimage20250716175728.png
+  -> Malwares-3.png
+
+  [cyber-security] cyber-security/Pastedimage20250716180045.png
+  -> Malwares-4.png
+
+  [cyber-security] cyber-security/Pastedimage20250716180357.png
+  -> Malwares-5.png
+
+  [cyber-security] cyber-security/Pastedimage20250716180909.png
+  -> Malwares-6.png
+
   [cyber-security] cyber-security/SANS-401-PasswordCracking-1.png
   -> SANS-401-PasswordCracking-1.png
 
@@ -1426,8 +1753,8 @@ Processed Images:
 
 ============================================================
 Conversion Details:
-- Files converted: 2
-- Links converted: 38
+- Files converted: 6
+- Links converted: 71
 
 Paths:
 - Obsidian source: H:\Files\Obsidian\Handouts\VaultData\Attachments

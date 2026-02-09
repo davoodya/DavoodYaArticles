@@ -1374,3 +1374,123 @@
 2026-02-09 14:01:21,416 - INFO - SCRIPT EXECUTION COMPLETED
 2026-02-09 14:01:21,416 - INFO - ======================================================================
 
+2026-02-09 15:41:10,413 - INFO - 
+======================================================================
+2026-02-09 15:41:10,414 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO ENHANCED FRONTMATTER ADDER
+2026-02-09 15:41:10,414 - INFO - SCRIPT STARTED
+2026-02-09 15:41:10,414 - INFO - ======================================================================
+
+2026-02-09 15:41:10,414 - INFO - Loaded tracking file with 22 processed files
+2026-02-09 15:41:10,417 - INFO - Found 36 markdown files to check (including subdirectories)
+2026-02-09 15:41:10,417 - INFO - Already processed: 22 files
+2026-02-09 15:41:10,417 - INFO - ⊗ Skipping _index.md file (category index): cyber-security\_index.md
+2026-02-09 15:41:10,417 - INFO - ⊙ Skipping already processed file: linux\60 Commands Hacker Should Know it.md
+2026-02-09 15:41:10,418 - INFO - ⊗ Skipping _index.md file (category index): linux\_index.md
+2026-02-09 15:41:10,418 - INFO - 
+============================================================
+2026-02-09 15:41:10,418 - INFO - Processing: network\IP-Mac Address Basic and Concepts.md
+2026-02-09 15:41:10,418 - INFO - ============================================================
+2026-02-09 15:41:10,418 - INFO - Found Obsidian properties in IP-Mac Address Basic and Concepts.md from line 0 to line 10
+2026-02-09 15:41:10,419 - INFO -   Extracted properties: date=2024-03-25, tags=[], categories=['Network']
+2026-02-09 15:41:10,419 - INFO - ✓ Removed Obsidian properties from: IP-Mac Address Basic and Concepts.md
+2026-02-09 15:41:10,537 - INFO - ✓ Added Enhanced Hugo frontmatter to: IP-Mac Address Basic and Concepts.md
+2026-02-09 15:41:10,538 - INFO - 
+============================================================
+2026-02-09 15:41:10,538 - INFO - Processing: network\Network Basics-Terminology-Topology.md
+2026-02-09 15:41:10,538 - INFO - ============================================================
+2026-02-09 15:41:10,538 - INFO - Found Obsidian properties in Network Basics-Terminology-Topology.md from line 0 to line 10
+2026-02-09 15:41:10,538 - INFO -   Extracted properties: date=2024-03-25, tags=[], categories=['Network']
+2026-02-09 15:41:10,538 - INFO - ✓ Removed Obsidian properties from: Network Basics-Terminology-Topology.md
+2026-02-09 15:41:10,538 - INFO - ✓ Added Enhanced Hugo frontmatter to: Network Basics-Terminology-Topology.md
+2026-02-09 15:41:10,539 - INFO - 
+============================================================
+2026-02-09 15:41:10,539 - INFO - Processing: network\Network Cable and Components.md
+2026-02-09 15:41:10,539 - INFO - ============================================================
+2026-02-09 15:41:10,539 - INFO - Found Obsidian properties in Network Cable and Components.md from line 0 to line 10
+2026-02-09 15:41:10,540 - INFO -   Extracted properties: date=2024-03-25, tags=[], categories=['Network']
+2026-02-09 15:41:10,540 - INFO - ✓ Removed Obsidian properties from: Network Cable and Components.md
+2026-02-09 15:41:10,540 - INFO - ✓ Added Enhanced Hugo frontmatter to: Network Cable and Components.md
+2026-02-09 15:41:10,540 - INFO - 
+============================================================
+2026-02-09 15:41:10,540 - INFO - Processing: network\Network Commands & File Printer Sharing.md
+2026-02-09 15:41:10,541 - INFO - ============================================================
+2026-02-09 15:41:10,541 - INFO - Found Obsidian properties in Network Commands & File Printer Sharing.md from line 0 to line 10
+2026-02-09 15:41:10,541 - INFO -   Extracted properties: date=2024-03-25, tags=[], categories=['Network']
+2026-02-09 15:41:10,541 - INFO - ✓ Removed Obsidian properties from: Network Commands & File Printer Sharing.md
+2026-02-09 15:41:10,541 - INFO - ✓ Added Enhanced Hugo frontmatter to: Network Commands & File Printer Sharing.md
+2026-02-09 15:41:10,542 - INFO - 
+============================================================
+2026-02-09 15:41:10,542 - INFO - Processing: network\Network Models-OSI and TCPIP.md
+2026-02-09 15:41:10,542 - INFO - ============================================================
+2026-02-09 15:41:10,542 - INFO - Found Obsidian properties in Network Models-OSI and TCPIP.md from line 0 to line 10
+2026-02-09 15:41:10,542 - INFO -   Extracted properties: date=2024-03-25, tags=[], categories=['Network']
+2026-02-09 15:41:10,542 - INFO - ✓ Removed Obsidian properties from: Network Models-OSI and TCPIP.md
+2026-02-09 15:41:10,543 - INFO - ✓ Added Enhanced Hugo frontmatter to: Network Models-OSI and TCPIP.md
+2026-02-09 15:41:10,543 - INFO - 
+============================================================
+2026-02-09 15:41:10,543 - INFO - Processing: network\Network Services(DHCP-DNS,-VLAN).md
+2026-02-09 15:41:10,543 - INFO - ============================================================
+2026-02-09 15:41:10,544 - INFO - Found Obsidian properties in Network Services(DHCP-DNS,-VLAN).md from line 0 to line 10
+2026-02-09 15:41:10,544 - INFO -   Extracted properties: date=2024-03-25, tags=[], categories=['Network']
+2026-02-09 15:41:10,544 - INFO - ✓ Removed Obsidian properties from: Network Services(DHCP-DNS,-VLAN).md
+2026-02-09 15:41:10,544 - INFO - ✓ Added Enhanced Hugo frontmatter to: Network Services(DHCP-DNS,-VLAN).md
+2026-02-09 15:41:10,545 - INFO - 
+============================================================
+2026-02-09 15:41:10,545 - INFO - Processing: network\Virtualization & Networking.md
+2026-02-09 15:41:10,545 - INFO - ============================================================
+2026-02-09 15:41:10,545 - INFO - Found Obsidian properties in Virtualization & Networking.md from line 0 to line 10
+2026-02-09 15:41:10,545 - INFO -   Extracted properties: date=2024-03-25, tags=[], categories=['Network']
+2026-02-09 15:41:10,545 - INFO - ✓ Removed Obsidian properties from: Virtualization & Networking.md
+2026-02-09 15:41:10,545 - INFO - ✓ Added Enhanced Hugo frontmatter to: Virtualization & Networking.md
+2026-02-09 15:41:10,546 - INFO - 
+============================================================
+2026-02-09 15:41:10,546 - INFO - Processing: network\Windows Networking.md
+2026-02-09 15:41:10,546 - INFO - ============================================================
+2026-02-09 15:41:10,546 - INFO - Found Obsidian properties in Windows Networking.md from line 0 to line 10
+2026-02-09 15:41:10,546 - INFO -   Extracted properties: date=2024-03-25, tags=[], categories=['Network']
+2026-02-09 15:41:10,546 - INFO - ✓ Removed Obsidian properties from: Windows Networking.md
+2026-02-09 15:41:10,547 - INFO - ✓ Added Enhanced Hugo frontmatter to: Windows Networking.md
+2026-02-09 15:41:10,547 - INFO - ⊗ Skipping _index.md file (category index): network\_index.md
+2026-02-09 15:41:10,547 - INFO - ⊙ Skipping already processed file: python\Dir-Buster-Module.md
+2026-02-09 15:41:10,547 - INFO - ⊗ Skipping _index.md file (category index): python\_index.md
+2026-02-09 15:41:10,548 - INFO - ⊗ Skipping _index.md file (category index): seo\_index.md
+2026-02-09 15:41:10,548 - INFO - ⊙ Skipping already processed file: tools\MSFConsole Commands.md
+2026-02-09 15:41:10,548 - INFO - ⊗ Skipping _index.md file (category index): tools\_index.md
+2026-02-09 15:41:10,548 - INFO - ⊙ Skipping already processed file: tools\Burpsuite\1-Install Burpsuite.md
+2026-02-09 15:41:10,548 - INFO - ⊙ Skipping already processed file: tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+2026-02-09 15:41:10,548 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+2026-02-09 15:41:10,548 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+2026-02-09 15:41:10,548 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+2026-02-09 15:41:10,548 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+2026-02-09 15:41:10,548 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+2026-02-09 15:41:10,548 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E15 - Page Rank.md
+2026-02-09 15:41:10,548 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+2026-02-09 15:41:10,548 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E17 - Backlinks.md
+2026-02-09 15:41:10,549 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+2026-02-09 15:41:10,549 - INFO - ⊙ Skipping already processed file: cyber-security\Cryptography\Basic-Encryption.md
+2026-02-09 15:41:10,549 - INFO - ⊙ Skipping already processed file: cyber-security\Cryptography\Malwares.md
+2026-02-09 15:41:10,549 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+2026-02-09 15:41:10,549 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+2026-02-09 15:41:10,549 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+2026-02-09 15:41:10,549 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+2026-02-09 15:41:10,549 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+2026-02-09 15:41:10,549 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+2026-02-09 15:41:10,550 - INFO - Tracking file saved with 30 processed files
+2026-02-09 15:41:10,550 - INFO - 
+============================================================
+2026-02-09 15:41:10,550 - INFO - SUMMARY
+2026-02-09 15:41:10,550 - INFO - ============================================================
+2026-02-09 15:41:10,550 - INFO - Total files found: 36
+2026-02-09 15:41:10,550 - INFO - Skipped _index.md files: 6
+2026-02-09 15:41:10,551 - INFO - Already processed (skipped): 22
+2026-02-09 15:41:10,551 - INFO - Newly processed (modified): 8
+2026-02-09 15:41:10,551 - INFO - No changes needed: 0
+2026-02-09 15:41:10,551 - INFO - Errors: 0
+2026-02-09 15:41:10,551 - INFO - ============================================================
+2026-02-09 15:41:10,551 - INFO - 
+✓ Report saved to: obsidian_property_remover_enhanced_report.txt
+2026-02-09 15:41:10,551 - INFO - 
+======================================================================
+2026-02-09 15:41:10,552 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-09 15:41:10,552 - INFO - ======================================================================
+

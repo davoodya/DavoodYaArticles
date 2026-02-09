@@ -1,15 +1,15 @@
 Title Adder Report
 ============================================================
-Date: 2026-02-08 14:18:11
+Date: 2026-02-09 15:40:27
 ============================================================
 
 Statistics:
-- Files scanned: 22
-- Files modified: 2
-- Titles added: 2
-- Titles existed: 20
+- Files scanned: 30
+- Files modified: 8
+- Titles added: 8
+- Titles existed: 22
 - Errors: 0
-- Total articles: 22
+- Total articles: 30
 
 Article Titles:
 ------------------------------------------------------------
@@ -22,16 +22,16 @@ CYBER-SECURITY (8 articles):
   Title: Malwares
 
   [cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md]
-  Title: SANS-401.0 Introduction & Prepare Lab
+  Title: SANS-401-(Introduction & Prepare Lab)
 
   [cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md]
   Title: SANS-401-Networking and Protocols (401.1)
 
   [cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md]
-  Title: SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)
+  Title: SANS-401-Virtualization & Cloud Infrastructure(401.1)
 
   [cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md]
-  Title: SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)
+  Title: SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)
 
   [cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md]
   Title: SANS-401-Defense-in-Depth (401.2)
@@ -43,6 +43,32 @@ CYBER-SECURITY (8 articles):
 LINUX (1 articles):
   [linux\60 Commands Hacker Should Know it.md]
   Title: 60 Commands Hacker Should Know it
+
+
+NETWORK (8 articles):
+  [network\IP-Mac Address Basic and Concepts.md]
+  Title: IP-Mac Address Basic and Concepts
+
+  [network\Network Basics-Terminology-Topology.md]
+  Title: Network Basics-Terminology-Topology
+
+  [network\Network Cable and Components.md]
+  Title: Network Cable and Components
+
+  [network\Network Commands & File Printer Sharing.md]
+  Title: Network Commands & File Printer Sharing
+
+  [network\Network Models-OSI and TCPIP.md]
+  Title: Network Models-OSI and TCPIP
+
+  [network\Network Services(DHCP-DNS,-VLAN).md]
+  Title: Network Services(DHCP-DNS,-VLAN)
+
+  [network\Virtualization & Networking.md]
+  Title: Virtualization & Networking
+
+  [network\Windows Networking.md]
+  Title: Windows Networking
 
 
 PYTHON (1 articles):

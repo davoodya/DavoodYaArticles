@@ -3,16 +3,16 @@ TOC REMOVER FOR HUGO ARTICLES
 EXECUTION REPORT
 ======================================================================
 
-Execution Date: 2026-02-09 09:58:49
+Execution Date: 2026-02-09 15:40:58
 Target Directory: content (recursive)
 
 ----------------------------------------------------------------------
 STATISTICS
 ----------------------------------------------------------------------
-Total files found: 27
-Already processed (skipped): 0
-TOC removed: 2
-No TOC found: 25
+Total files found: 36
+Already processed (skipped): 27
+TOC removed: 0
+No TOC found: 9
 Errors: 0
 
 ----------------------------------------------------------------------
@@ -29,22 +29,31 @@ PROCESSED FILES LIST
 9. cyber-security\_index.md
 10. linux\60 Commands Hacker Should Know it.md
 11. linux\_index.md
-12. python\Dir-Buster-Module.md
-13. python\_index.md
-14. seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
-15. seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
-16. seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
-17. seo\0-SEO-Theories\E13 - Good Contents for SEO.md
-18. seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
-19. seo\0-SEO-Theories\E15 - Page Rank.md
-20. seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
-21. seo\0-SEO-Theories\E17 - Backlinks.md
-22. seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
-23. seo\_index.md
-24. tools\Burpsuite\1-Install Burpsuite.md
-25. tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
-26. tools\MSFConsole Commands.md
-27. tools\_index.md
+12. network\IP-Mac Address Basic and Concepts.md
+13. network\Network Basics-Terminology-Topology.md
+14. network\Network Cable and Components.md
+15. network\Network Commands & File Printer Sharing.md
+16. network\Network Models-OSI and TCPIP.md
+17. network\Network Services(DHCP-DNS,-VLAN).md
+18. network\Virtualization & Networking.md
+19. network\Windows Networking.md
+20. network\_index.md
+21. python\Dir-Buster-Module.md
+22. python\_index.md
+23. seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+24. seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+25. seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+26. seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+27. seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+28. seo\0-SEO-Theories\E15 - Page Rank.md
+29. seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+30. seo\0-SEO-Theories\E17 - Backlinks.md
+31. seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+32. seo\_index.md
+33. tools\Burpsuite\1-Install Burpsuite.md
+34. tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+35. tools\MSFConsole Commands.md
+36. tools\_index.md
 
 ======================================================================
 Report generated successfully

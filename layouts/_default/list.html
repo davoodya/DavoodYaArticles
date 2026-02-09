@@ -64,62 +64,64 @@
                                 ادامه مطلب ←
                             </a>
                             {{/* Badge ها - سمت چپ دکمه */}}
-                            <div class="article-card-badges">
-                                {{/* مدت زمان */}}
-                                {{ if .Params.readingtime }}
-                                    <span class="article-badge badge-time">
-                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
-                                        </svg>
-                                        {{ .Params.readingtime }} دقیقه
-                                    </span>
-                                {{ end }}
-                                
-                                {{/* سطح سختی */}}
-                                {{ if .Params.difficulty }}
-                                    {{ $difficultyText := "" }}
-                                    {{ $difficultyClass := "" }}
-                                    {{ if eq .Params.difficulty "beginner" }}
-                                        {{ $difficultyText = "سطح مبتدی" }}
-                                        {{ $difficultyClass = "badge-beginner" }}
-                                    {{ else if eq .Params.difficulty "medium" }}
-                                        {{ $difficultyText = "سطح متوسط" }}
-                                        {{ $difficultyClass = "badge-medium" }}
-                                    {{ else if eq .Params.difficulty "intermediate" }}
-                                        {{ $difficultyText = "سطح حرفه‌ای" }}
-                                        {{ $difficultyClass = "badge-intermediate" }}
-                                    {{ else if eq .Params.difficulty "advanced" }}
-                                        {{ $difficultyText = "سطح تخصصی" }}
-                                        {{ $difficultyClass = "badge-advanced" }}
+                            {{ if or .Params.readingTime .Params.difficulty .Params.lab_required .Params.post_type_fa }}
+                                <div class="article-card-badges">
+                                    {{/* مدت زمان */}}
+                                    {{ if .Params.readingTime }}
+                                        <span class="article-badge badge-time">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                                            </svg>
+                                            <span class="badge-text">{{ .Params.readingTime }} دقیقه</span>
+                                        </span>
                                     {{ end }}
-                                    <span class="article-badge {{ $difficultyClass }}">
-                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                                        </svg>
-                                        {{ $difficultyText }}
-                                    </span>
-                                {{ end }}
-                                
-                                {{/* نیاز به تمرین عملی */}}
-                                {{ if .Params.lab_required }}
-                                    <span class="article-badge badge-lab">
-                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
-                                        </svg>
-                                        نیاز به تمرین عملی
-                                    </span>
-                                {{ end }}
-                                
-                                {{/* نوع پست */}}
-                                {{ if .Params.post_type_fa }}
-                                    <span class="article-badge badge-type">
-                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-                                        </svg>
-                                        {{ .Params.post_type_fa }}
-                                    </span>
-                                {{ end }}
-                            </div>
+                                    
+                                    {{/* سطح سختی */}}
+                                    {{ if .Params.difficulty }}
+                                        {{ $difficultyText := "" }}
+                                        {{ $difficultyClass := "" }}
+                                        {{ if eq .Params.difficulty "beginner" }}
+                                            {{ $difficultyText = "مبتدی" }}
+                                            {{ $difficultyClass = "badge-beginner" }}
+                                        {{ else if eq .Params.difficulty "medium" }}
+                                            {{ $difficultyText = "متوسط" }}
+                                            {{ $difficultyClass = "badge-medium" }}
+                                        {{ else if eq .Params.difficulty "intermediate" }}
+                                            {{ $difficultyText = "حرفه‌ای" }}
+                                            {{ $difficultyClass = "badge-intermediate" }}
+                                        {{ else if eq .Params.difficulty "advanced" }}
+                                            {{ $difficultyText = "تخصصی" }}
+                                            {{ $difficultyClass = "badge-advanced" }}
+                                        {{ end }}
+                                        <span class="article-badge badge-difficulty {{ $difficultyClass }}">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                            </svg>
+                                            <span class="badge-text">{{ $difficultyText }}</span>
+                                        </span>
+                                    {{ end }}
+                                    
+                                    {{/* نیاز به تمرین عملی */}}
+                                    {{ if .Params.lab_required }}
+                                        <span class="article-badge badge-lab">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                                            </svg>
+                                            <span class="badge-text">تمرین عملی</span>
+                                        </span>
+                                    {{ end }}
+                                    
+                                    {{/* نوع پست */}}
+                                    {{ if .Params.post_type_fa }}
+                                        <span class="article-badge badge-type">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                                            </svg>
+                                            <span class="badge-text">{{ .Params.post_type_fa }}</span>
+                                        </span>
+                                    {{ end }}
+                                </div>
+                            {{ end }}
                         </div>
                     </article>
                 {{ end }}

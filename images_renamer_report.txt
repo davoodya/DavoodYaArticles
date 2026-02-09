@@ -1,232 +1,322 @@
 Images Rename Report (Physical Files Only)
 ============================================================
-Date: 2026-02-08 14:27:03
+Date: 2026-02-09 15:40:44
 ============================================================
 
 Statistics:
-- Files scanned: 22
-- Images found: 284
+- Files scanned: 30
+- Images found: 356
 - Images skipped (already processed): 186
-- Images skipped (already correct): 0
-- Physical files renamed: 38
+- Images skipped (already correct): 38
+- Physical files renamed: 71
 - Errors: 0
-- Total mappings: 54
+- Total mappings: 76
 
 Rename Mappings by Category:
 ------------------------------------------------------------
 
-CYBER-SECURITY (53 files):
-  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-1]
-  Pastedimage20240620203510.png
-  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.png
-
-  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-2]
-  Pastedimage20240620203819.png
-  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-2.png
-
-  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-3]
-  Pastedimage20240620204019.png
-  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-3.png
-
-  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-4]
-  Pastedimage20240620204807.png
-  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-4.png
-
-  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-5]
-  Pastedimage20240620205025.png
-  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-5.png
-
-  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-6]
-  Pastedimage20240621164752.png
-  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-6.png
-
-  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-7]
-  Pastedimage20240621165857.png
-  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-7.png
-
-  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-8]
-  Pastedimage20240621170039.png
-  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-8.png
-
-  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-9]
-  Pastedimage20240621170041.png
-  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-9.png
-
-  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-10]
-  Pastedimage20240621170532.png
-  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-10.png
-
-  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-11]
-  Pastedimage20240621172255.png
-  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-11.png
-
-  [SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)-12]
-  Pastedimage20240621172422.png
-  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-12.png
-
-  [Basic-Encryption-1]
-  Pastedimage20250713164152.png
-  -> Basic-Encryption-1.png
-
-  [Basic-Encryption-2]
-  Pastedimage20250713165744.png
-  -> Basic-Encryption-2.png
-
-  [Basic-Encryption-3]
-  Pastedimage20250713170247.png
-  -> Basic-Encryption-3.png
-
-  [Basic-Encryption-4]
-  Pastedimage20250713171340.png
-  -> Basic-Encryption-4.png
-
-  [Basic-Encryption-5]
-  Pastedimage20250713172246.png
-  -> Basic-Encryption-5.png
-
-  [Basic-Encryption-6]
-  Pastedimage20250713172811.png
-  -> Basic-Encryption-6.png
-
-  [Basic-Encryption-7]
-  Pastedimage20250713181517.png
-  -> Basic-Encryption-7.png
-
-  [Basic-Encryption-9]
-  Pastedimage20250713181931.png
-  -> Basic-Encryption-9.png
-
-  [Basic-Encryption-8]
-  Pastedimage20250713181952.png
-  -> Basic-Encryption-8.png
-
-  [Basic-Encryption-11]
-  Pastedimage20250713182430.png
-  -> Basic-Encryption-11.png
-
-  [Basic-Encryption-10]
-  Pastedimage20250713182443.png
-  -> Basic-Encryption-10.png
-
-  [Basic-Encryption-12]
-  Pastedimage20250713182716.png
-  -> Basic-Encryption-12.png
-
-  [Basic-Encryption-13]
-  Pastedimage20250713185909.png
-  -> Basic-Encryption-13.png
-
-  [Basic-Encryption-14]
-  Pastedimage20250713190307.png
-  -> Basic-Encryption-14.png
-
-  [Basic-Encryption-15]
-  Pastedimage20250713190542.png
-  -> Basic-Encryption-15.png
-
-  [Basic-Encryption-16]
-  Pastedimage20250715174328.png
-  -> Basic-Encryption-16.png
-
-  [Basic-Encryption-17]
-  Pastedimage20250715174640.png
-  -> Basic-Encryption-17.png
-
-  [Basic-Encryption-18]
-  Pastedimage20250715174808.png
-  -> Basic-Encryption-18.png
-
-  [Basic-Encryption-19]
-  Pastedimage20250715175155.png
-  -> Basic-Encryption-19.png
-
-  [Basic-Encryption-20]
-  Pastedimage20250715180644.png
-  -> Basic-Encryption-20.png
-
-  [Basic-Encryption-21]
-  Pastedimage20250715182644.png
-  -> Basic-Encryption-21.png
-
-  [Basic-Encryption-22]
-  Pastedimage20250716164001.png
-  -> Basic-Encryption-22.png
-
-  [Basic-Encryption-23]
-  Pastedimage20250716164250.png
-  -> Basic-Encryption-23.png
-
-  [Basic-Encryption-24]
-  Pastedimage20250716164420.png
-  -> Basic-Encryption-24.png
-
-  [Basic-Encryption-25]
-  Pastedimage20250716164544.png
-  -> Basic-Encryption-25.png
-
-  [Basic-Encryption-26]
-  Pastedimage20250716165150.png
-  -> Basic-Encryption-26.png
-
-  [Basic-Encryption-27]
-  Pastedimage20250716165524.png
-  -> Basic-Encryption-27.png
-
-  [Basic-Encryption-28]
-  Pastedimage20250716165641.png
-  -> Basic-Encryption-28.png
-
-  [Basic-Encryption-29]
-  Pastedimage20250716165756.png
-  -> Basic-Encryption-29.png
-
-  [Basic-Encryption-30]
-  Pastedimage20250716170043.png
-  -> Basic-Encryption-30.png
-
-  [Basic-Encryption-31]
-  Pastedimage20250716170612.png
-  -> Basic-Encryption-31.png
-
-  [Basic-Encryption-32]
-  Pastedimage20250716170855.png
-  -> Basic-Encryption-32.png
-
-  [Malwares-1]
-  Pastedimage20250716172851.png
-  -> Malwares-1.png
-
-  [Malwares-2]
-  Pastedimage20250716174502.png
-  -> Malwares-2.png
-
-  [Malwares-3]
-  Pastedimage20250716175728.png
-  -> Malwares-3.png
-
-  [Malwares-4]
-  Pastedimage20250716180045.png
-  -> Malwares-4.png
-
-  [Malwares-5]
-  Pastedimage20250716180357.png
-  -> Malwares-5.png
-
-  [Malwares-6]
-  Pastedimage20250716180909.png
-  -> Malwares-6.png
-
+CYBER-SECURITY (4 files):
   [SANS-401-Defense-in-Depth (401.2)-1]
   SANS-401-Defense-in-Depth(401.2
   -> SANS-401-Defense-in-Depth(401.2)-1.2
 
-  [SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-1]
+  [SANS-401-Virtualization & Cloud Infrastructure(401.1)-1]
   SANS-401-E3-Virtualization&CloudInfrastructure(401.1
-  -> SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-1.1
+  -> SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
 
   [SANS-401-Networking and Protocols (401.1)-1]
   SANS-401-NetworkingandProtocols(401.1
   -> SANS-401-NetworkingandProtocols(401.1)-1.1
+
+  [SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)-1]
+  SANS-401-Wireless,Aircrack-ng,Wireshark(401.1
+  -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+
+
+NETWORK (71 files):
+  [Network Basics-Terminology-Topology-9]
+  Pastedimage20240325140528.png
+  -> NetworkBasics-Terminology-Topology-9.png
+
+  [Network Basics-Terminology-Topology-7]
+  Pastedimage20240325140633.png
+  -> NetworkBasics-Terminology-Topology-7.png
+
+  [Network Basics-Terminology-Topology-8]
+  Pastedimage20240325140833.png
+  -> NetworkBasics-Terminology-Topology-8.png
+
+  [Network Cable and Components-2]
+  Pastedimage20240325141055.png
+  -> NetworkCableandComponents-2.png
+
+  [Network Cable and Components-3]
+  Pastedimage20240325141107.png
+  -> NetworkCableandComponents-3.png
+
+  [Network Cable and Components-4]
+  Pastedimage20240325141114.png
+  -> NetworkCableandComponents-4.png
+
+  [Network Cable and Components-5]
+  Pastedimage20240325141207.png
+  -> NetworkCableandComponents-5.png
+
+  [Network Basics-Terminology-Topology-3]
+  Pastedimage20240325141501.png
+  -> NetworkBasics-Terminology-Topology-3.png
+
+  [Network Basics-Terminology-Topology-4]
+  Pastedimage20240325141520.png
+  -> NetworkBasics-Terminology-Topology-4.png
+
+  [Network Basics-Terminology-Topology-1]
+  Pastedimage20240325141535.png
+  -> NetworkBasics-Terminology-Topology-1.png
+
+  [Network Basics-Terminology-Topology-2]
+  Pastedimage20240325141548.png
+  -> NetworkBasics-Terminology-Topology-2.png
+
+  [Network Basics-Terminology-Topology-6]
+  Pastedimage20240325141614.png
+  -> NetworkBasics-Terminology-Topology-6.png
+
+  [Network Basics-Terminology-Topology-5]
+  Pastedimage20240325141624.png
+  -> NetworkBasics-Terminology-Topology-5.png
+
+  [Network Cable and Components-18]
+  Pastedimage20240325142031.png
+  -> NetworkCableandComponents-18.png
+
+  [Network Cable and Components-20]
+  Pastedimage20240325142125.png
+  -> NetworkCableandComponents-20.png
+
+  [Network Cable and Components-19]
+  Pastedimage20240325142133.png
+  -> NetworkCableandComponents-19.png
+
+  [Network Models-OSI and TCPIP-2]
+  Pastedimage20240325142910.png
+  -> NetworkModels-OSIandTCPIP-2.png
+
+  [Network Models-OSI and TCPIP-3]
+  Pastedimage20240325142914.png
+  -> NetworkModels-OSIandTCPIP-3.png
+
+  [Network Models-OSI and TCPIP-1]
+  Pastedimage20240325142959.png
+  -> NetworkModels-OSIandTCPIP-1.png
+
+  [Network Models-OSI and TCPIP-4]
+  Pastedimage20240325143619.png
+  -> NetworkModels-OSIandTCPIP-4.png
+
+  [Network Models-OSI and TCPIP-5]
+  Pastedimage20240325143628.png
+  -> NetworkModels-OSIandTCPIP-5.png
+
+  [IP-Mac Address Basic and Concepts-1]
+  Pastedimage20240325144303.png
+  -> IP-MacAddressBasicandConcepts-1.png
+
+  [IP-Mac Address Basic and Concepts-2]
+  Pastedimage20240325144616.png
+  -> IP-MacAddressBasicandConcepts-2.png
+
+  [IP-Mac Address Basic and Concepts-3]
+  Pastedimage20240325144624.png
+  -> IP-MacAddressBasicandConcepts-3.png
+
+  [IP-Mac Address Basic and Concepts-4]
+  Pastedimage20240325144714.png
+  -> IP-MacAddressBasicandConcepts-4.png
+
+  [IP-Mac Address Basic and Concepts-6]
+  Pastedimage20240325145021.png
+  -> IP-MacAddressBasicandConcepts-6.png
+
+  [IP-Mac Address Basic and Concepts-7]
+  Pastedimage20240325145030.png
+  -> IP-MacAddressBasicandConcepts-7.png
+
+  [IP-Mac Address Basic and Concepts-8]
+  Pastedimage20240325145052.png
+  -> IP-MacAddressBasicandConcepts-8.png
+
+  [IP-Mac Address Basic and Concepts-5]
+  Pastedimage20240325145116.png
+  -> IP-MacAddressBasicandConcepts-5.png
+
+  [IP-Mac Address Basic and Concepts-10]
+  Pastedimage20240325145329.png
+  -> IP-MacAddressBasicandConcepts-10.png
+
+  [IP-Mac Address Basic and Concepts-9]
+  Pastedimage20240325145331.png
+  -> IP-MacAddressBasicandConcepts-9.png
+
+  [Network Models-OSI and TCPIP-6]
+  Pastedimage20240325150435.png
+  -> NetworkModels-OSIandTCPIP-6.png
+
+  [Network Models-OSI and TCPIP-7]
+  Pastedimage20240325150445.png
+  -> NetworkModels-OSIandTCPIP-7.png
+
+  [Network Models-OSI and TCPIP-8]
+  Pastedimage20240325150455.png
+  -> NetworkModels-OSIandTCPIP-8.png
+
+  [Network Models-OSI and TCPIP-9]
+  Pastedimage20240325150519.png
+  -> NetworkModels-OSIandTCPIP-9.png
+
+  [Network Models-OSI and TCPIP-10]
+  Pastedimage20240325150534.png
+  -> NetworkModels-OSIandTCPIP-10.png
+
+  [Network Models-OSI and TCPIP-11]
+  Pastedimage20240325150548.png
+  -> NetworkModels-OSIandTCPIP-11.png
+
+  [IP-Mac Address Basic and Concepts-11]
+  Pastedimage20240325150746.png
+  -> IP-MacAddressBasicandConcepts-11.png
+
+  [IP-Mac Address Basic and Concepts-12]
+  Pastedimage20240325150755.png
+  -> IP-MacAddressBasicandConcepts-12.png
+
+  [Network Cable and Components-27]
+  Pastedimage20240406223913.png
+  -> NetworkCableandComponents-27.png
+
+  [Network Cable and Components-29]
+  Pastedimage20240406224126.png
+  -> NetworkCableandComponents-29.png
+
+  [Network Cable and Components-30]
+  Pastedimage20240406224149.png
+  -> NetworkCableandComponents-30.png
+
+  [Network Cable and Components-28]
+  Pastedimage20240406224158.png
+  -> NetworkCableandComponents-28.png
+
+  [Network Cable and Components-31]
+  Pastedimage20240406224347.png
+  -> NetworkCableandComponents-31.png
+
+  [Network Cable and Components-32]
+  Pastedimage20240406224400.png
+  -> NetworkCableandComponents-32.png
+
+  [Network Cable and Components-33]
+  Pastedimage20240406224406.png
+  -> NetworkCableandComponents-33.png
+
+  [Network Models-OSI and TCPIP-13]
+  Pastedimage20240406230157.png
+  -> NetworkModels-OSIandTCPIP-13.png
+
+  [Network Models-OSI and TCPIP-14]
+  Pastedimage20240406230215.png
+  -> NetworkModels-OSIandTCPIP-14.png
+
+  [IP-Mac Address Basic and Concepts-13]
+  Pastedimage20240406230317.png
+  -> IP-MacAddressBasicandConcepts-13.png
+
+  [Network Cable and Components-7]
+  Pastedimage20240406230340.png
+  -> NetworkCableandComponents-7.png
+
+  [Network Cable and Components-8]
+  Pastedimage20240406230353.png
+  -> NetworkCableandComponents-8.png
+
+  [Network Cable and Components-9]
+  Pastedimage20240406230421.png
+  -> NetworkCableandComponents-9.png
+
+  [Network Cable and Components-10]
+  Pastedimage20240406230439.png
+  -> NetworkCableandComponents-10.png
+
+  [Network Cable and Components-11]
+  Pastedimage20240406230505.png
+  -> NetworkCableandComponents-11.png
+
+  [Network Cable and Components-12]
+  Pastedimage20240406230537.png
+  -> NetworkCableandComponents-12.png
+
+  [Network Cable and Components-13]
+  Pastedimage20240406230541.png
+  -> NetworkCableandComponents-13.png
+
+  [Network Cable and Components-14]
+  Pastedimage20240406230549.png
+  -> NetworkCableandComponents-14.png
+
+  [Network Cable and Components-15]
+  Pastedimage20240406230552.png
+  -> NetworkCableandComponents-15.png
+
+  [Network Cable and Components-1]
+  Pastedimage20240406230619.png
+  -> NetworkCableandComponents-1.png
+
+  [Network Cable and Components-16]
+  Pastedimage20240406230646.png
+  -> NetworkCableandComponents-16.png
+
+  [Network Cable and Components-17]
+  Pastedimage20240406230658.png
+  -> NetworkCableandComponents-17.png
+
+  [Network Cable and Components-21]
+  Pastedimage20240406230723.png
+  -> NetworkCableandComponents-21.png
+
+  [Network Cable and Components-22]
+  Pastedimage20240406230726.png
+  -> NetworkCableandComponents-22.png
+
+  [Network Cable and Components-25]
+  Pastedimage20240406230748.png
+  -> NetworkCableandComponents-25.png
+
+  [Network Cable and Components-26]
+  Pastedimage20240406230752.png
+  -> NetworkCableandComponents-26.png
+
+  [Network Cable and Components-23]
+  Pastedimage20240406230935.png
+  -> NetworkCableandComponents-23.png
+
+  [Network Cable and Components-24]
+  Pastedimage20240406230938.png
+  -> NetworkCableandComponents-24.png
+
+  [Windows Networking-2]
+  Pastedimage20240525222946.png
+  -> WindowsNetworking-2.png
+
+  [Windows Networking-1]
+  Pastedimage20240525223258.png
+  -> WindowsNetworking-1.png
+
+  [Network Services(DHCP-DNS,-VLAN)-1]
+  Pastedimage20240608215246.png
+  -> NetworkServices(DHCP-DNS,-VLAN)-1.png
+
+  [Network Models-OSI and TCPIP-12]
+  Pastedimage20240608232002.png
+  -> NetworkModels-OSIandTCPIP-12.png
 
 
 SEO (1 files):

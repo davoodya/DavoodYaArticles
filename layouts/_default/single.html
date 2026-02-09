@@ -7,65 +7,6 @@
         <article class="article-wrapper{{ if .Params.custom_class }} {{ .Params.custom_class }}{{ end }}">
             <h1 class="article-title">{{ .Title }}</h1>
             
-            {{/* ویژگی‌های مقاله - Badge ها */}}
-            <div class="article-meta-badges">
-                {{/* مدت زمان */}}
-                {{ if .Params.readingtime }}
-                    <div class="meta-badge badge-time">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
-                        </svg>
-                        <span class="badge-label">مدت زمان:</span>
-                        <span class="badge-value">{{ .Params.readingtime }} دقیقه</span>
-                    </div>
-                {{ end }}
-                
-                {{/* سطح سختی */}}
-                {{ if .Params.difficulty }}
-                    {{ $difficultyText := "" }}
-                    {{ $difficultyClass := "" }}
-                    {{ if eq .Params.difficulty "beginner" }}
-                        {{ $difficultyText = "سطح مبتدی" }}
-                        {{ $difficultyClass = "badge-beginner" }}
-                    {{ else if eq .Params.difficulty "medium" }}
-                        {{ $difficultyText = "سطح متوسط" }}
-                        {{ $difficultyClass = "badge-medium" }}
-                    {{ else if eq .Params.difficulty "intermediate" }}
-                        {{ $difficultyText = "سطح حرفه‌ای" }}
-                        {{ $difficultyClass = "badge-intermediate" }}
-                    {{ else if eq .Params.difficulty "advanced" }}
-                        {{ $difficultyText = "سطح تخصصی" }}
-                        {{ $difficultyClass = "badge-advanced" }}
-                    {{ end }}
-                    <div class="meta-badge {{ $difficultyClass }}">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        </svg>
-                        <span class="badge-value">{{ $difficultyText }}</span>
-                    </div>
-                {{ end }}
-                
-                {{/* نیاز به تمرین عملی */}}
-                {{ if .Params.lab_required }}
-                    <div class="meta-badge badge-lab">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
-                        </svg>
-                        <span class="badge-value">نیاز به تمرین عملی</span>
-                    </div>
-                {{ end }}
-                
-                {{/* نوع پست */}}
-                {{ if .Params.post_type_fa }}
-                    <div class="meta-badge badge-type">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-                        </svg>
-                        <span class="badge-value">{{ .Params.post_type_fa }}</span>
-                    </div>
-                {{ end }}
-            </div>
-            
             {{/* Table of Contents - فهرست مطالب در بالای صفحه (فقط نمایش) */}}
             {{ if .TableOfContents }}
                 <div class="toc-container">
@@ -73,6 +14,66 @@
                     <nav id="TableOfContents">
                         {{ .TableOfContents }}
                     </nav>
+                </div>
+            {{ end }}
+            
+            {{/* ویژگی‌های مقاله - Badge ها بعد از TOC و قبل از محتوا */}}
+            {{ if or .Params.readingTime .Params.difficulty .Params.lab_required .Params.post_type_fa }}
+                <div class="article-meta-badges">
+                    {{/* مدت زمان */}}
+                    {{ if .Params.readingTime }}
+                        <div class="meta-badge badge-time">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                            </svg>
+                            <span class="badge-text">مدت زمان: {{ .Params.readingTime }} دقیقه</span>
+                        </div>
+                    {{ end }}
+                    
+                    {{/* سطح سختی */}}
+                    {{ if .Params.difficulty }}
+                        {{ $difficultyText := "" }}
+                        {{ $difficultyClass := "" }}
+                        {{ if eq .Params.difficulty "beginner" }}
+                            {{ $difficultyText = "سطح مبتدی" }}
+                            {{ $difficultyClass = "badge-beginner" }}
+                        {{ else if eq .Params.difficulty "medium" }}
+                            {{ $difficultyText = "سطح متوسط" }}
+                            {{ $difficultyClass = "badge-medium" }}
+                        {{ else if eq .Params.difficulty "intermediate" }}
+                            {{ $difficultyText = "سطح حرفه‌ای" }}
+                            {{ $difficultyClass = "badge-intermediate" }}
+                        {{ else if eq .Params.difficulty "advanced" }}
+                            {{ $difficultyText = "سطح تخصصی" }}
+                            {{ $difficultyClass = "badge-advanced" }}
+                        {{ end }}
+                        <div class="meta-badge badge-difficulty {{ $difficultyClass }}">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                            <span class="badge-text">{{ $difficultyText }}</span>
+                        </div>
+                    {{ end }}
+                    
+                    {{/* نیاز به تمرین عملی */}}
+                    {{ if .Params.lab_required }}
+                        <div class="meta-badge badge-lab">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                            </svg>
+                            <span class="badge-text">نیاز به تمرین عملی</span>
+                        </div>
+                    {{ end }}
+                    
+                    {{/* نوع پست */}}
+                    {{ if .Params.post_type_fa }}
+                        <div class="meta-badge badge-type">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                            </svg>
+                            <span class="badge-text">{{ .Params.post_type_fa }}</span>
+                        </div>
+                    {{ end }}
                 </div>
             {{ end }}
             

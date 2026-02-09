@@ -419,3 +419,137 @@
 [COMPLETE] Process finished
 [2026-02-08 14:18:11] [INFO] ============================================================
 
+[2026-02-09 15:40:27] [INFO] ============================================================
+[2026-02-09 15:40:27] [INFO] Starting title addition process
+[2026-02-09 15:40:27] [INFO] ============================================================
+[2026-02-09 15:40:27] [INFO] 
+============================================================
+[2026-02-09 15:40:27] [INFO] Testing E-number removal:
+[2026-02-09 15:40:27] [INFO] ============================================================
+[2026-02-09 15:40:27] [INFO]   'E3 Virtualization & Cloud Infrastructure(401.1).md'
+[2026-02-09 15:40:27] [INFO]   -> 'Virtualization & Cloud Infrastructure(401.1)'
+[2026-02-09 15:40:27] [INFO]   'E45, E46, E47 - Virtualization.md'
+[2026-02-09 15:40:27] [INFO]   -> 'Virtualization'
+[2026-02-09 15:40:27] [INFO]   'E10-E11 Something Important.md'
+[2026-02-09 15:40:27] [INFO]   -> 'Something Important'
+[2026-02-09 15:40:27] [INFO]   'E1 to E5 - SEO Intro.md'
+[2026-02-09 15:40:27] [INFO]   -> 'SEO Intro'
+[2026-02-09 15:40:27] [INFO]   'Regular File Without E Number.md'
+[2026-02-09 15:40:27] [INFO]   -> 'Regular File Without E Number'
+[2026-02-09 15:40:27] [INFO]   'E100 Test File.md'
+[2026-02-09 15:40:27] [INFO]   -> 'Test File'
+[2026-02-09 15:40:27] [INFO] ============================================================
+[2026-02-09 15:40:27] [INFO] Title Adder - Starting...
+[2026-02-09 15:40:27] [INFO] ============================================================
+[2026-02-09 15:40:27] [INFO] 
+[File] cyber-security\Cryptography\Basic-Encryption.md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'Basic-Encryption'
+[2026-02-09 15:40:27] [INFO] 
+[File] cyber-security\Cryptography\Malwares.md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'Malwares'
+[2026-02-09 15:40:27] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'SANS-401-(Introduction & Prepare Lab)'
+[2026-02-09 15:40:27] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'SANS-401-Networking and Protocols (401.1)'
+[2026-02-09 15:40:27] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'SANS-401-Virtualization & Cloud Infrastructure(401.1)'
+[2026-02-09 15:40:27] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)'
+[2026-02-09 15:40:27] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'SANS-401-Defense-in-Depth (401.2)'
+[2026-02-09 15:40:27] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'SANS-401-Password Cracking'
+[2026-02-09 15:40:27] [INFO] 
+[File] linux\60 Commands Hacker Should Know it.md
+[2026-02-09 15:40:27] [INFO]   > Title exists: '60 Commands Hacker Should Know it'
+[2026-02-09 15:40:27] [INFO] 
+[File] network\IP-Mac Address Basic and Concepts.md
+[2026-02-09 15:40:27] [INFO]   + Added title: 'IP-Mac Address Basic and Concepts'
+[2026-02-09 15:40:27] [INFO] 
+[File] network\Network Basics-Terminology-Topology.md
+[2026-02-09 15:40:27] [INFO]   + Added title: 'Network Basics-Terminology-Topology'
+[2026-02-09 15:40:27] [INFO] 
+[File] network\Network Cable and Components.md
+[2026-02-09 15:40:27] [INFO]   + Added title: 'Network Cable and Components'
+[2026-02-09 15:40:27] [INFO] 
+[File] network\Network Commands & File Printer Sharing.md
+[2026-02-09 15:40:27] [INFO]   + Added title: 'Network Commands & File Printer Sharing'
+[2026-02-09 15:40:27] [INFO] 
+[File] network\Network Models-OSI and TCPIP.md
+[2026-02-09 15:40:27] [INFO]   + Added title: 'Network Models-OSI and TCPIP'
+[2026-02-09 15:40:27] [INFO] 
+[File] network\Network Services(DHCP-DNS,-VLAN).md
+[2026-02-09 15:40:27] [INFO]   + Added title: 'Network Services(DHCP-DNS,-VLAN)'
+[2026-02-09 15:40:27] [INFO] 
+[File] network\Virtualization & Networking.md
+[2026-02-09 15:40:27] [INFO]   + Added title: 'Virtualization & Networking'
+[2026-02-09 15:40:27] [INFO] 
+[File] network\Windows Networking.md
+[2026-02-09 15:40:27] [INFO]   + Added title: 'Windows Networking'
+[2026-02-09 15:40:27] [INFO] 
+[File] python\Dir-Buster-Module.md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'Dir-Buster-Module'
+[2026-02-09 15:40:27] [INFO] 
+[File] seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'SEO Intro, Search Engines, Keywords'
+[2026-02-09 15:40:27] [INFO] 
+[File] seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'Content SEO, Important Website Pages'
+[2026-02-09 15:40:27] [INFO] 
+[File] seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'Woorank(Check Website SEO)'
+[2026-02-09 15:40:27] [INFO] 
+[File] seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'Good Contents for SEO'
+[2026-02-09 15:40:27] [INFO] 
+[File] seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'Links in SEO(Internal & External)'
+[2026-02-09 15:40:27] [INFO] 
+[File] seo\0-SEO-Theories\E15 - Page Rank.md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'Page Rank'
+[2026-02-09 15:40:27] [INFO] 
+[File] seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'Page Authority & Domain Authority'
+[2026-02-09 15:40:27] [INFO] 
+[File] seo\0-SEO-Theories\E17 - Backlinks.md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'Backlinks'
+[2026-02-09 15:40:27] [INFO] 
+[File] seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'Find Keywords, Website Structure & Necessary HTML Tags for SEO'
+[2026-02-09 15:40:27] [INFO] 
+[File] tools\MSFConsole Commands.md
+[2026-02-09 15:40:27] [INFO]   > Title exists: 'MSFConsole Commands'
+[2026-02-09 15:40:27] [INFO] 
+[File] tools\Burpsuite\1-Install Burpsuite.md
+[2026-02-09 15:40:27] [INFO]   > Title exists: '1-Install Burpsuite'
+[2026-02-09 15:40:27] [INFO] 
+[File] tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+[2026-02-09 15:40:27] [INFO]   > Title exists: '2-Change HTTP Data & Bypass Parameters'
+[2026-02-09 15:40:27] [INFO] 
+[JSON] Saved 30 titles to article_titles.json
+[2026-02-09 15:40:27] [INFO] 
+============================================================
+[2026-02-09 15:40:27] [INFO] FINAL STATISTICS:
+[2026-02-09 15:40:27] [INFO] ============================================================
+[2026-02-09 15:40:27] [INFO] Files scanned: 30
+[2026-02-09 15:40:27] [INFO] Files modified: 8
+[2026-02-09 15:40:27] [INFO] Titles added: 8
+[2026-02-09 15:40:27] [INFO] Titles already existed: 22
+[2026-02-09 15:40:27] [INFO] Errors: 0
+[2026-02-09 15:40:27] [INFO] Total articles tracked: 30
+[2026-02-09 15:40:27] [INFO] ============================================================
+[2026-02-09 15:40:27] [INFO] 
+[SUCCESS] Titles added successfully!
+[2026-02-09 15:40:27] [INFO] Article list saved to: article_titles.json
+[2026-02-09 15:40:27] [INFO] Full log: title_adder.log
+[2026-02-09 15:40:27] [INFO] [Report] Summary report created: title_adder_report.txt
+[2026-02-09 15:40:27] [INFO] 
+[COMPLETE] Process finished
+[2026-02-09 15:40:27] [INFO] ============================================================
+

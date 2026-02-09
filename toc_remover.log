@@ -264,3 +264,102 @@
 2026-02-09 09:58:49,305 - INFO - SCRIPT EXECUTION COMPLETED
 2026-02-09 09:58:49,305 - INFO - ======================================================================
 
+2026-02-09 15:40:58,602 - INFO - 
+======================================================================
+2026-02-09 15:40:58,602 - INFO - TOC REMOVER FOR HUGO ARTICLES
+2026-02-09 15:40:58,602 - INFO - SCRIPT STARTED
+2026-02-09 15:40:58,602 - INFO - ======================================================================
+
+2026-02-09 15:40:58,603 - INFO - Loaded tracking file with 27 processed files
+2026-02-09 15:40:58,605 - INFO - Found 36 markdown files to check (including subdirectories)
+2026-02-09 15:40:58,605 - INFO - Already processed: 27 files
+2026-02-09 15:40:58,606 - INFO - ⊙ Skipping already processed file: cyber-security\_index.md
+2026-02-09 15:40:58,606 - INFO - ⊙ Skipping already processed file: linux\60 Commands Hacker Should Know it.md
+2026-02-09 15:40:58,606 - INFO - ⊙ Skipping already processed file: linux\_index.md
+2026-02-09 15:40:58,606 - INFO - 
+============================================================
+2026-02-09 15:40:58,606 - INFO - Processing: network\IP-Mac Address Basic and Concepts.md
+2026-02-09 15:40:58,606 - INFO - ============================================================
+2026-02-09 15:40:58,607 - INFO - No TOC found in: IP-Mac Address Basic and Concepts.md
+2026-02-09 15:40:58,607 - INFO - 
+============================================================
+2026-02-09 15:40:58,607 - INFO - Processing: network\Network Basics-Terminology-Topology.md
+2026-02-09 15:40:58,607 - INFO - ============================================================
+2026-02-09 15:40:58,607 - INFO - No TOC found in: Network Basics-Terminology-Topology.md
+2026-02-09 15:40:58,607 - INFO - 
+============================================================
+2026-02-09 15:40:58,607 - INFO - Processing: network\Network Cable and Components.md
+2026-02-09 15:40:58,608 - INFO - ============================================================
+2026-02-09 15:40:58,608 - INFO - No TOC found in: Network Cable and Components.md
+2026-02-09 15:40:58,608 - INFO - 
+============================================================
+2026-02-09 15:40:58,608 - INFO - Processing: network\Network Commands & File Printer Sharing.md
+2026-02-09 15:40:58,608 - INFO - ============================================================
+2026-02-09 15:40:58,608 - INFO - No TOC found in: Network Commands & File Printer Sharing.md
+2026-02-09 15:40:58,608 - INFO - 
+============================================================
+2026-02-09 15:40:58,608 - INFO - Processing: network\Network Models-OSI and TCPIP.md
+2026-02-09 15:40:58,609 - INFO - ============================================================
+2026-02-09 15:40:58,609 - INFO - No TOC found in: Network Models-OSI and TCPIP.md
+2026-02-09 15:40:58,609 - INFO - 
+============================================================
+2026-02-09 15:40:58,609 - INFO - Processing: network\Network Services(DHCP-DNS,-VLAN).md
+2026-02-09 15:40:58,609 - INFO - ============================================================
+2026-02-09 15:40:58,609 - INFO - No TOC found in: Network Services(DHCP-DNS,-VLAN).md
+2026-02-09 15:40:58,609 - INFO - 
+============================================================
+2026-02-09 15:40:58,610 - INFO - Processing: network\Virtualization & Networking.md
+2026-02-09 15:40:58,610 - INFO - ============================================================
+2026-02-09 15:40:58,610 - INFO - No TOC found in: Virtualization & Networking.md
+2026-02-09 15:40:58,610 - INFO - 
+============================================================
+2026-02-09 15:40:58,610 - INFO - Processing: network\Windows Networking.md
+2026-02-09 15:40:58,610 - INFO - ============================================================
+2026-02-09 15:40:58,610 - INFO - No TOC found in: Windows Networking.md
+2026-02-09 15:40:58,611 - INFO - 
+============================================================
+2026-02-09 15:40:58,611 - INFO - Processing: network\_index.md
+2026-02-09 15:40:58,611 - INFO - ============================================================
+2026-02-09 15:40:58,611 - INFO - No TOC found in: _index.md
+2026-02-09 15:40:58,611 - INFO - ⊙ Skipping already processed file: python\Dir-Buster-Module.md
+2026-02-09 15:40:58,611 - INFO - ⊙ Skipping already processed file: python\_index.md
+2026-02-09 15:40:58,611 - INFO - ⊙ Skipping already processed file: seo\_index.md
+2026-02-09 15:40:58,611 - INFO - ⊙ Skipping already processed file: tools\MSFConsole Commands.md
+2026-02-09 15:40:58,611 - INFO - ⊙ Skipping already processed file: tools\_index.md
+2026-02-09 15:40:58,611 - INFO - ⊙ Skipping already processed file: tools\Burpsuite\1-Install Burpsuite.md
+2026-02-09 15:40:58,612 - INFO - ⊙ Skipping already processed file: tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+2026-02-09 15:40:58,612 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+2026-02-09 15:40:58,612 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+2026-02-09 15:40:58,612 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+2026-02-09 15:40:58,612 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+2026-02-09 15:40:58,612 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+2026-02-09 15:40:58,612 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E15 - Page Rank.md
+2026-02-09 15:40:58,612 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+2026-02-09 15:40:58,612 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E17 - Backlinks.md
+2026-02-09 15:40:58,612 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+2026-02-09 15:40:58,613 - INFO - ⊙ Skipping already processed file: cyber-security\Cryptography\Basic-Encryption.md
+2026-02-09 15:40:58,613 - INFO - ⊙ Skipping already processed file: cyber-security\Cryptography\Malwares.md
+2026-02-09 15:40:58,613 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+2026-02-09 15:40:58,613 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+2026-02-09 15:40:58,613 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+2026-02-09 15:40:58,613 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+2026-02-09 15:40:58,613 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+2026-02-09 15:40:58,613 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+2026-02-09 15:40:58,614 - INFO - Tracking file saved with 36 processed files
+2026-02-09 15:40:58,614 - INFO - 
+============================================================
+2026-02-09 15:40:58,614 - INFO - SUMMARY
+2026-02-09 15:40:58,614 - INFO - ============================================================
+2026-02-09 15:40:58,614 - INFO - Total files found: 36
+2026-02-09 15:40:58,614 - INFO - Already processed (skipped): 27
+2026-02-09 15:40:58,614 - INFO - TOC removed: 0
+2026-02-09 15:40:58,614 - INFO - No TOC found: 9
+2026-02-09 15:40:58,614 - INFO - Errors: 0
+2026-02-09 15:40:58,614 - INFO - ============================================================
+2026-02-09 15:40:58,615 - INFO - 
+✓ Report saved to: toc_remover_report.txt
+2026-02-09 15:40:58,615 - INFO - 
+======================================================================
+2026-02-09 15:40:58,615 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-09 15:40:58,615 - INFO - ======================================================================
+
