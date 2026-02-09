@@ -45,7 +45,7 @@
     
     
     
-    <link rel="stylesheet" href="../../css/main.8677cb49c88dd33f13aa455ab0d18b8078c32ac109e4d17381cd596c1fa330c8.css" integrity="sha256-hnfLSciN0z8TqkVasNGLgHjDKsEJ5NFzgc1ZbB&#43;jMMg=">
+    <link rel="stylesheet" href="../../css/main.eb930473c2ae81adef8e6ab071f4787f3bd5ef64243fb64ff5216d0a8c347d47.css" integrity="sha256-65MEc8Kuga3vjmqwcfR4fzvV72QkP7ZP9SFtCow0fUc=">
     
     
     
@@ -734,7 +734,275 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 
+    
+    <div class="sidebar-widget">
+        <h3 class="sidebar-widget-title">🔧 فیلتر بر اساس ویژگی</h3>
+        <div class="sidebar-widget-content">
+            <button class="dropdown-btn filter-dropdown-btn" onclick="toggleDropdown('filters')">
+                <span class="category-icon">▾</span>
+                <span class="category-name">نمایش فیلترها</span>
+            </button>
+            <div class="filter-dropdown-content" id="filters-dropdown">
+                
+                
+                <div class="filter-group">
+                    <h4 class="filter-title">⏱️ مدت زمان مطالعه</h4>
+                    <div class="filter-range-wrapper">
+                        <div class="range-values">
+                            <span id="readingTimeMin">0</span> -
+                            <span id="readingTimeMax">60</span>
+                            <span>دقیقه</span>
+                        </div>
+                        <input type="range" 
+                               id="readingTimeMinRange" 
+                               class="filter-range" 
+                               min="0" 
+                               max="60" 
+                               value="0" 
+                               step="1">
+                        <input type="range" 
+                               id="readingTimeMaxRange" 
+                               class="filter-range" 
+                               min="0" 
+                               max="60" 
+                               value="60" 
+                               step="1">
+                    </div>
+                </div>
+
+                
+                <div class="filter-group">
+                    <h4 class="filter-title">📊 سطح دشواری</h4>
+                    <div class="filter-checkboxes">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="difficulty" value="beginner" checked>
+                            <span class="checkbox-label">مبتدی</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="difficulty" value="medium" checked>
+                            <span class="checkbox-label">متوسط</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="difficulty" value="intermediate" checked>
+                            <span class="checkbox-label">حرفه‌ای</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="difficulty" value="advanced" checked>
+                            <span class="checkbox-label">تخصصی</span>
+                        </label>
+                    </div>
+                </div>
+
+                
+                <div class="filter-group">
+                    <h4 class="filter-title">🔬 نیاز به تمرین عملی</h4>
+                    <div class="filter-checkboxes">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="lab_required" value="true" checked>
+                            <span class="checkbox-label">دارد</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="lab_required" value="false" checked>
+                            <span class="checkbox-label">ندارد</span>
+                        </label>
+                    </div>
+                </div>
+
+                
+                <div class="filter-group">
+                    <h4 class="filter-title">📄 نوع پست</h4>
+                    <div class="filter-checkboxes">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="post_type" value="آموزشی" checked>
+                            <span class="checkbox-label">آموزشی</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="post_type" value="مقاله" checked>
+                            <span class="checkbox-label">مقاله</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="post_type" value="اسکریپت" checked>
+                            <span class="checkbox-label">اسکریپت</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="post_type" value="خبر" checked>
+                            <span class="checkbox-label">خبر</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="post_type" value="دستور العمل" checked>
+                            <span class="checkbox-label">دستور العمل</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="post_type" value="معرفی" checked>
+                            <span class="checkbox-label">معرفی</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" name="post_type" value="ابزار" checked>
+                            <span class="checkbox-label">ابزار</span>
+                        </label>
+                    </div>
+                </div>
+
+                
+                <div class="filter-actions">
+                    <button class="filter-apply-btn" onclick="applyFilters()">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                        اعمال فیلتر
+                    </button>
+                    <button class="filter-reset-btn" onclick="resetFilters()">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+                        </svg>
+                        بازنشانی
+                    </button>
+                </div>
+
+                
+                <div class="filter-results">
+                    <span id="filterResultsCount">در حال محاسبه...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </aside>
+
+
+<button class="floating-filter-btn" onclick="openMobileFilters()" aria-label="فیلترها">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+    </svg>
+    <span>فیلتر</span>
+</button>
+
+
+<div class="mobile-filter-modal" id="mobileFilterModal">
+    <div class="mobile-filter-content">
+        <div class="mobile-filter-header">
+            <h3>🔧 فیلتر بر اساس ویژگی</h3>
+            <button class="mobile-filter-close" onclick="closeMobileFilters()">×</button>
+        </div>
+        <div class="mobile-filter-body">
+            
+            <div class="filter-group">
+                <h4 class="filter-title">⏱️ مدت زمان مطالعه</h4>
+                <div class="filter-range-wrapper">
+                    <div class="range-values">
+                        <span id="mobileReadingTimeMin">0</span> -
+                        <span id="mobileReadingTimeMax">60</span>
+                        <span>دقیقه</span>
+                    </div>
+                    <input type="range" 
+                           id="mobileReadingTimeMinRange" 
+                           class="filter-range" 
+                           min="0" 
+                           max="60" 
+                           value="0" 
+                           step="1">
+                    <input type="range" 
+                           id="mobileReadingTimeMaxRange" 
+                           class="filter-range" 
+                           min="0" 
+                           max="60" 
+                           value="60" 
+                           step="1">
+                </div>
+            </div>
+
+            
+            <div class="filter-group">
+                <h4 class="filter-title">📊 سطح دشواری</h4>
+                <div class="filter-checkboxes">
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="mobile-difficulty" value="beginner" checked>
+                        <span class="checkbox-label">مبتدی</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="mobile-difficulty" value="medium" checked>
+                        <span class="checkbox-label">متوسط</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="mobile-difficulty" value="intermediate" checked>
+                        <span class="checkbox-label">حرفه‌ای</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="mobile-difficulty" value="advanced" checked>
+                        <span class="checkbox-label">تخصصی</span>
+                    </label>
+                </div>
+            </div>
+
+            
+            <div class="filter-group">
+                <h4 class="filter-title">🔬 نیاز به تمرین عملی</h4>
+                <div class="filter-checkboxes">
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="mobile-lab_required" value="true" checked>
+                        <span class="checkbox-label">دارد</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="mobile-lab_required" value="false" checked>
+                        <span class="checkbox-label">ندارد</span>
+                    </label>
+                </div>
+            </div>
+
+            
+            <div class="filter-group">
+                <h4 class="filter-title">📄 نوع پست</h4>
+                <div class="filter-checkboxes">
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="mobile-post_type" value="آموزشی" checked>
+                        <span class="checkbox-label">آموزشی</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="mobile-post_type" value="مقاله" checked>
+                        <span class="checkbox-label">مقاله</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="mobile-post_type" value="اسکریپت" checked>
+                        <span class="checkbox-label">اسکریپت</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="mobile-post_type" value="خبر" checked>
+                        <span class="checkbox-label">خبر</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="mobile-post_type" value="دستور العمل" checked>
+                        <span class="checkbox-label">دستور العمل</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="mobile-post_type" value="معرفی" checked>
+                        <span class="checkbox-label">معرفی</span>
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" name="mobile-post_type" value="ابزار" checked>
+                        <span class="checkbox-label">ابزار</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-filter-footer">
+            <button class="filter-apply-btn" onclick="applyMobileFilters()">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                اعمال فیلتر
+            </button>
+            <button class="filter-reset-btn" onclick="resetMobileFilters()">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+                </svg>
+                بازنشانی
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div class="mobile-filter-overlay" id="mobileFilterOverlay" onclick="closeMobileFilters()"></div>
 
 <script>
 function toggleDropdown(type) {
@@ -744,6 +1012,9 @@ function toggleDropdown(type) {
     }
 }
 </script>
+
+
+<script src="../../assets/js/filters.js"></script>
 
         
         <div class="main-content">
