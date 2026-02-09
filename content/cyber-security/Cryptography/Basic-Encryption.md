@@ -1,9 +1,44 @@
 +++
 title = "Basic-Encryption"
-tags = ["CyberSecurity", "Encryption"]
-category = "Cyber Security"
-date = "2024-06-20T12:38:14+03:30"
+slug = "basic-encryption"
+date = "2024-06-20T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
+
+categories = ["Cryptography"]
+tags = ["Cryptography", "CyberSecurity", "Encryption"]
+series = ["Cryptography"]
+
+description = "- E2: Introduction - What  is Network Security? - Why do we need Security? - Security Concerns - That's Why Need Security? - OSI Security..."
+keywords = ["Basic-Encryption", "Cryptography", "CyberSecurity", "Encryption", "basic-encryption"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/Cryptography/basic-encryption/"
+
+featured_image = "/images/cyber-security/Basic-Encryption-1.png"
+images = ["/images/cyber-security/Basic-Encryption-1.png"]
+
+[params.opengraph]
+  title = "Basic-Encryption"
+  description = "- E2: Introduction - What  is Network Security? - Why do we need Security? - Security Concerns - That's Why Need Security? - OSI Security..."
+  image = "/images/cyber-security/Basic-Encryption-1.png"
+  url = "https://davoodya.ir/Cryptography/basic-encryption/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "Basic-Encryption"
+  description = "- E2: Introduction - What  is Network Security? - Why do we need Security? - Security Concerns - That's Why Need Security? - OSI Security..."
+  image = "/images/cyber-security/Basic-Encryption-1.png"
+
+readingTime = 23
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 -------
 - [E2: Introduction](#E2:%20Introduction)

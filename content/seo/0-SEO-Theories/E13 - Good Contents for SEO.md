@@ -1,8 +1,44 @@
 +++
 title = "Good Contents for SEO"
-tags = ["SEO", "Webmaster", "Web_Developing"]
-Category = "SEO, Webmaster, Web_Developing"
+slug = "good-contents-for-seo"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
+
+categories = ["0-SEO-Theories"]
+tags = ["0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
+series = ["0-SEO-Theories"]
+
+description = "- Good Contents for SEO - Description - Good Content Features یکی از مهمترین قسمت های وبسایت مطالب وبسایت شامل توضیحات محصولات، دوره ها، مقالات، و..."
+keywords = ["Good Contents for SEO", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e13-good-contents-for-seo"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/0-SEO-Theories/good-contents-for-seo/"
+
+featured_image = "/images/seo/GoodContentsforSEO-1.png"
+images = ["/images/seo/GoodContentsforSEO-1.png"]
+
+[params.opengraph]
+  title = "Good Contents for SEO"
+  description = "- Good Contents for SEO - Description - Good Content Features یکی از مهمترین قسمت های وبسایت مطالب وبسایت شامل توضیحات محصولات، دوره ها، مقالات، و..."
+  image = "/images/seo/GoodContentsforSEO-1.png"
+  url = "https://davoodya.ir/0-SEO-Theories/good-contents-for-seo/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "Good Contents for SEO"
+  description = "- Good Contents for SEO - Description - Good Content Features یکی از مهمترین قسمت های وبسایت مطالب وبسایت شامل توضیحات محصولات، دوره ها، مقالات، و..."
+  image = "/images/seo/GoodContentsforSEO-1.png"
+
+readingTime = 4
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 
 -------

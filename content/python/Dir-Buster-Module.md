@@ -1,8 +1,44 @@
 +++
 title = "Dir-Buster-Module"
-tags = ["Python", "Pentest_Tools", "Red_Team"]
-Category = "Cyber Security, Python"
+slug = "dir-buster-module"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
+
+categories = ["python"]
+tags = ["python", "Python", "Pentest_Tools", "Red_Team"]
+series = ["python"]
+
+description = "Certainly! Below is a simple directory busting tool written in Python. It reads a wordlist file and tries each word as a directory in a given URL by..."
+keywords = ["Dir-Buster-Module", "python", "Python", "Pentest_Tools", "Red_Team", "dir-buster-module"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/python/dir-buster-module/"
+
+featured_image = ""
+images = []
+
+[params.opengraph]
+  title = "Dir-Buster-Module"
+  description = "Certainly! Below is a simple directory busting tool written in Python. It reads a wordlist file and tries each word as a directory in a given URL by..."
+  image = ""
+  url = "https://davoodya.ir/python/dir-buster-module/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "Dir-Buster-Module"
+  description = "Certainly! Below is a simple directory busting tool written in Python. It reads a wordlist file and tries each word as a directory in a given URL by..."
+  image = ""
+
+readingTime = 3
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 
 ----

@@ -1,21 +1,44 @@
 +++
 title = "1-Install Burpsuite"
-tags = ["Pentest", "Web_Pentest", "Bug_Bounty", "Burpsuite", "Pentest_Tool"]
-categories = ["cyber-security", "pentest", "web_pentest"]
-series = ["bug bounty"]
-# Category = "Pentest, Web_Pentest"
+slug = "1-install-burpsuite"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
-readingTime = 12
-difficulty = "intermediate"
+
+categories = ["Burpsuite"]
+tags = ["Burpsuite", "Pentest", "Web_Pentest", "Bug_Bounty", "Pentest_Tool"]
+series = ["Burpsuite"]
+
+description = "Requirements => JDK v9.04 نسخه از ابزار ممکن است با JDK 21 کار نکند همچنین با JDK زیر 9 هم نمیتواند کار کند. برای نصب کافیست از وبسایت soft98 ابزار..."
+keywords = ["1-Install Burpsuite", "Burpsuite", "Pentest", "Web_Pentest", "Bug_Bounty", "Pentest_Tool", "1-install-burpsuite"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/Burpsuite/1-install-burpsuite/"
+
+featured_image = "/images/tools/1-InstallBurpsuite-1.png"
+images = ["/images/tools/1-InstallBurpsuite-1.png"]
+
+[params.opengraph]
+  title = "1-Install Burpsuite"
+  description = "Requirements => JDK v9.04 نسخه از ابزار ممکن است با JDK 21 کار نکند همچنین با JDK زیر 9 هم نمیتواند کار کند. برای نصب کافیست از وبسایت soft98 ابزار..."
+  image = "/images/tools/1-InstallBurpsuite-1.png"
+  url = "https://davoodya.ir/Burpsuite/1-install-burpsuite/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "1-Install Burpsuite"
+  description = "Requirements => JDK v9.04 نسخه از ابزار ممکن است با JDK 21 کار نکند همچنین با JDK زیر 9 هم نمیتواند کار کند. برای نصب کافیست از وبسایت soft98 ابزار..."
+  image = "/images/tools/1-InstallBurpsuite-1.png"
+
+readingTime = 4
+difficulty = "medium"
 toc = true
 math = false
 lab_required = true
-course = "Burpsuite begginer to advance"
-# featured_image = "/images/tools/1-InstallBurpsuite-1.png"
-images = ["/images/tools/1-InstallBurpsuite-1.png"]
-image = "/images/tools/1-InstallBurpsuite-1.png"
 
-slug = "installing-burp-suite"
+# layout = "single"
+type = "posts"
 +++
 
 -------

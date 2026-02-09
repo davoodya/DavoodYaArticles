@@ -1,9 +1,44 @@
 +++
 title = "Find Keywords, Website Structure & Necessary HTML Tags for SEO"
-tags = ["SEO", "Webmaster", "Web_Developing"]
-Category = "SEO, Webmaster, Web_Developing"
+slug = "find-keywords-website-structure-necessary-html-tags-for-seo"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
-custom_class = "seo-keywords-page"
+
+categories = ["0-SEO-Theories"]
+tags = ["0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
+series = ["0-SEO-Theories"]
+
+description = "- Find Keywords - Google Ads - Basic & Concepts - Usage of Google Ads - Competitor's - Basic & Concepts - Calculate Competitor's - Website Structure..."
+keywords = ["Find Keywords, Website Structure & Necessary HTML Tags for SEO", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e6-to-e9-find-keywords-website-structure-necessary-html-tags-for-seo"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/0-SEO-Theories/find-keywords-website-structure-necessary-html-tags-for-seo/"
+
+featured_image = "/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png"
+images = ["/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png"]
+
+[params.opengraph]
+  title = "Find Keywords, Website Structure & Necessary HTML Tags for SEO"
+  description = "- Find Keywords - Google Ads - Basic & Concepts - Usage of Google Ads - Competitor's - Basic & Concepts - Calculate Competitor's - Website Structure..."
+  image = "/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png"
+  url = "https://davoodya.ir/0-SEO-Theories/find-keywords-website-structure-necessary-html-tags-for-seo/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "Find Keywords, Website Structure & Necessary HTML Tags for SEO"
+  description = "- Find Keywords - Google Ads - Basic & Concepts - Usage of Google Ads - Competitor's - Basic & Concepts - Calculate Competitor's - Website Structure..."
+  image = "/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png"
+
+readingTime = 21
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 
 -------

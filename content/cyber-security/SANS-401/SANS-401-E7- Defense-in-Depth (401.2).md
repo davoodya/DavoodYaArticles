@@ -1,8 +1,44 @@
 +++
 title = "SANS-401-Defense-in-Depth (401.2)"
-tags = ["CyberSecurity", "Pentest"]
-Category = "Cyber Security"
+slug = "sans-401-defense-in-depth-4012"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
+
+categories = ["SANS-401"]
+tags = ["SANS-401", "CyberSecurity", "Pentest"]
+series = ["SANS-401"]
+
+description = "- Definitions - Whats Defense-in-Depth? - Key Focus of Risk - Access Controlling - Access Control Parameters - Access Control Techniques - Managing..."
+keywords = ["SANS-401-Defense-in-Depth (401.2)", "SANS-401", "CyberSecurity", "Pentest", "sans-401-e7-defense-in-depth-4012"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/SANS-401/sans-401-defense-in-depth-4012/"
+
+featured_image = "/images/cyber-security/SANS-401-Defense-in-Depth(401.2"
+images = ["/images/cyber-security/SANS-401-Defense-in-Depth(401.2"]
+
+[params.opengraph]
+  title = "SANS-401-Defense-in-Depth (401.2)"
+  description = "- Definitions - Whats Defense-in-Depth? - Key Focus of Risk - Access Controlling - Access Control Parameters - Access Control Techniques - Managing..."
+  image = "/images/cyber-security/SANS-401-Defense-in-Depth(401.2"
+  url = "https://davoodya.ir/SANS-401/sans-401-defense-in-depth-4012/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "SANS-401-Defense-in-Depth (401.2)"
+  description = "- Definitions - Whats Defense-in-Depth? - Key Focus of Risk - Access Controlling - Access Control Parameters - Access Control Techniques - Managing..."
+  image = "/images/cyber-security/SANS-401-Defense-in-Depth(401.2"
+
+readingTime = 8
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 
 -------

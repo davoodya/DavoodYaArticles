@@ -1,8 +1,44 @@
 +++
 title = "SEO Intro, Search Engines, Keywords"
-tags = ["SEO", "Webmaster", "Web_Developing"]
-Category = "SEO, Webmaster, Web_Developing"
+slug = "seo-intro-search-engines-keywords"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
+
+categories = ["0-SEO-Theories"]
+tags = ["0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
+series = ["0-SEO-Theories"]
+
+description = "- Whats SEO? - SEO Basic & Concepts - SEO Advantages - What is SEO Really? - Search Engines Functional - How Search Engines Work? - 0. Specify..."
+keywords = ["SEO Intro, Search Engines, Keywords", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e1-to-e5-seo-intro-search-engines-keywords"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/0-SEO-Theories/seo-intro-search-engines-keywords/"
+
+featured_image = "/images/seo/SEOIntro,SearchEngines,Keywords-1.png"
+images = ["/images/seo/SEOIntro,SearchEngines,Keywords-1.png"]
+
+[params.opengraph]
+  title = "SEO Intro, Search Engines, Keywords"
+  description = "- Whats SEO? - SEO Basic & Concepts - SEO Advantages - What is SEO Really? - Search Engines Functional - How Search Engines Work? - 0. Specify..."
+  image = "/images/seo/SEOIntro,SearchEngines,Keywords-1.png"
+  url = "https://davoodya.ir/0-SEO-Theories/seo-intro-search-engines-keywords/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "SEO Intro, Search Engines, Keywords"
+  description = "- Whats SEO? - SEO Basic & Concepts - SEO Advantages - What is SEO Really? - Search Engines Functional - How Search Engines Work? - 0. Specify..."
+  image = "/images/seo/SEOIntro,SearchEngines,Keywords-1.png"
+
+readingTime = 13
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 
 -------

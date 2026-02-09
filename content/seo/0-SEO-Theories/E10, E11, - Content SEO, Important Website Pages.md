@@ -1,24 +1,47 @@
 +++
 title = "Content SEO, Important Website Pages"
-tags = ["SEO", "Webmaster", "Web_Developing"]
-Category = "SEO, Webmaster, Web_Developing"
+slug = "content-seo-important-website-pages"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
+
+categories = ["0-SEO-Theories"]
+tags = ["0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
+series = ["0-SEO-Theories"]
+
+description = "استفاده از مقاله و یا مطالب نوشتاری در وبسایت برای افزایش رتبه بندی SEO وبسایت بسیار پیشنهاد میشود. مقالاتی که در وبسایت استفاده میکنیم باید مربوط به..."
+keywords = ["Content SEO, Important Website Pages", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e10-e11-content-seo-important-website-pages"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/0-SEO-Theories/content-seo-important-website-pages/"
+
+featured_image = "/images/seo/ContentSEO,ImportantWebsitePages-1.png"
+images = ["/images/seo/ContentSEO,ImportantWebsitePages-1.png"]
+
+[params.opengraph]
+  title = "Content SEO, Important Website Pages"
+  description = "استفاده از مقاله و یا مطالب نوشتاری در وبسایت برای افزایش رتبه بندی SEO وبسایت بسیار پیشنهاد میشود. مقالاتی که در وبسایت استفاده میکنیم باید مربوط به..."
+  image = "/images/seo/ContentSEO,ImportantWebsitePages-1.png"
+  url = "https://davoodya.ir/0-SEO-Theories/content-seo-important-website-pages/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "Content SEO, Important Website Pages"
+  description = "استفاده از مقاله و یا مطالب نوشتاری در وبسایت برای افزایش رتبه بندی SEO وبسایت بسیار پیشنهاد میشود. مقالاتی که در وبسایت استفاده میکنیم باید مربوط به..."
+  image = "/images/seo/ContentSEO,ImportantWebsitePages-1.png"
+
+readingTime = 11
+difficulty = "medium"
 toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 
 -------
-# TOC
-- [E10, E11, - (Content SEO, Important Website Pages)](#E10,%20E11,%20-%20(Content%20SEO,%20Important%20Website%20Pages))
-	- [Basic & Concepts](#Basic%20&%20Concepts)
-		- [Content Definitions](#Content%20Definitions)
-		- [Good & Bad Content](#Good%20&%20Bad%20Content)
-		- [Advantage of Contents](#Advantage%20of%20Contents)
-		- [Good Content Instruction's](#Good%20Content%20Instruction's)
-	- [Important Website Pages](#Important%20Website%20Pages)
-		- [Basic & Concepts](#Basic%20&%20Concepts)
-		- [Important Website Pages](#Important%20Website%20Pages)
-	- [!](#!)
-
 ## E10, E11, - (Content SEO, Important Website Pages)
 ### Basic & Concepts
 #### Content Definitions

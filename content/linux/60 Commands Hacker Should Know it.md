@@ -1,12 +1,47 @@
 +++
 title = "60 Commands Hacker Should Know it"
-tags = ["Linux", "Command_Line"]
-Category = "Linux"
+slug = "60-commands-hacker-should-know-it"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
+
+categories = ["linux"]
+tags = ["linux", "Linux", "Command_Line"]
+series = ["linux"]
+
+description = "در این آموزش میخواهم Location یک اکانت واتساپ را بدون نفوذ به موبایل تارگت بدست بیاوریم. برای اینکار مراحل زیر پیمایش میکنیم: 1. WhatsApp Phone Call..."
+keywords = ["60 Commands Hacker Should Know it", "linux", "Linux", "Command_Line", "60-commands-hacker-should-know-it"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/linux/60-commands-hacker-should-know-it/"
+
+featured_image = "/images/linux/60CommandsHackerShouldKnowit-1.png"
+images = ["/images/linux/60CommandsHackerShouldKnowit-1.png"]
+
+[params.opengraph]
+  title = "60 Commands Hacker Should Know it"
+  description = "در این آموزش میخواهم Location یک اکانت واتساپ را بدون نفوذ به موبایل تارگت بدست بیاوریم. برای اینکار مراحل زیر پیمایش میکنیم: 1. WhatsApp Phone Call..."
+  image = "/images/linux/60CommandsHackerShouldKnowit-1.png"
+  url = "https://davoodya.ir/linux/60-commands-hacker-should-know-it/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "60 Commands Hacker Should Know it"
+  description = "در این آموزش میخواهم Location یک اکانت واتساپ را بدون نفوذ به موبایل تارگت بدست بیاوریم. برای اینکار مراحل زیر پیمایش میکنیم: 1. WhatsApp Phone Call..."
+  image = "/images/linux/60CommandsHackerShouldKnowit-1.png"
+
+readingTime = 8
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 
 -------
-## TOC
 ### Strategy
 در این آموزش میخواهم Location یک اکانت واتساپ را بدون نفوذ به موبایل تارگت بدست بیاوریم. برای اینکار مراحل زیر پیمایش میکنیم:
 1. WhatsApp Phone Call to Target

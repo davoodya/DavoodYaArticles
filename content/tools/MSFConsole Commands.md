@@ -1,8 +1,44 @@
 +++
 title = "MSFConsole Commands"
-tags = ["Pentest", "Metasploit", ", Readteam"]
-Category = "Pentest, Metasploit, Readteam"
+slug = "msfconsole-commands"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
+
+categories = ["tools"]
+tags = ["tools", "Pentest", "Metasploit", "Readteam"]
+series = ["tools"]
+
+description = "- MSFConsole Basic Commands - E35: MSFConsole Commands Description - MSFConsole Help - MSFConsole Commands Description - E36: MSFConsole Commands -..."
+keywords = ["MSFConsole Commands", "tools", "Pentest", "Metasploit", "Readteam", "msfconsole-commands"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/tools/msfconsole-commands/"
+
+featured_image = "/images/tools/MSFConsoleCommands-1.png"
+images = ["/images/tools/MSFConsoleCommands-1.png"]
+
+[params.opengraph]
+  title = "MSFConsole Commands"
+  description = "- MSFConsole Basic Commands - E35: MSFConsole Commands Description - MSFConsole Help - MSFConsole Commands Description - E36: MSFConsole Commands -..."
+  image = "/images/tools/MSFConsoleCommands-1.png"
+  url = "https://davoodya.ir/tools/msfconsole-commands/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "MSFConsole Commands"
+  description = "- MSFConsole Basic Commands - E35: MSFConsole Commands Description - MSFConsole Help - MSFConsole Commands Description - E36: MSFConsole Commands -..."
+  image = "/images/tools/MSFConsoleCommands-1.png"
+
+readingTime = 16
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 
 -------

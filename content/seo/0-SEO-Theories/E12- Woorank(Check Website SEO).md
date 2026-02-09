@@ -1,8 +1,44 @@
 +++
 title = "Woorank(Check Website SEO)"
-tags = ["SEO", "Webmaster", "Web_Developing"]
-Category = "SEO, Webmaster, Web_Developing"
+slug = "woorankcheck-website-seo"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
+
+categories = ["0-SEO-Theories"]
+tags = ["0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
+series = ["0-SEO-Theories"]
+
+description = "- Woorank Tool - Description - Tool Usage - Other Important Tools - Woorank Scan - Start Scan - SEO Options Description ابزار Woorank یکی از ابزار..."
+keywords = ["Woorank(Check Website SEO)", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e12-woorankcheck-website-seo"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/0-SEO-Theories/woorankcheck-website-seo/"
+
+featured_image = "/images/seo/Woorank(CheckWebsiteSEO"
+images = ["/images/seo/Woorank(CheckWebsiteSEO"]
+
+[params.opengraph]
+  title = "Woorank(Check Website SEO)"
+  description = "- Woorank Tool - Description - Tool Usage - Other Important Tools - Woorank Scan - Start Scan - SEO Options Description ابزار Woorank یکی از ابزار..."
+  image = "/images/seo/Woorank(CheckWebsiteSEO"
+  url = "https://davoodya.ir/0-SEO-Theories/woorankcheck-website-seo/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "Woorank(Check Website SEO)"
+  description = "- Woorank Tool - Description - Tool Usage - Other Important Tools - Woorank Scan - Start Scan - SEO Options Description ابزار Woorank یکی از ابزار..."
+  image = "/images/seo/Woorank(CheckWebsiteSEO"
+
+readingTime = 7
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 
 -------

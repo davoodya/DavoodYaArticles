@@ -1,8 +1,44 @@
 +++
 title = "Links in SEO(Internal & External)"
-tags = ["SEO", "Webmaster", "Web_Developing"]
-Category = "SEO, Webmaster, Web_Developing"
+slug = "links-in-seointernal-external"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
+
+categories = ["0-SEO-Theories"]
+tags = ["0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
+series = ["0-SEO-Theories"]
+
+description = "- Links in SEO - Description - External & Internal Links: Definition - Buy Backlinks Note - Good Link Features - Self Use Backlink - یکی از مهمترین..."
+keywords = ["Links in SEO(Internal & External)", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e14-links-in-seointernal-external"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/0-SEO-Theories/links-in-seointernal-external/"
+
+featured_image = ""
+images = []
+
+[params.opengraph]
+  title = "Links in SEO(Internal & External)"
+  description = "- Links in SEO - Description - External & Internal Links: Definition - Buy Backlinks Note - Good Link Features - Self Use Backlink - یکی از مهمترین..."
+  image = ""
+  url = "https://davoodya.ir/0-SEO-Theories/links-in-seointernal-external/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "Links in SEO(Internal & External)"
+  description = "- Links in SEO - Description - External & Internal Links: Definition - Buy Backlinks Note - Good Link Features - Self Use Backlink - یکی از مهمترین..."
+  image = ""
+
+readingTime = 4
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 
 -------

@@ -1,8 +1,44 @@
 +++
 title = "Backlinks"
-tags = ["SEO", "Webmaster", "Web_Developing"]
-Category = "SEO, Webmaster, Web_Developing"
+slug = "backlinks"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
+
+categories = ["0-SEO-Theories"]
+tags = ["0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
+series = ["0-SEO-Theories"]
+
+description = "همانطور که خرید Backlink میتواند امتیاز زیادی برای ما داشته باشد اگر که از جای نادرستی این خرید انجام شود نیز میتواند باعث امتیاز منفی برای سئو شود...."
+keywords = ["Backlinks", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e17-backlinks"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/0-SEO-Theories/backlinks/"
+
+featured_image = "/images/seo/Backlinks-1.png"
+images = ["/images/seo/Backlinks-1.png"]
+
+[params.opengraph]
+  title = "Backlinks"
+  description = "همانطور که خرید Backlink میتواند امتیاز زیادی برای ما داشته باشد اگر که از جای نادرستی این خرید انجام شود نیز میتواند باعث امتیاز منفی برای سئو شود...."
+  image = "/images/seo/Backlinks-1.png"
+  url = "https://davoodya.ir/0-SEO-Theories/backlinks/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "Backlinks"
+  description = "همانطور که خرید Backlink میتواند امتیاز زیادی برای ما داشته باشد اگر که از جای نادرستی این خرید انجام شود نیز میتواند باعث امتیاز منفی برای سئو شود...."
+  image = "/images/seo/Backlinks-1.png"
+
+readingTime = 2
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 
 -------

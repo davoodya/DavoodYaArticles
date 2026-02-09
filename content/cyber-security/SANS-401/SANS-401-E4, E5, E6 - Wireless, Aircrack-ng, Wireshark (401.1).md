@@ -1,8 +1,44 @@
 +++
-title = "SANS-401: Wireless, Aircrack-ng, Wireshark (401.1)"
-tags = ["CyberSecurity", "Pentest"]
-Category = "Cyber Security"
+title = "SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)"
+slug = "sans-401-wireless-aircrack-ng-wireshark-4011"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
+
+categories = ["SANS-401"]
+tags = ["SANS-401", "CyberSecurity", "Pentest"]
+series = ["SANS-401"]
+
+description = "- Wireless Attacks - Wireless Standards - Wireless Encryption Algorithms - Rogue Access Point - DoS and DDoS - Air-Crack NG - Basic & Concepts -..."
+keywords = ["SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)", "SANS-401", "CyberSecurity", "Pentest", "sans-401-e4-e5-e6-wireless-aircrack-ng-wireshark-4011"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/SANS-401/sans-401-wireless-aircrack-ng-wireshark-4011/"
+
+featured_image = "/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1"
+images = ["/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1"]
+
+[params.opengraph]
+  title = "SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)"
+  description = "- Wireless Attacks - Wireless Standards - Wireless Encryption Algorithms - Rogue Access Point - DoS and DDoS - Air-Crack NG - Basic & Concepts -..."
+  image = "/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1"
+  url = "https://davoodya.ir/SANS-401/sans-401-wireless-aircrack-ng-wireshark-4011/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)"
+  description = "- Wireless Attacks - Wireless Standards - Wireless Encryption Algorithms - Rogue Access Point - DoS and DDoS - Air-Crack NG - Basic & Concepts -..."
+  image = "/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1"
+
+readingTime = 8
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 
 -------

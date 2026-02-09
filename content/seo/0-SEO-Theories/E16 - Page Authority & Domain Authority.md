@@ -1,8 +1,44 @@
 +++
 title = "Page Authority & Domain Authority"
-tags = ["SEO", "Webmaster", "Web_Developing"]
-Category = "SEO, Webmaster, Web_Developing"
+slug = "page-authority-domain-authority"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
+
+categories = ["0-SEO-Theories"]
+tags = ["0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
+series = ["0-SEO-Theories"]
+
+description = "به اعتبار صفحه Page Authority و اعتبار دامنه Domain Authority گفته میشود. این دو اعتبار برای رتبه بندی سئو وبسایت بسیار مهم هستند. 1. Page..."
+keywords = ["Page Authority & Domain Authority", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e16-page-authority-domain-authority"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/0-SEO-Theories/page-authority-domain-authority/"
+
+featured_image = "/images/seo/PageAuthority&DomainAuthority-1.png"
+images = ["/images/seo/PageAuthority&DomainAuthority-1.png"]
+
+[params.opengraph]
+  title = "Page Authority & Domain Authority"
+  description = "به اعتبار صفحه Page Authority و اعتبار دامنه Domain Authority گفته میشود. این دو اعتبار برای رتبه بندی سئو وبسایت بسیار مهم هستند. 1. Page..."
+  image = "/images/seo/PageAuthority&DomainAuthority-1.png"
+  url = "https://davoodya.ir/0-SEO-Theories/page-authority-domain-authority/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "Page Authority & Domain Authority"
+  description = "به اعتبار صفحه Page Authority و اعتبار دامنه Domain Authority گفته میشود. این دو اعتبار برای رتبه بندی سئو وبسایت بسیار مهم هستند. 1. Page..."
+  image = "/images/seo/PageAuthority&DomainAuthority-1.png"
+
+readingTime = 2
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 
 -------

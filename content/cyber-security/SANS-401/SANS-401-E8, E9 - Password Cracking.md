@@ -1,8 +1,44 @@
 +++
 title = "SANS-401-Password Cracking"
-tags = ["CyberSecurity", "Pentest"]
-Category = "Cyber Security"
+slug = "sans-401-password-cracking"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
+
+categories = ["SANS-401"]
+tags = ["SANS-401", "CyberSecurity", "Pentest"]
+series = ["SANS-401"]
+
+description = "برای توضیح این ابزار از آزمایشگاه SANS SEC401.2 استفاده میکنیم: ```sh cd /eoot/Labs/401.2 ``` برای استفاده از ابزار کافیست کامند `john` را استفاده..."
+keywords = ["SANS-401-Password Cracking", "SANS-401", "CyberSecurity", "Pentest", "sans-401-e8-e9-password-cracking"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/SANS-401/sans-401-password-cracking/"
+
+featured_image = "/images/cyber-security/SANS-401-PasswordCracking-1.png"
+images = ["/images/cyber-security/SANS-401-PasswordCracking-1.png"]
+
+[params.opengraph]
+  title = "SANS-401-Password Cracking"
+  description = "برای توضیح این ابزار از آزمایشگاه SANS SEC401.2 استفاده میکنیم: ```sh cd /eoot/Labs/401.2 ``` برای استفاده از ابزار کافیست کامند `john` را استفاده..."
+  image = "/images/cyber-security/SANS-401-PasswordCracking-1.png"
+  url = "https://davoodya.ir/SANS-401/sans-401-password-cracking/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "SANS-401-Password Cracking"
+  description = "برای توضیح این ابزار از آزمایشگاه SANS SEC401.2 استفاده میکنیم: ```sh cd /eoot/Labs/401.2 ``` برای استفاده از ابزار کافیست کامند `john` را استفاده..."
+  image = "/images/cyber-security/SANS-401-PasswordCracking-1.png"
+
+readingTime = 10
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 
 -------

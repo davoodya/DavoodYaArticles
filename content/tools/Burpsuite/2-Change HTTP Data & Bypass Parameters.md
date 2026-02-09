@@ -1,8 +1,44 @@
 +++
 title = "2-Change HTTP Data & Bypass Parameters"
-tags = ["Pentest", "Web_Pentest", "Bug_Bounty", "Burpsuite", "Pentest_Tool"]
-Category = "Pentest, Web_Pentest"
+slug = "2-change-http-data-bypass-parameters"
+date = "2026-02-09T09:59:19+03:30"
+lastmod = "2026-02-09T09:59:19+03:30"
 draft = false
+
+categories = ["Burpsuite"]
+tags = ["Burpsuite", "Pentest", "Web_Pentest", "Bug_Bounty", "Pentest_Tool"]
+series = ["Burpsuite"]
+
+description = "https://akofamily.com/Main/ در فروشگاه های آنلاین قیمت محصولات بر اساس تعداد انتخاب آنها صورت میگیرد. مثلا 2 عدد عینک که قیمت هر کدام 7 هزار تومان..."
+keywords = ["2-Change HTTP Data & Bypass Parameters", "Burpsuite", "Pentest", "Web_Pentest", "Bug_Bounty", "Pentest_Tool", "2-change-http-data-bypass-parameters"]
+author = "Davood Yahay"
+robots = "index, follow"
+canonical = "https://davoodya.ir/Burpsuite/2-change-http-data-bypass-parameters/"
+
+featured_image = "/images/tools/2-ChangeHTTPData&BypassParameters-1.png"
+images = ["/images/tools/2-ChangeHTTPData&BypassParameters-1.png"]
+
+[params.opengraph]
+  title = "2-Change HTTP Data & Bypass Parameters"
+  description = "https://akofamily.com/Main/ در فروشگاه های آنلاین قیمت محصولات بر اساس تعداد انتخاب آنها صورت میگیرد. مثلا 2 عدد عینک که قیمت هر کدام 7 هزار تومان..."
+  image = "/images/tools/2-ChangeHTTPData&BypassParameters-1.png"
+  url = "https://davoodya.ir/Burpsuite/2-change-http-data-bypass-parameters/"
+  type = "article"
+
+[params.twitter]
+  card = "summary_large_image"
+  title = "2-Change HTTP Data & Bypass Parameters"
+  description = "https://akofamily.com/Main/ در فروشگاه های آنلاین قیمت محصولات بر اساس تعداد انتخاب آنها صورت میگیرد. مثلا 2 عدد عینک که قیمت هر کدام 7 هزار تومان..."
+  image = "/images/tools/2-ChangeHTTPData&BypassParameters-1.png"
+
+readingTime = 2
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+
+# layout = "single"
+type = "posts"
 +++
 
 -------

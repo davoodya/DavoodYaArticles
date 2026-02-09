@@ -46,7 +46,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Configuration
-TEST_ARTICLES_DIR = Path("test/test-articles")
+CONTENT_DIR = Path("content")  # Changed from test/test-articles to content
 TRACKING_FILE = "toc_removal_tracking.json"
 
 # Regex patterns
@@ -161,25 +161,25 @@ def remove_toc_from_file(file_path):
 
 
 def process_articles():
-    """Process all markdown files in the test articles directory."""
+    """Process all markdown files recursively in content directory and subdirectories."""
     
     # Check if directory exists
-    if not TEST_ARTICLES_DIR.exists():
-        logger.error(f"Directory not found: {TEST_ARTICLES_DIR}")
+    if not CONTENT_DIR.exists():
+        logger.error(f"Directory not found: {CONTENT_DIR}")
         return
     
     # Load tracking data
     tracking_data = load_tracking_file()
     processed_files = set(tracking_data.get("processed_files", []))
     
-    # Get all markdown files
-    markdown_files = list(TEST_ARTICLES_DIR.glob("*.md"))
+    # Get all markdown files recursively from content directory
+    markdown_files = list(CONTENT_DIR.rglob("*.md"))  # rglob for recursive search
     
     if not markdown_files:
-        logger.warning(f"No markdown files found in {TEST_ARTICLES_DIR}")
+        logger.warning(f"No markdown files found in {CONTENT_DIR}")
         return
     
-    logger.info(f"Found {len(markdown_files)} markdown files to check")
+    logger.info(f"Found {len(markdown_files)} markdown files to check (including subdirectories)")
     logger.info(f"Already processed: {len(processed_files)} files")
     
     # Statistics
@@ -193,16 +193,17 @@ def process_articles():
     
     # Process each file
     for file_path in markdown_files:
-        file_name = file_path.name
+        # Use relative path as unique identifier
+        relative_path = str(file_path.relative_to(CONTENT_DIR))
         
         # Skip if already processed
-        if file_name in processed_files:
-            logger.info(f"⊙ Skipping already processed file: {file_name}")
+        if relative_path in processed_files:
+            logger.info(f"⊙ Skipping already processed file: {relative_path}")
             stats["already_processed"] += 1
             continue
         
         logger.info(f"\n{'='*60}")
-        logger.info(f"Processing: {file_name}")
+        logger.info(f"Processing: {relative_path}")
         logger.info(f"{'='*60}")
         
         # Try to process file
@@ -210,13 +211,13 @@ def process_articles():
         
         if success:
             stats["toc_removed"] += 1
-            # Add to processed files
-            processed_files.add(file_name)
+            # Add to processed files (using relative path)
+            processed_files.add(relative_path)
             tracking_data["processed_files"] = list(processed_files)
         else:
             stats["no_toc_found"] += 1
             # Still mark as processed (no need to check again)
-            processed_files.add(file_name)
+            processed_files.add(relative_path)
             tracking_data["processed_files"] = list(processed_files)
     
     # Save tracking data
@@ -249,7 +250,7 @@ def generate_report(stats, tracking_data):
             f.write("=" * 70 + "\n\n")
             
             f.write(f"Execution Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-            f.write(f"Target Directory: {TEST_ARTICLES_DIR}\n\n")
+            f.write(f"Target Directory: {CONTENT_DIR} (recursive)\n\n")
             
             f.write("-" * 70 + "\n")
             f.write("STATISTICS\n")
