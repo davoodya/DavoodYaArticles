@@ -1,19 +1,19 @@
 +++
 title = "2-Change HTTP Data & Bypass Parameters"
 slug = "2-change-http-data-bypass-parameters"
-date = "2026-02-09T09:59:19+03:30"
-lastmod = "2026-02-09T09:59:19+03:30"
+date = "2026-02-09T13:50:09+03:30"
+lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
-categories = ["Burpsuite"]
-tags = ["Burpsuite", "Pentest", "Web_Pentest", "Bug_Bounty", "Pentest_Tool"]
-series = ["Burpsuite"]
+categories = ["tools", "Burpsuite"]
+tags = ["tools", "Burpsuite", "Pentest", "Web_Pentest", "Bug_Bounty", "Pentest_Tool"]
+series = ["tools", "Burpsuite"]
 
 description = "https://akofamily.com/Main/ در فروشگاه های آنلاین قیمت محصولات بر اساس تعداد انتخاب آنها صورت میگیرد. مثلا 2 عدد عینک که قیمت هر کدام 7 هزار تومان..."
-keywords = ["2-Change HTTP Data & Bypass Parameters", "Burpsuite", "Pentest", "Web_Pentest", "Bug_Bounty", "Pentest_Tool", "2-change-http-data-bypass-parameters"]
+keywords = ["2-Change HTTP Data & Bypass Parameters", "tools", "Burpsuite", "Pentest", "Web_Pentest", "Bug_Bounty", "Pentest_Tool", "2-change-http-data-bypass-parameters"]
 author = "Davood Yahay"
 robots = "index, follow"
-canonical = "https://davoodya.ir/Burpsuite/2-change-http-data-bypass-parameters/"
+canonical = "https://davoodya.ir/tools/Burpsuite/2-change-http-data-bypass-parameters/"
 
 featured_image = "/images/tools/2-ChangeHTTPData&BypassParameters-1.png"
 images = ["/images/tools/2-ChangeHTTPData&BypassParameters-1.png"]
@@ -22,7 +22,7 @@ images = ["/images/tools/2-ChangeHTTPData&BypassParameters-1.png"]
   title = "2-Change HTTP Data & Bypass Parameters"
   description = "https://akofamily.com/Main/ در فروشگاه های آنلاین قیمت محصولات بر اساس تعداد انتخاب آنها صورت میگیرد. مثلا 2 عدد عینک که قیمت هر کدام 7 هزار تومان..."
   image = "/images/tools/2-ChangeHTTPData&BypassParameters-1.png"
-  url = "https://davoodya.ir/Burpsuite/2-change-http-data-bypass-parameters/"
+  url = "https://davoodya.ir/tools/Burpsuite/2-change-http-data-bypass-parameters/"
   type = "article"
 
 [params.twitter]
@@ -36,6 +36,7 @@ difficulty = "medium"
 toc = true
 math = false
 lab_required = true
+post_type_fa = "مقاله"
 
 # layout = "single"
 type = "posts"

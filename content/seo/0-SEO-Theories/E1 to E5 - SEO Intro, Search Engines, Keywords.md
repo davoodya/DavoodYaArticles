@@ -1,19 +1,19 @@
 +++
 title = "SEO Intro, Search Engines, Keywords"
 slug = "seo-intro-search-engines-keywords"
-date = "2026-02-09T09:59:19+03:30"
-lastmod = "2026-02-09T09:59:19+03:30"
+date = "2026-02-09T13:50:09+03:30"
+lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
-categories = ["0-SEO-Theories"]
-tags = ["0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
-series = ["0-SEO-Theories"]
+categories = ["seo", "0-SEO-Theories"]
+tags = ["seo", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
+series = ["seo", "0-SEO-Theories"]
 
 description = "- Whats SEO? - SEO Basic & Concepts - SEO Advantages - What is SEO Really? - Search Engines Functional - How Search Engines Work? - 0. Specify..."
-keywords = ["SEO Intro, Search Engines, Keywords", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e1-to-e5-seo-intro-search-engines-keywords"]
+keywords = ["SEO Intro, Search Engines, Keywords", "seo", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e1-to-e5-seo-intro-search-engines-keywords"]
 author = "Davood Yahay"
 robots = "index, follow"
-canonical = "https://davoodya.ir/0-SEO-Theories/seo-intro-search-engines-keywords/"
+canonical = "https://davoodya.ir/seo/0-SEO-Theories/seo-intro-search-engines-keywords/"
 
 featured_image = "/images/seo/SEOIntro,SearchEngines,Keywords-1.png"
 images = ["/images/seo/SEOIntro,SearchEngines,Keywords-1.png"]
@@ -22,7 +22,7 @@ images = ["/images/seo/SEOIntro,SearchEngines,Keywords-1.png"]
   title = "SEO Intro, Search Engines, Keywords"
   description = "- Whats SEO? - SEO Basic & Concepts - SEO Advantages - What is SEO Really? - Search Engines Functional - How Search Engines Work? - 0. Specify..."
   image = "/images/seo/SEOIntro,SearchEngines,Keywords-1.png"
-  url = "https://davoodya.ir/0-SEO-Theories/seo-intro-search-engines-keywords/"
+  url = "https://davoodya.ir/seo/0-SEO-Theories/seo-intro-search-engines-keywords/"
   type = "article"
 
 [params.twitter]
@@ -36,6 +36,7 @@ difficulty = "medium"
 toc = true
 math = false
 lab_required = true
+post_type_fa = "مقاله"
 
 # layout = "single"
 type = "posts"

@@ -1,19 +1,19 @@
 +++
 title = "1-Install Burpsuite"
 slug = "1-install-burpsuite"
-date = "2026-02-09T09:59:19+03:30"
-lastmod = "2026-02-09T09:59:19+03:30"
+date = "2026-02-09T13:50:09+03:30"
+lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
-categories = ["Burpsuite"]
-tags = ["Burpsuite", "Pentest", "Web_Pentest", "Bug_Bounty", "Pentest_Tool"]
-series = ["Burpsuite"]
+categories = ["tools", "Burpsuite"]
+tags = ["tools", "Burpsuite", "Pentest", "Web_Pentest", "Bug_Bounty", "Pentest_Tool"]
+series = ["tools", "Burpsuite"]
 
 description = "Requirements => JDK v9.04 نسخه از ابزار ممکن است با JDK 21 کار نکند همچنین با JDK زیر 9 هم نمیتواند کار کند. برای نصب کافیست از وبسایت soft98 ابزار..."
-keywords = ["1-Install Burpsuite", "Burpsuite", "Pentest", "Web_Pentest", "Bug_Bounty", "Pentest_Tool", "1-install-burpsuite"]
+keywords = ["1-Install Burpsuite", "tools", "Burpsuite", "Pentest", "Web_Pentest", "Bug_Bounty", "Pentest_Tool", "1-install-burpsuite"]
 author = "Davood Yahay"
 robots = "index, follow"
-canonical = "https://davoodya.ir/Burpsuite/1-install-burpsuite/"
+canonical = "https://davoodya.ir/tools/Burpsuite/1-install-burpsuite/"
 
 featured_image = "/images/tools/1-InstallBurpsuite-1.png"
 images = ["/images/tools/1-InstallBurpsuite-1.png"]
@@ -22,7 +22,7 @@ images = ["/images/tools/1-InstallBurpsuite-1.png"]
   title = "1-Install Burpsuite"
   description = "Requirements => JDK v9.04 نسخه از ابزار ممکن است با JDK 21 کار نکند همچنین با JDK زیر 9 هم نمیتواند کار کند. برای نصب کافیست از وبسایت soft98 ابزار..."
   image = "/images/tools/1-InstallBurpsuite-1.png"
-  url = "https://davoodya.ir/Burpsuite/1-install-burpsuite/"
+  url = "https://davoodya.ir/tools/Burpsuite/1-install-burpsuite/"
   type = "article"
 
 [params.twitter]
@@ -36,6 +36,7 @@ difficulty = "medium"
 toc = true
 math = false
 lab_required = true
+post_type_fa = "مقاله"
 
 # layout = "single"
 type = "posts"

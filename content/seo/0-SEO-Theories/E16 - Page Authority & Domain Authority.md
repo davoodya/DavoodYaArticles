@@ -1,19 +1,19 @@
 +++
 title = "Page Authority & Domain Authority"
 slug = "page-authority-domain-authority"
-date = "2026-02-09T09:59:19+03:30"
-lastmod = "2026-02-09T09:59:19+03:30"
+date = "2026-02-09T13:50:09+03:30"
+lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
-categories = ["0-SEO-Theories"]
-tags = ["0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
-series = ["0-SEO-Theories"]
+categories = ["seo", "0-SEO-Theories"]
+tags = ["seo", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
+series = ["seo", "0-SEO-Theories"]
 
 description = "به اعتبار صفحه Page Authority و اعتبار دامنه Domain Authority گفته میشود. این دو اعتبار برای رتبه بندی سئو وبسایت بسیار مهم هستند. 1. Page..."
-keywords = ["Page Authority & Domain Authority", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e16-page-authority-domain-authority"]
+keywords = ["Page Authority & Domain Authority", "seo", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e16-page-authority-domain-authority"]
 author = "Davood Yahay"
 robots = "index, follow"
-canonical = "https://davoodya.ir/0-SEO-Theories/page-authority-domain-authority/"
+canonical = "https://davoodya.ir/seo/0-SEO-Theories/page-authority-domain-authority/"
 
 featured_image = "/images/seo/PageAuthority&DomainAuthority-1.png"
 images = ["/images/seo/PageAuthority&DomainAuthority-1.png"]
@@ -22,7 +22,7 @@ images = ["/images/seo/PageAuthority&DomainAuthority-1.png"]
   title = "Page Authority & Domain Authority"
   description = "به اعتبار صفحه Page Authority و اعتبار دامنه Domain Authority گفته میشود. این دو اعتبار برای رتبه بندی سئو وبسایت بسیار مهم هستند. 1. Page..."
   image = "/images/seo/PageAuthority&DomainAuthority-1.png"
-  url = "https://davoodya.ir/0-SEO-Theories/page-authority-domain-authority/"
+  url = "https://davoodya.ir/seo/0-SEO-Theories/page-authority-domain-authority/"
   type = "article"
 
 [params.twitter]
@@ -36,6 +36,7 @@ difficulty = "medium"
 toc = true
 math = false
 lab_required = true
+post_type_fa = "مقاله"
 
 # layout = "single"
 type = "posts"

@@ -1,59 +1,48 @@
 +++
 title = "SANS-401-Virtualization & Cloud Infrastructure(401.1)"
 slug = "sans-401-virtualization-cloud-infrastructure4011"
-date = "2026-02-09T09:59:19+03:30"
-lastmod = "2026-02-09T09:59:19+03:30"
+date = "2026-02-09T13:50:09+03:30"
+lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
-categories = ["SANS-401"]
-tags = ["SANS-401", "CyberSecurity", "Pentest"]
-series = ["SANS-401"]
+categories = ["cyber-security", "SANS-401"]
+tags = ["cyber-security", "SANS-401", "CyberSecurity", "Pentest"]
+series = ["cyber-security", "SANS-401"]
 
-description = "- Basic & Concepts - Virtualization - Definitions - Attacks against Virtualization - Defenses against Virtualization - Advance Virtualization - Cloud..."
-keywords = ["SANS-401-Virtualization & Cloud Infrastructure(401.1)", "SANS-401", "CyberSecurity", "Pentest", "sans-401-e3-virtualization-cloud-infrastructure4011"]
+description = "0. Virtual Machines 1. !SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-1-1.png) 1. Virtualization Overview 1. !SANS-401-E3 -..."
+keywords = ["SANS-401-Virtualization & Cloud Infrastructure(401.1)", "cyber-security", "SANS-401", "CyberSecurity", "Pentest", "sans-401-e3-virtualization-cloud-infrastructure4011"]
 author = "Davood Yahay"
 robots = "index, follow"
-canonical = "https://davoodya.ir/SANS-401/sans-401-virtualization-cloud-infrastructure4011/"
+canonical = "https://davoodya.ir/cyber-security/SANS-401/sans-401-virtualization-cloud-infrastructure4011/"
 
-featured_image = "/images/cyber-security/SANS-401-E3-Virtualization&CloudInfrastructure(401.1"
-images = ["/images/cyber-security/SANS-401-E3-Virtualization&CloudInfrastructure(401.1"]
+featured_image = "/images/cyber-security/SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-1.png"
+images = ["/images/cyber-security/SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-1.png"]
 
 [params.opengraph]
   title = "SANS-401-Virtualization & Cloud Infrastructure(401.1)"
-  description = "- Basic & Concepts - Virtualization - Definitions - Attacks against Virtualization - Defenses against Virtualization - Advance Virtualization - Cloud..."
-  image = "/images/cyber-security/SANS-401-E3-Virtualization&CloudInfrastructure(401.1"
-  url = "https://davoodya.ir/SANS-401/sans-401-virtualization-cloud-infrastructure4011/"
+  description = "0. Virtual Machines 1. !SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-1-1.png) 1. Virtualization Overview 1. !SANS-401-E3 -..."
+  image = "/images/cyber-security/SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-1.png"
+  url = "https://davoodya.ir/cyber-security/SANS-401/sans-401-virtualization-cloud-infrastructure4011/"
   type = "article"
 
 [params.twitter]
   card = "summary_large_image"
   title = "SANS-401-Virtualization & Cloud Infrastructure(401.1)"
-  description = "- Basic & Concepts - Virtualization - Definitions - Attacks against Virtualization - Defenses against Virtualization - Advance Virtualization - Cloud..."
-  image = "/images/cyber-security/SANS-401-E3-Virtualization&CloudInfrastructure(401.1"
+  description = "0. Virtual Machines 1. !SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-1-1.png) 1. Virtualization Overview 1. !SANS-401-E3 -..."
+  image = "/images/cyber-security/SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-1.png"
 
 readingTime = 8
 difficulty = "medium"
 toc = true
 math = false
 lab_required = true
+post_type_fa = "مقاله"
 
 # layout = "single"
 type = "posts"
 +++
 
 -------
-## E3 - Virtualization & Cloud Infrastructure(401.1)
-- [Basic & Concepts](#Basic%20&%20Concepts)
-- [Virtualization](#Virtualization)
-	- [Definitions](#Definitions)
-	- [Attacks against Virtualization](#Attacks%20against%20Virtualization)
-	- [Defenses against Virtualization](#Defenses%20against%20Virtualization)
-	- [Advance Virtualization](#Advance%20Virtualization)
-- [Cloud Infrastructure](#Cloud%20Infrastructure)
-	- [Definitions](#Definitions)
-	- [Attacks against Cloud Infrastructure](#Attacks%20against%20Cloud%20Infrastructure)
-	- [Advance Cloud Infrastructure](#Advance%20Cloud%20Infrastructure)
------
 ### Basic & Concepts
 ### Virtualization
 #### Definitions

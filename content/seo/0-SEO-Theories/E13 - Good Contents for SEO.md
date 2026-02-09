@@ -1,19 +1,19 @@
 +++
 title = "Good Contents for SEO"
 slug = "good-contents-for-seo"
-date = "2026-02-09T09:59:19+03:30"
-lastmod = "2026-02-09T09:59:19+03:30"
+date = "2026-02-09T13:50:09+03:30"
+lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
-categories = ["0-SEO-Theories"]
-tags = ["0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
-series = ["0-SEO-Theories"]
+categories = ["seo", "0-SEO-Theories"]
+tags = ["seo", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
+series = ["seo", "0-SEO-Theories"]
 
 description = "- Good Contents for SEO - Description - Good Content Features یکی از مهمترین قسمت های وبسایت مطالب وبسایت شامل توضیحات محصولات، دوره ها، مقالات، و..."
-keywords = ["Good Contents for SEO", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e13-good-contents-for-seo"]
+keywords = ["Good Contents for SEO", "seo", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e13-good-contents-for-seo"]
 author = "Davood Yahay"
 robots = "index, follow"
-canonical = "https://davoodya.ir/0-SEO-Theories/good-contents-for-seo/"
+canonical = "https://davoodya.ir/seo/0-SEO-Theories/good-contents-for-seo/"
 
 featured_image = "/images/seo/GoodContentsforSEO-1.png"
 images = ["/images/seo/GoodContentsforSEO-1.png"]
@@ -22,7 +22,7 @@ images = ["/images/seo/GoodContentsforSEO-1.png"]
   title = "Good Contents for SEO"
   description = "- Good Contents for SEO - Description - Good Content Features یکی از مهمترین قسمت های وبسایت مطالب وبسایت شامل توضیحات محصولات، دوره ها، مقالات، و..."
   image = "/images/seo/GoodContentsforSEO-1.png"
-  url = "https://davoodya.ir/0-SEO-Theories/good-contents-for-seo/"
+  url = "https://davoodya.ir/seo/0-SEO-Theories/good-contents-for-seo/"
   type = "article"
 
 [params.twitter]
@@ -36,6 +36,7 @@ difficulty = "medium"
 toc = true
 math = false
 lab_required = true
+post_type_fa = "مقاله"
 
 # layout = "single"
 type = "posts"

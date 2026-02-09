@@ -1,19 +1,19 @@
 +++
 title = "Content SEO, Important Website Pages"
 slug = "content-seo-important-website-pages"
-date = "2026-02-09T09:59:19+03:30"
-lastmod = "2026-02-09T09:59:19+03:30"
+date = "2026-02-09T13:50:09+03:30"
+lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
-categories = ["0-SEO-Theories"]
-tags = ["0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
-series = ["0-SEO-Theories"]
+categories = ["seo", "0-SEO-Theories"]
+tags = ["seo", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
+series = ["seo", "0-SEO-Theories"]
 
 description = "استفاده از مقاله و یا مطالب نوشتاری در وبسایت برای افزایش رتبه بندی SEO وبسایت بسیار پیشنهاد میشود. مقالاتی که در وبسایت استفاده میکنیم باید مربوط به..."
-keywords = ["Content SEO, Important Website Pages", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e10-e11-content-seo-important-website-pages"]
+keywords = ["Content SEO, Important Website Pages", "seo", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e10-e11-content-seo-important-website-pages"]
 author = "Davood Yahay"
 robots = "index, follow"
-canonical = "https://davoodya.ir/0-SEO-Theories/content-seo-important-website-pages/"
+canonical = "https://davoodya.ir/seo/0-SEO-Theories/content-seo-important-website-pages/"
 
 featured_image = "/images/seo/ContentSEO,ImportantWebsitePages-1.png"
 images = ["/images/seo/ContentSEO,ImportantWebsitePages-1.png"]
@@ -22,7 +22,7 @@ images = ["/images/seo/ContentSEO,ImportantWebsitePages-1.png"]
   title = "Content SEO, Important Website Pages"
   description = "استفاده از مقاله و یا مطالب نوشتاری در وبسایت برای افزایش رتبه بندی SEO وبسایت بسیار پیشنهاد میشود. مقالاتی که در وبسایت استفاده میکنیم باید مربوط به..."
   image = "/images/seo/ContentSEO,ImportantWebsitePages-1.png"
-  url = "https://davoodya.ir/0-SEO-Theories/content-seo-important-website-pages/"
+  url = "https://davoodya.ir/seo/0-SEO-Theories/content-seo-important-website-pages/"
   type = "article"
 
 [params.twitter]
@@ -36,6 +36,7 @@ difficulty = "medium"
 toc = true
 math = false
 lab_required = true
+post_type_fa = "مقاله"
 
 # layout = "single"
 type = "posts"

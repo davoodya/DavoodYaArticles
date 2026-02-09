@@ -6,153 +6,216 @@
     <description>Recent content in Tags on مقالات داوود یاحی – Davood Yahay Articles</description>
     <generator>Hugo</generator>
     <language>fa</language>
-    <lastBuildDate>Mon, 09 Feb 2026 09:59:19 +0330</lastBuildDate>
+    <lastBuildDate>Mon, 09 Feb 2026 13:50:09 +0330</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>0-SEO-Theories</title>
       <link>http://localhost:1313/tags/0-seo-theories/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/0-seo-theories/</guid>
       <description></description>
     </item>
     <item>
       <title>Bug_Bounty</title>
       <link>http://localhost:1313/tags/bug_bounty/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/bug_bounty/</guid>
       <description></description>
     </item>
     <item>
       <title>Burpsuite</title>
       <link>http://localhost:1313/tags/burpsuite/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/burpsuite/</guid>
       <description></description>
     </item>
     <item>
       <title>Command_Line</title>
       <link>http://localhost:1313/tags/command_line/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/command_line/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cyber-Security</title>
+      <link>http://localhost:1313/tags/cyber-security/</link>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
+      <guid>http://localhost:1313/tags/cyber-security/</guid>
       <description></description>
     </item>
     <item>
       <title>CyberSecurity</title>
       <link>http://localhost:1313/tags/cybersecurity/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/cybersecurity/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
       <link>http://localhost:1313/tags/linux/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Metasploit</title>
       <link>http://localhost:1313/tags/metasploit/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/metasploit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Os</title>
+      <link>http://localhost:1313/tags/os/</link>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
+      <guid>http://localhost:1313/tags/os/</guid>
       <description></description>
     </item>
     <item>
       <title>Pentest</title>
       <link>http://localhost:1313/tags/pentest/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/pentest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pentest Tools</title>
+      <link>http://localhost:1313/tags/pentest-tools/</link>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
+      <guid>http://localhost:1313/tags/pentest-tools/</guid>
       <description></description>
     </item>
     <item>
       <title>Pentest_Tool</title>
       <link>http://localhost:1313/tags/pentest_tool/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/pentest_tool/</guid>
       <description></description>
     </item>
     <item>
       <title>Pentest_Tools</title>
       <link>http://localhost:1313/tags/pentest_tools/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/pentest_tools/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
       <link>http://localhost:1313/tags/python/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Readteam</title>
       <link>http://localhost:1313/tags/readteam/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/readteam/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Red Team</title>
+      <link>http://localhost:1313/tags/red-team/</link>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
+      <guid>http://localhost:1313/tags/red-team/</guid>
       <description></description>
     </item>
     <item>
       <title>Red_Team</title>
       <link>http://localhost:1313/tags/red_team/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/red_team/</guid>
       <description></description>
     </item>
     <item>
       <title>SANS-401</title>
       <link>http://localhost:1313/tags/sans-401/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/sans-401/</guid>
       <description></description>
     </item>
     <item>
       <title>SEO</title>
       <link>http://localhost:1313/tags/seo/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/seo/</guid>
       <description></description>
     </item>
     <item>
       <title>Tools</title>
       <link>http://localhost:1313/tags/tools/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Developing</title>
+      <link>http://localhost:1313/tags/web-developing/</link>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
+      <guid>http://localhost:1313/tags/web-developing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Master</title>
+      <link>http://localhost:1313/tags/web-master/</link>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
+      <guid>http://localhost:1313/tags/web-master/</guid>
       <description></description>
     </item>
     <item>
       <title>Web_Developing</title>
       <link>http://localhost:1313/tags/web_developing/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/web_developing/</guid>
       <description></description>
     </item>
     <item>
       <title>Web_Pentest</title>
       <link>http://localhost:1313/tags/web_pentest/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/web_pentest/</guid>
       <description></description>
     </item>
     <item>
       <title>Webmaster</title>
       <link>http://localhost:1313/tags/webmaster/</link>
-      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/webmaster/</guid>
       <description></description>
     </item>
     <item>
       <title>Cryptography</title>
       <link>http://localhost:1313/tags/cryptography/</link>
-      <pubDate>Thu, 20 Jun 2024 09:59:19 +0330</pubDate>
+      <pubDate>Thu, 20 Jun 2024 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/cryptography/</guid>
       <description></description>
     </item>
     <item>
       <title>Encryption</title>
       <link>http://localhost:1313/tags/encryption/</link>
-      <pubDate>Thu, 20 Jun 2024 09:59:19 +0330</pubDate>
+      <pubDate>Thu, 20 Jun 2024 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/tags/encryption/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network</title>
+      <link>http://localhost:1313/tags/network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network Pentest</title>
+      <link>http://localhost:1313/tags/network-pentest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/network-pentest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network Security</title>
+      <link>http://localhost:1313/tags/network-security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/network-security/</guid>
       <description></description>
     </item>
   </channel>

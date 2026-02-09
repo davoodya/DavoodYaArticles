@@ -133,12 +133,45 @@ def extract_title_from_filename(filename):
 def get_directory_name(file_path):
     """
     Get the directory name (category/tag) from file path.
+    Returns only the immediate parent directory name.
     
     For test/test-articles/file.md -> returns "test-articles"
     For content/cyber-security/file.md -> returns "cyber-security"
+    For content/cyber-security/Cryptography/file.md -> returns "Cryptography"
     """
     parent_dir = file_path.parent.name
     return parent_dir
+
+
+def get_full_category_path(file_path):
+    """
+    Get the full category path from content directory.
+    Returns all directories between content and the file.
+    
+    For content/cyber-security/file.md -> returns ["cyber-security"]
+    For content/cyber-security/Cryptography/file.md -> returns ["cyber-security", "Cryptography"]
+    For content/seo/0-SEO-Theories/file.md -> returns ["seo", "0-SEO-Theories"]
+    """
+    try:
+        # Get relative path from CONTENT_DIR
+        relative_path = file_path.relative_to(CONTENT_DIR)
+        # Get all parent directories (excluding the file itself)
+        parts = list(relative_path.parent.parts)
+        return parts if parts else []
+    except ValueError:
+        # If file is not under CONTENT_DIR, fallback to immediate parent
+        return [file_path.parent.name]
+
+
+def get_category_slug_path(file_path):
+    """
+    Get the category path as URL slug for canonical URL.
+    
+    For content/cyber-security/file.md -> returns "cyber-security"
+    For content/cyber-security/Cryptography/file.md -> returns "cyber-security/Cryptography"
+    """
+    parts = get_full_category_path(file_path)
+    return '/'.join(parts) if parts else get_directory_name(file_path)
 
 
 def get_current_time_str():
@@ -303,6 +336,11 @@ def extract_first_image(content_lines):
     
     Returns: image path or None
     Example: "Pasted image 20260203212022.png" -> "/images/test-articles/pasted-image-20260203212022.png"
+    
+    Handles special cases:
+        - Images with parentheses in name: SANS-401-NetworkingandProtocols(401.1)-1.png
+        - Images with dots in name: file.name.with.dots.png
+        - Images with commas: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.png
     """
     for line in content_lines:
         # Check for Obsidian format: ![[image.png]]
@@ -313,11 +351,27 @@ def extract_first_image(content_lines):
             return image_name
         
         # Check for Markdown format: ![alt](path)
-        match = re.search(r'!\[([^\]]*)\]\(([^\)]+)\)', line)
-        if match:
-            image_path = match.group(2)
-            logger.debug(f"  Found Markdown image: {image_path}")
-            return image_path
+        # Strategy: Find ![, then find matching ](, then extract path until we find a valid image extension
+        # This handles complex filenames with parentheses, dots, commas, etc.
+        if '![' in line:
+            # Find the start of image markdown
+            img_start = line.find('![')
+            if img_start != -1:
+                # Find the closing ] of alt text
+                alt_end = line.find('](', img_start)
+                if alt_end != -1:
+                    # Start looking for the path after ](
+                    path_start = alt_end + 2
+                    
+                    # Find the path by looking for common image extensions
+                    # We look for the pattern: anything + .extension + )
+                    # Common extensions: png, jpg, jpeg, gif, webp, svg
+                    path_match = re.search(r'([^\s]+\.(?:png|jpg|jpeg|gif|webp|svg|PNG|JPG|JPEG|GIF|WEBP|SVG))', line[path_start:])
+                    
+                    if path_match:
+                        image_path = path_match.group(1)
+                        logger.debug(f"  Found Markdown image: {image_path}")
+                        return image_path
     
     return None
 
@@ -469,11 +523,13 @@ def generate_hugo_frontmatter(file_path, obsidian_props, content_lines):
     """
     filename = file_path.name
     title = extract_title_from_filename(filename)
-    directory = get_directory_name(file_path)
+    directory = get_directory_name(file_path)  # Immediate parent directory
+    full_category_path = get_full_category_path(file_path)  # All directories from content
+    category_slug_path = get_category_slug_path(file_path)  # URL path
     slug = slugify(title)
     
-    # Build tags list: directory + obsidian tags
-    tags_list = [directory]
+    # Build tags list: all directories from full path + obsidian tags
+    tags_list = list(full_category_path)  # Start with full directory path
     if obsidian_props['tags']:
         tags_list.extend(obsidian_props['tags'])
     
@@ -484,8 +540,8 @@ def generate_hugo_frontmatter(file_path, obsidian_props, content_lines):
     # Format tags for TOML
     tags_str = ', '.join([f'"{tag}"' for tag in tags_list])
     
-    # Build categories list: directory + obsidian categories
-    categories_list = [directory]
+    # Build categories list: all directories from full path + obsidian categories
+    categories_list = list(full_category_path)  # Start with full directory path
     if obsidian_props.get('categories'):
         categories_list.extend(obsidian_props['categories'])
     
@@ -525,24 +581,25 @@ def generate_hugo_frontmatter(file_path, obsidian_props, content_lines):
     # lastmod: current date and time
     lastmod_str = get_current_datetime_str()
     
-    # Series (same as directory only)
-    series_str = f'"{directory}"'
+    # Series (all directories from full path)
+    series_list = list(full_category_path)
+    series_str = ', '.join([f'"{s}"' for s in series_list])
     
     # Extract description (150 chars from content)
     description = extract_description(content_lines, max_chars=150)
     
-    # Build keywords: title + tags + categories + filename + directory
+    # Build keywords: title + tags + categories + filename
     keywords_list = [title]
     keywords_list.extend(tags_list)
-    keywords_list.extend(categories_list)
+    # Don't add categories again since they're already in tags
     keywords_list.append(slugify(filename.replace('.md', '')))
     # Remove duplicates while preserving order
     seen = set()
     keywords_list = [x for x in keywords_list if not (x in seen or seen.add(x))]
     keywords_str = ', '.join([f'"{kw}"' for kw in keywords_list])
     
-    # Canonical URL
-    canonical_url = f"{SITE_URL}/{directory}/{slug}/"
+    # Canonical URL (use full category path)
+    canonical_url = f"{SITE_URL}/{category_slug_path}/{slug}/"
     
     # Extract first image
     first_image_name = extract_first_image(content_lines)
@@ -593,6 +650,7 @@ difficulty = "medium"
 toc = true
 math = false
 lab_required = true
+post_type_fa = "مقاله"
 
 # layout = "single"
 type = "posts"
@@ -792,6 +850,7 @@ def process_articles():
     # Statistics
     stats = {
         "total_files": len(markdown_files),
+        "skipped_index_files": 0,
         "already_processed": 0,
         "newly_processed": 0,
         "no_changes": 0,
@@ -802,6 +861,12 @@ def process_articles():
     for file_path in markdown_files:
         # Use relative path as unique identifier
         relative_path = str(file_path.relative_to(CONTENT_DIR))
+        
+        # Skip _index.md files (category index files)
+        if file_path.name.lower() == '_index.md':
+            logger.info(f"⊗ Skipping _index.md file (category index): {relative_path}")
+            stats["skipped_index_files"] += 1
+            continue
         
         # Skip if already processed
         if relative_path in processed_files:
@@ -832,6 +897,7 @@ def process_articles():
     logger.info("SUMMARY")
     logger.info(f"{'='*60}")
     logger.info(f"Total files found: {stats['total_files']}")
+    logger.info(f"Skipped _index.md files: {stats['skipped_index_files']}")
     logger.info(f"Already processed (skipped): {stats['already_processed']}")
     logger.info(f"Newly processed (modified): {stats['newly_processed']}")
     logger.info(f"No changes needed: {stats['no_changes']}")
@@ -860,6 +926,7 @@ def generate_report(stats, tracking_data):
             f.write("STATISTICS\n")
             f.write("-" * 70 + "\n")
             f.write(f"Total files found: {stats['total_files']}\n")
+            f.write(f"Skipped _index.md files (category index): {stats['skipped_index_files']}\n")
             f.write(f"Already processed (skipped): {stats['already_processed']}\n")
             f.write(f"Newly processed (modified): {stats['newly_processed']}\n")
             f.write(f"No changes needed: {stats['no_changes']}\n")

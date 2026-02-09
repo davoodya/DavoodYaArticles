@@ -1,60 +1,48 @@
 +++
 title = "SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)"
 slug = "sans-401-wireless-aircrack-ng-wireshark-4011"
-date = "2026-02-09T09:59:19+03:30"
-lastmod = "2026-02-09T09:59:19+03:30"
+date = "2026-02-09T13:50:09+03:30"
+lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
-categories = ["SANS-401"]
-tags = ["SANS-401", "CyberSecurity", "Pentest"]
-series = ["SANS-401"]
+categories = ["cyber-security", "SANS-401"]
+tags = ["cyber-security", "SANS-401", "CyberSecurity", "Pentest"]
+series = ["cyber-security", "SANS-401"]
 
-description = "- Wireless Attacks - Wireless Standards - Wireless Encryption Algorithms - Rogue Access Point - DoS and DDoS - Air-Crack NG - Basic & Concepts -..."
-keywords = ["SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)", "SANS-401", "CyberSecurity", "Pentest", "sans-401-e4-e5-e6-wireless-aircrack-ng-wireshark-4011"]
+description = "شبکه های وایرلسی که امروزه بسیار هم مورد استفاده واقع میشوند در استاندارد های مختلف عرضه شده اند: 1. 802.11g 1. استاندارد قدیمی که فقط بر روی باند..."
+keywords = ["SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)", "cyber-security", "SANS-401", "CyberSecurity", "Pentest", "sans-401-e4-e5-e6-wireless-aircrack-ng-wireshark-4011"]
 author = "Davood Yahay"
 robots = "index, follow"
-canonical = "https://davoodya.ir/SANS-401/sans-401-wireless-aircrack-ng-wireshark-4011/"
+canonical = "https://davoodya.ir/cyber-security/SANS-401/sans-401-wireless-aircrack-ng-wireshark-4011/"
 
-featured_image = "/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1"
-images = ["/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1"]
+featured_image = "/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.png"
+images = ["/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.png"]
 
 [params.opengraph]
   title = "SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)"
-  description = "- Wireless Attacks - Wireless Standards - Wireless Encryption Algorithms - Rogue Access Point - DoS and DDoS - Air-Crack NG - Basic & Concepts -..."
-  image = "/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1"
-  url = "https://davoodya.ir/SANS-401/sans-401-wireless-aircrack-ng-wireshark-4011/"
+  description = "شبکه های وایرلسی که امروزه بسیار هم مورد استفاده واقع میشوند در استاندارد های مختلف عرضه شده اند: 1. 802.11g 1. استاندارد قدیمی که فقط بر روی باند..."
+  image = "/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.png"
+  url = "https://davoodya.ir/cyber-security/SANS-401/sans-401-wireless-aircrack-ng-wireshark-4011/"
   type = "article"
 
 [params.twitter]
   card = "summary_large_image"
   title = "SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)"
-  description = "- Wireless Attacks - Wireless Standards - Wireless Encryption Algorithms - Rogue Access Point - DoS and DDoS - Air-Crack NG - Basic & Concepts -..."
-  image = "/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1"
+  description = "شبکه های وایرلسی که امروزه بسیار هم مورد استفاده واقع میشوند در استاندارد های مختلف عرضه شده اند: 1. 802.11g 1. استاندارد قدیمی که فقط بر روی باند..."
+  image = "/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.png"
 
-readingTime = 8
+readingTime = 7
 difficulty = "medium"
 toc = true
 math = false
 lab_required = true
+post_type_fa = "مقاله"
 
 # layout = "single"
 type = "posts"
 +++
 
 -------
-## E4 - Wireless Networking & Threats (401.1)
-- [Wireless Attacks](#Wireless%20Attacks)
-	- [Wireless Standards](#Wireless%20Standards)
-	- [Wireless Encryption Algorithms](#Wireless%20Encryption%20Algorithms)
-	- [Rogue Access Point](#Rogue%20Access%20Point)
-	- [DoS and DDoS](#DoS%20and%20DDoS)
-- [Air-Crack NG](#Air-Crack%20NG)
-	- [Basic & Concepts](#Basic%20&%20Concepts)
-	- [Usage of Air Crack](#Usage%20of%20Air%20Crack)
-- [Wireshark](#Wireshark)
-	- [Basic & Concepts](#Basic%20&%20Concepts)
-	- [Follow TCP/UDP Stream](#Follow%20TCP/UDP%20Stream)
-----
 ### Wireless Attacks
 #### Wireless Standards
 شبکه های وایرلسی که امروزه بسیار هم مورد استفاده واقع میشوند در استاندارد های مختلف عرضه شده اند:

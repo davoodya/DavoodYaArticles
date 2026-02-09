@@ -1,41 +1,42 @@
 +++
 title = "Woorank(Check Website SEO)"
 slug = "woorankcheck-website-seo"
-date = "2026-02-09T09:59:19+03:30"
-lastmod = "2026-02-09T09:59:19+03:30"
+date = "2026-02-09T13:50:09+03:30"
+lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
-categories = ["0-SEO-Theories"]
-tags = ["0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
-series = ["0-SEO-Theories"]
+categories = ["seo", "0-SEO-Theories"]
+tags = ["seo", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
+series = ["seo", "0-SEO-Theories"]
 
 description = "- Woorank Tool - Description - Tool Usage - Other Important Tools - Woorank Scan - Start Scan - SEO Options Description ابزار Woorank یکی از ابزار..."
-keywords = ["Woorank(Check Website SEO)", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e12-woorankcheck-website-seo"]
+keywords = ["Woorank(Check Website SEO)", "seo", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e12-woorankcheck-website-seo"]
 author = "Davood Yahay"
 robots = "index, follow"
-canonical = "https://davoodya.ir/0-SEO-Theories/woorankcheck-website-seo/"
+canonical = "https://davoodya.ir/seo/0-SEO-Theories/woorankcheck-website-seo/"
 
-featured_image = "/images/seo/Woorank(CheckWebsiteSEO"
-images = ["/images/seo/Woorank(CheckWebsiteSEO"]
+featured_image = "/images/seo/Woorank(CheckWebsiteSEO)-1.png"
+images = ["/images/seo/Woorank(CheckWebsiteSEO)-1.png"]
 
 [params.opengraph]
   title = "Woorank(Check Website SEO)"
   description = "- Woorank Tool - Description - Tool Usage - Other Important Tools - Woorank Scan - Start Scan - SEO Options Description ابزار Woorank یکی از ابزار..."
-  image = "/images/seo/Woorank(CheckWebsiteSEO"
-  url = "https://davoodya.ir/0-SEO-Theories/woorankcheck-website-seo/"
+  image = "/images/seo/Woorank(CheckWebsiteSEO)-1.png"
+  url = "https://davoodya.ir/seo/0-SEO-Theories/woorankcheck-website-seo/"
   type = "article"
 
 [params.twitter]
   card = "summary_large_image"
   title = "Woorank(Check Website SEO)"
   description = "- Woorank Tool - Description - Tool Usage - Other Important Tools - Woorank Scan - Start Scan - SEO Options Description ابزار Woorank یکی از ابزار..."
-  image = "/images/seo/Woorank(CheckWebsiteSEO"
+  image = "/images/seo/Woorank(CheckWebsiteSEO)-1.png"
 
 readingTime = 7
 difficulty = "medium"
 toc = true
 math = false
 lab_required = true
+post_type_fa = "مقاله"
 
 # layout = "single"
 type = "posts"

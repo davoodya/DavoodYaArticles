@@ -420,18 +420,28 @@ body {
     }
     
     .article-card {
-        height: 500px;
-        min-height: 500px;
-        max-height: 500px;
+        height: 600px;
+        min-height: 600px;
+        max-height: 600px;
     }
     
     .article-card-image {
-        height: 180px;
+        height: 170px;
     }
     
     .article-card-summary {
-        max-height: 8rem;
+        max-height: 7rem;
         font-size: 0.92rem;
+    }
+    
+    .article-badge {
+        font-size: 0.72rem;
+        padding: 0.38rem 0.65rem;
+    }
+    
+    .article-badge svg {
+        width: 13px;
+        height: 13px;
     }
 }
 
@@ -442,20 +452,20 @@ body {
     }
     
     .article-card {
-        height: 480px;
-        min-height: 480px;
-        max-height: 480px;
+        height: 580px;
+        min-height: 580px;
+        max-height: 580px;
         padding: 1.8rem;
     }
     
     .article-card-image {
-        height: 180px;
+        height: 170px;
         margin: 0.8rem 0;
         border-radius: 10px;
     }
     
     .article-card-summary {
-        max-height: 7rem;
+        max-height: 6rem;
         font-size: 0.9rem;
     }
     
@@ -463,18 +473,49 @@ body {
         font-size: 1.3rem;
         margin-bottom: 0.9rem;
     }
+    
+    .article-card-tags {
+        gap: 0.4rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .article-tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+    
+    .article-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+    
+    .article-card-badges {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .article-badge {
+        font-size: 0.7rem;
+        padding: 0.35rem 0.6rem;
+    }
+    
+    .article-badge svg {
+        width: 12px;
+        height: 12px;
+    }
 }
 
 @media (max-width: 480px) {
     .article-card {
         padding: 1.5rem;
-        height: 460px;
-        min-height: 460px;
-        max-height: 460px;
+        height: 560px;
+        min-height: 560px;
+        max-height: 560px;
     }
     
     .article-card-image {
-        height: 160px;
+        height: 150px;
         margin: 0.7rem 0;
         border-radius: 8px;
     }
@@ -482,7 +523,7 @@ body {
     .article-card-summary {
         font-size: 0.85rem;
         line-height: 1.5;
-        max-height: 6.5rem;
+        max-height: 5.5rem;
     }
     
     .article-card-title {
@@ -490,9 +531,43 @@ body {
         margin-bottom: 0.8rem;
     }
     
+    .article-card-tags {
+        gap: 0.35rem;
+        margin-bottom: 0.7rem;
+    }
+    
+    .article-tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+    
+    .article-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+    }
+    
+    .article-card-badges {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 0.4rem;
+    }
+    
+    .article-badge {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.5rem;
+    }
+    
+    .article-badge svg {
+        width: 11px;
+        height: 11px;
+    }
+    
     .read-more-btn {
         padding: 0.6rem 1.3rem;
         font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -509,9 +584,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 520px;
-    max-height: 520px;
-    height: 520px;
+    min-height: 540px;
+    max-height: 540px;
+    height: 540px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -1169,11 +1244,372 @@ body {
 .article-title {
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     color: var(--accent-green);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-family: var(--persian-heading);
     font-weight: 700;
     line-height: 1.3;
     text-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+/* ============================= */
+/* Article Meta Badges (Single Page) */
+/* ============================= */
+
+.article-meta-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(0, 255, 65, 0.03) 0%, rgba(58, 173, 223, 0.03) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 65, 0.1);
+}
+
+.meta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(15, 15, 15, 0.9) 100%);
+    border: 2px solid rgba(0, 255, 65, 0.2);
+    border-radius: 20px;
+    font-family: var(--persian-text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--main-text);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.meta-badge svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.meta-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 255, 65, 0.3);
+    border-color: var(--accent-green);
+}
+
+.badge-label {
+    color: var(--secondary-text);
+    font-weight: 400;
+}
+
+.badge-value {
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+/* مدت زمان */
+.badge-time {
+    border-color: rgba(58, 173, 223, 0.3);
+}
+
+.badge-time svg {
+    fill: var(--accent-blue);
+}
+
+.badge-time .badge-value {
+    color: var(--accent-blue);
+}
+
+.badge-time:hover {
+    border-color: var(--accent-blue);
+    box-shadow: 0 4px 15px rgba(58, 173, 223, 0.3);
+}
+
+/* سطح مبتدی */
+.badge-beginner {
+    border-color: rgba(0, 255, 65, 0.3);
+}
+
+.badge-beginner svg {
+    fill: var(--accent-green);
+}
+
+.badge-beginner .badge-value {
+    color: var(--accent-green);
+}
+
+.badge-beginner:hover {
+    border-color: var(--accent-green);
+    box-shadow: 0 4px 15px rgba(0, 255, 65, 0.4);
+}
+
+/* سطح متوسط */
+.badge-medium {
+    border-color: rgba(229, 192, 123, 0.3);
+}
+
+.badge-medium svg {
+    fill: var(--accent-yellow);
+}
+
+.badge-medium .badge-value {
+    color: var(--accent-yellow);
+}
+
+.badge-medium:hover {
+    border-color: var(--accent-yellow);
+    box-shadow: 0 4px 15px rgba(229, 192, 123, 0.4);
+}
+
+/* سطح حرفه‌ای */
+.badge-intermediate {
+    border-color: rgba(224, 108, 17, 0.3);
+}
+
+.badge-intermediate svg {
+    fill: var(--accent-orange);
+}
+
+.badge-intermediate .badge-value {
+    color: var(--accent-orange);
+}
+
+.badge-intermediate:hover {
+    border-color: var(--accent-orange);
+    box-shadow: 0 4px 15px rgba(224, 108, 17, 0.4);
+}
+
+/* سطح تخصصی */
+.badge-advanced {
+    border-color: rgba(198, 120, 221, 0.3);
+}
+
+.badge-advanced svg {
+    fill: var(--accent-purple);
+}
+
+.badge-advanced .badge-value {
+    color: var(--accent-purple);
+}
+
+.badge-advanced:hover {
+    border-color: var(--accent-purple);
+    box-shadow: 0 4px 15px rgba(198, 120, 221, 0.4);
+}
+
+/* نیاز به تمرین عملی */
+.badge-lab {
+    border-color: rgba(255, 65, 108, 0.3);
+}
+
+.badge-lab svg {
+    fill: #ff416d;
+}
+
+.badge-lab .badge-value {
+    color: #ff416d;
+}
+
+.badge-lab:hover {
+    border-color: #ff416d;
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+}
+
+/* نوع پست */
+.badge-type {
+    border-color: rgba(152, 195, 121, 0.3);
+}
+
+.badge-type svg {
+    fill: #98c379;
+}
+
+.badge-type .badge-value {
+    color: #98c379;
+}
+
+.badge-type:hover {
+    border-color: #98c379;
+    box-shadow: 0 4px 15px rgba(152, 195, 121, 0.4);
+}
+
+/* ============================= */
+/* Article Tags Section (Single Page) */
+/* ============================= */
+
+.article-tags-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    padding: 1.2rem;
+    background: rgba(58, 173, 223, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(58, 173, 223, 0.15);
+}
+
+.tags-label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--accent-blue);
+    font-family: var(--persian-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.tags-label svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--accent-blue);
+}
+
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    flex: 1;
+}
+
+.article-tag-item {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    background: rgba(58, 173, 223, 0.1);
+    border: 1px solid rgba(58, 173, 223, 0.25);
+    border-radius: 15px;
+    color: var(--accent-blue);
+    font-family: var(--english-font);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.article-tag-item:hover {
+    background: rgba(58, 173, 223, 0.2);
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(58, 173, 223, 0.3);
+}
+
+/* تگ‌ها در Footer (انتهای محتوا) */
+.article-tags-footer {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-top: 2px solid rgba(58, 173, 223, 0.2);
+}
+
+/* ============================= */
+/* Article Card Badges (List Page) */
+/* ============================= */
+
+.article-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.article-tag {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    background: rgba(58, 173, 223, 0.08);
+    border: 1px solid rgba(58, 173, 223, 0.2);
+    border-radius: 12px;
+    color: var(--accent-blue);
+    font-family: var(--english-font);
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.article-tag:hover {
+    background: rgba(58, 173, 223, 0.15);
+    border-color: var(--accent-blue);
+    transform: translateY(-1px);
+}
+
+.article-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.article-card-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.article-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.4rem 0.7rem;
+    background: rgba(10, 10, 10, 0.8);
+    border: 1.5px solid rgba(0, 255, 65, 0.2);
+    border-radius: 15px;
+    font-family: var(--persian-text);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--main-text);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.article-badge svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.article-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 255, 65, 0.2);
+}
+
+/* رنگ‌بندی Badge ها در Card */
+.article-card .badge-time {
+    border-color: rgba(58, 173, 223, 0.25);
+    color: var(--accent-blue);
+}
+
+.article-card .badge-beginner {
+    border-color: rgba(0, 255, 65, 0.25);
+    color: var(--accent-green);
+}
+
+.article-card .badge-medium {
+    border-color: rgba(229, 192, 123, 0.25);
+    color: var(--accent-yellow);
+}
+
+.article-card .badge-intermediate {
+    border-color: rgba(224, 108, 17, 0.25);
+    color: var(--accent-orange);
+}
+
+.article-card .badge-advanced {
+    border-color: rgba(198, 120, 221, 0.25);
+    color: var(--accent-purple);
+}
+
+.article-card .badge-lab {
+    border-color: rgba(255, 65, 108, 0.25);
+    color: #ff416d;
+}
+
+.article-card .badge-type {
+    border-color: rgba(152, 195, 121, 0.25);
+    color: #98c379;
 }
 
 /* ============================= */
@@ -1755,6 +2191,92 @@ body {
     .read-more-btn {
         padding: 0.6rem 1.2rem;
         font-size: 0.85rem;
+    }
+}
+
+/* ============================= */
+/* Responsive: Article Meta Badges & Tags */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .article-meta-badges {
+        gap: 0.6rem;
+        padding: 1.2rem;
+    }
+    
+    .meta-badge {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.85rem;
+    }
+    
+    .meta-badge svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .article-tags-section {
+        padding: 1rem;
+        gap: 0.6rem;
+    }
+    
+    .tags-label {
+        font-size: 0.9rem;
+    }
+    
+    .tags-label svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .article-tag-item {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-meta-badges {
+        gap: 0.5rem;
+        padding: 1rem;
+        flex-direction: column;
+    }
+    
+    .meta-badge {
+        font-size: 0.8rem;
+        padding: 0.45rem 0.75rem;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .meta-badge svg {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .article-tags-section {
+        padding: 0.9rem;
+        gap: 0.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .tags-label {
+        font-size: 0.85rem;
+        width: 100%;
+    }
+    
+    .tags-label svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .tags-list {
+        width: 100%;
+    }
+    
+    .article-tag-item {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.65rem;
     }
 }
 

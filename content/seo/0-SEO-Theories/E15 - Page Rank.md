@@ -1,19 +1,19 @@
 +++
 title = "Page Rank"
 slug = "page-rank"
-date = "2026-02-09T09:59:19+03:30"
-lastmod = "2026-02-09T09:59:19+03:30"
+date = "2026-02-09T13:50:09+03:30"
+lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
-categories = ["0-SEO-Theories"]
-tags = ["0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
-series = ["0-SEO-Theories"]
+categories = ["seo", "0-SEO-Theories"]
+tags = ["seo", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing"]
+series = ["seo", "0-SEO-Theories"]
 
 description = "> مفهوم Page Rank به محبوبیت هر صفحه از وبسایت(نه کل وبسایت) اشاره میکند که عددی از 1 تا 10 است. - در واقع هر صفحه از وبسایت محبوبیت یا Page Rank خود..."
-keywords = ["Page Rank", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e15-page-rank"]
+keywords = ["Page Rank", "seo", "0-SEO-Theories", "SEO", "Webmaster", "Web_Developing", "e15-page-rank"]
 author = "Davood Yahay"
 robots = "index, follow"
-canonical = "https://davoodya.ir/0-SEO-Theories/page-rank/"
+canonical = "https://davoodya.ir/seo/0-SEO-Theories/page-rank/"
 
 featured_image = "/images/seo/PageRank-1.png"
 images = ["/images/seo/PageRank-1.png"]
@@ -22,7 +22,7 @@ images = ["/images/seo/PageRank-1.png"]
   title = "Page Rank"
   description = "> مفهوم Page Rank به محبوبیت هر صفحه از وبسایت(نه کل وبسایت) اشاره میکند که عددی از 1 تا 10 است. - در واقع هر صفحه از وبسایت محبوبیت یا Page Rank خود..."
   image = "/images/seo/PageRank-1.png"
-  url = "https://davoodya.ir/0-SEO-Theories/page-rank/"
+  url = "https://davoodya.ir/seo/0-SEO-Theories/page-rank/"
   type = "article"
 
 [params.twitter]
@@ -36,6 +36,7 @@ difficulty = "medium"
 toc = true
 math = false
 lab_required = true
+post_type_fa = "مقاله"
 
 # layout = "single"
 type = "posts"
