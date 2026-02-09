@@ -2,113 +2,178 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/cyber-security/cryptography/basic-encryption/</loc>
-    <lastmod>2024-06-20T12:38:14+03:30</lastmod>
+    <loc>http://localhost:1313/categories/0-seo-theories/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cybersecurity/</loc>
-    <lastmod>2024-06-20T12:38:14+03:30</lastmod>
+    <loc>http://localhost:1313/tags/0-seo-theories/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/encryption/</loc>
-    <lastmod>2024-06-20T12:38:14+03:30</lastmod>
+    <loc>http://localhost:1313/tools/burpsuite/1-install-burpsuite/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-security/cryptography/malwares/</loc>
-    <lastmod>2024-06-20T12:38:14+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/pentest/</loc>
-    <lastmod>2024-06-20T12:38:14+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-e0-e1---introduction--prepare-lab/</loc>
-    <lastmod>2024-06-20T12:38:14+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-06-20T12:38:14+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/cyber-security/</loc>
-    <lastmod>2024-06-20T12:38:14+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-06-20T12:38:14+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/-readteam/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tools/burpsuite/installing-burp-suite/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tools/burpsuite/2-change-http-data--bypass-parameters/</loc>
+    <loc>http://localhost:1313/tools/burpsuite/2-change-http-data-bypass-parameters/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/linux/60-commands-hacker-should-know-it/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e17---backlinks/</loc>
+    <loc>http://localhost:1313/seo/0-seo-theories/backlinks/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/bug_bounty/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/burpsuite/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/burpsuite/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/command_line/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e10-e11---content-seo-important-website-pages/</loc>
+    <loc>http://localhost:1313/seo/0-seo-theories/content-seo-important-website-pages/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/cyber-security/</loc>
+    <loc>http://localhost:1313/tags/cybersecurity/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/python/dir-buster-module/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e6-to-e9---find-keywords--website-structure--necessary-html-tags-for-seo/</loc>
+    <loc>http://localhost:1313/seo/0-seo-theories/find-keywords-website-structure-necessary-html-tags-for-seo/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e13---good-contents-for-seo/</loc>
+    <loc>http://localhost:1313/seo/0-seo-theories/good-contents-for-seo/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e14---links-in-seointernal--external/</loc>
+    <loc>http://localhost:1313/seo/0-seo-theories/links-in-seointernal-external/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/linux/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/linux/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/metasploit/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tools/msfconsole-commands/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e16---page-authority--domain-authority/</loc>
+    <loc>http://localhost:1313/seo/0-seo-theories/page-authority-domain-authority/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e15---page-rank/</loc>
+    <loc>http://localhost:1313/seo/0-seo-theories/page-rank/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/pentest/</loc>
+    <loc>http://localhost:1313/tags/pentest/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/pentest_tool/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/pentest_tools/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/python/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/python/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/readteam/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/red_team/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-e7--defense-in-depth-401.2/</loc>
+    <loc>http://localhost:1313/categories/sans-401/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-e3---virtualization--cloud-infrastructure401.1/</loc>
+    <loc>http://localhost:1313/tags/sans-401/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-e2---networking-and-protocols-401.1/</loc>
+    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-defense-in-depth-4012/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-e8-e9---password-cracking/</loc>
+    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-networking-and-protocols-4011/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-e4-e5-e6---wireless-aircrack-ng-wireshark-401.1/</loc>
+    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-password-cracking/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-virtualization-cloud-infrastructure4011/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-wireless-aircrack-ng-wireshark-4011/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/seo/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e1-to-e5---seo-intro-search-engines-keywords/</loc>
+    <loc>http://localhost:1313/seo/0-seo-theories/seo-intro-search-engines-keywords/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/tools/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tools/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/web_developing/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/web_pentest/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/web_pentest/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/webmaster/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/seo/0-seo-theories/e12--woorankcheck-website-seo/</loc>
+    <loc>http://localhost:1313/seo/0-seo-theories/woorankcheck-website-seo/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tools/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/cyber-security/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/python/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/seo/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/linux/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/cyber-security/cryptography/basic-encryption/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/cryptography/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cryptography/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/encryption/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/cyber-security/cryptography/malwares/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/cyber-security/sans-401/sans-401-introduction-prepare-lab/</loc>
+    <lastmod>2026-02-09T09:59:19+03:30</lastmod>
   </url>
 </urlset>

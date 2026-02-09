@@ -105,9 +105,34 @@ body {
     overflow-y: visible;
 }
 
+/* در حالت دسکتاپ: Grid با ترتیب عادی (Sidebar سمت راست، محتوا سمت چپ) */
+@media (min-width: 1025px) {
+    .sidebar {
+        grid-column: 1; /* سمت راست */
+    }
+    
+    .article-wrapper,
+    .main-content {
+        grid-column: 2; /* سمت چپ */
+    }
+}
+
+/* در حالت تبلت و موبایل: Flex با Order برای تغییر ترتیب */
 @media (max-width: 1024px) {
     .main-content-wrapper {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: unset;
+    }
+    
+    /* در موبایل: محتوا اول، sidebar بعد */
+    .article-wrapper,
+    .main-content {
+        order: 1; /* محتوا ابتدا */
+    }
+    
+    .sidebar {
+        order: 2; /* sidebar بعد از محتوا */
     }
 }
 
@@ -942,7 +967,8 @@ body {
     .sidebar {
         position: static;
         max-height: none;
-        margin-top: 3rem;
+        margin-top: 3rem; /* فاصله بالایی برای جدا کردن از محتوا */
+        order: 2; /* sidebar بعد از محتوا */
     }
     
     .sidebar-widget {
@@ -1472,6 +1498,25 @@ body {
         margin-top: 0.5rem;
     }
     
+    /* اطمینان از Flex برای موبایل */
+    .main-content-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* محتوا اصلی ابتدا */
+    .article-wrapper,
+    .main-content {
+        order: 1;
+    }
+    
+    /* Sidebar در آخر قبل از Footer */
+    .sidebar {
+        order: 2;
+        margin-top: 3rem;
+        margin-bottom: 0;
+    }
+    
     .home-grid,
     .articles-grid {
         grid-template-columns: 1fr;
@@ -1487,6 +1532,7 @@ body {
     .article-wrapper {
         border-radius: 12px;
         padding: 2rem 1.2rem;
+        margin-bottom: 0;
     }
     
     .article-content h1 {
@@ -1530,6 +1576,24 @@ body {
         padding: 1rem 0.5rem;
     }
     
+    /* اطمینان از Flex برای موبایل کوچک */
+    .main-content-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* محتوا اصلی ابتدا */
+    .article-wrapper,
+    .main-content {
+        order: 1;
+    }
+    
+    /* Sidebar در آخر */
+    .sidebar {
+        order: 2;
+        margin-top: 2.5rem;
+    }
+    
     .page-title,
     .category-title {
         font-size: 1.3rem;
@@ -1543,6 +1607,7 @@ body {
     
     .article-wrapper {
         padding: 1.5rem 1rem;
+        margin-bottom: 0;
     }
     
     .read-more-btn {

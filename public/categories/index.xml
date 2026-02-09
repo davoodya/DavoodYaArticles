@@ -6,26 +6,55 @@
     <description>Recent content in Categories on مقالات داوود یاحی – Davood Yahay Articles</description>
     <generator>Hugo</generator>
     <language>fa</language>
+    <lastBuildDate>Mon, 09 Feb 2026 09:59:19 +0330</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Cyber-Security</title>
-      <link>http://localhost:1313/categories/cyber-security/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/cyber-security/</guid>
+      <title>0-SEO-Theories</title>
+      <link>http://localhost:1313/categories/0-seo-theories/</link>
+      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <guid>http://localhost:1313/categories/0-seo-theories/</guid>
       <description></description>
     </item>
     <item>
-      <title>Pentest</title>
-      <link>http://localhost:1313/categories/pentest/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/pentest/</guid>
+      <title>Burpsuite</title>
+      <link>http://localhost:1313/categories/burpsuite/</link>
+      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <guid>http://localhost:1313/categories/burpsuite/</guid>
       <description></description>
     </item>
     <item>
-      <title>Web_pentest</title>
-      <link>http://localhost:1313/categories/web_pentest/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/web_pentest/</guid>
+      <title>Linux</title>
+      <link>http://localhost:1313/categories/linux/</link>
+      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <guid>http://localhost:1313/categories/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/categories/python/</link>
+      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <guid>http://localhost:1313/categories/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SANS-401</title>
+      <link>http://localhost:1313/categories/sans-401/</link>
+      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <guid>http://localhost:1313/categories/sans-401/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>http://localhost:1313/categories/tools/</link>
+      <pubDate>Mon, 09 Feb 2026 09:59:19 +0330</pubDate>
+      <guid>http://localhost:1313/categories/tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cryptography</title>
+      <link>http://localhost:1313/categories/cryptography/</link>
+      <pubDate>Thu, 20 Jun 2024 09:59:19 +0330</pubDate>
+      <guid>http://localhost:1313/categories/cryptography/</guid>
       <description></description>
     </item>
   </channel>
