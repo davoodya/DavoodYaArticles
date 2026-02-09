@@ -1,0 +1,193 @@
+{{ define "main" }}
+
+<div class="container">
+    <div class="main-content-wrapper">
+        {{ partial "sidebar.html" . }}
+        
+        <div class="main-content">
+            <div class="all-articles-header">
+                <h1 class="category-title">{{ .Title }}</h1>
+                
+                {{ with .Params.description }}
+                    <p class="category-description">{{ . }}</p>
+                {{ end }}
+
+                {{/* محاسبه تعداد واقعی مقالات (بدون صفحات section) */}}
+                {{ $realArticles := where site.RegularPages "Section" "!=" "all-articles" }}
+                {{ $realArticles = where $realArticles "Draft" false }}
+                
+                {{/* محاسبه تعداد واقعی section ها (بدون all-articles) */}}
+                {{ $realSections := slice }}
+                {{ range site.Sections }}
+                    {{ if ne .Section "all-articles" }}
+                        {{ $realSections = $realSections | append . }}
+                    {{ end }}
+                {{ end }}
+
+                <div class="all-articles-stats">
+                    <div class="stat-item">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                        </svg>
+                        <span>تعداد کل مقالات: <strong>{{ len $realArticles }}</strong></span>
+                    </div>
+                    <div class="stat-item">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
+                        </svg>
+                        <span>تعداد دسته‌بندی‌ها: <strong>{{ len $realSections }}</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="articles-grid">
+                {{/* دریافت تمام صفحات عادی و فیلتر کردن */}}
+                {{ $allPages := where site.RegularPages "Section" "!=" "all-articles" }}
+                {{ $allPages = where $allPages "Draft" false }}
+                
+                {{/* مرتب‌سازی بر اساس تاریخ (جدیدترین اول) */}}
+                {{ $allPages = $allPages.ByDate.Reverse }}
+                
+                {{/* Pagination */}}
+                {{ $paginator := .Paginate $allPages }}
+                
+                {{ range $paginator.Pages }}
+                    <article class="article-card">
+                        <h2 class="article-card-title">
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        </h2>
+
+                        {{/* تصویر شاخص مقاله */}}
+                        {{ $featuredImage := "" }}
+                        {{ if .Params.featured_image }}
+                            {{ $featuredImage = .Params.featured_image }}
+                        {{ else if .Params.images }}
+                            {{ if reflect.IsSlice .Params.images }}
+                                {{ $featuredImage = index .Params.images 0 }}
+                            {{ else }}
+                                {{ $featuredImage = .Params.images }}
+                            {{ end }}
+                        {{ end }}
+                        
+                        {{ if $featuredImage }}
+                            <div class="article-card-image">
+                                <a href="{{ .RelPermalink }}">
+                                    <img src="{{ $featuredImage | relURL }}" 
+                                         alt="{{ .Title }}" 
+                                         loading="lazy">
+                                </a>
+                            </div>
+                        {{ end }}
+                        
+                        {{/* دسته‌بندی مقاله */}}
+                        {{ if .CurrentSection }}
+                            <div class="article-card-category">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
+                                </svg>
+                                <a href="{{ .CurrentSection.RelPermalink }}" class="category-link">
+                                    {{ .CurrentSection.Title }}
+                                </a>
+                            </div>
+                        {{ end }}
+                        
+                        <div class="article-card-summary">
+                            {{ if .Params.description }}
+                                {{ .Params.description | truncate 600 }}
+                            {{ else if .Summary }}
+                                {{ .Summary | truncate 600 }}
+                            {{ else }}
+                                {{ .Content | truncate 600 }}
+                            {{ end }}
+                        </div>
+                        
+                        {{/* تگ‌ها - بالای دکمه ادامه مطلب */}}
+                        {{ if .Params.tags }}
+                            <div class="article-card-tags">
+                                <div class="tags-label">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
+                                    </svg>
+                                    <span>تگ‌ها:</span>
+                                </div>
+                                {{ range first 4 .Params.tags }}
+                                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="article-tag" title="مشاهده همه مقالات با تگ {{ . }}">{{ . }}</a>
+                                {{ end }}
+                            </div>
+                        {{ end }}
+                        
+                        <div class="article-card-footer">
+                            <a href="{{ .RelPermalink }}" class="read-more-btn">
+                                ادامه مطلب ←
+                            </a>
+                            {{/* Badge ها - سمت چپ دکمه */}}
+                            {{ if or .Params.readingTime .Params.difficulty .Params.lab_required .Params.post_type_fa }}
+                                <div class="article-card-badges">
+                                    {{/* مدت زمان */}}
+                                    {{ if .Params.readingTime }}
+                                        <span class="article-badge badge-time" title="مدت زمان مطالعه: {{ .Params.readingTime }} دقیقه">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                                            </svg>
+                                            <span class="badge-text">{{ .Params.readingTime }} دقیقه</span>
+                                        </span>
+                                    {{ end }}
+                                    
+                                    {{/* سطح سختی */}}
+                                    {{ if .Params.difficulty }}
+                                        {{ $difficultyText := "" }}
+                                        {{ $difficultyClass := "" }}
+                                        {{ if eq .Params.difficulty "beginner" }}
+                                            {{ $difficultyText = "مبتدی" }}
+                                            {{ $difficultyClass = "badge-beginner" }}
+                                        {{ else if eq .Params.difficulty "medium" }}
+                                            {{ $difficultyText = "متوسط" }}
+                                            {{ $difficultyClass = "badge-medium" }}
+                                        {{ else if eq .Params.difficulty "intermediate" }}
+                                            {{ $difficultyText = "حرفه‌ای" }}
+                                            {{ $difficultyClass = "badge-intermediate" }}
+                                        {{ else if eq .Params.difficulty "advanced" }}
+                                            {{ $difficultyText = "تخصصی" }}
+                                            {{ $difficultyClass = "badge-advanced" }}
+                                        {{ end }}
+                                        <span class="article-badge badge-difficulty {{ $difficultyClass }}" title="سطح دشواری: {{ $difficultyText }}">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                            </svg>
+                                            <span class="badge-text">{{ $difficultyText }}</span>
+                                        </span>
+                                    {{ end }}
+                                    
+                                    {{/* نیاز به تمرین عملی */}}
+                                    {{ if .Params.lab_required }}
+                                        <span class="article-badge badge-lab" title="نیاز به تمرین عملی">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                                            </svg>
+                                            <span class="badge-text">تمرین عملی</span>
+                                        </span>
+                                    {{ end }}
+                                    
+                                    {{/* نوع پست */}}
+                                    {{ if .Params.post_type_fa }}
+                                        <span class="article-badge badge-type" title="نوع پست: {{ .Params.post_type_fa }}">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                                            </svg>
+                                            <span class="badge-text">{{ .Params.post_type_fa }}</span>
+                                        </span>
+                                    {{ end }}
+                                </div>
+                            {{ end }}
+                        </div>
+                    </article>
+                {{ end }}
+            </div>
+
+            {{/* Pagination */}}
+            {{ template "_internal/pagination.html" . }}
+        </div>
+    </div>
+</div>
+
+{{ end }}
