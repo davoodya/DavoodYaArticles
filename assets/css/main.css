@@ -445,6 +445,7 @@ body {
     margin-bottom: 3rem;
 }
 
+
 @media (max-width: 1200px) {
     .articles-grid {
         grid-template-columns: repeat(2, 1fr);
