@@ -221,3 +221,324 @@
 2026-02-09 08:52:02,901 - INFO - SCRIPT EXECUTION COMPLETED
 2026-02-09 08:52:02,901 - INFO - ======================================================================
 
+2026-02-09 09:43:35,020 - INFO - 
+======================================================================
+2026-02-09 09:43:35,020 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO ENHANCED FRONTMATTER ADDER
+2026-02-09 09:43:35,020 - INFO - SCRIPT STARTED
+2026-02-09 09:43:35,020 - INFO - ======================================================================
+
+2026-02-09 09:43:35,020 - INFO - No tracking file found, creating new one
+2026-02-09 09:43:35,021 - INFO - Found 7 markdown files to check
+2026-02-09 09:43:35,021 - INFO - Already processed: 0 files
+2026-02-09 09:43:35,021 - INFO - 
+============================================================
+2026-02-09 09:43:35,021 - INFO - Processing: E1 to E4 - (DevOps Basics & Concepts).md
+2026-02-09 09:43:35,021 - INFO - ============================================================
+2026-02-09 09:43:35,110 - INFO - ✓ Added Enhanced Hugo frontmatter to: E1 to E4 - (DevOps Basics & Concepts).md
+2026-02-09 09:43:35,111 - INFO - 
+============================================================
+2026-02-09 09:43:35,111 - INFO - Processing: E15 to E - (AWS Setup and Start Virtualization).md
+2026-02-09 09:43:35,111 - INFO - ============================================================
+2026-02-09 09:43:35,111 - INFO - ✓ Added Enhanced Hugo frontmatter to: E15 to E - (AWS Setup and Start Virtualization).md
+2026-02-09 09:43:35,112 - INFO - 
+============================================================
+2026-02-09 09:43:35,112 - INFO - Processing: E20 to E- (DevOps) 1 1 1 1.md
+2026-02-09 09:43:35,112 - INFO - ============================================================
+2026-02-09 09:43:35,113 - INFO - ✓ Added Enhanced Hugo frontmatter to: E20 to E- (DevOps) 1 1 1 1.md
+2026-02-09 09:43:35,113 - INFO - 
+============================================================
+2026-02-09 09:43:35,113 - INFO - Processing: E30 to E- (DevOps) 1 1 1 1 1.md
+2026-02-09 09:43:35,113 - INFO - ============================================================
+2026-02-09 09:43:35,114 - INFO - ✓ Added Enhanced Hugo frontmatter to: E30 to E- (DevOps) 1 1 1 1 1.md
+2026-02-09 09:43:35,114 - INFO - 
+============================================================
+2026-02-09 09:43:35,114 - INFO - Processing: E5 to E6 - (CI-Continuous Integration & CD-Continuous Delivery).md
+2026-02-09 09:43:35,114 - INFO - ============================================================
+2026-02-09 09:43:35,115 - INFO - ✓ Added Enhanced Hugo frontmatter to: E5 to E6 - (CI-Continuous Integration & CD-Continuous Delivery).md
+2026-02-09 09:43:35,116 - INFO - 
+============================================================
+2026-02-09 09:43:35,116 - INFO - Processing: E9 to E14 - (Pre-Requires Tools & Accounts for DevOps Course).md
+2026-02-09 09:43:35,116 - INFO - ============================================================
+2026-02-09 09:43:35,117 - INFO - ✓ Added Enhanced Hugo frontmatter to: E9 to E14 - (Pre-Requires Tools & Accounts for DevOps Course).md
+2026-02-09 09:43:35,117 - INFO - 
+============================================================
+2026-02-09 09:43:35,117 - INFO - Processing: Test-With-Obsidian-Properties.md
+2026-02-09 09:43:35,117 - INFO - ============================================================
+2026-02-09 09:43:35,118 - INFO - Found Obsidian properties in Test-With-Obsidian-Properties.md from line 0 to line 9
+2026-02-09 09:43:35,118 - INFO -   Extracted properties: date=2024-11-20, tags=['CyberSecurity', 'hacking'], categories=['Cyber Security', 'Programming', 'Network']
+2026-02-09 09:43:35,118 - INFO - ✓ Removed Obsidian properties from: Test-With-Obsidian-Properties.md
+2026-02-09 09:43:35,118 - INFO - ✓ Added Enhanced Hugo frontmatter to: Test-With-Obsidian-Properties.md
+2026-02-09 09:43:35,119 - INFO - Tracking file saved with 7 processed files
+2026-02-09 09:43:35,119 - INFO - 
+============================================================
+2026-02-09 09:43:35,119 - INFO - SUMMARY
+2026-02-09 09:43:35,119 - INFO - ============================================================
+2026-02-09 09:43:35,119 - INFO - Total files found: 7
+2026-02-09 09:43:35,119 - INFO - Already processed (skipped): 0
+2026-02-09 09:43:35,120 - INFO - Newly processed (modified): 7
+2026-02-09 09:43:35,120 - INFO - No changes needed: 0
+2026-02-09 09:43:35,120 - INFO - Errors: 0
+2026-02-09 09:43:35,120 - INFO - ============================================================
+2026-02-09 09:43:35,120 - INFO - 
+✓ Report saved to: obsidian_property_remover_enhanced_report.txt
+2026-02-09 09:43:35,120 - INFO - 
+======================================================================
+2026-02-09 09:43:35,120 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-09 09:43:35,120 - INFO - ======================================================================
+
+2026-02-09 09:51:33,706 - INFO - 
+======================================================================
+2026-02-09 09:51:33,706 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO ENHANCED FRONTMATTER ADDER
+2026-02-09 09:51:33,707 - INFO - SCRIPT STARTED
+2026-02-09 09:51:33,707 - INFO - ======================================================================
+
+2026-02-09 09:51:33,707 - INFO - Loaded tracking file with 7 processed files
+2026-02-09 09:51:33,707 - INFO - Found 1 markdown files to check
+2026-02-09 09:51:33,708 - INFO - Already processed: 7 files
+2026-02-09 09:51:33,708 - INFO - 
+============================================================
+2026-02-09 09:51:33,708 - INFO - Processing: E1 - Dockerfile Basic & Syntax.md
+2026-02-09 09:51:33,708 - INFO - ============================================================
+2026-02-09 09:51:33,708 - INFO - Found Obsidian properties in E1 - Dockerfile Basic & Syntax.md from line 0 to line 17
+2026-02-09 09:51:33,708 - INFO -   Extracted properties: date=2025-07-03T00:00:00, tags=['CyberSecurity', 'hacking'], categories=['Cyber Security', 'Programming']
+2026-02-09 09:51:33,708 - INFO - ✓ Removed Obsidian properties from: E1 - Dockerfile Basic & Syntax.md
+2026-02-09 09:51:33,775 - INFO - ✓ Added Enhanced Hugo frontmatter to: E1 - Dockerfile Basic & Syntax.md
+2026-02-09 09:51:33,776 - INFO - Tracking file saved with 8 processed files
+2026-02-09 09:51:33,776 - INFO - 
+============================================================
+2026-02-09 09:51:33,776 - INFO - SUMMARY
+2026-02-09 09:51:33,776 - INFO - ============================================================
+2026-02-09 09:51:33,776 - INFO - Total files found: 1
+2026-02-09 09:51:33,777 - INFO - Already processed (skipped): 0
+2026-02-09 09:51:33,777 - INFO - Newly processed (modified): 1
+2026-02-09 09:51:33,777 - INFO - No changes needed: 0
+2026-02-09 09:51:33,777 - INFO - Errors: 0
+2026-02-09 09:51:33,777 - INFO - ============================================================
+2026-02-09 09:51:33,777 - INFO - 
+✓ Report saved to: obsidian_property_remover_enhanced_report.txt
+2026-02-09 09:51:33,777 - INFO - 
+======================================================================
+2026-02-09 09:51:33,777 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-09 09:51:33,778 - INFO - ======================================================================
+
+2026-02-09 09:59:19,359 - INFO - 
+======================================================================
+2026-02-09 09:59:19,359 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO ENHANCED FRONTMATTER ADDER
+2026-02-09 09:59:19,359 - INFO - SCRIPT STARTED
+2026-02-09 09:59:19,359 - INFO - ======================================================================
+
+2026-02-09 09:59:19,360 - INFO - No tracking file found, creating new one
+2026-02-09 09:59:19,361 - INFO - Found 27 markdown files to check (including subdirectories)
+2026-02-09 09:59:19,361 - INFO - Already processed: 0 files
+2026-02-09 09:59:19,362 - INFO - 
+============================================================
+2026-02-09 09:59:19,362 - INFO - Processing: cyber-security\_index.md
+2026-02-09 09:59:19,362 - INFO - ============================================================
+2026-02-09 09:59:19,362 - INFO - Found Obsidian properties in _index.md from line 0 to line 3
+2026-02-09 09:59:19,362 - INFO -   Extracted properties: date=None, tags=[], categories=[]
+2026-02-09 09:59:19,362 - INFO - ✓ Removed Obsidian properties from: _index.md
+2026-02-09 09:59:19,444 - INFO - ✓ Added Enhanced Hugo frontmatter to: _index.md
+2026-02-09 09:59:19,445 - INFO - 
+============================================================
+2026-02-09 09:59:19,445 - INFO - Processing: linux\60 Commands Hacker Should Know it.md
+2026-02-09 09:59:19,445 - INFO - ============================================================
+2026-02-09 09:59:19,445 - INFO - Found old Hugo frontmatter in 60 Commands Hacker Should Know it.md from line 0 to line 5
+2026-02-09 09:59:19,446 - INFO - ✓ Removed old Hugo frontmatter from: 60 Commands Hacker Should Know it.md
+2026-02-09 09:59:19,446 - INFO - ✓ Added Enhanced Hugo frontmatter to: 60 Commands Hacker Should Know it.md
+2026-02-09 09:59:19,447 - INFO - 
+============================================================
+2026-02-09 09:59:19,448 - INFO - Processing: linux\_index.md
+2026-02-09 09:59:19,448 - INFO - ============================================================
+2026-02-09 09:59:19,448 - INFO - Found Obsidian properties in _index.md from line 0 to line 3
+2026-02-09 09:59:19,448 - INFO -   Extracted properties: date=None, tags=[], categories=[]
+2026-02-09 09:59:19,448 - INFO - ✓ Removed Obsidian properties from: _index.md
+2026-02-09 09:59:19,448 - INFO - ✓ Added Enhanced Hugo frontmatter to: _index.md
+2026-02-09 09:59:19,449 - INFO - 
+============================================================
+2026-02-09 09:59:19,449 - INFO - Processing: python\Dir-Buster-Module.md
+2026-02-09 09:59:19,449 - INFO - ============================================================
+2026-02-09 09:59:19,449 - INFO - Found old Hugo frontmatter in Dir-Buster-Module.md from line 0 to line 5
+2026-02-09 09:59:19,450 - INFO - ✓ Removed old Hugo frontmatter from: Dir-Buster-Module.md
+2026-02-09 09:59:19,450 - INFO - ✓ Added Enhanced Hugo frontmatter to: Dir-Buster-Module.md
+2026-02-09 09:59:19,450 - INFO - 
+============================================================
+2026-02-09 09:59:19,450 - INFO - Processing: python\_index.md
+2026-02-09 09:59:19,450 - INFO - ============================================================
+2026-02-09 09:59:19,451 - INFO - Found Obsidian properties in _index.md from line 0 to line 3
+2026-02-09 09:59:19,451 - INFO -   Extracted properties: date=None, tags=[], categories=[]
+2026-02-09 09:59:19,451 - INFO - ✓ Removed Obsidian properties from: _index.md
+2026-02-09 09:59:19,451 - INFO - ✓ Added Enhanced Hugo frontmatter to: _index.md
+2026-02-09 09:59:19,452 - INFO - 
+============================================================
+2026-02-09 09:59:19,452 - INFO - Processing: seo\_index.md
+2026-02-09 09:59:19,452 - INFO - ============================================================
+2026-02-09 09:59:19,452 - INFO - Found Obsidian properties in _index.md from line 0 to line 3
+2026-02-09 09:59:19,452 - INFO -   Extracted properties: date=None, tags=[], categories=[]
+2026-02-09 09:59:19,452 - INFO - ✓ Removed Obsidian properties from: _index.md
+2026-02-09 09:59:19,452 - INFO - ✓ Added Enhanced Hugo frontmatter to: _index.md
+2026-02-09 09:59:19,453 - INFO - 
+============================================================
+2026-02-09 09:59:19,453 - INFO - Processing: tools\MSFConsole Commands.md
+2026-02-09 09:59:19,453 - INFO - ============================================================
+2026-02-09 09:59:19,454 - INFO - Found old Hugo frontmatter in MSFConsole Commands.md from line 0 to line 5
+2026-02-09 09:59:19,454 - INFO - ✓ Removed old Hugo frontmatter from: MSFConsole Commands.md
+2026-02-09 09:59:19,454 - INFO - ✓ Added Enhanced Hugo frontmatter to: MSFConsole Commands.md
+2026-02-09 09:59:19,455 - INFO - 
+============================================================
+2026-02-09 09:59:19,455 - INFO - Processing: tools\_index.md
+2026-02-09 09:59:19,455 - INFO - ============================================================
+2026-02-09 09:59:19,455 - INFO - Found Obsidian properties in _index.md from line 0 to line 3
+2026-02-09 09:59:19,455 - INFO -   Extracted properties: date=None, tags=[], categories=[]
+2026-02-09 09:59:19,455 - INFO - ✓ Removed Obsidian properties from: _index.md
+2026-02-09 09:59:19,456 - INFO - ✓ Added Enhanced Hugo frontmatter to: _index.md
+2026-02-09 09:59:19,456 - INFO - 
+============================================================
+2026-02-09 09:59:19,457 - INFO - Processing: tools\Burpsuite\1-Install Burpsuite.md
+2026-02-09 09:59:19,457 - INFO - ============================================================
+2026-02-09 09:59:19,457 - INFO - Found old Hugo frontmatter in 1-Install Burpsuite.md from line 0 to line 18
+2026-02-09 09:59:19,457 - INFO - ✓ Removed old Hugo frontmatter from: 1-Install Burpsuite.md
+2026-02-09 09:59:19,457 - INFO - ✓ Added Enhanced Hugo frontmatter to: 1-Install Burpsuite.md
+2026-02-09 09:59:19,458 - INFO - 
+============================================================
+2026-02-09 09:59:19,458 - INFO - Processing: tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+2026-02-09 09:59:19,459 - INFO - ============================================================
+2026-02-09 09:59:19,459 - INFO - Found old Hugo frontmatter in 2-Change HTTP Data & Bypass Parameters.md from line 0 to line 5
+2026-02-09 09:59:19,459 - INFO - ✓ Removed old Hugo frontmatter from: 2-Change HTTP Data & Bypass Parameters.md
+2026-02-09 09:59:19,460 - INFO - ✓ Added Enhanced Hugo frontmatter to: 2-Change HTTP Data & Bypass Parameters.md
+2026-02-09 09:59:19,461 - INFO - 
+============================================================
+2026-02-09 09:59:19,461 - INFO - Processing: seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+2026-02-09 09:59:19,461 - INFO - ============================================================
+2026-02-09 09:59:19,462 - INFO - Found old Hugo frontmatter in E1 to E5 - SEO Intro, Search Engines, Keywords.md from line 0 to line 5
+2026-02-09 09:59:19,462 - INFO - ✓ Removed old Hugo frontmatter from: E1 to E5 - SEO Intro, Search Engines, Keywords.md
+2026-02-09 09:59:19,462 - INFO - ✓ Added Enhanced Hugo frontmatter to: E1 to E5 - SEO Intro, Search Engines, Keywords.md
+2026-02-09 09:59:19,463 - INFO - 
+============================================================
+2026-02-09 09:59:19,463 - INFO - Processing: seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+2026-02-09 09:59:19,463 - INFO - ============================================================
+2026-02-09 09:59:19,464 - INFO - Found old Hugo frontmatter in E10, E11, - Content SEO, Important Website Pages.md from line 0 to line 6
+2026-02-09 09:59:19,464 - INFO - ✓ Removed old Hugo frontmatter from: E10, E11, - Content SEO, Important Website Pages.md
+2026-02-09 09:59:19,465 - INFO - ✓ Added Enhanced Hugo frontmatter to: E10, E11, - Content SEO, Important Website Pages.md
+2026-02-09 09:59:19,466 - INFO - 
+============================================================
+2026-02-09 09:59:19,466 - INFO - Processing: seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+2026-02-09 09:59:19,466 - INFO - ============================================================
+2026-02-09 09:59:19,467 - INFO - Found old Hugo frontmatter in E12- Woorank(Check Website SEO).md from line 0 to line 5
+2026-02-09 09:59:19,467 - INFO - ✓ Removed old Hugo frontmatter from: E12- Woorank(Check Website SEO).md
+2026-02-09 09:59:19,467 - INFO - ✓ Added Enhanced Hugo frontmatter to: E12- Woorank(Check Website SEO).md
+2026-02-09 09:59:19,468 - INFO - 
+============================================================
+2026-02-09 09:59:19,468 - INFO - Processing: seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+2026-02-09 09:59:19,468 - INFO - ============================================================
+2026-02-09 09:59:19,469 - INFO - Found old Hugo frontmatter in E13 - Good Contents for SEO.md from line 0 to line 5
+2026-02-09 09:59:19,469 - INFO - ✓ Removed old Hugo frontmatter from: E13 - Good Contents for SEO.md
+2026-02-09 09:59:19,469 - INFO - ✓ Added Enhanced Hugo frontmatter to: E13 - Good Contents for SEO.md
+2026-02-09 09:59:19,470 - INFO - 
+============================================================
+2026-02-09 09:59:19,470 - INFO - Processing: seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+2026-02-09 09:59:19,470 - INFO - ============================================================
+2026-02-09 09:59:19,471 - INFO - Found old Hugo frontmatter in E14 - Links in SEO(Internal & External).md from line 0 to line 5
+2026-02-09 09:59:19,471 - INFO - ✓ Removed old Hugo frontmatter from: E14 - Links in SEO(Internal & External).md
+2026-02-09 09:59:19,471 - INFO - ✓ Added Enhanced Hugo frontmatter to: E14 - Links in SEO(Internal & External).md
+2026-02-09 09:59:19,472 - INFO - 
+============================================================
+2026-02-09 09:59:19,472 - INFO - Processing: seo\0-SEO-Theories\E15 - Page Rank.md
+2026-02-09 09:59:19,472 - INFO - ============================================================
+2026-02-09 09:59:19,473 - INFO - Found old Hugo frontmatter in E15 - Page Rank.md from line 0 to line 5
+2026-02-09 09:59:19,473 - INFO - ✓ Removed old Hugo frontmatter from: E15 - Page Rank.md
+2026-02-09 09:59:19,473 - INFO - ✓ Added Enhanced Hugo frontmatter to: E15 - Page Rank.md
+2026-02-09 09:59:19,474 - INFO - 
+============================================================
+2026-02-09 09:59:19,474 - INFO - Processing: seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+2026-02-09 09:59:19,474 - INFO - ============================================================
+2026-02-09 09:59:19,474 - INFO - Found old Hugo frontmatter in E16 - Page Authority & Domain Authority.md from line 0 to line 5
+2026-02-09 09:59:19,474 - INFO - ✓ Removed old Hugo frontmatter from: E16 - Page Authority & Domain Authority.md
+2026-02-09 09:59:19,475 - INFO - ✓ Added Enhanced Hugo frontmatter to: E16 - Page Authority & Domain Authority.md
+2026-02-09 09:59:19,475 - INFO - 
+============================================================
+2026-02-09 09:59:19,475 - INFO - Processing: seo\0-SEO-Theories\E17 - Backlinks.md
+2026-02-09 09:59:19,475 - INFO - ============================================================
+2026-02-09 09:59:19,476 - INFO - Found old Hugo frontmatter in E17 - Backlinks.md from line 0 to line 5
+2026-02-09 09:59:19,476 - INFO - ✓ Removed old Hugo frontmatter from: E17 - Backlinks.md
+2026-02-09 09:59:19,476 - INFO - ✓ Added Enhanced Hugo frontmatter to: E17 - Backlinks.md
+2026-02-09 09:59:19,477 - INFO - 
+============================================================
+2026-02-09 09:59:19,477 - INFO - Processing: seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+2026-02-09 09:59:19,477 - INFO - ============================================================
+2026-02-09 09:59:19,477 - INFO - Found old Hugo frontmatter in E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md from line 0 to line 6
+2026-02-09 09:59:19,477 - INFO - ✓ Removed old Hugo frontmatter from: E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+2026-02-09 09:59:19,478 - INFO - ✓ Added Enhanced Hugo frontmatter to: E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+2026-02-09 09:59:19,478 - INFO - 
+============================================================
+2026-02-09 09:59:19,478 - INFO - Processing: cyber-security\Cryptography\Basic-Encryption.md
+2026-02-09 09:59:19,479 - INFO - ============================================================
+2026-02-09 09:59:19,479 - INFO - Found old Hugo frontmatter in Basic-Encryption.md from line 0 to line 6
+2026-02-09 09:59:19,479 - INFO - ✓ Removed old Hugo frontmatter from: Basic-Encryption.md
+2026-02-09 09:59:19,479 - INFO - ✓ Added Enhanced Hugo frontmatter to: Basic-Encryption.md
+2026-02-09 09:59:19,480 - INFO - 
+============================================================
+2026-02-09 09:59:19,480 - INFO - Processing: cyber-security\Cryptography\Malwares.md
+2026-02-09 09:59:19,481 - INFO - ============================================================
+2026-02-09 09:59:19,481 - INFO - Found old Hugo frontmatter in Malwares.md from line 0 to line 6
+2026-02-09 09:59:19,481 - INFO - ✓ Removed old Hugo frontmatter from: Malwares.md
+2026-02-09 09:59:19,481 - INFO - ✓ Added Enhanced Hugo frontmatter to: Malwares.md
+2026-02-09 09:59:19,482 - INFO - 
+============================================================
+2026-02-09 09:59:19,482 - INFO - Processing: cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+2026-02-09 09:59:19,482 - INFO - ============================================================
+2026-02-09 09:59:19,482 - INFO - Found old Hugo frontmatter in SANS-401-E0, E1 - (Introduction & Prepare Lab).md from line 0 to line 7
+2026-02-09 09:59:19,483 - INFO - ✓ Removed old Hugo frontmatter from: SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+2026-02-09 09:59:19,483 - INFO - ✓ Added Enhanced Hugo frontmatter to: SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+2026-02-09 09:59:19,483 - INFO - 
+============================================================
+2026-02-09 09:59:19,483 - INFO - Processing: cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+2026-02-09 09:59:19,483 - INFO - ============================================================
+2026-02-09 09:59:19,484 - INFO - Found old Hugo frontmatter in SANS-401-E2 - Networking and Protocols (401.1).md from line 0 to line 5
+2026-02-09 09:59:19,484 - INFO - ✓ Removed old Hugo frontmatter from: SANS-401-E2 - Networking and Protocols (401.1).md
+2026-02-09 09:59:19,484 - INFO - ✓ Added Enhanced Hugo frontmatter to: SANS-401-E2 - Networking and Protocols (401.1).md
+2026-02-09 09:59:19,485 - INFO - 
+============================================================
+2026-02-09 09:59:19,485 - INFO - Processing: cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+2026-02-09 09:59:19,485 - INFO - ============================================================
+2026-02-09 09:59:19,485 - INFO - Found old Hugo frontmatter in SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md from line 0 to line 5
+2026-02-09 09:59:19,485 - INFO - ✓ Removed old Hugo frontmatter from: SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+2026-02-09 09:59:19,485 - INFO - ✓ Added Enhanced Hugo frontmatter to: SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+2026-02-09 09:59:19,486 - INFO - 
+============================================================
+2026-02-09 09:59:19,486 - INFO - Processing: cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+2026-02-09 09:59:19,486 - INFO - ============================================================
+2026-02-09 09:59:19,487 - INFO - Found old Hugo frontmatter in SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md from line 0 to line 5
+2026-02-09 09:59:19,487 - INFO - ✓ Removed old Hugo frontmatter from: SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+2026-02-09 09:59:19,487 - INFO - ✓ Added Enhanced Hugo frontmatter to: SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+2026-02-09 09:59:19,487 - INFO - 
+============================================================
+2026-02-09 09:59:19,487 - INFO - Processing: cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+2026-02-09 09:59:19,488 - INFO - ============================================================
+2026-02-09 09:59:19,488 - INFO - Found old Hugo frontmatter in SANS-401-E7- Defense-in-Depth (401.2).md from line 0 to line 5
+2026-02-09 09:59:19,488 - INFO - ✓ Removed old Hugo frontmatter from: SANS-401-E7- Defense-in-Depth (401.2).md
+2026-02-09 09:59:19,488 - INFO - ✓ Added Enhanced Hugo frontmatter to: SANS-401-E7- Defense-in-Depth (401.2).md
+2026-02-09 09:59:19,489 - INFO - 
+============================================================
+2026-02-09 09:59:19,489 - INFO - Processing: cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+2026-02-09 09:59:19,489 - INFO - ============================================================
+2026-02-09 09:59:19,489 - INFO - Found old Hugo frontmatter in SANS-401-E8, E9 - Password Cracking.md from line 0 to line 5
+2026-02-09 09:59:19,489 - INFO - ✓ Removed old Hugo frontmatter from: SANS-401-E8, E9 - Password Cracking.md
+2026-02-09 09:59:19,489 - INFO - ✓ Added Enhanced Hugo frontmatter to: SANS-401-E8, E9 - Password Cracking.md
+2026-02-09 09:59:19,490 - INFO - Tracking file saved with 27 processed files
+2026-02-09 09:59:19,490 - INFO - 
+============================================================
+2026-02-09 09:59:19,490 - INFO - SUMMARY
+2026-02-09 09:59:19,491 - INFO - ============================================================
+2026-02-09 09:59:19,491 - INFO - Total files found: 27
+2026-02-09 09:59:19,491 - INFO - Already processed (skipped): 0
+2026-02-09 09:59:19,491 - INFO - Newly processed (modified): 27
+2026-02-09 09:59:19,491 - INFO - No changes needed: 0
+2026-02-09 09:59:19,491 - INFO - Errors: 0
+2026-02-09 09:59:19,491 - INFO - ============================================================
+2026-02-09 09:59:19,492 - INFO - 
+✓ Report saved to: obsidian_property_remover_enhanced_report.txt
+2026-02-09 09:59:19,492 - INFO - 
+======================================================================
+2026-02-09 09:59:19,492 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-09 09:59:19,492 - INFO - ======================================================================
+

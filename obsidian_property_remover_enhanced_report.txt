@@ -3,30 +3,48 @@ OBSIDIAN PROPERTY REMOVER & HUGO ENHANCED FRONTMATTER ADDER
 EXECUTION REPORT
 ======================================================================
 
-Execution Date: 2026-02-09 08:52:02
-Target Directory: test\test-articles
+Execution Date: 2026-02-09 09:59:19
+Target Directory: content (recursive)
 
 ----------------------------------------------------------------------
 STATISTICS
 ----------------------------------------------------------------------
-Total files found: 4
+Total files found: 27
 Already processed (skipped): 0
-Newly processed (modified): 4
+Newly processed (modified): 27
 No changes needed: 0
 Errors: 0
 
 ----------------------------------------------------------------------
 PROCESSED FILES LIST
 ----------------------------------------------------------------------
-1. E1 to E4 - (DevOps Basics & Concepts).md
-2. E15 to E - (AWS Setup and Start Virtualization).md
-3. E47- Google Trends.md
-4. E48 - OFF Page SEO.md
-5. E49- Branding.md
-6. E5 to E6 - (CI-Continuous Integration & CD-Continuous Delivery).md
-7. E50 - Google Penalty.md
-8. E51, E52 - Google Algorithms.md
-9. E9 to E14 - (Pre-Requires Tools & Accounts for DevOps Course).md
+1. cyber-security\Cryptography\Basic-Encryption.md
+2. cyber-security\Cryptography\Malwares.md
+3. cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+4. cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+5. cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+6. cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+7. cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+8. cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+9. cyber-security\_index.md
+10. linux\60 Commands Hacker Should Know it.md
+11. linux\_index.md
+12. python\Dir-Buster-Module.md
+13. python\_index.md
+14. seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+15. seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+16. seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+17. seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+18. seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+19. seo\0-SEO-Theories\E15 - Page Rank.md
+20. seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+21. seo\0-SEO-Theories\E17 - Backlinks.md
+22. seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+23. seo\_index.md
+24. tools\Burpsuite\1-Install Burpsuite.md
+25. tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+26. tools\MSFConsole Commands.md
+27. tools\_index.md
 
 ======================================================================
 Report generated successfully

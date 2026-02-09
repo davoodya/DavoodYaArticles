@@ -40,7 +40,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Configuration
-TEST_ARTICLES_DIR = Path("test/test-articles")
+CONTENT_DIR = Path("content")  # Changed from test/test-articles to content
 TRACKING_FILE = "property-delete-tracking-enhanced.json"
 MAX_LINE_CHECK = 20  # Maximum line number to check for closing ---
 SITE_URL = "https://davoodya.ir"
@@ -174,21 +174,23 @@ def get_current_datetime_str():
 def parse_obsidian_properties(lines, first_line, second_line):
     """
     Parse Obsidian properties from frontmatter lines.
-    Extracts: Date, tags, Category
+    Extracts: Date, tags, Category (both can be lists)
     
-    Returns: dict with keys: date, tags (list), category
+    Returns: dict with keys: date, tags (list), categories (list)
     
     Example Obsidian properties:
         Date: 2023-11-20
         tags:
           - tag1
           - tag2
-        Category: category1
+        Category:
+          - category1
+          - category2
     """
     properties = {
         'date': None,
         'tags': [],
-        'category': None
+        'categories': []
     }
     
     # Process lines between first_line and second_line
@@ -209,13 +211,44 @@ def parse_obsidian_properties(lines, first_line, second_line):
             i += 1
             continue
         
-        # Parse Category
+        # Parse Category (can be multi-line like tags)
         if line.lower().startswith('category:'):
+            # Check if category is on same line or next lines
             category_value = line.split(':', 1)[1].strip()
-            properties['category'] = category_value
-            logger.debug(f"  Found Category: {category_value}")
-            i += 1
-            continue
+            
+            if category_value:
+                # Category on same line (e.g., "Category: cat1, cat2")
+                # Could be array format: [cat1, cat2]
+                if category_value.startswith('[') and category_value.endswith(']'):
+                    # Array format
+                    cats_str = category_value[1:-1]
+                    cats_list = [c.strip().strip('"').strip("'") for c in cats_str.split(',')]
+                    properties['categories'].extend([c for c in cats_list if c])
+                else:
+                    # Comma separated
+                    cats_list = [c.strip() for c in category_value.split(',')]
+                    properties['categories'].extend([c for c in cats_list if c])
+            else:
+                # Categories on next lines (YAML list format)
+                i += 1
+                while i < second_line:
+                    next_line = lines[i].strip()
+                    
+                    # Check if line starts with dash (list item)
+                    if next_line.startswith('- '):
+                        cat = next_line[2:].strip()
+                        properties['categories'].append(cat)
+                        logger.debug(f"  Found category: {cat}")
+                        i += 1
+                    elif next_line.startswith('-'):
+                        cat = next_line[1:].strip()
+                        properties['categories'].append(cat)
+                        logger.debug(f"  Found category: {cat}")
+                        i += 1
+                    else:
+                        # Not a list item, break
+                        break
+                continue
         
         # Parse tags (can be multi-line)
         if line.lower().startswith('tags:'):
@@ -258,7 +291,7 @@ def parse_obsidian_properties(lines, first_line, second_line):
         
         i += 1
     
-    logger.info(f"  Extracted properties: date={properties['date']}, tags={properties['tags']}, category={properties['category']}")
+    logger.info(f"  Extracted properties: date={properties['date']}, tags={properties['tags']}, categories={properties['categories']}")
     
     return properties
 
@@ -429,7 +462,7 @@ def generate_hugo_frontmatter(file_path, obsidian_props, content_lines):
     
     Args:
         file_path: Path to the markdown file
-        obsidian_props: dict with 'date', 'tags', 'category' from Obsidian
+        obsidian_props: dict with 'date', 'tags', 'categories' from Obsidian
         content_lines: list of content lines (for extracting description, images, reading time)
     
     Returns: string with frontmatter content
@@ -444,8 +477,24 @@ def generate_hugo_frontmatter(file_path, obsidian_props, content_lines):
     if obsidian_props['tags']:
         tags_list.extend(obsidian_props['tags'])
     
+    # Remove duplicates from tags while preserving order
+    seen_tags = set()
+    tags_list = [x for x in tags_list if not (x in seen_tags or seen_tags.add(x))]
+    
     # Format tags for TOML
     tags_str = ', '.join([f'"{tag}"' for tag in tags_list])
+    
+    # Build categories list: directory + obsidian categories
+    categories_list = [directory]
+    if obsidian_props.get('categories'):
+        categories_list.extend(obsidian_props['categories'])
+    
+    # Remove duplicates from categories while preserving order
+    seen_cats = set()
+    categories_list = [x for x in categories_list if not (x in seen_cats or seen_cats.add(x))]
+    
+    # Format categories for TOML
+    categories_str = ', '.join([f'"{cat}"' for cat in categories_list])
     
     # Build date: Obsidian date + current time
     if obsidian_props['date']:
@@ -476,21 +525,17 @@ def generate_hugo_frontmatter(file_path, obsidian_props, content_lines):
     # lastmod: current date and time
     lastmod_str = get_current_datetime_str()
     
-    # Use directory as category
-    category = directory
-    categories_str = f'"{category}"'
-    
-    # Series (same as category)
+    # Series (same as directory only)
     series_str = f'"{directory}"'
     
     # Extract description (150 chars from content)
     description = extract_description(content_lines, max_chars=150)
     
-    # Build keywords: title + tags + filename + directory
+    # Build keywords: title + tags + categories + filename + directory
     keywords_list = [title]
     keywords_list.extend(tags_list)
+    keywords_list.extend(categories_list)
     keywords_list.append(slugify(filename.replace('.md', '')))
-    keywords_list.append(directory)
     # Remove duplicates while preserving order
     seen = set()
     keywords_list = [x for x in keywords_list if not (x in seen or seen.add(x))]
@@ -641,7 +686,7 @@ def remove_obsidian_properties_and_add_hugo_frontmatter(file_path):
         obsidian_props = {
             'date': None,
             'tags': [],
-            'category': None
+            'categories': []
         }
         
         content_lines = lines  # For extracting description, images, etc.
@@ -694,8 +739,8 @@ def remove_obsidian_properties_and_add_hugo_frontmatter(file_path):
                     obsidian_props['date'] = obs_props_extracted['date']
                 if obs_props_extracted['tags']:
                     obsidian_props['tags'].extend(obs_props_extracted['tags'])
-                if obs_props_extracted['category']:
-                    obsidian_props['category'] = obs_props_extracted['category']
+                if obs_props_extracted['categories']:
+                    obsidian_props['categories'].extend(obs_props_extracted['categories'])
                 
                 # Remove Obsidian properties
                 content_lines = content_lines[:obs_first_new] + content_lines[obs_second_new + 1:]
@@ -723,25 +768,25 @@ def remove_obsidian_properties_and_add_hugo_frontmatter(file_path):
 
 
 def process_articles():
-    """Process all markdown files in the test articles directory."""
+    """Process all markdown files recursively in content directory and subdirectories."""
     
     # Check if directory exists
-    if not TEST_ARTICLES_DIR.exists():
-        logger.error(f"Directory not found: {TEST_ARTICLES_DIR}")
+    if not CONTENT_DIR.exists():
+        logger.error(f"Directory not found: {CONTENT_DIR}")
         return
     
     # Load tracking data
     tracking_data = load_tracking_file()
     processed_files = set(tracking_data.get("processed_files", []))
     
-    # Get all markdown files
-    markdown_files = list(TEST_ARTICLES_DIR.glob("*.md"))
+    # Get all markdown files recursively from content directory
+    markdown_files = list(CONTENT_DIR.rglob("*.md"))  # rglob for recursive search
     
     if not markdown_files:
-        logger.warning(f"No markdown files found in {TEST_ARTICLES_DIR}")
+        logger.warning(f"No markdown files found in {CONTENT_DIR}")
         return
     
-    logger.info(f"Found {len(markdown_files)} markdown files to check")
+    logger.info(f"Found {len(markdown_files)} markdown files to check (including subdirectories)")
     logger.info(f"Already processed: {len(processed_files)} files")
     
     # Statistics
@@ -755,24 +800,25 @@ def process_articles():
     
     # Process each file
     for file_path in markdown_files:
-        file_name = file_path.name
+        # Use relative path as unique identifier
+        relative_path = str(file_path.relative_to(CONTENT_DIR))
         
         # Skip if already processed
-        if file_name in processed_files:
-            logger.info(f"⊙ Skipping already processed file: {file_name}")
+        if relative_path in processed_files:
+            logger.info(f"⊙ Skipping already processed file: {relative_path}")
             stats["already_processed"] += 1
             continue
         
         logger.info(f"\n{'='*60}")
-        logger.info(f"Processing: {file_name}")
+        logger.info(f"Processing: {relative_path}")
         logger.info(f"{'='*60}")
         
         # Try to process file
         success = remove_obsidian_properties_and_add_hugo_frontmatter(file_path)
         
         if success:
-            # Add to processed files
-            processed_files.add(file_name)
+            # Add to processed files (using relative path)
+            processed_files.add(relative_path)
             tracking_data["processed_files"] = list(processed_files)
             stats["newly_processed"] += 1
         else:
@@ -808,7 +854,7 @@ def generate_report(stats, tracking_data):
             f.write("=" * 70 + "\n\n")
             
             f.write(f"Execution Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-            f.write(f"Target Directory: {TEST_ARTICLES_DIR}\n\n")
+            f.write(f"Target Directory: {CONTENT_DIR} (recursive)\n\n")
             
             f.write("-" * 70 + "\n")
             f.write("STATISTICS\n")

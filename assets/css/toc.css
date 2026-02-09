@@ -1,9 +1,10 @@
 /* ============================= */
 /* Table of Contents (TOC) - فهرست مطالب */
+/* با دکمه شناور برای همه دیوایس‌ها */
 /* ============================= */
 
 /* ============================= */
-/* 1. TOC Container - کانتینر اصلی */
+/* 1. TOC Container ثابت در بالای صفحه */
 /* ============================= */
 
 .toc-container {
@@ -50,7 +51,190 @@
 }
 
 /* ============================= */
-/* 2. TOC Title - عنوان فهرست */
+/* 2. Floating TOC Button - دکمه شناور (همه دیوایس‌ها) */
+/* ============================= */
+
+.toc-floating-btn {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(0, 255, 65, 0.9) 0%, rgba(58, 173, 223, 0.9) 100%);
+    border: 2px solid rgba(0, 255, 65, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 255, 65, 0.4),
+                0 0 30px rgba(0, 255, 65, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse-btn 2s ease-in-out infinite;
+}
+
+.toc-floating-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 30px rgba(0, 255, 65, 0.6),
+                0 0 40px rgba(0, 255, 65, 0.5);
+}
+
+.toc-floating-btn svg {
+    width: 30px;
+    height: 30px;
+    fill: #000;
+}
+
+@keyframes pulse-btn {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(0, 255, 65, 0.4),
+                    0 0 30px rgba(0, 255, 65, 0.3);
+    }
+    50% {
+        box-shadow: 0 6px 30px rgba(0, 255, 65, 0.6),
+                    0 0 50px rgba(0, 255, 65, 0.5);
+    }
+}
+
+/* Badge تعداد headings */
+.toc-floating-btn::after {
+    content: attr(data-count);
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--accent-orange);
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 7px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* ============================= */
+/* 3. Floating TOC Sidebar - سایدبار شناور (همه دیوایس‌ها) */
+/* ============================= */
+
+.toc-floating-sidebar {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    bottom: 0;
+    width: 380px;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.98) 0%, rgba(15, 15, 15, 0.98) 100%);
+    border-right: 3px solid rgba(0, 255, 65, 0.4);
+    z-index: 9999;
+    overflow-y: auto;
+    transition: left 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 5px 0 30px rgba(0, 0, 0, 0.7);
+    padding: 2rem 1.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-green) transparent;
+}
+
+.toc-floating-sidebar.active {
+    left: 0;
+}
+
+.toc-floating-sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.toc-floating-sidebar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.toc-floating-sidebar::-webkit-scrollbar-thumb {
+    background: var(--accent-green);
+    border-radius: 4px;
+}
+
+.toc-floating-sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-blue);
+}
+
+/* Header سایدبار */
+.toc-floating-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(0, 255, 65, 0.3);
+}
+
+.toc-floating-header h3 {
+    font-family: 'Shabnam', 'Vazir', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-green);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+}
+
+.toc-floating-header h3::before {
+    content: '📑';
+    font-size: 1.8rem;
+}
+
+/* دکمه بستن */
+.toc-close-btn {
+    background: rgba(255, 0, 0, 0.2);
+    border: 2px solid rgba(255, 0, 0, 0.4);
+    color: #ff4444;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.toc-close-btn:hover {
+    background: rgba(255, 0, 0, 0.4);
+    transform: rotate(90deg);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+/* محتوای TOC در سایدبار */
+.toc-floating-content {
+    position: relative;
+}
+
+/* Overlay برای بستن سایدبار */
+.toc-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(3px);
+}
+
+.toc-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ============================= */
+/* 4. TOC Title - عنوان فهرست */
 /* ============================= */
 
 .toc-title {
@@ -63,7 +247,7 @@
     border-bottom: 2px solid rgba(0, 255, 65, 0.2);
     display: flex;
     align-items: center;
-    align-self: center;
+    justify-content: center;
     gap: 0.8rem;
     position: relative;
     z-index: 1;
@@ -73,20 +257,10 @@
 .toc-title::before {
     content: '📑';
     font-size: 1.5rem;
-    /* animation: pulse 2s ease-in-out infinite; */
 }
 
-/* @keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-} */
-
 /* ============================= */
-/* 3. TOC Navigation - محتوای فهرست */
+/* 5. TOC Navigation - محتوای فهرست */
 /* ============================= */
 
 #TableOfContents {
@@ -98,27 +272,27 @@
 
 /* تمام لیست‌ها */
 #TableOfContents ul {
-    /* list-style: none; */
+    list-style: disc;
     padding: 0;
-    padding-left: -20px !important;
+    padding-right: 1.5rem;
     margin: 0;
 }
 
 /* لیست اصلی (سطح 1) */
 #TableOfContents > ul {
-    padding-right: 0;
+    padding-right: 1rem;
 }
 
 /* لیست‌های تو در تو */
 #TableOfContents ul ul {
-    padding-right: 1.5rem;
+    padding-right: 2rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    /* border-right: 2px solid rgba(0, 255, 65, 0.15); */
+    border-right: 2px solid rgba(0, 255, 65, 0.15);
 }
 
 /* ============================= */
-/* 4. TOC Items - آیتم‌های فهرست */
+/* 6. TOC Items - آیتم‌های فهرست */
 /* ============================= */
 
 #TableOfContents li {
@@ -131,12 +305,16 @@
     margin-bottom: 0;
 }
 
+#TableOfContents li::marker {
+    color: var(--accent-green);
+}
+
 /* لینک‌ها */
 #TableOfContents a {
-    display: block;
+    display: inline-block;
     color: var(--main-text);
     text-decoration: none;
-    padding: 0.6rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 8px;
     background: rgba(0, 255, 65, 0.03);
     border-right: 3px solid transparent;
@@ -145,20 +323,8 @@
     font-size: 0.95rem;
     line-height: 1.6;
     position: relative;
-    width: 60vh;
-    
-    overflow: hidden;
-}
-
-/* نقطه قبل از لینک */
-#TableOfContents a::before {
-    content: '▸';
-    position: absolute;
-    right: 0.5rem;
-    color: var(--accent-green);
-    opacity: 0;
-    transform: translateX(10px);
-    transition: all 0.3s ease;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 /* Hover state */
@@ -167,18 +333,11 @@
     border-right-color: var(--accent-green);
     color: var(--accent-green);
     transform: translateX(5px);
-    padding-right: 2rem;
     box-shadow: 0 4px 12px rgba(0, 255, 65, 0.2);
 }
 
-#TableOfContents a:hover::before {
-    opacity: 1;
-    transform: translateX(0);
-}
-
 /* Active link */
-#TableOfContents a.active,
-#TableOfContents a:active {
+#TableOfContents a.active {
     background: rgba(0, 255, 65, 0.15);
     border-right-color: var(--accent-blue);
     color: var(--accent-blue);
@@ -186,7 +345,7 @@
 }
 
 /* ============================= */
-/* 5. Different Levels - سطوح مختلف */
+/* 7. Different Levels - سطوح مختلف */
 /* ============================= */
 
 /* سطح 1 - H1 */
@@ -227,77 +386,138 @@
 }
 
 /* ============================= */
-/* 6. Sticky TOC - فهرست چسبان */
-/* ============================= */
-
-.toc-sticky {
-    position: sticky;
-    top: 80px;
-    max-height: calc(100vh - 100px);
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--accent-green) transparent;
-}
-
-.toc-sticky::-webkit-scrollbar {
-    width: 6px;
-}
-
-.toc-sticky::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.toc-sticky::-webkit-scrollbar-thumb {
-    background: var(--accent-green);
-    border-radius: 3px;
-}
-
-/* ============================= */
-/* 7. Collapsible TOC - فهرست قابل بستن */
+/* 8. دکمه Toggle - حذف شده (استفاده نمی‌شود) */
 /* ============================= */
 
 .toc-toggle {
-    display: none;
-    width: 100%;
-    background: rgba(0, 255, 65, 0.1);
-    border: 2px solid rgba(0, 255, 65, 0.3);
-    border-radius: 8px;
-    padding: 0.8rem 1rem;
-    color: var(--accent-green);
-    font-family: 'Shabnam', 'Vazir', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin-bottom: 1rem;
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 1;
-}
-
-.toc-toggle:hover {
-    background: rgba(0, 255, 65, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 255, 65, 0.3);
-}
-
-.toc-toggle::after {
-    content: '▼';
-    float: left;
-    transition: transform 0.3s ease;
-}
-
-.toc-toggle.active::after {
-    transform: rotate(180deg);
+    display: none !important;
 }
 
 /* ============================= */
-/* 8. Responsive - موبایل */
+/* 9. Responsive - Desktop */
+/* ============================= */
+
+@media (min-width: 1025px) {
+    /* دکمه شناور */
+    .toc-floating-btn {
+        display: flex;
+        width: 60px;
+        height: 60px;
+    }
+    
+    /* سایدبار */
+    .toc-floating-sidebar {
+        width: 380px;
+    }
+    
+    /* TOC Container در بالا */
+    .toc-container {
+        display: block;
+    }
+}
+
+/* ============================= */
+/* 10. Responsive - Tablet */
+/* ============================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* دکمه شناور کوچک‌تر */
+    .toc-floating-btn {
+        display: flex;
+        width: 55px;
+        height: 55px;
+        left: 15px;
+    }
+    
+    .toc-floating-btn svg {
+        width: 26px;
+        height: 26px;
+    }
+    
+    /* سایدبار کمی باریک‌تر */
+    .toc-floating-sidebar {
+        width: 340px;
+    }
+    
+    .toc-floating-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* TOC Container */
+    .toc-container {
+        padding: 1.6rem;
+        margin: 2rem 0;
+    }
+    
+    .toc-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* ============================= */
+/* 11. Responsive - Mobile (زیر 768px) */
 /* ============================= */
 
 @media (max-width: 768px) {
+    /* دکمه شناور - کوچک‌تر برای موبایل */
+    .toc-floating-btn {
+        display: flex !important;
+        width: 50px;
+        height: 50px;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .toc-floating-btn svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .toc-floating-btn::after {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+        top: -3px;
+        right: -3px;
+    }
+    
+    /* سایدبار تمام عرض */
+    .toc-floating-sidebar {
+        width: 90%;
+        max-width: 350px;
+        left: -100%;
+        padding: 1.5rem 1.2rem;
+    }
+    
+    .toc-floating-sidebar.active {
+        left: 0;
+    }
+    
+    /* Header سایدبار */
+    .toc-floating-header {
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.8rem;
+    }
+    
+    .toc-floating-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .toc-floating-header h3::before {
+        font-size: 1.5rem;
+    }
+    
+    .toc-close-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1.3rem;
+    }
+    
+    /* TOC Container در بالا - کوچک‌تر */
     .toc-container {
         padding: 1.5rem;
         margin: 2rem 0;
+        border-radius: 12px;
     }
     
     .toc-title {
@@ -305,24 +525,9 @@
         margin-bottom: 1rem;
     }
     
-    /* نمایش دکمه toggle در موبایل */
-    .toc-toggle {
-        display: block;
-    }
-    
-    /* مخفی کردن محتوا به صورت پیش‌فرض */
-    #TableOfContents {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease;
-    }
-    
-    #TableOfContents.show {
-        max-height: 1000px;
-    }
-    
+    /* لینک‌های TOC */
     #TableOfContents ul ul {
-        padding-right: 1rem;
+        padding-right: 1.5rem;
     }
     
     #TableOfContents a {
@@ -331,7 +536,46 @@
     }
 }
 
+/* ============================= */
+/* 12. Responsive - موبایل کوچک (زیر 480px) */
+/* ============================= */
+
 @media (max-width: 480px) {
+    /* دکمه شناور بیشتر کوچک */
+    .toc-floating-btn {
+        width: 45px;
+        height: 45px;
+        left: 8px;
+    }
+    
+    .toc-floating-btn svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .toc-floating-btn::after {
+        font-size: 0.65rem;
+        padding: 2px 5px;
+    }
+    
+    /* سایدبار تمام عرض */
+    .toc-floating-sidebar {
+        width: 95%;
+        max-width: 100%;
+        padding: 1.2rem 1rem;
+    }
+    
+    .toc-floating-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .toc-close-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+    }
+    
+    /* TOC Container */
     .toc-container {
         padding: 1.2rem;
         border-radius: 12px;
@@ -342,7 +586,7 @@
     }
     
     #TableOfContents ul ul {
-        padding-right: 0.8rem;
+        padding-right: 1.2rem;
     }
     
     #TableOfContents a {
@@ -352,7 +596,7 @@
 }
 
 /* ============================= */
-/* 9. Print Styles */
+/* 13. Print Styles */
 /* ============================= */
 
 @media print {
@@ -377,24 +621,22 @@
         background: transparent;
     }
     
-    .toc-toggle {
-        display: none;
-    }
-    
-    #TableOfContents {
-        max-height: none !important;
+    .toc-floating-btn,
+    .toc-floating-sidebar,
+    .toc-overlay {
+        display: none !important;
     }
 }
 
 /* ============================= */
-/* 10. Smooth Scroll به Heading */
+/* 14. Smooth Scroll */
 /* ============================= */
 
 html {
     scroll-behavior: smooth;
 }
 
-/* Offset برای heading ها (برای فضای header) */
+/* Offset برای heading ها */
 .article-content h1,
 .article-content h2,
 .article-content h3,
@@ -405,7 +647,7 @@ html {
 }
 
 /* ============================= */
-/* 11. Animation برای Heading Highlight */
+/* 15. Animation برای Heading Highlight */
 /* ============================= */
 
 .article-content h1:target,
@@ -428,7 +670,7 @@ html {
 }
 
 /* ============================= */
-/* 12. Empty TOC - فهرست خالی */
+/* 16. Empty TOC */
 /* ============================= */
 
 .toc-container:empty {
@@ -439,9 +681,14 @@ html {
     display: none;
 }
 
-#TableOfContents:empty + .toc-title::after {
-    content: ' (هیچ سرفصلی یافت نشد)';
-    font-size: 0.9rem;
-    color: var(--muted-text);
-    font-weight: 400;
+/* ============================= */
+/* 17. دکمه در حالت Landscape موبایل */
+/* ============================= */
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .toc-floating-btn {
+        top: auto;
+        bottom: 20px;
+        transform: none;
+    }
 }

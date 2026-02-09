@@ -7,11 +7,10 @@
         <article class="article-wrapper{{ if .Params.custom_class }} {{ .Params.custom_class }}{{ end }}">
             <h1 class="article-title">{{ .Title }}</h1>
             
-            {{/* Table of Contents - فهرست مطالب */}}
+            {{/* Table of Contents - فهرست مطالب در بالای صفحه (فقط نمایش) */}}
             {{ if .TableOfContents }}
                 <div class="toc-container">
                     <h2 class="toc-title">فهرست مطالب</h2>
-                    <button class="toc-toggle" onclick="toggleTOC()">نمایش/مخفی کردن فهرست</button>
                     <nav id="TableOfContents">
                         {{ .TableOfContents }}
                     </nav>
@@ -25,23 +24,84 @@
     </div>
 </div>
 
+{{/* Floating TOC Button - دکمه شناور برای همه دیوایس‌ها */}}
+{{ if .TableOfContents }}
+<button class="toc-floating-btn" onclick="openFloatingTOC()" title="باز کردن فهرست مطالب" data-count="0" aria-label="فهرست مطالب">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/>
+    </svg>
+</button>
+
+{{/* Floating TOC Sidebar - سایدبار شناور برای همه دیوایس‌ها */}}
+<div class="toc-floating-sidebar" id="floatingTOCSidebar" role="dialog" aria-label="فهرست مطالب">
+    <div class="toc-floating-header">
+        <h3>فهرست مطالب</h3>
+        <button class="toc-close-btn" onclick="closeFloatingTOC()" title="بستن" aria-label="بستن فهرست مطالب">×</button>
+    </div>
+    <div class="toc-floating-content">
+        <nav id="TableOfContentsFloating" aria-label="فهرست مطالب شناور">
+            {{ .TableOfContents }}
+        </nav>
+    </div>
+</div>
+
+{{/* Overlay */}}
+<div class="toc-overlay" id="tocOverlay" onclick="closeFloatingTOC()" aria-hidden="true"></div>
+{{ end }}
+
 {{/* JavaScript for TOC */}}
 <script>
-    // Toggle TOC در موبایل
-    function toggleTOC() {
-        const toc = document.getElementById('TableOfContents');
-        const toggle = document.querySelector('.toc-toggle');
+    // ===========================
+    // Floating TOC (همه دیوایس‌ها)
+    // ===========================
+    function openFloatingTOC() {
+        const sidebar = document.getElementById('floatingTOCSidebar');
+        const overlay = document.getElementById('tocOverlay');
         
-        if (toc && toggle) {
-            toc.classList.toggle('show');
-            toggle.classList.toggle('active');
+        if (sidebar && overlay) {
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Focus on close button for accessibility
+            setTimeout(() => {
+                const closeBtn = sidebar.querySelector('.toc-close-btn');
+                if (closeBtn) closeBtn.focus();
+            }, 100);
         }
     }
     
-    // Highlight active heading در TOC
+    function closeFloatingTOC() {
+        const sidebar = document.getElementById('floatingTOCSidebar');
+        const overlay = document.getElementById('tocOverlay');
+        const btn = document.querySelector('.toc-floating-btn');
+        
+        if (sidebar && overlay) {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            // Return focus to button
+            if (btn) btn.focus();
+        }
+    }
+    
+    // بستن با کلید ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const sidebar = document.getElementById('floatingTOCSidebar');
+            if (sidebar && sidebar.classList.contains('active')) {
+                closeFloatingTOC();
+            }
+        }
+    });
+    
+    // ===========================
+    // Highlight Active Heading
+    // ===========================
     function highlightActiveHeading() {
         const headings = document.querySelectorAll('.article-content h1, .article-content h2, .article-content h3, .article-content h4, .article-content h5, .article-content h6');
-        const tocLinks = document.querySelectorAll('#TableOfContents a');
+        const tocLinks = document.querySelectorAll('#TableOfContents a, #TableOfContentsFloating a');
         
         if (headings.length === 0 || tocLinks.length === 0) return;
         
@@ -63,29 +123,101 @@
         });
     }
     
-    // Smooth scroll با offset
-    document.querySelectorAll('#TableOfContents a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement) {
-                const offsetTop = targetElement.offsetTop - 100;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+    // ===========================
+    // Smooth Scroll
+    // ===========================
+    function setupSmoothScroll() {
+        const allTocLinks = document.querySelectorAll('#TableOfContents a, #TableOfContentsFloating a');
+        
+        allTocLinks.forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
                 
-                // Update URL without scrolling
-                history.pushState(null, null, '#' + targetId);
-            }
+                if (targetElement) {
+                    // بستن sidebar
+                    closeFloatingTOC();
+                    
+                    // Scroll با تاخیر کوتاه
+                    setTimeout(() => {
+                        const offsetTop = targetElement.offsetTop - 100;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }, 100);
+                    
+                    // Update URL
+                    history.pushState(null, null, '#' + targetId);
+                }
+            });
         });
+    }
+    
+    // ===========================
+    // شمارش تعداد headings
+    // ===========================
+    function updateHeadingCount() {
+        const headings = document.querySelectorAll('.article-content h1, .article-content h2, .article-content h3, .article-content h4, .article-content h5, .article-content h6');
+        const btn = document.querySelector('.toc-floating-btn');
+        
+        if (btn && headings.length > 0) {
+            btn.setAttribute('data-count', headings.length);
+        }
+    }
+    
+    // ===========================
+    // Prevent body scroll on mobile when sidebar is open
+    // ===========================
+    function preventBodyScroll() {
+        const sidebar = document.getElementById('floatingTOCSidebar');
+        
+        if (sidebar) {
+            sidebar.addEventListener('touchmove', function(e) {
+                if (sidebar.classList.contains('active')) {
+                    // Allow scrolling inside sidebar
+                    e.stopPropagation();
+                }
+            }, { passive: true });
+        }
+    }
+    
+    // ===========================
+    // Initialize
+    // ===========================
+    document.addEventListener('DOMContentLoaded', function() {
+        setupSmoothScroll();
+        highlightActiveHeading();
+        updateHeadingCount();
+        preventBodyScroll();
+        
+        // Check if URL has hash
+        if (window.location.hash) {
+            setTimeout(() => {
+                const targetId = window.location.hash.substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const offsetTop = targetElement.offsetTop - 100;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 300);
+        }
     });
     
-    // Highlight on scroll
     window.addEventListener('scroll', highlightActiveHeading);
-    window.addEventListener('load', highlightActiveHeading);
+    window.addEventListener('load', function() {
+        highlightActiveHeading();
+        updateHeadingCount();
+    });
+    
+    // Handle orientation change
+    window.addEventListener('orientationchange', function() {
+        closeFloatingTOC();
+    });
 </script>
 
 {{ end }}
