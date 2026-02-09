@@ -63,7 +63,7 @@
                                     <span>تگ‌ها:</span>
                                 </div>
                                 {{ range first 4 .Params.tags }}
-                                    <span class="article-tag">{{ . }}</span>
+                                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="article-tag" title="مشاهده همه مقالات با تگ {{ . }}">{{ . }}</a>
                                 {{ end }}
                             </div>
                         {{ end }}

@@ -1506,6 +1506,8 @@ body {
     font-weight: 500;
     transition: all 0.3s ease;
     letter-spacing: 0.3px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .article-tag-item:hover {
@@ -1513,6 +1515,20 @@ body {
     border-color: var(--accent-blue);
     transform: translateY(-2px);
     box-shadow: 0 3px 10px rgba(58, 173, 223, 0.3);
+}
+
+/* استایل برای لینک‌های تگ در Single Article */
+a.article-tag-item {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+a.article-tag-item:visited {
+    color: var(--accent-blue);
+}
+
+a.article-tag-item:active {
+    transform: translateY(0);
 }
 
 /* تگ‌ها در Footer (انتهای محتوا) */
@@ -1546,12 +1562,29 @@ body {
     font-weight: 500;
     transition: all 0.3s ease;
     letter-spacing: 0.3px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .article-tag:hover {
     background: rgba(58, 173, 223, 0.15);
     border-color: var(--accent-blue);
     transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(58, 173, 223, 0.2);
+}
+
+/* استایل برای لینک‌های تگ */
+a.article-tag {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+a.article-tag:visited {
+    color: var(--accent-blue);
+}
+
+a.article-tag:active {
+    transform: translateY(0);
 }
 
 .article-card-footer {
