@@ -1,0 +1,128 @@
+/* ============================= */
+/* Font Fixes - Force Correct Fonts */
+/* ============================= */
+
+/* Global Persian Text */
+* {
+    font-family: 'Vazir', 'Shabnam', 'Rajdhani', sans-serif;
+}
+
+/* Persian Headings */
+h1, h2, h3, h4, h5, h6,
+.page-title,
+.category-title,
+.article-title,
+.category-card h2,
+.article-card-title,
+.sidebar-widget-title,
+.footer-links h3,
+.footer-contact h3,
+.recent-post-title,
+.category-name {
+    font-family: 'Shabnam', 'Vazir', sans-serif !important;
+}
+
+/* Persian Body Text */
+p, span, div, li, td, a,
+body,
+.article-content,
+.category-description-text,
+.article-card-summary,
+.category-description,
+.footer-logo p,
+.footer-desc,
+.nav-links a,
+.footer-links a,
+.footer-contact p,
+.footer-bottom p,
+.footer-bottom span {
+    font-family: 'Vazir', 'Shabnam', sans-serif !important;
+}
+
+/* English Content */
+:lang(en),
+[lang="en"] {
+    font-family: 'Rajdhani', sans-serif !important;
+}
+
+/* Code Blocks - Always Fira Code */
+code,
+pre,
+pre code,
+.code-block,
+.article-content code,
+.article-content pre,
+.article-content pre code,
+kbd,
+samp,
+tt,
+var {
+    font-family: 'Fira Code', 'Consolas', 'Courier New', monospace !important;
+}
+
+/* Terminal/Monospace Elements */
+.logo h1,
+.logo h2,
+.footer-logo h3,
+.logo-glitch-footer,
+.terminal,
+.command-line {
+    font-family: 'Fira Code', 'Consolas', monospace !important;
+}
+
+/* Buttons */
+button,
+.btn,
+.read-more-btn,
+.dropdown-btn {
+    font-family: 'Shabnam', 'Vazir', sans-serif !important;
+}
+
+/* Tags & Badges */
+.tag-badge,
+.category-badge {
+    font-family: 'Vazir', 'Rajdhani', sans-serif !important;
+}
+
+/* Search */
+input,
+textarea,
+select,
+.search-input,
+.search-results {
+    font-family: 'Vazir', 'Rajdhani', sans-serif !important;
+}
+
+/* Tables */
+table,
+th,
+td {
+    font-family: 'Vazir', 'Rajdhani', sans-serif !important;
+}
+
+table th {
+    font-family: 'Shabnam', 'Vazir', sans-serif !important;
+}
+
+/* Specific Article Content Elements */
+.article-content p,
+.article-content li,
+.article-content blockquote,
+.article-content td {
+    font-family: 'Vazir', 'Shabnam', 'Rajdhani', sans-serif !important;
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+    font-family: 'Shabnam', 'Vazir', 'Rajdhani', sans-serif !important;
+}
+
+/* Override any inline styles */
+[style*="font-family"] code,
+[style*="font-family"] pre {
+    font-family: 'Fira Code', 'Consolas', 'Courier New', monospace !important;
+}
