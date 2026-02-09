@@ -24,9 +24,12 @@
                     </a>
                 </li>
                 
+                {{/* فیلتر کردن دسته‌بندی‌ها و حذف all-articles */}}
                 {{ $categories := slice }}
                 {{ range .Site.Sections }}
-                    {{ $categories = $categories | append . }}
+                    {{ if ne .Section "all-articles" }}
+                        {{ $categories = $categories | append . }}
+                    {{ end }}
                 {{ end }}
                 
                 {{ $visibleCount := 5 }}

@@ -289,6 +289,23 @@ mkdir content/all-articles
 <span class="category-badge">{{ len $realArticles }}</span>
 ```
 
+### مشکل 5: "تمام مقالات" در dropdown سایر دسته‌بندی‌ها ظاهر می‌شود
+
+**علت**: `all-articles` به عنوان یک Section شناخته می‌شود و در لیست دسته‌بندی‌ها قرار می‌گیرد.
+
+**راه‌حل**:
+مطمئن شوید در `sidebar.html` فیلتر زیر وجود دارد:
+```go
+{{ $categories := slice }}
+{{ range .Site.Sections }}
+    {{ if ne .Section "all-articles" }}
+        {{ $categories = $categories | append . }}
+    {{ end }}
+{{ end }}
+```
+
+این فیلتر مطمئن می‌شود که `all-articles` در لیست dropdown ظاهر نشود و فقط به عنوان آیتم اول (با استایل ویژه) نمایش داده شود.
+
 ---
 
 ## 📋 Checklist نگهداری
