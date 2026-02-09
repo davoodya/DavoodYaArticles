@@ -238,5 +238,7 @@
   </url><url>
     <loc>http://localhost:1313/network/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/all-articles/</loc>
   </url>
 </urlset>

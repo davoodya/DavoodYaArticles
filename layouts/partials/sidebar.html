@@ -13,6 +13,17 @@
         <h3 class="sidebar-widget-title">📚 دسته‌بندی‌ها</h3>
         <div class="sidebar-widget-content">
             <ul class="category-list">
+                {{/* دسته بندی تمام مقالات */}}
+                <li class="category-item all-articles-item">
+                    <a href="/all-articles/" class="category-link all-articles-link">
+                        <span class="category-icon">📋</span>
+                        <span class="category-name">تمام مقالات</span>
+                        {{ $allArticles := where site.RegularPages "Type" "in" (slice "posts" "page") }}
+                        {{ $allArticles = where $allArticles "Draft" false }}
+                        <span class="category-badge">{{ len site.RegularPages }}</span>
+                    </a>
+                </li>
+                
                 {{ $categories := slice }}
                 {{ range .Site.Sections }}
                     {{ $categories = $categories | append . }}
