@@ -435,6 +435,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     line-height: 1.7;
+
 }
 
 .articles-grid {
@@ -1300,6 +1301,10 @@ body {
     border-radius: 14px;
     border: 2px solid rgba(0, 255, 65, 0.12);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Badges in Center */
+    justify-content: center;   /* مرکز افقی */
+    align-items: center;       /* مرکز عمودی در یک خط */
+    align-content: center;     /* مرکز در حالت چند خطی */
 }
 
 .meta-badge {

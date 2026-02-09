@@ -613,25 +613,41 @@ def generate_hugo_frontmatter(file_path, obsidian_props, content_lines):
     
     # Build frontmatter
     frontmatter = f'''+++
+# Basic
 title = "{title}"
 slug = "{slug}"
 date = "{date_str}"
 lastmod = "{lastmod_str}"
 draft = false
 
+# Taxonomies
 categories = [{categories_str}]
 tags = [{tags_str}]
 series = [{series_str}]
 
+# Badges
+readingTime = {reading_time}
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+post_type_fa = "مقاله"
+
+# layout = "single"
+type = "posts"
+
+# SEO
 description = "{description}"
 keywords = [{keywords_str}]
 author = "{AUTHOR_NAME}"
 robots = "index, follow"
 canonical = "{canonical_url}"
 
+# Images
 featured_image = "{featured_image}"
 images = [{images_str}]
 
+# Open Graph and Social Networks(Twitter)
 [params.opengraph]
   title = "{title}"
   description = "{description}"
@@ -645,15 +661,7 @@ images = [{images_str}]
   description = "{description}"
   image = "{featured_image}"
 
-readingTime = {reading_time}
-difficulty = "medium"
-toc = true
-math = false
-lab_required = true
-post_type_fa = "مقاله"
 
-# layout = "single"
-type = "posts"
 +++
 '''
     

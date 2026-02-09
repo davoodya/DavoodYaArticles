@@ -97,8 +97,11 @@
     <div class="sidebar-widget">
         <h3 class="sidebar-widget-title">📝 نوشته‌های تازه</h3>
         <div class="sidebar-widget-content">
-            {{ $recentPosts := where .Site.RegularPages "Type" "in" (slice "cyber-security" "python" "seo" "tools") }}
-            {{ $recentPosts = first 5 (sort $recentPosts "Date" "desc") }}
+            {{/* گرفتن همه صفحات معمولی (نه section pages) و مرتب‌سازی بر اساس تاریخ آخرین بروزرسانی یا تاریخ انتشار */}}
+            {{ $recentPosts := .Site.RegularPages }}
+            {{ $recentPosts = where $recentPosts "Draft" false }}
+            {{/* مرتب‌سازی بر اساس Lastmod (تاریخ آخرین بروزرسانی) - مقالات تازه‌تر در بالا */}}
+            {{ $recentPosts = first 5 (sort $recentPosts "Lastmod" "desc") }}
             
             {{ if gt (len $recentPosts) 0 }}
                 <ul class="recent-posts-list">
@@ -108,7 +111,12 @@
                                 <span class="recent-post-icon">📄</span>
                                 <div class="recent-post-info">
                                     <h4 class="recent-post-title">{{ .Title }}</h4>
-                                    <span class="recent-post-date">{{ .Date.Format "2006/01/02" }}</span>
+                                    {{/* نمایش تاریخ آخرین بروزرسانی یا تاریخ انتشار */}}
+                                    {{ if ne .Lastmod .Date }}
+                                        <span class="recent-post-date" title="آخرین بروزرسانی">🔄 {{ .Lastmod.Format "2006/01/02" }}</span>
+                                    {{ else }}
+                                        <span class="recent-post-date">{{ .Date.Format "2006/01/02" }}</span>
+                                    {{ end }}
                                 </div>
                             </a>
                         </li>

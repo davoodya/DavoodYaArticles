@@ -1494,3 +1494,4 @@
 2026-02-09 15:41:10,552 - INFO - SCRIPT EXECUTION COMPLETED
 2026-02-09 15:41:10,552 - INFO - ======================================================================
 
+2026-02-09 17:17:24,551 - INFO -   Extracted properties: date=2024-06-20, tags=['test-tag1', 'test-tag2'], categories=['test-category']

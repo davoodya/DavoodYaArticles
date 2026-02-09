@@ -7,16 +7,6 @@
         <article class="article-wrapper{{ if .Params.custom_class }} {{ .Params.custom_class }}{{ end }}">
             <h1 class="article-title">{{ .Title }}</h1>
             
-            {{/* Table of Contents - فهرست مطالب در بالای صفحه (فقط نمایش) */}}
-            {{ if .TableOfContents }}
-                <div class="toc-container">
-                    <h2 class="toc-title">فهرست مطالب</h2>
-                    <nav id="TableOfContents">
-                        {{ .TableOfContents }}
-                    </nav>
-                </div>
-            {{ end }}
-            
             {{/* ویژگی‌های مقاله - Badge ها بعد از TOC و قبل از محتوا */}}
             {{ if or .Params.readingTime .Params.difficulty .Params.lab_required .Params.post_type_fa }}
                 <div class="article-meta-badges">
@@ -75,6 +65,16 @@
                         </div>
                     {{ end }}
                 </div>
+            {{ end }}
+
+            {{/* Table of Contents - فهرست مطالب در بالای صفحه (فقط نمایش) */}}
+            {{ if .TableOfContents }}
+            <div class="toc-container">
+                <h2 class="toc-title">فهرست مطالب</h2>
+                <nav id="TableOfContents">
+                    {{ .TableOfContents }}
+                </nav>
+            </div>
             {{ end }}
             
             <div class="article-content{{ if .Params.custom_class }} {{ .Params.custom_class }}-content{{ end }}">
