@@ -1,11 +1,11 @@
 baseURL = "https://davoodya.ir/"
 languageCode = "fa"
-title = "مقالات داوود یحیی – Davood Yahya Articles"
+title = "مقالات داوود یاحی – Davood Yahay Articles"
 defaultContentLanguage = "fa"
 theme = 'ananke'
 enableRobotsTXT = true
-relativeURLs = false
-canonifyURLs = true
+relativeURLs = true
+canonifyURLs = false
 
 # Summary settings
 summaryLength = 70
@@ -13,7 +13,7 @@ hasCJKLanguage = true
 
 # Pagination
 [pagination]
-pagerSize = 6
+pagerSize = 4
 
 # Output formats for search
 [outputs]

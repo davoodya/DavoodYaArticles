@@ -1,0 +1,106 @@
+/* ============================= */
+/* Custom Page Styles */
+/* ============================= */
+
+/* SEO Keywords Page - Specific styles for horizontal scroll fix */
+.seo-keywords-page {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+.seo-keywords-page-content {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+/* Force all child elements to respect width */
+.seo-keywords-page-content * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Images in SEO page */
+.seo-keywords-page-content img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+/* Code blocks in SEO page */
+.seo-keywords-page-content pre {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    white-space: pre !important;
+    word-wrap: normal !important;
+}
+
+.seo-keywords-page-content code {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+}
+
+/* Tables in SEO page */
+.seo-keywords-page-content table {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    overflow-x: auto !important;
+}
+
+/* Lists in SEO page */
+.seo-keywords-page-content ul,
+.seo-keywords-page-content ol {
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+}
+
+.seo-keywords-page-content li {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+}
+
+/* Paragraphs in SEO page */
+.seo-keywords-page-content p {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+/* Headings in SEO page */
+.seo-keywords-page-content h1,
+.seo-keywords-page-content h2,
+.seo-keywords-page-content h3,
+.seo-keywords-page-content h4,
+.seo-keywords-page-content h5,
+.seo-keywords-page-content h6 {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+/* Blockquotes in SEO page */
+.seo-keywords-page-content blockquote {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    word-wrap: break-word !important;
+}
+
+/* Links in SEO page */
+.seo-keywords-page-content a {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+/* ============================= */
+/* Other Custom Page Styles (Add more as needed) */
+/* ============================= */
+
+/* Example: Custom class for another page */
+.custom-page-name {
+    /* Your custom styles here */
+}

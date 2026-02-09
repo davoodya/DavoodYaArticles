@@ -102,7 +102,7 @@ header {
 
 .logo h1,
 .logo h2 {
-  font-family: var(--terminal-font);
+  font-family: 'Fira Code', 'Consolas', monospace;
   font-size: 1.1rem;
   color: var(--accent-green);
   text-shadow: var(--glow-shadow);
@@ -159,7 +159,7 @@ nav {
 .nav-links a {
   color: var(--main-text);
   text-decoration: none;
-  font-family: var(--Vazir);
+  font-family: 'Vazir', 'Shabnam', sans-serif;
   font-weight: 500;
   font-size: 0.85rem;
   position: relative;
@@ -277,7 +277,7 @@ nav {
   color: var(--accent-green);
   font-size: 2rem;
   margin-bottom: 15px;
-  font-family: var(--terminal-font);
+  font-family: 'Fira Code', 'Consolas', monospace;
 }
 
 .footer-logo span {
@@ -285,7 +285,7 @@ nav {
 }
 
 .logo-glitch-footer {
-  font-family: var(--terminal-font);
+  font-family: 'Fira Code', 'Consolas', monospace;
   font-size: 1.8rem;
   color: var(--accent-green);
   margin-bottom: 20px;
@@ -321,7 +321,7 @@ nav {
   font-size: 1.1rem;
   max-width: 300px;
   line-height: 1.6;
-  font-family: var(--Shabnam);
+  font-family: 'Shabnam', 'Vazir', sans-serif;
 }
 
 .footer-logo img {
@@ -354,7 +354,7 @@ nav {
   color: var(--accent-green);
   font-size: 1.3rem;
   margin-bottom: 20px;
-  font-family: var(--Vazir);
+  font-family: 'Shabnam', 'Vazir', sans-serif;
   position: relative;
   display: inline-block;
 }
@@ -401,7 +401,7 @@ nav {
 .footer-links a {
   color: var(--main-text);
   text-decoration: none;
-  font-family: var(--Shabnam);
+  font-family: 'Vazir', 'Shabnam', sans-serif;
   transition: all 0.3s ease;
   display: inline-block;
   position: relative;
@@ -430,7 +430,7 @@ nav {
 .footer-contact p {
   color: var(--main-text);
   margin-bottom: 10px;
-  font-family: var(--Shabnam);
+  font-family: 'Vazir', 'Shabnam', sans-serif;
   display: flex;
   align-items: center;
 }
@@ -577,12 +577,12 @@ nav {
 
 .footer-bottom p {
   color: var(--main-text);
-  font-family: var(--Shabnam);
+  font-family: 'Vazir', 'Shabnam', sans-serif;
   font-size: 0.9rem;
 }
 .footer-bottom span {
   color: var(--accent-green);
-  font-family: var(--Shabnam);
+  font-family: 'Shabnam', 'Vazir', sans-serif;
   font-size: 0.9rem;
 }
 

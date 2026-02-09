@@ -49,22 +49,28 @@
     <meta name="base-url" content="{{ .Site.BaseURL }}">
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="{{ "assets/css/fonts.css" | relURL }}" type="text/css">
+    {{ $fonts := resources.Get "css/fonts.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $fonts.RelPermalink }}" integrity="{{ $fonts.Data.Integrity }}">
     
     <!-- Header & Footer Styles -->
-    <link rel="stylesheet" href="{{ "assets/css/header-footer.css" | relURL }}" type="text/css">
+    {{ $headerFooter := resources.Get "css/header-footer.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $headerFooter.RelPermalink }}" integrity="{{ $headerFooter.Data.Integrity }}">
     
     <!-- Main Styles -->
-    <link rel="stylesheet" href="{{ "assets/css/main.css" | relURL }}" type="text/css">
+    {{ $main := resources.Get "css/main.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}">
     
     <!-- Custom Page Styles -->
-    <link rel="stylesheet" href="{{ "assets/css/custom-pages.css" | relURL }}" type="text/css">
+    {{ $customPages := resources.Get "css/custom-pages.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $customPages.RelPermalink }}" integrity="{{ $customPages.Data.Integrity }}">
     
     <!-- Search Styles -->
-    <link rel="stylesheet" href="{{ "assets/css/search.css" | relURL }}" type="text/css">
+    {{ $search := resources.Get "css/search.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}">
     
     <!-- Font Fixes - Load Last to Override -->
-    <link rel="stylesheet" href="{{ "assets/css/font-fixes.css" | relURL }}" type="text/css">
+    {{ $fontFixes := resources.Get "css/font-fixes.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $fontFixes.RelPermalink }}" integrity="{{ $fontFixes.Data.Integrity }}">
 
     <!-- ========================= -->
     <!-- SCHEMA STRUCTURED DATA -->
