@@ -10,8 +10,8 @@ author = "Davood Yahay"
 robots = "index, follow"
 canonical = "https://davoodya.ir/knowledge/seo/"
 
-featured_image = ""
-images = []
+featured_image = "/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png"
+images = ["/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png"]
 
 [params.opengraph]
   title = "سئو"

@@ -10,8 +10,8 @@ author = "Davood Yahay"
 robots = "index, follow"
 canonical = "https://davoodya.ir/knowledge/cyber-security/"
 
-featured_image = ""
-images = []
+featured_image = "/images/cyber-security/Basic-Encryption-1.png"
+images = ["/images/cyber-security/Basic-Encryption-1.png"]
 
 [params.opengraph]
   title = "امنیت سایبری"

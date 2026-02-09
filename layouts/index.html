@@ -10,12 +10,30 @@
       <div class="home-grid">
         {{ range .Site.Sections }}
         <article class="category-card">
-          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-          {{ with .Params.description }}
-            <p class="category-description-text">{{ . }}</p>
+          {{ $featuredImage := .Params.featured_image }}
+          {{ $images := .Params.images }}
+          {{ $imageUrl := "" }}
+          
+          {{ if $featuredImage }}
+            {{ $imageUrl = $featuredImage }}
+          {{ else if $images }}
+            {{ $imageUrl = index $images 0 }}
           {{ end }}
-          <div class="category-meta">
-            <span class="category-count">📚 <strong>{{ len .Pages }}</strong> مطلب</span>
+          
+          {{ if $imageUrl }}
+          <div class="category-image-wrapper">
+            <img src="{{ $imageUrl | relURL }}" alt="{{ .Title }}" class="category-featured-image" loading="lazy">
+          </div>
+          {{ end }}
+          
+          <div class="category-content">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            {{ with .Params.description }}
+              <p class="category-description-text">{{ . }}</p>
+            {{ end }}
+            <div class="category-meta">
+              <span class="category-count">📚 <strong>{{ len .Pages }}</strong> مطلب</span>
+            </div>
           </div>
         </article>
         {{ end }}

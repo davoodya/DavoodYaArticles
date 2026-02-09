@@ -300,6 +300,209 @@ hugo server -D --disableFastRender
 
 ---
 
+## 🆕 به‌روزرسانی: نمایش تصویر در صفحه اصلی
+
+### تاریخ: 09 فوریه 2026
+
+#### ویژگی جدید: تصویر شاخص دسته‌بندی‌ها در Home Page
+
+علاوه بر نمایش تصویر در کارت‌های مقالات، حالا **تصاویر شاخص دسته‌بندی‌ها** نیز در صفحه اصلی (Home Page) نمایش داده می‌شوند!
+
+### ✨ ویژگی‌های جدید
+
+1. **نمایش تصویر شاخص برای هر دسته‌بندی**
+   - تصاویر با اندازه ثابت و responsive
+   - انیمیشن hover با zoom effect
+   - lazy loading
+
+2. **اندازه‌های تصویر:**
+   - دسکتاپ: **220px**
+   - تبلت (< 768px): **180px**
+   - موبایل (< 480px): **160px**
+
+3. **ساختار جدید کارت دسته‌بندی:**
+```
+┌────────────────────────────┐
+│                            │
+│     [تصویر شاخص]          │ ← 220px (desktop)
+│                            │
+├────────────────────────────┤
+│  عنوان دسته‌بندی          │
+│  توضیحات دسته‌بندی        │
+│  📚 تعداد مطالب           │
+└────────────────────────────┘
+```
+
+### 📁 فایل‌های تغییر یافته (Home Page)
+
+#### 1. `layouts/index.html`
+
+```html
+<article class="category-card">
+  {{ $featuredImage := .Params.featured_image }}
+  {{ $images := .Params.images }}
+  {{ $imageUrl := "" }}
+  
+  {{ if $featuredImage }}
+    {{ $imageUrl = $featuredImage }}
+  {{ else if $images }}
+    {{ $imageUrl = index $images 0 }}
+  {{ end }}
+  
+  {{ if $imageUrl }}
+  <div class="category-image-wrapper">
+    <img src="{{ $imageUrl | relURL }}" 
+         alt="{{ .Title }}" 
+         class="category-featured-image" 
+         loading="lazy">
+  </div>
+  {{ end }}
+  
+  <div class="category-content">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <p class="category-description-text">{{ .Params.description }}</p>
+    <div class="category-meta">
+      <span class="category-count">📚 <strong>{{ len .Pages }}</strong> مطلب</span>
+    </div>
+  </div>
+</article>
+```
+
+#### 2. CSS جدید (assets/css/main.css و static/css/main.css)
+
+```css
+/* Category Card - بدون Padding */
+.category-card {
+    padding: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* تصویر شاخص دسته‌بندی */
+.category-image-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 16px 16px 0 0;
+    background: linear-gradient(135deg, rgba(0, 255, 65, 0.05), rgba(58, 173, 223, 0.05));
+}
+
+.category-featured-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: block;
+}
+
+/* Hover Effect */
+.category-card:hover .category-featured-image {
+    transform: scale(1.1);
+}
+
+/* محتوای دسته‌بندی */
+.category-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 768px) {
+    .category-image-wrapper {
+        height: 180px;
+    }
+    
+    .category-content {
+        padding: 1.5rem 1.2rem;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+    .category-image-wrapper {
+        height: 160px;
+    }
+    
+    .category-content {
+        padding: 1.2rem 1rem;
+    }
+    
+    .category-card h2 {
+        font-size: 1.3rem;
+    }
+}
+```
+
+### 🎯 پیکربندی دسته‌بندی‌ها
+
+برای نمایش تصویر شاخص در صفحه اصلی، در فایل `_index.md` هر دسته‌بندی:
+
+```toml
++++
+title = "امنیت سایبری"
+description = "مجموعه مقالات تخصصی امنیت سایبری"
+
+# تصویر شاخص برای صفحه اصلی
+featured_image = "/images/cyber-security/Basic-Encryption-1.png"
+images = ["/images/cyber-security/Basic-Encryption-1.png"]
+
+[params.opengraph]
+  image = "/images/cyber-security/Basic-Encryption-1.png"
+
+[params.twitter]
+  image = "/images/cyber-security/Basic-Encryption-1.png"
++++
+```
+
+### 📊 دسته‌بندی‌های با تصویر شاخص
+
+| دسته‌بندی | وضعیت تصویر | مسیر تصویر |
+|-----------|-------------|------------|
+| امنیت سایبری | ✅ دارد | `/images/cyber-security/Basic-Encryption-1.png` |
+| لینوکس | ✅ دارد | `/images/linux/60CommandsHackerShouldKnowit-1.png` |
+| سئو | ✅ دارد | `/images/seo/FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png` |
+| ابزارها | ✅ دارد | `/images/tools/MSFConsoleCommands-13.png` |
+| پایتون | ⚠️ ندارد | نیاز به تصویر |
+| شبکه | ⚠️ ندارد | نیاز به تصویر |
+
+### 🧪 نحوه تست
+
+```bash
+# شروع سرور
+hugo server -D
+
+# مشاهده صفحه اصلی
+http://localhost:1313/
+
+# بررسی responsive:
+# - Desktop: http://localhost:1313/
+# - Tablet: DevTools > Responsive Mode (768px)
+# - Mobile: DevTools > Responsive Mode (375px)
+```
+
+### 📚 مستندات
+
+- **راهنمای کامل**: `docs/CATEGORY_FEATURED_IMAGE_GUIDE.md`
+- **این خلاصه**: `docs/FEATURED_IMAGE_SUMMARY.md`
+
+### ✅ Checklist
+
+- [x] تصویر در صفحه اصلی نمایش داده می‌شود
+- [x] اندازه تصاویر ثابت است (force با object-fit: cover)
+- [x] Responsive design پیاده‌سازی شد
+- [x] Hover animation کار می‌کند
+- [x] Lazy loading فعال است
+- [x] دسته‌بندی‌های بدون تصویر به هم نمی‌ریزند
+- [x] CSS در هر دو فایل assets و static به‌روز شد
+- [x] مستندات کامل نوشته شد
+
+---
+
 **وضعیت**: ✅ تکمیل شده و تست شده  
 **تاریخ**: 09 فوریه 2026  
-**نسخه**: 1.0.0
+**نسخه**: 2.0.0 (شامل Home Page Featured Images)

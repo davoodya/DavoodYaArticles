@@ -15,13 +15,13 @@ author = "Davood Yahay"
 robots = "index, follow"
 canonical = "https://davoodya.ir/tools/msfconsole-commands/"
 
-featured_image = "/images/tools/MSFConsoleCommands-1.png"
-images = ["/images/tools/MSFConsoleCommands-1.png"]
+featured_image = "/images/tools/MSFConsoleCommands-13.png"
+images = ["/images/tools/MSFConsoleCommands-13.png"]
 
 [params.opengraph]
   title = "MSFConsole Commands"
   description = "- MSFConsole Basic Commands - E35: MSFConsole Commands Description - MSFConsole Help - MSFConsole Commands Description - E36: MSFConsole Commands -..."
-  image = "/images/tools/MSFConsoleCommands-1.png"
+  image = "/images/tools/MSFConsoleCommands-13.png"
   url = "https://davoodya.ir/tools/msfconsole-commands/"
   type = "article"
 
@@ -29,7 +29,7 @@ images = ["/images/tools/MSFConsoleCommands-1.png"]
   card = "summary_large_image"
   title = "MSFConsole Commands"
   description = "- MSFConsole Basic Commands - E35: MSFConsole Commands Description - MSFConsole Help - MSFConsole Commands Description - E36: MSFConsole Commands -..."
-  image = "/images/tools/MSFConsoleCommands-1.png"
+  image = "/images/tools/MSFConsoleCommands-13.png"
 
 readingTime = 16
 difficulty = "medium"
