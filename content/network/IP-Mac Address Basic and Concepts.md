@@ -5,6 +5,12 @@ date = "2024-03-25T15:41:10+03:30"
 lastmod = "2026-02-09T15:41:10+03:30"
 draft = false
 
+# Badges
+readingTime = 14
+difficulty = "intermediate"  # beginner|medium|intermediate|advanced
+lab_required = true
+post_type_fa = "آموزشی"
+
 categories = ["network"]
 tags = ["network"]
 series = ["network"]
@@ -31,12 +37,9 @@ images = ["/images/network/IP-MacAddressBasicandConcepts-1.png"]
   description = "1. Binary 1. 01 2. Octa 1. 0 to 8 3. Decimal 1. 0 to 10 4. Hexadecimal 1. 0 to F 1. 0123456789 & ABCDEF 5. Convert Binary to Decimal Number 1. Whats..."
   image = "/images/network/IP-MacAddressBasicandConcepts-1.png"
 
-readingTime = 6
-difficulty = "medium"
+
 toc = true
 math = false
-lab_required = true
-post_type_fa = "مقاله"
 
 # layout = "single"
 type = "posts"

@@ -9,6 +9,13 @@ categories = ["network"]
 tags = ["network"]
 series = ["network"]
 
+readingTime = 2
+difficulty = "medium"
+toc = true
+math = false
+lab_required = true
+post_type_fa = "مقاله"
+
 description = "1. Set IP on Computer 2. Update & Check Drivers(Device Manager) 3. Set Password on User & Change Admin Username 4. Set Computer Name 5. Uninstall a..."
 keywords = ["Network Basics-Terminology-Topology", "network", "network-basics-terminology-topology"]
 author = "Davood Yahay"
@@ -31,12 +38,7 @@ images = ["/images/network/NetworkBasics-Terminology-Topology-1.png"]
   description = "1. Set IP on Computer 2. Update & Check Drivers(Device Manager) 3. Set Password on User & Change Admin Username 4. Set Computer Name 5. Uninstall a..."
   image = "/images/network/NetworkBasics-Terminology-Topology-1.png"
 
-readingTime = 2
-difficulty = "medium"
-toc = true
-math = false
-lab_required = true
-post_type_fa = "مقاله"
+
 
 # layout = "single"
 type = "posts"
