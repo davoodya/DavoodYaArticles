@@ -1115,7 +1115,7 @@ body {
     /* overflow-y: auto;   */
     scrollbar-width: thin;
     scrollbar-color: var(--accent-green) var(--darker-bg);
-    
+    z-index: 100; /* اطمینان از نمایش بالای سایر المان‌ها */
 }
 
 .sidebar::-webkit-scrollbar {
@@ -1139,7 +1139,9 @@ body {
     padding: 1.5rem;
     margin-bottom: 2rem;
     transition: all 0.3s ease;
-    
+    overflow: visible; /* اجازه نمایش dropdown خارج از widget */
+    position: relative; /* برای z-index */
+    z-index: 10; /* بالاتر از سایر widgets */
 }
 
 .sidebar-widget:hover {
@@ -1427,6 +1429,7 @@ body {
 .sort-dropdown-container {
     position: relative;
     width: 100%;
+    z-index: 1000; /* اطمینان از نمایش dropdown */
 }
 
 .sort-dropdown-toggle {
@@ -1494,7 +1497,7 @@ body {
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 999;
+    z-index: 9999; /* افزایش z-index برای نمایش بالای footer */
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5),
                 0 0 20px rgba(0, 255, 65, 0.1);
     backdrop-filter: blur(10px);
