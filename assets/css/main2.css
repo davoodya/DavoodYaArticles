@@ -937,6 +937,141 @@ body {
     padding: 1rem;
 }
 
+/* ============================= */
+/* Sidebar Sort Dropdown */
+/* ============================= */
+
+.sort-dropdown-container {
+    position: relative;
+    width: 100%;
+}
+
+.sort-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.9rem 1rem;
+    background: rgba(0, 255, 65, 0.05);
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    border-radius: 10px;
+    color: var(--main-text);
+    font-family: var(--persian-heading);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: right;
+}
+
+.sort-dropdown-toggle:hover {
+    background: rgba(0, 255, 65, 0.1);
+    border-color: rgba(0, 255, 65, 0.4);
+}
+
+.sort-dropdown-toggle.active {
+    background: rgba(0, 255, 65, 0.1);
+    border-color: var(--accent-green);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+}
+
+.sort-current-label {
+    flex: 1;
+    text-align: right;
+    color: var(--accent-green);
+}
+
+.sort-dropdown-toggle .dropdown-arrow {
+    width: 20px;
+    height: 20px;
+    fill: var(--accent-green);
+    transition: transform 0.3s ease;
+}
+
+.sort-dropdown-toggle.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.sort-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    border-radius: 10px;
+    padding: 0.5rem 0;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 100;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5),
+                0 0 20px rgba(0, 255, 65, 0.1);
+}
+
+.sort-dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.sort-option {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.sort-option:hover {
+    background: rgba(0, 255, 65, 0.08);
+}
+
+.sort-option.active {
+    background: rgba(0, 255, 65, 0.12);
+}
+
+.sort-option .option-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--accent-blue);
+    flex-shrink: 0;
+}
+
+.sort-option .option-label {
+    flex: 1;
+    color: var(--main-text);
+    font-family: var(--persian-heading);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: right;
+}
+
+.sort-option.active .option-label {
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+.sort-option .check-icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--accent-green);
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    flex-shrink: 0;
+}
+
+.sort-option.active .check-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
 /* Sidebar Responsive */
 @media (max-width: 1024px) {
     .sidebar {

@@ -366,6 +366,21 @@
         const sortOrderElement = document.querySelector('input[name="sort_order"]:checked');
         const sortOrder = sortOrderElement ? sortOrderElement.value : 'newest';
         
+        // همزمان‌سازی sidebar sort dropdown
+        const sidebarLabel = document.getElementById('sidebarSortLabel');
+        if (sidebarLabel) {
+            sidebarLabel.textContent = sortOrder === 'newest' ? 'جدیدترین' : 'قدیمی‌ترین';
+        }
+        
+        const sidebarOptions = document.querySelectorAll('#sidebarSortMenu .sort-option');
+        sidebarOptions.forEach(option => {
+            if (option.dataset.value === sortOrder) {
+                option.classList.add('active');
+            } else {
+                option.classList.remove('active');
+            }
+        });
+        
         console.log('[Filter System] Filter criteria:', {
             minTime,
             maxTime,
@@ -535,6 +550,116 @@
             if (modal && modal.classList.contains('active')) {
                 window.closeFilterModal();
             }
+        }
+    });
+    
+    // ===========================
+    // Sidebar Sort Dropdown Functions
+    // ===========================
+    
+    // Toggle sidebar sort dropdown
+    window.toggleSidebarSortDropdown = function() {
+        const toggle = document.getElementById('sidebarSortToggle');
+        const menu = document.getElementById('sidebarSortMenu');
+        
+        if (!toggle || !menu) return;
+        
+        const isActive = toggle.classList.contains('active');
+        
+        if (isActive) {
+            // Close dropdown
+            toggle.classList.remove('active');
+            menu.classList.remove('active');
+        } else {
+            // Open dropdown
+            toggle.classList.add('active');
+            menu.classList.add('active');
+        }
+    };
+    
+    // Apply sort from sidebar
+    window.applySidebarSort = function(sortValue) {
+        console.log(`[Sidebar Sort] Applying sort: ${sortValue}`);
+        
+        // Update label
+        const label = document.getElementById('sidebarSortLabel');
+        const toggle = document.getElementById('sidebarSortToggle');
+        const menu = document.getElementById('sidebarSortMenu');
+        
+        if (label) {
+            label.textContent = sortValue === 'newest' ? 'جدیدترین' : 'قدیمی‌ترین';
+        }
+        
+        // Update active state
+        const options = document.querySelectorAll('#sidebarSortMenu .sort-option');
+        options.forEach(option => {
+            if (option.dataset.value === sortValue) {
+                option.classList.add('active');
+            } else {
+                option.classList.remove('active');
+            }
+        });
+        
+        // همزمان‌سازی با modal filter
+        const modalSortRadio = document.querySelector(`input[name="sort_order"][value="${sortValue}"]`);
+        if (modalSortRadio) {
+            modalSortRadio.checked = true;
+        }
+        
+        // Close dropdown
+        if (toggle) toggle.classList.remove('active');
+        if (menu) menu.classList.remove('active');
+        
+        // دریافت فیلترهای فعلی
+        const minTime = parseInt(document.getElementById('readingTimeMinRange')?.value || 0);
+        const maxTime = parseInt(document.getElementById('readingTimeMaxRange')?.value || 60);
+        
+        const selectedDifficulties = Array.from(document.querySelectorAll('input[name="difficulty"]:checked') || [])
+            .map(input => input.value);
+        
+        const selectedLabRequired = Array.from(document.querySelectorAll('input[name="lab_required"]:checked') || [])
+            .map(input => input.value);
+        
+        const selectedPostTypes = Array.from(document.querySelectorAll('input[name="post_type"]:checked') || [])
+            .map(input => input.value);
+        
+        // اعمال فیلتر با ترتیب مرتب‌سازی جدید
+        if (typeof window.applyLoadMoreFilter === 'function') {
+            // استفاده از سیستم Load More
+            console.log('[Sidebar Sort] Using Load More filter system');
+            const count = window.applyLoadMoreFilter(function(article) {
+                return matchesFilter(article, minTime, maxTime, selectedDifficulties, selectedLabRequired, selectedPostTypes);
+            }, sortValue);
+            updateFilterResults(count);
+            showNoResultsMessage(count);
+        } else if (typeof window.applyArticlesFilter === 'function') {
+            // استفاده از Articles Loader قدیمی
+            console.log('[Sidebar Sort] Using Articles Loader filter system');
+            const count = window.applyArticlesFilter(function(article) {
+                return matchesFilter(article, minTime, maxTime, selectedDifficulties, selectedLabRequired, selectedPostTypes);
+            });
+            updateFilterResults(count);
+            showNoResultsMessage(count);
+        } else {
+            // Fallback
+            console.log('[Sidebar Sort] Using fallback filter');
+            filterArticles(minTime, maxTime, selectedDifficulties, selectedLabRequired, selectedPostTypes);
+        }
+        
+        console.log('[Sidebar Sort] ✅ Sort applied successfully');
+    };
+    
+    // Close sidebar sort dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        const toggle = document.getElementById('sidebarSortToggle');
+        const menu = document.getElementById('sidebarSortMenu');
+        
+        if (!toggle || !menu) return;
+        
+        // اگر کلیک خارج از dropdown بود، آن را ببند
+        if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+            toggle.classList.remove('active');
+            menu.classList.remove('active');
         }
     });
     
