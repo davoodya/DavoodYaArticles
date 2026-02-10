@@ -1,37 +1,37 @@
-# راهنمای سریع URL Canonical Updater
+# URL Canonical Updater - Quick Guide
 
-## 🚀 استفاده سریع
+## 🚀 Quick Start
 
-### 1. اجرای اسکریپت
+### 1. Run the Script
 ```bash
 python url-canonical-updater.py
 ```
 
-### 2. وارد کردن مسیر
-- **برای پردازش کل content**: فقط Enter بزنید
-- **برای مسیر خاص**: مسیر را وارد کنید
+### 2. Enter Path
+- **To process all content**: Just press Enter
+- **For specific path**: Type the path
 
-مثال:
+Example:
 ```
 content/cyber-security
 ```
 
-### 3. تایید
-وقتی پرسید "آیا می‌خواهید ادامه دهید؟" تایپ کنید: `y`
+### 3. Confirm
+When asked "Do you want to continue?" type: `y`
 
 ---
 
-## 📝 چه کاری انجام می‌دهد؟
+## 📝 What Does It Do?
 
-این اسکریپت تمام URLهای front matter را پیدا کرده و به آنها `/knowledge/` اضافه می‌کند:
+This script finds all URLs in front matter and adds `/knowledge/` to them:
 
-**قبل:**
+**Before:**
 ```markdown
 url = "https://davoodya.ir/cyber-security/article/"
 canonical = "https://davoodya.ir/cyber-security/article/"
 ```
 
-**بعد:**
+**After:**
 ```markdown
 url = "https://davoodya.ir/knowledge/cyber-security/article/"
 canonical = "https://davoodya.ir/knowledge/cyber-security/article/"
@@ -39,119 +39,119 @@ canonical = "https://davoodya.ir/knowledge/cyber-security/article/"
 
 ---
 
-## ✅ ویژگی‌ها
+## ✅ Features
 
-- ✅ پشتیبانی از TOML (`---`) و YAML (`+++`)
-- ✅ پشتیبانی از فرمت‌های مختلف: `url = "..."` و `url: "..."`
-- ✅ Handle کردن Space در مسیر
-- ✅ پردازش زیردایرکتوری‌ها
-- ✅ گزارش کامل و لاگ دقیق
+- ✅ Supports TOML (`---`) and YAML (`+++`)
+- ✅ Supports different formats: `url = "..."` and `url: "..."`
+- ✅ Handles spaces in paths
+- ✅ Processes subdirectories recursively
+- ✅ Complete reporting and detailed logging
 
 ---
 
-## ⚠️ نکات مهم
+## ⚠️ Important Notes
 
-### 1. قبل از اجرا backup بگیرید!
+### 1. Backup Before Running!
 ```bash
 git add .
 git commit -m "Before URL update"
 ```
 
-### 2. ابتدا روی یک پوشه کوچک تست کنید
-مثلا:
+### 2. Test on a Small Folder First
+For example:
 ```
 content/cyber-security/SANS-401
 ```
 
-### 3. بعد از اجرا بررسی کنید
-- فایل لاگ: `url_canonical_updater_YYYYMMDD_HHMMSS.log`
-- فایل گزارش: `url_canonical_updater_report_YYYYMMDD_HHMMSS.txt`
+### 3. Check Results After Running
+- Log file: `url_canonical_updater_YYYYMMDD_HHMMSS.log`
+- Report file: `url_canonical_updater_report_YYYYMMDD_HHMMSS.txt`
 
 ---
 
-## 📊 خروجی‌ها
+## 📊 Outputs
 
-بعد از اجرا دو فایل ایجاد می‌شود:
+After running, two files are created:
 
-1. **Log File**: تمام جزئیات پردازش
-2. **Report File**: خلاصه آمار و لیست فایل‌های پردازش شده
+1. **Log File**: All processing details
+2. **Report File**: Statistics summary and list of processed files
 
 ---
 
-## 🔍 مثال کامل
+## 🔍 Complete Example
 
 ```bash
-# اجرای اسکریپت
+# Run the script
 python url-canonical-updater.py
 
-# پاسخ به سوالات:
-# مسیر دایرکتوری: [Enter برای content/]
-# ادامه دهید؟: y
+# Answer the questions:
+# Directory path: [Press Enter for content/]
+# Continue?: y
 
-# نتیجه:
-# ✓ تعداد 45 فایل پیدا شد
-# ✓ 42 فایل پردازش شد
-# ✓ 3 فایل رد شد (URLهای قدیمی نداشتند)
-# ✓ 84 جایگزینی انجام شد
+# Result:
+# ✓ Found 45 files
+# ✓ Processed 42 files
+# ✓ Skipped 3 files (didn't have old URLs)
+# ✓ Made 84 replacements
 ```
 
 ---
 
-## 📖 راهنمای کامل
+## 📖 Complete Guide
 
-برای جزئیات بیشتر، فایل زیر را مطالعه کنید:
+For more details, read:
 ```
 docs/URL_CANONICAL_UPDATER_GUIDE.md
 ```
 
 ---
 
-## 🧪 تست
+## 🧪 Testing
 
-برای تست اسکریپت:
+To test the script:
 ```bash
 python test-url-updater.py
 ```
 
-این فایل‌های تست را در `test/test-url-updater/` پردازش می‌کند.
+This processes test files in `test/test-url-updater/`.
 
 ---
 
-## ❓ سوالات متداول
+## ❓ FAQ
 
-### اگر اشتباهی اجرا کردم چه کنم؟
-از Git برگردانید:
+### What if I run it by mistake?
+Restore from Git:
 ```bash
 git checkout -- content/
 ```
 
-### آیا می‌توانم دوباره اجرا کنم؟
-بله! اگر دوباره اجرا کنید، فایل‌هایی که قبلا به‌روزرسانی شده‌اند رد می‌شوند.
+### Can I run it again?
+Yes! If you run it again, files that were already updated will be skipped.
 
-### چرا برخی فایل‌ها رد می‌شوند؟
-دلایل احتمالی:
-- بدون front matter
-- URL قدیمی ندارند
-- قبلا به‌روزرسانی شده‌اند
-
----
-
-## 📌 چک‌لیست
-
-قبل از اجرا:
-- [ ] Backup گرفته‌اید؟
-- [ ] روی تعداد کمی فایل تست کردید؟
-- [ ] مسیر را چک کرده‌اید؟
-
-بعد از اجرا:
-- [ ] لاگ فایل را بررسی کردید؟
-- [ ] گزارش را خواندید؟
-- [ ] چند فایل را دستی چک کردید؟
-- [ ] Hugo را build کردید؟
+### Why are some files skipped?
+Possible reasons:
+- No front matter
+- Don't have old URLs
+- Already updated
 
 ---
 
-**تاریخ ایجاد**: 2026-02-10  
-**نسخه**: 1.0.0
+## 📌 Checklist
 
-برای پشتیبانی به documentation مراجعه کنید.
+Before running:
+- [ ] Made a backup?
+- [ ] Tested on a few files?
+- [ ] Checked the path?
+
+After running:
+- [ ] Reviewed the log file?
+- [ ] Read the report?
+- [ ] Manually checked some files?
+- [ ] Built Hugo?
+
+---
+
+**Created**: 2026-02-10  
+**Version**: 1.0.0
+
+For support, refer to the documentation.

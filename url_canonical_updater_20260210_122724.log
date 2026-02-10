@@ -1,0 +1,42 @@
+2026-02-10 12:27:24,278 - INFO - ================================================================================
+2026-02-10 12:27:24,279 - INFO - URL & Canonical Updater - Starting Process
+2026-02-10 12:27:24,279 - INFO - ================================================================================
+2026-02-10 12:27:24,279 - INFO - Base Directory: H:\Repo\Hugo\davoodya\test\test-url-updater
+2026-02-10 12:27:24,279 - INFO - Search Pattern: https://davoodya.ir/
+2026-02-10 12:27:24,279 - INFO - Replace Pattern: https://davoodya.ir/knowledge/
+2026-02-10 12:27:24,279 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:27:24,279 - INFO - ✓ Directory is valid: H:\Repo\Hugo\davoodya\test\test-url-updater
+2026-02-10 12:27:24,280 - INFO - Searching for Markdown files...
+2026-02-10 12:27:24,280 - INFO - ✓ Found 2 Markdown files
+2026-02-10 12:27:24,280 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:27:24,280 - INFO - Starting file processing...
+2026-02-10 12:27:24,280 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:27:24,280 - INFO - 
+[1/2] 
+2026-02-10 12:27:24,280 - INFO - Processing: test-article-1.md
+2026-02-10 12:27:24,281 - INFO -   ✓ Success: 2 replacement(s) made (url: 1, canonical: 1)
+2026-02-10 12:27:24,281 - INFO - 
+[2/2] 
+2026-02-10 12:27:24,281 - INFO - Processing: test-article-2.md
+2026-02-10 12:27:24,282 - INFO -   ✓ Success: 2 replacement(s) made (url: 1, canonical: 1)
+2026-02-10 12:27:24,282 - INFO - 
+================================================================================
+2026-02-10 12:27:24,282 - INFO - Final Processing Report
+2026-02-10 12:27:24,282 - INFO - ================================================================================
+2026-02-10 12:27:24,282 - INFO - Processed Directory: H:\Repo\Hugo\davoodya\test\test-url-updater
+2026-02-10 12:27:24,282 - INFO - Date & Time: 2026-02-10 12:27:24
+2026-02-10 12:27:24,283 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:27:24,283 - INFO - General Statistics:
+2026-02-10 12:27:24,283 - INFO -   • Total files found: 2
+2026-02-10 12:27:24,283 - INFO -   • Files processed: 2
+2026-02-10 12:27:24,283 - INFO -   • Files skipped: 0
+2026-02-10 12:27:24,283 - INFO -   • Files with errors: 0
+2026-02-10 12:27:24,283 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:27:24,283 - INFO - Replacement Statistics:
+2026-02-10 12:27:24,283 - INFO -   • Total replacements: 4
+2026-02-10 12:27:24,283 - INFO -   • URL replacements: 2
+2026-02-10 12:27:24,283 - INFO -   • Canonical replacements: 2
+2026-02-10 12:27:24,283 - INFO - ================================================================================
+2026-02-10 12:27:24,284 - INFO - 
+✓ Detail report saved to file: url_canonical_updater_report_20260210_122724.txt
+2026-02-10 12:27:24,284 - INFO - ✓ Complete log saved to file: url_canonical_updater_20260210_122724.log

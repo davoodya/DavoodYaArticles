@@ -60,11 +60,11 @@ class URLCanonicalUpdater:
         self.error_files_list = []
         
         logger.info("="*80)
-        logger.info("URL و Canonical Updater - شروع پردازش")
+        logger.info("URL & Canonical Updater - Starting Process")
         logger.info("="*80)
-        logger.info(f"دایرکتوری پایه: {self.base_directory}")
-        logger.info(f"الگوی جستجو: {self.find_pattern}")
-        logger.info(f"الگوی جایگزین: {self.replace_pattern}")
+        logger.info(f"Base Directory: {self.base_directory}")
+        logger.info(f"Search Pattern: {self.find_pattern}")
+        logger.info(f"Replace Pattern: {self.replace_pattern}")
         logger.info("-"*80)
     
     def validate_directory(self):
@@ -75,14 +75,14 @@ class URLCanonicalUpdater:
             bool: True اگر دایرکتوری معتبر باشد
         """
         if not self.base_directory.exists():
-            logger.error(f"خطا: دایرکتوری '{self.base_directory}' وجود ندارد!")
+            logger.error(f"Error: Directory '{self.base_directory}' does not exist!")
             return False
         
         if not self.base_directory.is_dir():
-            logger.error(f"خطا: '{self.base_directory}' یک دایرکتوری نیست!")
+            logger.error(f"Error: '{self.base_directory}' is not a directory!")
             return False
         
-        logger.info(f"✓ دایرکتوری معتبر است: {self.base_directory}")
+        logger.info(f"✓ Directory is valid: {self.base_directory}")
         return True
     
     def find_markdown_files(self):
@@ -92,7 +92,7 @@ class URLCanonicalUpdater:
         Returns:
             list: لیست مسیرهای فایل‌های Markdown
         """
-        logger.info("در حال جستجوی فایل‌های Markdown...")
+        logger.info("Searching for Markdown files...")
         markdown_files = []
         
         for root, dirs, files in os.walk(self.base_directory):
@@ -101,7 +101,7 @@ class URLCanonicalUpdater:
                     file_path = Path(root) / file
                     markdown_files.append(file_path)
         
-        logger.info(f"✓ تعداد {len(markdown_files)} فایل Markdown پیدا شد")
+        logger.info(f"✓ Found {len(markdown_files)} Markdown files")
         return markdown_files
     
     def extract_frontmatter(self, content):
@@ -165,10 +165,10 @@ class URLCanonicalUpdater:
                 
                 if field_type == 'url':
                     url_count = count
-                    logger.debug(f"  - {count} مورد 'url' به‌روزرسانی شد")
+                    logger.debug(f"  - Updated {count} 'url' field(s)")
                 elif field_type == 'canonical':
                     canonical_count = count
-                    logger.debug(f"  - {count} مورد 'canonical' به‌روزرسانی شد")
+                    logger.debug(f"  - Updated {count} 'canonical' field(s)")
         
         total_count = url_count + canonical_count
         return updated_frontmatter, total_count, url_count, canonical_count
@@ -184,7 +184,7 @@ class URLCanonicalUpdater:
             tuple: (success, replacement_count, url_count, canonical_count)
         """
         try:
-            logger.info(f"در حال پردازش: {file_path.relative_to(self.base_directory)}")
+            logger.info(f"Processing: {file_path.relative_to(self.base_directory)}")
             
             # خواندن فایل
             with open(file_path, 'r', encoding='utf-8') as f:
@@ -194,19 +194,19 @@ class URLCanonicalUpdater:
             frontmatter, body, delimiter = self.extract_frontmatter(content)
             
             if frontmatter is None:
-                logger.warning(f"  ⚠ هشدار: front matter یافت نشد - فایل رد شد")
+                logger.warning(f"  ⚠ Warning: No front matter found - File skipped")
                 self.skipped_files_list.append({
                     'file': str(file_path.relative_to(self.base_directory)),
-                    'reason': 'بدون front matter'
+                    'reason': 'No front matter'
                 })
                 return False, 0, 0, 0
             
-            # بررسی اینکه آیا URL های قدیمی وجود دارند
+            # Check if old URLs exist
             if self.find_pattern not in frontmatter:
-                logger.info(f"  ℹ اطلاع: URL قدیمی یافت نشد - فایل رد شد")
+                logger.info(f"  ℹ Info: Old URL not found - File skipped")
                 self.skipped_files_list.append({
                     'file': str(file_path.relative_to(self.base_directory)),
-                    'reason': 'URL قدیمی وجود ندارد'
+                    'reason': 'Old URL does not exist'
                 })
                 return False, 0, 0, 0
             
@@ -215,10 +215,10 @@ class URLCanonicalUpdater:
                 self.update_frontmatter_urls(frontmatter)
             
             if replacement_count == 0:
-                logger.info(f"  ℹ اطلاع: هیچ تغییری لازم نبود - فایل رد شد")
+                logger.info(f"  ℹ Info: No changes needed - File skipped")
                 self.skipped_files_list.append({
                     'file': str(file_path.relative_to(self.base_directory)),
-                    'reason': 'نیازی به تغییر نبود'
+                    'reason': 'No changes needed'
                 })
                 return False, 0, 0, 0
             
@@ -229,7 +229,7 @@ class URLCanonicalUpdater:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(new_content)
             
-            logger.info(f"  ✓ موفقیت: {replacement_count} مورد جایگزین شد " +
+            logger.info(f"  ✓ Success: {replacement_count} replacement(s) made " +
                        f"(url: {url_count}, canonical: {canonical_count})")
             
             self.processed_files_list.append({
@@ -242,7 +242,7 @@ class URLCanonicalUpdater:
             return True, replacement_count, url_count, canonical_count
             
         except Exception as e:
-            logger.error(f"  ✗ خطا در پردازش فایل: {str(e)}")
+            logger.error(f"  ✗ Error processing file: {str(e)}")
             self.error_files_list.append({
                 'file': str(file_path.relative_to(self.base_directory)),
                 'error': str(e)
@@ -256,11 +256,11 @@ class URLCanonicalUpdater:
         self.stats['total_files'] = len(markdown_files)
         
         if self.stats['total_files'] == 0:
-            logger.warning("هیچ فایل Markdown برای پردازش یافت نشد!")
+            logger.warning("No Markdown files found for processing!")
             return
         
         logger.info("-"*80)
-        logger.info("شروع پردازش فایل‌ها...")
+        logger.info("Starting file processing...")
         logger.info("-"*80)
         
         # پردازش هر فایل
@@ -282,21 +282,21 @@ class URLCanonicalUpdater:
     def generate_report(self):
         """تولید گزارش نهایی"""
         logger.info("\n" + "="*80)
-        logger.info("گزارش نهایی پردازش")
+        logger.info("Final Processing Report")
         logger.info("="*80)
-        logger.info(f"دایرکتوری پردازش شده: {self.base_directory}")
-        logger.info(f"تاریخ و زمان: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        logger.info(f"Processed Directory: {self.base_directory}")
+        logger.info(f"Date & Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         logger.info("-"*80)
-        logger.info("آمار کلی:")
-        logger.info(f"  • کل فایل‌های یافت شده: {self.stats['total_files']}")
-        logger.info(f"  • فایل‌های پردازش شده: {self.stats['processed_files']}")
-        logger.info(f"  • فایل‌های رد شده: {self.stats['skipped_files']}")
-        logger.info(f"  • فایل‌های با خطا: {self.stats['error_files']}")
+        logger.info("General Statistics:")
+        logger.info(f"  • Total files found: {self.stats['total_files']}")
+        logger.info(f"  • Files processed: {self.stats['processed_files']}")
+        logger.info(f"  • Files skipped: {self.stats['skipped_files']}")
+        logger.info(f"  • Files with errors: {self.stats['error_files']}")
         logger.info("-"*80)
-        logger.info("آمار جایگزینی:")
-        logger.info(f"  • کل جایگزینی‌ها: {self.stats['total_replacements']}")
-        logger.info(f"  • جایگزینی URL: {self.stats['url_replacements']}")
-        logger.info(f"  • جایگزینی Canonical: {self.stats['canonical_replacements']}")
+        logger.info("Replacement Statistics:")
+        logger.info(f"  • Total replacements: {self.stats['total_replacements']}")
+        logger.info(f"  • URL replacements: {self.stats['url_replacements']}")
+        logger.info(f"  • Canonical replacements: {self.stats['canonical_replacements']}")
         logger.info("="*80)
         
         # ذخیره گزارش جزئیات در فایل
@@ -304,57 +304,57 @@ class URLCanonicalUpdater:
         
         with open(report_filename, 'w', encoding='utf-8') as f:
             f.write("="*80 + "\n")
-            f.write("گزارش جزئیات پردازش URL و Canonical\n")
+            f.write("URL & Canonical Processing Detail Report\n")
             f.write("="*80 + "\n\n")
             
-            f.write(f"دایرکتوری: {self.base_directory}\n")
-            f.write(f"تاریخ و زمان: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-            f.write(f"الگوی جستجو: {self.find_pattern}\n")
-            f.write(f"الگوی جایگزین: {self.replace_pattern}\n\n")
+            f.write(f"Directory: {self.base_directory}\n")
+            f.write(f"Date & Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"Search Pattern: {self.find_pattern}\n")
+            f.write(f"Replace Pattern: {self.replace_pattern}\n\n")
             
             f.write("-"*80 + "\n")
-            f.write("آمار کلی:\n")
+            f.write("General Statistics:\n")
             f.write("-"*80 + "\n")
-            f.write(f"کل فایل‌های یافت شده: {self.stats['total_files']}\n")
-            f.write(f"فایل‌های پردازش شده: {self.stats['processed_files']}\n")
-            f.write(f"فایل‌های رد شده: {self.stats['skipped_files']}\n")
-            f.write(f"فایل‌های با خطا: {self.stats['error_files']}\n\n")
+            f.write(f"Total files found: {self.stats['total_files']}\n")
+            f.write(f"Files processed: {self.stats['processed_files']}\n")
+            f.write(f"Files skipped: {self.stats['skipped_files']}\n")
+            f.write(f"Files with errors: {self.stats['error_files']}\n\n")
             
-            f.write(f"کل جایگزینی‌ها: {self.stats['total_replacements']}\n")
-            f.write(f"جایگزینی URL: {self.stats['url_replacements']}\n")
-            f.write(f"جایگزینی Canonical: {self.stats['canonical_replacements']}\n\n")
+            f.write(f"Total replacements: {self.stats['total_replacements']}\n")
+            f.write(f"URL replacements: {self.stats['url_replacements']}\n")
+            f.write(f"Canonical replacements: {self.stats['canonical_replacements']}\n\n")
             
-            # فایل‌های پردازش شده
+            # Processed files
             if self.processed_files_list:
                 f.write("="*80 + "\n")
-                f.write(f"فایل‌های پردازش شده ({len(self.processed_files_list)} مورد):\n")
+                f.write(f"Processed Files ({len(self.processed_files_list)} items):\n")
                 f.write("="*80 + "\n")
                 for item in self.processed_files_list:
                     f.write(f"\n📄 {item['file']}\n")
-                    f.write(f"   - کل جایگزینی‌ها: {item['total_replacements']}\n")
+                    f.write(f"   - Total replacements: {item['total_replacements']}\n")
                     f.write(f"   - URL: {item['url_replacements']}\n")
                     f.write(f"   - Canonical: {item['canonical_replacements']}\n")
             
-            # فایل‌های رد شده
+            # Skipped files
             if self.skipped_files_list:
                 f.write("\n" + "="*80 + "\n")
-                f.write(f"فایل‌های رد شده ({len(self.skipped_files_list)} مورد):\n")
+                f.write(f"Skipped Files ({len(self.skipped_files_list)} items):\n")
                 f.write("="*80 + "\n")
                 for item in self.skipped_files_list:
                     f.write(f"\n⚠ {item['file']}\n")
-                    f.write(f"   دلیل: {item['reason']}\n")
+                    f.write(f"   Reason: {item['reason']}\n")
             
-            # فایل‌های با خطا
+            # Files with errors
             if self.error_files_list:
                 f.write("\n" + "="*80 + "\n")
-                f.write(f"فایل‌های با خطا ({len(self.error_files_list)} مورد):\n")
+                f.write(f"Files with Errors ({len(self.error_files_list)} items):\n")
                 f.write("="*80 + "\n")
                 for item in self.error_files_list:
                     f.write(f"\n✗ {item['file']}\n")
-                    f.write(f"   خطا: {item['error']}\n")
+                    f.write(f"   Error: {item['error']}\n")
         
-        logger.info(f"\n✓ گزارش جزئیات در فایل ذخیره شد: {report_filename}")
-        logger.info(f"✓ لاگ کامل در فایل ذخیره شد: {log_filename}")
+        logger.info(f"\n✓ Detail report saved to file: {report_filename}")
+        logger.info(f"✓ Complete log saved to file: {log_filename}")
     
     def run(self):
         """اجرای کامل پردازش"""
@@ -375,15 +375,15 @@ def get_user_input():
         str: مسیر دایرکتوری
     """
     print("="*80)
-    print("URL و Canonical Updater - به‌روزرسانی front matter مقالات Hugo")
+    print("URL & Canonical Updater - Update Hugo articles front matter")
     print("="*80)
-    print("\nاین اسکریپت segment جدید 'knowledge' را به URLها اضافه می‌کند:")
-    print(f"  از: https://davoodya.ir/...")
-    print(f"  به: https://davoodya.ir/knowledge/...")
+    print("\nThis script adds the new 'knowledge' segment to URLs:")
+    print(f"  From: https://davoodya.ir/...")
+    print(f"  To:   https://davoodya.ir/knowledge/...")
     print("-"*80)
     
-    # دریافت مسیر
-    user_input = input("\nمسیر دایرکتوری را وارد کنید (Enter برای پیش‌فرض 'content/'): ").strip()
+    # Get path from user
+    user_input = input("\nEnter directory path (Press Enter for default 'content/'): ").strip()
     
     # حذف کوتیشن‌ها اگر وجود داشته باشد
     user_input = user_input.strip('"').strip("'")
@@ -404,18 +404,18 @@ def main():
         # دریافت ورودی کاربر
         directory_path = get_user_input()
         
-        print(f"\nدایرکتوری انتخاب شده: {directory_path}")
+        print(f"\nSelected directory: {directory_path}")
         print("-"*80)
         
-        # تایید کاربر
-        confirm = input("\nآیا می‌خواهید ادامه دهید؟ (y/n): ").strip().lower()
+        # User confirmation
+        confirm = input("\nDo you want to continue? (y/n): ").strip().lower()
         
-        if confirm not in ['y', 'yes', 'بله']:
-            print("\n❌ عملیات لغو شد.")
+        if confirm not in ['y', 'yes']:
+            print("\n❌ Operation cancelled.")
             return
         
         print("\n" + "="*80)
-        print("شروع پردازش...")
+        print("Starting processing...")
         print("="*80 + "\n")
         
         # ایجاد و اجرای updater
@@ -424,19 +424,19 @@ def main():
         
         if success:
             print("\n" + "="*80)
-            print("✓ پردازش با موفقیت تکمیل شد!")
+            print("✓ Processing completed successfully!")
             print("="*80)
         else:
             print("\n" + "="*80)
-            print("✗ پردازش با خطا مواجه شد.")
+            print("✗ Processing encountered errors.")
             print("="*80)
             
     except KeyboardInterrupt:
-        print("\n\n❌ عملیات توسط کاربر لغو شد.")
+        print("\n\n❌ Operation cancelled by user.")
         sys.exit(1)
     except Exception as e:
-        logger.error(f"خطای غیرمنتظره: {str(e)}", exc_info=True)
-        print(f"\n✗ خطای غیرمنتظره: {str(e)}")
+        logger.error(f"Unexpected error: {str(e)}", exc_info=True)
+        print(f"\n✗ Unexpected error: {str(e)}")
         sys.exit(1)
 
 
