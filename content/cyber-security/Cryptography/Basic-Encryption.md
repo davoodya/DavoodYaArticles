@@ -1,14 +1,28 @@
 +++
+# Basics
 title = "Basic-Encryption"
 slug = "basic-encryption"
 date = "2024-06-20T13:50:09+03:30"
 lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
+# Taxonomies
 categories = ["cyber-security", "Cryptography"]
-tags = ["cyber-security", "Cryptography", "CyberSecurity", "Encryption"]
+tags = ["cyber-security", "Cryptography", "Encryption"]
 series = ["cyber-security", "Cryptography"]
 
+# Badges and Filters
+readingTime = 23 # integer like 14, 26, 20 ....
+difficulty = "medium" # beginner | medium | intermediate | advanced
+lab_required = false 
+post_type_fa = "مقاله" # "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
+
+# Options
+toc = true
+math = false
+type = "posts"
+
+# SEO
 description = "- E2: Introduction - What  is Network Security? - Why do we need Security? - Security Concerns - That's Why Need Security? - OSI Security..."
 keywords = ["Basic-Encryption", "cyber-security", "Cryptography", "CyberSecurity", "Encryption", "basic-encryption"]
 author = "Davood Yahay"
@@ -31,61 +45,9 @@ images = ["/images/cyber-security/Basic-Encryption-1.png"]
   description = "- E2: Introduction - What  is Network Security? - Why do we need Security? - Security Concerns - That's Why Need Security? - OSI Security..."
   image = "/images/cyber-security/Basic-Encryption-1.png"
 
-readingTime = 23
-difficulty = "medium"
-toc = true
-math = false
-lab_required = true
-post_type_fa = "مقاله"
-
 # layout = "single"
-type = "posts"
+
 +++
--------
-- [E2: Introduction](#E2:%20Introduction)
-	- [What  is Network Security?](#What%20%20is%20Network%20Security?)
-	- [Why do we need Security?](#Why%20do%20we%20need%20Security?)
-	- [Security Concerns](#Security%20Concerns)
-	- [That's Why Need Security?](#That's%20Why%20Need%20Security?)
-	- [OSI Security Architecture](#OSI%20Security%20Architecture)
-	- [Security Attacks, Mechanisms & Services](#Security%20Attacks,%20Mechanisms%20&%20Services)
-	- [Episode Summary](#Episode%20Summary)
-- [E3: Network Attacks](#E3:%20Network%20Attacks)
-	- [What is Network Security Attacks?](#What%20is%20Network%20Security%20Attacks?)
-	- [Five Forms of Network Attacks](#Five%20Forms%20of%20Network%20Attacks)
-	- [Security Attacks Types](#Security%20Attacks%20Types)
-		- [Passive Attacks Types](#Passive%20Attacks%20Types)
-		- [Active Attacks Types](#Active%20Attacks%20Types)
-		- [Attack Types Slide](#Attack%20Types%20Slide)
-	- [Active & Passive Attack Types](#Active%20&%20Passive%20Attack%20Types)
-		- [Deep to Passive Attacks](#Deep%20to%20Passive%20Attacks)
-			- [Release of Message Contents](#Release%20of%20Message%20Contents)
-			- [Traffic Analysis](#Traffic%20Analysis)
-		- [Deep to Active Attacks](#Deep%20to%20Active%20Attacks)
-			- [Masquerade](#Masquerade)
-			- [Replay](#Replay)
-		- [All Attacks Slides](#All%20Attacks%20Slides)
-	- [Episode Summary](#Episode%20Summary)
-- [E4: Network Services](#E4:%20Network%20Services)
-	- [What is Network Security Services(NSS)?](#What%20is%20Network%20Security%20Services(NSS)?)
-	- [Network Security Services(NSS) Types](#Network%20Security%20Services(NSS)%20Types)
-	- [NSS Types Description](#NSS%20Types%20Description)
-		- [Authentication](#Authentication)
-		- [Access Control](#Access%20Control)
-		- [Confidentiality](#Confidentiality)
-		- [Integrity](#Integrity)
-		- [Non-Repudiation](#Non-Repudiation)
-		- [Availability](#Availability)
-		- [Summary & Slide](#Summary%20&%20Slide)
-	- [Cryptography Mechanism](#Cryptography%20Mechanism)
-	- [OSI Network Security Model](#OSI%20Network%20Security%20Model)
-		- [Open in OSI(Open System Interconnection)](#Open%20in%20OSI(Open%20System%20Interconnection))
-		- [OSI First Blocks(Encryption in Source)](#OSI%20First%20Blocks(Encryption%20in%20Source))
-		- [Key for Plain Text to Cipher Text](#Key%20for%20Plain%20Text%20to%20Cipher%20Text)
-		- [OSI Last Block(Decryption in Destination)](#OSI%20Last%20Block(Decryption%20in%20Destination))
-		- [Summary of OSI Model](#Summary%20of%20OSI%20Model)
-	- [Tasks of OSI Network Security Model](#Tasks%20of%20OSI%20Network%20Security%20Model)
-	- [Episode Summary](#Episode%20Summary)
 -------
 ### E2: Introduction
 #### What  is Network Security?
