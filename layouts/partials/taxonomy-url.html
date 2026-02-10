@@ -1,0 +1,42 @@
+{{/* 
+    Partial: taxonomy-url.html
+    
+    این partial یک URL برای taxonomy badge می‌سازد
+    
+    استفاده:
+        {{ partial "taxonomy-url.html" (dict "taxonomy" "difficulty" "value" "medium" "context" .) }}
+        
+    ورودی‌ها:
+        - taxonomy: نام taxonomy (مثلاً "difficulty", "lab_required", "post_type_fa")
+        - value: مقدار (مثلاً "medium", "true", "آموزشی")
+        - context: context صفحه (معمولاً .)
+    
+    خروجی:
+        URL برای taxonomy (مثلاً "/difficulty/medium", "/type/tutorial")
+*/}}
+
+{{ $taxonomy := .taxonomy }}
+{{ $value := .value }}
+{{ $context := .context }}
+
+{{ $taxonomies := $context.Site.Data.taxonomies }}
+{{ $taxonomyData := index $taxonomies $taxonomy }}
+{{ $url := "" }}
+
+{{ if $taxonomyData }}
+    {{ if eq $taxonomy "post_type_fa" }}
+        {{/* برای post_type_fa از mapping استفاده می‌کنیم */}}
+        {{ $mapping := $taxonomyData.mapping }}
+        {{ $slug := $taxonomyData.slug }}
+        {{ $mappedValue := index $mapping $value }}
+        {{ if $mappedValue }}
+            {{ $url = printf "/%s/%s/" $slug $mappedValue }}
+        {{ end }}
+    {{ else }}
+        {{/* برای بقیه taxonomyها مستقیم استفاده می‌کنیم */}}
+        {{ $slug := $taxonomyData.slug }}
+        {{ $url = printf "/%s/%s/" $slug $value }}
+    {{ end }}
+{{ end }}
+
+{{ return $url }}

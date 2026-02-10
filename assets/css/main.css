@@ -1689,7 +1689,35 @@ body {
     transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     backdrop-filter: blur(8px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    cursor: pointer;
 }
+
+/* Clickable badge as link */
+a.meta-badge {
+    position: relative;
+    overflow: hidden;
+}
+
+a.meta-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+a.meta-badge:hover::before {
+    left: 100%;
+}
+
+a.meta-badge:active {
+    transform: translateY(-1px) scale(1.02);
+}
+=======
 
 .meta-badge svg {
     width: 20px;
@@ -1711,10 +1739,11 @@ body {
     letter-spacing: 0.3px;
 }
 
-/* مدت زمان */
+/* مدت زمان - بدون لینک، فقط نمایشی */
 .meta-badge.badge-time {
     border-color: rgba(58, 173, 223, 0.35);
     color: var(--accent-blue);
+    cursor: default;
 }
 
 .meta-badge.badge-time svg {
@@ -1724,6 +1753,7 @@ body {
 .meta-badge.badge-time:hover {
     border-color: var(--accent-blue);
     box-shadow: 0 6px 20px rgba(58, 173, 223, 0.45);
+    transform: translateY(-3px) scale(1.05);
 }
 
 /* سطح سختی */

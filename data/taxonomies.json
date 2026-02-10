@@ -1,0 +1,44 @@
+{
+  "difficulty": {
+    "slug": "difficulty",
+    "label_fa": "سطح دشواری",
+    "values": ["beginner", "medium", "intermediate", "advanced"],
+    "labels": {
+      "beginner": "مبتدی",
+      "medium": "متوسط",
+      "intermediate": "حرفه‌ای",
+      "advanced": "تخصصی"
+    }
+  },
+  "lab_required": {
+    "slug": "lab_required",
+    "label_fa": "نیاز به آزمایشگاه",
+    "values": ["true", "false"],
+    "labels": {
+      "true": "نیاز به تمرین عملی",
+      "false": "بدون نیاز به آزمایشگاه"
+    }
+  },
+  "post_type_fa": {
+    "slug": "type",
+    "label_fa": "نوع محتوا",
+    "mapping": {
+      "آموزشی": "tutorial",
+      "مقاله": "article",
+      "اسکریپت": "script",
+      "خبر": "news",
+      "دستور العمل": "howto",
+      "معرفی": "intro",
+      "ابزار": "tool"
+    },
+    "reverse_mapping": {
+      "tutorial": "آموزشی",
+      "article": "مقاله",
+      "script": "اسکریپت",
+      "news": "خبر",
+      "howto": "دستور العمل",
+      "intro": "معرفی",
+      "tool": "ابزار"
+    }
+  }
+}

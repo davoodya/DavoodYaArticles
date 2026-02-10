@@ -1,0 +1,356 @@
+{{ define "main" }}
+
+{{/* بررسی اینکه آیا این یک صفحه taxonomy است */}}
+{{ if and .Params.taxonomy_slug .Params.taxonomy_value }}
+
+{{/* بارگذاری Registry */}}
+{{ $taxonomies := site.Data.taxonomies }}
+
+{{/* دریافت taxonomy slug و value از URL */}}
+{{ $taxonomySlug := .Params.taxonomy_slug }}
+{{ $taxonomyValue := .Params.taxonomy_value }}
+
+{{/* پیدا کردن taxonomy در Registry */}}
+{{ $taxonomy := index $taxonomies $taxonomySlug }}
+{{ $validTaxonomy := false }}
+{{ $validValue := false }}
+{{ $displayValue := "" }}
+{{ $pageTitle := "" }}
+{{ $pageDescription := "" }}
+
+{{ if $taxonomy }}
+    {{ $validTaxonomy = true }}
+    
+    {{/* بررسی معتبر بودن value */}}
+    {{ if eq $taxonomySlug "post_type_fa" }}
+        {{/* برای post_type_fa از mapping استفاده می‌کنیم */}}
+        {{ $reverseMapping := $taxonomy.reverse_mapping }}
+        {{ $faValue := index $reverseMapping $taxonomyValue }}
+        {{ if $faValue }}
+            {{ $validValue = true }}
+            {{ $displayValue = $faValue }}
+            {{ $pageTitle = printf "مقالات %s" $displayValue }}
+            {{ $pageDescription = printf "مشاهده همه مقالات %s" $displayValue }}
+        {{ end }}
+    {{ else if eq $taxonomySlug "difficulty" }}
+        {{ $labels := $taxonomy.labels }}
+        {{ $label := index $labels $taxonomyValue }}
+        {{ if $label }}
+            {{ $validValue = true }}
+            {{ $displayValue = $label }}
+            {{ $pageTitle = printf "مقالات سطح %s" $displayValue }}
+            {{ $pageDescription = printf "مشاهده همه مقالات با سطح دشواری %s" $displayValue }}
+        {{ end }}
+    {{ else if eq $taxonomySlug "lab_required" }}
+        {{ $labels := $taxonomy.labels }}
+        {{ $label := index $labels $taxonomyValue }}
+        {{ if $label }}
+            {{ $validValue = true }}
+            {{ $displayValue = $label }}
+            {{ if eq $taxonomyValue "true" }}
+                {{ $pageTitle = "مقالات نیازمند تمرین عملی" }}
+                {{ $pageDescription = "مشاهده همه مقالاتی که نیاز به تمرین عملی دارند" }}
+            {{ else }}
+                {{ $pageTitle = "مقالات بدون نیاز به آزمایشگاه" }}
+                {{ $pageDescription = "مشاهده همه مقالات نظری" }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{/* اگر taxonomy یا value نامعتبر بود، 404 برگردان */}}
+{{ if or (not $validTaxonomy) (not $validValue) }}
+    <div class="container">
+        <div class="main-content">
+            <h1>صفحه مورد نظر یافت نشد</h1>
+            <p>لطفاً به <a href="/">صفحه اصلی</a> برگردید.</p>
+        </div>
+    </div>
+{{ else }}
+
+<div class="container">
+    <div class="main-content-wrapper">
+        {{ partial "sidebar.html" . }}
+        
+        <div class="main-content">
+            <h1 class="category-title">{{ $pageTitle }}</h1>
+            
+            <p class="category-description">{{ $pageDescription }}</p>
+
+            {{/* آمار */}}
+            {{ $allPages := where site.RegularPages "Section" "!=" "all-articles" }}
+            {{ $allPages = where $allPages "Section" "!=" "difficulty" }}
+            {{ $allPages = where $allPages "Section" "!=" "lab_required" }}
+            {{ $allPages = where $allPages "Section" "!=" "type" }}
+            {{ $allPages = where $allPages "Draft" false }}
+            
+            {{/* فیلتر کردن مقالات بر اساس taxonomy */}}
+            {{ $filteredPages := slice }}
+            {{ range $allPages }}
+                {{ $match := false }}
+                
+                {{ if eq $taxonomySlug "difficulty" }}
+                    {{ if eq .Params.difficulty $taxonomyValue }}
+                        {{ $match = true }}
+                    {{ end }}
+                {{ else if eq $taxonomySlug "lab_required" }}
+                    {{ $labValue := .Params.lab_required }}
+                    {{ if eq $taxonomyValue "true" }}
+                        {{ if $labValue }}
+                            {{ $match = true }}
+                        {{ end }}
+                    {{ else }}
+                        {{ if not $labValue }}
+                            {{ $match = true }}
+                        {{ end }}
+                    {{ end }}
+                {{ else if eq $taxonomySlug "post_type_fa" }}
+                    {{ $postTypeFa := .Params.post_type_fa }}
+                    {{ if eq $postTypeFa $displayValue }}
+                        {{ $match = true }}
+                    {{ end }}
+                {{ end }}
+                
+                {{ if $match }}
+                    {{ $filteredPages = $filteredPages | append . }}
+                {{ end }}
+            {{ end }}
+
+            <div class="all-articles-stats">
+                <div class="stat-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                    </svg>
+                    <span>تعداد مقالات: <strong>{{ len $filteredPages }}</strong></span>
+                </div>
+            </div>
+
+            <div class="articles-grid" id="articlesGrid">
+                {{ if gt (len $filteredPages) 0 }}
+                    {{/* مرتب‌سازی بر اساس تاریخ (جدیدترین اول) */}}
+                    {{ $filteredPages = $filteredPages.ByDate.Reverse }}
+                    
+                    {{/* نمایش فقط 12 مقاله اول در HTML */}}
+                    {{ range first 12 $filteredPages }}
+                        <article class="article-card" data-reading-time="{{ .Params.readingTime | default 0 }}" data-difficulty="{{ .Params.difficulty | default "" }}" data-lab-required="{{ .Params.lab_required | default false }}" data-post-type="{{ .Params.post_type_fa | default "" }}">
+                            <h2 class="article-card-title">
+                                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            </h2>
+
+                            {{/* تصویر شاخص مقاله */}}
+                            {{ $featuredImage := "" }}
+                            {{ if .Params.featured_image }}
+                                {{ $featuredImage = .Params.featured_image }}
+                            {{ else if .Params.images }}
+                                {{ if reflect.IsSlice .Params.images }}
+                                    {{ $featuredImage = index .Params.images 0 }}
+                                {{ else }}
+                                    {{ $featuredImage = .Params.images }}
+                                {{ end }}
+                            {{ end }}
+                            
+                            {{ if $featuredImage }}
+                                <div class="article-card-image">
+                                    <a href="{{ .RelPermalink }}">
+                                        <img src="{{ $featuredImage | relURL }}" 
+                                             alt="{{ .Title }}" 
+                                             loading="lazy">
+                                    </a>
+                                </div>
+                            {{ end }}
+                            
+                            {{/* دسته‌بندی مقاله */}}
+                            {{ if .CurrentSection }}
+                                <div class="article-card-category">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
+                                    </svg>
+                                    <a href="{{ .CurrentSection.RelPermalink }}" class="category-link">
+                                        {{ .CurrentSection.Title }}
+                                    </a>
+                                </div>
+                            {{ end }}
+                            
+                            <div class="article-card-summary">
+                                {{ if .Params.description }}
+                                    {{ .Params.description | truncate 600 }}
+                                {{ else if .Summary }}
+                                    {{ .Summary | truncate 600 }}
+                                {{ else }}
+                                    {{ .Content | truncate 600 }}
+                                {{ end }}
+                            </div>
+                            
+                            {{/* تگ‌ها - بالای دکمه ادامه مطلب */}}
+                            {{ if .Params.tags }}
+                                <div class="article-card-tags">
+                                    <div class="tags-label">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
+                                        </svg>
+                                        <span>تگ‌ها:</span>
+                                    </div>
+                                    {{ range first 4 .Params.tags }}
+                                        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="article-tag" title="مشاهده همه مقالات با تگ {{ . }}">{{ . }}</a>
+                                    {{ end }}
+                                </div>
+                            {{ end }}
+                            
+                            <div class="article-card-footer">
+                                <a href="{{ .RelPermalink }}" class="read-more-btn">
+                                    ادامه مطلب ←
+                                </a>
+                                {{/* Badge ها - سمت چپ دکمه */}}
+                                {{ if or .Params.readingTime .Params.difficulty .Params.lab_required .Params.post_type_fa }}
+                                    <div class="article-card-badges">
+                                        {{/* مدت زمان - بدون لینک */}}
+                                        {{ if .Params.readingTime }}
+                                            <span class="article-badge badge-time" title="مدت زمان مطالعه: {{ .Params.readingTime }} دقیقه">
+                                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                                                </svg>
+                                                <span class="badge-text">{{ .Params.readingTime }} دقیقه</span>
+                                            </span>
+                                        {{ end }}
+                                        
+                                        {{/* سطح سختی - با لینک */}}
+                                        {{ if .Params.difficulty }}
+                                            {{ $difficultyText := "" }}
+                                            {{ $difficultyClass := "" }}
+                                            {{ if eq .Params.difficulty "beginner" }}
+                                                {{ $difficultyText = "مبتدی" }}
+                                                {{ $difficultyClass = "badge-beginner" }}
+                                            {{ else if eq .Params.difficulty "medium" }}
+                                                {{ $difficultyText = "متوسط" }}
+                                                {{ $difficultyClass = "badge-medium" }}
+                                            {{ else if eq .Params.difficulty "intermediate" }}
+                                                {{ $difficultyText = "حرفه‌ای" }}
+                                                {{ $difficultyClass = "badge-intermediate" }}
+                                            {{ else if eq .Params.difficulty "advanced" }}
+                                                {{ $difficultyText = "تخصصی" }}
+                                                {{ $difficultyClass = "badge-advanced" }}
+                                            {{ end }}
+                                            {{ $difficultyUrl := partial "taxonomy-url.html" (dict "taxonomy" "difficulty" "value" .Params.difficulty "context" .) }}
+                                            <a href="{{ $difficultyUrl }}" class="article-badge badge-difficulty {{ $difficultyClass }}" title="مشاهده همه مقالات {{ $difficultyText }}">
+                                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                                </svg>
+                                                <span class="badge-text">{{ $difficultyText }}</span>
+                                            </a>
+                                        {{ end }}
+                                        
+                                        {{/* نیاز به تمرین عملی - با لینک */}}
+                                        {{ if .Params.lab_required }}
+                                            {{ $labUrl := partial "taxonomy-url.html" (dict "taxonomy" "lab_required" "value" "true" "context" .) }}
+                                            <a href="{{ $labUrl }}" class="article-badge badge-lab" title="مشاهده همه مقالات نیازمند تمرین عملی">
+                                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                                                </svg>
+                                                <span class="badge-text">تمرین عملی</span>
+                                            </a>
+                                        {{ end }}
+                                        
+                                        {{/* نوع پست - با لینک */}}
+                                        {{ if .Params.post_type_fa }}
+                                            {{ $typeUrl := partial "taxonomy-url.html" (dict "taxonomy" "post_type_fa" "value" .Params.post_type_fa "context" .) }}
+                                            <a href="{{ $typeUrl }}" class="article-badge badge-type" title="مشاهده همه مقالات {{ .Params.post_type_fa }}">
+                                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                                                </svg>
+                                                <span class="badge-text">{{ .Params.post_type_fa }}</span>
+                                            </a>
+                                        {{ end }}
+                                    </div>
+                                {{ end }}
+                            </div>
+                        </article>
+                    {{ end }}
+                {{ else }}
+                    {{/* پیام خالی */}}
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📭</div>
+                        <h3>هیچ مقاله‌ای یافت نشد</h3>
+                        <p>در حال حاضر مقاله‌ای با این ویژگی وجود ندارد</p>
+                        <a href="{{ "/" | relLangURL }}" class="btn-primary">بازگشت به صفحه اصلی</a>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    margin: 40px 0;
+}
+
+.empty-state-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.empty-state h3 {
+    color: #00ff41;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.empty-state p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #00ff41 0%, #00cc33 100%);
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 255, 65, 0.3);
+}
+</style>
+
+{{ end }}
+
+{{ else }}
+    {{/* اگر taxonomy_slug یا taxonomy_value وجود نداشت، از list.html استفاده کن */}}
+    <div class="container">
+        <div class="main-content-wrapper">
+            {{ partial "sidebar.html" . }}
+            
+            <div class="main-content">
+                <h1 class="category-title">{{ .Title }}</h1>
+                
+                {{ with .Params.description }}
+                    <p class="category-description">{{ . }}</p>
+                {{ end }}
+
+                <div class="articles-grid" id="articlesGrid">
+                    {{ range .Pages }}
+                        <article class="article-card">
+                            <h2 class="article-card-title">
+                                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            </h2>
+                        </article>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+{{ end }}
+
+{{ end }}

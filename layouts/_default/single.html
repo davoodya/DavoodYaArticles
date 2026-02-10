@@ -10,7 +10,7 @@
             {{/* ویژگی‌های مقاله - Badge ها بعد از TOC و قبل از محتوا */}}
             {{ if or .Params.readingTime .Params.difficulty .Params.lab_required .Params.post_type_fa }}
                 <div class="article-meta-badges">
-                    {{/* مدت زمان */}}
+                    {{/* مدت زمان - بدون لینک */}}
                     {{ if .Params.readingTime }}
                         <div class="meta-badge badge-time">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@
                         </div>
                     {{ end }}
                     
-                    {{/* سطح سختی */}}
+                    {{/* سطح سختی - با لینک */}}
                     {{ if .Params.difficulty }}
                         {{ $difficultyText := "" }}
                         {{ $difficultyClass := "" }}
@@ -37,32 +37,35 @@
                             {{ $difficultyText = "سطح تخصصی" }}
                             {{ $difficultyClass = "badge-advanced" }}
                         {{ end }}
-                        <div class="meta-badge badge-difficulty {{ $difficultyClass }}">
+                        {{ $difficultyUrl := partial "taxonomy-url.html" (dict "taxonomy" "difficulty" "value" .Params.difficulty "context" .) }}
+                        <a href="{{ $difficultyUrl }}" class="meta-badge badge-difficulty {{ $difficultyClass }}" title="مشاهده همه مقالات {{ $difficultyText }}">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                             </svg>
                             <span class="badge-text">{{ $difficultyText }}</span>
-                        </div>
+                        </a>
                     {{ end }}
                     
-                    {{/* نیاز به تمرین عملی */}}
+                    {{/* نیاز به تمرین عملی - با لینک */}}
                     {{ if .Params.lab_required }}
-                        <div class="meta-badge badge-lab">
+                        {{ $labUrl := partial "taxonomy-url.html" (dict "taxonomy" "lab_required" "value" "true" "context" .) }}
+                        <a href="{{ $labUrl }}" class="meta-badge badge-lab" title="مشاهده همه مقالات نیازمند تمرین عملی">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
                             </svg>
                             <span class="badge-text">نیاز به تمرین عملی</span>
-                        </div>
+                        </a>
                     {{ end }}
                     
-                    {{/* نوع پست */}}
+                    {{/* نوع پست - با لینک */}}
                     {{ if .Params.post_type_fa }}
-                        <div class="meta-badge badge-type">
+                        {{ $typeUrl := partial "taxonomy-url.html" (dict "taxonomy" "post_type_fa" "value" .Params.post_type_fa "context" .) }}
+                        <a href="{{ $typeUrl }}" class="meta-badge badge-type" title="مشاهده همه مقالات {{ .Params.post_type_fa }}">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
                             </svg>
                             <span class="badge-text">{{ .Params.post_type_fa }}</span>
-                        </div>
+                        </a>
                     {{ end }}
                 </div>
             {{ end }}
