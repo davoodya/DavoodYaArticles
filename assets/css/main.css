@@ -1717,7 +1717,6 @@ a.meta-badge:hover::before {
 a.meta-badge:active {
     transform: translateY(-1px) scale(1.02);
 }
-=======
 
 .meta-badge svg {
     width: 20px;
