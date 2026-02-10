@@ -3608,3 +3608,1615 @@ NEXT STEP: Run image-article-renamer.py to update markdown references
 [COMPLETE] Process finished
 [2026-02-09 15:40:44] [INFO] ============================================================
 
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] Starting image rename process (physical files only)
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] Loaded 714 processed image(s) from processed_images.json
+[2026-02-10 09:25:57] [INFO] 
+============================================================
+[2026-02-10 09:25:57] [INFO] Verifying directories:
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] + Content directory: content
+[2026-02-10 09:25:57] [INFO] + Static images directory: static/images
+[2026-02-10 09:25:57] [INFO]   Categories: cyber-security, general, linux, network, seo, tools
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] PHASE 1: Scanning markdown files for images...
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] 
+[File] all-articles\README.md
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\Cryptography\Basic-Encryption.md
+[2026-02-10 09:25:57] [INFO]   Found 32 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-1.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-2.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-3.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-4.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-5.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-6.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-7.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-8.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-9.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-10.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-11.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-12.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-13.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-14.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-15.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-16.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-17.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-18.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-19.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-20.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-21.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-22.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-23.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-24.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-25.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-26.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-27.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-28.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-29.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-30.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-31.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Basic-Encryption-32.png
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\Cryptography\Malwares.md
+[2026-02-10 09:25:57] [INFO]   Found 6 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already processed: Malwares-1.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Malwares-2.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Malwares-3.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Malwares-4.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Malwares-5.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: Malwares-6.png
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+[2026-02-10 09:25:57] [INFO]   Found 8 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-1.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-2.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-3.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-4.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-5.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-6.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-7.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-8.png
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+[2026-02-10 09:25:57] [INFO]   Found 13 image(s)
+[2026-02-10 09:25:57] [INFO]     + Will rename: SANS-401-NetworkingandProtocols(401.1
+[2026-02-10 09:25:57] [INFO]       -> SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-2.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-3.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-4.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-5.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-6.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-7.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-8.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-9.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-10.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-11.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-12.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-13.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+[2026-02-10 09:25:57] [INFO]   Found 14 image(s)
+[2026-02-10 09:25:57] [INFO]     + Will rename: SANS-401-E3-Virtualization&CloudInfrastructure(401.1
+[2026-02-10 09:25:57] [INFO]       -> SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-2.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-3.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-4.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-5.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-6.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-7.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-8.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-9.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-10.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-11.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-12.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-13.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-14.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+[2026-02-10 09:25:57] [INFO]   Found 12 image(s)
+[2026-02-10 09:25:57] [INFO]     + Will rename: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1
+[2026-02-10 09:25:57] [INFO]       -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-2.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-3.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-4.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-5.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-6.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-7.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-8.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-9.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-10.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-11.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-12.1
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+[2026-02-10 09:25:57] [INFO]   Found 9 image(s)
+[2026-02-10 09:25:57] [INFO]     + Will rename: SANS-401-Defense-in-Depth(401.2
+[2026-02-10 09:25:57] [INFO]       -> SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-2.2
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-3.2
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-4.2
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-5.2
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-6.2
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-7.2
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-8.2
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-9.2
+[2026-02-10 09:25:57] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+[2026-02-10 09:25:57] [INFO]   Found 30 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-1.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-2.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-3.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-4.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-5.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-6.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-7.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-8.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-9.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-10.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-11.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-12.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-13.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-14.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-15.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-16.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-17.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-18.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-19.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-20.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-21.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-22.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-23.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-24.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-25.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-26.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-27.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-28.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-29.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SANS-401-PasswordCracking-30.png
+[2026-02-10 09:25:57] [INFO] 
+[File] linux\60 Commands Hacker Should Know it.md
+[2026-02-10 09:25:57] [INFO]   Found 24 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-1.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-2.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-3.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-4.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-5.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-6.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-7.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-8.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-9.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-10.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-11.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-12.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-13.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-14.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-15.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-16.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-17.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-18.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-19.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-20.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-21.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-22.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-23.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-24.png
+[2026-02-10 09:25:57] [INFO] 
+[File] linux\Kali Linux Installing Guide.md
+[2026-02-10 09:25:57] [INFO]   Found 18 image(s)
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240903184118.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-1.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240903183816.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-2.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240903183835.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-3.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240903184028.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-4.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240903184051.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-5.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240625164355.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-6.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240625164829.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-7.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240625165040.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-8.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240625165250.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-9.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240625165754.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-10.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240625170641.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-11.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240625171002.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-12.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240625171239.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-13.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240625235408.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-14.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240625200802.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-15.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240625200927.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-16.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240625201253.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-17.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240625201528.png
+[2026-02-10 09:25:57] [INFO]       -> KaliLinuxInstallingGuide-18.png
+[2026-02-10 09:25:57] [INFO] 
+[File] network\IP-Mac Address Basic and Concepts.md
+[2026-02-10 09:25:57] [INFO]   Found 13 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-MacAddressBasicandConcepts-1.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-MacAddressBasicandConcepts-2.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-MacAddressBasicandConcepts-3.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-MacAddressBasicandConcepts-4.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-MacAddressBasicandConcepts-5.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-MacAddressBasicandConcepts-6.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-MacAddressBasicandConcepts-7.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-MacAddressBasicandConcepts-8.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-MacAddressBasicandConcepts-9.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-MacAddressBasicandConcepts-10.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-MacAddressBasicandConcepts-11.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-MacAddressBasicandConcepts-12.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-MacAddressBasicandConcepts-13.png
+[2026-02-10 09:25:57] [INFO] 
+[File] network\Network Basics-Terminology-Topology.md
+[2026-02-10 09:25:57] [INFO]   Found 9 image(s)
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkBasics-Terminology-Topology-1.png
+[2026-02-10 09:25:57] [INFO]       -> مبانی،لغتشناسیوتوپولوژیهایشبکه-1.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkBasics-Terminology-Topology-2.png
+[2026-02-10 09:25:57] [INFO]       -> مبانی،لغتشناسیوتوپولوژیهایشبکه-2.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkBasics-Terminology-Topology-3.png
+[2026-02-10 09:25:57] [INFO]       -> مبانی،لغتشناسیوتوپولوژیهایشبکه-3.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkBasics-Terminology-Topology-4.png
+[2026-02-10 09:25:57] [INFO]       -> مبانی،لغتشناسیوتوپولوژیهایشبکه-4.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkBasics-Terminology-Topology-5.png
+[2026-02-10 09:25:57] [INFO]       -> مبانی،لغتشناسیوتوپولوژیهایشبکه-5.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkBasics-Terminology-Topology-6.png
+[2026-02-10 09:25:57] [INFO]       -> مبانی،لغتشناسیوتوپولوژیهایشبکه-6.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkBasics-Terminology-Topology-7.png
+[2026-02-10 09:25:57] [INFO]       -> مبانی،لغتشناسیوتوپولوژیهایشبکه-7.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkBasics-Terminology-Topology-8.png
+[2026-02-10 09:25:57] [INFO]       -> مبانی،لغتشناسیوتوپولوژیهایشبکه-8.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkBasics-Terminology-Topology-9.png
+[2026-02-10 09:25:57] [INFO]       -> مبانی،لغتشناسیوتوپولوژیهایشبکه-9.png
+[2026-02-10 09:25:57] [INFO] 
+[File] network\Network Cable and Components.md
+[2026-02-10 09:25:57] [INFO]   Found 33 image(s)
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-1.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-1.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-2.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-2.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-3.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-3.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-4.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-4.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-5.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-5.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-7.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-7.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-8.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-8.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-9.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-9.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-10.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-10.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-11.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-11.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-12.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-12.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-13.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-13.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-14.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-14.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-15.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-15.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-16.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-16.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-17.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-17.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-18.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-18.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-19.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-19.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-20.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-20.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-21.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-21.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-22.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-22.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-23.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-23.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-24.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-24.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-25.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-25.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-26.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-26.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-27.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-27.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-28.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-28.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-29.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-29.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-30.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-30.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-31.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-31.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-32.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-32.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkCableandComponents-33.png
+[2026-02-10 09:25:57] [INFO]       -> انواعدیوایسهاوکابلهایشبکه-33.png
+[2026-02-10 09:25:57] [INFO] 
+[File] network\Network Commands & File Printer Sharing.md
+[2026-02-10 09:25:57] [INFO] 
+[File] network\Network Models-OSI and TCPIP.md
+[2026-02-10 09:25:57] [INFO]   Found 14 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: NetworkModels-OSIandTCPIP-1.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: NetworkModels-OSIandTCPIP-2.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: NetworkModels-OSIandTCPIP-3.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: NetworkModels-OSIandTCPIP-4.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: NetworkModels-OSIandTCPIP-5.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: NetworkModels-OSIandTCPIP-6.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: NetworkModels-OSIandTCPIP-7.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: NetworkModels-OSIandTCPIP-8.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: NetworkModels-OSIandTCPIP-9.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: NetworkModels-OSIandTCPIP-10.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: NetworkModels-OSIandTCPIP-11.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: NetworkModels-OSIandTCPIP-12.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: NetworkModels-OSIandTCPIP-13.png
+[2026-02-10 09:25:57] [INFO]     > Already correct: NetworkModels-OSIandTCPIP-14.png
+[2026-02-10 09:25:57] [INFO] 
+[File] network\Network Services(DHCP-DNS,-VLAN).md
+[2026-02-10 09:25:57] [INFO]   Found 1 image(s)
+[2026-02-10 09:25:57] [INFO]     + Will rename: NetworkServices(DHCP-DNS,-VLAN
+[2026-02-10 09:25:57] [INFO]       -> مطالبیکهبراییادگیریVLAN,DHCP,DNSبایدآموخت؟-1
+[2026-02-10 09:25:57] [INFO] 
+[File] network\Virtualization Concepts.md
+[2026-02-10 09:25:57] [INFO]   Found 8 image(s)
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240902120134.png
+[2026-02-10 09:25:57] [INFO]       -> VirtualizationConcepts-1.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240521175544.png
+[2026-02-10 09:25:57] [INFO]       -> VirtualizationConcepts-2.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240522154828.png
+[2026-02-10 09:25:57] [INFO]       -> VirtualizationConcepts-3.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240522160228.png
+[2026-02-10 09:25:57] [INFO]       -> VirtualizationConcepts-4.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240522160429.png
+[2026-02-10 09:25:57] [INFO]       -> VirtualizationConcepts-5.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240522160629.png
+[2026-02-10 09:25:57] [INFO]       -> VirtualizationConcepts-6.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240522161517.png
+[2026-02-10 09:25:57] [INFO]       -> VirtualizationConcepts-7.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: Pastedimage20240522161741.png
+[2026-02-10 09:25:57] [INFO]       -> VirtualizationConcepts-8.png
+[2026-02-10 09:25:57] [INFO] 
+[File] network\Windows Networking.md
+[2026-02-10 09:25:57] [INFO]   Found 2 image(s)
+[2026-02-10 09:25:57] [INFO]     + Will rename: WindowsNetworking-1.png
+[2026-02-10 09:25:57] [INFO]       -> راهاندازیشبکهویندوز-1.png
+[2026-02-10 09:25:57] [INFO]     + Will rename: WindowsNetworking-2.png
+[2026-02-10 09:25:57] [INFO]       -> راهاندازیشبکهویندوز-2.png
+[2026-02-10 09:25:57] [INFO] 
+[File] python\Dir-Buster-Module.md
+[2026-02-10 09:25:57] [INFO] 
+[File] seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+[2026-02-10 09:25:57] [INFO]   Found 11 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-1.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-2.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-3.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-4.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-5.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-6.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-7.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-8.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-9.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-10.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-11.png
+[2026-02-10 09:25:57] [INFO] 
+[File] seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+[2026-02-10 09:25:57] [INFO]   Found 10 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-1.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-2.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-3.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-4.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-5.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-6.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-7.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-8.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-9.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-10.png
+[2026-02-10 09:25:57] [INFO] 
+[File] seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+[2026-02-10 09:25:57] [INFO]   Found 12 image(s)
+[2026-02-10 09:25:57] [INFO]     + Will rename: Woorank(CheckWebsiteSEO
+[2026-02-10 09:25:57] [INFO]       -> Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]       New: Woorank(CheckWebsiteSEO)-2
+[2026-02-10 09:25:57] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]       New: Woorank(CheckWebsiteSEO)-3
+[2026-02-10 09:25:57] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]       New: Woorank(CheckWebsiteSEO)-4
+[2026-02-10 09:25:57] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]       New: Woorank(CheckWebsiteSEO)-5
+[2026-02-10 09:25:57] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]       New: Woorank(CheckWebsiteSEO)-6
+[2026-02-10 09:25:57] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]       New: Woorank(CheckWebsiteSEO)-7
+[2026-02-10 09:25:57] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]       New: Woorank(CheckWebsiteSEO)-8
+[2026-02-10 09:25:57] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]       New: Woorank(CheckWebsiteSEO)-9
+[2026-02-10 09:25:57] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]       New: Woorank(CheckWebsiteSEO)-10
+[2026-02-10 09:25:57] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]       New: Woorank(CheckWebsiteSEO)-11
+[2026-02-10 09:25:57] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:25:57] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [WARNING]       New: Woorank(CheckWebsiteSEO)-12
+[2026-02-10 09:25:57] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:57] [INFO] 
+[File] seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+[2026-02-10 09:25:57] [INFO]   Found 3 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already processed: GoodContentsforSEO-1.png
+[2026-02-10 09:25:57] [INFO]     > Already processed: GoodContentsforSEO-2.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: GoodContentsforSEO-3.png
+[2026-02-10 09:25:58] [INFO] 
+[File] seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+[2026-02-10 09:25:58] [INFO] 
+[File] seo\0-SEO-Theories\E15 - Page Rank.md
+[2026-02-10 09:25:58] [INFO]   Found 2 image(s)
+[2026-02-10 09:25:58] [INFO]     > Already processed: PageRank-1.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: PageRank-2.png
+[2026-02-10 09:25:58] [INFO] 
+[File] seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+[2026-02-10 09:25:58] [INFO]   Found 3 image(s)
+[2026-02-10 09:25:58] [INFO]     > Already processed: PageAuthority&DomainAuthority-1.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: PageAuthority&DomainAuthority-2.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: PageAuthority&DomainAuthority-3.png
+[2026-02-10 09:25:58] [INFO] 
+[File] seo\0-SEO-Theories\E17 - Backlinks.md
+[2026-02-10 09:25:58] [INFO]   Found 1 image(s)
+[2026-02-10 09:25:58] [INFO]     > Already processed: Backlinks-1.png
+[2026-02-10 09:25:58] [INFO] 
+[File] seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+[2026-02-10 09:25:58] [INFO]   Found 33 image(s)
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-2.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-3.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-4.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-5.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-6.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-7.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-8.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-9.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-10.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-11.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-12.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-13.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-14.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-15.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-16.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-17.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-18.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-19.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-20.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-21.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-22.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-23.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-24.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-25.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-26.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-27.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-28.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-29.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-30.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-31.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-32.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-33.png
+[2026-02-10 09:25:58] [INFO] 
+[File] tools\MSFConsole Commands.md
+[2026-02-10 09:25:58] [INFO]   Found 43 image(s)
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-1.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-2.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-3.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-4.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-5.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-6.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-7.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-8.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-9.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-10.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-11.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-12.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-13.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-14.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-15.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-16.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-17.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-18.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-19.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-20.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-21.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-22.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-23.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-24.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-25.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-26.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-27.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-28.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-29.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-30.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-31.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-32.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-33.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-34.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-35.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-36.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-37.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-38.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-39.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-40.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-41.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-42.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: MSFConsoleCommands-43.png
+[2026-02-10 09:25:58] [INFO] 
+[File] tools\Burpsuite\1-Install Burpsuite.md
+[2026-02-10 09:25:58] [INFO]   Found 12 image(s)
+[2026-02-10 09:25:58] [INFO]     > Already processed: 1-InstallBurpsuite-1.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 1-InstallBurpsuite-2.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 1-InstallBurpsuite-3.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 1-InstallBurpsuite-4.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 1-InstallBurpsuite-5.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 1-InstallBurpsuite-6.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 1-InstallBurpsuite-7.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 1-InstallBurpsuite-8.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 1-InstallBurpsuite-9.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 1-InstallBurpsuite-10.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 1-InstallBurpsuite-11.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 1-InstallBurpsuite-12.png
+[2026-02-10 09:25:58] [INFO] 
+[File] tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+[2026-02-10 09:25:58] [INFO]   Found 6 image(s)
+[2026-02-10 09:25:58] [INFO]     > Already processed: 2-ChangeHTTPData&BypassParameters-1.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 2-ChangeHTTPData&BypassParameters-2.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 2-ChangeHTTPData&BypassParameters-3.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 2-ChangeHTTPData&BypassParameters-4.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 2-ChangeHTTPData&BypassParameters-5.png
+[2026-02-10 09:25:58] [INFO]     > Already processed: 2-ChangeHTTPData&BypassParameters-6.png
+[2026-02-10 09:25:58] [INFO] 
+[JSON] Saved 196 total mappings to images_rename_mapping.json
+[2026-02-10 09:25:58] [INFO]        (75 new mappings added)
+[2026-02-10 09:25:58] [INFO] 
+============================================================
+[2026-02-10 09:25:58] [INFO] PHASE 2: Renaming physical image files...
+[2026-02-10 09:25:58] [INFO] ============================================================
+[2026-02-10 09:25:58] [INFO] Processing 75 file(s)
+[2026-02-10 09:25:58] [INFO] 
+[Category] cyber-security
+[2026-02-10 09:25:58] [WARNING]   Warning: File not found: SANS-401-NetworkingandProtocols(401.1
+[2026-02-10 09:25:58] [WARNING]   Warning: File not found: SANS-401-E3-Virtualization&CloudInfrastructure(401.1
+[2026-02-10 09:25:58] [WARNING]   Warning: File not found: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1
+[2026-02-10 09:25:58] [WARNING]   Warning: File not found: SANS-401-Defense-in-Depth(401.2
+[2026-02-10 09:25:58] [INFO] 
+[Category] linux
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240903184118.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-1.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240903183816.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-2.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240903183835.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-3.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240903184028.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-4.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240903184051.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-5.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240625164355.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-6.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240625164829.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-7.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240625165040.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-8.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240625165250.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-9.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240625165754.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-10.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240625170641.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-11.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240625171002.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-12.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240625171239.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-13.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240625235408.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-14.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240625200802.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-15.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240625200927.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-16.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240625201253.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-17.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240625201528.png
+[2026-02-10 09:25:58] [INFO]     -> KaliLinuxInstallingGuide-18.png
+[2026-02-10 09:25:58] [INFO] 
+[Category] network
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkBasics-Terminology-Topology-1.png
+[2026-02-10 09:25:58] [INFO]     -> مبانی،لغتشناسیوتوپولوژیهایشبکه-1.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkBasics-Terminology-Topology-2.png
+[2026-02-10 09:25:58] [INFO]     -> مبانی،لغتشناسیوتوپولوژیهایشبکه-2.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkBasics-Terminology-Topology-3.png
+[2026-02-10 09:25:58] [INFO]     -> مبانی،لغتشناسیوتوپولوژیهایشبکه-3.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkBasics-Terminology-Topology-4.png
+[2026-02-10 09:25:58] [INFO]     -> مبانی،لغتشناسیوتوپولوژیهایشبکه-4.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkBasics-Terminology-Topology-5.png
+[2026-02-10 09:25:58] [INFO]     -> مبانی،لغتشناسیوتوپولوژیهایشبکه-5.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkBasics-Terminology-Topology-6.png
+[2026-02-10 09:25:58] [INFO]     -> مبانی،لغتشناسیوتوپولوژیهایشبکه-6.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkBasics-Terminology-Topology-7.png
+[2026-02-10 09:25:58] [INFO]     -> مبانی،لغتشناسیوتوپولوژیهایشبکه-7.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkBasics-Terminology-Topology-8.png
+[2026-02-10 09:25:58] [INFO]     -> مبانی،لغتشناسیوتوپولوژیهایشبکه-8.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkBasics-Terminology-Topology-9.png
+[2026-02-10 09:25:58] [INFO]     -> مبانی،لغتشناسیوتوپولوژیهایشبکه-9.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-1.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-1.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-2.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-2.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-3.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-3.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-4.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-4.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-5.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-5.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-7.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-7.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-8.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-8.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-9.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-9.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-10.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-10.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-11.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-11.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-12.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-12.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-13.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-13.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-14.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-14.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-15.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-15.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-16.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-16.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-17.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-17.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-18.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-18.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-19.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-19.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-20.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-20.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-21.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-21.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-22.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-22.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-23.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-23.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-24.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-24.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-25.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-25.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-26.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-26.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-27.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-27.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-28.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-28.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-29.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-29.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-30.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-30.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-31.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-31.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-32.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-32.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: NetworkCableandComponents-33.png
+[2026-02-10 09:25:58] [INFO]     -> انواعدیوایسهاوکابلهایشبکه-33.png
+[2026-02-10 09:25:58] [WARNING]   Warning: File not found: NetworkServices(DHCP-DNS,-VLAN
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240902120134.png
+[2026-02-10 09:25:58] [INFO]     -> VirtualizationConcepts-1.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240521175544.png
+[2026-02-10 09:25:58] [INFO]     -> VirtualizationConcepts-2.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240522154828.png
+[2026-02-10 09:25:58] [INFO]     -> VirtualizationConcepts-3.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240522160228.png
+[2026-02-10 09:25:58] [INFO]     -> VirtualizationConcepts-4.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240522160429.png
+[2026-02-10 09:25:58] [INFO]     -> VirtualizationConcepts-5.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240522160629.png
+[2026-02-10 09:25:58] [INFO]     -> VirtualizationConcepts-6.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240522161517.png
+[2026-02-10 09:25:58] [INFO]     -> VirtualizationConcepts-7.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: Pastedimage20240522161741.png
+[2026-02-10 09:25:58] [INFO]     -> VirtualizationConcepts-8.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: WindowsNetworking-1.png
+[2026-02-10 09:25:58] [INFO]     -> راهاندازیشبکهویندوز-1.png
+[2026-02-10 09:25:58] [INFO]   + Renamed: WindowsNetworking-2.png
+[2026-02-10 09:25:58] [INFO]     -> راهاندازیشبکهویندوز-2.png
+[2026-02-10 09:25:58] [INFO] 
+[Category] seo
+[2026-02-10 09:25:58] [WARNING]   Warning: File not found: Woorank(CheckWebsiteSEO
+[2026-02-10 09:25:58] [INFO] Saved 810 processed images to processed_images.json
+[2026-02-10 09:25:58] [INFO] 
+============================================================
+[2026-02-10 09:25:58] [INFO] FINAL STATISTICS:
+[2026-02-10 09:25:58] [INFO] ============================================================
+[2026-02-10 09:25:58] [INFO] Files scanned: 32
+[2026-02-10 09:25:58] [INFO] Images found: 382
+[2026-02-10 09:25:58] [INFO] Images skipped (already processed): 224
+[2026-02-10 09:25:58] [INFO] Images skipped (already correct): 27
+[2026-02-10 09:25:58] [INFO] Physical files renamed: 69
+[2026-02-10 09:25:58] [INFO] Errors: 0
+[2026-02-10 09:25:58] [INFO] Total processed images tracked: 810
+[2026-02-10 09:25:58] [INFO] Total mappings in database: 75
+[2026-02-10 09:25:58] [INFO] ============================================================
+[2026-02-10 09:25:58] [INFO] 
+[SUCCESS] Physical images renamed successfully!
+[2026-02-10 09:25:58] [INFO] Mapping saved to: images_rename_mapping.json
+[2026-02-10 09:25:58] [INFO] Processed images tracked in: processed_images.json
+[2026-02-10 09:25:58] [INFO] Full log: images_renamer.log
+[2026-02-10 09:25:58] [INFO] 
+NEXT STEP: Run image-article-renamer.py to update markdown references
+[2026-02-10 09:25:58] [INFO] [Report] Summary report created: images_renamer_report.txt
+[2026-02-10 09:25:58] [INFO] 
+[COMPLETE] Process finished
+[2026-02-10 09:25:58] [INFO] ============================================================
+
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] Starting image rename process (physical files only)
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] Loaded 810 processed image(s) from processed_images.json
+[2026-02-10 09:40:35] [INFO] 
+============================================================
+[2026-02-10 09:40:35] [INFO] Verifying directories:
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] + Content directory: content
+[2026-02-10 09:40:35] [INFO] + Static images directory: static/images
+[2026-02-10 09:40:35] [INFO]   Categories: cyber-security, general, linux, network, seo, tools
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] PHASE 1: Scanning markdown files for images...
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] 
+[File] all-articles\README.md
+[2026-02-10 09:40:35] [INFO] 
+[File] cyber-security\Cryptography\Basic-Encryption.md
+[2026-02-10 09:40:35] [INFO]   Found 32 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-3.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-4.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-5.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-6.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-7.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-8.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-9.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-10.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-11.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-12.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-13.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-14.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-15.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-16.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-17.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-18.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-19.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-20.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-21.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-22.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-23.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-24.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-25.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-26.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-27.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-28.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-29.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-30.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-31.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Basic-Encryption-32.png
+[2026-02-10 09:40:35] [INFO] 
+[File] cyber-security\Cryptography\Malwares.md
+[2026-02-10 09:40:35] [INFO]   Found 6 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: Malwares-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Malwares-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Malwares-3.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Malwares-4.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Malwares-5.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: Malwares-6.png
+[2026-02-10 09:40:35] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+[2026-02-10 09:40:35] [INFO]   Found 8 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-3.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-4.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-5.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-6.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-7.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401.0Introduction&PrepareLab-8.png
+[2026-02-10 09:40:35] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+[2026-02-10 09:40:35] [INFO]   Found 13 image(s)
+[2026-02-10 09:40:35] [INFO]     + Will rename: SANS-401-NetworkingandProtocols(401.1
+[2026-02-10 09:40:35] [INFO]       -> SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-2.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-3.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-4.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-5.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-6.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-7.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-8.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-9.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-10.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-11.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-12.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-NetworkingandProtocols(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-NetworkingandProtocols(401.1)-13.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:35] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+[2026-02-10 09:40:35] [INFO]   Found 14 image(s)
+[2026-02-10 09:40:35] [INFO]     + Will rename: SANS-401-E3-Virtualization&CloudInfrastructure(401.1
+[2026-02-10 09:40:35] [INFO]       -> SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-2.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-3.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-4.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-5.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-6.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-7.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-8.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-9.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-10.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-11.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-12.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-13.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-E3-Virtualization&CloudInfrastructure(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Virtualization&CloudInfrastructure(401.1)-14.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:35] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+[2026-02-10 09:40:35] [INFO]   Found 12 image(s)
+[2026-02-10 09:40:35] [INFO]     + Will rename: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1
+[2026-02-10 09:40:35] [INFO]       -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-2.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-3.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-4.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-5.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-6.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-7.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-8.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-9.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-10.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-11.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Wireless,Aircrack-ng,Wireshark(401.1 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-12.1
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
+[2026-02-10 09:40:35] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+[2026-02-10 09:40:35] [INFO]   Found 9 image(s)
+[2026-02-10 09:40:35] [INFO]     + Will rename: SANS-401-Defense-in-Depth(401.2
+[2026-02-10 09:40:35] [INFO]       -> SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-2.2
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-3.2
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-4.2
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-5.2
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-6.2
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-7.2
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-8.2
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]     Warning: Image SANS-401-Defense-in-Depth(401.2 has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [WARNING]       New: SANS-401-Defense-in-Depth(401.2)-9.2
+[2026-02-10 09:40:35] [WARNING]       Keeping: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:35] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+[2026-02-10 09:40:35] [INFO]   Found 30 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-3.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-4.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-5.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-6.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-7.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-8.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-9.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-10.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-11.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-12.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-13.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-14.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-15.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-16.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-17.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-18.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-19.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-20.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-21.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-22.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-23.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-24.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-25.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-26.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-27.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-28.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-29.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SANS-401-PasswordCracking-30.png
+[2026-02-10 09:40:35] [INFO] 
+[File] linux\60 Commands Hacker Should Know it.md
+[2026-02-10 09:40:35] [INFO]   Found 24 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-3.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-4.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-5.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-6.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-7.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-8.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-9.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-10.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-11.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-12.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-13.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-14.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-15.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-16.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-17.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-18.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-19.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-20.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-21.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-22.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-23.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 60CommandsHackerShouldKnowit-24.png
+[2026-02-10 09:40:35] [INFO] 
+[File] linux\Kali Linux Installing Guide.md
+[2026-02-10 09:40:35] [INFO]   Found 18 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-1.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-2.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-3.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-4.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-5.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-6.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-7.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-8.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-9.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-10.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-11.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-12.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-13.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-14.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-15.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-16.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-17.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: KaliLinuxInstallingGuide-18.png
+[2026-02-10 09:40:35] [INFO] 
+[File] network\IP-Mac Address Basic and Concepts.md
+[2026-02-10 09:40:35] [INFO]   Found 13 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: IP-MacAddressBasicandConcepts-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: IP-MacAddressBasicandConcepts-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: IP-MacAddressBasicandConcepts-3.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: IP-MacAddressBasicandConcepts-4.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: IP-MacAddressBasicandConcepts-5.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: IP-MacAddressBasicandConcepts-6.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: IP-MacAddressBasicandConcepts-7.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: IP-MacAddressBasicandConcepts-8.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: IP-MacAddressBasicandConcepts-9.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: IP-MacAddressBasicandConcepts-10.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: IP-MacAddressBasicandConcepts-11.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: IP-MacAddressBasicandConcepts-12.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: IP-MacAddressBasicandConcepts-13.png
+[2026-02-10 09:40:35] [INFO] 
+[File] network\Network Basics-Terminology-Topology.md
+[2026-02-10 09:40:35] [INFO]   Found 9 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkBasics-Terminology-Topology-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkBasics-Terminology-Topology-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkBasics-Terminology-Topology-3.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkBasics-Terminology-Topology-4.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkBasics-Terminology-Topology-5.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkBasics-Terminology-Topology-6.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkBasics-Terminology-Topology-7.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkBasics-Terminology-Topology-8.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkBasics-Terminology-Topology-9.png
+[2026-02-10 09:40:35] [INFO] 
+[File] network\Network Cable and Components.md
+[2026-02-10 09:40:35] [INFO]   Found 33 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-3.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-4.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-5.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-7.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-8.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-9.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-10.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-11.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-12.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-13.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-14.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-15.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-16.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-17.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-18.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-19.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-20.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-21.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-22.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-23.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-24.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-25.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-26.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-27.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-28.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-29.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-30.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-31.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-32.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkCableandComponents-33.png
+[2026-02-10 09:40:35] [INFO] 
+[File] network\Network Commands & File Printer Sharing.md
+[2026-02-10 09:40:35] [INFO] 
+[File] network\Network Models-OSI and TCPIP.md
+[2026-02-10 09:40:35] [INFO]   Found 14 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkModels-OSIandTCPIP-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkModels-OSIandTCPIP-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkModels-OSIandTCPIP-3.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkModels-OSIandTCPIP-4.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkModels-OSIandTCPIP-5.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkModels-OSIandTCPIP-6.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkModels-OSIandTCPIP-7.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkModels-OSIandTCPIP-8.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkModels-OSIandTCPIP-9.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkModels-OSIandTCPIP-10.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkModels-OSIandTCPIP-11.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkModels-OSIandTCPIP-12.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkModels-OSIandTCPIP-13.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: NetworkModels-OSIandTCPIP-14.png
+[2026-02-10 09:40:35] [INFO] 
+[File] network\Network Services(DHCP-DNS,-VLAN).md
+[2026-02-10 09:40:35] [INFO]   Found 1 image(s)
+[2026-02-10 09:40:35] [INFO]     + Will rename: NetworkServices(DHCP-DNS,-VLAN
+[2026-02-10 09:40:35] [ERROR]   X Error processing content\network\Network Services(DHCP-DNS,-VLAN).md: 'charmap' codec can't encode characters in position 38-56: character maps to <undefined>
+[2026-02-10 09:40:35] [INFO] 
+[File] network\Virtualization Concepts.md
+[2026-02-10 09:40:35] [INFO]   Found 8 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already correct: VirtualizationConcepts-1.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: VirtualizationConcepts-2.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: VirtualizationConcepts-3.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: VirtualizationConcepts-4.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: VirtualizationConcepts-5.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: VirtualizationConcepts-6.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: VirtualizationConcepts-7.png
+[2026-02-10 09:40:35] [INFO]     > Already correct: VirtualizationConcepts-8.png
+[2026-02-10 09:40:35] [INFO] 
+[File] network\Windows Networking.md
+[2026-02-10 09:40:35] [INFO]   Found 2 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: WindowsNetworking-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: WindowsNetworking-2.png
+[2026-02-10 09:40:35] [INFO] 
+[File] python\Dir-Buster-Module.md
+[2026-02-10 09:40:35] [INFO] 
+[File] seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+[2026-02-10 09:40:35] [INFO]   Found 11 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-3.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-4.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-5.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-6.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-7.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-8.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-9.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-10.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: SEOIntro,SearchEngines,Keywords-11.png
+[2026-02-10 09:40:35] [INFO] 
+[File] seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+[2026-02-10 09:40:35] [INFO]   Found 10 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-3.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-4.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-5.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-6.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-7.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-8.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-9.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: ContentSEO,ImportantWebsitePages-10.png
+[2026-02-10 09:40:35] [INFO] 
+[File] seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+[2026-02-10 09:40:35] [INFO]   Found 12 image(s)
+[2026-02-10 09:40:35] [INFO]     + Will rename: Woorank(CheckWebsiteSEO
+[2026-02-10 09:40:35] [INFO]       -> Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]       New: Woorank(CheckWebsiteSEO)-2
+[2026-02-10 09:40:35] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]       New: Woorank(CheckWebsiteSEO)-3
+[2026-02-10 09:40:35] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]       New: Woorank(CheckWebsiteSEO)-4
+[2026-02-10 09:40:35] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]       New: Woorank(CheckWebsiteSEO)-5
+[2026-02-10 09:40:35] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]       New: Woorank(CheckWebsiteSEO)-6
+[2026-02-10 09:40:35] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]       New: Woorank(CheckWebsiteSEO)-7
+[2026-02-10 09:40:35] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]       New: Woorank(CheckWebsiteSEO)-8
+[2026-02-10 09:40:35] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]       New: Woorank(CheckWebsiteSEO)-9
+[2026-02-10 09:40:35] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]       New: Woorank(CheckWebsiteSEO)-10
+[2026-02-10 09:40:35] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]       New: Woorank(CheckWebsiteSEO)-11
+[2026-02-10 09:40:35] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]     Warning: Image Woorank(CheckWebsiteSEO has conflicting new names:
+[2026-02-10 09:40:35] [WARNING]       Existing: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [WARNING]       New: Woorank(CheckWebsiteSEO)-12
+[2026-02-10 09:40:35] [WARNING]       Keeping: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:35] [INFO] 
+[File] seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+[2026-02-10 09:40:35] [INFO]   Found 3 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: GoodContentsforSEO-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: GoodContentsforSEO-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: GoodContentsforSEO-3.png
+[2026-02-10 09:40:35] [INFO] 
+[File] seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+[2026-02-10 09:40:35] [INFO] 
+[File] seo\0-SEO-Theories\E15 - Page Rank.md
+[2026-02-10 09:40:35] [INFO]   Found 2 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: PageRank-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: PageRank-2.png
+[2026-02-10 09:40:35] [INFO] 
+[File] seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+[2026-02-10 09:40:35] [INFO]   Found 3 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: PageAuthority&DomainAuthority-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: PageAuthority&DomainAuthority-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: PageAuthority&DomainAuthority-3.png
+[2026-02-10 09:40:35] [INFO] 
+[File] seo\0-SEO-Theories\E17 - Backlinks.md
+[2026-02-10 09:40:35] [INFO]   Found 1 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: Backlinks-1.png
+[2026-02-10 09:40:35] [INFO] 
+[File] seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+[2026-02-10 09:40:35] [INFO]   Found 33 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-3.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-4.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-5.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-6.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-7.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-8.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-9.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-10.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-11.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-12.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-13.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-14.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-15.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-16.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-17.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-18.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-19.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-20.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-21.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-22.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-23.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-24.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-25.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-26.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-27.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-28.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-29.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-30.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-31.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-32.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-33.png
+[2026-02-10 09:40:35] [INFO] 
+[File] tools\MSFConsole Commands.md
+[2026-02-10 09:40:35] [INFO]   Found 43 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-3.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-4.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-5.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-6.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-7.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-8.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-9.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-10.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-11.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-12.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-13.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-14.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-15.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-16.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-17.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-18.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-19.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-20.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-21.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-22.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-23.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-24.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-25.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-26.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-27.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-28.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-29.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-30.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-31.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-32.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-33.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-34.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-35.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-36.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-37.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-38.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-39.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-40.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-41.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-42.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: MSFConsoleCommands-43.png
+[2026-02-10 09:40:35] [INFO] 
+[File] tools\Burpsuite\1-Install Burpsuite.md
+[2026-02-10 09:40:35] [INFO]   Found 12 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: 1-InstallBurpsuite-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 1-InstallBurpsuite-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 1-InstallBurpsuite-3.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 1-InstallBurpsuite-4.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 1-InstallBurpsuite-5.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 1-InstallBurpsuite-6.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 1-InstallBurpsuite-7.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 1-InstallBurpsuite-8.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 1-InstallBurpsuite-9.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 1-InstallBurpsuite-10.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 1-InstallBurpsuite-11.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 1-InstallBurpsuite-12.png
+[2026-02-10 09:40:35] [INFO] 
+[File] tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+[2026-02-10 09:40:35] [INFO]   Found 6 image(s)
+[2026-02-10 09:40:35] [INFO]     > Already processed: 2-ChangeHTTPData&BypassParameters-1.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 2-ChangeHTTPData&BypassParameters-2.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 2-ChangeHTTPData&BypassParameters-3.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 2-ChangeHTTPData&BypassParameters-4.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 2-ChangeHTTPData&BypassParameters-5.png
+[2026-02-10 09:40:35] [INFO]     > Already processed: 2-ChangeHTTPData&BypassParameters-6.png
+[2026-02-10 09:40:35] [INFO] 
+[JSON] Saved 196 total mappings to images_rename_mapping.json
+[2026-02-10 09:40:35] [INFO]        (6 new mappings added)
+[2026-02-10 09:40:35] [INFO] 
+============================================================
+[2026-02-10 09:40:35] [INFO] PHASE 2: Renaming physical image files...
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] Processing 6 file(s)
+[2026-02-10 09:40:35] [INFO] 
+[Category] cyber-security
+[2026-02-10 09:40:35] [WARNING]   Warning: File not found: SANS-401-NetworkingandProtocols(401.1
+[2026-02-10 09:40:35] [WARNING]   Warning: File not found: SANS-401-E3-Virtualization&CloudInfrastructure(401.1
+[2026-02-10 09:40:35] [WARNING]   Warning: File not found: SANS-401-Wireless,Aircrack-ng,Wireshark(401.1
+[2026-02-10 09:40:35] [WARNING]   Warning: File not found: SANS-401-Defense-in-Depth(401.2
+[2026-02-10 09:40:35] [INFO] 
+[Category] network
+[2026-02-10 09:40:35] [WARNING]   Warning: File not found: NetworkServices(DHCP-DNS,-VLAN
+[2026-02-10 09:40:35] [INFO] 
+[Category] seo
+[2026-02-10 09:40:35] [WARNING]   Warning: File not found: Woorank(CheckWebsiteSEO
+[2026-02-10 09:40:35] [INFO] Saved 836 processed images to processed_images.json
+[2026-02-10 09:40:35] [INFO] 
+============================================================
+[2026-02-10 09:40:35] [INFO] FINAL STATISTICS:
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] Files scanned: 32
+[2026-02-10 09:40:35] [INFO] Images found: 382
+[2026-02-10 09:40:35] [INFO] Images skipped (already processed): 295
+[2026-02-10 09:40:35] [INFO] Images skipped (already correct): 26
+[2026-02-10 09:40:35] [INFO] Physical files renamed: 0
+[2026-02-10 09:40:35] [INFO] Errors: 1
+[2026-02-10 09:40:35] [INFO] Total processed images tracked: 836
+[2026-02-10 09:40:35] [INFO] Total mappings in database: 6
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] 
+[INFO] No new images needed renaming
+[2026-02-10 09:40:35] [INFO] 
+[COMPLETE] Process finished
+[2026-02-10 09:40:35] [INFO] ============================================================
+

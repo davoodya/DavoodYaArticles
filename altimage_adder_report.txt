@@ -1,13 +1,13 @@
 Image Alt Text Update Report
 ============================================================
-Date: 2026-02-09 15:40:37
+Date: 2026-02-10 09:25:57
 ============================================================
 
 Statistics:
-- Files scanned: 30
-- Files modified: 9
-- Images updated: 105
-- Images skipped: 250
+- Files scanned: 32
+- Files modified: 6
+- Images updated: 70
+- Images skipped: 311
 - Errors: 0
 
 Description:

@@ -1,16 +1,16 @@
 Image Migration Report - Phase 1 & 2
 ============================================================
-Date: 2026-02-09 15:39:57
+Date: 2026-02-10 09:40:35
 ============================================================
 
 Statistics:
-- Files scanned: 30
-- Image references found: 72
-- Images copied: 71
-- Images renamed: 71
+- Files scanned: 32
+- Image references found: 0
+- Images copied: 0
+- Images renamed: 0
 - Images skipped: 0
 - Errors: 0
-- Total processed: 579
+- Total processed: 810
 
 Processed Images:
 ------------------------------------------------------------
@@ -268,6 +268,27 @@ Processed Images:
 
   [network] Pasted image 20240406230938.png
   -> Pastedimage20240406230938.png
+
+  [network] Pasted image 20240521175544.png
+  -> Pastedimage20240521175544.png
+
+  [network] Pasted image 20240522154828.png
+  -> Pastedimage20240522154828.png
+
+  [network] Pasted image 20240522160228.png
+  -> Pastedimage20240522160228.png
+
+  [network] Pasted image 20240522160429.png
+  -> Pastedimage20240522160429.png
+
+  [network] Pasted image 20240522160629.png
+  -> Pastedimage20240522160629.png
+
+  [network] Pasted image 20240522161517.png
+  -> Pastedimage20240522161517.png
+
+  [network] Pasted image 20240522161741.png
+  -> Pastedimage20240522161741.png
 
   [network] Pasted image 20240525222946.png
   -> Pastedimage20240525222946.png
@@ -701,6 +722,63 @@ Processed Images:
   [cyber-security] Pasted image 20240624214923.png
   -> Pastedimage20240624214923.png
 
+  [linux] Pasted image 20240625164355.png
+  -> Pastedimage20240625164355.png
+
+  [linux] Pasted image 20240625164829.png
+  -> Pastedimage20240625164829.png
+
+  [linux] Pasted image 20240625165040.png
+  -> Pastedimage20240625165040.png
+
+  [linux] Pasted image 20240625165250.png
+  -> Pastedimage20240625165250.png
+
+  [linux] Pasted image 20240625165754.png
+  -> Pastedimage20240625165754.png
+
+  [linux] Pasted image 20240625170641.png
+  -> Pastedimage20240625170641.png
+
+  [linux] Pasted image 20240625171002.png
+  -> Pastedimage20240625171002.png
+
+  [linux] Pasted image 20240625171239.png
+  -> Pastedimage20240625171239.png
+
+  [linux] Pasted image 20240625200802.png
+  -> Pastedimage20240625200802.png
+
+  [linux] Pasted image 20240625200927.png
+  -> Pastedimage20240625200927.png
+
+  [linux] Pasted image 20240625201253.png
+  -> Pastedimage20240625201253.png
+
+  [linux] Pasted image 20240625201528.png
+  -> Pastedimage20240625201528.png
+
+  [linux] Pasted image 20240625235408.png
+  -> Pastedimage20240625235408.png
+
+  [network] Pasted image 20240902120134.png
+  -> Pastedimage20240902120134.png
+
+  [linux] Pasted image 20240903183816.png
+  -> Pastedimage20240903183816.png
+
+  [linux] Pasted image 20240903183835.png
+  -> Pastedimage20240903183835.png
+
+  [linux] Pasted image 20240903184028.png
+  -> Pastedimage20240903184028.png
+
+  [linux] Pasted image 20240903184051.png
+  -> Pastedimage20240903184051.png
+
+  [linux] Pasted image 20240903184118.png
+  -> Pastedimage20240903184118.png
+
   [tools] Pasted image 20250703164923.png
   -> Pastedimage20250703164923.png
 
@@ -1079,6 +1157,120 @@ Processed Images:
   [seo] Pasted image 20260121190100.png
   -> Pastedimage20260121190100.png
 
+  [cyber-security] cyber-security/Basic-Encryption-1.png
+  -> Basic-Encryption-1.png
+
+  [cyber-security] cyber-security/Basic-Encryption-10.png
+  -> Basic-Encryption-10.png
+
+  [cyber-security] cyber-security/Basic-Encryption-11.png
+  -> Basic-Encryption-11.png
+
+  [cyber-security] cyber-security/Basic-Encryption-12.png
+  -> Basic-Encryption-12.png
+
+  [cyber-security] cyber-security/Basic-Encryption-13.png
+  -> Basic-Encryption-13.png
+
+  [cyber-security] cyber-security/Basic-Encryption-14.png
+  -> Basic-Encryption-14.png
+
+  [cyber-security] cyber-security/Basic-Encryption-15.png
+  -> Basic-Encryption-15.png
+
+  [cyber-security] cyber-security/Basic-Encryption-16.png
+  -> Basic-Encryption-16.png
+
+  [cyber-security] cyber-security/Basic-Encryption-17.png
+  -> Basic-Encryption-17.png
+
+  [cyber-security] cyber-security/Basic-Encryption-18.png
+  -> Basic-Encryption-18.png
+
+  [cyber-security] cyber-security/Basic-Encryption-19.png
+  -> Basic-Encryption-19.png
+
+  [cyber-security] cyber-security/Basic-Encryption-2.png
+  -> Basic-Encryption-2.png
+
+  [cyber-security] cyber-security/Basic-Encryption-20.png
+  -> Basic-Encryption-20.png
+
+  [cyber-security] cyber-security/Basic-Encryption-21.png
+  -> Basic-Encryption-21.png
+
+  [cyber-security] cyber-security/Basic-Encryption-22.png
+  -> Basic-Encryption-22.png
+
+  [cyber-security] cyber-security/Basic-Encryption-23.png
+  -> Basic-Encryption-23.png
+
+  [cyber-security] cyber-security/Basic-Encryption-24.png
+  -> Basic-Encryption-24.png
+
+  [cyber-security] cyber-security/Basic-Encryption-25.png
+  -> Basic-Encryption-25.png
+
+  [cyber-security] cyber-security/Basic-Encryption-26.png
+  -> Basic-Encryption-26.png
+
+  [cyber-security] cyber-security/Basic-Encryption-27.png
+  -> Basic-Encryption-27.png
+
+  [cyber-security] cyber-security/Basic-Encryption-28.png
+  -> Basic-Encryption-28.png
+
+  [cyber-security] cyber-security/Basic-Encryption-29.png
+  -> Basic-Encryption-29.png
+
+  [cyber-security] cyber-security/Basic-Encryption-3.png
+  -> Basic-Encryption-3.png
+
+  [cyber-security] cyber-security/Basic-Encryption-30.png
+  -> Basic-Encryption-30.png
+
+  [cyber-security] cyber-security/Basic-Encryption-31.png
+  -> Basic-Encryption-31.png
+
+  [cyber-security] cyber-security/Basic-Encryption-32.png
+  -> Basic-Encryption-32.png
+
+  [cyber-security] cyber-security/Basic-Encryption-4.png
+  -> Basic-Encryption-4.png
+
+  [cyber-security] cyber-security/Basic-Encryption-5.png
+  -> Basic-Encryption-5.png
+
+  [cyber-security] cyber-security/Basic-Encryption-6.png
+  -> Basic-Encryption-6.png
+
+  [cyber-security] cyber-security/Basic-Encryption-7.png
+  -> Basic-Encryption-7.png
+
+  [cyber-security] cyber-security/Basic-Encryption-8.png
+  -> Basic-Encryption-8.png
+
+  [cyber-security] cyber-security/Basic-Encryption-9.png
+  -> Basic-Encryption-9.png
+
+  [cyber-security] cyber-security/Malwares-1.png
+  -> Malwares-1.png
+
+  [cyber-security] cyber-security/Malwares-2.png
+  -> Malwares-2.png
+
+  [cyber-security] cyber-security/Malwares-3.png
+  -> Malwares-3.png
+
+  [cyber-security] cyber-security/Malwares-4.png
+  -> Malwares-4.png
+
+  [cyber-security] cyber-security/Malwares-5.png
+  -> Malwares-5.png
+
+  [cyber-security] cyber-security/Malwares-6.png
+  -> Malwares-6.png
+
   [cyber-security] cyber-security/Pastedimage20250713164152.png
   -> Basic-Encryption-1.png
 
@@ -1378,6 +1570,507 @@ Processed Images:
 
   [linux] linux/60CommandsHackerShouldKnowit-9.png
   -> 60CommandsHackerShouldKnowit-9.png
+
+  [linux] linux/Pastedimage20240625164355.png
+  -> KaliLinuxInstallingGuide-6.png
+
+  [linux] linux/Pastedimage20240625164829.png
+  -> KaliLinuxInstallingGuide-7.png
+
+  [linux] linux/Pastedimage20240625165040.png
+  -> KaliLinuxInstallingGuide-8.png
+
+  [linux] linux/Pastedimage20240625165250.png
+  -> KaliLinuxInstallingGuide-9.png
+
+  [linux] linux/Pastedimage20240625165754.png
+  -> KaliLinuxInstallingGuide-10.png
+
+  [linux] linux/Pastedimage20240625170641.png
+  -> KaliLinuxInstallingGuide-11.png
+
+  [linux] linux/Pastedimage20240625171002.png
+  -> KaliLinuxInstallingGuide-12.png
+
+  [linux] linux/Pastedimage20240625171239.png
+  -> KaliLinuxInstallingGuide-13.png
+
+  [linux] linux/Pastedimage20240625200802.png
+  -> KaliLinuxInstallingGuide-15.png
+
+  [linux] linux/Pastedimage20240625200927.png
+  -> KaliLinuxInstallingGuide-16.png
+
+  [linux] linux/Pastedimage20240625201253.png
+  -> KaliLinuxInstallingGuide-17.png
+
+  [linux] linux/Pastedimage20240625201528.png
+  -> KaliLinuxInstallingGuide-18.png
+
+  [linux] linux/Pastedimage20240625235408.png
+  -> KaliLinuxInstallingGuide-14.png
+
+  [linux] linux/Pastedimage20240903183816.png
+  -> KaliLinuxInstallingGuide-2.png
+
+  [linux] linux/Pastedimage20240903183835.png
+  -> KaliLinuxInstallingGuide-3.png
+
+  [linux] linux/Pastedimage20240903184028.png
+  -> KaliLinuxInstallingGuide-4.png
+
+  [linux] linux/Pastedimage20240903184051.png
+  -> KaliLinuxInstallingGuide-5.png
+
+  [linux] linux/Pastedimage20240903184118.png
+  -> KaliLinuxInstallingGuide-1.png
+
+  [network] network/IP-MacAddressBasicandConcepts-1.png
+  -> IP-MacAddressBasicandConcepts-1.png
+
+  [network] network/IP-MacAddressBasicandConcepts-10.png
+  -> IP-MacAddressBasicandConcepts-10.png
+
+  [network] network/IP-MacAddressBasicandConcepts-11.png
+  -> IP-MacAddressBasicandConcepts-11.png
+
+  [network] network/IP-MacAddressBasicandConcepts-12.png
+  -> IP-MacAddressBasicandConcepts-12.png
+
+  [network] network/IP-MacAddressBasicandConcepts-13.png
+  -> IP-MacAddressBasicandConcepts-13.png
+
+  [network] network/IP-MacAddressBasicandConcepts-2.png
+  -> IP-MacAddressBasicandConcepts-2.png
+
+  [network] network/IP-MacAddressBasicandConcepts-3.png
+  -> IP-MacAddressBasicandConcepts-3.png
+
+  [network] network/IP-MacAddressBasicandConcepts-4.png
+  -> IP-MacAddressBasicandConcepts-4.png
+
+  [network] network/IP-MacAddressBasicandConcepts-5.png
+  -> IP-MacAddressBasicandConcepts-5.png
+
+  [network] network/IP-MacAddressBasicandConcepts-6.png
+  -> IP-MacAddressBasicandConcepts-6.png
+
+  [network] network/IP-MacAddressBasicandConcepts-7.png
+  -> IP-MacAddressBasicandConcepts-7.png
+
+  [network] network/IP-MacAddressBasicandConcepts-8.png
+  -> IP-MacAddressBasicandConcepts-8.png
+
+  [network] network/IP-MacAddressBasicandConcepts-9.png
+  -> IP-MacAddressBasicandConcepts-9.png
+
+  [network] network/NetworkBasics-Terminology-Topology-1.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-1.png
+
+  [network] network/NetworkBasics-Terminology-Topology-2.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-2.png
+
+  [network] network/NetworkBasics-Terminology-Topology-3.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-3.png
+
+  [network] network/NetworkBasics-Terminology-Topology-4.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-4.png
+
+  [network] network/NetworkBasics-Terminology-Topology-5.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-5.png
+
+  [network] network/NetworkBasics-Terminology-Topology-6.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-6.png
+
+  [network] network/NetworkBasics-Terminology-Topology-7.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-7.png
+
+  [network] network/NetworkBasics-Terminology-Topology-8.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-8.png
+
+  [network] network/NetworkBasics-Terminology-Topology-9.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-9.png
+
+  [network] network/NetworkCableandComponents-1.png
+  -> انواعدیوایسهاوکابلهایشبکه-1.png
+
+  [network] network/NetworkCableandComponents-10.png
+  -> انواعدیوایسهاوکابلهایشبکه-10.png
+
+  [network] network/NetworkCableandComponents-11.png
+  -> انواعدیوایسهاوکابلهایشبکه-11.png
+
+  [network] network/NetworkCableandComponents-12.png
+  -> انواعدیوایسهاوکابلهایشبکه-12.png
+
+  [network] network/NetworkCableandComponents-13.png
+  -> انواعدیوایسهاوکابلهایشبکه-13.png
+
+  [network] network/NetworkCableandComponents-14.png
+  -> انواعدیوایسهاوکابلهایشبکه-14.png
+
+  [network] network/NetworkCableandComponents-15.png
+  -> انواعدیوایسهاوکابلهایشبکه-15.png
+
+  [network] network/NetworkCableandComponents-16.png
+  -> انواعدیوایسهاوکابلهایشبکه-16.png
+
+  [network] network/NetworkCableandComponents-17.png
+  -> انواعدیوایسهاوکابلهایشبکه-17.png
+
+  [network] network/NetworkCableandComponents-18.png
+  -> انواعدیوایسهاوکابلهایشبکه-18.png
+
+  [network] network/NetworkCableandComponents-19.png
+  -> انواعدیوایسهاوکابلهایشبکه-19.png
+
+  [network] network/NetworkCableandComponents-2.png
+  -> انواعدیوایسهاوکابلهایشبکه-2.png
+
+  [network] network/NetworkCableandComponents-20.png
+  -> انواعدیوایسهاوکابلهایشبکه-20.png
+
+  [network] network/NetworkCableandComponents-21.png
+  -> انواعدیوایسهاوکابلهایشبکه-21.png
+
+  [network] network/NetworkCableandComponents-22.png
+  -> انواعدیوایسهاوکابلهایشبکه-22.png
+
+  [network] network/NetworkCableandComponents-23.png
+  -> انواعدیوایسهاوکابلهایشبکه-23.png
+
+  [network] network/NetworkCableandComponents-24.png
+  -> انواعدیوایسهاوکابلهایشبکه-24.png
+
+  [network] network/NetworkCableandComponents-25.png
+  -> انواعدیوایسهاوکابلهایشبکه-25.png
+
+  [network] network/NetworkCableandComponents-26.png
+  -> انواعدیوایسهاوکابلهایشبکه-26.png
+
+  [network] network/NetworkCableandComponents-27.png
+  -> انواعدیوایسهاوکابلهایشبکه-27.png
+
+  [network] network/NetworkCableandComponents-28.png
+  -> انواعدیوایسهاوکابلهایشبکه-28.png
+
+  [network] network/NetworkCableandComponents-29.png
+  -> انواعدیوایسهاوکابلهایشبکه-29.png
+
+  [network] network/NetworkCableandComponents-3.png
+  -> انواعدیوایسهاوکابلهایشبکه-3.png
+
+  [network] network/NetworkCableandComponents-30.png
+  -> انواعدیوایسهاوکابلهایشبکه-30.png
+
+  [network] network/NetworkCableandComponents-31.png
+  -> انواعدیوایسهاوکابلهایشبکه-31.png
+
+  [network] network/NetworkCableandComponents-32.png
+  -> انواعدیوایسهاوکابلهایشبکه-32.png
+
+  [network] network/NetworkCableandComponents-33.png
+  -> انواعدیوایسهاوکابلهایشبکه-33.png
+
+  [network] network/NetworkCableandComponents-4.png
+  -> انواعدیوایسهاوکابلهایشبکه-4.png
+
+  [network] network/NetworkCableandComponents-5.png
+  -> انواعدیوایسهاوکابلهایشبکه-5.png
+
+  [network] network/NetworkCableandComponents-7.png
+  -> انواعدیوایسهاوکابلهایشبکه-7.png
+
+  [network] network/NetworkCableandComponents-8.png
+  -> انواعدیوایسهاوکابلهایشبکه-8.png
+
+  [network] network/NetworkCableandComponents-9.png
+  -> انواعدیوایسهاوکابلهایشبکه-9.png
+
+  [network] network/NetworkModels-OSIandTCPIP-1.png
+  -> NetworkModels-OSIandTCPIP-1.png
+
+  [network] network/NetworkModels-OSIandTCPIP-10.png
+  -> NetworkModels-OSIandTCPIP-10.png
+
+  [network] network/NetworkModels-OSIandTCPIP-11.png
+  -> NetworkModels-OSIandTCPIP-11.png
+
+  [network] network/NetworkModels-OSIandTCPIP-12.png
+  -> NetworkModels-OSIandTCPIP-12.png
+
+  [network] network/NetworkModels-OSIandTCPIP-13.png
+  -> NetworkModels-OSIandTCPIP-13.png
+
+  [network] network/NetworkModels-OSIandTCPIP-14.png
+  -> NetworkModels-OSIandTCPIP-14.png
+
+  [network] network/NetworkModels-OSIandTCPIP-2.png
+  -> NetworkModels-OSIandTCPIP-2.png
+
+  [network] network/NetworkModels-OSIandTCPIP-3.png
+  -> NetworkModels-OSIandTCPIP-3.png
+
+  [network] network/NetworkModels-OSIandTCPIP-4.png
+  -> NetworkModels-OSIandTCPIP-4.png
+
+  [network] network/NetworkModels-OSIandTCPIP-5.png
+  -> NetworkModels-OSIandTCPIP-5.png
+
+  [network] network/NetworkModels-OSIandTCPIP-6.png
+  -> NetworkModels-OSIandTCPIP-6.png
+
+  [network] network/NetworkModels-OSIandTCPIP-7.png
+  -> NetworkModels-OSIandTCPIP-7.png
+
+  [network] network/NetworkModels-OSIandTCPIP-8.png
+  -> NetworkModels-OSIandTCPIP-8.png
+
+  [network] network/NetworkModels-OSIandTCPIP-9.png
+  -> NetworkModels-OSIandTCPIP-9.png
+
+  [network] network/Pastedimage20240325140528.png
+  -> NetworkBasics-Terminology-Topology-9.png
+
+  [network] network/Pastedimage20240325140633.png
+  -> NetworkBasics-Terminology-Topology-7.png
+
+  [network] network/Pastedimage20240325140833.png
+  -> NetworkBasics-Terminology-Topology-8.png
+
+  [network] network/Pastedimage20240325141055.png
+  -> NetworkCableandComponents-2.png
+
+  [network] network/Pastedimage20240325141107.png
+  -> NetworkCableandComponents-3.png
+
+  [network] network/Pastedimage20240325141114.png
+  -> NetworkCableandComponents-4.png
+
+  [network] network/Pastedimage20240325141207.png
+  -> NetworkCableandComponents-5.png
+
+  [network] network/Pastedimage20240325141501.png
+  -> NetworkBasics-Terminology-Topology-3.png
+
+  [network] network/Pastedimage20240325141520.png
+  -> NetworkBasics-Terminology-Topology-4.png
+
+  [network] network/Pastedimage20240325141535.png
+  -> NetworkBasics-Terminology-Topology-1.png
+
+  [network] network/Pastedimage20240325141548.png
+  -> NetworkBasics-Terminology-Topology-2.png
+
+  [network] network/Pastedimage20240325141614.png
+  -> NetworkBasics-Terminology-Topology-6.png
+
+  [network] network/Pastedimage20240325141624.png
+  -> NetworkBasics-Terminology-Topology-5.png
+
+  [network] network/Pastedimage20240325142031.png
+  -> NetworkCableandComponents-18.png
+
+  [network] network/Pastedimage20240325142125.png
+  -> NetworkCableandComponents-20.png
+
+  [network] network/Pastedimage20240325142133.png
+  -> NetworkCableandComponents-19.png
+
+  [network] network/Pastedimage20240325142910.png
+  -> NetworkModels-OSIandTCPIP-2.png
+
+  [network] network/Pastedimage20240325142914.png
+  -> NetworkModels-OSIandTCPIP-3.png
+
+  [network] network/Pastedimage20240325142959.png
+  -> NetworkModels-OSIandTCPIP-1.png
+
+  [network] network/Pastedimage20240325143619.png
+  -> NetworkModels-OSIandTCPIP-4.png
+
+  [network] network/Pastedimage20240325143628.png
+  -> NetworkModels-OSIandTCPIP-5.png
+
+  [network] network/Pastedimage20240325144303.png
+  -> IP-MacAddressBasicandConcepts-1.png
+
+  [network] network/Pastedimage20240325144616.png
+  -> IP-MacAddressBasicandConcepts-2.png
+
+  [network] network/Pastedimage20240325144624.png
+  -> IP-MacAddressBasicandConcepts-3.png
+
+  [network] network/Pastedimage20240325144714.png
+  -> IP-MacAddressBasicandConcepts-4.png
+
+  [network] network/Pastedimage20240325145021.png
+  -> IP-MacAddressBasicandConcepts-6.png
+
+  [network] network/Pastedimage20240325145030.png
+  -> IP-MacAddressBasicandConcepts-7.png
+
+  [network] network/Pastedimage20240325145052.png
+  -> IP-MacAddressBasicandConcepts-8.png
+
+  [network] network/Pastedimage20240325145116.png
+  -> IP-MacAddressBasicandConcepts-5.png
+
+  [network] network/Pastedimage20240325145329.png
+  -> IP-MacAddressBasicandConcepts-10.png
+
+  [network] network/Pastedimage20240325145331.png
+  -> IP-MacAddressBasicandConcepts-9.png
+
+  [network] network/Pastedimage20240325150435.png
+  -> NetworkModels-OSIandTCPIP-6.png
+
+  [network] network/Pastedimage20240325150445.png
+  -> NetworkModels-OSIandTCPIP-7.png
+
+  [network] network/Pastedimage20240325150455.png
+  -> NetworkModels-OSIandTCPIP-8.png
+
+  [network] network/Pastedimage20240325150519.png
+  -> NetworkModels-OSIandTCPIP-9.png
+
+  [network] network/Pastedimage20240325150534.png
+  -> NetworkModels-OSIandTCPIP-10.png
+
+  [network] network/Pastedimage20240325150548.png
+  -> NetworkModels-OSIandTCPIP-11.png
+
+  [network] network/Pastedimage20240325150746.png
+  -> IP-MacAddressBasicandConcepts-11.png
+
+  [network] network/Pastedimage20240325150755.png
+  -> IP-MacAddressBasicandConcepts-12.png
+
+  [network] network/Pastedimage20240406223913.png
+  -> NetworkCableandComponents-27.png
+
+  [network] network/Pastedimage20240406224126.png
+  -> NetworkCableandComponents-29.png
+
+  [network] network/Pastedimage20240406224149.png
+  -> NetworkCableandComponents-30.png
+
+  [network] network/Pastedimage20240406224158.png
+  -> NetworkCableandComponents-28.png
+
+  [network] network/Pastedimage20240406224347.png
+  -> NetworkCableandComponents-31.png
+
+  [network] network/Pastedimage20240406224400.png
+  -> NetworkCableandComponents-32.png
+
+  [network] network/Pastedimage20240406224406.png
+  -> NetworkCableandComponents-33.png
+
+  [network] network/Pastedimage20240406230157.png
+  -> NetworkModels-OSIandTCPIP-13.png
+
+  [network] network/Pastedimage20240406230215.png
+  -> NetworkModels-OSIandTCPIP-14.png
+
+  [network] network/Pastedimage20240406230317.png
+  -> IP-MacAddressBasicandConcepts-13.png
+
+  [network] network/Pastedimage20240406230340.png
+  -> NetworkCableandComponents-7.png
+
+  [network] network/Pastedimage20240406230353.png
+  -> NetworkCableandComponents-8.png
+
+  [network] network/Pastedimage20240406230421.png
+  -> NetworkCableandComponents-9.png
+
+  [network] network/Pastedimage20240406230439.png
+  -> NetworkCableandComponents-10.png
+
+  [network] network/Pastedimage20240406230505.png
+  -> NetworkCableandComponents-11.png
+
+  [network] network/Pastedimage20240406230537.png
+  -> NetworkCableandComponents-12.png
+
+  [network] network/Pastedimage20240406230541.png
+  -> NetworkCableandComponents-13.png
+
+  [network] network/Pastedimage20240406230549.png
+  -> NetworkCableandComponents-14.png
+
+  [network] network/Pastedimage20240406230552.png
+  -> NetworkCableandComponents-15.png
+
+  [network] network/Pastedimage20240406230619.png
+  -> NetworkCableandComponents-1.png
+
+  [network] network/Pastedimage20240406230646.png
+  -> NetworkCableandComponents-16.png
+
+  [network] network/Pastedimage20240406230658.png
+  -> NetworkCableandComponents-17.png
+
+  [network] network/Pastedimage20240406230723.png
+  -> NetworkCableandComponents-21.png
+
+  [network] network/Pastedimage20240406230726.png
+  -> NetworkCableandComponents-22.png
+
+  [network] network/Pastedimage20240406230748.png
+  -> NetworkCableandComponents-25.png
+
+  [network] network/Pastedimage20240406230752.png
+  -> NetworkCableandComponents-26.png
+
+  [network] network/Pastedimage20240406230935.png
+  -> NetworkCableandComponents-23.png
+
+  [network] network/Pastedimage20240406230938.png
+  -> NetworkCableandComponents-24.png
+
+  [network] network/Pastedimage20240521175544.png
+  -> VirtualizationConcepts-2.png
+
+  [network] network/Pastedimage20240522154828.png
+  -> VirtualizationConcepts-3.png
+
+  [network] network/Pastedimage20240522160228.png
+  -> VirtualizationConcepts-4.png
+
+  [network] network/Pastedimage20240522160429.png
+  -> VirtualizationConcepts-5.png
+
+  [network] network/Pastedimage20240522160629.png
+  -> VirtualizationConcepts-6.png
+
+  [network] network/Pastedimage20240522161517.png
+  -> VirtualizationConcepts-7.png
+
+  [network] network/Pastedimage20240522161741.png
+  -> VirtualizationConcepts-8.png
+
+  [network] network/Pastedimage20240525222946.png
+  -> WindowsNetworking-2.png
+
+  [network] network/Pastedimage20240525223258.png
+  -> WindowsNetworking-1.png
+
+  [network] network/Pastedimage20240608215246.png
+  -> NetworkServices(DHCP-DNS,-VLAN)-1.png
+
+  [network] network/Pastedimage20240608232002.png
+  -> NetworkModels-OSIandTCPIP-12.png
+
+  [network] network/Pastedimage20240902120134.png
+  -> VirtualizationConcepts-1.png
+
+  [network] network/WindowsNetworking-1.png
+  -> راهاندازیشبکهویندوز-1.png
+
+  [network] network/WindowsNetworking-2.png
+  -> راهاندازیشبکهویندوز-2.png
 
   [seo] seo/Backlinks-1.png
   -> Backlinks-1.png
@@ -1753,8 +2446,8 @@ Processed Images:
 
 ============================================================
 Conversion Details:
-- Files converted: 6
-- Links converted: 71
+- Files converted: 0
+- Links converted: 0
 
 Paths:
 - Obsidian source: H:\Files\Obsidian\Handouts\VaultData\Attachments

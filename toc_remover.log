@@ -363,3 +363,151 @@
 2026-02-09 15:40:58,615 - INFO - SCRIPT EXECUTION COMPLETED
 2026-02-09 15:40:58,615 - INFO - ======================================================================
 
+2026-02-10 09:25:58,463 - INFO - 
+======================================================================
+2026-02-10 09:25:58,463 - INFO - TOC REMOVER FOR HUGO ARTICLES
+2026-02-10 09:25:58,463 - INFO - SCRIPT STARTED
+2026-02-10 09:25:58,463 - INFO - ======================================================================
+
+2026-02-10 09:25:58,464 - INFO - Loaded tracking file with 36 processed files
+2026-02-10 09:25:58,467 - INFO - Found 39 markdown files to check (including subdirectories)
+2026-02-10 09:25:58,467 - INFO - Already processed: 36 files
+2026-02-10 09:25:58,467 - INFO - 
+============================================================
+2026-02-10 09:25:58,467 - INFO - Processing: all-articles\README.md
+2026-02-10 09:25:58,467 - INFO - ============================================================
+2026-02-10 09:25:58,468 - INFO - No TOC found in: README.md
+2026-02-10 09:25:58,468 - INFO - 
+============================================================
+2026-02-10 09:25:58,468 - INFO - Processing: all-articles\_index.md
+2026-02-10 09:25:58,468 - INFO - ============================================================
+2026-02-10 09:25:58,468 - INFO - No TOC found in: _index.md
+2026-02-10 09:25:58,468 - INFO - ⊙ Skipping already processed file: cyber-security\_index.md
+2026-02-10 09:25:58,468 - INFO - ⊙ Skipping already processed file: linux\60 Commands Hacker Should Know it.md
+2026-02-10 09:25:58,468 - INFO - 
+============================================================
+2026-02-10 09:25:58,468 - INFO - Processing: linux\Kali Linux Installing Guide.md
+2026-02-10 09:25:58,468 - INFO - ============================================================
+2026-02-10 09:25:58,469 - INFO - No TOC found in: Kali Linux Installing Guide.md
+2026-02-10 09:25:58,469 - INFO - ⊙ Skipping already processed file: linux\_index.md
+2026-02-10 09:25:58,469 - INFO - ⊙ Skipping already processed file: network\IP-Mac Address Basic and Concepts.md
+2026-02-10 09:25:58,469 - INFO - ⊙ Skipping already processed file: network\Network Basics-Terminology-Topology.md
+2026-02-10 09:25:58,469 - INFO - ⊙ Skipping already processed file: network\Network Cable and Components.md
+2026-02-10 09:25:58,469 - INFO - ⊙ Skipping already processed file: network\Network Commands & File Printer Sharing.md
+2026-02-10 09:25:58,469 - INFO - ⊙ Skipping already processed file: network\Network Models-OSI and TCPIP.md
+2026-02-10 09:25:58,469 - INFO - ⊙ Skipping already processed file: network\Network Services(DHCP-DNS,-VLAN).md
+2026-02-10 09:25:58,470 - INFO - 
+============================================================
+2026-02-10 09:25:58,470 - INFO - Processing: network\Virtualization Concepts.md
+2026-02-10 09:25:58,470 - INFO - ============================================================
+2026-02-10 09:25:58,470 - INFO - No TOC found in: Virtualization Concepts.md
+2026-02-10 09:25:58,470 - INFO - ⊙ Skipping already processed file: network\Windows Networking.md
+2026-02-10 09:25:58,470 - INFO - ⊙ Skipping already processed file: network\_index.md
+2026-02-10 09:25:58,470 - INFO - ⊙ Skipping already processed file: python\Dir-Buster-Module.md
+2026-02-10 09:25:58,470 - INFO - ⊙ Skipping already processed file: python\_index.md
+2026-02-10 09:25:58,471 - INFO - ⊙ Skipping already processed file: seo\_index.md
+2026-02-10 09:25:58,471 - INFO - ⊙ Skipping already processed file: tools\MSFConsole Commands.md
+2026-02-10 09:25:58,471 - INFO - ⊙ Skipping already processed file: tools\_index.md
+2026-02-10 09:25:58,471 - INFO - ⊙ Skipping already processed file: tools\Burpsuite\1-Install Burpsuite.md
+2026-02-10 09:25:58,471 - INFO - ⊙ Skipping already processed file: tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+2026-02-10 09:25:58,471 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+2026-02-10 09:25:58,471 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+2026-02-10 09:25:58,471 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+2026-02-10 09:25:58,471 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+2026-02-10 09:25:58,471 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+2026-02-10 09:25:58,471 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E15 - Page Rank.md
+2026-02-10 09:25:58,471 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+2026-02-10 09:25:58,472 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E17 - Backlinks.md
+2026-02-10 09:25:58,472 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+2026-02-10 09:25:58,472 - INFO - ⊙ Skipping already processed file: cyber-security\Cryptography\Basic-Encryption.md
+2026-02-10 09:25:58,472 - INFO - ⊙ Skipping already processed file: cyber-security\Cryptography\Malwares.md
+2026-02-10 09:25:58,472 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+2026-02-10 09:25:58,472 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+2026-02-10 09:25:58,472 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+2026-02-10 09:25:58,472 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+2026-02-10 09:25:58,472 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+2026-02-10 09:25:58,472 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+2026-02-10 09:25:58,473 - INFO - Tracking file saved with 40 processed files
+2026-02-10 09:25:58,473 - INFO - 
+============================================================
+2026-02-10 09:25:58,473 - INFO - SUMMARY
+2026-02-10 09:25:58,473 - INFO - ============================================================
+2026-02-10 09:25:58,473 - INFO - Total files found: 39
+2026-02-10 09:25:58,473 - INFO - Already processed (skipped): 35
+2026-02-10 09:25:58,473 - INFO - TOC removed: 0
+2026-02-10 09:25:58,473 - INFO - No TOC found: 4
+2026-02-10 09:25:58,474 - INFO - Errors: 0
+2026-02-10 09:25:58,474 - INFO - ============================================================
+2026-02-10 09:25:58,474 - INFO - 
+✓ Report saved to: toc_remover_report.txt
+2026-02-10 09:25:58,474 - INFO - 
+======================================================================
+2026-02-10 09:25:58,474 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-10 09:25:58,474 - INFO - ======================================================================
+
+2026-02-10 09:40:36,259 - INFO - 
+======================================================================
+2026-02-10 09:40:36,259 - INFO - TOC REMOVER FOR HUGO ARTICLES
+2026-02-10 09:40:36,259 - INFO - SCRIPT STARTED
+2026-02-10 09:40:36,259 - INFO - ======================================================================
+
+2026-02-10 09:40:36,259 - INFO - Loaded tracking file with 40 processed files
+2026-02-10 09:40:36,262 - INFO - Found 39 markdown files to check (including subdirectories)
+2026-02-10 09:40:36,262 - INFO - Already processed: 40 files
+2026-02-10 09:40:36,262 - INFO - ⊙ Skipping already processed file: all-articles\README.md
+2026-02-10 09:40:36,262 - INFO - ⊙ Skipping already processed file: all-articles\_index.md
+2026-02-10 09:40:36,263 - INFO - ⊙ Skipping already processed file: cyber-security\_index.md
+2026-02-10 09:40:36,263 - INFO - ⊙ Skipping already processed file: linux\60 Commands Hacker Should Know it.md
+2026-02-10 09:40:36,263 - INFO - ⊙ Skipping already processed file: linux\Kali Linux Installing Guide.md
+2026-02-10 09:40:36,263 - INFO - ⊙ Skipping already processed file: linux\_index.md
+2026-02-10 09:40:36,263 - INFO - ⊙ Skipping already processed file: network\IP-Mac Address Basic and Concepts.md
+2026-02-10 09:40:36,263 - INFO - ⊙ Skipping already processed file: network\Network Basics-Terminology-Topology.md
+2026-02-10 09:40:36,263 - INFO - ⊙ Skipping already processed file: network\Network Cable and Components.md
+2026-02-10 09:40:36,263 - INFO - ⊙ Skipping already processed file: network\Network Commands & File Printer Sharing.md
+2026-02-10 09:40:36,263 - INFO - ⊙ Skipping already processed file: network\Network Models-OSI and TCPIP.md
+2026-02-10 09:40:36,263 - INFO - ⊙ Skipping already processed file: network\Network Services(DHCP-DNS,-VLAN).md
+2026-02-10 09:40:36,263 - INFO - ⊙ Skipping already processed file: network\Virtualization Concepts.md
+2026-02-10 09:40:36,263 - INFO - ⊙ Skipping already processed file: network\Windows Networking.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: network\_index.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: python\Dir-Buster-Module.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: python\_index.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: seo\_index.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: tools\MSFConsole Commands.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: tools\_index.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: tools\Burpsuite\1-Install Burpsuite.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E15 - Page Rank.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E17 - Backlinks.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: cyber-security\Cryptography\Basic-Encryption.md
+2026-02-10 09:40:36,264 - INFO - ⊙ Skipping already processed file: cyber-security\Cryptography\Malwares.md
+2026-02-10 09:40:36,265 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+2026-02-10 09:40:36,265 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+2026-02-10 09:40:36,265 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+2026-02-10 09:40:36,265 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+2026-02-10 09:40:36,265 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+2026-02-10 09:40:36,265 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+2026-02-10 09:40:36,266 - INFO - Tracking file saved with 40 processed files
+2026-02-10 09:40:36,266 - INFO - 
+============================================================
+2026-02-10 09:40:36,266 - INFO - SUMMARY
+2026-02-10 09:40:36,266 - INFO - ============================================================
+2026-02-10 09:40:36,266 - INFO - Total files found: 39
+2026-02-10 09:40:36,266 - INFO - Already processed (skipped): 39
+2026-02-10 09:40:36,266 - INFO - TOC removed: 0
+2026-02-10 09:40:36,266 - INFO - No TOC found: 0
+2026-02-10 09:40:36,266 - INFO - Errors: 0
+2026-02-10 09:40:36,266 - INFO - ============================================================
+2026-02-10 09:40:36,266 - INFO - 
+✓ Report saved to: toc_remover_report.txt
+2026-02-10 09:40:36,267 - INFO - 
+======================================================================
+2026-02-10 09:40:36,267 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-10 09:40:36,267 - INFO - ======================================================================
+

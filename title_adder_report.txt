@@ -1,18 +1,23 @@
 Title Adder Report
 ============================================================
-Date: 2026-02-09 15:40:27
+Date: 2026-02-10 09:40:35
 ============================================================
 
 Statistics:
-- Files scanned: 30
-- Files modified: 8
-- Titles added: 8
-- Titles existed: 22
-- Errors: 0
-- Total articles: 30
+- Files scanned: 32
+- Files modified: 0
+- Titles added: 0
+- Titles existed: 28
+- Errors: 4
+- Total articles: 28
 
 Article Titles:
 ------------------------------------------------------------
+
+ALL-ARTICLES (1 articles):
+  [all-articles\README.md]
+  Title: README
+
 
 CYBER-SECURITY (8 articles):
   [cyber-security\Cryptography\Basic-Encryption.md]
@@ -40,20 +45,17 @@ CYBER-SECURITY (8 articles):
   Title: SANS-401-Password Cracking
 
 
-LINUX (1 articles):
+LINUX (2 articles):
   [linux\60 Commands Hacker Should Know it.md]
   Title: 60 Commands Hacker Should Know it
 
+  [linux\Kali Linux Installing Guide.md]
+  Title: Kali Linux Installing Guide
 
-NETWORK (8 articles):
+
+NETWORK (4 articles):
   [network\IP-Mac Address Basic and Concepts.md]
   Title: IP-Mac Address Basic and Concepts
-
-  [network\Network Basics-Terminology-Topology.md]
-  Title: Network Basics-Terminology-Topology
-
-  [network\Network Cable and Components.md]
-  Title: Network Cable and Components
 
   [network\Network Commands & File Printer Sharing.md]
   Title: Network Commands & File Printer Sharing
@@ -61,14 +63,8 @@ NETWORK (8 articles):
   [network\Network Models-OSI and TCPIP.md]
   Title: Network Models-OSI and TCPIP
 
-  [network\Network Services(DHCP-DNS,-VLAN).md]
-  Title: Network Services(DHCP-DNS,-VLAN)
-
-  [network\Virtualization & Networking.md]
-  Title: Virtualization & Networking
-
-  [network\Windows Networking.md]
-  Title: Windows Networking
+  [network\Virtualization Concepts.md]
+  Title: Virtualization Concepts
 
 
 PYTHON (1 articles):

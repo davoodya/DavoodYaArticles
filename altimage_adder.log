@@ -1329,3 +1329,567 @@ Image Pattern Tests:
 [COMPLETE] Process finished
 [2026-02-09 15:40:37] [INFO] ============================================================
 
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] Starting image alt text update process
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] 
+============================================================
+[2026-02-10 09:25:57] [INFO] Testing patterns:
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] 
+Title Pattern Tests:
+[2026-02-10 09:25:57] [INFO]   ✓ 'title = "SANS-401-Defense-in-Depth (401.2)"' → 'SANS-401-Defense-in-Depth (401.2)'
+[2026-02-10 09:25:57] [INFO]   ✓ 'title = 'My Article Title'' → 'My Article Title'
+[2026-02-10 09:25:57] [INFO]   ✓ 'title="No Space Title"' → 'No Space Title'
+[2026-02-10 09:25:57] [INFO] 
+Image Pattern Tests:
+[2026-02-10 09:25:57] [INFO]   ✓ '![Alt text](/images/cyber-security/image.png)'
+[2026-02-10 09:25:57] [INFO]     Alt: 'Alt text', Path: '/images/cyber-security/image.png'
+[2026-02-10 09:25:57] [INFO]   ✓ '![Old Alt](/images/seo/test.jpg)'
+[2026-02-10 09:25:57] [INFO]     Alt: 'Old Alt', Path: '/images/seo/test.jpg'
+[2026-02-10 09:25:57] [INFO]   ✓ '![](/images/tools/pic.png)'
+[2026-02-10 09:25:57] [INFO]     Alt: '', Path: '/images/tools/pic.png'
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] Alt Image Text Adder - Starting...
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] 
+[File] all-articles\README.md
+[2026-02-10 09:25:57] [INFO]   No images found
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\Cryptography\Basic-Encryption.md
+[2026-02-10 09:25:57] [INFO]   Title: 'Basic-Encryption'
+[2026-02-10 09:25:57] [INFO]   Found 32 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-8
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-9
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-10
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-11
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-12
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-13
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-14
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-15
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-16
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-17
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-18
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-19
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-20
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-21
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-22
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-23
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-24
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-25
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-26
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-27
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-28
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-29
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-30
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-31
+[2026-02-10 09:25:57] [INFO]     > Already correct: Basic-Encryption-32
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\Cryptography\Malwares.md
+[2026-02-10 09:25:57] [INFO]   Title: 'Malwares'
+[2026-02-10 09:25:57] [INFO]   Found 6 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: Malwares-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: Malwares-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: Malwares-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: Malwares-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: Malwares-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: Malwares-6
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+[2026-02-10 09:25:57] [INFO]   Title: 'SANS-401-(Introduction & Prepare Lab)'
+[2026-02-10 09:25:57] [INFO]   Found 8 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-(Introduction & Prepare Lab)-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-(Introduction & Prepare Lab)-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-(Introduction & Prepare Lab)-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-(Introduction & Prepare Lab)-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-(Introduction & Prepare Lab)-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-(Introduction & Prepare Lab)-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-(Introduction & Prepare Lab)-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-(Introduction & Prepare Lab)-8
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+[2026-02-10 09:25:57] [INFO]   Title: 'SANS-401-Networking and Protocols (401.1)'
+[2026-02-10 09:25:57] [INFO]   Found 13 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Networking and Protocols (401.1)-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Networking and Protocols (401.1)-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Networking and Protocols (401.1)-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Networking and Protocols (401.1)-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Networking and Protocols (401.1)-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Networking and Protocols (401.1)-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Networking and Protocols (401.1)-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Networking and Protocols (401.1)-8
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Networking and Protocols (401.1)-9
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Networking and Protocols (401.1)-10
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Networking and Protocols (401.1)-11
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Networking and Protocols (401.1)-12
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Networking and Protocols (401.1)-13
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+[2026-02-10 09:25:57] [INFO]   Title: 'SANS-401-Virtualization & Cloud Infrastructure(401.1)'
+[2026-02-10 09:25:57] [INFO]   Found 14 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Virtualization & Cloud Infrastructure(401.1)-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Virtualization & Cloud Infrastructure(401.1)-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Virtualization & Cloud Infrastructure(401.1)-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Virtualization & Cloud Infrastructure(401.1)-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Virtualization & Cloud Infrastructure(401.1)-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Virtualization & Cloud Infrastructure(401.1)-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Virtualization & Cloud Infrastructure(401.1)-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Virtualization & Cloud Infrastructure(401.1)-8
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Virtualization & Cloud Infrastructure(401.1)-9
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Virtualization & Cloud Infrastructure(401.1)-10
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Virtualization & Cloud Infrastructure(401.1)-11
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Virtualization & Cloud Infrastructure(401.1)-12
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Virtualization & Cloud Infrastructure(401.1)-13
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Virtualization & Cloud Infrastructure(401.1)-14
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+[2026-02-10 09:25:57] [INFO]   Title: 'SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)'
+[2026-02-10 09:25:57] [INFO]   Found 12 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)-8
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)-9
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)-10
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)-11
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)-12
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+[2026-02-10 09:25:57] [INFO]   Title: 'SANS-401-Defense-in-Depth (401.2)'
+[2026-02-10 09:25:57] [INFO]   Found 9 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Defense-in-Depth (401.2)-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Defense-in-Depth (401.2)-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Defense-in-Depth (401.2)-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Defense-in-Depth (401.2)-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Defense-in-Depth (401.2)-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Defense-in-Depth (401.2)-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Defense-in-Depth (401.2)-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Defense-in-Depth (401.2)-8
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Defense-in-Depth (401.2)-9
+[2026-02-10 09:25:57] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+[2026-02-10 09:25:57] [INFO]   Title: 'SANS-401-Password Cracking'
+[2026-02-10 09:25:57] [INFO]   Found 30 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-8
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-9
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-10
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-11
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-12
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-13
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-14
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-15
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-16
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-17
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-18
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-19
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-20
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-21
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-22
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-23
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-24
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-25
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-26
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-27
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-28
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-29
+[2026-02-10 09:25:57] [INFO]     > Already correct: SANS-401-Password Cracking-30
+[2026-02-10 09:25:57] [INFO] 
+[File] linux\60 Commands Hacker Should Know it.md
+[2026-02-10 09:25:57] [INFO]   Title: '60 Commands Hacker Should Know it'
+[2026-02-10 09:25:57] [INFO]   Found 24 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-8
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-9
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-10
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-11
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-12
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-13
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-14
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-15
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-16
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-17
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-18
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-19
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-20
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-21
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-22
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-23
+[2026-02-10 09:25:57] [INFO]     > Already correct: 60 Commands Hacker Should Know it-24
+[2026-02-10 09:25:57] [INFO] 
+[File] linux\Kali Linux Installing Guide.md
+[2026-02-10 09:25:57] [INFO]   Title: 'Kali Linux Installing Guide'
+[2026-02-10 09:25:57] [INFO]   Found 18 image(s)
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-1'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-2'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-3'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-4'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-5'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-6'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-7'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-8'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-9'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-10'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-11'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-12'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-13'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-14'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-15'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-16'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-17'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Kali Linux Installing Guide-18'
+[2026-02-10 09:25:57] [INFO]   [Saved] 18 image(s) updated
+[2026-02-10 09:25:57] [INFO] 
+[File] network\IP-Mac Address Basic and Concepts.md
+[2026-02-10 09:25:57] [INFO]   Title: 'IP-Mac Address Basic and Concepts'
+[2026-02-10 09:25:57] [INFO]   Found 13 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-Mac Address Basic and Concepts-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-Mac Address Basic and Concepts-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-Mac Address Basic and Concepts-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-Mac Address Basic and Concepts-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-Mac Address Basic and Concepts-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-Mac Address Basic and Concepts-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-Mac Address Basic and Concepts-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-Mac Address Basic and Concepts-8
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-Mac Address Basic and Concepts-9
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-Mac Address Basic and Concepts-10
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-Mac Address Basic and Concepts-11
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-Mac Address Basic and Concepts-12
+[2026-02-10 09:25:57] [INFO]     > Already correct: IP-Mac Address Basic and Concepts-13
+[2026-02-10 09:25:57] [INFO] 
+[File] network\Network Basics-Terminology-Topology.md
+[2026-02-10 09:25:57] [INFO]   Title: 'مبانی، لغت شناسی و توپولوژی های شبکه'
+[2026-02-10 09:25:57] [INFO]   Found 9 image(s)
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Basics-Terminology-Topology-1' → 'مبانی، لغت شناسی و توپولوژی های شبکه-1'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Basics-Terminology-Topology-2' → 'مبانی، لغت شناسی و توپولوژی های شبکه-2'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Basics-Terminology-Topology-3' → 'مبانی، لغت شناسی و توپولوژی های شبکه-3'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Basics-Terminology-Topology-4' → 'مبانی، لغت شناسی و توپولوژی های شبکه-4'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Basics-Terminology-Topology-5' → 'مبانی، لغت شناسی و توپولوژی های شبکه-5'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Basics-Terminology-Topology-6' → 'مبانی، لغت شناسی و توپولوژی های شبکه-6'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Basics-Terminology-Topology-7' → 'مبانی، لغت شناسی و توپولوژی های شبکه-7'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Basics-Terminology-Topology-8' → 'مبانی، لغت شناسی و توپولوژی های شبکه-8'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Basics-Terminology-Topology-9' → 'مبانی، لغت شناسی و توپولوژی های شبکه-9'
+[2026-02-10 09:25:57] [INFO]   [Saved] 9 image(s) updated
+[2026-02-10 09:25:57] [INFO] 
+[File] network\Network Cable and Components.md
+[2026-02-10 09:25:57] [INFO]   Title: 'انواع دیوایس ها و کابل های شبکه'
+[2026-02-10 09:25:57] [INFO]   Found 33 image(s)
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-1' → 'انواع دیوایس ها و کابل های شبکه-1'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-2' → 'انواع دیوایس ها و کابل های شبکه-2'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-3' → 'انواع دیوایس ها و کابل های شبکه-3'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-4' → 'انواع دیوایس ها و کابل های شبکه-4'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-5' → 'انواع دیوایس ها و کابل های شبکه-5'
+[2026-02-10 09:25:57] [WARNING]     Warning: Pattern not found for replacement
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-7' → 'انواع دیوایس ها و کابل های شبکه-7'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-8' → 'انواع دیوایس ها و کابل های شبکه-8'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-9' → 'انواع دیوایس ها و کابل های شبکه-9'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-10' → 'انواع دیوایس ها و کابل های شبکه-10'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-11' → 'انواع دیوایس ها و کابل های شبکه-11'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-12' → 'انواع دیوایس ها و کابل های شبکه-12'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-13' → 'انواع دیوایس ها و کابل های شبکه-13'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-14' → 'انواع دیوایس ها و کابل های شبکه-14'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-15' → 'انواع دیوایس ها و کابل های شبکه-15'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-16' → 'انواع دیوایس ها و کابل های شبکه-16'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-17' → 'انواع دیوایس ها و کابل های شبکه-17'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-18' → 'انواع دیوایس ها و کابل های شبکه-18'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-19' → 'انواع دیوایس ها و کابل های شبکه-19'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-20' → 'انواع دیوایس ها و کابل های شبکه-20'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-21' → 'انواع دیوایس ها و کابل های شبکه-21'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-22' → 'انواع دیوایس ها و کابل های شبکه-22'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-23' → 'انواع دیوایس ها و کابل های شبکه-23'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-24' → 'انواع دیوایس ها و کابل های شبکه-24'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-25' → 'انواع دیوایس ها و کابل های شبکه-25'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-26' → 'انواع دیوایس ها و کابل های شبکه-26'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-27' → 'انواع دیوایس ها و کابل های شبکه-27'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-28' → 'انواع دیوایس ها و کابل های شبکه-28'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-29' → 'انواع دیوایس ها و کابل های شبکه-29'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-30' → 'انواع دیوایس ها و کابل های شبکه-30'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-31' → 'انواع دیوایس ها و کابل های شبکه-31'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-32' → 'انواع دیوایس ها و کابل های شبکه-32'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Cable and Components-33' → 'انواع دیوایس ها و کابل های شبکه-33'
+[2026-02-10 09:25:57] [INFO]   [Saved] 32 image(s) updated
+[2026-02-10 09:25:57] [INFO] 
+[File] network\Network Commands & File Printer Sharing.md
+[2026-02-10 09:25:57] [INFO]   No images found
+[2026-02-10 09:25:57] [INFO] 
+[File] network\Network Models-OSI and TCPIP.md
+[2026-02-10 09:25:57] [INFO]   Title: 'Network Models-OSI and TCPIP'
+[2026-02-10 09:25:57] [INFO]   Found 14 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: Network Models-OSI and TCPIP-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: Network Models-OSI and TCPIP-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: Network Models-OSI and TCPIP-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: Network Models-OSI and TCPIP-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: Network Models-OSI and TCPIP-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: Network Models-OSI and TCPIP-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: Network Models-OSI and TCPIP-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: Network Models-OSI and TCPIP-8
+[2026-02-10 09:25:57] [INFO]     > Already correct: Network Models-OSI and TCPIP-9
+[2026-02-10 09:25:57] [INFO]     > Already correct: Network Models-OSI and TCPIP-10
+[2026-02-10 09:25:57] [INFO]     > Already correct: Network Models-OSI and TCPIP-11
+[2026-02-10 09:25:57] [INFO]     > Already correct: Network Models-OSI and TCPIP-12
+[2026-02-10 09:25:57] [INFO]     > Already correct: Network Models-OSI and TCPIP-13
+[2026-02-10 09:25:57] [INFO]     > Already correct: Network Models-OSI and TCPIP-14
+[2026-02-10 09:25:57] [INFO] 
+[File] network\Network Services(DHCP-DNS,-VLAN).md
+[2026-02-10 09:25:57] [INFO]   Title: 'مطالبی که برای یادگیری VLAN , DHCP , DNS باید آموخت؟'
+[2026-02-10 09:25:57] [INFO]   Found 1 image(s)
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Network Services(DHCP-DNS,-VLAN)-1' → 'مطالبی که برای یادگیری VLAN , DHCP , DNS باید آموخت؟-1'
+[2026-02-10 09:25:57] [INFO]   [Saved] 1 image(s) updated
+[2026-02-10 09:25:57] [INFO] 
+[File] network\Virtualization Concepts.md
+[2026-02-10 09:25:57] [INFO]   Title: 'Virtualization Concepts'
+[2026-02-10 09:25:57] [INFO]   Found 8 image(s)
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Virtualization Concepts-1'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Virtualization Concepts-2'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Virtualization Concepts-3'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Virtualization Concepts-4'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Virtualization Concepts-5'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Virtualization Concepts-6'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Virtualization Concepts-7'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Alt text' → 'Virtualization Concepts-8'
+[2026-02-10 09:25:57] [INFO]   [Saved] 8 image(s) updated
+[2026-02-10 09:25:57] [INFO] 
+[File] network\Windows Networking.md
+[2026-02-10 09:25:57] [INFO]   Title: 'راه اندازی شبکه ویندوز'
+[2026-02-10 09:25:57] [INFO]   Found 2 image(s)
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Windows Networking-1' → 'راه اندازی شبکه ویندوز-1'
+[2026-02-10 09:25:57] [INFO]     + Updated: 'Windows Networking-2' → 'راه اندازی شبکه ویندوز-2'
+[2026-02-10 09:25:57] [INFO]   [Saved] 2 image(s) updated
+[2026-02-10 09:25:57] [INFO] 
+[File] python\Dir-Buster-Module.md
+[2026-02-10 09:25:57] [INFO]   No images found
+[2026-02-10 09:25:57] [INFO] 
+[File] seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+[2026-02-10 09:25:57] [INFO]   Title: 'SEO Intro, Search Engines, Keywords'
+[2026-02-10 09:25:57] [INFO]   Found 11 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: SEO Intro, Search Engines, Keywords-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: SEO Intro, Search Engines, Keywords-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: SEO Intro, Search Engines, Keywords-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: SEO Intro, Search Engines, Keywords-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: SEO Intro, Search Engines, Keywords-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: SEO Intro, Search Engines, Keywords-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: SEO Intro, Search Engines, Keywords-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: SEO Intro, Search Engines, Keywords-8
+[2026-02-10 09:25:57] [INFO]     > Already correct: SEO Intro, Search Engines, Keywords-9
+[2026-02-10 09:25:57] [INFO]     > Already correct: SEO Intro, Search Engines, Keywords-10
+[2026-02-10 09:25:57] [INFO]     > Already correct: SEO Intro, Search Engines, Keywords-11
+[2026-02-10 09:25:57] [INFO] 
+[File] seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+[2026-02-10 09:25:57] [INFO]   Title: 'Content SEO, Important Website Pages'
+[2026-02-10 09:25:57] [INFO]   Found 10 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: Content SEO, Important Website Pages-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: Content SEO, Important Website Pages-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: Content SEO, Important Website Pages-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: Content SEO, Important Website Pages-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: Content SEO, Important Website Pages-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: Content SEO, Important Website Pages-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: Content SEO, Important Website Pages-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: Content SEO, Important Website Pages-8
+[2026-02-10 09:25:57] [INFO]     > Already correct: Content SEO, Important Website Pages-9
+[2026-02-10 09:25:57] [INFO]     > Already correct: Content SEO, Important Website Pages-10
+[2026-02-10 09:25:57] [INFO] 
+[File] seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+[2026-02-10 09:25:57] [INFO]   Title: 'Woorank(Check Website SEO)'
+[2026-02-10 09:25:57] [INFO]   Found 12 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: Woorank(Check Website SEO)-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: Woorank(Check Website SEO)-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: Woorank(Check Website SEO)-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: Woorank(Check Website SEO)-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: Woorank(Check Website SEO)-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: Woorank(Check Website SEO)-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: Woorank(Check Website SEO)-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: Woorank(Check Website SEO)-8
+[2026-02-10 09:25:57] [INFO]     > Already correct: Woorank(Check Website SEO)-9
+[2026-02-10 09:25:57] [INFO]     > Already correct: Woorank(Check Website SEO)-10
+[2026-02-10 09:25:57] [INFO]     > Already correct: Woorank(Check Website SEO)-11
+[2026-02-10 09:25:57] [INFO]     > Already correct: Woorank(Check Website SEO)-12
+[2026-02-10 09:25:57] [INFO] 
+[File] seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+[2026-02-10 09:25:57] [INFO]   Title: 'Good Contents for SEO'
+[2026-02-10 09:25:57] [INFO]   Found 3 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: Good Contents for SEO-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: Good Contents for SEO-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: Good Contents for SEO-3
+[2026-02-10 09:25:57] [INFO] 
+[File] seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+[2026-02-10 09:25:57] [INFO]   No images found
+[2026-02-10 09:25:57] [INFO] 
+[File] seo\0-SEO-Theories\E15 - Page Rank.md
+[2026-02-10 09:25:57] [INFO]   Title: 'Page Rank'
+[2026-02-10 09:25:57] [INFO]   Found 2 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: Page Rank-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: Page Rank-2
+[2026-02-10 09:25:57] [INFO] 
+[File] seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+[2026-02-10 09:25:57] [INFO]   Title: 'Page Authority & Domain Authority'
+[2026-02-10 09:25:57] [INFO]   Found 3 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: Page Authority & Domain Authority-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: Page Authority & Domain Authority-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: Page Authority & Domain Authority-3
+[2026-02-10 09:25:57] [INFO] 
+[File] seo\0-SEO-Theories\E17 - Backlinks.md
+[2026-02-10 09:25:57] [INFO]   Title: 'Backlinks'
+[2026-02-10 09:25:57] [INFO]   Found 1 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: Backlinks-1
+[2026-02-10 09:25:57] [INFO] 
+[File] seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+[2026-02-10 09:25:57] [INFO]   Title: 'Find Keywords, Website Structure & Necessary HTML Tags for SEO'
+[2026-02-10 09:25:57] [INFO]   Found 33 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-8
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-9
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-10
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-11
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-12
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-13
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-14
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-15
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-16
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-17
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-18
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-19
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-20
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-21
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-22
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-23
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-24
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-25
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-26
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-27
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-28
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-29
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-30
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-31
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-32
+[2026-02-10 09:25:57] [INFO]     > Already correct: Find Keywords, Website Structure & Necessary HTML Tags for SEO-33
+[2026-02-10 09:25:57] [INFO] 
+[File] tools\MSFConsole Commands.md
+[2026-02-10 09:25:57] [INFO]   Title: 'MSFConsole Commands'
+[2026-02-10 09:25:57] [INFO]   Found 43 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-8
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-9
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-10
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-11
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-12
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-13
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-14
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-15
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-16
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-17
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-18
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-19
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-20
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-21
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-22
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-23
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-24
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-25
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-26
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-27
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-28
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-29
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-30
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-31
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-32
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-33
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-34
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-35
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-36
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-37
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-38
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-39
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-40
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-41
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-42
+[2026-02-10 09:25:57] [INFO]     > Already correct: MSFConsole Commands-43
+[2026-02-10 09:25:57] [INFO] 
+[File] tools\Burpsuite\1-Install Burpsuite.md
+[2026-02-10 09:25:57] [INFO]   Title: '1-Install Burpsuite'
+[2026-02-10 09:25:57] [INFO]   Found 12 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: 1-Install Burpsuite-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: 1-Install Burpsuite-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: 1-Install Burpsuite-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: 1-Install Burpsuite-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: 1-Install Burpsuite-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: 1-Install Burpsuite-6
+[2026-02-10 09:25:57] [INFO]     > Already correct: 1-Install Burpsuite-7
+[2026-02-10 09:25:57] [INFO]     > Already correct: 1-Install Burpsuite-8
+[2026-02-10 09:25:57] [INFO]     > Already correct: 1-Install Burpsuite-9
+[2026-02-10 09:25:57] [INFO]     > Already correct: 1-Install Burpsuite-10
+[2026-02-10 09:25:57] [INFO]     > Already correct: 1-Install Burpsuite-11
+[2026-02-10 09:25:57] [INFO]     > Already correct: 1-Install Burpsuite-12
+[2026-02-10 09:25:57] [INFO] 
+[File] tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+[2026-02-10 09:25:57] [INFO]   Title: '2-Change HTTP Data & Bypass Parameters'
+[2026-02-10 09:25:57] [INFO]   Found 6 image(s)
+[2026-02-10 09:25:57] [INFO]     > Already correct: 2-Change HTTP Data & Bypass Parameters-1
+[2026-02-10 09:25:57] [INFO]     > Already correct: 2-Change HTTP Data & Bypass Parameters-2
+[2026-02-10 09:25:57] [INFO]     > Already correct: 2-Change HTTP Data & Bypass Parameters-3
+[2026-02-10 09:25:57] [INFO]     > Already correct: 2-Change HTTP Data & Bypass Parameters-4
+[2026-02-10 09:25:57] [INFO]     > Already correct: 2-Change HTTP Data & Bypass Parameters-5
+[2026-02-10 09:25:57] [INFO]     > Already correct: 2-Change HTTP Data & Bypass Parameters-6
+[2026-02-10 09:25:57] [INFO] 
+============================================================
+[2026-02-10 09:25:57] [INFO] FINAL STATISTICS:
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] Files scanned: 32
+[2026-02-10 09:25:57] [INFO] Files modified: 6
+[2026-02-10 09:25:57] [INFO] Images updated: 70
+[2026-02-10 09:25:57] [INFO] Images skipped (already correct): 311
+[2026-02-10 09:25:57] [INFO] Errors: 0
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] 
+[SUCCESS] Image alt texts updated successfully!
+[2026-02-10 09:25:57] [INFO] Full log: altimage_adder.log
+[2026-02-10 09:25:57] [INFO] 
+[Report] Summary report created: altimage_adder_report.txt
+[2026-02-10 09:25:57] [INFO] 
+[COMPLETE] Process finished
+[2026-02-10 09:25:57] [INFO] ============================================================
+
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] Starting image alt text update process
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] 
+============================================================
+[2026-02-10 09:40:35] [INFO] Testing patterns:
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] 
+Title Pattern Tests:
+[2026-02-10 09:40:35] [ERROR] Unexpected error: 'charmap' codec can't encode character '\u2713' in position 31: character maps to <undefined>

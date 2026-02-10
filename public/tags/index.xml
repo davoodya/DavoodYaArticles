@@ -186,21 +186,21 @@
     <item>
       <title>Network</title>
       <link>http://localhost:1313/tags/network/</link>
-      <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Aug 2024 09:26:00 +0330</pubDate>
       <guid>http://localhost:1313/tags/network/</guid>
       <description></description>
     </item>
     <item>
       <title>Network Pentest</title>
       <link>http://localhost:1313/tags/network-pentest/</link>
-      <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Aug 2024 09:26:00 +0330</pubDate>
       <guid>http://localhost:1313/tags/network-pentest/</guid>
       <description></description>
     </item>
     <item>
       <title>Network Security</title>
       <link>http://localhost:1313/tags/network-security/</link>
-      <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Aug 2024 09:26:00 +0330</pubDate>
       <guid>http://localhost:1313/tags/network-security/</guid>
       <description></description>
     </item>
@@ -317,24 +317,10 @@
       <description></description>
     </item>
     <item>
-      <title>Virtualization</title>
-      <link>http://localhost:1313/tags/virtualization/</link>
-      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
-      <guid>http://localhost:1313/tags/virtualization/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>VLAN</title>
       <link>http://localhost:1313/tags/vlan/</link>
       <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
       <guid>http://localhost:1313/tags/vlan/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>VMWare</title>
-      <link>http://localhost:1313/tags/vmware/</link>
-      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
-      <guid>http://localhost:1313/tags/vmware/</guid>
       <description></description>
     </item>
     <item>

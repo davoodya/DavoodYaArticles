@@ -370,9 +370,80 @@
             selectedPostTypes
         });
         
-        filterArticles(minTime, maxTime, selectedDifficulties, selectedLabRequired, selectedPostTypes);
+        // Check if articles-loader is available
+        if (typeof window.applyArticlesFilter === 'function') {
+            // Use client-side filtering for all articles
+            const count = window.applyArticlesFilter(function(article) {
+                return matchesFilter(article, minTime, maxTime, selectedDifficulties, selectedLabRequired, selectedPostTypes);
+            });
+            updateFilterResults(count);
+            showNoResultsMessage(count);
+        } else {
+            // Fallback to DOM-based filtering (current page only)
+            filterArticles(minTime, maxTime, selectedDifficulties, selectedLabRequired, selectedPostTypes);
+        }
+        
         window.closeFilterModal();
     };
+    
+    // Check if article matches filter criteria
+    function matchesFilter(article, minTime, maxTime, difficulties, labRequired, postTypes) {
+        const articleTime = article.readingTime || 0;
+        const articleDifficulty = article.difficulty || '';
+        const articleLabRequired = article.labRequired || false;
+        const articlePostType = article.postType || '';
+        
+        // Reading Time
+        if (articleTime > 0) {
+            if (articleTime < minTime || articleTime > maxTime) {
+                return false;
+            }
+        } else {
+            if (minTime > 0) {
+                return false;
+            }
+        }
+        
+        // Difficulty
+        if (difficulties.length === 0) {
+            return false;
+        } else if (difficulties.length === 4) {
+            // All selected
+        } else {
+            if (articleDifficulty === '') {
+                return false;
+            } else if (!difficulties.includes(articleDifficulty)) {
+                return false;
+            }
+        }
+        
+        // Lab Required
+        if (labRequired.length === 0) {
+            return false;
+        } else if (labRequired.length === 2) {
+            // Both selected
+        } else {
+            const needsLab = labRequired.includes('true');
+            if (articleLabRequired !== needsLab) {
+                return false;
+            }
+        }
+        
+        // Post Type
+        if (postTypes.length === 0) {
+            return false;
+        } else if (postTypes.length === 7) {
+            // All selected
+        } else {
+            if (articlePostType === '') {
+                return false;
+            } else if (!postTypes.includes(articlePostType)) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
     
     // Reset filters
     window.resetFilters = function() {
@@ -389,8 +460,16 @@
         document.querySelectorAll('input[name="lab_required"]').forEach(input => input.checked = true);
         document.querySelectorAll('input[name="post_type"]').forEach(input => input.checked = true);
         
-        // Apply filters (show all)
-        window.applyFilters();
+        // Reset articles if loader is available
+        if (typeof window.resetArticlesFilter === 'function') {
+            window.resetArticlesFilter();
+            const allArticles = window.getAllArticles();
+            updateFilterResults(allArticles ? allArticles.length : 0);
+            showNoResultsMessage(allArticles ? allArticles.length : 1);
+        } else {
+            // Fallback: Apply filters (show all)
+            window.applyFilters();
+        }
     };
     
     // Open filter modal

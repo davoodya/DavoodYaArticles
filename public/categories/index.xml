@@ -65,17 +65,17 @@
       <description></description>
     </item>
     <item>
+      <title>Network</title>
+      <link>http://localhost:1313/categories/network/</link>
+      <pubDate>Wed, 28 Aug 2024 09:26:00 +0330</pubDate>
+      <guid>http://localhost:1313/categories/network/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Cryptography</title>
       <link>http://localhost:1313/categories/cryptography/</link>
       <pubDate>Thu, 20 Jun 2024 13:50:09 +0330</pubDate>
       <guid>http://localhost:1313/categories/cryptography/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Network</title>
-      <link>http://localhost:1313/categories/network/</link>
-      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
-      <guid>http://localhost:1313/categories/network/</guid>
       <description></description>
     </item>
     <item>
@@ -90,13 +90,6 @@
       <link>http://localhost:1313/categories/network&#43;/</link>
       <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
       <guid>http://localhost:1313/categories/network&#43;/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Virtualization</title>
-      <link>http://localhost:1313/categories/virtualization/</link>
-      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
-      <guid>http://localhost:1313/categories/virtualization/</guid>
       <description></description>
     </item>
     <item>

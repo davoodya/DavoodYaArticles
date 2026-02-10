@@ -2160,3 +2160,319 @@
 [COMPLETE] Process finished
 [2026-02-09 15:39:57] [INFO] ============================================================
 
+[2026-02-10 09:24:50] [INFO] ============================================================
+[2026-02-10 09:24:50] [INFO] Starting image migration process
+[2026-02-10 09:24:50] [INFO] ============================================================
+[2026-02-10 09:24:50] [INFO] 
+============================================================
+[2026-02-10 09:24:50] [INFO] PATH VERIFICATION:
+[2026-02-10 09:24:50] [INFO] ============================================================
+[2026-02-10 09:24:50] [INFO] Current directory: H:\Repo\Hugo\davoodya
+[2026-02-10 09:24:50] [INFO] + Content directory: H:\Repo\Hugo\davoodya\content
+[2026-02-10 09:24:50] [INFO] + Static directory: H:\Repo\Hugo\davoodya\static/images
+[2026-02-10 09:24:50] [INFO] + Obsidian directory: H:\Files\Obsidian\Handouts\VaultData\Attachments
+[2026-02-10 09:24:50] [INFO] ============================================================
+[2026-02-10 09:24:50] [INFO] + Obsidian directory found: H:\Files\Obsidian\Handouts\VaultData\Attachments
+[2026-02-10 09:24:50] [INFO] + Total images in Obsidian: 11084
+[2026-02-10 09:24:50] [INFO] Loaded 688 previously processed images
+[2026-02-10 09:24:50] [INFO] 
+============================================================
+[2026-02-10 09:24:50] [INFO] PHASE 1: Scanning markdown files for images...
+[2026-02-10 09:24:50] [INFO] ============================================================
+[2026-02-10 09:24:50] [INFO] 
+[File] content\linux\Kali Linux Installing Guide.md
+[2026-02-10 09:24:50] [INFO]   Category: linux
+[2026-02-10 09:24:50] [INFO]   Found 18 image(s)
+[2026-02-10 09:24:50] [INFO] 
+[File] content\network\Virtualization Concepts.md
+[2026-02-10 09:24:50] [INFO]   Category: network
+[2026-02-10 09:24:50] [INFO]   Found 8 image(s)
+[2026-02-10 09:24:50] [INFO] 
+============================================================
+[2026-02-10 09:24:50] [INFO] SUMMARY: Found 26 image references
+[2026-02-10 09:24:50] [INFO]          (26 unique images)
+[2026-02-10 09:24:50] [INFO] ============================================================
+[2026-02-10 09:24:50] [INFO] 
+============================================================
+[2026-02-10 09:24:50] [INFO] PHASE 2: Copying images from Obsidian...
+[2026-02-10 09:24:50] [INFO] ============================================================
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240521175544.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240521175544.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240522154828.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240522154828.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240522160228.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240522160228.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240522160429.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240522160429.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240522160629.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240522160629.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240522161517.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240522161517.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240522161741.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240522161741.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240625164355.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240625164355.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240625164829.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240625164829.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240625165040.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240625165040.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240625165250.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240625165250.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240625165754.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240625165754.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240625170641.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240625170641.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240625171002.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240625171002.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240625171239.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240625171239.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240625200802.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240625200802.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240625200927.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240625200927.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240625201253.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240625201253.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240625201528.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240625201528.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240625235408.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240625235408.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240902120134.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240902120134.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240903183816.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240903183816.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240903183835.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240903183835.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240903184028.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240903184028.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240903184051.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240903184051.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO]   + Copied: Pasted image 20240903184118.png
+[2026-02-10 09:24:50] [INFO]     -> Pastedimage20240903184118.png
+[2026-02-10 09:24:50] [INFO]     (Renamed: removed spaces)
+[2026-02-10 09:24:50] [INFO] Saved 714 images to JSON
+[2026-02-10 09:24:50] [INFO] 
+============================================================
+[2026-02-10 09:24:50] [INFO] PHASE 3: Converting image links in markdown files...
+[2026-02-10 09:24:50] [INFO] ============================================================
+[2026-02-10 09:24:50] [INFO] 
+[File] content\linux\Kali Linux Installing Guide.md
+[2026-02-10 09:24:50] [INFO]   Category: linux
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240903184118.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240903184118.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240903183816.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240903183816.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240903183835.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240903183835.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240903184028.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240903184028.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240903184051.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240903184051.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240625164355.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240625164355.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240625164829.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240625164829.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240625165040.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240625165040.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240625165250.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240625165250.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240625165754.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240625165754.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240625170641.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240625170641.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240625171002.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240625171002.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240625171239.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240625171239.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240625235408.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240625235408.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240625200802.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240625200802.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240625200927.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240625200927.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240625201253.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240625201253.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240625201528.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/linux/Pastedimage20240625201528.png)
+[2026-02-10 09:24:50] [INFO]   [Saved] 18 link(s) converted
+[2026-02-10 09:24:50] [INFO] 
+[File] content\network\Virtualization Concepts.md
+[2026-02-10 09:24:50] [INFO]   Category: network
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240902120134.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/network/Pastedimage20240902120134.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240521175544.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/network/Pastedimage20240521175544.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240522154828.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/network/Pastedimage20240522154828.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240522160228.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/network/Pastedimage20240522160228.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240522160429.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/network/Pastedimage20240522160429.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240522160629.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/network/Pastedimage20240522160629.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240522161517.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/network/Pastedimage20240522161517.png)
+[2026-02-10 09:24:50] [INFO]     Converted: Pasted image 20240522161741.png
+[2026-02-10 09:24:50] [INFO]     -> ![Alt text](/images/network/Pastedimage20240522161741.png)
+[2026-02-10 09:24:50] [INFO]   [Saved] 8 link(s) converted
+[2026-02-10 09:24:50] [INFO] 
+============================================================
+[2026-02-10 09:24:50] [INFO] FINAL STATISTICS:
+[2026-02-10 09:24:50] [INFO] ============================================================
+[2026-02-10 09:24:50] [INFO] Files scanned: 32
+[2026-02-10 09:24:50] [INFO] Image references found: 26
+[2026-02-10 09:24:50] [INFO] Images copied: 26
+[2026-02-10 09:24:50] [INFO] Images renamed (spaces removed): 26
+[2026-02-10 09:24:50] [INFO] Images skipped (already exist): 0
+[2026-02-10 09:24:50] [INFO] Files converted: 2
+[2026-02-10 09:24:50] [INFO] Links converted: 26
+[2026-02-10 09:24:50] [INFO] Errors: 0
+[2026-02-10 09:24:50] [INFO] Total processed images: 714
+[2026-02-10 09:24:50] [INFO] ============================================================
+[2026-02-10 09:24:50] [INFO] 
+[SUCCESS] Process completed successfully!
+[2026-02-10 09:24:50] [INFO] Images saved to: static/images/category-name/
+[2026-02-10 09:24:50] [INFO] Tracking data: processed_images.json
+[2026-02-10 09:24:50] [INFO] Full log: image_migration.log
+[2026-02-10 09:24:50] [INFO] 
+[Report] Summary report created: image_migration_report.txt
+[2026-02-10 09:24:50] [INFO] 
+[COMPLETE] Process finished
+[2026-02-10 09:24:50] [INFO] ============================================================
+
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] Starting image migration process
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] 
+============================================================
+[2026-02-10 09:25:57] [INFO] PATH VERIFICATION:
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] Current directory: H:\Repo\Hugo\davoodya
+[2026-02-10 09:25:57] [INFO] + Content directory: H:\Repo\Hugo\davoodya\content
+[2026-02-10 09:25:57] [INFO] + Static directory: H:\Repo\Hugo\davoodya\static/images
+[2026-02-10 09:25:57] [INFO] + Obsidian directory: H:\Files\Obsidian\Handouts\VaultData\Attachments
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] + Obsidian directory found: H:\Files\Obsidian\Handouts\VaultData\Attachments
+[2026-02-10 09:25:57] [INFO] + Total images in Obsidian: 11084
+[2026-02-10 09:25:57] [INFO] Loaded 714 previously processed images
+[2026-02-10 09:25:57] [INFO] 
+============================================================
+[2026-02-10 09:25:57] [INFO] PHASE 1: Scanning markdown files for images...
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] 
+============================================================
+[2026-02-10 09:25:57] [INFO] SUMMARY: Found 0 image references
+[2026-02-10 09:25:57] [INFO]          (0 unique images)
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] 
+============================================================
+[2026-02-10 09:25:57] [INFO] PHASE 2: Copying images from Obsidian...
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] No images to copy
+[2026-02-10 09:25:57] [INFO] Saved 714 images to JSON
+[2026-02-10 09:25:57] [INFO] 
+============================================================
+[2026-02-10 09:25:57] [INFO] PHASE 3: Converting image links in markdown files...
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] 
+============================================================
+[2026-02-10 09:25:57] [INFO] FINAL STATISTICS:
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] Files scanned: 32
+[2026-02-10 09:25:57] [INFO] Image references found: 0
+[2026-02-10 09:25:57] [INFO] Images copied: 0
+[2026-02-10 09:25:57] [INFO] Images renamed (spaces removed): 0
+[2026-02-10 09:25:57] [INFO] Images skipped (already exist): 0
+[2026-02-10 09:25:57] [INFO] Files converted: 0
+[2026-02-10 09:25:57] [INFO] Links converted: 0
+[2026-02-10 09:25:57] [INFO] Errors: 0
+[2026-02-10 09:25:57] [INFO] Total processed images: 714
+[2026-02-10 09:25:57] [INFO] ============================================================
+[2026-02-10 09:25:57] [INFO] 
+[INFO] No new images to process
+[2026-02-10 09:25:57] [INFO] 
+[Report] Summary report created: image_migration_report.txt
+[2026-02-10 09:25:57] [INFO] 
+[COMPLETE] Process finished
+[2026-02-10 09:25:57] [INFO] ============================================================
+
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] Starting image migration process
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] 
+============================================================
+[2026-02-10 09:40:35] [INFO] PATH VERIFICATION:
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] Current directory: H:\Repo\Hugo\davoodya
+[2026-02-10 09:40:35] [INFO] + Content directory: H:\Repo\Hugo\davoodya\content
+[2026-02-10 09:40:35] [INFO] + Static directory: H:\Repo\Hugo\davoodya\static/images
+[2026-02-10 09:40:35] [INFO] + Obsidian directory: H:\Files\Obsidian\Handouts\VaultData\Attachments
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] + Obsidian directory found: H:\Files\Obsidian\Handouts\VaultData\Attachments
+[2026-02-10 09:40:35] [INFO] + Total images in Obsidian: 11084
+[2026-02-10 09:40:35] [INFO] Loaded 810 previously processed images
+[2026-02-10 09:40:35] [INFO] 
+============================================================
+[2026-02-10 09:40:35] [INFO] PHASE 1: Scanning markdown files for images...
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] 
+============================================================
+[2026-02-10 09:40:35] [INFO] SUMMARY: Found 0 image references
+[2026-02-10 09:40:35] [INFO]          (0 unique images)
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] 
+============================================================
+[2026-02-10 09:40:35] [INFO] PHASE 2: Copying images from Obsidian...
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] No images to copy
+[2026-02-10 09:40:35] [INFO] Saved 810 images to JSON
+[2026-02-10 09:40:35] [INFO] 
+============================================================
+[2026-02-10 09:40:35] [INFO] PHASE 3: Converting image links in markdown files...
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] 
+============================================================
+[2026-02-10 09:40:35] [INFO] FINAL STATISTICS:
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] Files scanned: 32
+[2026-02-10 09:40:35] [INFO] Image references found: 0
+[2026-02-10 09:40:35] [INFO] Images copied: 0
+[2026-02-10 09:40:35] [INFO] Images renamed (spaces removed): 0
+[2026-02-10 09:40:35] [INFO] Images skipped (already exist): 0
+[2026-02-10 09:40:35] [INFO] Files converted: 0
+[2026-02-10 09:40:35] [INFO] Links converted: 0
+[2026-02-10 09:40:35] [INFO] Errors: 0
+[2026-02-10 09:40:35] [INFO] Total processed images: 810
+[2026-02-10 09:40:35] [INFO] ============================================================
+[2026-02-10 09:40:35] [INFO] 
+[INFO] No new images to process
+[2026-02-10 09:40:35] [INFO] 
+[Report] Summary report created: image_migration_report.txt
+[2026-02-10 09:40:35] [INFO] 
+[COMPLETE] Process finished
+[2026-02-10 09:40:35] [INFO] ============================================================
+

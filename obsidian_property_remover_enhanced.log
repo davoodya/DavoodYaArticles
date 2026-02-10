@@ -1495,3 +1495,155 @@
 2026-02-09 15:41:10,552 - INFO - ======================================================================
 
 2026-02-09 17:17:24,551 - INFO -   Extracted properties: date=2024-06-20, tags=['test-tag1', 'test-tag2'], categories=['test-category']
+2026-02-10 09:25:58,586 - INFO - 
+======================================================================
+2026-02-10 09:25:58,587 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO ENHANCED FRONTMATTER ADDER
+2026-02-10 09:25:58,587 - INFO - SCRIPT STARTED
+2026-02-10 09:25:58,587 - INFO - ======================================================================
+
+2026-02-10 09:25:58,587 - INFO - Loaded tracking file with 30 processed files
+2026-02-10 09:25:58,592 - INFO - Found 39 markdown files to check (including subdirectories)
+2026-02-10 09:25:58,592 - INFO - Already processed: 30 files
+2026-02-10 09:25:58,592 - INFO - 
+============================================================
+2026-02-10 09:25:58,592 - INFO - Processing: all-articles\README.md
+2026-02-10 09:25:58,592 - INFO - ============================================================
+2026-02-10 09:26:00,822 - INFO - ✓ Added Enhanced Hugo frontmatter to: README.md
+2026-02-10 09:26:00,823 - INFO - ⊗ Skipping _index.md file (category index): all-articles\_index.md
+2026-02-10 09:26:00,823 - INFO - ⊗ Skipping _index.md file (category index): cyber-security\_index.md
+2026-02-10 09:26:00,823 - INFO - ⊙ Skipping already processed file: linux\60 Commands Hacker Should Know it.md
+2026-02-10 09:26:00,823 - INFO - 
+============================================================
+2026-02-10 09:26:00,824 - INFO - Processing: linux\Kali Linux Installing Guide.md
+2026-02-10 09:26:00,824 - INFO - ============================================================
+2026-02-10 09:26:00,824 - INFO - Found Obsidian properties in Kali Linux Installing Guide.md from line 0 to line 12
+2026-02-10 09:26:00,824 - INFO -   Extracted properties: date=2024-08-28, tags=[], categories=[]
+2026-02-10 09:26:00,824 - INFO - ✓ Removed Obsidian properties from: Kali Linux Installing Guide.md
+2026-02-10 09:26:00,825 - INFO - ✓ Added Enhanced Hugo frontmatter to: Kali Linux Installing Guide.md
+2026-02-10 09:26:00,825 - INFO - ⊗ Skipping _index.md file (category index): linux\_index.md
+2026-02-10 09:26:00,826 - INFO - ⊙ Skipping already processed file: network\IP-Mac Address Basic and Concepts.md
+2026-02-10 09:26:00,826 - INFO - ⊙ Skipping already processed file: network\Network Basics-Terminology-Topology.md
+2026-02-10 09:26:00,826 - INFO - ⊙ Skipping already processed file: network\Network Cable and Components.md
+2026-02-10 09:26:00,826 - INFO - ⊙ Skipping already processed file: network\Network Commands & File Printer Sharing.md
+2026-02-10 09:26:00,826 - INFO - ⊙ Skipping already processed file: network\Network Models-OSI and TCPIP.md
+2026-02-10 09:26:00,826 - INFO - ⊙ Skipping already processed file: network\Network Services(DHCP-DNS,-VLAN).md
+2026-02-10 09:26:00,826 - INFO - 
+============================================================
+2026-02-10 09:26:00,826 - INFO - Processing: network\Virtualization Concepts.md
+2026-02-10 09:26:00,827 - INFO - ============================================================
+2026-02-10 09:26:00,827 - INFO - Found Obsidian properties in Virtualization Concepts.md from line 0 to line 12
+2026-02-10 09:26:00,827 - INFO -   Extracted properties: date=2024-08-28, tags=[], categories=[]
+2026-02-10 09:26:00,827 - INFO - ✓ Removed Obsidian properties from: Virtualization Concepts.md
+2026-02-10 09:26:00,827 - INFO - ✓ Added Enhanced Hugo frontmatter to: Virtualization Concepts.md
+2026-02-10 09:26:00,828 - INFO - ⊙ Skipping already processed file: network\Windows Networking.md
+2026-02-10 09:26:00,828 - INFO - ⊗ Skipping _index.md file (category index): network\_index.md
+2026-02-10 09:26:00,828 - INFO - ⊙ Skipping already processed file: python\Dir-Buster-Module.md
+2026-02-10 09:26:00,828 - INFO - ⊗ Skipping _index.md file (category index): python\_index.md
+2026-02-10 09:26:00,828 - INFO - ⊗ Skipping _index.md file (category index): seo\_index.md
+2026-02-10 09:26:00,829 - INFO - ⊙ Skipping already processed file: tools\MSFConsole Commands.md
+2026-02-10 09:26:00,829 - INFO - ⊗ Skipping _index.md file (category index): tools\_index.md
+2026-02-10 09:26:00,829 - INFO - ⊙ Skipping already processed file: tools\Burpsuite\1-Install Burpsuite.md
+2026-02-10 09:26:00,829 - INFO - ⊙ Skipping already processed file: tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+2026-02-10 09:26:00,829 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+2026-02-10 09:26:00,829 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+2026-02-10 09:26:00,829 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+2026-02-10 09:26:00,829 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+2026-02-10 09:26:00,829 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+2026-02-10 09:26:00,829 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E15 - Page Rank.md
+2026-02-10 09:26:00,830 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+2026-02-10 09:26:00,830 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E17 - Backlinks.md
+2026-02-10 09:26:00,830 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+2026-02-10 09:26:00,830 - INFO - ⊙ Skipping already processed file: cyber-security\Cryptography\Basic-Encryption.md
+2026-02-10 09:26:00,830 - INFO - ⊙ Skipping already processed file: cyber-security\Cryptography\Malwares.md
+2026-02-10 09:26:00,830 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+2026-02-10 09:26:00,830 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+2026-02-10 09:26:00,830 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+2026-02-10 09:26:00,830 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+2026-02-10 09:26:00,830 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+2026-02-10 09:26:00,831 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+2026-02-10 09:26:00,831 - INFO - Tracking file saved with 33 processed files
+2026-02-10 09:26:00,831 - INFO - 
+============================================================
+2026-02-10 09:26:00,831 - INFO - SUMMARY
+2026-02-10 09:26:00,831 - INFO - ============================================================
+2026-02-10 09:26:00,831 - INFO - Total files found: 39
+2026-02-10 09:26:00,831 - INFO - Skipped _index.md files: 7
+2026-02-10 09:26:00,832 - INFO - Already processed (skipped): 29
+2026-02-10 09:26:00,832 - INFO - Newly processed (modified): 3
+2026-02-10 09:26:00,832 - INFO - No changes needed: 0
+2026-02-10 09:26:00,832 - INFO - Errors: 0
+2026-02-10 09:26:00,832 - INFO - ============================================================
+2026-02-10 09:26:00,832 - INFO - 
+✓ Report saved to: obsidian_property_remover_enhanced_report.txt
+2026-02-10 09:26:00,832 - INFO - 
+======================================================================
+2026-02-10 09:26:00,832 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-10 09:26:00,833 - INFO - ======================================================================
+
+2026-02-10 09:40:36,382 - INFO - 
+======================================================================
+2026-02-10 09:40:36,382 - INFO - OBSIDIAN PROPERTY REMOVER & HUGO ENHANCED FRONTMATTER ADDER
+2026-02-10 09:40:36,382 - INFO - SCRIPT STARTED
+2026-02-10 09:40:36,382 - INFO - ======================================================================
+
+2026-02-10 09:40:36,382 - INFO - Loaded tracking file with 33 processed files
+2026-02-10 09:40:36,385 - INFO - Found 39 markdown files to check (including subdirectories)
+2026-02-10 09:40:36,385 - INFO - Already processed: 33 files
+2026-02-10 09:40:36,385 - INFO - ⊙ Skipping already processed file: all-articles\README.md
+2026-02-10 09:40:36,385 - INFO - ⊗ Skipping _index.md file (category index): all-articles\_index.md
+2026-02-10 09:40:36,385 - INFO - ⊗ Skipping _index.md file (category index): cyber-security\_index.md
+2026-02-10 09:40:36,385 - INFO - ⊙ Skipping already processed file: linux\60 Commands Hacker Should Know it.md
+2026-02-10 09:40:36,385 - INFO - ⊙ Skipping already processed file: linux\Kali Linux Installing Guide.md
+2026-02-10 09:40:36,385 - INFO - ⊗ Skipping _index.md file (category index): linux\_index.md
+2026-02-10 09:40:36,385 - INFO - ⊙ Skipping already processed file: network\IP-Mac Address Basic and Concepts.md
+2026-02-10 09:40:36,385 - INFO - ⊙ Skipping already processed file: network\Network Basics-Terminology-Topology.md
+2026-02-10 09:40:36,385 - INFO - ⊙ Skipping already processed file: network\Network Cable and Components.md
+2026-02-10 09:40:36,385 - INFO - ⊙ Skipping already processed file: network\Network Commands & File Printer Sharing.md
+2026-02-10 09:40:36,385 - INFO - ⊙ Skipping already processed file: network\Network Models-OSI and TCPIP.md
+2026-02-10 09:40:36,385 - INFO - ⊙ Skipping already processed file: network\Network Services(DHCP-DNS,-VLAN).md
+2026-02-10 09:40:36,385 - INFO - ⊙ Skipping already processed file: network\Virtualization Concepts.md
+2026-02-10 09:40:36,385 - INFO - ⊙ Skipping already processed file: network\Windows Networking.md
+2026-02-10 09:40:36,386 - INFO - ⊗ Skipping _index.md file (category index): network\_index.md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: python\Dir-Buster-Module.md
+2026-02-10 09:40:36,386 - INFO - ⊗ Skipping _index.md file (category index): python\_index.md
+2026-02-10 09:40:36,386 - INFO - ⊗ Skipping _index.md file (category index): seo\_index.md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: tools\MSFConsole Commands.md
+2026-02-10 09:40:36,386 - INFO - ⊗ Skipping _index.md file (category index): tools\_index.md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: tools\Burpsuite\1-Install Burpsuite.md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E15 - Page Rank.md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E17 - Backlinks.md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: cyber-security\Cryptography\Basic-Encryption.md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: cyber-security\Cryptography\Malwares.md
+2026-02-10 09:40:36,386 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+2026-02-10 09:40:36,387 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+2026-02-10 09:40:36,387 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+2026-02-10 09:40:36,387 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+2026-02-10 09:40:36,387 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+2026-02-10 09:40:36,387 - INFO - ⊙ Skipping already processed file: cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+2026-02-10 09:40:36,387 - INFO - Tracking file saved with 33 processed files
+2026-02-10 09:40:36,387 - INFO - 
+============================================================
+2026-02-10 09:40:36,388 - INFO - SUMMARY
+2026-02-10 09:40:36,388 - INFO - ============================================================
+2026-02-10 09:40:36,388 - INFO - Total files found: 39
+2026-02-10 09:40:36,388 - INFO - Skipped _index.md files: 7
+2026-02-10 09:40:36,388 - INFO - Already processed (skipped): 32
+2026-02-10 09:40:36,388 - INFO - Newly processed (modified): 0
+2026-02-10 09:40:36,388 - INFO - No changes needed: 0
+2026-02-10 09:40:36,388 - INFO - Errors: 0
+2026-02-10 09:40:36,388 - INFO - ============================================================
+2026-02-10 09:40:36,388 - INFO - 
+✓ Report saved to: obsidian_property_remover_enhanced_report.txt
+2026-02-10 09:40:36,388 - INFO - 
+======================================================================
+2026-02-10 09:40:36,388 - INFO - SCRIPT EXECUTION COMPLETED
+2026-02-10 09:40:36,388 - INFO - ======================================================================
+

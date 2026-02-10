@@ -3416,5 +3416,841 @@
     "new_name": "WindowsNetworking-2.png",
     "category": "network",
     "status": "renamed"
+  },
+  "Pasted image 20240521175544.png": {
+    "new_name": "Pastedimage20240521175544.png",
+    "category": "network"
+  },
+  "Pasted image 20240522154828.png": {
+    "new_name": "Pastedimage20240522154828.png",
+    "category": "network"
+  },
+  "Pasted image 20240522160228.png": {
+    "new_name": "Pastedimage20240522160228.png",
+    "category": "network"
+  },
+  "Pasted image 20240522160429.png": {
+    "new_name": "Pastedimage20240522160429.png",
+    "category": "network"
+  },
+  "Pasted image 20240522160629.png": {
+    "new_name": "Pastedimage20240522160629.png",
+    "category": "network"
+  },
+  "Pasted image 20240522161517.png": {
+    "new_name": "Pastedimage20240522161517.png",
+    "category": "network"
+  },
+  "Pasted image 20240522161741.png": {
+    "new_name": "Pastedimage20240522161741.png",
+    "category": "network"
+  },
+  "Pasted image 20240625164355.png": {
+    "new_name": "Pastedimage20240625164355.png",
+    "category": "linux"
+  },
+  "Pasted image 20240625164829.png": {
+    "new_name": "Pastedimage20240625164829.png",
+    "category": "linux"
+  },
+  "Pasted image 20240625165040.png": {
+    "new_name": "Pastedimage20240625165040.png",
+    "category": "linux"
+  },
+  "Pasted image 20240625165250.png": {
+    "new_name": "Pastedimage20240625165250.png",
+    "category": "linux"
+  },
+  "Pasted image 20240625165754.png": {
+    "new_name": "Pastedimage20240625165754.png",
+    "category": "linux"
+  },
+  "Pasted image 20240625170641.png": {
+    "new_name": "Pastedimage20240625170641.png",
+    "category": "linux"
+  },
+  "Pasted image 20240625171002.png": {
+    "new_name": "Pastedimage20240625171002.png",
+    "category": "linux"
+  },
+  "Pasted image 20240625171239.png": {
+    "new_name": "Pastedimage20240625171239.png",
+    "category": "linux"
+  },
+  "Pasted image 20240625200802.png": {
+    "new_name": "Pastedimage20240625200802.png",
+    "category": "linux"
+  },
+  "Pasted image 20240625200927.png": {
+    "new_name": "Pastedimage20240625200927.png",
+    "category": "linux"
+  },
+  "Pasted image 20240625201253.png": {
+    "new_name": "Pastedimage20240625201253.png",
+    "category": "linux"
+  },
+  "Pasted image 20240625201528.png": {
+    "new_name": "Pastedimage20240625201528.png",
+    "category": "linux"
+  },
+  "Pasted image 20240625235408.png": {
+    "new_name": "Pastedimage20240625235408.png",
+    "category": "linux"
+  },
+  "Pasted image 20240902120134.png": {
+    "new_name": "Pastedimage20240902120134.png",
+    "category": "network"
+  },
+  "Pasted image 20240903183816.png": {
+    "new_name": "Pastedimage20240903183816.png",
+    "category": "linux"
+  },
+  "Pasted image 20240903183835.png": {
+    "new_name": "Pastedimage20240903183835.png",
+    "category": "linux"
+  },
+  "Pasted image 20240903184028.png": {
+    "new_name": "Pastedimage20240903184028.png",
+    "category": "linux"
+  },
+  "Pasted image 20240903184051.png": {
+    "new_name": "Pastedimage20240903184051.png",
+    "category": "linux"
+  },
+  "Pasted image 20240903184118.png": {
+    "new_name": "Pastedimage20240903184118.png",
+    "category": "linux"
+  },
+  "network/IP-MacAddressBasicandConcepts-1.png": {
+    "old_name": "IP-MacAddressBasicandConcepts-1.png",
+    "new_name": "IP-MacAddressBasicandConcepts-1.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/IP-MacAddressBasicandConcepts-2.png": {
+    "old_name": "IP-MacAddressBasicandConcepts-2.png",
+    "new_name": "IP-MacAddressBasicandConcepts-2.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/IP-MacAddressBasicandConcepts-3.png": {
+    "old_name": "IP-MacAddressBasicandConcepts-3.png",
+    "new_name": "IP-MacAddressBasicandConcepts-3.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/IP-MacAddressBasicandConcepts-4.png": {
+    "old_name": "IP-MacAddressBasicandConcepts-4.png",
+    "new_name": "IP-MacAddressBasicandConcepts-4.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/IP-MacAddressBasicandConcepts-5.png": {
+    "old_name": "IP-MacAddressBasicandConcepts-5.png",
+    "new_name": "IP-MacAddressBasicandConcepts-5.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/IP-MacAddressBasicandConcepts-6.png": {
+    "old_name": "IP-MacAddressBasicandConcepts-6.png",
+    "new_name": "IP-MacAddressBasicandConcepts-6.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/IP-MacAddressBasicandConcepts-7.png": {
+    "old_name": "IP-MacAddressBasicandConcepts-7.png",
+    "new_name": "IP-MacAddressBasicandConcepts-7.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/IP-MacAddressBasicandConcepts-8.png": {
+    "old_name": "IP-MacAddressBasicandConcepts-8.png",
+    "new_name": "IP-MacAddressBasicandConcepts-8.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/IP-MacAddressBasicandConcepts-9.png": {
+    "old_name": "IP-MacAddressBasicandConcepts-9.png",
+    "new_name": "IP-MacAddressBasicandConcepts-9.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/IP-MacAddressBasicandConcepts-10.png": {
+    "old_name": "IP-MacAddressBasicandConcepts-10.png",
+    "new_name": "IP-MacAddressBasicandConcepts-10.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/IP-MacAddressBasicandConcepts-11.png": {
+    "old_name": "IP-MacAddressBasicandConcepts-11.png",
+    "new_name": "IP-MacAddressBasicandConcepts-11.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/IP-MacAddressBasicandConcepts-12.png": {
+    "old_name": "IP-MacAddressBasicandConcepts-12.png",
+    "new_name": "IP-MacAddressBasicandConcepts-12.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/IP-MacAddressBasicandConcepts-13.png": {
+    "old_name": "IP-MacAddressBasicandConcepts-13.png",
+    "new_name": "IP-MacAddressBasicandConcepts-13.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/NetworkModels-OSIandTCPIP-1.png": {
+    "old_name": "NetworkModels-OSIandTCPIP-1.png",
+    "new_name": "NetworkModels-OSIandTCPIP-1.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/NetworkModels-OSIandTCPIP-2.png": {
+    "old_name": "NetworkModels-OSIandTCPIP-2.png",
+    "new_name": "NetworkModels-OSIandTCPIP-2.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/NetworkModels-OSIandTCPIP-3.png": {
+    "old_name": "NetworkModels-OSIandTCPIP-3.png",
+    "new_name": "NetworkModels-OSIandTCPIP-3.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/NetworkModels-OSIandTCPIP-4.png": {
+    "old_name": "NetworkModels-OSIandTCPIP-4.png",
+    "new_name": "NetworkModels-OSIandTCPIP-4.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/NetworkModels-OSIandTCPIP-5.png": {
+    "old_name": "NetworkModels-OSIandTCPIP-5.png",
+    "new_name": "NetworkModels-OSIandTCPIP-5.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/NetworkModels-OSIandTCPIP-6.png": {
+    "old_name": "NetworkModels-OSIandTCPIP-6.png",
+    "new_name": "NetworkModels-OSIandTCPIP-6.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/NetworkModels-OSIandTCPIP-7.png": {
+    "old_name": "NetworkModels-OSIandTCPIP-7.png",
+    "new_name": "NetworkModels-OSIandTCPIP-7.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/NetworkModels-OSIandTCPIP-8.png": {
+    "old_name": "NetworkModels-OSIandTCPIP-8.png",
+    "new_name": "NetworkModels-OSIandTCPIP-8.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/NetworkModels-OSIandTCPIP-9.png": {
+    "old_name": "NetworkModels-OSIandTCPIP-9.png",
+    "new_name": "NetworkModels-OSIandTCPIP-9.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/NetworkModels-OSIandTCPIP-10.png": {
+    "old_name": "NetworkModels-OSIandTCPIP-10.png",
+    "new_name": "NetworkModels-OSIandTCPIP-10.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/NetworkModels-OSIandTCPIP-11.png": {
+    "old_name": "NetworkModels-OSIandTCPIP-11.png",
+    "new_name": "NetworkModels-OSIandTCPIP-11.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/NetworkModels-OSIandTCPIP-12.png": {
+    "old_name": "NetworkModels-OSIandTCPIP-12.png",
+    "new_name": "NetworkModels-OSIandTCPIP-12.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/NetworkModels-OSIandTCPIP-13.png": {
+    "old_name": "NetworkModels-OSIandTCPIP-13.png",
+    "new_name": "NetworkModels-OSIandTCPIP-13.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/NetworkModels-OSIandTCPIP-14.png": {
+    "old_name": "NetworkModels-OSIandTCPIP-14.png",
+    "new_name": "NetworkModels-OSIandTCPIP-14.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "linux/Pastedimage20240903184118.png": {
+    "old_name": "Pastedimage20240903184118.png",
+    "new_name": "KaliLinuxInstallingGuide-1.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240903183816.png": {
+    "old_name": "Pastedimage20240903183816.png",
+    "new_name": "KaliLinuxInstallingGuide-2.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240903183835.png": {
+    "old_name": "Pastedimage20240903183835.png",
+    "new_name": "KaliLinuxInstallingGuide-3.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240903184028.png": {
+    "old_name": "Pastedimage20240903184028.png",
+    "new_name": "KaliLinuxInstallingGuide-4.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240903184051.png": {
+    "old_name": "Pastedimage20240903184051.png",
+    "new_name": "KaliLinuxInstallingGuide-5.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240625164355.png": {
+    "old_name": "Pastedimage20240625164355.png",
+    "new_name": "KaliLinuxInstallingGuide-6.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240625164829.png": {
+    "old_name": "Pastedimage20240625164829.png",
+    "new_name": "KaliLinuxInstallingGuide-7.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240625165040.png": {
+    "old_name": "Pastedimage20240625165040.png",
+    "new_name": "KaliLinuxInstallingGuide-8.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240625165250.png": {
+    "old_name": "Pastedimage20240625165250.png",
+    "new_name": "KaliLinuxInstallingGuide-9.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240625165754.png": {
+    "old_name": "Pastedimage20240625165754.png",
+    "new_name": "KaliLinuxInstallingGuide-10.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240625170641.png": {
+    "old_name": "Pastedimage20240625170641.png",
+    "new_name": "KaliLinuxInstallingGuide-11.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240625171002.png": {
+    "old_name": "Pastedimage20240625171002.png",
+    "new_name": "KaliLinuxInstallingGuide-12.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240625171239.png": {
+    "old_name": "Pastedimage20240625171239.png",
+    "new_name": "KaliLinuxInstallingGuide-13.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240625235408.png": {
+    "old_name": "Pastedimage20240625235408.png",
+    "new_name": "KaliLinuxInstallingGuide-14.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240625200802.png": {
+    "old_name": "Pastedimage20240625200802.png",
+    "new_name": "KaliLinuxInstallingGuide-15.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240625200927.png": {
+    "old_name": "Pastedimage20240625200927.png",
+    "new_name": "KaliLinuxInstallingGuide-16.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240625201253.png": {
+    "old_name": "Pastedimage20240625201253.png",
+    "new_name": "KaliLinuxInstallingGuide-17.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "linux/Pastedimage20240625201528.png": {
+    "old_name": "Pastedimage20240625201528.png",
+    "new_name": "KaliLinuxInstallingGuide-18.png",
+    "category": "linux",
+    "status": "renamed"
+  },
+  "network/NetworkBasics-Terminology-Topology-1.png": {
+    "old_name": "NetworkBasics-Terminology-Topology-1.png",
+    "new_name": "مبانی،لغتشناسیوتوپولوژیهایشبکه-1.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkBasics-Terminology-Topology-2.png": {
+    "old_name": "NetworkBasics-Terminology-Topology-2.png",
+    "new_name": "مبانی،لغتشناسیوتوپولوژیهایشبکه-2.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkBasics-Terminology-Topology-3.png": {
+    "old_name": "NetworkBasics-Terminology-Topology-3.png",
+    "new_name": "مبانی،لغتشناسیوتوپولوژیهایشبکه-3.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkBasics-Terminology-Topology-4.png": {
+    "old_name": "NetworkBasics-Terminology-Topology-4.png",
+    "new_name": "مبانی،لغتشناسیوتوپولوژیهایشبکه-4.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkBasics-Terminology-Topology-5.png": {
+    "old_name": "NetworkBasics-Terminology-Topology-5.png",
+    "new_name": "مبانی،لغتشناسیوتوپولوژیهایشبکه-5.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkBasics-Terminology-Topology-6.png": {
+    "old_name": "NetworkBasics-Terminology-Topology-6.png",
+    "new_name": "مبانی،لغتشناسیوتوپولوژیهایشبکه-6.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkBasics-Terminology-Topology-7.png": {
+    "old_name": "NetworkBasics-Terminology-Topology-7.png",
+    "new_name": "مبانی،لغتشناسیوتوپولوژیهایشبکه-7.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkBasics-Terminology-Topology-8.png": {
+    "old_name": "NetworkBasics-Terminology-Topology-8.png",
+    "new_name": "مبانی،لغتشناسیوتوپولوژیهایشبکه-8.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkBasics-Terminology-Topology-9.png": {
+    "old_name": "NetworkBasics-Terminology-Topology-9.png",
+    "new_name": "مبانی،لغتشناسیوتوپولوژیهایشبکه-9.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-1.png": {
+    "old_name": "NetworkCableandComponents-1.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-1.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-2.png": {
+    "old_name": "NetworkCableandComponents-2.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-2.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-3.png": {
+    "old_name": "NetworkCableandComponents-3.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-3.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-4.png": {
+    "old_name": "NetworkCableandComponents-4.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-4.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-5.png": {
+    "old_name": "NetworkCableandComponents-5.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-5.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-7.png": {
+    "old_name": "NetworkCableandComponents-7.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-7.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-8.png": {
+    "old_name": "NetworkCableandComponents-8.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-8.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-9.png": {
+    "old_name": "NetworkCableandComponents-9.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-9.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-10.png": {
+    "old_name": "NetworkCableandComponents-10.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-10.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-11.png": {
+    "old_name": "NetworkCableandComponents-11.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-11.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-12.png": {
+    "old_name": "NetworkCableandComponents-12.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-12.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-13.png": {
+    "old_name": "NetworkCableandComponents-13.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-13.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-14.png": {
+    "old_name": "NetworkCableandComponents-14.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-14.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-15.png": {
+    "old_name": "NetworkCableandComponents-15.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-15.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-16.png": {
+    "old_name": "NetworkCableandComponents-16.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-16.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-17.png": {
+    "old_name": "NetworkCableandComponents-17.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-17.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-18.png": {
+    "old_name": "NetworkCableandComponents-18.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-18.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-19.png": {
+    "old_name": "NetworkCableandComponents-19.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-19.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-20.png": {
+    "old_name": "NetworkCableandComponents-20.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-20.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-21.png": {
+    "old_name": "NetworkCableandComponents-21.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-21.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-22.png": {
+    "old_name": "NetworkCableandComponents-22.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-22.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-23.png": {
+    "old_name": "NetworkCableandComponents-23.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-23.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-24.png": {
+    "old_name": "NetworkCableandComponents-24.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-24.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-25.png": {
+    "old_name": "NetworkCableandComponents-25.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-25.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-26.png": {
+    "old_name": "NetworkCableandComponents-26.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-26.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-27.png": {
+    "old_name": "NetworkCableandComponents-27.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-27.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-28.png": {
+    "old_name": "NetworkCableandComponents-28.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-28.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-29.png": {
+    "old_name": "NetworkCableandComponents-29.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-29.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-30.png": {
+    "old_name": "NetworkCableandComponents-30.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-30.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-31.png": {
+    "old_name": "NetworkCableandComponents-31.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-31.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-32.png": {
+    "old_name": "NetworkCableandComponents-32.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-32.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/NetworkCableandComponents-33.png": {
+    "old_name": "NetworkCableandComponents-33.png",
+    "new_name": "انواعدیوایسهاوکابلهایشبکه-33.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/Pastedimage20240902120134.png": {
+    "old_name": "Pastedimage20240902120134.png",
+    "new_name": "VirtualizationConcepts-1.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/Pastedimage20240521175544.png": {
+    "old_name": "Pastedimage20240521175544.png",
+    "new_name": "VirtualizationConcepts-2.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/Pastedimage20240522154828.png": {
+    "old_name": "Pastedimage20240522154828.png",
+    "new_name": "VirtualizationConcepts-3.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/Pastedimage20240522160228.png": {
+    "old_name": "Pastedimage20240522160228.png",
+    "new_name": "VirtualizationConcepts-4.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/Pastedimage20240522160429.png": {
+    "old_name": "Pastedimage20240522160429.png",
+    "new_name": "VirtualizationConcepts-5.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/Pastedimage20240522160629.png": {
+    "old_name": "Pastedimage20240522160629.png",
+    "new_name": "VirtualizationConcepts-6.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/Pastedimage20240522161517.png": {
+    "old_name": "Pastedimage20240522161517.png",
+    "new_name": "VirtualizationConcepts-7.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/Pastedimage20240522161741.png": {
+    "old_name": "Pastedimage20240522161741.png",
+    "new_name": "VirtualizationConcepts-8.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/WindowsNetworking-1.png": {
+    "old_name": "WindowsNetworking-1.png",
+    "new_name": "راهاندازیشبکهویندوز-1.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "network/WindowsNetworking-2.png": {
+    "old_name": "WindowsNetworking-2.png",
+    "new_name": "راهاندازیشبکهویندوز-2.png",
+    "category": "network",
+    "status": "renamed"
+  },
+  "linux/KaliLinuxInstallingGuide-1.png": {
+    "old_name": "KaliLinuxInstallingGuide-1.png",
+    "new_name": "KaliLinuxInstallingGuide-1.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-2.png": {
+    "old_name": "KaliLinuxInstallingGuide-2.png",
+    "new_name": "KaliLinuxInstallingGuide-2.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-3.png": {
+    "old_name": "KaliLinuxInstallingGuide-3.png",
+    "new_name": "KaliLinuxInstallingGuide-3.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-4.png": {
+    "old_name": "KaliLinuxInstallingGuide-4.png",
+    "new_name": "KaliLinuxInstallingGuide-4.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-5.png": {
+    "old_name": "KaliLinuxInstallingGuide-5.png",
+    "new_name": "KaliLinuxInstallingGuide-5.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-6.png": {
+    "old_name": "KaliLinuxInstallingGuide-6.png",
+    "new_name": "KaliLinuxInstallingGuide-6.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-7.png": {
+    "old_name": "KaliLinuxInstallingGuide-7.png",
+    "new_name": "KaliLinuxInstallingGuide-7.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-8.png": {
+    "old_name": "KaliLinuxInstallingGuide-8.png",
+    "new_name": "KaliLinuxInstallingGuide-8.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-9.png": {
+    "old_name": "KaliLinuxInstallingGuide-9.png",
+    "new_name": "KaliLinuxInstallingGuide-9.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-10.png": {
+    "old_name": "KaliLinuxInstallingGuide-10.png",
+    "new_name": "KaliLinuxInstallingGuide-10.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-11.png": {
+    "old_name": "KaliLinuxInstallingGuide-11.png",
+    "new_name": "KaliLinuxInstallingGuide-11.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-12.png": {
+    "old_name": "KaliLinuxInstallingGuide-12.png",
+    "new_name": "KaliLinuxInstallingGuide-12.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-13.png": {
+    "old_name": "KaliLinuxInstallingGuide-13.png",
+    "new_name": "KaliLinuxInstallingGuide-13.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-14.png": {
+    "old_name": "KaliLinuxInstallingGuide-14.png",
+    "new_name": "KaliLinuxInstallingGuide-14.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-15.png": {
+    "old_name": "KaliLinuxInstallingGuide-15.png",
+    "new_name": "KaliLinuxInstallingGuide-15.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-16.png": {
+    "old_name": "KaliLinuxInstallingGuide-16.png",
+    "new_name": "KaliLinuxInstallingGuide-16.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-17.png": {
+    "old_name": "KaliLinuxInstallingGuide-17.png",
+    "new_name": "KaliLinuxInstallingGuide-17.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "linux/KaliLinuxInstallingGuide-18.png": {
+    "old_name": "KaliLinuxInstallingGuide-18.png",
+    "new_name": "KaliLinuxInstallingGuide-18.png",
+    "category": "linux",
+    "status": "already_correct"
+  },
+  "network/VirtualizationConcepts-1.png": {
+    "old_name": "VirtualizationConcepts-1.png",
+    "new_name": "VirtualizationConcepts-1.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/VirtualizationConcepts-2.png": {
+    "old_name": "VirtualizationConcepts-2.png",
+    "new_name": "VirtualizationConcepts-2.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/VirtualizationConcepts-3.png": {
+    "old_name": "VirtualizationConcepts-3.png",
+    "new_name": "VirtualizationConcepts-3.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/VirtualizationConcepts-4.png": {
+    "old_name": "VirtualizationConcepts-4.png",
+    "new_name": "VirtualizationConcepts-4.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/VirtualizationConcepts-5.png": {
+    "old_name": "VirtualizationConcepts-5.png",
+    "new_name": "VirtualizationConcepts-5.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/VirtualizationConcepts-6.png": {
+    "old_name": "VirtualizationConcepts-6.png",
+    "new_name": "VirtualizationConcepts-6.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/VirtualizationConcepts-7.png": {
+    "old_name": "VirtualizationConcepts-7.png",
+    "new_name": "VirtualizationConcepts-7.png",
+    "category": "network",
+    "status": "already_correct"
+  },
+  "network/VirtualizationConcepts-8.png": {
+    "old_name": "VirtualizationConcepts-8.png",
+    "new_name": "VirtualizationConcepts-8.png",
+    "category": "network",
+    "status": "already_correct"
   }
 }

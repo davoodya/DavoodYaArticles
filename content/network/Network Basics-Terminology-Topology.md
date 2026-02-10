@@ -11,12 +11,15 @@ categories = ["Network", "Network+"]
 tags = ["Network", "Network Concepts", "Network Topologies" ,"Network+"]
 series = ["Network", "Network+"]
 
-
 # Badges and Filters 
 readingTime = 10 # integer like 14, 26, 20 ....
 difficulty = "beginner" # beginner | medium | intermediate | advanced
 lab_required = false 
 post_type_fa = "آموزشی" # "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
+
+# Images
+featured_image = "/images/network/NetworkBasics-Terminology-Topology-1.png"
+images = ["/images/network/NetworkBasics-Terminology-Topology-1.png"]
 
 # Options
 toc = true
@@ -30,9 +33,6 @@ keywords = ["Network Basics-Terminology-Topology", "network", "network-basics-te
 author = "Davood Yahay"
 robots = "index, follow"
 canonical = "https://davoodya.ir/network/network-basics-terminology-topology/"
-
-featured_image = "/images/network/NetworkBasics-Terminology-Topology-1.png"
-images = ["/images/network/NetworkBasics-Terminology-Topology-1.png"]
 
 [params.opengraph]
   title = "Network Basics-Terminology-Topology"
@@ -62,17 +62,17 @@ images = ["/images/network/NetworkBasics-Terminology-Topology-1.png"]
 		3. What is Workstations?
 		4. What is Topology?
 	2. Ring Topology
-		1. ![Network Basics-Terminology-Topology-1](/images/network/NetworkBasics-Terminology-Topology-1.png)
+		1. ![مبانی، لغت شناسی و توپولوژی های شبکه-1](/images/network/NetworkBasics-Terminology-Topology-1.png)
 	3. Mesh Topology
-		1. ![Network Basics-Terminology-Topology-2](/images/network/NetworkBasics-Terminology-Topology-2.png)
+		1. ![مبانی، لغت شناسی و توپولوژی های شبکه-2](/images/network/NetworkBasics-Terminology-Topology-2.png)
 	4. Bus Topology
-		1. ![Network Basics-Terminology-Topology-3](/images/network/NetworkBasics-Terminology-Topology-3.png)
+		1. ![مبانی، لغت شناسی و توپولوژی های شبکه-3](/images/network/NetworkBasics-Terminology-Topology-3.png)
 	5. Star Topology
-		1. ![Network Basics-Terminology-Topology-4](/images/network/NetworkBasics-Terminology-Topology-4.png)
+		1. ![مبانی، لغت شناسی و توپولوژی های شبکه-4](/images/network/NetworkBasics-Terminology-Topology-4.png)
 	6. Tree Topology
-		1. ![Network Basics-Terminology-Topology-5](/images/network/NetworkBasics-Terminology-Topology-5.png)
+		1. ![مبانی، لغت شناسی و توپولوژی های شبکه-5](/images/network/NetworkBasics-Terminology-Topology-5.png)
 	7. Hybrid Topology
-		1. ![Network Basics-Terminology-Topology-6](/images/network/NetworkBasics-Terminology-Topology-6.png)
+		1. ![مبانی، لغت شناسی و توپولوژی های شبکه-6](/images/network/NetworkBasics-Terminology-Topology-6.png)
 ### Network Categories
 #### Geographical Categories
 1. PAN(Personal Area Network)
@@ -80,13 +80,13 @@ images = ["/images/network/NetworkBasics-Terminology-Topology-1.png"]
 3. MAN(Metropolitan Area Network)
 4. WAN(Wide Area Network-Internet)
 5. Images
-	![Network Basics-Terminology-Topology-7](/images/network/NetworkBasics-Terminology-Topology-7.png)
-	![Network Basics-Terminology-Topology-8](/images/network/NetworkBasics-Terminology-Topology-8.png)
+	![مبانی، لغت شناسی و توپولوژی های شبکه-7](/images/network/NetworkBasics-Terminology-Topology-7.png)
+	![مبانی، لغت شناسی و توپولوژی های شبکه-8](/images/network/NetworkBasics-Terminology-Topology-8.png)
 #### Logical Categories
 1. `Unicast: ` P2P(Peer to Peer, Point to Point)
 2. `Multicast` One to Multi
 3. `Broadcast` One to Multi(Optional)
 4. Images
-	1. ![Network Basics-Terminology-Topology-9](/images/network/NetworkBasics-Terminology-Topology-9.png)
+	1. ![مبانی، لغت شناسی و توپولوژی های شبکه-9](/images/network/NetworkBasics-Terminology-Topology-9.png)
 
 ## END

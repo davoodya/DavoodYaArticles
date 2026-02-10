@@ -1,7 +1,7 @@
 +++
 # Basics
 #title = "Network Models-OSI and TCPIP"
-title = "مدل های شبکه - OSI و TCPIP"
+title = "Network Models-OSI and TCPIP"
 slug = "network-models-osi-and-tcpip"
 date = "2024-03-25T15:41:10+03:30"
 lastmod = "2026-02-09T15:41:10+03:30"
@@ -24,6 +24,10 @@ math = false
 type = "posts"
 # layout = "single"
 
+# Images
+featured_image = "/images/network/NetworkModels-OSIandTCPIP-1.png"
+images = ["/images/network/NetworkModels-OSIandTCPIP-1.png"]
+
 # SEO
 description = "1. Port & Protocol Definitions 2. Whats OSI(Open System Interconnection) Model? 1. Physical 2. Data Link (Switches-Ethernet) 3. Network (Routers-IP)..."
 keywords = ["Network Models-OSI and TCPIP", "network", "network-models-osi-and-tcpip"]
@@ -31,8 +35,6 @@ author = "Davood Yahay"
 robots = "index, follow"
 canonical = "https://davoodya.ir/network/network-models-osi-and-tcpip/"
 
-featured_image = "/images/network/NetworkModels-OSIandTCPIP-1.png"
-images = ["/images/network/NetworkModels-OSIandTCPIP-1.png"]
 
 [params.opengraph]
   title = "Network Models-OSI and TCPIP"

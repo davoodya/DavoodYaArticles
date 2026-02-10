@@ -3,52 +3,55 @@ OBSIDIAN PROPERTY REMOVER & HUGO ENHANCED FRONTMATTER ADDER
 EXECUTION REPORT
 ======================================================================
 
-Execution Date: 2026-02-09 15:41:10
+Execution Date: 2026-02-10 09:40:36
 Target Directory: content (recursive)
 
 ----------------------------------------------------------------------
 STATISTICS
 ----------------------------------------------------------------------
-Total files found: 36
-Skipped _index.md files (category index): 6
-Already processed (skipped): 22
-Newly processed (modified): 8
+Total files found: 39
+Skipped _index.md files (category index): 7
+Already processed (skipped): 32
+Newly processed (modified): 0
 No changes needed: 0
 Errors: 0
 
 ----------------------------------------------------------------------
 PROCESSED FILES LIST
 ----------------------------------------------------------------------
-1. cyber-security\Cryptography\Basic-Encryption.md
-2. cyber-security\Cryptography\Malwares.md
-3. cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
-4. cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
-5. cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
-6. cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
-7. cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
-8. cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
-9. linux\60 Commands Hacker Should Know it.md
-10. network\IP-Mac Address Basic and Concepts.md
-11. network\Network Basics-Terminology-Topology.md
-12. network\Network Cable and Components.md
-13. network\Network Commands & File Printer Sharing.md
-14. network\Network Models-OSI and TCPIP.md
-15. network\Network Services(DHCP-DNS,-VLAN).md
-16. network\Virtualization & Networking.md
-17. network\Windows Networking.md
-18. python\Dir-Buster-Module.md
-19. seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
-20. seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
-21. seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
-22. seo\0-SEO-Theories\E13 - Good Contents for SEO.md
-23. seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
-24. seo\0-SEO-Theories\E15 - Page Rank.md
-25. seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
-26. seo\0-SEO-Theories\E17 - Backlinks.md
-27. seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
-28. tools\Burpsuite\1-Install Burpsuite.md
-29. tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
-30. tools\MSFConsole Commands.md
+1. all-articles\README.md
+2. cyber-security\Cryptography\Basic-Encryption.md
+3. cyber-security\Cryptography\Malwares.md
+4. cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+5. cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+6. cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+7. cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+8. cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+9. cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+10. linux\60 Commands Hacker Should Know it.md
+11. linux\Kali Linux Installing Guide.md
+12. network\IP-Mac Address Basic and Concepts.md
+13. network\Network Basics-Terminology-Topology.md
+14. network\Network Cable and Components.md
+15. network\Network Commands & File Printer Sharing.md
+16. network\Network Models-OSI and TCPIP.md
+17. network\Network Services(DHCP-DNS,-VLAN).md
+18. network\Virtualization & Networking.md
+19. network\Virtualization Concepts.md
+20. network\Windows Networking.md
+21. python\Dir-Buster-Module.md
+22. seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+23. seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+24. seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+25. seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+26. seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+27. seo\0-SEO-Theories\E15 - Page Rank.md
+28. seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+29. seo\0-SEO-Theories\E17 - Backlinks.md
+30. seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+31. tools\Burpsuite\1-Install Burpsuite.md
+32. tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+33. tools\MSFConsole Commands.md
 
 ======================================================================
 Report generated successfully

@@ -625,16 +625,22 @@ categories = [{categories_str}]
 tags = [{tags_str}]
 series = [{series_str}]
 
-# Badges
-readingTime = {reading_time}
-difficulty = "medium"
+# Badges and Filters
+readingTime = {reading_time} # integer number
+difficulty = "medium" # beginner | medium | intermediate | advanced
+lab_required = true
+post_type_fa = "مقاله" 
+# post_type_fa = "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
+
+# Images
+featured_image = "{featured_image}"
+images = [{images_str}]
+
+# Options
 toc = true
 math = false
-lab_required = true
-post_type_fa = "مقاله"
-
-# layout = "single"
 type = "posts"
+# layout = "single"
 
 # SEO
 description = "{description}"
@@ -643,11 +649,7 @@ author = "{AUTHOR_NAME}"
 robots = "index, follow"
 canonical = "{canonical_url}"
 
-# Images
-featured_image = "{featured_image}"
-images = [{images_str}]
-
-# Open Graph
+# Open Graph and Twitter
 [params.opengraph]
   title = "{title}"
   description = "{description}"
@@ -655,13 +657,11 @@ images = [{images_str}]
   url = "{canonical_url}"
   type = "article"
 
-# Social Networks(Twitter)
 [params.twitter]
   card = "summary_large_image"
   title = "{title}"
   description = "{description}"
   image = "{featured_image}"
-
 
 +++
 '''

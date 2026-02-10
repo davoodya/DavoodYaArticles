@@ -1,5 +1,5 @@
 +++
-title = "مبانی و مفاهیم IP و MAC"
+title = "IP-Mac Address Basic and Concepts"
 slug = "ip-mac-address-basic-and-concepts"
 date = "2024-03-25T15:41:10+03:30"
 lastmod = "2026-02-09T15:41:10+03:30"
@@ -16,6 +16,10 @@ difficulty = "medium" # beginner | medium | intermediate | advanced
 lab_required = true 
 post_type_fa = "آموزشی" # "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
 
+# Images
+featured_image = "/images/network/IP-MacAddressBasicandConcepts-1.png"
+images = ["/images/network/IP-MacAddressBasicandConcepts-1.png"]
+
 # Options
 toc = true
 math = false
@@ -28,9 +32,6 @@ keywords = ["IP-Mac Address Basic and Concepts", "network", "ip-mac-address-basi
 author = "Davood Yahay"
 robots = "index, follow"
 canonical = "https://davoodya.ir/network/ip-mac-address-basic-and-concepts/"
-
-featured_image = "/images/network/IP-MacAddressBasicandConcepts-1.png"
-images = ["/images/network/IP-MacAddressBasicandConcepts-1.png"]
 
 [params.opengraph]
   title = "IP-Mac Address Basic and Concepts"

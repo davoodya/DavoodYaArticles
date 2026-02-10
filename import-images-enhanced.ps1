@@ -1,28 +1,27 @@
 # ============================================================================
-# Hugo Article Import & Processing Pipeline - Enhanced Version
+# Hugo Article Import & Processing Pipeline - Fixed Version
 # ============================================================================
 # Description: Automated pipeline for importing articles from Obsidian to Hugo
-# Author: Enhanced Script
-# Date: 2026-02-09
+# Author: Fixed Script
+# Date: 2026-02-10
 # ============================================================================
 
 # Set encoding to UTF-8
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $OutputEncoding = [System.Text.Encoding]::UTF8
 
-# Colors for better visualization
-$Colors = @{
-    Header = 'Cyan'
-    Success = 'Green'
-    Warning = 'Yellow'
-    Error = 'Red'
-    Info = 'White'
-    Step = 'Magenta'
-    Highlight = 'Yellow'
+# Get script directory (dynamic instead of hard-coded)
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+
+# Simple mode flag - set to $true for batch-like execution
+$SimpleMode = $false
+
+# Check for simple mode parameter
+if ($args -contains "-simple") {
+    $SimpleMode = $true
 }
 
-# Script paths
-$ScriptDir = "H:\Repo\Hugo\davoodya"
+# Scripts configuration
 $Scripts = @(
     @{
         Name = "convert_images.py"
@@ -90,177 +89,12 @@ $GlobalStats = @{
 # HELPER FUNCTIONS
 # ============================================================================
 
-function Write-ColorHeader {
-    param([string]$Text, [string]$Color = 'Cyan')
-    $length = $Text.Length
-    $border = "=" * ($length + 4)
-    Write-Host ""
-    Write-Host $border -ForegroundColor $Color
-    Write-Host "  $Text  " -ForegroundColor $Color
-    Write-Host $border -ForegroundColor $Color
-    Write-Host ""
-}
-
-function Write-ColorBox {
+function Write-ColorText {
     param(
         [string]$Text,
-        [string]$Color = 'White',
-        [string]$Prefix = ""
+        [string]$Color = 'White'
     )
-    if ($Prefix) {
-        Write-Host "$Prefix " -NoNewline -ForegroundColor $Color
-    }
     Write-Host $Text -ForegroundColor $Color
-}
-
-function Write-StepHeader {
-    param(
-        [int]$StepNumber,
-        [string]$Title
-    )
-    Write-Host ""
-    Write-Host "╔═══════════════════════════════════════════════════════════════════════════╗" -ForegroundColor $Colors.Step
-    Write-Host "║" -NoNewline -ForegroundColor $Colors.Step
-    Write-Host " STEP $StepNumber of $($GlobalStats.TotalSteps): $Title" -NoNewline -ForegroundColor White
-    $padding = 74 - " STEP $StepNumber of $($GlobalStats.TotalSteps): $Title".Length
-    Write-Host (" " * $padding) -NoNewline
-    Write-Host "║" -ForegroundColor $Colors.Step
-    Write-Host "╚═══════════════════════════════════════════════════════════════════════════╝" -ForegroundColor $Colors.Step
-    Write-Host ""
-}
-
-function Write-Progress {
-    param([string]$Status, [int]$PercentComplete)
-    Write-Progress -Activity "Hugo Article Processing Pipeline" -Status $Status -PercentComplete $PercentComplete
-}
-
-function Read-JsonReport {
-    param([string]$FilePath)
-    
-    if (Test-Path $FilePath) {
-        try {
-            $content = Get-Content -Path $FilePath -Raw -Encoding UTF8 | ConvertFrom-Json
-            return $content
-        }
-        catch {
-            Write-ColorBox "⚠️  Warning: Could not parse JSON file: $FilePath" -Color $Colors.Warning
-            return $null
-        }
-    }
-    return $null
-}
-
-function Read-TextReport {
-    param([string]$FilePath)
-    
-    if (Test-Path $FilePath) {
-        try {
-            return Get-Content -Path $FilePath -Raw -Encoding UTF8
-        }
-        catch {
-            Write-ColorBox "⚠️  Warning: Could not read file: $FilePath" -Color $Colors.Warning
-            return $null
-        }
-    }
-    return $null
-}
-
-function Show-StepResults {
-    param(
-        [string]$ReportFile,
-        [string]$TrackingFile,
-        [string]$ScriptName
-    )
-    
-    Write-Host "  📊 Results:" -ForegroundColor $Colors.Highlight
-    Write-Host ""
-    
-    # Try to read tracking file for statistics
-    $trackingPath = Join-Path $ScriptDir $TrackingFile
-    $tracking = Read-JsonReport -FilePath $trackingPath
-    
-    if ($tracking) {
-        # Different tracking files have different structures
-        switch ($ScriptName) {
-            "convert_images.py" {
-                if ($tracking.processed_images) {
-                    $count = $tracking.processed_images.Count
-                    Write-ColorBox "     ✅ Images imported: $count" -Color $Colors.Success
-                    $GlobalStats.TotalProcessedFiles += $count
-                }
-            }
-            "title-adder.py" {
-                if ($tracking.processed_files) {
-                    $count = $tracking.processed_files.Count
-                    Write-ColorBox "     ✅ Articles with title added: $count" -Color $Colors.Success
-                    $GlobalStats.TotalProcessedFiles += $count
-                }
-            }
-            "images-renamer.py" {
-                if ($tracking.PSObject.Properties.Name -contains 'old_name') {
-                    # It's a mapping object
-                    $count = ($tracking.PSObject.Properties | Measure-Object).Count
-                    Write-ColorBox "     ✅ Images renamed: $count" -Color $Colors.Success
-                    
-                    # Show some examples (first 5)
-                    if ($count -gt 0 -and $count -le 5) {
-                        Write-Host "     📝 Renamed images:" -ForegroundColor $Colors.Info
-                        foreach ($prop in $tracking.PSObject.Properties) {
-                            $oldName = $prop.Name
-                            $newName = $prop.Value
-                            Write-Host "        • $oldName → $newName" -ForegroundColor Gray
-                        }
-                    }
-                    elseif ($count -gt 5) {
-                        Write-Host "     📝 Sample renamed images (first 5):" -ForegroundColor $Colors.Info
-                        $i = 0
-                        foreach ($prop in $tracking.PSObject.Properties) {
-                            if ($i -ge 5) { break }
-                            $oldName = $prop.Name
-                            $newName = $prop.Value
-                            Write-Host "        • $oldName → $newName" -ForegroundColor Gray
-                            $i++
-                        }
-                        Write-Host "        ... and $($count - 5) more" -ForegroundColor Gray
-                    }
-                }
-            }
-            "toc-remover.py" {
-                if ($tracking.processed_files) {
-                    $count = $tracking.processed_files.Count
-                    Write-ColorBox "     ✅ TOC removed from: $count articles" -Color $Colors.Success
-                    $GlobalStats.TotalProcessedFiles += $count
-                }
-            }
-            "obsidian-property-remover-enhanced.py" {
-                if ($tracking.processed_files) {
-                    $count = $tracking.processed_files.Count
-                    Write-ColorBox "     ✅ Front matter added to: $count articles" -Color $Colors.Success
-                    $GlobalStats.TotalProcessedFiles += $count
-                }
-            }
-            default {
-                if ($tracking.processed_files) {
-                    $count = $tracking.processed_files.Count
-                    Write-ColorBox "     ✅ Files processed: $count" -Color $Colors.Success
-                    $GlobalStats.TotalProcessedFiles += $count
-                }
-            }
-        }
-        
-        # Show last run time if available
-        if ($tracking.last_run) {
-            Write-ColorBox "     🕐 Last run: $($tracking.last_run)" -Color Gray
-        }
-    }
-    
-    # Try to read text report for additional info
-    $reportPath = Join-Path $ScriptDir $ReportFile
-    if (Test-Path $reportPath) {
-        Write-ColorBox "     📄 Detailed report: $ReportFile" -Color $Colors.Info
-    }
-    
-    Write-Host ""
 }
 
 function Execute-PythonScript {
@@ -273,63 +107,72 @@ function Execute-PythonScript {
     
     # Check if script exists
     if (-not (Test-Path $scriptPath)) {
-        Write-ColorBox "❌ Script not found: $($ScriptInfo.Name)" -Color $Colors.Error
+        if (-not $SimpleMode) {
+            Write-ColorText "ERROR: Script not found: $($ScriptInfo.Name)" "Red"
+        } else {
+            Write-Host "ERROR: Script not found: $($ScriptInfo.Name)" -ForegroundColor Red
+        }
         $GlobalStats.FailedSteps++
         return $false
     }
     
     # Show step header
-    Write-StepHeader -StepNumber $StepNumber -Title $ScriptInfo.Title
-    
-    # Show description
-    Write-ColorBox "  📝 Description: $($ScriptInfo.Description)" -Color $Colors.Info
-    Write-Host "  🐍 Script: $($ScriptInfo.Name)" -ForegroundColor Gray
-    Write-Host ""
-    
-    # Update progress
-    $percentComplete = [int](($StepNumber - 1) / $GlobalStats.TotalSteps * 100)
-    Write-Progress -Status "Executing: $($ScriptInfo.Title)" -PercentComplete $percentComplete
-    
-    # Execute Python script
-    Write-ColorBox "  ⚙️  Executing..." -Color $Colors.Info
-    Write-Host ""
+    if (-not $SimpleMode) {
+        Write-Host ""
+        Write-Host "========================================" -ForegroundColor Cyan
+        Write-Host "STEP $StepNumber of $($GlobalStats.TotalSteps): $($ScriptInfo.Title)" -ForegroundColor White
+        Write-Host "========================================" -ForegroundColor Cyan
+        Write-Host "Description: $($ScriptInfo.Description)" -ForegroundColor Gray
+        Write-Host "Script: $($ScriptInfo.Name)" -ForegroundColor Gray
+        Write-Host ""
+        Write-Host "Executing..." -ForegroundColor Yellow
+        Write-Host ""
+    } else {
+        # Simple batch-like output
+        Write-Host "==================: Step $StepNumber :===============" -ForegroundColor Cyan
+        Write-Host "===== $($ScriptInfo.Title) =====" -ForegroundColor Cyan
+        Write-Host "==============================================" -ForegroundColor Cyan
+    }
     
     $startTime = Get-Date
     
     try {
         # Run Python script and capture output
-        $output = & python $scriptPath 2>&1
-        $exitCode = $LASTEXITCODE
+        if ($SimpleMode) {
+            # Direct execution like batch file
+            & python.exe $scriptPath
+            $exitCode = $LASTEXITCODE
+        } else {
+            # Enhanced execution with output capture
+            $output = & python.exe $scriptPath 2>&1
+            $exitCode = $LASTEXITCODE
+            
+            # Show Python output (filtered)
+            if ($output) {
+                Write-Host "----------------------------------------" -ForegroundColor DarkGray
+                foreach ($line in $output) {
+                    $lineStr = $line.ToString()
+                    if ($lineStr -match "ERROR|FAIL|WARNING|SUCCESS|COMPLETED|processed|found") {
+                        Write-Host "  $lineStr" -ForegroundColor Gray
+                    }
+                }
+                Write-Host "----------------------------------------" -ForegroundColor DarkGray
+                Write-Host ""
+            }
+        }
         
         $endTime = Get-Date
         $duration = ($endTime - $startTime).TotalSeconds
         
-        # Show Python output (filtered)
-        if ($output) {
-            Write-Host "  " -NoNewline
-            Write-Host "─" * 75 -ForegroundColor DarkGray
-            foreach ($line in $output) {
-                # Filter out some verbose output, keep important lines
-                $lineStr = $line.ToString()
-                if ($lineStr -match "ERROR|FAIL|WARNING|✓|✅|❌|⚠️|SUCCESS|COMPLETED|processed|found") {
-                    Write-Host "  $lineStr" -ForegroundColor Gray
-                }
-            }
-            Write-Host "  " -NoNewline
-            Write-Host "─" * 75 -ForegroundColor DarkGray
-            Write-Host ""
-        }
-        
         # Check exit code
         if ($exitCode -eq 0) {
-            Write-ColorBox "  ✅ Completed successfully in $([math]::Round($duration, 2))s" -Color $Colors.Success
-            
-            # Show results from tracking/report files
-            Show-StepResults -ReportFile $ScriptInfo.ReportFile -TrackingFile $ScriptInfo.TrackingFile -ScriptName $ScriptInfo.Name
+            if (-not $SimpleMode) {
+                Write-ColorText "SUCCESS: Completed successfully in $([math]::Round($duration, 2))s" "Green"
+            } else {
+                Write-Host "Step $StepNumber completed successfully." -ForegroundColor Green
+            }
             
             $GlobalStats.CompletedSteps++
-            
-            # Store step result
             $GlobalStats.StepResults += @{
                 Step = $StepNumber
                 Name = $ScriptInfo.Name
@@ -340,12 +183,14 @@ function Execute-PythonScript {
             }
             
             return $true
-        }
-        else {
-            Write-ColorBox "  ❌ Failed with exit code: $exitCode" -Color $Colors.Error
-            $GlobalStats.FailedSteps++
+        } else {
+            if (-not $SimpleMode) {
+                Write-ColorText "FAILED: Exit code: $exitCode" "Red"
+            } else {
+                Write-Host "ERROR: Step $StepNumber failed with exit code: $exitCode" -ForegroundColor Red
+            }
             
-            # Store step result
+            $GlobalStats.FailedSteps++
             $GlobalStats.StepResults += @{
                 Step = $StepNumber
                 Name = $ScriptInfo.Name
@@ -359,10 +204,13 @@ function Execute-PythonScript {
         }
     }
     catch {
-        Write-ColorBox "  ❌ Exception occurred: $($_.Exception.Message)" -Color $Colors.Error
-        $GlobalStats.FailedSteps++
+        if (-not $SimpleMode) {
+            Write-ColorText "ERROR: Exception occurred: $($_.Exception.Message)" "Red"
+        } else {
+            Write-Host "ERROR: Exception in Step $StepNumber : $($_.Exception.Message)" -ForegroundColor Red
+        }
         
-        # Store step result
+        $GlobalStats.FailedSteps++
         $GlobalStats.StepResults += @{
             Step = $StepNumber
             Name = $ScriptInfo.Name
@@ -374,6 +222,13 @@ function Execute-PythonScript {
         }
         
         return $false
+    }
+    
+    if (-not $SimpleMode) {
+        Write-Host ""
+    } else {
+        Write-Host ""
+        Write-Host ""
     }
 }
 
@@ -404,7 +259,7 @@ Success Rate:         $(if($GlobalStats.TotalSteps -gt 0){[math]::Round($GlobalS
 "@
     
     foreach ($result in $GlobalStats.StepResults) {
-        $statusIcon = if ($result.Status -eq "Success") { "✅" } elseif ($result.Status -eq "Failed") { "❌" } else { "⚠️" }
+        $statusIcon = if ($result.Status -eq "Success") { "OK" } elseif ($result.Status -eq "Failed") { "FAIL" } else { "ERROR" }
         $report += @"
 Step $($result.Step): $($result.Title)
 $("-" * 80)
@@ -418,82 +273,6 @@ Exit Code:  $($result.ExitCode)
         if ($result.Error) {
             $report += "Error:      $($result.Error)`n`n"
         }
-    }
-    
-    $report += @"
-================================================================================
-                            DETAILED RESULTS BY STEP
-================================================================================
-
-"@
-    
-    # Add detailed results from each tracking file
-    for ($i = 0; $i -lt $Scripts.Count; $i++) {
-        $script = $Scripts[$i]
-        $report += @"
-[$($i + 1)] $($script.Title)
-$("-" * 80)
-"@
-        
-        # Read tracking file
-        $trackingPath = Join-Path $ScriptDir $script.TrackingFile
-        $tracking = Read-JsonReport -FilePath $trackingPath
-        
-        if ($tracking) {
-            $report += "`nTracking File: $($script.TrackingFile)`n"
-            
-            switch ($script.Name) {
-                "convert_images.py" {
-                    if ($tracking.processed_images) {
-                        $report += "Imported Images: $($tracking.processed_images.Count)`n`n"
-                        if ($tracking.processed_images.Count -gt 0) {
-                            $report += "Image List:`n"
-                            foreach ($img in $tracking.processed_images) {
-                                $report += "  • $img`n"
-                            }
-                        }
-                    }
-                }
-                "images-renamer.py" {
-                    if ($tracking.PSObject.Properties.Name -contains 'old_name' -or $tracking.Count -gt 0) {
-                        $count = ($tracking.PSObject.Properties | Measure-Object).Count
-                        $report += "Renamed Images: $count`n`n"
-                        if ($count -gt 0) {
-                            $report += "Rename Mapping:`n"
-                            foreach ($prop in $tracking.PSObject.Properties) {
-                                $report += "  • $($prop.Name) → $($prop.Value)`n"
-                            }
-                        }
-                    }
-                }
-                default {
-                    if ($tracking.processed_files) {
-                        $report += "Processed Files: $($tracking.processed_files.Count)`n`n"
-                        if ($tracking.processed_files.Count -gt 0) {
-                            $report += "File List:`n"
-                            foreach ($file in $tracking.processed_files) {
-                                $report += "  • $file`n"
-                            }
-                        }
-                    }
-                }
-            }
-            
-            if ($tracking.last_run) {
-                $report += "`nLast Run: $($tracking.last_run)`n"
-            }
-        }
-        else {
-            $report += "`nNo tracking data available.`n"
-        }
-        
-        # Add reference to detailed report file
-        $reportFilePath = Join-Path $ScriptDir $script.ReportFile
-        if (Test-Path $reportFilePath) {
-            $report += "`nDetailed Report: $($script.ReportFile)`n"
-        }
-        
-        $report += "`n"
     }
     
     $report += @"
@@ -545,91 +324,9 @@ Report location: $reportPath
         return $reportPath
     }
     catch {
-        Write-ColorBox "⚠️  Warning: Could not write report file: $($_.Exception.Message)" -Color $Colors.Warning
+        Write-ColorText "WARNING: Could not write report file: $($_.Exception.Message)" "Yellow"
         return $null
     }
-}
-
-function Show-FinalSummary {
-    param([string]$ReportPath)
-    
-    Write-Host ""
-    Write-Host ""
-    Write-ColorHeader "EXECUTION SUMMARY" -Color 'Green'
-    
-    $endTime = Get-Date
-    $totalDuration = ($endTime - $GlobalStats.StartTime).TotalSeconds
-    
-    Write-Host "  ╔════════════════════════════════════════════════════════════════════════╗" -ForegroundColor Green
-    Write-Host "  ║  " -NoNewline -ForegroundColor Green
-    Write-Host "Pipeline Execution Completed                                        " -NoNewline -ForegroundColor White
-    Write-Host "║" -ForegroundColor Green
-    Write-Host "  ╚════════════════════════════════════════════════════════════════════════╝" -ForegroundColor Green
-    Write-Host ""
-    
-    # Statistics
-    Write-Host "  📊 Statistics:" -ForegroundColor $Colors.Highlight
-    Write-Host ""
-    Write-ColorBox "     ⏱️  Total Duration: $([math]::Round($totalDuration, 2)) seconds" -Color $Colors.Info
-    Write-ColorBox "     📝 Total Steps: $($GlobalStats.TotalSteps)" -Color $Colors.Info
-    Write-ColorBox "     ✅ Completed: $($GlobalStats.CompletedSteps)" -Color $Colors.Success
-    
-    if ($GlobalStats.FailedSteps -gt 0) {
-        Write-ColorBox "     ❌ Failed: $($GlobalStats.FailedSteps)" -Color $Colors.Error
-    }
-    
-    $successRate = if($GlobalStats.TotalSteps -gt 0){[math]::Round($GlobalStats.CompletedSteps / $GlobalStats.TotalSteps * 100, 2)}else{0}
-    Write-ColorBox "     📈 Success Rate: $successRate%" -Color $(if($successRate -eq 100){'Green'}else{'Yellow'})
-    
-    Write-Host ""
-    
-    # Step results
-    Write-Host "  📋 Step Results:" -ForegroundColor $Colors.Highlight
-    Write-Host ""
-    
-    foreach ($result in $GlobalStats.StepResults) {
-        $statusIcon = if ($result.Status -eq "Success") { "✅" } elseif ($result.Status -eq "Failed") { "❌" } else { "⚠️" }
-        $statusColor = if ($result.Status -eq "Success") { $Colors.Success } elseif ($result.Status -eq "Failed") { $Colors.Error } else { $Colors.Warning }
-        
-        Write-Host "     $statusIcon Step $($result.Step): " -NoNewline -ForegroundColor $statusColor
-        Write-Host "$($result.Title) " -NoNewline -ForegroundColor White
-        Write-Host "($([math]::Round($result.Duration, 2))s)" -ForegroundColor Gray
-    }
-    
-    Write-Host ""
-    Write-Host ""
-    
-    # Report file
-    if ($ReportPath) {
-        Write-Host "  📄 Detailed Report:" -ForegroundColor $Colors.Highlight
-        Write-Host ""
-        Write-ColorBox "     📁 Report saved to: $ReportPath" -Color $Colors.Success
-        Write-Host ""
-    }
-    
-    # Final status
-    if ($GlobalStats.FailedSteps -eq 0) {
-        Write-Host "  " -NoNewline
-        Write-Host "╔══════════════════════════════════════════════════════════════════════════╗" -ForegroundColor Green
-        Write-Host "  " -NoNewline
-        Write-Host "║  " -NoNewline -ForegroundColor Green
-        Write-Host "🎉 All Steps Completed Successfully!" -NoNewline -ForegroundColor White
-        Write-Host "                                  ║" -ForegroundColor Green
-        Write-Host "  " -NoNewline
-        Write-Host "╚══════════════════════════════════════════════════════════════════════════╝" -ForegroundColor Green
-    }
-    else {
-        Write-Host "  " -NoNewline
-        Write-Host "╔══════════════════════════════════════════════════════════════════════════╗" -ForegroundColor Yellow
-        Write-Host "  " -NoNewline
-        Write-Host "║  " -NoNewline -ForegroundColor Yellow
-        Write-Host "⚠️  Pipeline completed with $($GlobalStats.FailedSteps) failed step(s)" -NoNewline -ForegroundColor White
-        Write-Host "                       ║" -ForegroundColor Yellow
-        Write-Host "  " -NoNewline
-        Write-Host "╚══════════════════════════════════════════════════════════════════════════╝" -ForegroundColor Yellow
-    }
-    
-    Write-Host ""
 }
 
 # ============================================================================
@@ -637,58 +334,165 @@ function Show-FinalSummary {
 # ============================================================================
 
 # Clear screen for better visualization
-Clear-Host
+if (-not $SimpleMode) {
+    Clear-Host
+}
 
 # Show main header
-Write-Host ""
-Write-Host "################################################################################" -ForegroundColor Cyan
-Write-Host "#                                                                              #" -ForegroundColor Cyan
-Write-Host "#          HUGO ARTICLE PROCESSING PIPELINE - ENHANCED VERSION                #" -ForegroundColor Cyan
-Write-Host "#                                                                              #" -ForegroundColor Cyan
-Write-Host "################################################################################" -ForegroundColor Cyan
-Write-Host ""
-Write-ColorBox "📅 Start Time: $($GlobalStats.StartTime.ToString("yyyy-MM-dd HH:mm:ss"))" -Color $Colors.Info
-Write-ColorBox "📂 Working Directory: $ScriptDir" -Color $Colors.Info
-Write-ColorBox "🐍 Python Scripts: $($Scripts.Count)" -Color $Colors.Info
-Write-Host ""
+if (-not $SimpleMode) {
+    Write-Host ""
+    Write-Host "################################################################################" -ForegroundColor Cyan
+    Write-Host "#                                                                              #" -ForegroundColor Cyan
+    Write-Host "#          HUGO ARTICLE PROCESSING PIPELINE - FIXED VERSION                    #" -ForegroundColor Cyan
+    Write-Host "#                                                                              #" -ForegroundColor Cyan
+    Write-Host "################################################################################" -ForegroundColor Cyan
+    Write-Host ""
+    Write-ColorText "Start Time: $($GlobalStats.StartTime.ToString("yyyy-MM-dd HH:mm:ss"))" "White"
+    Write-ColorText "Working Directory: $ScriptDir" "White"
+    Write-ColorText "Python Scripts: $($Scripts.Count)" "White"
+    Write-Host ""
 
-# Confirm execution
-Write-Host "  " -NoNewline
-Write-Host "Press any key to start execution, or Ctrl+C to cancel..." -ForegroundColor Yellow
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
-Write-Host ""
+    # Confirm execution
+    Write-Host "Press any key to start execution, or Ctrl+C to cancel..." -ForegroundColor Yellow
+    try {
+        $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+    } catch {
+        # Fallback for non-interactive environments
+        Write-Host "Auto-starting in 3 seconds..."
+        Start-Sleep -Seconds 3
+    }
+    Write-Host ""
+} else {
+    Write-Host "Starting Hugo Article Processing Pipeline (Simple Mode)..."
+    Write-Host "Working Directory: $ScriptDir"
+    Write-Host ""
+}
 
 # Execute all scripts in sequence
 for ($i = 0; $i -lt $Scripts.Count; $i++) {
     $success = Execute-PythonScript -StepNumber ($i + 1) -ScriptInfo $Scripts[$i]
     
     # Optional: Ask to continue if a step fails
-    if (-not $success) {
+    if (-not $success -and -not $SimpleMode) {
         Write-Host ""
-        Write-ColorBox "  ⚠️  Step $($i + 1) failed. Continue with next step? (Y/N)" -Color $Colors.Warning
+        Write-ColorText "WARNING: Step $($i + 1) failed. Continue with next step? (Y/N)" "Yellow"
         $response = Read-Host "  "
         if ($response -ne 'Y' -and $response -ne 'y') {
-            Write-ColorBox "  ❌ Pipeline execution cancelled by user." -Color $Colors.Error
+            Write-ColorText "Pipeline execution cancelled by user." "Red"
             break
         }
     }
     
     # Small delay between steps for readability
-    Start-Sleep -Milliseconds 500
+    if (-not $SimpleMode) {
+        Start-Sleep -Milliseconds 500
+    }
 }
-
-# Complete progress
-Write-Progress -Activity "Hugo Article Processing Pipeline" -Status "Completed" -PercentComplete 100 -Completed
 
 # Generate final report
 Write-Host ""
-Write-ColorBox "📝 Generating comprehensive report..." -Color $Colors.Info
+Write-ColorText "Generating comprehensive report..." "White"
 $reportPath = Generate-FinalReport
 
 # Show final summary
-Show-FinalSummary -ReportPath $reportPath
+if (-not $SimpleMode) {
+    Write-Host ""
+    Write-Host ""
+    Write-Host "========================================" -ForegroundColor Green
+    Write-Host "EXECUTION SUMMARY" -ForegroundColor Green
+    Write-Host "========================================" -ForegroundColor Green
+    
+    $endTime = Get-Date
+    $totalDuration = ($endTime - $GlobalStats.StartTime).TotalSeconds
+    
+    Write-Host "Pipeline Execution Completed" -ForegroundColor White
+    Write-Host ""
+    
+    # Statistics
+    Write-Host "Statistics:" -ForegroundColor Yellow
+    Write-Host ""
+    Write-ColorText "Total Duration: $([math]::Round($totalDuration, 2)) seconds" "White"
+    Write-ColorText "Total Steps: $($GlobalStats.TotalSteps)" "White"
+    Write-ColorText "Completed: $($GlobalStats.CompletedSteps)" "Green"
+    
+    if ($GlobalStats.FailedSteps -gt 0) {
+        Write-ColorText "Failed: $($GlobalStats.FailedSteps)" "Red"
+    }
+    
+    $successRate = if($GlobalStats.TotalSteps -gt 0){[math]::Round($GlobalStats.CompletedSteps / $GlobalStats.TotalSteps * 100, 2)}else{0}
+    Write-ColorText "Success Rate: $successRate%" $(if($successRate -eq 100){'Green'}else{'Yellow'})
+    
+    Write-Host ""
+    
+    # Step results
+    Write-Host "Step Results:" -ForegroundColor Yellow
+    Write-Host ""
+    
+    foreach ($result in $GlobalStats.StepResults) {
+        $statusIcon = if ($result.Status -eq "Success") { "OK" } elseif ($result.Status -eq "Failed") { "FAIL" } else { "ERROR" }
+        $statusColor = if ($result.Status -eq "Success") { "Green" } elseif ($result.Status -eq "Failed") { "Red" } else { "Yellow" }
+        
+        Write-Host "$statusIcon Step $($result.Step): $($result.Title) ($([math]::Round($result.Duration, 2))s)" -ForegroundColor $statusColor
+    }
+    
+    Write-Host ""
+    Write-Host ""
+    
+    # Report file
+    if ($ReportPath) {
+        Write-Host "Detailed Report:" -ForegroundColor Yellow
+        Write-Host ""
+        Write-ColorText "Report saved to: $ReportPath" "Green"
+        Write-Host ""
+    }
+    
+    # Final status
+    if ($GlobalStats.FailedSteps -eq 0) {
+        Write-Host "All Steps Completed Successfully!" -ForegroundColor Green
+    } else {
+        Write-Host "Pipeline completed with $($GlobalStats.FailedSteps) failed step(s)" -ForegroundColor Yellow
+    }
+} else {
+    # Simple summary like batch file
+    Write-Host "==============================" -ForegroundColor Green
+    Write-Host "===== Execution Finished =====" -ForegroundColor Green
+    Write-Host "==============================" -ForegroundColor Green
+    Write-Host ""
+    Write-Host ""
+    Write-Host "====================================" -ForegroundColor Yellow
+    Write-Host "======== Start Reporting ============" -ForegroundColor Yellow
+    Write-Host "====================================" -ForegroundColor Yellow
+    Write-Host ""
+    Write-Host "1. New Articles Image Imported Successfully from Obsidian Vault Attachment"
+    Write-Host ""
+    Write-Host "2. Add new title for all new articles based on Hugo Front Matter syntax, title filled based on file name"
+    Write-Host ""
+    Write-Host "Note: Step 2 Required for step 3 and step 4 - image renaming"
+    Write-Host ""
+    Write-Host "3. Add ALT Value for all new imported images based on title property"
+    Write-Host ""
+    Write-Host "4. Rename all new imported images in static/images/category-name/*, new name based on File Name"
+    Write-Host ""
+    Write-Host "5. Rename all new imported images Usages in the Markdown file based on new image name from step 4"
+    Write-Host ""
+    Write-Host "6. Remove All Obsidian Table of Contents"
+    Write-Host ""
+    Write-Host "7. Add All important front matter properties to new articles"
+    Write-Host ""
+    Write-Host ""
+    Write-Host "=====================================" -ForegroundColor Green
+    Write-Host "======== Finish Reporting ============" -ForegroundColor Green
+    Write-Host "=====================================" -ForegroundColor Green
+    
+    if ($reportPath) {
+        Write-Host ""
+        Write-Host "Detailed report saved to: $reportPath"
+    }
+}
 
 # End
-Write-Host ""
-Write-Host "################################################################################" -ForegroundColor Cyan
-Write-Host ""
+if (-not $SimpleMode) {
+    Write-Host ""
+    Write-Host "################################################################################" -ForegroundColor Cyan
+    Write-Host ""
+}

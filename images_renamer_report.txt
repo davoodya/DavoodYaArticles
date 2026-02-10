@@ -1,16 +1,16 @@
 Images Rename Report (Physical Files Only)
 ============================================================
-Date: 2026-02-09 15:40:44
+Date: 2026-02-10 09:25:58
 ============================================================
 
 Statistics:
-- Files scanned: 30
-- Images found: 356
-- Images skipped (already processed): 186
-- Images skipped (already correct): 38
-- Physical files renamed: 71
+- Files scanned: 32
+- Images found: 382
+- Images skipped (already processed): 224
+- Images skipped (already correct): 27
+- Physical files renamed: 69
 - Errors: 0
-- Total mappings: 76
+- Total mappings: 75
 
 Rename Mappings by Category:
 ------------------------------------------------------------
@@ -33,290 +33,288 @@ CYBER-SECURITY (4 files):
   -> SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.1
 
 
-NETWORK (71 files):
-  [Network Basics-Terminology-Topology-9]
-  Pastedimage20240325140528.png
-  -> NetworkBasics-Terminology-Topology-9.png
-
-  [Network Basics-Terminology-Topology-7]
-  Pastedimage20240325140633.png
-  -> NetworkBasics-Terminology-Topology-7.png
-
-  [Network Basics-Terminology-Topology-8]
-  Pastedimage20240325140833.png
-  -> NetworkBasics-Terminology-Topology-8.png
-
-  [Network Cable and Components-2]
-  Pastedimage20240325141055.png
-  -> NetworkCableandComponents-2.png
-
-  [Network Cable and Components-3]
-  Pastedimage20240325141107.png
-  -> NetworkCableandComponents-3.png
-
-  [Network Cable and Components-4]
-  Pastedimage20240325141114.png
-  -> NetworkCableandComponents-4.png
-
-  [Network Cable and Components-5]
-  Pastedimage20240325141207.png
-  -> NetworkCableandComponents-5.png
-
-  [Network Basics-Terminology-Topology-3]
-  Pastedimage20240325141501.png
-  -> NetworkBasics-Terminology-Topology-3.png
-
-  [Network Basics-Terminology-Topology-4]
-  Pastedimage20240325141520.png
-  -> NetworkBasics-Terminology-Topology-4.png
-
-  [Network Basics-Terminology-Topology-1]
-  Pastedimage20240325141535.png
-  -> NetworkBasics-Terminology-Topology-1.png
-
-  [Network Basics-Terminology-Topology-2]
-  Pastedimage20240325141548.png
-  -> NetworkBasics-Terminology-Topology-2.png
-
-  [Network Basics-Terminology-Topology-6]
-  Pastedimage20240325141614.png
-  -> NetworkBasics-Terminology-Topology-6.png
-
-  [Network Basics-Terminology-Topology-5]
-  Pastedimage20240325141624.png
-  -> NetworkBasics-Terminology-Topology-5.png
-
-  [Network Cable and Components-18]
-  Pastedimage20240325142031.png
-  -> NetworkCableandComponents-18.png
-
-  [Network Cable and Components-20]
-  Pastedimage20240325142125.png
-  -> NetworkCableandComponents-20.png
-
-  [Network Cable and Components-19]
-  Pastedimage20240325142133.png
-  -> NetworkCableandComponents-19.png
-
-  [Network Models-OSI and TCPIP-2]
-  Pastedimage20240325142910.png
-  -> NetworkModels-OSIandTCPIP-2.png
-
-  [Network Models-OSI and TCPIP-3]
-  Pastedimage20240325142914.png
-  -> NetworkModels-OSIandTCPIP-3.png
-
-  [Network Models-OSI and TCPIP-1]
-  Pastedimage20240325142959.png
-  -> NetworkModels-OSIandTCPIP-1.png
-
-  [Network Models-OSI and TCPIP-4]
-  Pastedimage20240325143619.png
-  -> NetworkModels-OSIandTCPIP-4.png
-
-  [Network Models-OSI and TCPIP-5]
-  Pastedimage20240325143628.png
-  -> NetworkModels-OSIandTCPIP-5.png
-
-  [IP-Mac Address Basic and Concepts-1]
-  Pastedimage20240325144303.png
-  -> IP-MacAddressBasicandConcepts-1.png
-
-  [IP-Mac Address Basic and Concepts-2]
-  Pastedimage20240325144616.png
-  -> IP-MacAddressBasicandConcepts-2.png
-
-  [IP-Mac Address Basic and Concepts-3]
-  Pastedimage20240325144624.png
-  -> IP-MacAddressBasicandConcepts-3.png
-
-  [IP-Mac Address Basic and Concepts-4]
-  Pastedimage20240325144714.png
-  -> IP-MacAddressBasicandConcepts-4.png
-
-  [IP-Mac Address Basic and Concepts-6]
-  Pastedimage20240325145021.png
-  -> IP-MacAddressBasicandConcepts-6.png
+LINUX (18 files):
+  [Kali Linux Installing Guide-6]
+  Pastedimage20240625164355.png
+  -> KaliLinuxInstallingGuide-6.png
 
-  [IP-Mac Address Basic and Concepts-7]
-  Pastedimage20240325145030.png
-  -> IP-MacAddressBasicandConcepts-7.png
+  [Kali Linux Installing Guide-7]
+  Pastedimage20240625164829.png
+  -> KaliLinuxInstallingGuide-7.png
 
-  [IP-Mac Address Basic and Concepts-8]
-  Pastedimage20240325145052.png
-  -> IP-MacAddressBasicandConcepts-8.png
+  [Kali Linux Installing Guide-8]
+  Pastedimage20240625165040.png
+  -> KaliLinuxInstallingGuide-8.png
 
-  [IP-Mac Address Basic and Concepts-5]
-  Pastedimage20240325145116.png
-  -> IP-MacAddressBasicandConcepts-5.png
+  [Kali Linux Installing Guide-9]
+  Pastedimage20240625165250.png
+  -> KaliLinuxInstallingGuide-9.png
 
-  [IP-Mac Address Basic and Concepts-10]
-  Pastedimage20240325145329.png
-  -> IP-MacAddressBasicandConcepts-10.png
+  [Kali Linux Installing Guide-10]
+  Pastedimage20240625165754.png
+  -> KaliLinuxInstallingGuide-10.png
 
-  [IP-Mac Address Basic and Concepts-9]
-  Pastedimage20240325145331.png
-  -> IP-MacAddressBasicandConcepts-9.png
+  [Kali Linux Installing Guide-11]
+  Pastedimage20240625170641.png
+  -> KaliLinuxInstallingGuide-11.png
 
-  [Network Models-OSI and TCPIP-6]
-  Pastedimage20240325150435.png
-  -> NetworkModels-OSIandTCPIP-6.png
+  [Kali Linux Installing Guide-12]
+  Pastedimage20240625171002.png
+  -> KaliLinuxInstallingGuide-12.png
 
-  [Network Models-OSI and TCPIP-7]
-  Pastedimage20240325150445.png
-  -> NetworkModels-OSIandTCPIP-7.png
+  [Kali Linux Installing Guide-13]
+  Pastedimage20240625171239.png
+  -> KaliLinuxInstallingGuide-13.png
 
-  [Network Models-OSI and TCPIP-8]
-  Pastedimage20240325150455.png
-  -> NetworkModels-OSIandTCPIP-8.png
+  [Kali Linux Installing Guide-15]
+  Pastedimage20240625200802.png
+  -> KaliLinuxInstallingGuide-15.png
 
-  [Network Models-OSI and TCPIP-9]
-  Pastedimage20240325150519.png
-  -> NetworkModels-OSIandTCPIP-9.png
+  [Kali Linux Installing Guide-16]
+  Pastedimage20240625200927.png
+  -> KaliLinuxInstallingGuide-16.png
 
-  [Network Models-OSI and TCPIP-10]
-  Pastedimage20240325150534.png
-  -> NetworkModels-OSIandTCPIP-10.png
+  [Kali Linux Installing Guide-17]
+  Pastedimage20240625201253.png
+  -> KaliLinuxInstallingGuide-17.png
 
-  [Network Models-OSI and TCPIP-11]
-  Pastedimage20240325150548.png
-  -> NetworkModels-OSIandTCPIP-11.png
+  [Kali Linux Installing Guide-18]
+  Pastedimage20240625201528.png
+  -> KaliLinuxInstallingGuide-18.png
 
-  [IP-Mac Address Basic and Concepts-11]
-  Pastedimage20240325150746.png
-  -> IP-MacAddressBasicandConcepts-11.png
+  [Kali Linux Installing Guide-14]
+  Pastedimage20240625235408.png
+  -> KaliLinuxInstallingGuide-14.png
 
-  [IP-Mac Address Basic and Concepts-12]
-  Pastedimage20240325150755.png
-  -> IP-MacAddressBasicandConcepts-12.png
+  [Kali Linux Installing Guide-2]
+  Pastedimage20240903183816.png
+  -> KaliLinuxInstallingGuide-2.png
 
-  [Network Cable and Components-27]
-  Pastedimage20240406223913.png
-  -> NetworkCableandComponents-27.png
+  [Kali Linux Installing Guide-3]
+  Pastedimage20240903183835.png
+  -> KaliLinuxInstallingGuide-3.png
 
-  [Network Cable and Components-29]
-  Pastedimage20240406224126.png
-  -> NetworkCableandComponents-29.png
+  [Kali Linux Installing Guide-4]
+  Pastedimage20240903184028.png
+  -> KaliLinuxInstallingGuide-4.png
 
-  [Network Cable and Components-30]
-  Pastedimage20240406224149.png
-  -> NetworkCableandComponents-30.png
+  [Kali Linux Installing Guide-5]
+  Pastedimage20240903184051.png
+  -> KaliLinuxInstallingGuide-5.png
 
-  [Network Cable and Components-28]
-  Pastedimage20240406224158.png
-  -> NetworkCableandComponents-28.png
+  [Kali Linux Installing Guide-1]
+  Pastedimage20240903184118.png
+  -> KaliLinuxInstallingGuide-1.png
 
-  [Network Cable and Components-31]
-  Pastedimage20240406224347.png
-  -> NetworkCableandComponents-31.png
-
-  [Network Cable and Components-32]
-  Pastedimage20240406224400.png
-  -> NetworkCableandComponents-32.png
-
-  [Network Cable and Components-33]
-  Pastedimage20240406224406.png
-  -> NetworkCableandComponents-33.png
-
-  [Network Models-OSI and TCPIP-13]
-  Pastedimage20240406230157.png
-  -> NetworkModels-OSIandTCPIP-13.png
-
-  [Network Models-OSI and TCPIP-14]
-  Pastedimage20240406230215.png
-  -> NetworkModels-OSIandTCPIP-14.png
-
-  [IP-Mac Address Basic and Concepts-13]
-  Pastedimage20240406230317.png
-  -> IP-MacAddressBasicandConcepts-13.png
-
-  [Network Cable and Components-7]
-  Pastedimage20240406230340.png
-  -> NetworkCableandComponents-7.png
-
-  [Network Cable and Components-8]
-  Pastedimage20240406230353.png
-  -> NetworkCableandComponents-8.png
-
-  [Network Cable and Components-9]
-  Pastedimage20240406230421.png
-  -> NetworkCableandComponents-9.png
-
-  [Network Cable and Components-10]
-  Pastedimage20240406230439.png
-  -> NetworkCableandComponents-10.png
-
-  [Network Cable and Components-11]
-  Pastedimage20240406230505.png
-  -> NetworkCableandComponents-11.png
-
-  [Network Cable and Components-12]
-  Pastedimage20240406230537.png
-  -> NetworkCableandComponents-12.png
-
-  [Network Cable and Components-13]
-  Pastedimage20240406230541.png
-  -> NetworkCableandComponents-13.png
-
-  [Network Cable and Components-14]
-  Pastedimage20240406230549.png
-  -> NetworkCableandComponents-14.png
-
-  [Network Cable and Components-15]
-  Pastedimage20240406230552.png
-  -> NetworkCableandComponents-15.png
-
-  [Network Cable and Components-1]
-  Pastedimage20240406230619.png
-  -> NetworkCableandComponents-1.png
-
-  [Network Cable and Components-16]
-  Pastedimage20240406230646.png
-  -> NetworkCableandComponents-16.png
-
-  [Network Cable and Components-17]
-  Pastedimage20240406230658.png
-  -> NetworkCableandComponents-17.png
-
-  [Network Cable and Components-21]
-  Pastedimage20240406230723.png
-  -> NetworkCableandComponents-21.png
-
-  [Network Cable and Components-22]
-  Pastedimage20240406230726.png
-  -> NetworkCableandComponents-22.png
-
-  [Network Cable and Components-25]
-  Pastedimage20240406230748.png
-  -> NetworkCableandComponents-25.png
-
-  [Network Cable and Components-26]
-  Pastedimage20240406230752.png
-  -> NetworkCableandComponents-26.png
-
-  [Network Cable and Components-23]
-  Pastedimage20240406230935.png
-  -> NetworkCableandComponents-23.png
-
-  [Network Cable and Components-24]
-  Pastedimage20240406230938.png
-  -> NetworkCableandComponents-24.png
-
-  [Windows Networking-2]
-  Pastedimage20240525222946.png
-  -> WindowsNetworking-2.png
-
-  [Windows Networking-1]
-  Pastedimage20240525223258.png
-  -> WindowsNetworking-1.png
-
-  [Network Services(DHCP-DNS,-VLAN)-1]
-  Pastedimage20240608215246.png
-  -> NetworkServices(DHCP-DNS,-VLAN)-1.png
-
-  [Network Models-OSI and TCPIP-12]
-  Pastedimage20240608232002.png
-  -> NetworkModels-OSIandTCPIP-12.png
+
+NETWORK (52 files):
+  [مبانی، لغت شناسی و توپولوژی های شبکه-1]
+  NetworkBasics-Terminology-Topology-1.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-1.png
+
+  [مبانی، لغت شناسی و توپولوژی های شبکه-2]
+  NetworkBasics-Terminology-Topology-2.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-2.png
+
+  [مبانی، لغت شناسی و توپولوژی های شبکه-3]
+  NetworkBasics-Terminology-Topology-3.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-3.png
+
+  [مبانی، لغت شناسی و توپولوژی های شبکه-4]
+  NetworkBasics-Terminology-Topology-4.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-4.png
+
+  [مبانی، لغت شناسی و توپولوژی های شبکه-5]
+  NetworkBasics-Terminology-Topology-5.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-5.png
+
+  [مبانی، لغت شناسی و توپولوژی های شبکه-6]
+  NetworkBasics-Terminology-Topology-6.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-6.png
+
+  [مبانی، لغت شناسی و توپولوژی های شبکه-7]
+  NetworkBasics-Terminology-Topology-7.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-7.png
+
+  [مبانی، لغت شناسی و توپولوژی های شبکه-8]
+  NetworkBasics-Terminology-Topology-8.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-8.png
+
+  [مبانی، لغت شناسی و توپولوژی های شبکه-9]
+  NetworkBasics-Terminology-Topology-9.png
+  -> مبانی،لغتشناسیوتوپولوژیهایشبکه-9.png
+
+  [انواع دیوایس ها و کابل های شبکه-1]
+  NetworkCableandComponents-1.png
+  -> انواعدیوایسهاوکابلهایشبکه-1.png
+
+  [انواع دیوایس ها و کابل های شبکه-10]
+  NetworkCableandComponents-10.png
+  -> انواعدیوایسهاوکابلهایشبکه-10.png
+
+  [انواع دیوایس ها و کابل های شبکه-11]
+  NetworkCableandComponents-11.png
+  -> انواعدیوایسهاوکابلهایشبکه-11.png
+
+  [انواع دیوایس ها و کابل های شبکه-12]
+  NetworkCableandComponents-12.png
+  -> انواعدیوایسهاوکابلهایشبکه-12.png
+
+  [انواع دیوایس ها و کابل های شبکه-13]
+  NetworkCableandComponents-13.png
+  -> انواعدیوایسهاوکابلهایشبکه-13.png
+
+  [انواع دیوایس ها و کابل های شبکه-14]
+  NetworkCableandComponents-14.png
+  -> انواعدیوایسهاوکابلهایشبکه-14.png
+
+  [انواع دیوایس ها و کابل های شبکه-15]
+  NetworkCableandComponents-15.png
+  -> انواعدیوایسهاوکابلهایشبکه-15.png
+
+  [انواع دیوایس ها و کابل های شبکه-16]
+  NetworkCableandComponents-16.png
+  -> انواعدیوایسهاوکابلهایشبکه-16.png
+
+  [انواع دیوایس ها و کابل های شبکه-17]
+  NetworkCableandComponents-17.png
+  -> انواعدیوایسهاوکابلهایشبکه-17.png
+
+  [انواع دیوایس ها و کابل های شبکه-18]
+  NetworkCableandComponents-18.png
+  -> انواعدیوایسهاوکابلهایشبکه-18.png
+
+  [انواع دیوایس ها و کابل های شبکه-19]
+  NetworkCableandComponents-19.png
+  -> انواعدیوایسهاوکابلهایشبکه-19.png
+
+  [انواع دیوایس ها و کابل های شبکه-2]
+  NetworkCableandComponents-2.png
+  -> انواعدیوایسهاوکابلهایشبکه-2.png
+
+  [انواع دیوایس ها و کابل های شبکه-20]
+  NetworkCableandComponents-20.png
+  -> انواعدیوایسهاوکابلهایشبکه-20.png
+
+  [انواع دیوایس ها و کابل های شبکه-21]
+  NetworkCableandComponents-21.png
+  -> انواعدیوایسهاوکابلهایشبکه-21.png
+
+  [انواع دیوایس ها و کابل های شبکه-22]
+  NetworkCableandComponents-22.png
+  -> انواعدیوایسهاوکابلهایشبکه-22.png
+
+  [انواع دیوایس ها و کابل های شبکه-23]
+  NetworkCableandComponents-23.png
+  -> انواعدیوایسهاوکابلهایشبکه-23.png
+
+  [انواع دیوایس ها و کابل های شبکه-24]
+  NetworkCableandComponents-24.png
+  -> انواعدیوایسهاوکابلهایشبکه-24.png
+
+  [انواع دیوایس ها و کابل های شبکه-25]
+  NetworkCableandComponents-25.png
+  -> انواعدیوایسهاوکابلهایشبکه-25.png
+
+  [انواع دیوایس ها و کابل های شبکه-26]
+  NetworkCableandComponents-26.png
+  -> انواعدیوایسهاوکابلهایشبکه-26.png
+
+  [انواع دیوایس ها و کابل های شبکه-27]
+  NetworkCableandComponents-27.png
+  -> انواعدیوایسهاوکابلهایشبکه-27.png
+
+  [انواع دیوایس ها و کابل های شبکه-28]
+  NetworkCableandComponents-28.png
+  -> انواعدیوایسهاوکابلهایشبکه-28.png
+
+  [انواع دیوایس ها و کابل های شبکه-29]
+  NetworkCableandComponents-29.png
+  -> انواعدیوایسهاوکابلهایشبکه-29.png
+
+  [انواع دیوایس ها و کابل های شبکه-3]
+  NetworkCableandComponents-3.png
+  -> انواعدیوایسهاوکابلهایشبکه-3.png
+
+  [انواع دیوایس ها و کابل های شبکه-30]
+  NetworkCableandComponents-30.png
+  -> انواعدیوایسهاوکابلهایشبکه-30.png
+
+  [انواع دیوایس ها و کابل های شبکه-31]
+  NetworkCableandComponents-31.png
+  -> انواعدیوایسهاوکابلهایشبکه-31.png
+
+  [انواع دیوایس ها و کابل های شبکه-32]
+  NetworkCableandComponents-32.png
+  -> انواعدیوایسهاوکابلهایشبکه-32.png
+
+  [انواع دیوایس ها و کابل های شبکه-33]
+  NetworkCableandComponents-33.png
+  -> انواعدیوایسهاوکابلهایشبکه-33.png
+
+  [انواع دیوایس ها و کابل های شبکه-4]
+  NetworkCableandComponents-4.png
+  -> انواعدیوایسهاوکابلهایشبکه-4.png
+
+  [انواع دیوایس ها و کابل های شبکه-5]
+  NetworkCableandComponents-5.png
+  -> انواعدیوایسهاوکابلهایشبکه-5.png
+
+  [انواع دیوایس ها و کابل های شبکه-7]
+  NetworkCableandComponents-7.png
+  -> انواعدیوایسهاوکابلهایشبکه-7.png
+
+  [انواع دیوایس ها و کابل های شبکه-8]
+  NetworkCableandComponents-8.png
+  -> انواعدیوایسهاوکابلهایشبکه-8.png
+
+  [انواع دیوایس ها و کابل های شبکه-9]
+  NetworkCableandComponents-9.png
+  -> انواعدیوایسهاوکابلهایشبکه-9.png
+
+  [مطالبی که برای یادگیری VLAN , DHCP , DNS باید آموخت؟-1]
+  NetworkServices(DHCP-DNS,-VLAN
+  -> مطالبیکهبراییادگیریVLAN,DHCP,DNSبایدآموخت؟-1
+
+  [Virtualization Concepts-2]
+  Pastedimage20240521175544.png
+  -> VirtualizationConcepts-2.png
+
+  [Virtualization Concepts-3]
+  Pastedimage20240522154828.png
+  -> VirtualizationConcepts-3.png
+
+  [Virtualization Concepts-4]
+  Pastedimage20240522160228.png
+  -> VirtualizationConcepts-4.png
+
+  [Virtualization Concepts-5]
+  Pastedimage20240522160429.png
+  -> VirtualizationConcepts-5.png
+
+  [Virtualization Concepts-6]
+  Pastedimage20240522160629.png
+  -> VirtualizationConcepts-6.png
+
+  [Virtualization Concepts-7]
+  Pastedimage20240522161517.png
+  -> VirtualizationConcepts-7.png
+
+  [Virtualization Concepts-8]
+  Pastedimage20240522161741.png
+  -> VirtualizationConcepts-8.png
+
+  [Virtualization Concepts-1]
+  Pastedimage20240902120134.png
+  -> VirtualizationConcepts-1.png
+
+  [راه اندازی شبکه ویندوز-1]
+  WindowsNetworking-1.png
+  -> راهاندازیشبکهویندوز-1.png
+
+  [راه اندازی شبکه ویندوز-2]
+  WindowsNetworking-2.png
+  -> راهاندازیشبکهویندوز-2.png
 
 
 SEO (1 files):

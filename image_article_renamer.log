@@ -1815,3 +1815,996 @@
 [COMPLETE] Process finished
 [2026-02-09 15:40:51] [INFO] ============================================================
 
+[2026-02-10 09:25:58] [INFO] ============================================================
+[2026-02-10 09:25:58] [INFO] Starting image article renamer process
+[2026-02-10 09:25:58] [INFO] ============================================================
+[2026-02-10 09:25:58] [INFO] Loaded 196 rename mapping(s) from images_rename_mapping.json
+[2026-02-10 09:25:58] [INFO] Loaded 9 processed article(s) from processed_articles.json
+[2026-02-10 09:25:58] [INFO] 
+============================================================
+[2026-02-10 09:25:58] [INFO] Verifying setup:
+[2026-02-10 09:25:58] [INFO] ============================================================
+[2026-02-10 09:25:58] [INFO] + Content directory: content
+[2026-02-10 09:25:58] [INFO] + Static images: static/images
+[2026-02-10 09:25:58] [INFO]   Categories: cyber-security, general, linux, network, seo, tools
+[2026-02-10 09:25:58] [INFO]     cyber-security: 124 images
+[2026-02-10 09:25:58] [INFO]     general: 0 images
+[2026-02-10 09:25:58] [INFO]     linux: 42 images
+[2026-02-10 09:25:58] [INFO]     network: 80 images
+[2026-02-10 09:25:58] [INFO]     seo: 75 images
+[2026-02-10 09:25:58] [INFO]     tools: 61 images
+[2026-02-10 09:25:58] [INFO]   Total images: 382
+[2026-02-10 09:25:58] [INFO] ============================================================
+[2026-02-10 09:25:58] [INFO] Updating markdown image references...
+[2026-02-10 09:25:58] [INFO] ============================================================
+[2026-02-10 09:25:58] [INFO] 
+[File] all-articles\README.md
+[2026-02-10 09:25:58] [INFO]   No images found
+[2026-02-10 09:25:58] [INFO] 
+[File] cyber-security\Cryptography\Basic-Encryption.md
+[2026-02-10 09:25:58] [INFO]   [Skip] Already processed
+[2026-02-10 09:25:58] [INFO] 
+[File] cyber-security\Cryptography\Malwares.md
+[2026-02-10 09:25:58] [INFO]   [Skip] Already processed
+[2026-02-10 09:25:58] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+[2026-02-10 09:25:58] [INFO]   Found 8 image(s)
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-1.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-2.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-3.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-4.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-5.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-6.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-7.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-8.png
+[2026-02-10 09:25:58] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+[2026-02-10 09:25:58] [INFO]   Found 13 image(s)
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+[2026-02-10 09:25:58] [INFO]   Found 14 image(s)
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+[2026-02-10 09:25:58] [INFO]   [Skip] Already processed
+[2026-02-10 09:25:58] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+[2026-02-10 09:25:58] [INFO]   Found 9 image(s)
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+[2026-02-10 09:25:58] [INFO]   Found 30 image(s)
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-1.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-2.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-3.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-4.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-5.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-6.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-7.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-8.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-9.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-10.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-11.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-12.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-13.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-14.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-15.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-16.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-17.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-18.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-19.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-20.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-21.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-22.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-23.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-24.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-25.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-26.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-27.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-28.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-29.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SANS-401-PasswordCracking-30.png
+[2026-02-10 09:25:58] [INFO] 
+[File] linux\60 Commands Hacker Should Know it.md
+[2026-02-10 09:25:58] [INFO]   Found 24 image(s)
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-1.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-2.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-3.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-4.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-5.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-6.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-7.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-8.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-9.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-10.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-11.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-12.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-13.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-14.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-15.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-16.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-17.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-18.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-19.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-20.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-21.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-22.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-23.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-24.png
+[2026-02-10 09:25:58] [INFO] 
+[File] linux\Kali Linux Installing Guide.md
+[2026-02-10 09:25:58] [INFO]   Found 18 image(s)
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240903184118.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-1.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240903183816.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-2.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240903183835.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-3.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240903184028.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-4.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240903184051.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-5.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240625164355.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-6.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240625164829.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-7.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240625165040.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-8.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240625165250.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-9.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240625165754.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-10.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240625170641.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-11.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240625171002.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-12.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240625171239.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-13.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240625235408.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-14.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240625200802.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-15.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240625200927.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-16.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240625201253.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-17.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240625201528.png
+[2026-02-10 09:25:58] [INFO]       -> KaliLinuxInstallingGuide-18.png
+[2026-02-10 09:25:58] [INFO]   [Saved] 18 image(s) updated
+[2026-02-10 09:25:58] [INFO] 
+[File] network\IP-Mac Address Basic and Concepts.md
+[2026-02-10 09:25:58] [INFO]   [Skip] Already processed
+[2026-02-10 09:25:58] [INFO] 
+[File] network\Network Basics-Terminology-Topology.md
+[2026-02-10 09:25:58] [INFO]   [Skip] Already processed
+[2026-02-10 09:25:58] [INFO] 
+[File] network\Network Cable and Components.md
+[2026-02-10 09:25:58] [INFO]   [Skip] Already processed
+[2026-02-10 09:25:58] [INFO] 
+[File] network\Network Commands & File Printer Sharing.md
+[2026-02-10 09:25:58] [INFO]   No images found
+[2026-02-10 09:25:58] [INFO] 
+[File] network\Network Models-OSI and TCPIP.md
+[2026-02-10 09:25:58] [INFO]   [Skip] Already processed
+[2026-02-10 09:25:58] [INFO] 
+[File] network\Network Services(DHCP-DNS,-VLAN).md
+[2026-02-10 09:25:58] [INFO]   [Skip] Already processed
+[2026-02-10 09:25:58] [INFO] 
+[File] network\Virtualization Concepts.md
+[2026-02-10 09:25:58] [INFO]   Found 8 image(s)
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240902120134.png
+[2026-02-10 09:25:58] [INFO]       -> VirtualizationConcepts-1.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240521175544.png
+[2026-02-10 09:25:58] [INFO]       -> VirtualizationConcepts-2.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240522154828.png
+[2026-02-10 09:25:58] [INFO]       -> VirtualizationConcepts-3.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240522160228.png
+[2026-02-10 09:25:58] [INFO]       -> VirtualizationConcepts-4.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240522160429.png
+[2026-02-10 09:25:58] [INFO]       -> VirtualizationConcepts-5.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240522160629.png
+[2026-02-10 09:25:58] [INFO]       -> VirtualizationConcepts-6.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240522161517.png
+[2026-02-10 09:25:58] [INFO]       -> VirtualizationConcepts-7.png
+[2026-02-10 09:25:58] [INFO]     + Updated: Pastedimage20240522161741.png
+[2026-02-10 09:25:58] [INFO]       -> VirtualizationConcepts-8.png
+[2026-02-10 09:25:58] [INFO]   [Saved] 8 image(s) updated
+[2026-02-10 09:25:58] [INFO] 
+[File] network\Windows Networking.md
+[2026-02-10 09:25:58] [INFO]   [Skip] Already processed
+[2026-02-10 09:25:58] [INFO] 
+[File] python\Dir-Buster-Module.md
+[2026-02-10 09:25:58] [INFO]   No images found
+[2026-02-10 09:25:58] [INFO] 
+[File] seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+[2026-02-10 09:25:58] [INFO]   Found 11 image(s)
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-1.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-2.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-3.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-4.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-5.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-6.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-7.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-8.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-9.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-10.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-11.png
+[2026-02-10 09:25:58] [INFO] 
+[File] seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+[2026-02-10 09:25:58] [INFO]   Found 10 image(s)
+[2026-02-10 09:25:58] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-1.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-2.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-3.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-4.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-5.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-6.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-7.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-8.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-9.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-10.png
+[2026-02-10 09:25:58] [INFO] 
+[File] seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+[2026-02-10 09:25:58] [INFO]   Found 12 image(s)
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:25:58] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:25:58] [INFO] 
+[File] seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+[2026-02-10 09:25:58] [INFO]   Found 3 image(s)
+[2026-02-10 09:25:58] [INFO]     > No mapping for: GoodContentsforSEO-1.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: GoodContentsforSEO-2.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: GoodContentsforSEO-3.png
+[2026-02-10 09:25:58] [INFO] 
+[File] seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+[2026-02-10 09:25:58] [INFO]   No images found
+[2026-02-10 09:25:58] [INFO] 
+[File] seo\0-SEO-Theories\E15 - Page Rank.md
+[2026-02-10 09:25:58] [INFO]   Found 2 image(s)
+[2026-02-10 09:25:58] [INFO]     > No mapping for: PageRank-1.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: PageRank-2.png
+[2026-02-10 09:25:58] [INFO] 
+[File] seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+[2026-02-10 09:25:58] [INFO]   Found 3 image(s)
+[2026-02-10 09:25:58] [INFO]     > No mapping for: PageAuthority&DomainAuthority-1.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: PageAuthority&DomainAuthority-2.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: PageAuthority&DomainAuthority-3.png
+[2026-02-10 09:25:58] [INFO] 
+[File] seo\0-SEO-Theories\E17 - Backlinks.md
+[2026-02-10 09:25:58] [INFO]   Found 1 image(s)
+[2026-02-10 09:25:58] [INFO]     > No mapping for: Backlinks-1.png
+[2026-02-10 09:25:58] [INFO] 
+[File] seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+[2026-02-10 09:25:58] [INFO]   Found 33 image(s)
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-2.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-3.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-4.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-5.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-6.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-7.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-8.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-9.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-10.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-11.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-12.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-13.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-14.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-15.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-16.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-17.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-18.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-19.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-20.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-21.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-22.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-23.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-24.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-25.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-26.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-27.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-28.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-29.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-30.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-31.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-32.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-33.png
+[2026-02-10 09:25:58] [INFO] 
+[File] tools\MSFConsole Commands.md
+[2026-02-10 09:25:58] [INFO]   Found 43 image(s)
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-1.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-2.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-3.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-4.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-5.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-6.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-7.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-8.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-9.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-10.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-11.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-12.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-13.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-14.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-15.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-16.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-17.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-18.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-19.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-20.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-21.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-22.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-23.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-24.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-25.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-26.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-27.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-28.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-29.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-30.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-31.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-32.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-33.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-34.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-35.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-36.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-37.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-38.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-39.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-40.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-41.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-42.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: MSFConsoleCommands-43.png
+[2026-02-10 09:25:58] [INFO] 
+[File] tools\Burpsuite\1-Install Burpsuite.md
+[2026-02-10 09:25:58] [INFO]   Found 12 image(s)
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 1-InstallBurpsuite-1.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 1-InstallBurpsuite-2.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 1-InstallBurpsuite-3.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 1-InstallBurpsuite-4.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 1-InstallBurpsuite-5.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 1-InstallBurpsuite-6.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 1-InstallBurpsuite-7.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 1-InstallBurpsuite-8.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 1-InstallBurpsuite-9.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 1-InstallBurpsuite-10.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 1-InstallBurpsuite-11.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 1-InstallBurpsuite-12.png
+[2026-02-10 09:25:58] [INFO] 
+[File] tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+[2026-02-10 09:25:58] [INFO]   Found 6 image(s)
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 2-ChangeHTTPData&BypassParameters-1.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 2-ChangeHTTPData&BypassParameters-2.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 2-ChangeHTTPData&BypassParameters-3.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 2-ChangeHTTPData&BypassParameters-4.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 2-ChangeHTTPData&BypassParameters-5.png
+[2026-02-10 09:25:58] [INFO]     > No mapping for: 2-ChangeHTTPData&BypassParameters-6.png
+[2026-02-10 09:25:58] [INFO] Saved 11 processed articles to processed_articles.json
+[2026-02-10 09:25:58] [INFO] 
+============================================================
+[2026-02-10 09:25:58] [INFO] FINAL STATISTICS:
+[2026-02-10 09:25:58] [INFO] ============================================================
+[2026-02-10 09:25:58] [INFO] Files scanned: 32
+[2026-02-10 09:25:58] [INFO] Files skipped (already processed): 9
+[2026-02-10 09:25:58] [INFO] Files modified: 2
+[2026-02-10 09:25:58] [INFO] Images found: 260
+[2026-02-10 09:25:58] [INFO] Images updated: 26
+[2026-02-10 09:25:58] [INFO] Images skipped (no mapping/already correct): 186
+[2026-02-10 09:25:58] [INFO] Errors: 48
+[2026-02-10 09:25:58] [INFO] Total processed articles tracked: 11
+[2026-02-10 09:25:58] [INFO] ============================================================
+[2026-02-10 09:25:58] [INFO] 
+[SUCCESS] Image references updated successfully!
+[2026-02-10 09:25:58] [INFO] Processed articles tracked in: processed_articles.json
+[2026-02-10 09:25:58] [INFO] Full log: image_article_renamer.log
+[2026-02-10 09:25:58] [INFO] [Report] Summary report created: image_article_renamer_report.txt
+[2026-02-10 09:25:58] [INFO] 
+[COMPLETE] Process finished
+[2026-02-10 09:25:58] [INFO] ============================================================
+
+[2026-02-10 09:40:36] [INFO] ============================================================
+[2026-02-10 09:40:36] [INFO] Starting image article renamer process
+[2026-02-10 09:40:36] [INFO] ============================================================
+[2026-02-10 09:40:36] [INFO] Loaded 196 rename mapping(s) from images_rename_mapping.json
+[2026-02-10 09:40:36] [INFO] Loaded 11 processed article(s) from processed_articles.json
+[2026-02-10 09:40:36] [INFO] 
+============================================================
+[2026-02-10 09:40:36] [INFO] Verifying setup:
+[2026-02-10 09:40:36] [INFO] ============================================================
+[2026-02-10 09:40:36] [INFO] + Content directory: content
+[2026-02-10 09:40:36] [INFO] + Static images: static/images
+[2026-02-10 09:40:36] [INFO]   Categories: cyber-security, general, linux, network, seo, tools
+[2026-02-10 09:40:36] [INFO]     cyber-security: 124 images
+[2026-02-10 09:40:36] [INFO]     general: 0 images
+[2026-02-10 09:40:36] [INFO]     linux: 42 images
+[2026-02-10 09:40:36] [INFO]     network: 80 images
+[2026-02-10 09:40:36] [INFO]     seo: 75 images
+[2026-02-10 09:40:36] [INFO]     tools: 61 images
+[2026-02-10 09:40:36] [INFO]   Total images: 382
+[2026-02-10 09:40:36] [INFO] ============================================================
+[2026-02-10 09:40:36] [INFO] Updating markdown image references...
+[2026-02-10 09:40:36] [INFO] ============================================================
+[2026-02-10 09:40:36] [INFO] 
+[File] all-articles\README.md
+[2026-02-10 09:40:36] [INFO]   No images found
+[2026-02-10 09:40:36] [INFO] 
+[File] cyber-security\Cryptography\Basic-Encryption.md
+[2026-02-10 09:40:36] [INFO]   [Skip] Already processed
+[2026-02-10 09:40:36] [INFO] 
+[File] cyber-security\Cryptography\Malwares.md
+[2026-02-10 09:40:36] [INFO]   [Skip] Already processed
+[2026-02-10 09:40:36] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E0, E1 - (Introduction & Prepare Lab).md
+[2026-02-10 09:40:36] [INFO]   Found 8 image(s)
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-1.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-2.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-3.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-4.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-5.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-6.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-7.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401.0Introduction&PrepareLab-8.png
+[2026-02-10 09:40:36] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E2 - Networking and Protocols (401.1).md
+[2026-02-10 09:40:36] [INFO]   Found 13 image(s)
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-NetworkingandProtocols(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1).md
+[2026-02-10 09:40:36] [INFO]   Found 14 image(s)
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Virtualization&CloudInfrastructure(401.1)-1.1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (401.1).md
+[2026-02-10 09:40:36] [INFO]   [Skip] Already processed
+[2026-02-10 09:40:36] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E7- Defense-in-Depth (401.2).md
+[2026-02-10 09:40:36] [INFO]   Found 9 image(s)
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\cyber-security\SANS-401-Defense-in-Depth(401.2)-1.2
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [INFO] 
+[File] cyber-security\SANS-401\SANS-401-E8, E9 - Password Cracking.md
+[2026-02-10 09:40:36] [INFO]   Found 30 image(s)
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-1.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-2.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-3.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-4.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-5.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-6.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-7.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-8.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-9.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-10.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-11.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-12.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-13.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-14.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-15.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-16.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-17.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-18.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-19.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-20.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-21.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-22.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-23.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-24.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-25.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-26.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-27.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-28.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-29.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SANS-401-PasswordCracking-30.png
+[2026-02-10 09:40:36] [INFO] 
+[File] linux\60 Commands Hacker Should Know it.md
+[2026-02-10 09:40:36] [INFO]   Found 24 image(s)
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-1.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-2.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-3.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-4.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-5.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-6.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-7.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-8.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-9.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-10.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-11.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-12.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-13.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-14.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-15.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-16.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-17.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-18.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-19.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-20.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-21.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-22.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-23.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 60CommandsHackerShouldKnowit-24.png
+[2026-02-10 09:40:36] [INFO] 
+[File] linux\Kali Linux Installing Guide.md
+[2026-02-10 09:40:36] [INFO]   [Skip] Already processed
+[2026-02-10 09:40:36] [INFO] 
+[File] network\IP-Mac Address Basic and Concepts.md
+[2026-02-10 09:40:36] [INFO]   [Skip] Already processed
+[2026-02-10 09:40:36] [INFO] 
+[File] network\Network Basics-Terminology-Topology.md
+[2026-02-10 09:40:36] [INFO]   [Skip] Already processed
+[2026-02-10 09:40:36] [INFO] 
+[File] network\Network Cable and Components.md
+[2026-02-10 09:40:36] [INFO]   [Skip] Already processed
+[2026-02-10 09:40:36] [INFO] 
+[File] network\Network Commands & File Printer Sharing.md
+[2026-02-10 09:40:36] [INFO]   No images found
+[2026-02-10 09:40:36] [INFO] 
+[File] network\Network Models-OSI and TCPIP.md
+[2026-02-10 09:40:36] [INFO]   [Skip] Already processed
+[2026-02-10 09:40:36] [INFO] 
+[File] network\Network Services(DHCP-DNS,-VLAN).md
+[2026-02-10 09:40:36] [INFO]   [Skip] Already processed
+[2026-02-10 09:40:36] [INFO] 
+[File] network\Virtualization Concepts.md
+[2026-02-10 09:40:36] [INFO]   [Skip] Already processed
+[2026-02-10 09:40:36] [INFO] 
+[File] network\Windows Networking.md
+[2026-02-10 09:40:36] [INFO]   [Skip] Already processed
+[2026-02-10 09:40:36] [INFO] 
+[File] python\Dir-Buster-Module.md
+[2026-02-10 09:40:36] [INFO]   No images found
+[2026-02-10 09:40:36] [INFO] 
+[File] seo\0-SEO-Theories\E1 to E5 - SEO Intro, Search Engines, Keywords.md
+[2026-02-10 09:40:36] [INFO]   Found 11 image(s)
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-1.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-2.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-3.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-4.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-5.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-6.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-7.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-8.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-9.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-10.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: SEOIntro,SearchEngines,Keywords-11.png
+[2026-02-10 09:40:36] [INFO] 
+[File] seo\0-SEO-Theories\E10, E11, - Content SEO, Important Website Pages.md
+[2026-02-10 09:40:36] [INFO]   Found 10 image(s)
+[2026-02-10 09:40:36] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-1.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-2.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-3.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-4.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-5.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-6.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-7.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-8.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-9.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: ContentSEO,ImportantWebsitePages-10.png
+[2026-02-10 09:40:36] [INFO] 
+[File] seo\0-SEO-Theories\E12- Woorank(Check Website SEO).md
+[2026-02-10 09:40:36] [INFO]   Found 12 image(s)
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [WARNING]     Warning: New file doesn't exist: Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Expected at: static/images\seo\Woorank(CheckWebsiteSEO)-1
+[2026-02-10 09:40:36] [WARNING]              Run images-renamer.py first!
+[2026-02-10 09:40:36] [INFO] 
+[File] seo\0-SEO-Theories\E13 - Good Contents for SEO.md
+[2026-02-10 09:40:36] [INFO]   Found 3 image(s)
+[2026-02-10 09:40:36] [INFO]     > No mapping for: GoodContentsforSEO-1.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: GoodContentsforSEO-2.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: GoodContentsforSEO-3.png
+[2026-02-10 09:40:36] [INFO] 
+[File] seo\0-SEO-Theories\E14 - Links in SEO(Internal & External).md
+[2026-02-10 09:40:36] [INFO]   No images found
+[2026-02-10 09:40:36] [INFO] 
+[File] seo\0-SEO-Theories\E15 - Page Rank.md
+[2026-02-10 09:40:36] [INFO]   Found 2 image(s)
+[2026-02-10 09:40:36] [INFO]     > No mapping for: PageRank-1.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: PageRank-2.png
+[2026-02-10 09:40:36] [INFO] 
+[File] seo\0-SEO-Theories\E16 - Page Authority & Domain Authority.md
+[2026-02-10 09:40:36] [INFO]   Found 3 image(s)
+[2026-02-10 09:40:36] [INFO]     > No mapping for: PageAuthority&DomainAuthority-1.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: PageAuthority&DomainAuthority-2.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: PageAuthority&DomainAuthority-3.png
+[2026-02-10 09:40:36] [INFO] 
+[File] seo\0-SEO-Theories\E17 - Backlinks.md
+[2026-02-10 09:40:36] [INFO]   Found 1 image(s)
+[2026-02-10 09:40:36] [INFO]     > No mapping for: Backlinks-1.png
+[2026-02-10 09:40:36] [INFO] 
+[File] seo\0-SEO-Theories\E6 to E9 - Find Keywords,  Website Structure & Necessary HTML Tags for SEO.md
+[2026-02-10 09:40:36] [INFO]   Found 33 image(s)
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-1.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-2.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-3.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-4.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-5.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-6.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-7.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-8.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-9.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-10.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-11.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-12.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-13.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-14.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-15.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-16.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-17.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-18.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-19.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-20.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-21.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-22.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-23.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-24.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-25.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-26.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-27.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-28.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-29.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-30.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-31.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-32.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: FindKeywords,WebsiteStructure&NecessaryHTMLTagsforSEO-33.png
+[2026-02-10 09:40:36] [INFO] 
+[File] tools\MSFConsole Commands.md
+[2026-02-10 09:40:36] [INFO]   Found 43 image(s)
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-1.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-2.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-3.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-4.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-5.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-6.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-7.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-8.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-9.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-10.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-11.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-12.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-13.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-14.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-15.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-16.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-17.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-18.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-19.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-20.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-21.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-22.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-23.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-24.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-25.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-26.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-27.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-28.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-29.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-30.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-31.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-32.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-33.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-34.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-35.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-36.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-37.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-38.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-39.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-40.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-41.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-42.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: MSFConsoleCommands-43.png
+[2026-02-10 09:40:36] [INFO] 
+[File] tools\Burpsuite\1-Install Burpsuite.md
+[2026-02-10 09:40:36] [INFO]   Found 12 image(s)
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 1-InstallBurpsuite-1.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 1-InstallBurpsuite-2.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 1-InstallBurpsuite-3.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 1-InstallBurpsuite-4.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 1-InstallBurpsuite-5.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 1-InstallBurpsuite-6.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 1-InstallBurpsuite-7.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 1-InstallBurpsuite-8.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 1-InstallBurpsuite-9.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 1-InstallBurpsuite-10.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 1-InstallBurpsuite-11.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 1-InstallBurpsuite-12.png
+[2026-02-10 09:40:36] [INFO] 
+[File] tools\Burpsuite\2-Change HTTP Data & Bypass Parameters.md
+[2026-02-10 09:40:36] [INFO]   Found 6 image(s)
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 2-ChangeHTTPData&BypassParameters-1.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 2-ChangeHTTPData&BypassParameters-2.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 2-ChangeHTTPData&BypassParameters-3.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 2-ChangeHTTPData&BypassParameters-4.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 2-ChangeHTTPData&BypassParameters-5.png
+[2026-02-10 09:40:36] [INFO]     > No mapping for: 2-ChangeHTTPData&BypassParameters-6.png
+[2026-02-10 09:40:36] [INFO] Saved 11 processed articles to processed_articles.json
+[2026-02-10 09:40:36] [INFO] 
+============================================================
+[2026-02-10 09:40:36] [INFO] FINAL STATISTICS:
+[2026-02-10 09:40:36] [INFO] ============================================================
+[2026-02-10 09:40:36] [INFO] Files scanned: 32
+[2026-02-10 09:40:36] [INFO] Files skipped (already processed): 11
+[2026-02-10 09:40:36] [INFO] Files modified: 0
+[2026-02-10 09:40:36] [INFO] Images found: 234
+[2026-02-10 09:40:36] [INFO] Images updated: 0
+[2026-02-10 09:40:36] [INFO] Images skipped (no mapping/already correct): 186
+[2026-02-10 09:40:36] [INFO] Errors: 48
+[2026-02-10 09:40:36] [INFO] Total processed articles tracked: 11
+[2026-02-10 09:40:36] [INFO] ============================================================
+[2026-02-10 09:40:36] [INFO] 
+[INFO] No new image references needed updating
+[2026-02-10 09:40:36] [INFO] 
+[COMPLETE] Process finished
+[2026-02-10 09:40:36] [INFO] ============================================================
+

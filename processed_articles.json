@@ -43,5 +43,15 @@
     "image_count": 2,
     "updated_count": 2,
     "last_processed": "2026-02-09 15:40:51"
+  },
+  "linux\\Kali Linux Installing Guide.md": {
+    "image_count": 18,
+    "updated_count": 18,
+    "last_processed": "2026-02-10 09:25:58"
+  },
+  "network\\Virtualization Concepts.md": {
+    "image_count": 8,
+    "updated_count": 8,
+    "last_processed": "2026-02-10 09:25:58"
   }
 }

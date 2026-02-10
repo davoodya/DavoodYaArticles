@@ -1,0 +1,66 @@
+{{- $articles := slice -}}
+{{- range .Pages -}}
+  {{- if not .Params.draft -}}
+    {{- $title := .Title -}}
+    {{- $readingTime := 0 -}}
+    {{- if .Params.readingTime -}}
+      {{- $readingTime = .Params.readingTime -}}
+    {{- end -}}
+    
+    {{- $difficulty := "" -}}
+    {{- if .Params.difficulty -}}
+      {{- $difficulty = .Params.difficulty -}}
+    {{- end -}}
+    
+    {{- $labRequired := false -}}
+    {{- if .Params.lab_required -}}
+      {{- $labRequired = .Params.lab_required -}}
+    {{- end -}}
+    
+    {{- $postType := "" -}}
+    {{- if .Params.post_type_fa -}}
+      {{- $postType = .Params.post_type_fa -}}
+    {{- end -}}
+    
+    {{- $featuredImage := "" -}}
+    {{- if .Params.featured_image -}}
+      {{- $featuredImage = .Params.featured_image -}}
+    {{- else if .Params.images -}}
+      {{- if reflect.IsSlice .Params.images -}}
+        {{- $featuredImage = index .Params.images 0 -}}
+      {{- else -}}
+        {{- $featuredImage = .Params.images -}}
+      {{- end -}}
+    {{- end -}}
+    
+    {{- $summary := "" -}}
+    {{- if .Params.description -}}
+      {{- $summary = .Params.description | plainify | truncate 600 -}}
+    {{- else if .Summary -}}
+      {{- $summary = .Summary | plainify | truncate 600 -}}
+    {{- else -}}
+      {{- $summary = .Content | plainify | truncate 600 -}}
+    {{- end -}}
+    
+    {{- $tags := slice -}}
+    {{- if .Params.tags -}}
+      {{- $tags = .Params.tags -}}
+    {{- end -}}
+    
+    {{- $article := dict 
+      "title" $title 
+      "url" .RelPermalink 
+      "readingTime" $readingTime 
+      "difficulty" $difficulty 
+      "labRequired" $labRequired 
+      "postType" $postType 
+      "featuredImage" $featuredImage 
+      "summary" $summary 
+      "tags" $tags
+      "section" .Section
+    -}}
+    
+    {{- $articles = $articles | append $article -}}
+  {{- end -}}
+{{- end -}}
+{{- $articles | jsonify -}}

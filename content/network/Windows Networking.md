@@ -1,6 +1,6 @@
 +++
 # Basics
-title = "Windows Networking"
+title = "راه اندازی شبکه ویندوز"
 slug = "windows-networking"
 date = "2024-03-25T15:41:10+03:30"
 lastmod = "2026-02-09T15:41:10+03:30"
@@ -17,12 +17,15 @@ difficulty = "medium" # beginner | medium | intermediate | advanced
 lab_required = true 
 post_type_fa = "آموزشی" # "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
 
-
 # Options
 toc = true
 math = false
 type = "posts"
 # layout = "single"
+
+# Images
+featured_image = "/images/network/WindowsNetworking-1.png"
+images = ["/images/network/WindowsNetworking-1.png"]
 
 # SEO
 description = "1. Connect to Windows together 1. Set IP 2. Set Network On Private Enable File Printer Sharing & Network Discovery 3. Create User for sharing + Set..."
@@ -31,8 +34,6 @@ author = "Davood Yahay"
 robots = "index, follow"
 canonical = "https://davoodya.ir/network/windows-networking/"
 
-featured_image = "/images/network/WindowsNetworking-1.png"
-images = ["/images/network/WindowsNetworking-1.png"]
 
 [params.opengraph]
   title = "Windows Networking"
@@ -139,7 +140,7 @@ By following these steps, you can block automatic updates in Windows registry. B
 2. **Printer Sharing**
 	1. Set Network Type on on Private or enable file and printer sharing for all profile
 		1. `Network & Internet => Ethernet => Set Private`
-			1. ![Windows Networking-1](/images/network/WindowsNetworking-1.png)
+			1. ![راه اندازی شبکه ویندوز-1](/images/network/WindowsNetworking-1.png)
 	2. Enable Printer Sharing
 		1. `Control Panel => Network and Internet => Advance sharing settings`
 	3. Enable Printer Sharing
@@ -147,7 +148,7 @@ By following these steps, you can block automatic updates in Windows registry. B
 	4. Enable Printer Sharing on Windows 2
 	5. Now see Shared Printer in Device & Printer.
 	6. if don't see => `Devices & Printer => Add new Printer Manulay`
-		1. ![Windows Networking-2](/images/network/WindowsNetworking-2.png)
+		1. ![راه اندازی شبکه ویندوز-2](/images/network/WindowsNetworking-2.png)
 	7. Additional Printer Driver
 
 ### !

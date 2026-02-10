@@ -23,6 +23,10 @@ math = false
 type = "posts"
 # layout = "single"
 
+# Images
+featured_image = "/images/network/NetworkServices(DHCP-DNS,-VLAN)-1.png"
+images = ["/images/network/NetworkServices(DHCP-DNS,-VLAN)-1.png"]
+
 # SEO
 description = "1. Broadcast Domain 2. Collision 3. V-Lan 1. V-Lan Definition 2. V-Lan Notes 3. Default V-Lan 4. Normal V-Lan 4. Routing Protocols 1. Definition of..."
 keywords = ["Network Services(DHCP-DNS,-VLAN)", "network", "network-servicesdhcp-dns-vlan"]
@@ -30,8 +34,6 @@ author = "Davood Yahay"
 robots = "index, follow"
 canonical = "https://davoodya.ir/network/network-servicesdhcp-dns-vlan/"
 
-featured_image = "/images/network/NetworkServices(DHCP-DNS,-VLAN)-1.png"
-images = ["/images/network/NetworkServices(DHCP-DNS,-VLAN)-1.png"]
 
 [params.opengraph]
   title = "Network Services(DHCP-DNS,-VLAN)"
@@ -82,7 +84,7 @@ images = ["/images/network/NetworkServices(DHCP-DNS,-VLAN)-1.png"]
 	3. R(Request)
 	4. A(Acknowledge)
 	5. Image
-		1. ![Network Services(DHCP-DNS,-VLAN)-1](/images/network/NetworkServices(DHCP-DNS,-VLAN)-1.png)
+		1. ![مطالبی که برای یادگیری VLAN , DHCP , DNS باید آموخت؟-1](/images/network/NetworkServices(DHCP-DNS,-VLAN)-1.png)
 4. *DHCP Example:*
 	1. DHCP Server on Home Router(Mikrotik-HEX)
 ### DNS

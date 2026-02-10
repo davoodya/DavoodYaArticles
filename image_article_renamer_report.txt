@@ -1,17 +1,17 @@
 Image Article Renamer Report
 ============================================================
-Date: 2026-02-09 15:40:51
+Date: 2026-02-10 09:25:58
 ============================================================
 
 Statistics:
-- Files scanned: 30
-- Files skipped (already processed): 3
-- Files modified: 6
-- Images found: 306
-- Images updated: 71
+- Files scanned: 32
+- Files skipped (already processed): 9
+- Files modified: 2
+- Images found: 260
+- Images updated: 26
 - Images skipped: 186
-- Errors: 49
-- Total processed articles: 9
+- Errors: 48
+- Total processed articles: 11
 
 Processed Articles:
 ------------------------------------------------------------
@@ -30,6 +30,11 @@ cyber-security\SANS-401\SANS-401-E4, E5, E6 - Wireless, Aircrack-ng, Wireshark (
   - Images found: 12
   - Images updated: 12
   - Last processed: 2026-02-08 14:27:13
+
+linux\Kali Linux Installing Guide.md:
+  - Images found: 18
+  - Images updated: 18
+  - Last processed: 2026-02-10 09:25:58
 
 network\IP-Mac Address Basic and Concepts.md:
   - Images found: 13
@@ -55,6 +60,11 @@ network\Network Services(DHCP-DNS,-VLAN).md:
   - Images found: 1
   - Images updated: 1
   - Last processed: 2026-02-09 15:40:51
+
+network\Virtualization Concepts.md:
+  - Images found: 8
+  - Images updated: 8
+  - Last processed: 2026-02-10 09:25:58
 
 network\Windows Networking.md:
   - Images found: 2

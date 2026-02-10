@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/all-articles/readme/</loc>
+    <lastmod>2026-02-10T09:26:00+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/all-articles/</loc>
+    <lastmod>2026-02-10T09:26:00+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/0-seo-theories/</loc>
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
   </url><url>
@@ -60,10 +69,10 @@
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/linux/</loc>
-    <lastmod>2026-02-09T13:50:09+03:30</lastmod>
+    <lastmod>2026-02-10T09:26:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/linux/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+    <lastmod>2026-02-10T09:26:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/metasploit/</loc>
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
@@ -72,7 +81,7 @@
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/os/</loc>
-    <lastmod>2026-02-09T13:50:09+03:30</lastmod>
+    <lastmod>2026-02-10T09:26:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/seo/0-seo-theories/page-authority-domain-authority/</loc>
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
@@ -177,13 +186,13 @@
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/linux/</loc>
-    <lastmod>2026-02-09T13:50:09+03:30</lastmod>
+    <lastmod>2026-02-10T09:26:00+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:1313/linux/kali-linux-installing-guide/</loc>
+    <lastmod>2026-02-10T09:26:00+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/network/</loc>
     <lastmod>2026-02-10T15:41:10+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/network/1.5-virtualization-mini-moduleh10-to-h12-1/</loc>
-    <lastmod>2024-08-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/network/</loc>
     <lastmod>2026-02-10T15:41:10+03:30</lastmod>
@@ -193,6 +202,9 @@
   </url><url>
     <loc>http://localhost:1313/tags/network-security/</loc>
     <lastmod>2026-02-10T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/network/virtualization-concepts/</loc>
+    <lastmod>2026-02-10T09:26:00+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/network/</loc>
     <lastmod>2026-02-10T15:41:10+03:30</lastmod>
@@ -227,13 +239,16 @@
     <loc>http://localhost:1313/tags/ip/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
+    <loc>http://localhost:1313/network/ip-mac-address-basic-and-concepts/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/mac/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/network/</loc>
-    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/network-commands/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/network/network-commands-file-printer-sharing/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/network-components/</loc>
@@ -243,6 +258,9 @@
     <lastmod>2026-02-10T15:41:10+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/network-models/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/network/network-models-osi-and-tcpip/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/network-topologies/</loc>
@@ -266,19 +284,7 @@
     <loc>http://localhost:1313/tags/tcpip/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/virtualization/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/virtualization/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/network/virtualization-networking/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/vlan/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/vmware/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/windows/</loc>
@@ -287,29 +293,16 @@
     <loc>http://localhost:1313/tags/windows/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/network/windows-networking/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/network/network-cable-and-components/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/network/network-commands-file-printer-sharing/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/network/ip-mac-address-basic-and-concepts/</loc>
+    <loc>http://localhost:1313/network/windows-networking/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/network/network-basics-terminology-topology/</loc>
     <lastmod>2026-02-10T15:41:10+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/network/network-models-osi-and-tcpip/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/network/network-servicesdhcp-dns-vlan/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/all-articles/readme/</loc>
-  </url><url>
-    <loc>http://localhost:1313/all-articles/</loc>
   </url>
 </urlset>
