@@ -1,13 +1,26 @@
 +++
+# Basics
 title = "SANS-401-Virtualization & Cloud Infrastructure(401.1)"
 slug = "sans-401-virtualization-cloud-infrastructure4011"
 date = "2026-02-09T13:50:09+03:30"
 lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
+# Taxonomies
 categories = ["cyber-security", "SANS-401"]
-tags = ["cyber-security", "SANS-401", "CyberSecurity", "Pentest"]
+tags = ["cyber-security", "SANS-401", "Pentest"]
 series = ["cyber-security", "SANS-401"]
+
+# Badges and Filters 
+readingTime = 8 # integer like 14, 26, 20 ....
+difficulty = "medium" # beginner | medium | intermediate | advanced
+lab_required = true 
+post_type_fa = "آموزشی" # "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
+
+# Optionss
+toc = true
+math = false
+type = "posts"
 
 description = "0. Virtual Machines 1. !SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-1-1.png) 1. Virtualization Overview 1. !SANS-401-E3 -..."
 keywords = ["SANS-401-Virtualization & Cloud Infrastructure(401.1)", "cyber-security", "SANS-401", "CyberSecurity", "Pentest", "sans-401-e3-virtualization-cloud-infrastructure4011"]
@@ -31,15 +44,8 @@ images = ["/images/cyber-security/SANS-401-E3-Virtualization&CloudInfrastructure
   description = "0. Virtual Machines 1. !SANS-401-E3 - Virtualization & Cloud Infrastructure(401.1)-1-1.png) 1. Virtualization Overview 1. !SANS-401-E3 -..."
   image = "/images/cyber-security/SANS-401-E3-Virtualization&CloudInfrastructure(401.1)-1.png"
 
-readingTime = 8
-difficulty = "medium"
-toc = true
-math = false
-lab_required = true
-post_type_fa = "مقاله"
 
 # layout = "single"
-type = "posts"
 +++
 
 -------

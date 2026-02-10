@@ -1,20 +1,27 @@
 +++
+# Basics
 title = "Network Basics-Terminology-Topology"
 slug = "network-basics-terminology-topology"
 date = "2024-03-25T15:41:10+03:30"
 lastmod = "2026-02-09T15:41:10+03:30"
 draft = false
 
+# Taxonomies
 categories = ["network"]
 tags = ["network"]
 series = ["network"]
 
-readingTime = 2
-difficulty = "medium"
+# Badges and Filters 
+readingTime = 10 # integer like 14, 26, 20 ....
+difficulty = "beginner" # beginner | medium | intermediate | advanced
+lab_required = false 
+post_type_fa = "آموزشی" # "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
+
+# Options
 toc = true
 math = false
-lab_required = true
-post_type_fa = "مقاله"
+type = "posts"
+
 
 description = "1. Set IP on Computer 2. Update & Check Drivers(Device Manager) 3. Set Password on User & Change Admin Username 4. Set Computer Name 5. Uninstall a..."
 keywords = ["Network Basics-Terminology-Topology", "network", "network-basics-terminology-topology"]
@@ -41,7 +48,6 @@ images = ["/images/network/NetworkBasics-Terminology-Topology-1.png"]
 
 
 # layout = "single"
-type = "posts"
 +++
 ----
 ### Level Testing

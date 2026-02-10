@@ -45,10 +45,10 @@
             const badges = article.querySelectorAll('.article-badge');
             console.log(`[Article ${index + 1}] Found ${badges.length} badges`);
             
-            let readingTime = 0;
-            let difficulty = '';
-            let labRequired = false;
-            let postType = '';
+            let readingTime = null; // null = no data
+            let difficulty = null;
+            let labRequired = null;
+            let postType = null;
             
             badges.forEach((badge, badgeIndex) => {
                 const badgeText = badge.querySelector('.badge-text');
@@ -96,11 +96,16 @@
                 }
             });
             
-            // Set data attributes
-            article.dataset.readingTime = readingTime;
-            article.dataset.difficulty = difficulty;
+            // If labRequired is still null, it means no badge-lab exists, so it's false
+            if (labRequired === null) {
+                labRequired = false;
+            }
+            
+            // Set data attributes (convert null to empty string for dataset)
+            article.dataset.readingTime = readingTime !== null ? readingTime : '';
+            article.dataset.difficulty = difficulty !== null ? difficulty : '';
             article.dataset.labRequired = labRequired;
-            article.dataset.postType = postType;
+            article.dataset.postType = postType !== null ? postType : '';
             
             console.log(`[Article ${index + 1}] Final data:`, {
                 readingTime,
@@ -184,7 +189,7 @@
             .map(input => input.value);
         
         const selectedLabRequired = Array.from(document.querySelectorAll('input[name="lab_required"]:checked'))
-            .map(input => input.value === 'true');
+            .map(input => input.value);
         
         const selectedPostTypes = Array.from(document.querySelectorAll('input[name="post_type"]:checked'))
             .map(input => input.value);
@@ -211,7 +216,7 @@
             .map(input => input.value);
         
         const selectedLabRequired = Array.from(document.querySelectorAll('input[name="mobile-lab_required"]:checked'))
-            .map(input => input.value === 'true');
+            .map(input => input.value);
         
         const selectedPostTypes = Array.from(document.querySelectorAll('input[name="mobile-post_type"]:checked'))
             .map(input => input.value);
@@ -240,10 +245,11 @@
             const reasons = [];
             
             // Get article data
-            const articleTime = parseInt(article.dataset.readingTime) || 0;
-            const articleDifficulty = article.dataset.difficulty || '';
+            const articleTimeStr = article.dataset.readingTime;
+            const articleTime = articleTimeStr !== '' ? parseInt(articleTimeStr) : null;
+            const articleDifficulty = article.dataset.difficulty || null;
             const articleLabRequired = article.dataset.labRequired === 'true';
-            const articlePostType = article.dataset.postType || '';
+            const articlePostType = article.dataset.postType || null;
             
             console.log(`[Article ${index + 1}] Checking:`, {
                 articleTime,
@@ -253,35 +259,59 @@
             });
             
             // Reading Time filter
-            if (articleTime > 0) {
+            // Only filter if article HAS reading time AND it's outside the range
+            if (articleTime !== null && articleTime > 0) {
                 if (articleTime < minTime || articleTime > maxTime) {
                     show = false;
                     reasons.push(`Time ${articleTime} not in range [${minTime}, ${maxTime}]`);
                 }
+            } else {
+                // Article has no reading time - show it if range includes 0
+                if (minTime > 0) {
+                    show = false;
+                    reasons.push(`Article has no reading time, but minimum filter is ${minTime}`);
+                }
             }
             
             // Difficulty filter
+            // Only filter if article HAS difficulty AND at least one difficulty is selected
             if (articleDifficulty && difficulties.length > 0) {
                 if (!difficulties.includes(articleDifficulty)) {
                     show = false;
                     reasons.push(`Difficulty "${articleDifficulty}" not in [${difficulties.join(', ')}]`);
                 }
+            } else if (!articleDifficulty && difficulties.length > 0 && difficulties.length < 4) {
+                // Article has no difficulty, and not all difficulties are selected
+                // Hide it because user is filtering by specific difficulties
+                show = false;
+                reasons.push(`Article has no difficulty, but filter is active`);
             }
             
             // Lab Required filter
-            if (labRequired.length > 0 && labRequired.length < 2) {
-                if (!labRequired.includes(articleLabRequired)) {
+            // Convert string values to booleans for comparison
+            const labFilterValues = labRequired.map(val => val === 'true');
+            
+            if (labFilterValues.length > 0 && labFilterValues.length < 2) {
+                // Only one option selected (either true or false)
+                const requiredValue = labFilterValues[0];
+                if (articleLabRequired !== requiredValue) {
                     show = false;
-                    reasons.push(`Lab required "${articleLabRequired}" not in [${labRequired.join(', ')}]`);
+                    reasons.push(`Lab required "${articleLabRequired}" does not match filter "${requiredValue}"`);
                 }
             }
+            // If both selected or none selected, show all
             
             // Post Type filter
+            // Only filter if article HAS post type AND at least one type is selected
             if (articlePostType && postTypes.length > 0) {
                 if (!postTypes.includes(articlePostType)) {
                     show = false;
                     reasons.push(`Post type "${articlePostType}" not in [${postTypes.join(', ')}]`);
                 }
+            } else if (!articlePostType && postTypes.length > 0 && postTypes.length < 7) {
+                // Article has no post type, and not all types are selected
+                show = false;
+                reasons.push(`Article has no post type, but filter is active`);
             }
             
             // Show or hide article with animation
@@ -436,6 +466,32 @@
         @keyframes fadeOut {
             from { opacity: 1; transform: translateY(0); }
             to { opacity: 0; transform: translateY(-20px); }
+        }
+        
+        .filter-no-results {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .filter-no-results .no-results-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+        
+        .filter-no-results h3 {
+            color: #00ff41;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        
+        .filter-no-results p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
         }
     `;
     document.head.appendChild(style);

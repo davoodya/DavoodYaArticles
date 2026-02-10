@@ -1,13 +1,26 @@
 +++
+# Basics
 title = "SANS-401-Defense-in-Depth (401.2)"
 slug = "sans-401-defense-in-depth-4012"
 date = "2026-02-09T13:50:09+03:30"
 lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
+# Badges and Filters 
 categories = ["cyber-security", "SANS-401"]
-tags = ["cyber-security", "SANS-401", "CyberSecurity", "Pentest"]
+tags = ["cyber-security", "SANS-401", "Pentest"]
 series = ["cyber-security", "SANS-401"]
+
+# Badges and Filters 
+readingTime = 7 # integer like 14, 26, 20 ....
+difficulty = "intermediate" # beginner | medium | intermediate | advanced
+lab_required = true 
+post_type_fa = "آموزشی" # "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
+
+# Options
+toc = true
+math = false
+type = "posts"
 
 description = "دفاع در عمق و یا Defense-in-Depth بدین معناست که برای Security Solution که میخواهیم استفاده کنیم باید >> 1. دارای چندین لایه امنتیی باشد که اگر یکی..."
 keywords = ["SANS-401-Defense-in-Depth (401.2)", "cyber-security", "SANS-401", "CyberSecurity", "Pentest", "sans-401-e7-defense-in-depth-4012"]
@@ -31,15 +44,8 @@ images = ["/images/cyber-security/SANS-401-Defense-in-Depth(401.2)-1.png"]
   description = "دفاع در عمق و یا Defense-in-Depth بدین معناست که برای Security Solution که میخواهیم استفاده کنیم باید >> 1. دارای چندین لایه امنتیی باشد که اگر یکی..."
   image = "/images/cyber-security/SANS-401-Defense-in-Depth(401.2)-1.png"
 
-readingTime = 7
-difficulty = "medium"
-toc = true
-math = false
-lab_required = true
-post_type_fa = "مقاله"
 
 # layout = "single"
-type = "posts"
 +++
 
 -------

@@ -1,13 +1,26 @@
 +++
+# Basics
 title = "SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)"
 slug = "sans-401-wireless-aircrack-ng-wireshark-4011"
 date = "2026-02-09T13:50:09+03:30"
 lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
+# Taxonomies
 categories = ["cyber-security", "SANS-401"]
-tags = ["cyber-security", "SANS-401", "CyberSecurity", "Pentest"]
+tags = ["cyber-security", "SANS-401", "Pentest"]
 series = ["cyber-security", "SANS-401"]
+
+# Badges and Filters
+readingTime = 7 # integer like 14, 26, 20 ....
+difficulty = "medium" # beginner | medium | intermediate | advanced
+lab_required = true
+post_type_fa = "آموزشی" # "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
+
+# Options
+toc = true
+math = false
+type = "posts"
 
 description = "شبکه های وایرلسی که امروزه بسیار هم مورد استفاده واقع میشوند در استاندارد های مختلف عرضه شده اند: 1. 802.11g 1. استاندارد قدیمی که فقط بر روی باند..."
 keywords = ["SANS-401-Wireless, Aircrack-ng, Wireshark (401.1)", "cyber-security", "SANS-401", "CyberSecurity", "Pentest", "sans-401-e4-e5-e6-wireless-aircrack-ng-wireshark-4011"]
@@ -31,15 +44,9 @@ images = ["/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)
   description = "شبکه های وایرلسی که امروزه بسیار هم مورد استفاده واقع میشوند در استاندارد های مختلف عرضه شده اند: 1. 802.11g 1. استاندارد قدیمی که فقط بر روی باند..."
   image = "/images/cyber-security/SANS-401-Wireless,Aircrack-ng,Wireshark(401.1)-1.png"
 
-readingTime = 7
-difficulty = "medium"
-toc = true
-math = false
-lab_required = true
-post_type_fa = "مقاله"
 
 # layout = "single"
-type = "posts"
+
 +++
 
 -------

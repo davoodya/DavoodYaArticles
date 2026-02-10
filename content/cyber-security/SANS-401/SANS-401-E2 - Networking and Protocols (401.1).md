@@ -1,13 +1,26 @@
 +++
+# Basics
 title = "SANS-401-Networking and Protocols (401.1)"
 slug = "sans-401-networking-and-protocols-4011"
 date = "2026-02-09T13:50:09+03:30"
 lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
+# Taxonomies
 categories = ["cyber-security", "SANS-401"]
 tags = ["cyber-security", "SANS-401", "CyberSecurity", "Pentest"]
 series = ["cyber-security", "SANS-401"]
+
+# Badges and Filters
+readingTime = 7 # integer like 14, 26, 20 ....
+difficulty = "beginner" # beginner | medium | intermediate | advanced
+lab_required = false 
+post_type_fa = "آموزشی" # "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
+
+# Options
+toc = true
+math = false
+type = "posts"
 
 description = "- از پروتکل هایی که بیشترین استفاده در شبکه را دارند میتوان به IP , ICMP در لایه سوم و TCP, UDP در لایه چهارم اشاره کرد. - اگر بخواهیم این پروتکل ها..."
 keywords = ["SANS-401-Networking and Protocols (401.1)", "cyber-security", "SANS-401", "CyberSecurity", "Pentest", "sans-401-e2-networking-and-protocols-4011"]
@@ -31,15 +44,8 @@ images = ["/images/cyber-security/SANS-401-NetworkingandProtocols(401.1)-1.png"]
   description = "- از پروتکل هایی که بیشترین استفاده در شبکه را دارند میتوان به IP , ICMP در لایه سوم و TCP, UDP در لایه چهارم اشاره کرد. - اگر بخواهیم این پروتکل ها..."
   image = "/images/cyber-security/SANS-401-NetworkingandProtocols(401.1)-1.png"
 
-readingTime = 7
-difficulty = "medium"
-toc = true
-math = false
-lab_required = true
-post_type_fa = "مقاله"
-
 # layout = "single"
-type = "posts"
+
 +++
 
 -------

@@ -1,0 +1,99 @@
+GET
+http://localhost:1313/test/test-filter.html
+[HTTP/1.1 404 Not Found 0ms]
+
+[CustomCSS Injector] Applied custom CSS. customcss.js:29:10
+TypeError: can't access property "css", customCSSObj is undefined customcss.js:66:2
+Layout was forced before the page was fully loaded. If stylesheets are not yet loaded this may cause a flash of unstyled content. index.js:1147:1
+GET
+http://localhost:1313/test/css/fonts.3ec37eff5b52b94350d84321961afb9b5cc723e139b86dd13f50e9f160272eb9.css
+NS_ERROR_CORRUPTED_CONTENT
+
+GET
+http://localhost:1313/test/css/header-footer.2778d642561bccdd5ca10b94fdf79be1e77a7222a228f9dc1d1c271551fed77c.css
+NS_ERROR_CORRUPTED_CONTENT
+
+GET
+http://localhost:1313/test/css/main.eb930473c2ae81adef8e6ab071f4787f3bd5ef64243fb64ff5216d0a8c347d47.css
+NS_ERROR_CORRUPTED_CONTENT
+
+GET
+http://localhost:1313/test/css/toc.f14c69e59e3e0ad7525b04d60e004730c50e982e12d90277ec55aa1856608073.css
+NS_ERROR_CORRUPTED_CONTENT
+
+GET
+http://localhost:1313/test/css/code-highlighting.d88b47ac13e35ece5aa792a0b021bf33f8530d2aabedde69493260a28acfbab5.css
+NS_ERROR_CORRUPTED_CONTENT
+
+GET
+http://localhost:1313/test/css/search.6330e6448cb2fd2805b178558472cc1120d003176cd2227de88faebbf74234b9.css
+NS_ERROR_CORRUPTED_CONTENT
+
+GET
+http://localhost:1313/test/css/custom-pages.66810da9aaffdaf8c663cb997fe274d5a8ee5e8b1164f5f39f33a2bb2e3e182a.css
+NS_ERROR_CORRUPTED_CONTENT
+
+GET
+http://localhost:1313/test/css/font-fixes.5f7cd32fe64f3b2c0425f23e54869ea0761d8075f5577a767dd3c8cdffb9e424.css
+NS_ERROR_CORRUPTED_CONTENT
+
+GET
+http://localhost:1313/test/assets/js/auto-direction.js
+NS_ERROR_CORRUPTED_CONTENT
+
+GET
+http://localhost:1313/test/assets/js/search.js
+NS_ERROR_CORRUPTED_CONTENT
+
+GET
+http://localhost:1313/test/assets/js/font-detector.js
+NS_ERROR_CORRUPTED_CONTENT
+
+GET
+http://localhost:1313/test/assets/js/heading-ids.js
+NS_ERROR_CORRUPTED_CONTENT
+
+The resource from “http://localhost:1313/test/css/fonts.3ec37eff5b52b94350d84321961afb9b5cc723e139b86dd13f50e9f160272eb9.css” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+The resource from “http://localhost:1313/test/css/header-footer.2778d642561bccdd5ca10b94fdf79be1e77a7222a228f9dc1d1c271551fed77c.css” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+The resource from “http://localhost:1313/test/css/main.eb930473c2ae81adef8e6ab071f4787f3bd5ef64243fb64ff5216d0a8c347d47.css” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+The resource from “http://localhost:1313/test/css/code-highlighting.d88b47ac13e35ece5aa792a0b021bf33f8530d2aabedde69493260a28acfbab5.css” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+The resource from “http://localhost:1313/test/css/toc.f14c69e59e3e0ad7525b04d60e004730c50e982e12d90277ec55aa1856608073.css” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+The resource from “http://localhost:1313/test/css/custom-pages.66810da9aaffdaf8c663cb997fe274d5a8ee5e8b1164f5f39f33a2bb2e3e182a.css” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+The resource from “http://localhost:1313/test/css/search.6330e6448cb2fd2805b178558472cc1120d003176cd2227de88faebbf74234b9.css” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+The resource from “http://localhost:1313/test/css/font-fixes.5f7cd32fe64f3b2c0425f23e54869ea0761d8075f5577a767dd3c8cdffb9e424.css” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+The resource from “http://localhost:1313/test/assets/js/search.js” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+The resource from “http://localhost:1313/test/assets/js/auto-direction.js” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+The resource from “http://localhost:1313/test/assets/js/font-detector.js” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+The resource from “http://localhost:1313/test/assets/js/heading-ids.js” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+GET
+http://localhost:1313/test/assets/js/search.js
+NS_ERROR_CORRUPTED_CONTENT
+
+GET
+http://localhost:1313/test/images/davoodya200-213.png
+[HTTP/1.1 404 Not Found 0ms]
+
+The resource from “http://localhost:1313/test/assets/js/search.js” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+Loading failed for the <script> with source “http://localhost:1313/test/assets/js/search.js”. test-filter.html:331:37
+GET
+http://localhost:1313/test/assets/js/auto-direction.js
+NS_ERROR_CORRUPTED_CONTENT
+
+The resource from “http://localhost:1313/test/assets/js/auto-direction.js” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+Loading failed for the <script> with source “http://localhost:1313/test/assets/js/auto-direction.js”. test-filter.html:334:45
+GET
+http://localhost:1313/test/assets/js/font-detector.js
+NS_ERROR_CORRUPTED_CONTENT
+
+The resource from “http://localhost:1313/test/assets/js/font-detector.js” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+Loading failed for the <script> with source “http://localhost:1313/test/assets/js/font-detector.js”. test-filter.html:337:44
+GET
+http://localhost:1313/test/assets/js/heading-ids.js
+NS_ERROR_CORRUPTED_CONTENT
+
+The resource from “http://localhost:1313/test/assets/js/heading-ids.js” was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff). test-filter.html
+Loading failed for the <script> with source “http://localhost:1313/test/assets/js/heading-ids.js”. test-filter.html:340:42
+GET
+http://localhost:1313/favicon.ico
+[HTTP/1.1 404 Not Found 0ms]
+

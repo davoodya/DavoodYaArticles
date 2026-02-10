@@ -1,13 +1,26 @@
 +++
+# Basics
 title = "SANS-401-Password Cracking"
 slug = "sans-401-password-cracking"
 date = "2026-02-09T13:50:09+03:30"
 lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
+# Taxonomies
 categories = ["cyber-security", "SANS-401"]
-tags = ["cyber-security", "SANS-401", "CyberSecurity", "Pentest"]
+tags = ["cyber-security", "SANS-401", "Pentest"]
 series = ["cyber-security", "SANS-401"]
+
+# Badges and Filters 
+readingTime = 10 # integer like 14, 26, 20 ....
+difficulty = "intermediate" # beginner | medium | intermediate | advanced
+lab_required = true 
+post_type_fa = "آموزشی" # "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
+
+# Options
+toc = true
+math = false
+type = "posts"
 
 description = "برای توضیح این ابزار از آزمایشگاه SANS SEC401.2 استفاده میکنیم: ```sh cd /eoot/Labs/401.2 ``` برای استفاده از ابزار کافیست کامند `john` را استفاده..."
 keywords = ["SANS-401-Password Cracking", "cyber-security", "SANS-401", "CyberSecurity", "Pentest", "sans-401-e8-e9-password-cracking"]
@@ -31,15 +44,7 @@ images = ["/images/cyber-security/SANS-401-PasswordCracking-1.png"]
   description = "برای توضیح این ابزار از آزمایشگاه SANS SEC401.2 استفاده میکنیم: ```sh cd /eoot/Labs/401.2 ``` برای استفاده از ابزار کافیست کامند `john` را استفاده..."
   image = "/images/cyber-security/SANS-401-PasswordCracking-1.png"
 
-readingTime = 10
-difficulty = "medium"
-toc = true
-math = false
-lab_required = true
-post_type_fa = "مقاله"
-
 # layout = "single"
-type = "posts"
 +++
 
 -------

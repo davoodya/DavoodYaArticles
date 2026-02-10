@@ -6,8 +6,19 @@ lastmod = "2026-02-09T13:50:09+03:30"
 draft = false
 
 categories = ["cyber-security", "SANS-401"]
-tags = ["cyber-security", "SANS-401", "CyberSecurity", "Pentest"]
+tags = ["cyber-security", "SANS-401", "Pentest"]
 series = ["cyber-security", "SANS-401"]
+
+# Badges and Filters
+readingTime = 2 # integer like 14, 26, 20 ....
+difficulty = "beginner" # beginner | medium | intermediate | advanced
+lab_required = false 
+post_type_fa = "آموزشی" # "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
+
+# Options
+toc = true
+math = false
+type = "posts"
 
 description = "نقشه راه دوره های SANS به شرح زیر است: هر دوره از مجموعه SANS از چندین دامنه تقسیم شده است که این دامنه ها بصورت زیر شماره در دامنه مشخص میشود. مثلا..."
 keywords = ["SANS-401-(Introduction & Prepare Lab)", "cyber-security", "SANS-401", "CyberSecurity", "Pentest", "sans-401-e0-e1-introduction-prepare-lab"]
@@ -31,15 +42,9 @@ images = ["/images/cyber-security/SANS-401.0Introduction&PrepareLab-1.png"]
   description = "نقشه راه دوره های SANS به شرح زیر است: هر دوره از مجموعه SANS از چندین دامنه تقسیم شده است که این دامنه ها بصورت زیر شماره در دامنه مشخص میشود. مثلا..."
   image = "/images/cyber-security/SANS-401.0Introduction&PrepareLab-1.png"
 
-readingTime = 2
-difficulty = "medium"
-toc = true
-math = false
-lab_required = true
-post_type_fa = "مقاله"
 
 # layout = "single"
-type = "posts"
+
 +++
 
 -------
