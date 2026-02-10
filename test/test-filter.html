@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تست سیستم فیلتر</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            padding: 20px;
+            background: #0a0a0a;
+            color: #e0e0e0;
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .article-card {
+            background: #1a1a1a;
+            padding: 20px;
+            border: 2px solid #00ff41;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .article-card-title {
+            color: #00ff41;
+            margin-bottom: 10px;
+        }
+        
+        .article-card-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .article-badge {
+            padding: 5px 10px;
+            border: 1px solid #3aaddf;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+        
+        .badge-time { border-color: #3aaddf; color: #3aaddf; }
+        .badge-beginner { border-color: #00ff41; color: #00ff41; }
+        .badge-intermediate { border-color: #e06c11; color: #e06c11; }
+        .badge-lab { border-color: #ff416d; color: #ff416d; }
+        .badge-type { border-color: #98c379; color: #98c379; }
+        
+        .filters {
+            background: #1a1a1a;
+            padding: 20px;
+            border: 2px solid #00ff41;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .filter-group {
+            margin-bottom: 15px;
+        }
+        
+        button {
+            background: #00ff41;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        button:hover {
+            background: #3aaddf;
+        }
+        
+        .console-output {
+            background: #000;
+            color: #00ff41;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-family: monospace;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 تست سیستم فیلتر مقالات</h1>
+    
+    <div class="filters">
+        <h2>فیلترها</h2>
+        
+        <div class="filter-group">
+            <h4>مدت زمان مطالعه</h4>
+            <input type="range" id="readingTimeMinRange" min="0" max="60" value="0">
+            <span id="readingTimeMin">0</span>
+            -
+            <input type="range" id="readingTimeMaxRange" min="0" max="60" value="60">
+            <span id="readingTimeMax">60</span>
+            دقیقه
+        </div>
+        
+        <div class="filter-group">
+            <h4>سطح دشواری</h4>
+            <label><input type="checkbox" name="difficulty" value="beginner" checked> مبتدی</label>
+            <label><input type="checkbox" name="difficulty" value="intermediate" checked> حرفه‌ای</label>
+        </div>
+        
+        <div class="filter-group">
+            <h4>نیاز به تمرین عملی</h4>
+            <label><input type="checkbox" name="lab_required" value="true" checked> دارد</label>
+            <label><input type="checkbox" name="lab_required" value="false" checked> ندارد</label>
+        </div>
+        
+        <div class="filter-group">
+            <h4>نوع پست</h4>
+            <label><input type="checkbox" name="post_type" value="آموزشی" checked> آموزشی</label>
+            <label><input type="checkbox" name="post_type" value="مقاله" checked> مقاله</label>
+        </div>
+        
+        <button onclick="applyFilters()">اعمال فیلتر</button>
+        <button onclick="resetFilters()">بازنشانی</button>
+        
+        <div style="margin-top: 10px;">
+            <strong>نتایج:</strong> <span id="filterResultsCount">-</span>
+        </div>
+    </div>
+    
+    <!-- Test Articles -->
+    <div class="articles-grid">
+        <!-- Article 1 -->
+        <article class="article-card">
+            <h2 class="article-card-title">مقاله اول - شبکه مبتدی</h2>
+            <div class="article-card-badges">
+                <span class="article-badge badge-time">
+                    <span class="badge-text">10 دقیقه</span>
+                </span>
+                <span class="article-badge badge-difficulty badge-beginner">
+                    <span class="badge-text">مبتدی</span>
+                </span>
+                <span class="article-badge badge-type">
+                    <span class="badge-text">آموزشی</span>
+                </span>
+            </div>
+        </article>
+        
+        <!-- Article 2 -->
+        <article class="article-card">
+            <h2 class="article-card-title">مقاله دوم - شبکه حرفه‌ای</h2>
+            <div class="article-card-badges">
+                <span class="article-badge badge-time">
+                    <span class="badge-text">25 دقیقه</span>
+                </span>
+                <span class="article-badge badge-difficulty badge-intermediate">
+                    <span class="badge-text">حرفه‌ای</span>
+                </span>
+                <span class="article-badge badge-lab">
+                    <span class="badge-text">تمرین عملی</span>
+                </span>
+                <span class="article-badge badge-type">
+                    <span class="badge-text">آموزشی</span>
+                </span>
+            </div>
+        </article>
+        
+        <!-- Article 3 -->
+        <article class="article-card">
+            <h2 class="article-card-title">مقاله سوم - مقاله نظری</h2>
+            <div class="article-card-badges">
+                <span class="article-badge badge-time">
+                    <span class="badge-text">15 دقیقه</span>
+                </span>
+                <span class="article-badge badge-difficulty badge-beginner">
+                    <span class="badge-text">مبتدی</span>
+                </span>
+                <span class="article-badge badge-type">
+                    <span class="badge-text">مقاله</span>
+                </span>
+            </div>
+        </article>
+    </div>
+    
+    <div class="console-output" id="consoleOutput">
+        <strong>Console Output:</strong><br>
+        (باز کردن Developer Console برای مشاهده لاگ‌ها - F12)
+    </div>
+    
+    <script src="../static/assets/js/filters.js"></script>
+    
+    <script>
+        // Capture console.log
+        const consoleOutput = document.getElementById('consoleOutput');
+        const originalLog = console.log;
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            const message = args.map(arg => 
+                typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)
+            ).join(' ');
+            consoleOutput.innerHTML += message + '<br>';
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        };
+    </script>
+</body>
+</html>

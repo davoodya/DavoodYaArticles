@@ -647,7 +647,7 @@ canonical = "{canonical_url}"
 featured_image = "{featured_image}"
 images = [{images_str}]
 
-# Open Graph and Social Networks(Twitter)
+# Open Graph
 [params.opengraph]
   title = "{title}"
   description = "{description}"
@@ -655,6 +655,7 @@ images = [{images_str}]
   url = "{canonical_url}"
   type = "article"
 
+# Social Networks(Twitter)
 [params.twitter]
   card = "summary_large_image"
   title = "{title}"

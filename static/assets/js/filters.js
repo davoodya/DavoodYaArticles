@@ -7,10 +7,14 @@
     
     // Initialize filters on page load
     document.addEventListener('DOMContentLoaded', function() {
+        console.log('[Filter System] Initializing...');
+        
         // Check if we're on a page with articles
         const articles = document.querySelectorAll('.article-card');
+        console.log('[Filter System] Found articles:', articles.length);
+        
         if (articles.length === 0) {
-            // Hide filter elements if no articles
+            console.log('[Filter System] No articles found, hiding filter elements');
             hideFilterElements();
             return;
         }
@@ -18,6 +22,8 @@
         initializeFilters();
         setupRangeSliders();
         updateFilterResults();
+        
+        console.log('[Filter System] Initialization complete');
     });
     
     // Hide filter elements when no articles present
@@ -32,40 +38,61 @@
     // Initialize filter system
     function initializeFilters() {
         const articles = document.querySelectorAll('.article-card');
+        console.log('[Filter System] Extracting article data from', articles.length, 'articles');
         
-        articles.forEach(article => {
-            const badges = article.querySelectorAll('.article-badge, .article-card-badges .article-badge');
+        articles.forEach((article, index) => {
+            // Find all badges in this article
+            const badges = article.querySelectorAll('.article-badge');
+            console.log(`[Article ${index + 1}] Found ${badges.length} badges`);
+            
             let readingTime = 0;
             let difficulty = '';
             let labRequired = false;
             let postType = '';
             
-            badges.forEach(badge => {
+            badges.forEach((badge, badgeIndex) => {
+                const badgeText = badge.querySelector('.badge-text');
+                if (!badgeText) {
+                    console.warn(`[Article ${index + 1}][Badge ${badgeIndex + 1}] No badge-text found`);
+                    return;
+                }
+                
+                const text = badgeText.textContent.trim();
+                console.log(`[Article ${index + 1}][Badge ${badgeIndex + 1}] Text: "${text}"`);
+                
                 // Reading Time
                 if (badge.classList.contains('badge-time')) {
-                    const timeText = badge.querySelector('.badge-text').textContent;
-                    const match = timeText.match(/(\d+)/);
+                    const match = text.match(/(\d+)/);
                     if (match) {
                         readingTime = parseInt(match[1]);
+                        console.log(`[Article ${index + 1}] Reading Time: ${readingTime} minutes`);
                     }
                 }
                 
                 // Difficulty
                 if (badge.classList.contains('badge-difficulty')) {
-                    if (badge.classList.contains('badge-beginner')) difficulty = 'beginner';
-                    else if (badge.classList.contains('badge-medium')) difficulty = 'medium';
-                    else if (badge.classList.contains('badge-intermediate')) difficulty = 'intermediate';
-                    else if (badge.classList.contains('badge-advanced')) difficulty = 'advanced';
+                    if (badge.classList.contains('badge-beginner')) {
+                        difficulty = 'beginner';
+                    } else if (badge.classList.contains('badge-medium')) {
+                        difficulty = 'medium';
+                    } else if (badge.classList.contains('badge-intermediate')) {
+                        difficulty = 'intermediate';
+                    } else if (badge.classList.contains('badge-advanced')) {
+                        difficulty = 'advanced';
+                    }
+                    console.log(`[Article ${index + 1}] Difficulty: ${difficulty}`);
                 }
                 
                 // Lab Required
                 if (badge.classList.contains('badge-lab')) {
                     labRequired = true;
+                    console.log(`[Article ${index + 1}] Lab Required: true`);
                 }
                 
                 // Post Type
                 if (badge.classList.contains('badge-type')) {
-                    postType = badge.querySelector('.badge-text').textContent.trim();
+                    postType = text;
+                    console.log(`[Article ${index + 1}] Post Type: ${postType}`);
                 }
             });
             
@@ -74,11 +101,22 @@
             article.dataset.difficulty = difficulty;
             article.dataset.labRequired = labRequired;
             article.dataset.postType = postType;
+            
+            console.log(`[Article ${index + 1}] Final data:`, {
+                readingTime,
+                difficulty,
+                labRequired,
+                postType
+            });
         });
+        
+        console.log('[Filter System] Data extraction complete');
     }
     
     // Setup range sliders
     function setupRangeSliders() {
+        console.log('[Filter System] Setting up range sliders');
+        
         // Desktop sliders
         setupSliderPair(
             'readingTimeMinRange',
@@ -103,7 +141,12 @@
         const minValue = document.getElementById(minValueId);
         const maxValue = document.getElementById(maxValueId);
         
-        if (!minRange || !maxRange || !minValue || !maxValue) return;
+        if (!minRange || !maxRange || !minValue || !maxValue) {
+            console.warn(`[Filter System] Slider pair not found: ${minRangeId}`);
+            return;
+        }
+        
+        console.log(`[Filter System] Setting up slider pair: ${minRangeId}`);
         
         minRange.addEventListener('input', function() {
             let min = parseInt(this.value);
@@ -132,6 +175,8 @@
     
     // Apply filters (Desktop)
     window.applyFilters = function() {
+        console.log('[Filter System] Applying filters (Desktop)...');
+        
         const minTime = parseInt(document.getElementById('readingTimeMinRange').value);
         const maxTime = parseInt(document.getElementById('readingTimeMaxRange').value);
         
@@ -144,11 +189,21 @@
         const selectedPostTypes = Array.from(document.querySelectorAll('input[name="post_type"]:checked'))
             .map(input => input.value);
         
+        console.log('[Filter System] Filter criteria:', {
+            minTime,
+            maxTime,
+            selectedDifficulties,
+            selectedLabRequired,
+            selectedPostTypes
+        });
+        
         filterArticles(minTime, maxTime, selectedDifficulties, selectedLabRequired, selectedPostTypes);
     };
     
     // Apply filters (Mobile)
     window.applyMobileFilters = function() {
+        console.log('[Filter System] Applying filters (Mobile)...');
+        
         const minTime = parseInt(document.getElementById('mobileReadingTimeMinRange').value);
         const maxTime = parseInt(document.getElementById('mobileReadingTimeMaxRange').value);
         
@@ -161,54 +216,82 @@
         const selectedPostTypes = Array.from(document.querySelectorAll('input[name="mobile-post_type"]:checked'))
             .map(input => input.value);
         
+        console.log('[Filter System] Filter criteria (Mobile):', {
+            minTime,
+            maxTime,
+            selectedDifficulties,
+            selectedLabRequired,
+            selectedPostTypes
+        });
+        
         filterArticles(minTime, maxTime, selectedDifficulties, selectedLabRequired, selectedPostTypes);
         closeMobileFilters();
     };
     
     // Main filter function
     function filterArticles(minTime, maxTime, difficulties, labRequired, postTypes) {
+        console.log('[Filter System] Starting filter process...');
+        
         const articles = document.querySelectorAll('.article-card');
         let visibleCount = 0;
         
-        articles.forEach(article => {
+        articles.forEach((article, index) => {
             let show = true;
+            const reasons = [];
+            
+            // Get article data
+            const articleTime = parseInt(article.dataset.readingTime) || 0;
+            const articleDifficulty = article.dataset.difficulty || '';
+            const articleLabRequired = article.dataset.labRequired === 'true';
+            const articlePostType = article.dataset.postType || '';
+            
+            console.log(`[Article ${index + 1}] Checking:`, {
+                articleTime,
+                articleDifficulty,
+                articleLabRequired,
+                articlePostType
+            });
             
             // Reading Time filter
-            const articleTime = parseInt(article.dataset.readingTime) || 0;
-            if (articleTime > 0 && (articleTime < minTime || articleTime > maxTime)) {
-                show = false;
+            if (articleTime > 0) {
+                if (articleTime < minTime || articleTime > maxTime) {
+                    show = false;
+                    reasons.push(`Time ${articleTime} not in range [${minTime}, ${maxTime}]`);
+                }
             }
             
             // Difficulty filter
-            const articleDifficulty = article.dataset.difficulty;
             if (articleDifficulty && difficulties.length > 0) {
                 if (!difficulties.includes(articleDifficulty)) {
                     show = false;
+                    reasons.push(`Difficulty "${articleDifficulty}" not in [${difficulties.join(', ')}]`);
                 }
             }
             
             // Lab Required filter
-            const articleLabRequired = article.dataset.labRequired === 'true';
             if (labRequired.length > 0 && labRequired.length < 2) {
                 if (!labRequired.includes(articleLabRequired)) {
                     show = false;
+                    reasons.push(`Lab required "${articleLabRequired}" not in [${labRequired.join(', ')}]`);
                 }
             }
             
             // Post Type filter
-            const articlePostType = article.dataset.postType;
             if (articlePostType && postTypes.length > 0) {
                 if (!postTypes.includes(articlePostType)) {
                     show = false;
+                    reasons.push(`Post type "${articlePostType}" not in [${postTypes.join(', ')}]`);
                 }
             }
             
             // Show or hide article with animation
             if (show) {
+                console.log(`[Article ${index + 1}] ✅ VISIBLE`);
                 article.style.display = '';
                 article.style.animation = 'fadeIn 0.4s ease';
                 visibleCount++;
             } else {
+                console.log(`[Article ${index + 1}] ❌ HIDDEN - Reasons:`, reasons);
                 article.style.animation = 'fadeOut 0.3s ease';
                 setTimeout(() => {
                     article.style.display = 'none';
@@ -216,9 +299,9 @@
             }
         });
         
-        updateFilterResults(visibleCount);
+        console.log(`[Filter System] Filter complete. Visible: ${visibleCount}/${articles.length}`);
         
-        // Show message if no results
+        updateFilterResults(visibleCount);
         showNoResultsMessage(visibleCount);
         
         // Scroll to top of articles (desktop only)
@@ -258,6 +341,8 @@
     
     // Reset filters (Desktop)
     window.resetFilters = function() {
+        console.log('[Filter System] Resetting filters (Desktop)...');
+        
         // Reset range sliders
         document.getElementById('readingTimeMinRange').value = 0;
         document.getElementById('readingTimeMaxRange').value = 60;
@@ -275,6 +360,8 @@
     
     // Reset filters (Mobile)
     window.resetMobileFilters = function() {
+        console.log('[Filter System] Resetting filters (Mobile)...');
+        
         // Reset range sliders
         document.getElementById('mobileReadingTimeMinRange').value = 0;
         document.getElementById('mobileReadingTimeMaxRange').value = 60;
@@ -299,11 +386,13 @@
                 count = articles.length;
             }
             resultsElement.textContent = `${count} مقاله یافت شد`;
+            console.log(`[Filter System] Results updated: ${count} articles`);
         }
     }
     
     // Mobile filter modal functions
     window.openMobileFilters = function() {
+        console.log('[Filter System] Opening mobile filters...');
         const modal = document.getElementById('mobileFilterModal');
         const overlay = document.getElementById('mobileFilterOverlay');
         
@@ -315,6 +404,7 @@
     };
     
     window.closeMobileFilters = function() {
+        console.log('[Filter System] Closing mobile filters...');
         const modal = document.getElementById('mobileFilterModal');
         const overlay = document.getElementById('mobileFilterOverlay');
         
@@ -347,54 +437,9 @@
             from { opacity: 1; transform: translateY(0); }
             to { opacity: 0; transform: translateY(-20px); }
         }
-        
-        .filter-no-results {
-            text-align: center;
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, rgba(58, 173, 223, 0.05) 0%, rgba(0, 255, 65, 0.05) 100%);
-            border: 2px dashed rgba(58, 173, 223, 0.3);
-            border-radius: 16px;
-            margin: 2rem 0;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        .filter-no-results .no-results-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            opacity: 0.5;
-        }
-        
-        .filter-no-results h3 {
-            color: var(--accent-blue);
-            font-family: var(--persian-heading);
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .filter-no-results p {
-            color: var(--secondary-text);
-            font-size: 1rem;
-            margin: 0;
-        }
-        
-        @media (max-width: 768px) {
-            .filter-no-results {
-                padding: 3rem 1.5rem;
-            }
-            
-            .filter-no-results .no-results-icon {
-                font-size: 3rem;
-            }
-            
-            .filter-no-results h3 {
-                font-size: 1.3rem;
-            }
-            
-            .filter-no-results p {
-                font-size: 0.95rem;
-            }
-        }
     `;
     document.head.appendChild(style);
+    
+    console.log('[Filter System] Loaded successfully');
     
 })();
