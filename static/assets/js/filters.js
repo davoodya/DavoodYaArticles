@@ -370,16 +370,26 @@
             selectedPostTypes
         });
         
-        // Check if articles-loader is available
-        if (typeof window.applyArticlesFilter === 'function') {
-            // Use client-side filtering for all articles
+        // بررسی اینکه کدام سیستم در دسترس است
+        if (typeof window.applyLoadMoreFilter === 'function') {
+            // استفاده از سیستم Load More (اولویت اول)
+            console.log('[Filter System] Using Load More filter system');
+            const count = window.applyLoadMoreFilter(function(article) {
+                return matchesFilter(article, minTime, maxTime, selectedDifficulties, selectedLabRequired, selectedPostTypes);
+            });
+            updateFilterResults(count);
+            showNoResultsMessage(count);
+        } else if (typeof window.applyArticlesFilter === 'function') {
+            // استفاده از Articles Loader قدیمی
+            console.log('[Filter System] Using Articles Loader filter system');
             const count = window.applyArticlesFilter(function(article) {
                 return matchesFilter(article, minTime, maxTime, selectedDifficulties, selectedLabRequired, selectedPostTypes);
             });
             updateFilterResults(count);
             showNoResultsMessage(count);
         } else {
-            // Fallback to DOM-based filtering (current page only)
+            // Fallback به فیلتر DOM-based
+            console.log('[Filter System] Using DOM-based filter (fallback)');
             filterArticles(minTime, maxTime, selectedDifficulties, selectedLabRequired, selectedPostTypes);
         }
         
@@ -460,14 +470,24 @@
         document.querySelectorAll('input[name="lab_required"]').forEach(input => input.checked = true);
         document.querySelectorAll('input[name="post_type"]').forEach(input => input.checked = true);
         
-        // Reset articles if loader is available
-        if (typeof window.resetArticlesFilter === 'function') {
+        // بررسی اینکه کدام سیستم در دسترس است
+        if (typeof window.resetLoadMoreFilter === 'function') {
+            // استفاده از سیستم Load More (اولویت اول)
+            console.log('[Filter System] Using Load More reset');
+            window.resetLoadMoreFilter();
+            const count = window.getTotalArticlesCount();
+            updateFilterResults(count);
+            showNoResultsMessage(count > 0 ? count : 1);
+        } else if (typeof window.resetArticlesFilter === 'function') {
+            // استفاده از Articles Loader قدیمی
+            console.log('[Filter System] Using Articles Loader reset');
             window.resetArticlesFilter();
             const allArticles = window.getAllArticles();
             updateFilterResults(allArticles ? allArticles.length : 0);
             showNoResultsMessage(allArticles ? allArticles.length : 1);
         } else {
             // Fallback: Apply filters (show all)
+            console.log('[Filter System] Using fallback reset');
             window.applyFilters();
         }
     };

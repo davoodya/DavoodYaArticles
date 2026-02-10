@@ -40,7 +40,7 @@
                 </div>
             </div>
 
-            <div class="articles-grid">
+            <div class="articles-grid" id="articlesGrid">
                 {{/* دریافت تمام صفحات عادی و فیلتر کردن */}}
                 {{ $allPages := where site.RegularPages "Section" "!=" "all-articles" }}
                 {{ $allPages = where $allPages "Draft" false }}
@@ -48,11 +48,10 @@
                 {{/* مرتب‌سازی بر اساس تاریخ (جدیدترین اول) */}}
                 {{ $allPages = $allPages.ByDate.Reverse }}
                 
-                {{/* Pagination */}}
-                {{ $paginator := .Paginate $allPages }}
-                
-                {{ range $paginator.Pages }}
-                    <article class="article-card">
+                {{/* نمایش فقط 4 مقاله اول در HTML (برای بارگذاری سریع) */}}
+                {{/* JavaScript بقیه را از JSON بارگذاری می‌کند */}}
+                {{ range first 4 $allPages }}
+                    <article class="article-card" data-reading-time="{{ .Params.readingTime | default 0 }}" data-difficulty="{{ .Params.difficulty | default "" }}" data-lab-required="{{ .Params.lab_required | default false }}" data-post-type="{{ .Params.post_type_fa | default "" }}">
                         <h2 class="article-card-title">
                             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                         </h2>
@@ -183,9 +182,6 @@
                     </article>
                 {{ end }}
             </div>
-
-            {{/* Pagination */}}
-            {{ template "_internal/pagination.html" . }}
         </div>
     </div>
 </div>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تست سیستم بارگذاری بیشتر</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            padding: 20px;
+            direction: rtl;
+        }
+        
+        .test-section {
+            background: #1a1a1a;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #00ff41;
+            border-radius: 10px;
+        }
+        
+        h1 {
+            color: #00ff41;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #00ff41;
+            border-bottom: 2px solid #00ff41;
+            padding-bottom: 10px;
+        }
+        
+        .test-case {
+            background: #0f0f0f;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        
+        .success {
+            color: #00ff41;
+        }
+        
+        .error {
+            color: #ff0041;
+        }
+        
+        .warning {
+            color: #ffaa00;
+        }
+        
+        button {
+            background: #00ff41;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            background: #00dd35;
+        }
+        
+        .log {
+            background: #000;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+            margin: 10px 0;
+        }
+        
+        .log-entry {
+            margin: 2px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 تست سیستم بارگذاری بیشتر (Load More)</h1>
+    
+    <div class="test-section">
+        <h2>📋 راهنمای تست</h2>
+        <p>این صفحه برای تست سریع سیستم Load More طراحی شده است.</p>
+        <p><strong>مراحل تست:</strong></p>
+        <ol>
+            <li>سرور Hugo را اجرا کنید: <code>hugo server</code></li>
+            <li>به آدرس دسته‌بندی بروید: <a href="http://localhost:1313/cyber-security/" target="_blank" style="color: #00ff41;">http://localhost:1313/cyber-security/</a></li>
+            <li>Console مرورگر را باز کنید (F12)</li>
+            <li>تست‌های زیر را انجام دهید</li>
+        </ol>
+    </div>
+    
+    <div class="test-section">
+        <h2>✅ چک‌لیست تست</h2>
+        
+        <div class="test-case">
+            <h3>1. بارگذاری اولیه</h3>
+            <ul>
+                <li>[ ] فقط 4 مقاله در HTML نمایش داده می‌شود</li>
+                <li>[ ] دکمه "بارگذاری بیشتر" ظاهر می‌شود</li>
+                <li>[ ] تعداد مقالات باقی‌مانده صحیح است</li>
+            </ul>
+            <p class="success">لاگ مورد انتظار در Console:</p>
+            <div class="log">
+                <div class="log-entry">[Load More] 🚀 Initializing Load More System...</div>
+                <div class="log-entry">[Load More] 📥 Loading articles from JSON...</div>
+                <div class="log-entry">[Load More] 🌐 Fetching: /cyber-security/index.json</div>
+                <div class="log-entry">[Load More] ✅ Loaded 8 articles from JSON</div>
+                <div class="log-entry">[Load More] 📤 Loading more articles...</div>
+                <div class="log-entry">[Load More] 📊 Loading 4 articles (1-4 of 8)</div>
+                <div class="log-entry">[Load More] ✅ Now showing 4 of 8 articles</div>
+            </div>
+        </div>
+        
+        <div class="test-case">
+            <h3>2. کلیک بارگذاری بیشتر</h3>
+            <ul>
+                <li>[ ] با کلیک، 4 مقاله دیگر اضافه می‌شوند</li>
+                <li>[ ] انیمیشن fadeInUp کار می‌کند</li>
+                <li>[ ] شمارنده به‌روز می‌شود</li>
+                <li>[ ] دکمه پس از نمایش همه مخفی می‌شود</li>
+            </ul>
+            <p class="success">لاگ مورد انتظار:</p>
+            <div class="log">
+                <div class="log-entry">[Load More] 📤 Loading more articles...</div>
+                <div class="log-entry">[Load More] 📊 Loading 4 articles (5-8 of 8)</div>
+                <div class="log-entry">[Load More] ✅ Now showing 8 of 8 articles</div>
+            </div>
+        </div>
+        
+        <div class="test-case">
+            <h3>3. فیلتر روی تمام مقالات</h3>
+            <ul>
+                <li>[ ] دکمه فیلتر (سبز، سمت راست پایین) ظاهر است</li>
+                <li>[ ] مودال فیلتر باز می‌شود</li>
+                <li>[ ] انتخاب فیلتر (مثلاً "مبتدی")</li>
+                <li>[ ] کلیک "اعمال فیلترها"</li>
+                <li>[ ] فیلتر روی تمام 8 مقاله اعمال می‌شود (نه فقط 4 تا)</li>
+            </ul>
+            <p class="success">لاگ مورد انتظار:</p>
+            <div class="log">
+                <div class="log-entry">[Filter System] Applying filters...</div>
+                <div class="log-entry">[Filter System] Using Load More filter system</div>
+                <div class="log-entry">[Load More] 🔍 Applying filter to all articles...</div>
+                <div class="log-entry">[Load More] ✅ Filtered: 2 of 8 articles</div>
+                <div class="log-entry">[Load More] ✅ Now showing 2 of 2 articles</div>
+            </div>
+        </div>
+        
+        <div class="test-case">
+            <h3>4. بازنشانی فیلتر</h3>
+            <ul>
+                <li>[ ] کلیک "بازنشانی"</li>
+                <li>[ ] همه فیلترها پاک می‌شوند</li>
+                <li>[ ] همه 8 مقاله دوباره نمایش داده می‌شوند</li>
+                <li>[ ] از ابتدا 4 تا نمایش و بقیه با Load More</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>🔍 بررسی فنی</h2>
+        
+        <div class="test-case">
+            <h3>فایل‌های ضروری</h3>
+            <ul>
+                <li>✅ <code>static/assets/js/load-more.js</code></li>
+                <li>✅ <code>static/assets/js/filters.js</code> (به‌روزرسانی شده)</li>
+                <li>✅ <code>static/css/main.css</code> (استایل‌های Load More)</li>
+                <li>✅ <code>layouts/_default/list.html</code> (data attributes)</li>
+                <li>✅ <code>layouts/_default/list.json</code> (JSON endpoint)</li>
+            </ul>
+        </div>
+        
+        <div class="test-case">
+            <h3>بررسی Network</h3>
+            <p>در Network Tab مرورگر:</p>
+            <ul>
+                <li>[ ] <code>/cyber-security/index.json</code> بارگذاری می‌شود</li>
+                <li>[ ] Status: 200 OK</li>
+                <li>[ ] حجم فایل کمتر از 100KB</li>
+            </ul>
+        </div>
+        
+        <div class="test-case">
+            <h3>بررسی Elements (DOM)</h3>
+            <ul>
+                <li>[ ] المنت <code>.articles-grid</code> وجود دارد</li>
+                <li>[ ] المنت‌های <code>.article-card</code> دارای data attributes هستند</li>
+                <li>[ ] دکمه <code>.load-more-btn</code> ظاهر می‌شود</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>🎨 بررسی ظاهری</h2>
+        
+        <div class="test-case">
+            <h3>دکمه بارگذاری بیشتر</h3>
+            <ul>
+                <li>[ ] بوردر سبز دارد</li>
+                <li>[ ] آیکون فلش (چرخیده 90 درجه) دارد</li>
+                <li>[ ] متن "بارگذاری بیشتر" نمایش داده می‌شود</li>
+                <li>[ ] تعداد باقی‌مانده نمایش داده می‌شود</li>
+                <li>[ ] Hover effect: رنگ به سبز تغییر می‌کند</li>
+                <li>[ ] حرکت به بالا در hover</li>
+            </ul>
+        </div>
+        
+        <div class="test-case">
+            <h3>انیمیشن‌ها</h3>
+            <ul>
+                <li>[ ] مقالات جدید با fadeInUp ظاهر می‌شوند</li>
+                <li>[ ] انیمیشن روان است (بدون lag)</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>📱 Responsive Design</h2>
+        <p>F12 → Device Toolbar → تست در اندازه‌های مختلف</p>
+        
+        <div class="test-case">
+            <h3>موبایل (< 768px)</h3>
+            <ul>
+                <li>[ ] دکمه در چیدمان عمودی</li>
+                <li>[ ] همه چیز قابل کلیک است</li>
+                <li>[ ] فونت‌ها خوانا هستند</li>
+            </ul>
+        </div>
+        
+        <div class="test-case">
+            <h3>تبلت (768px - 1024px)</h3>
+            <ul>
+                <li>[ ] دکمه با اندازه مناسب</li>
+                <li>[ ] فاصله‌گذاری مناسب</li>
+            </ul>
+        </div>
+        
+        <div class="test-case">
+            <h3>دسکتاپ (> 1024px)</h3>
+            <ul>
+                <li>[ ] دکمه در وسط صفحه</li>
+                <li>[ ] همه المنت‌ها کنار هم</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>⚡ عملکرد</h2>
+        
+        <div class="test-case">
+            <h3>سرعت</h3>
+            <ul>
+                <li>[ ] بارگذاری اولیه سریع (< 500ms)</li>
+                <li>[ ] JSON سریع دانلود می‌شود (< 300ms)</li>
+                <li>[ ] کلیک Load More فوری است</li>
+                <li>[ ] فیلتر بدون تاخیر اعمال می‌شود</li>
+            </ul>
+        </div>
+        
+        <div class="test-case">
+            <h3>حافظه</h3>
+            <ul>
+                <li>[ ] Performance Tab → Heap Snapshot</li>
+                <li>[ ] مصرف حافظه معقول (< 20MB)</li>
+                <li>[ ] بدون Memory Leak</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>🐛 تست خطاها</h2>
+        
+        <div class="test-case">
+            <h3>JSON موجود نیست</h3>
+            <ul>
+                <li>[ ] Network Tab → Block فایل JSON</li>
+                <li>[ ] Reload صفحه</li>
+                <li>[ ] باید به HTML fallback کند</li>
+                <li>[ ] مقالات HTML نمایش داده می‌شوند</li>
+            </ul>
+            <p class="warning">لاگ مورد انتظار:</p>
+            <div class="log">
+                <div class="log-entry">[Load More] ❌ Error loading articles: ...</div>
+                <div class="log-entry">[Load More] 📌 Falling back to existing HTML</div>
+                <div class="log-entry">[Load More] 🔄 Using HTML articles as fallback</div>
+            </div>
+        </div>
+        
+        <div class="test-case">
+            <h3>JavaScript غیرفعال</h3>
+            <ul>
+                <li>[ ] Settings → Disable JavaScript</li>
+                <li>[ ] Reload صفحه</li>
+                <li>[ ] 4 مقاله HTML نمایش داده می‌شوند</li>
+                <li>[ ] صفحه قابل استفاده است</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>📊 نتیجه نهایی</h2>
+        <p>پس از انجام همه تست‌ها:</p>
+        <ul>
+            <li class="success">✅ همه تست‌ها موفق = آماده به Production</li>
+            <li class="warning">⚠️ برخی مشکلات = نیاز به بررسی بیشتر</li>
+            <li class="error">❌ تست‌های ناموفق = نیاز به رفع مشکل</li>
+        </ul>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <button onclick="window.open('http://localhost:1313/cyber-security/', '_blank')">
+                🚀 شروع تست (باز کردن صفحه دسته‌بندی)
+            </button>
+            <button onclick="window.open('http://localhost:1313/network/', '_blank')">
+                🌐 تست صفحه Network
+            </button>
+            <button onclick="alert('Console را باز کنید (F12) و لاگ‌ها را بررسی کنید!')">
+                📋 راهنمای Console
+            </button>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>📚 مستندات</h2>
+        <ul>
+            <li><a href="../docs/LOAD_MORE_IMPLEMENTATION_GUIDE.md" style="color: #00ff41;">راهنمای پیاده‌سازی کامل</a></li>
+            <li><a href="../docs/LOAD_MORE_TEST_CHECKLIST.md" style="color: #00ff41;">چک‌لیست تست کامل</a></li>
+            <li><a href="../LOAD_MORE_CHANGELOG.md" style="color: #00ff41;">تغییرات (Changelog)</a></li>
+        </ul>
+    </div>
+    
+    <footer style="text-align: center; margin-top: 50px; padding: 20px; border-top: 2px solid #00ff41;">
+        <p>ساخته شده با ❤️ برای تست سیستم Load More</p>
+        <p style="font-size: 12px; color: #666;">تاریخ: 10 فوریه 2026</p>
+    </footer>
+</body>
+</html>

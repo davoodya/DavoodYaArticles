@@ -256,8 +256,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 
                     
-                
-                    
                         
                     
                 
@@ -279,6 +277,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                     
                         
+                    
+                
                     
                 
                 
@@ -822,19 +822,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         </li>
                     
                         <li class="recent-post-item">
-                            <a href="../../all-articles/readme/" class="recent-post-link">
-                                <span class="recent-post-icon">📄</span>
-                                <div class="recent-post-info">
-                                    <h4 class="recent-post-title">README</h4>
-                                    
-                                    
-                                        <span class="recent-post-date">2026/02/10</span>
-                                    
-                                </div>
-                            </a>
-                        </li>
-                    
-                        <li class="recent-post-item">
                             <a href="../../linux/kali-linux-installing-guide/" class="recent-post-link">
                                 <span class="recent-post-icon">📄</span>
                                 <div class="recent-post-info">
@@ -865,6 +852,19 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <span class="recent-post-icon">📄</span>
                                 <div class="recent-post-info">
                                     <h4 class="recent-post-title">IP-Mac Address Basic and Concepts</h4>
+                                    
+                                    
+                                        <span class="recent-post-date" title="آخرین بروزرسانی">🔄 2026/02/09</span>
+                                    
+                                </div>
+                            </a>
+                        </li>
+                    
+                        <li class="recent-post-item">
+                            <a href="../../network/network-commands-file-printer-sharing/" class="recent-post-link">
+                                <span class="recent-post-icon">📄</span>
+                                <div class="recent-post-info">
+                                    <h4 class="recent-post-title">Network Commands &amp; File Printer Sharing</h4>
                                     
                                     
                                         <span class="recent-post-date" title="آخرین بروزرسانی">🔄 2026/02/09</span>
@@ -1034,7 +1034,7 @@ function toggleDropdown(type) {
 </script>
 
 
-<script src="../../assets/js/articles-loader.js"></script>
+<script src="../../assets/js/load-more.js"></script>
 
 
 <script src="../../assets/js/filters.js"></script>
@@ -1045,10 +1045,11 @@ function toggleDropdown(type) {
             
             
 
-            <div class="articles-grid">
+            <div class="articles-grid" id="articlesGrid">
                 
-
-                    <article class="article-card">
+                
+                
+                    <article class="article-card" data-reading-time="7" data-difficulty="beginner" data-lab-required="false" data-post-type="آموزشی">
                         <h2 class="article-card-title">
                             <a href="../../cyber-security/sans-401/sans-401-networking-and-protocols-4011/">SANS-401-Networking and Protocols (401.1)</a>
                         </h2>
@@ -1149,8 +1150,6 @@ function toggleDropdown(type) {
                     </article>
                 
             </div>
-
-            
         </div>
     </div>
 </div>

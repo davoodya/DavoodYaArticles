@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/all-articles/readme/</loc>
-    <lastmod>2026-02-10T09:26:00+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/all-articles/</loc>
-    <lastmod>2026-02-10T09:26:00+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/0-seo-theories/</loc>
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
   </url><url>
@@ -188,6 +179,9 @@
     <loc>http://localhost:1313/linux/</loc>
     <lastmod>2026-02-10T09:26:00+03:30</lastmod>
   </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
+  </url><url>
     <loc>http://localhost:1313/linux/kali-linux-installing-guide/</loc>
     <lastmod>2026-02-10T09:26:00+03:30</lastmod>
   </url><url>
@@ -304,5 +298,7 @@
   </url><url>
     <loc>http://localhost:1313/network/network-servicesdhcp-dns-vlan/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/all-articles/</loc>
   </url>
 </urlset>

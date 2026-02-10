@@ -45,7 +45,7 @@
     
     
     
-    <link rel="stylesheet" href="../css/main.61b92e77ce054996c973add4f8d230894afe1b4dfe7c6ee5e802cbdc2e90aba6.css" integrity="sha256-Ybkud84FSZbJc63U&#43;NIwiUr&#43;G03&#43;fG7l6ALL3C6Qq6Y=">
+    <link rel="stylesheet" href="../css/main.28d25041b38d55090d330ba096e22f1b011b0a44dc1e158cf2db3d3d7d556f69.css" integrity="sha256-KNJQQbONVQkNMwugluIvGwEbCkTcHhWM8ts9PX1Vb2k=">
     
     
     
@@ -290,8 +290,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 
                     
-                
-                    
                         
                     
                 
@@ -301,6 +299,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                     
                         
+                    
+                
                     
                 
                     
@@ -351,10 +351,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     </li>
                 
                     <li class="category-item">
-                        <a href="../linux/" class="category-link">
+                        <a href="../network/" class="category-link">
                             <span class="category-icon">▸</span>
-                            <span class="category-name">لینوکس</span>
-                            <span class="category-badge">2</span>
+                            <span class="category-name">شبکه</span>
+                            <span class="category-badge">8</span>
                         </a>
                     </li>
                 
@@ -368,10 +368,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         <ul class="dropdown-content" id="categories-dropdown">
                             
                                 <li class="category-item">
-                                    <a href="../network/" class="category-link">
+                                    <a href="../linux/" class="category-link">
                                         <span class="category-icon">▸</span>
-                                        <span class="category-name">شبکه</span>
-                                        <span class="category-badge">8</span>
+                                        <span class="category-name">لینوکس</span>
+                                        <span class="category-badge">2</span>
                                     </a>
                                 </li>
                             
@@ -856,19 +856,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         </li>
                     
                         <li class="recent-post-item">
-                            <a href="../all-articles/readme/" class="recent-post-link">
-                                <span class="recent-post-icon">📄</span>
-                                <div class="recent-post-info">
-                                    <h4 class="recent-post-title">README</h4>
-                                    
-                                    
-                                        <span class="recent-post-date">2026/02/10</span>
-                                    
-                                </div>
-                            </a>
-                        </li>
-                    
-                        <li class="recent-post-item">
                             <a href="../linux/kali-linux-installing-guide/" class="recent-post-link">
                                 <span class="recent-post-icon">📄</span>
                                 <div class="recent-post-info">
@@ -899,6 +886,19 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <span class="recent-post-icon">📄</span>
                                 <div class="recent-post-info">
                                     <h4 class="recent-post-title">IP-Mac Address Basic and Concepts</h4>
+                                    
+                                    
+                                        <span class="recent-post-date" title="آخرین بروزرسانی">🔄 2026/02/09</span>
+                                    
+                                </div>
+                            </a>
+                        </li>
+                    
+                        <li class="recent-post-item">
+                            <a href="../network/network-commands-file-printer-sharing/" class="recent-post-link">
+                                <span class="recent-post-icon">📄</span>
+                                <div class="recent-post-info">
+                                    <h4 class="recent-post-title">Network Commands &amp; File Printer Sharing</h4>
                                     
                                     
                                         <span class="recent-post-date" title="آخرین بروزرسانی">🔄 2026/02/09</span>
@@ -1068,7 +1068,7 @@ function toggleDropdown(type) {
 </script>
 
 
-<script src="../assets/js/articles-loader.js"></script>
+<script src="../assets/js/load-more.js"></script>
 
 
 <script src="../assets/js/filters.js"></script>
@@ -1081,10 +1081,11 @@ function toggleDropdown(type) {
                 <p class="category-description">مجموعه مقالات تخصصی امنیت سایبری شامل مفاهیم دفاع و حمله، تحلیل تهدیدات، امنیت شبکه، امنیت سیستم‌ها و راهکارهای عملی محافظت از زیرساخت‌های دیجیتال.</p>
             
 
-            <div class="articles-grid">
+            <div class="articles-grid" id="articlesGrid">
                 
-
-                    <article class="article-card">
+                
+                
+                    <article class="article-card" data-reading-time="7" data-difficulty="intermediate" data-lab-required="true" data-post-type="آموزشی">
                         <h2 class="article-card-title">
                             <a href="../cyber-security/sans-401/sans-401-defense-in-depth-4012/">SANS-401-Defense-in-Depth (401.2)</a>
                         </h2>
@@ -1189,8 +1190,7 @@ function toggleDropdown(type) {
                         </div>
                     </article>
                 
-
-                    <article class="article-card">
+                    <article class="article-card" data-reading-time="7" data-difficulty="beginner" data-lab-required="false" data-post-type="آموزشی">
                         <h2 class="article-card-title">
                             <a href="../cyber-security/sans-401/sans-401-networking-and-protocols-4011/">SANS-401-Networking and Protocols (401.1)</a>
                         </h2>
@@ -1290,8 +1290,7 @@ function toggleDropdown(type) {
                         </div>
                     </article>
                 
-
-                    <article class="article-card">
+                    <article class="article-card" data-reading-time="10" data-difficulty="intermediate" data-lab-required="true" data-post-type="آموزشی">
                         <h2 class="article-card-title">
                             <a href="../cyber-security/sans-401/sans-401-password-cracking/">SANS-401-Password Cracking</a>
                         </h2>
@@ -1396,8 +1395,7 @@ function toggleDropdown(type) {
                         </div>
                     </article>
                 
-
-                    <article class="article-card">
+                    <article class="article-card" data-reading-time="8" data-difficulty="medium" data-lab-required="true" data-post-type="آموزشی">
                         <h2 class="article-card-title">
                             <a href="../cyber-security/sans-401/sans-401-virtualization-cloud-infrastructure4011/">SANS-401-Virtualization &amp; Cloud Infrastructure(401.1)</a>
                         </h2>
@@ -1503,28 +1501,6 @@ function toggleDropdown(type) {
                     </article>
                 
             </div>
-
-            
-    <ul class="pagination pagination-default">
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
-      </li>
-      <li class="page-item">
-        <a href="../cyber-security/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
-      </li>
-      <li class="page-item">
-        <a href="../cyber-security/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="../cyber-security/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul>
         </div>
     </div>
 </div>

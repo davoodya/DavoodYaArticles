@@ -24,12 +24,12 @@
     
     {{- $featuredImage := "" -}}
     {{- if .Params.featured_image -}}
-      {{- $featuredImage = .Params.featured_image -}}
+      {{- $featuredImage = .Params.featured_image | relURL -}}
     {{- else if .Params.images -}}
       {{- if reflect.IsSlice .Params.images -}}
-        {{- $featuredImage = index .Params.images 0 -}}
+        {{- $featuredImage = (index .Params.images 0) | relURL -}}
       {{- else -}}
-        {{- $featuredImage = .Params.images -}}
+        {{- $featuredImage = .Params.images | relURL -}}
       {{- end -}}
     {{- end -}}
     
