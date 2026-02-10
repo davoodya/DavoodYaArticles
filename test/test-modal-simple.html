@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تست باز شدن مودال</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background: #0a0a0a;
+            color: #fff;
+            direction: rtl;
+        }
+        
+        .test-btn {
+            background: #00ff41;
+            color: #000;
+            border: none;
+            padding: 20px 40px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+        .test-btn:hover {
+            background: #3aaddf;
+        }
+        
+        .floating-filter-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #00ff41;
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 255, 65, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .floating-filter-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 255, 65, 0.6);
+        }
+        
+        .filter-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .filter-modal-content {
+            background: #1a1a1a;
+            border: 2px solid #00ff41;
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 600px;
+            width: 90%;
+            transform: scale(0.9);
+            transition: transform 0.4s ease;
+        }
+        
+        .filter-modal.active .filter-modal-content {
+            transform: scale(1);
+        }
+        
+        .filter-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 9998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .close-btn {
+            background: #ff4136;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        .log {
+            background: #000;
+            color: #00ff41;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-family: monospace;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 تست باز شدن مودال فیلتر</h1>
+    
+    <div style="margin: 30px 0;">
+        <button class="test-btn" onclick="testOpenModal()">تست 1: باز کردن با JavaScript</button>
+        <button class="test-btn" onclick="testCloseModal()">تست 2: بستن با JavaScript</button>
+        <button class="test-btn" onclick="testToggle()">تست 3: Toggle</button>
+    </div>
+    
+    <p>وضعیت: <strong id="status">در انتظار تست...</strong></p>
+    
+    <!-- Floating Button -->
+    <button class="floating-filter-btn" onclick="openFilterModal()">
+        فیلتر
+    </button>
+    
+    <!-- Modal -->
+    <div class="filter-modal" id="filterModal">
+        <div class="filter-modal-content">
+            <h2>مودال فیلتر</h2>
+            <p>اگر این پیام را می‌بینید، مودال درست کار می‌کند! ✅</p>
+            <button class="close-btn" onclick="closeFilterModal()">بستن</button>
+        </div>
+    </div>
+    
+    <!-- Overlay -->
+    <div class="filter-modal-overlay" id="filterModalOverlay" onclick="closeFilterModal()"></div>
+    
+    <!-- Log -->
+    <div class="log" id="log">
+        <strong>لاگ عملیات:</strong><br>
+    </div>
+    
+    <!-- Load filters.js -->
+    <script src="../public/assets/js/filters.js"></script>
+    
+    <script>
+        // Capture logs
+        const logDiv = document.getElementById('log');
+        const statusEl = document.getElementById('status');
+        const originalLog = console.log;
+        const originalError = console.error;
+        
+        function addLog(msg, type = 'info') {
+            const color = type === 'error' ? '#ff4136' : type === 'success' ? '#00ff41' : '#3aaddf';
+            logDiv.innerHTML += `<div style="color: ${color};">${new Date().toLocaleTimeString()}: ${msg}</div>`;
+            logDiv.scrollTop = logDiv.scrollHeight;
+            originalLog(msg);
+        }
+        
+        console.log = function(...args) {
+            addLog(args.join(' '), 'info');
+        };
+        
+        console.error = function(...args) {
+            addLog(args.join(' '), 'error');
+            originalError.apply(console, args);
+        };
+        
+        // Test functions
+        function testOpenModal() {
+            addLog('تست 1: تلاش برای باز کردن مودال...', 'info');
+            statusEl.textContent = 'در حال باز کردن...';
+            
+            if (typeof openFilterModal === 'function') {
+                openFilterModal();
+                statusEl.textContent = 'مودال باز شد! ✅';
+                addLog('مودال با موفقیت باز شد', 'success');
+            } else {
+                statusEl.textContent = 'خطا: تابع openFilterModal پیدا نشد ❌';
+                addLog('خطا: تابع openFilterModal تعریف نشده است', 'error');
+            }
+        }
+        
+        function testCloseModal() {
+            addLog('تست 2: تلاش برای بستن مودال...', 'info');
+            statusEl.textContent = 'در حال بستن...';
+            
+            if (typeof closeFilterModal === 'function') {
+                closeFilterModal();
+                statusEl.textContent = 'مودال بسته شد! ✅';
+                addLog('مودال با موفقیت بسته شد', 'success');
+            } else {
+                statusEl.textContent = 'خطا: تابع closeFilterModal پیدا نشد ❌';
+                addLog('خطا: تابع closeFilterModal تعریف نشده است', 'error');
+            }
+        }
+        
+        function testToggle() {
+            addLog('تست 3: Toggle مودال...', 'info');
+            const modal = document.getElementById('filterModal');
+            
+            if (modal.classList.contains('active')) {
+                testCloseModal();
+            } else {
+                testOpenModal();
+            }
+        }
+        
+        // Check on load
+        window.addEventListener('load', function() {
+            addLog('صفحه بارگذاری شد', 'info');
+            
+            // Check if functions exist
+            if (typeof openFilterModal === 'function') {
+                addLog('✅ تابع openFilterModal یافت شد', 'success');
+            } else {
+                addLog('❌ تابع openFilterModal یافت نشد', 'error');
+            }
+            
+            if (typeof closeFilterModal === 'function') {
+                addLog('✅ تابع closeFilterModal یافت شد', 'success');
+            } else {
+                addLog('❌ تابع closeFilterModal یافت نشد', 'error');
+            }
+            
+            // Check DOM elements
+            const modal = document.getElementById('filterModal');
+            const overlay = document.getElementById('filterModalOverlay');
+            
+            if (modal) {
+                addLog('✅ المنت filterModal یافت شد', 'success');
+            } else {
+                addLog('❌ المنت filterModal یافت نشد', 'error');
+            }
+            
+            if (overlay) {
+                addLog('✅ المنت filterModalOverlay یافت شد', 'success');
+            } else {
+                addLog('❌ المنت filterModalOverlay یافت نشد', 'error');
+            }
+            
+            statusEl.textContent = 'آماده برای تست!';
+        });
+    </script>
+</body>
+</html>

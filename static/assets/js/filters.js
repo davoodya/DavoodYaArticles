@@ -5,6 +5,145 @@
 (function() {
     'use strict';
     
+    // Update filter results count - تابع قابل دسترسی در scope module
+    function updateFilterResults(count) {
+        const resultsElement = document.getElementById('filterResultsCount');
+        if (resultsElement) {
+            if (count === undefined) {
+                const articles = document.querySelectorAll('.article-card');
+                count = articles.length;
+            }
+            resultsElement.textContent = `${count} مقاله یافت شد`;
+            console.log(`[Filter System] Results updated: ${count} articles`);
+        }
+    }
+    
+    // Show/hide no results message - تابع قابل دسترسی در scope module
+    function showNoResultsMessage(count) {
+        let messageEl = document.querySelector('.filter-no-results');
+        const articlesGrid = document.querySelector('.articles-grid');
+        
+        if (count === 0) {
+            if (!messageEl) {
+                messageEl = document.createElement('div');
+                messageEl.className = 'filter-no-results';
+                messageEl.innerHTML = `
+                    <div class="no-results-icon">🔍</div>
+                    <h3>هیچ مقاله‌ای یافت نشد</h3>
+                    <p>لطفاً فیلترهای خود را تغییر دهید یا بازنشانی کنید</p>
+                `;
+                if (articlesGrid) {
+                    articlesGrid.after(messageEl);
+                }
+            }
+            if (messageEl) {
+                messageEl.style.display = 'block';
+            }
+        } else {
+            if (messageEl) {
+                messageEl.style.display = 'none';
+            }
+        }
+    }
+    
+    // Main filter function - تابع قابل دسترسی در scope module
+    function filterArticles(minTime, maxTime, difficulties, labRequired, postTypes) {
+        console.log('[Filter System] Starting filter process...');
+        
+        const articles = document.querySelectorAll('.article-card');
+        let visibleCount = 0;
+        
+        articles.forEach((article, index) => {
+            let show = true;
+            const reasons = [];
+            
+            // Get article data
+            const articleTimeStr = article.dataset.readingTime;
+            const articleTime = articleTimeStr !== '' ? parseInt(articleTimeStr) : null;
+            const articleDifficulty = article.dataset.difficulty || null;
+            const articleLabRequired = article.dataset.labRequired === 'true';
+            const articlePostType = article.dataset.postType || null;
+            
+            console.log(`[Article ${index + 1}] Checking:`, {
+                articleTime,
+                articleDifficulty,
+                articleLabRequired,
+                articlePostType
+            });
+            
+            // Reading Time filter
+            if (articleTime !== null && articleTime > 0) {
+                if (articleTime < minTime || articleTime > maxTime) {
+                    show = false;
+                    reasons.push(`Time ${articleTime} not in range [${minTime}, ${maxTime}]`);
+                }
+            } else {
+                if (minTime > 0) {
+                    show = false;
+                    reasons.push(`Article has no reading time, but minimum filter is ${minTime}`);
+                }
+            }
+            
+            // Difficulty filter
+            if (articleDifficulty && difficulties.length > 0) {
+                if (!difficulties.includes(articleDifficulty)) {
+                    show = false;
+                    reasons.push(`Difficulty "${articleDifficulty}" not in [${difficulties.join(', ')}]`);
+                }
+            } else if (!articleDifficulty && difficulties.length > 0 && difficulties.length < 4) {
+                show = false;
+                reasons.push(`Article has no difficulty, but filter is active`);
+            }
+            
+            // Lab Required filter
+            const labFilterValues = labRequired.map(val => val === 'true');
+            
+            if (labFilterValues.length > 0 && labFilterValues.length < 2) {
+                const requiredValue = labFilterValues[0];
+                if (articleLabRequired !== requiredValue) {
+                    show = false;
+                    reasons.push(`Lab required "${articleLabRequired}" does not match filter "${requiredValue}"`);
+                }
+            }
+            
+            // Post Type filter
+            if (articlePostType && postTypes.length > 0) {
+                if (!postTypes.includes(articlePostType)) {
+                    show = false;
+                    reasons.push(`Post type "${articlePostType}" not in [${postTypes.join(', ')}]`);
+                }
+            } else if (!articlePostType && postTypes.length > 0 && postTypes.length < 7) {
+                show = false;
+                reasons.push(`Article has no post type, but filter is active`);
+            }
+            
+            // Show or hide article with animation
+            if (show) {
+                console.log(`[Article ${index + 1}] ✅ VISIBLE`);
+                article.style.display = '';
+                article.style.animation = 'fadeIn 0.4s ease';
+                visibleCount++;
+            } else {
+                console.log(`[Article ${index + 1}] ❌ HIDDEN - Reasons:`, reasons);
+                article.style.animation = 'fadeOut 0.3s ease';
+                setTimeout(() => {
+                    article.style.display = 'none';
+                }, 300);
+            }
+        });
+        
+        console.log(`[Filter System] Filter complete. Visible: ${visibleCount}/${articles.length}`);
+        
+        updateFilterResults(visibleCount);
+        showNoResultsMessage(visibleCount);
+        
+        // Scroll to top of articles
+        const articlesGrid = document.querySelector('.articles-grid');
+        if (articlesGrid && window.innerWidth >= 768) {
+            articlesGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+    
     // Initialize filters on page load
     document.addEventListener('DOMContentLoaded', function() {
         console.log('[Filter System] Initializing...');
@@ -15,7 +154,8 @@
         
         if (articles.length === 0) {
             console.log('[Filter System] No articles found, hiding filter elements');
-            hideFilterElements();
+            const floatingBtn = document.querySelector('.floating-filter-btn');
+            if (floatingBtn) floatingBtn.style.display = 'none';
             return;
         }
         
@@ -26,26 +166,16 @@
         console.log('[Filter System] Initialization complete');
     });
     
-    // Hide filter elements when no articles present
-    function hideFilterElements() {
-        const filterWidget = document.querySelector('.sidebar-widget:has(.filter-dropdown-btn)');
-        const floatingBtn = document.querySelector('.floating-filter-btn');
-        
-        if (filterWidget) filterWidget.style.display = 'none';
-        if (floatingBtn) floatingBtn.style.display = 'none';
-    }
-    
     // Initialize filter system
     function initializeFilters() {
         const articles = document.querySelectorAll('.article-card');
         console.log('[Filter System] Extracting article data from', articles.length, 'articles');
         
         articles.forEach((article, index) => {
-            // Find all badges in this article
             const badges = article.querySelectorAll('.article-badge');
             console.log(`[Article ${index + 1}] Found ${badges.length} badges`);
             
-            let readingTime = null; // null = no data
+            let readingTime = null;
             let difficulty = null;
             let labRequired = null;
             let postType = null;
@@ -96,12 +226,10 @@
                 }
             });
             
-            // If labRequired is still null, it means no badge-lab exists, so it's false
             if (labRequired === null) {
                 labRequired = false;
             }
             
-            // Set data attributes (convert null to empty string for dataset)
             article.dataset.readingTime = readingTime !== null ? readingTime : '';
             article.dataset.difficulty = difficulty !== null ? difficulty : '';
             article.dataset.labRequired = labRequired;
@@ -122,20 +250,11 @@
     function setupRangeSliders() {
         console.log('[Filter System] Setting up range sliders');
         
-        // Desktop sliders
         setupSliderPair(
             'readingTimeMinRange',
             'readingTimeMaxRange',
             'readingTimeMin',
             'readingTimeMax'
-        );
-        
-        // Mobile sliders
-        setupSliderPair(
-            'mobileReadingTimeMinRange',
-            'mobileReadingTimeMaxRange',
-            'mobileReadingTimeMin',
-            'mobileReadingTimeMax'
         );
     }
     
@@ -178,9 +297,13 @@
         });
     }
     
-    // Apply filters (Desktop)
+    // ===========================
+    // Global Functions (accessible from HTML onclick)
+    // ===========================
+    
+    // Apply filters
     window.applyFilters = function() {
-        console.log('[Filter System] Applying filters (Desktop)...');
+        console.log('[Filter System] Applying filters...');
         
         const minTime = parseInt(document.getElementById('readingTimeMinRange').value);
         const maxTime = parseInt(document.getElementById('readingTimeMaxRange').value);
@@ -203,175 +326,12 @@
         });
         
         filterArticles(minTime, maxTime, selectedDifficulties, selectedLabRequired, selectedPostTypes);
+        window.closeFilterModal();
     };
     
-    // Apply filters (Mobile)
-    window.applyMobileFilters = function() {
-        console.log('[Filter System] Applying filters (Mobile)...');
-        
-        const minTime = parseInt(document.getElementById('mobileReadingTimeMinRange').value);
-        const maxTime = parseInt(document.getElementById('mobileReadingTimeMaxRange').value);
-        
-        const selectedDifficulties = Array.from(document.querySelectorAll('input[name="mobile-difficulty"]:checked'))
-            .map(input => input.value);
-        
-        const selectedLabRequired = Array.from(document.querySelectorAll('input[name="mobile-lab_required"]:checked'))
-            .map(input => input.value);
-        
-        const selectedPostTypes = Array.from(document.querySelectorAll('input[name="mobile-post_type"]:checked'))
-            .map(input => input.value);
-        
-        console.log('[Filter System] Filter criteria (Mobile):', {
-            minTime,
-            maxTime,
-            selectedDifficulties,
-            selectedLabRequired,
-            selectedPostTypes
-        });
-        
-        filterArticles(minTime, maxTime, selectedDifficulties, selectedLabRequired, selectedPostTypes);
-        closeMobileFilters();
-    };
-    
-    // Main filter function
-    function filterArticles(minTime, maxTime, difficulties, labRequired, postTypes) {
-        console.log('[Filter System] Starting filter process...');
-        
-        const articles = document.querySelectorAll('.article-card');
-        let visibleCount = 0;
-        
-        articles.forEach((article, index) => {
-            let show = true;
-            const reasons = [];
-            
-            // Get article data
-            const articleTimeStr = article.dataset.readingTime;
-            const articleTime = articleTimeStr !== '' ? parseInt(articleTimeStr) : null;
-            const articleDifficulty = article.dataset.difficulty || null;
-            const articleLabRequired = article.dataset.labRequired === 'true';
-            const articlePostType = article.dataset.postType || null;
-            
-            console.log(`[Article ${index + 1}] Checking:`, {
-                articleTime,
-                articleDifficulty,
-                articleLabRequired,
-                articlePostType
-            });
-            
-            // Reading Time filter
-            // Only filter if article HAS reading time AND it's outside the range
-            if (articleTime !== null && articleTime > 0) {
-                if (articleTime < minTime || articleTime > maxTime) {
-                    show = false;
-                    reasons.push(`Time ${articleTime} not in range [${minTime}, ${maxTime}]`);
-                }
-            } else {
-                // Article has no reading time - show it if range includes 0
-                if (minTime > 0) {
-                    show = false;
-                    reasons.push(`Article has no reading time, but minimum filter is ${minTime}`);
-                }
-            }
-            
-            // Difficulty filter
-            // Only filter if article HAS difficulty AND at least one difficulty is selected
-            if (articleDifficulty && difficulties.length > 0) {
-                if (!difficulties.includes(articleDifficulty)) {
-                    show = false;
-                    reasons.push(`Difficulty "${articleDifficulty}" not in [${difficulties.join(', ')}]`);
-                }
-            } else if (!articleDifficulty && difficulties.length > 0 && difficulties.length < 4) {
-                // Article has no difficulty, and not all difficulties are selected
-                // Hide it because user is filtering by specific difficulties
-                show = false;
-                reasons.push(`Article has no difficulty, but filter is active`);
-            }
-            
-            // Lab Required filter
-            // Convert string values to booleans for comparison
-            const labFilterValues = labRequired.map(val => val === 'true');
-            
-            if (labFilterValues.length > 0 && labFilterValues.length < 2) {
-                // Only one option selected (either true or false)
-                const requiredValue = labFilterValues[0];
-                if (articleLabRequired !== requiredValue) {
-                    show = false;
-                    reasons.push(`Lab required "${articleLabRequired}" does not match filter "${requiredValue}"`);
-                }
-            }
-            // If both selected or none selected, show all
-            
-            // Post Type filter
-            // Only filter if article HAS post type AND at least one type is selected
-            if (articlePostType && postTypes.length > 0) {
-                if (!postTypes.includes(articlePostType)) {
-                    show = false;
-                    reasons.push(`Post type "${articlePostType}" not in [${postTypes.join(', ')}]`);
-                }
-            } else if (!articlePostType && postTypes.length > 0 && postTypes.length < 7) {
-                // Article has no post type, and not all types are selected
-                show = false;
-                reasons.push(`Article has no post type, but filter is active`);
-            }
-            
-            // Show or hide article with animation
-            if (show) {
-                console.log(`[Article ${index + 1}] ✅ VISIBLE`);
-                article.style.display = '';
-                article.style.animation = 'fadeIn 0.4s ease';
-                visibleCount++;
-            } else {
-                console.log(`[Article ${index + 1}] ❌ HIDDEN - Reasons:`, reasons);
-                article.style.animation = 'fadeOut 0.3s ease';
-                setTimeout(() => {
-                    article.style.display = 'none';
-                }, 300);
-            }
-        });
-        
-        console.log(`[Filter System] Filter complete. Visible: ${visibleCount}/${articles.length}`);
-        
-        updateFilterResults(visibleCount);
-        showNoResultsMessage(visibleCount);
-        
-        // Scroll to top of articles (desktop only)
-        const articlesGrid = document.querySelector('.articles-grid');
-        if (articlesGrid && window.innerWidth >= 768) {
-            articlesGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
-    
-    // Show/hide no results message
-    function showNoResultsMessage(count) {
-        let messageEl = document.querySelector('.filter-no-results');
-        const articlesGrid = document.querySelector('.articles-grid');
-        
-        if (count === 0) {
-            if (!messageEl) {
-                messageEl = document.createElement('div');
-                messageEl.className = 'filter-no-results';
-                messageEl.innerHTML = `
-                    <div class="no-results-icon">🔍</div>
-                    <h3>هیچ مقاله‌ای یافت نشد</h3>
-                    <p>لطفاً فیلترهای خود را تغییر دهید یا بازنشانی کنید</p>
-                `;
-                if (articlesGrid) {
-                    articlesGrid.after(messageEl);
-                }
-            }
-            if (messageEl) {
-                messageEl.style.display = 'block';
-            }
-        } else {
-            if (messageEl) {
-                messageEl.style.display = 'none';
-            }
-        }
-    }
-    
-    // Reset filters (Desktop)
+    // Reset filters
     window.resetFilters = function() {
-        console.log('[Filter System] Resetting filters (Desktop)...');
+        console.log('[Filter System] Resetting filters...');
         
         // Reset range sliders
         document.getElementById('readingTimeMinRange').value = 0;
@@ -385,58 +345,32 @@
         document.querySelectorAll('input[name="post_type"]').forEach(input => input.checked = true);
         
         // Apply filters (show all)
-        applyFilters();
+        window.applyFilters();
     };
     
-    // Reset filters (Mobile)
-    window.resetMobileFilters = function() {
-        console.log('[Filter System] Resetting filters (Mobile)...');
-        
-        // Reset range sliders
-        document.getElementById('mobileReadingTimeMinRange').value = 0;
-        document.getElementById('mobileReadingTimeMaxRange').value = 60;
-        document.getElementById('mobileReadingTimeMin').textContent = 0;
-        document.getElementById('mobileReadingTimeMax').textContent = 60;
-        
-        // Check all checkboxes
-        document.querySelectorAll('input[name="mobile-difficulty"]').forEach(input => input.checked = true);
-        document.querySelectorAll('input[name="mobile-lab_required"]').forEach(input => input.checked = true);
-        document.querySelectorAll('input[name="mobile-post_type"]').forEach(input => input.checked = true);
-        
-        // Apply filters (show all)
-        applyMobileFilters();
-    };
-    
-    // Update filter results count
-    function updateFilterResults(count) {
-        const resultsElement = document.getElementById('filterResultsCount');
-        if (resultsElement) {
-            if (count === undefined) {
-                const articles = document.querySelectorAll('.article-card');
-                count = articles.length;
-            }
-            resultsElement.textContent = `${count} مقاله یافت شد`;
-            console.log(`[Filter System] Results updated: ${count} articles`);
-        }
-    }
-    
-    // Mobile filter modal functions
-    window.openMobileFilters = function() {
-        console.log('[Filter System] Opening mobile filters...');
-        const modal = document.getElementById('mobileFilterModal');
-        const overlay = document.getElementById('mobileFilterOverlay');
+    // Open filter modal
+    window.openFilterModal = function() {
+        console.log('[Filter System] Opening filter modal...');
+        const modal = document.getElementById('filterModal');
+        const overlay = document.getElementById('filterModalOverlay');
         
         if (modal && overlay) {
             modal.classList.add('active');
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
+            
+            // Update results count when modal opens
+            updateFilterResults();
+        } else {
+            console.error('[Filter System] Modal or overlay not found!');
         }
     };
     
-    window.closeMobileFilters = function() {
-        console.log('[Filter System] Closing mobile filters...');
-        const modal = document.getElementById('mobileFilterModal');
-        const overlay = document.getElementById('mobileFilterOverlay');
+    // Close filter modal
+    window.closeFilterModal = function() {
+        console.log('[Filter System] Closing filter modal...');
+        const modal = document.getElementById('filterModal');
+        const overlay = document.getElementById('filterModalOverlay');
         
         if (modal && overlay) {
             modal.classList.remove('active');
@@ -445,17 +379,17 @@
         }
     };
     
-    // Close mobile filters on ESC key
+    // Close filter modal on ESC key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
-            const modal = document.getElementById('mobileFilterModal');
+            const modal = document.getElementById('filterModal');
             if (modal && modal.classList.contains('active')) {
-                closeMobileFilters();
+                window.closeFilterModal();
             }
         }
     });
     
-    // Add fade animations
+    // Add fade animations and styles
     const style = document.createElement('style');
     style.textContent = `
         @keyframes fadeIn {

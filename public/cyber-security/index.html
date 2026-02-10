@@ -45,7 +45,7 @@
     
     
     
-    <link rel="stylesheet" href="../css/main.eb930473c2ae81adef8e6ab071f4787f3bd5ef64243fb64ff5216d0a8c347d47.css" integrity="sha256-65MEc8Kuga3vjmqwcfR4fzvV72QkP7ZP9SFtCow0fUc=">
+    <link rel="stylesheet" href="../css/main.61b92e77ce054996c973add4f8d230894afe1b4dfe7c6ee5e802cbdc2e90aba6.css" integrity="sha256-Ybkud84FSZbJc63U&#43;NIwiUr&#43;G03&#43;fG7l6ALL3C6Qq6Y=">
     
     
     
@@ -436,7 +436,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                         
                             <a href="../tags/cybersecurity" class="tag-badge">
-                                cybersecurity <span class="tag-count">7</span>
+                                cybersecurity <span class="tag-count">2</span>
                             </a>
                             
                         
@@ -768,143 +768,12 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 
-    
-    <div class="sidebar-widget">
-        <h3 class="sidebar-widget-title">🔧 فیلتر بر اساس ویژگی</h3>
-        <div class="sidebar-widget-content">
-            <button class="dropdown-btn filter-dropdown-btn" onclick="toggleDropdown('filters')">
-                <span class="category-icon">▾</span>
-                <span class="category-name">نمایش فیلترها</span>
-            </button>
-            <div class="filter-dropdown-content" id="filters-dropdown">
-                
-                
-                <div class="filter-group">
-                    <h4 class="filter-title">⏱️ مدت زمان مطالعه</h4>
-                    <div class="filter-range-wrapper">
-                        <div class="range-values">
-                            <span id="readingTimeMin">0</span> -
-                            <span id="readingTimeMax">60</span>
-                            <span>دقیقه</span>
-                        </div>
-                        <input type="range" 
-                               id="readingTimeMinRange" 
-                               class="filter-range" 
-                               min="0" 
-                               max="60" 
-                               value="0" 
-                               step="1">
-                        <input type="range" 
-                               id="readingTimeMaxRange" 
-                               class="filter-range" 
-                               min="0" 
-                               max="60" 
-                               value="60" 
-                               step="1">
-                    </div>
-                </div>
-
-                
-                <div class="filter-group">
-                    <h4 class="filter-title">📊 سطح دشواری</h4>
-                    <div class="filter-checkboxes">
-                        <label class="filter-checkbox">
-                            <input type="checkbox" name="difficulty" value="beginner" checked>
-                            <span class="checkbox-label">مبتدی</span>
-                        </label>
-                        <label class="filter-checkbox">
-                            <input type="checkbox" name="difficulty" value="medium" checked>
-                            <span class="checkbox-label">متوسط</span>
-                        </label>
-                        <label class="filter-checkbox">
-                            <input type="checkbox" name="difficulty" value="intermediate" checked>
-                            <span class="checkbox-label">حرفه‌ای</span>
-                        </label>
-                        <label class="filter-checkbox">
-                            <input type="checkbox" name="difficulty" value="advanced" checked>
-                            <span class="checkbox-label">تخصصی</span>
-                        </label>
-                    </div>
-                </div>
-
-                
-                <div class="filter-group">
-                    <h4 class="filter-title">🔬 نیاز به تمرین عملی</h4>
-                    <div class="filter-checkboxes">
-                        <label class="filter-checkbox">
-                            <input type="checkbox" name="lab_required" value="true" checked>
-                            <span class="checkbox-label">دارد</span>
-                        </label>
-                        <label class="filter-checkbox">
-                            <input type="checkbox" name="lab_required" value="false" checked>
-                            <span class="checkbox-label">ندارد</span>
-                        </label>
-                    </div>
-                </div>
-
-                
-                <div class="filter-group">
-                    <h4 class="filter-title">📄 نوع پست</h4>
-                    <div class="filter-checkboxes">
-                        <label class="filter-checkbox">
-                            <input type="checkbox" name="post_type" value="آموزشی" checked>
-                            <span class="checkbox-label">آموزشی</span>
-                        </label>
-                        <label class="filter-checkbox">
-                            <input type="checkbox" name="post_type" value="مقاله" checked>
-                            <span class="checkbox-label">مقاله</span>
-                        </label>
-                        <label class="filter-checkbox">
-                            <input type="checkbox" name="post_type" value="اسکریپت" checked>
-                            <span class="checkbox-label">اسکریپت</span>
-                        </label>
-                        <label class="filter-checkbox">
-                            <input type="checkbox" name="post_type" value="خبر" checked>
-                            <span class="checkbox-label">خبر</span>
-                        </label>
-                        <label class="filter-checkbox">
-                            <input type="checkbox" name="post_type" value="دستور العمل" checked>
-                            <span class="checkbox-label">دستور العمل</span>
-                        </label>
-                        <label class="filter-checkbox">
-                            <input type="checkbox" name="post_type" value="معرفی" checked>
-                            <span class="checkbox-label">معرفی</span>
-                        </label>
-                        <label class="filter-checkbox">
-                            <input type="checkbox" name="post_type" value="ابزار" checked>
-                            <span class="checkbox-label">ابزار</span>
-                        </label>
-                    </div>
-                </div>
-
-                
-                <div class="filter-actions">
-                    <button class="filter-apply-btn" onclick="applyFilters()">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                        </svg>
-                        اعمال فیلتر
-                    </button>
-                    <button class="filter-reset-btn" onclick="resetFilters()">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
-                        </svg>
-                        بازنشانی
-                    </button>
-                </div>
-
-                
-                <div class="filter-results">
-                    <span id="filterResultsCount">در حال محاسبه...</span>
-                </div>
-            </div>
-        </div>
-    </div>
+=======
 
 </aside>
 
 
-<button class="floating-filter-btn" onclick="openMobileFilters()" aria-label="فیلترها">
+<button class="floating-filter-btn" onclick="openFilterModal()" aria-label="فیلترها">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
     </svg>
@@ -912,31 +781,32 @@ document.addEventListener('DOMContentLoaded', function() {
 </button>
 
 
-<div class="mobile-filter-modal" id="mobileFilterModal">
-    <div class="mobile-filter-content">
-        <div class="mobile-filter-header">
+<div class="filter-modal" id="filterModal">
+    <div class="filter-modal-content">
+        <div class="filter-modal-header">
             <h3>🔧 فیلتر بر اساس ویژگی</h3>
-            <button class="mobile-filter-close" onclick="closeMobileFilters()">×</button>
+            <button class="filter-modal-close" onclick="closeFilterModal()" aria-label="بستن">×</button>
         </div>
-        <div class="mobile-filter-body">
+        
+        <div class="filter-modal-body">
             
             <div class="filter-group">
                 <h4 class="filter-title">⏱️ مدت زمان مطالعه</h4>
                 <div class="filter-range-wrapper">
                     <div class="range-values">
-                        <span id="mobileReadingTimeMin">0</span> -
-                        <span id="mobileReadingTimeMax">60</span>
+                        <span id="readingTimeMin">0</span> -
+                        <span id="readingTimeMax">60</span>
                         <span>دقیقه</span>
                     </div>
                     <input type="range" 
-                           id="mobileReadingTimeMinRange" 
+                           id="readingTimeMinRange" 
                            class="filter-range" 
                            min="0" 
                            max="60" 
                            value="0" 
                            step="1">
                     <input type="range" 
-                           id="mobileReadingTimeMaxRange" 
+                           id="readingTimeMaxRange" 
                            class="filter-range" 
                            min="0" 
                            max="60" 
@@ -950,19 +820,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h4 class="filter-title">📊 سطح دشواری</h4>
                 <div class="filter-checkboxes">
                     <label class="filter-checkbox">
-                        <input type="checkbox" name="mobile-difficulty" value="beginner" checked>
+                        <input type="checkbox" name="difficulty" value="beginner" checked>
                         <span class="checkbox-label">مبتدی</span>
                     </label>
                     <label class="filter-checkbox">
-                        <input type="checkbox" name="mobile-difficulty" value="medium" checked>
+                        <input type="checkbox" name="difficulty" value="medium" checked>
                         <span class="checkbox-label">متوسط</span>
                     </label>
                     <label class="filter-checkbox">
-                        <input type="checkbox" name="mobile-difficulty" value="intermediate" checked>
+                        <input type="checkbox" name="difficulty" value="intermediate" checked>
                         <span class="checkbox-label">حرفه‌ای</span>
                     </label>
                     <label class="filter-checkbox">
-                        <input type="checkbox" name="mobile-difficulty" value="advanced" checked>
+                        <input type="checkbox" name="difficulty" value="advanced" checked>
                         <span class="checkbox-label">تخصصی</span>
                     </label>
                 </div>
@@ -973,11 +843,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h4 class="filter-title">🔬 نیاز به تمرین عملی</h4>
                 <div class="filter-checkboxes">
                     <label class="filter-checkbox">
-                        <input type="checkbox" name="mobile-lab_required" value="true" checked>
+                        <input type="checkbox" name="lab_required" value="true" checked>
                         <span class="checkbox-label">دارد</span>
                     </label>
                     <label class="filter-checkbox">
-                        <input type="checkbox" name="mobile-lab_required" value="false" checked>
+                        <input type="checkbox" name="lab_required" value="false" checked>
                         <span class="checkbox-label">ندارد</span>
                     </label>
                 </div>
@@ -988,44 +858,50 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h4 class="filter-title">📄 نوع پست</h4>
                 <div class="filter-checkboxes">
                     <label class="filter-checkbox">
-                        <input type="checkbox" name="mobile-post_type" value="آموزشی" checked>
+                        <input type="checkbox" name="post_type" value="آموزشی" checked>
                         <span class="checkbox-label">آموزشی</span>
                     </label>
                     <label class="filter-checkbox">
-                        <input type="checkbox" name="mobile-post_type" value="مقاله" checked>
+                        <input type="checkbox" name="post_type" value="مقاله" checked>
                         <span class="checkbox-label">مقاله</span>
                     </label>
                     <label class="filter-checkbox">
-                        <input type="checkbox" name="mobile-post_type" value="اسکریپت" checked>
+                        <input type="checkbox" name="post_type" value="اسکریپت" checked>
                         <span class="checkbox-label">اسکریپت</span>
                     </label>
                     <label class="filter-checkbox">
-                        <input type="checkbox" name="mobile-post_type" value="خبر" checked>
+                        <input type="checkbox" name="post_type" value="خبر" checked>
                         <span class="checkbox-label">خبر</span>
                     </label>
                     <label class="filter-checkbox">
-                        <input type="checkbox" name="mobile-post_type" value="دستور العمل" checked>
+                        <input type="checkbox" name="post_type" value="دستور العمل" checked>
                         <span class="checkbox-label">دستور العمل</span>
                     </label>
                     <label class="filter-checkbox">
-                        <input type="checkbox" name="mobile-post_type" value="معرفی" checked>
+                        <input type="checkbox" name="post_type" value="معرفی" checked>
                         <span class="checkbox-label">معرفی</span>
                     </label>
                     <label class="filter-checkbox">
-                        <input type="checkbox" name="mobile-post_type" value="ابزار" checked>
+                        <input type="checkbox" name="post_type" value="ابزار" checked>
                         <span class="checkbox-label">ابزار</span>
                     </label>
                 </div>
             </div>
+            
+            
+            <div class="filter-results">
+                <span id="filterResultsCount">در حال محاسبه...</span>
+            </div>
         </div>
-        <div class="mobile-filter-footer">
-            <button class="filter-apply-btn" onclick="applyMobileFilters()">
+        
+        <div class="filter-modal-footer">
+            <button class="filter-apply-btn" onclick="applyFilters()">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                 </svg>
                 اعمال فیلتر
             </button>
-            <button class="filter-reset-btn" onclick="resetMobileFilters()">
+            <button class="filter-reset-btn" onclick="resetFilters()">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
                 </svg>
@@ -1036,7 +912,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 
-<div class="mobile-filter-overlay" id="mobileFilterOverlay" onclick="closeMobileFilters()"></div>
+<div class="filter-modal-overlay" id="filterModalOverlay" onclick="closeFilterModal()"></div>
 
 <script>
 function toggleDropdown(type) {
@@ -1104,8 +980,6 @@ function toggleDropdown(type) {
                                 
                                     <a href="../tags/sans-401" class="article-tag" title="مشاهده همه مقالات با تگ SANS-401">SANS-401</a>
                                 
-                                    <a href="../tags/cybersecurity" class="article-tag" title="مشاهده همه مقالات با تگ CyberSecurity">CyberSecurity</a>
-                                
                                     <a href="../tags/pentest" class="article-tag" title="مشاهده همه مقالات با تگ Pentest">Pentest</a>
                                 
                             </div>
@@ -1116,6 +990,54 @@ function toggleDropdown(type) {
                                 ادامه مطلب ←
                             </a>
                             
+                            
+                                <div class="article-card-badges">
+                                    
+                                    
+                                        <span class="article-badge badge-time">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                                            </svg>
+                                            <span class="badge-text">7 دقیقه</span>
+                                        </span>
+                                    
+                                    
+                                    
+                                    
+                                        
+                                        
+                                        
+                                            
+                                            
+                                        
+                                        <span class="article-badge badge-difficulty badge-intermediate">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                            </svg>
+                                            <span class="badge-text">حرفه‌ای</span>
+                                        </span>
+                                    
+                                    
+                                    
+                                    
+                                        <span class="article-badge badge-lab">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                                            </svg>
+                                            <span class="badge-text">تمرین عملی</span>
+                                        </span>
+                                    
+                                    
+                                    
+                                    
+                                        <span class="article-badge badge-type">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                                            </svg>
+                                            <span class="badge-text">آموزشی</span>
+                                        </span>
+                                    
+                                </div>
                             
                         </div>
                     </article>
@@ -1177,6 +1099,47 @@ function toggleDropdown(type) {
                             </a>
                             
                             
+                                <div class="article-card-badges">
+                                    
+                                    
+                                        <span class="article-badge badge-time">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                                            </svg>
+                                            <span class="badge-text">7 دقیقه</span>
+                                        </span>
+                                    
+                                    
+                                    
+                                    
+                                        
+                                        
+                                        
+                                            
+                                            
+                                        
+                                        <span class="article-badge badge-difficulty badge-beginner">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                            </svg>
+                                            <span class="badge-text">مبتدی</span>
+                                        </span>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <span class="article-badge badge-type">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                                            </svg>
+                                            <span class="badge-text">آموزشی</span>
+                                        </span>
+                                    
+                                </div>
+                            
                         </div>
                     </article>
                 
@@ -1224,8 +1187,6 @@ function toggleDropdown(type) {
                                 
                                     <a href="../tags/sans-401" class="article-tag" title="مشاهده همه مقالات با تگ SANS-401">SANS-401</a>
                                 
-                                    <a href="../tags/cybersecurity" class="article-tag" title="مشاهده همه مقالات با تگ CyberSecurity">CyberSecurity</a>
-                                
                                     <a href="../tags/pentest" class="article-tag" title="مشاهده همه مقالات با تگ Pentest">Pentest</a>
                                 
                             </div>
@@ -1236,6 +1197,54 @@ function toggleDropdown(type) {
                                 ادامه مطلب ←
                             </a>
                             
+                            
+                                <div class="article-card-badges">
+                                    
+                                    
+                                        <span class="article-badge badge-time">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                                            </svg>
+                                            <span class="badge-text">10 دقیقه</span>
+                                        </span>
+                                    
+                                    
+                                    
+                                    
+                                        
+                                        
+                                        
+                                            
+                                            
+                                        
+                                        <span class="article-badge badge-difficulty badge-intermediate">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                            </svg>
+                                            <span class="badge-text">حرفه‌ای</span>
+                                        </span>
+                                    
+                                    
+                                    
+                                    
+                                        <span class="article-badge badge-lab">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                                            </svg>
+                                            <span class="badge-text">تمرین عملی</span>
+                                        </span>
+                                    
+                                    
+                                    
+                                    
+                                        <span class="article-badge badge-type">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                                            </svg>
+                                            <span class="badge-text">آموزشی</span>
+                                        </span>
+                                    
+                                </div>
                             
                         </div>
                     </article>
@@ -1284,8 +1293,6 @@ function toggleDropdown(type) {
                                 
                                     <a href="../tags/sans-401" class="article-tag" title="مشاهده همه مقالات با تگ SANS-401">SANS-401</a>
                                 
-                                    <a href="../tags/cybersecurity" class="article-tag" title="مشاهده همه مقالات با تگ CyberSecurity">CyberSecurity</a>
-                                
                                     <a href="../tags/pentest" class="article-tag" title="مشاهده همه مقالات با تگ Pentest">Pentest</a>
                                 
                             </div>
@@ -1296,6 +1303,54 @@ function toggleDropdown(type) {
                                 ادامه مطلب ←
                             </a>
                             
+                            
+                                <div class="article-card-badges">
+                                    
+                                    
+                                        <span class="article-badge badge-time">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                                            </svg>
+                                            <span class="badge-text">8 دقیقه</span>
+                                        </span>
+                                    
+                                    
+                                    
+                                    
+                                        
+                                        
+                                        
+                                            
+                                            
+                                        
+                                        <span class="article-badge badge-difficulty badge-medium">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                            </svg>
+                                            <span class="badge-text">متوسط</span>
+                                        </span>
+                                    
+                                    
+                                    
+                                    
+                                        <span class="article-badge badge-lab">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                                            </svg>
+                                            <span class="badge-text">تمرین عملی</span>
+                                        </span>
+                                    
+                                    
+                                    
+                                    
+                                        <span class="article-badge badge-type">
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                                            </svg>
+                                            <span class="badge-text">آموزشی</span>
+                                        </span>
+                                    
+                                </div>
                             
                         </div>
                     </article>
