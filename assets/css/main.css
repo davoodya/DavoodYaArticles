@@ -195,6 +195,7 @@ html {
     direction: rtl;
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden; /* جلوگیری از scrollbar افقی در کل صفحه */
 }
 
 body {
@@ -254,11 +255,13 @@ body {
     gap: 3rem;
     align-items: start;
     margin-top: 80px;
+    overflow-x: hidden; /* مخفی کردن scrollbar افقی اضافه */
+    overflow-y: hidden;
 }
 
 .main-content {
     min-width: 0;
-    /* overflow-x: hidden; */
+    overflow-x: hidden; /* مخفی کردن scrollbar افقی در محتوا */
     overflow-y: visible;
 }
 
@@ -1107,7 +1110,7 @@ body {
 
 .sidebar {
     position: sticky;
-    top: 70px;
+    /* top: 70px; */
     /* max-height: calc(100vh - 90px);
     overflow-y: auto; */
     scrollbar-width: thin;
