@@ -1,20 +1,28 @@
 +++
-title = "IP-Mac Address Basic and Concepts"
+title = "مبانی و مفاهیم IP و MAC"
 slug = "ip-mac-address-basic-and-concepts"
 date = "2024-03-25T15:41:10+03:30"
 lastmod = "2026-02-09T15:41:10+03:30"
 draft = false
 
-# Badges
-readingTime = 14
-difficulty = "intermediate"  # beginner|medium|intermediate|advanced
-lab_required = true
-post_type_fa = "آموزشی"
+# Taxonomies
+categories = ["Network", "Network+"]
+tags = ["Network", "IP" ,"MAC", "Network+"]
+series = ["Network", "Network+"]
 
-categories = ["network"]
-tags = ["network"]
-series = ["network"]
+# Badges and Filters
+readingTime = 8
+difficulty = "medium" # beginner | medium | intermediate | advanced
+lab_required = true 
+post_type_fa = "آموزشی" # "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
 
+# Options
+toc = true
+math = false
+type = "posts"
+# layout = "single"
+
+# SEO
 description = "1. Binary 1. 01 2. Octa 1. 0 to 8 3. Decimal 1. 0 to 10 4. Hexadecimal 1. 0 to F 1. 0123456789 & ABCDEF 5. Convert Binary to Decimal Number 1. Whats..."
 keywords = ["IP-Mac Address Basic and Concepts", "network", "ip-mac-address-basic-and-concepts"]
 author = "Davood Yahay"
@@ -37,12 +45,6 @@ images = ["/images/network/IP-MacAddressBasicandConcepts-1.png"]
   description = "1. Binary 1. 01 2. Octa 1. 0 to 8 3. Decimal 1. 0 to 10 4. Hexadecimal 1. 0 to F 1. 0123456789 & ABCDEF 5. Convert Binary to Decimal Number 1. Whats..."
   image = "/images/network/IP-MacAddressBasicandConcepts-1.png"
 
-
-toc = true
-math = false
-
-# layout = "single"
-type = "posts"
 +++
 ------------
 ### Numbers in Computers

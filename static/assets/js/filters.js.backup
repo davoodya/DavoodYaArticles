@@ -48,13 +48,7 @@
     
     // Main filter function - تابع قابل دسترسی در scope module
     function filterArticles(minTime, maxTime, difficulties, labRequired, postTypes) {
-        console.log('[Filter System] 🔍 Starting filter process...');
-        console.log('[Filter System] 📋 Criteria:', {
-            timeRange: `${minTime}-${maxTime}`,
-            difficulties: difficulties,
-            labRequired: labRequired,
-            postTypes: postTypes
-        });
+        console.log('[Filter System] Starting filter process...');
         
         const articles = document.querySelectorAll('.article-card');
         let visibleCount = 0;
@@ -65,101 +59,62 @@
             
             // Get article data
             const articleTimeStr = article.dataset.readingTime;
-            const articleTime = articleTimeStr && articleTimeStr !== '' && articleTimeStr !== '0' ? parseInt(articleTimeStr) : 0;
-            const articleDifficulty = article.dataset.difficulty || '';
+            const articleTime = articleTimeStr !== '' ? parseInt(articleTimeStr) : null;
+            const articleDifficulty = article.dataset.difficulty || null;
             const articleLabRequired = article.dataset.labRequired === 'true';
-            const articlePostType = article.dataset.postType || '';
+            const articlePostType = article.dataset.postType || null;
             
-            console.log(`[Article ${index + 1}] 📄 Data:`, {
-                time: articleTime,
-                difficulty: articleDifficulty,
-                lab: articleLabRequired,
-                type: articlePostType
+            console.log(`[Article ${index + 1}] Checking:`, {
+                articleTime,
+                articleDifficulty,
+                articleLabRequired,
+                articlePostType
             });
             
-            // ===== فیلتر مدت زمان =====
-            if (articleTime > 0) {
-                // مقاله زمان دارد - چک کنیم در محدوده باشد
+            // Reading Time filter
+            if (articleTime !== null && articleTime > 0) {
                 if (articleTime < minTime || articleTime > maxTime) {
                     show = false;
-                    reasons.push(`⏱️ Time ${articleTime} NOT in range [${minTime}-${maxTime}]`);
-                } else {
-                    console.log(`[Article ${index + 1}] ⏱️ Time ${articleTime} OK (in range)`);
+                    reasons.push(`Time ${articleTime} not in range [${minTime}, ${maxTime}]`);
                 }
             } else {
-                // مقاله زمان ندارد
                 if (minTime > 0) {
-                    // اگر کاربر محدوده‌ای بالاتر از 0 انتخاب کرده، این مقاله را رد کن
                     show = false;
-                    reasons.push(`⏱️ Article has no time, but min filter is ${minTime}`);
-                } else {
-                    console.log(`[Article ${index + 1}] ⏱️ No time, but filter allows it`);
+                    reasons.push(`Article has no reading time, but minimum filter is ${minTime}`);
                 }
             }
             
-            // ===== فیلتر سطح دشواری =====
-            if (difficulties.length === 0) {
-                // هیچ سطحی انتخاب نشده - همه را رد کن
+            // Difficulty filter
+            if (articleDifficulty && difficulties.length > 0) {
+                if (!difficulties.includes(articleDifficulty)) {
+                    show = false;
+                    reasons.push(`Difficulty "${articleDifficulty}" not in [${difficulties.join(', ')}]`);
+                }
+            } else if (!articleDifficulty && difficulties.length > 0 && difficulties.length < 4) {
                 show = false;
-                reasons.push(`📊 No difficulty selected`);
-            } else if (difficulties.length === 4) {
-                // همه سطوح انتخاب شده - همه را نشان بده
-                console.log(`[Article ${index + 1}] 📊 Difficulty: ALL selected`);
-            } else {
-                // فقط بعضی سطوح انتخاب شده
-                if (articleDifficulty === '') {
-                    // مقاله سطح دشواری ندارد - رد کن
+                reasons.push(`Article has no difficulty, but filter is active`);
+            }
+            
+            // Lab Required filter
+            const labFilterValues = labRequired.map(val => val === 'true');
+            
+            if (labFilterValues.length > 0 && labFilterValues.length < 2) {
+                const requiredValue = labFilterValues[0];
+                if (articleLabRequired !== requiredValue) {
                     show = false;
-                    reasons.push(`📊 No difficulty, but filter active [${difficulties.join(', ')}]`);
-                } else if (!difficulties.includes(articleDifficulty)) {
-                    // سطح مقاله در لیست انتخاب شده نیست
-                    show = false;
-                    reasons.push(`📊 Difficulty "${articleDifficulty}" NOT in [${difficulties.join(', ')}]`);
-                } else {
-                    console.log(`[Article ${index + 1}] 📊 Difficulty "${articleDifficulty}" OK`);
+                    reasons.push(`Lab required "${articleLabRequired}" does not match filter "${requiredValue}"`);
                 }
             }
             
-            // ===== فیلتر Lab Required =====
-            if (labRequired.length === 0) {
-                // هیچکدام انتخاب نشده - همه را رد کن
-                show = false;
-                reasons.push(`🔬 No lab option selected`);
-            } else if (labRequired.length === 2) {
-                // هر دو انتخاب شده - همه را نشان بده
-                console.log(`[Article ${index + 1}] 🔬 Lab: BOTH selected`);
-            } else {
-                // فقط یکی انتخاب شده
-                const needsLab = labRequired.includes('true');
-                if (articleLabRequired !== needsLab) {
+            // Post Type filter
+            if (articlePostType && postTypes.length > 0) {
+                if (!postTypes.includes(articlePostType)) {
                     show = false;
-                    reasons.push(`🔬 Lab ${articleLabRequired} NOT match filter ${needsLab}`);
-                } else {
-                    console.log(`[Article ${index + 1}] 🔬 Lab ${articleLabRequired} OK`);
+                    reasons.push(`Post type "${articlePostType}" not in [${postTypes.join(', ')}]`);
                 }
-            }
-            
-            // ===== فیلتر نوع پست =====
-            if (postTypes.length === 0) {
-                // هیچ نوعی انتخاب نشده - همه را رد کن
+            } else if (!articlePostType && postTypes.length > 0 && postTypes.length < 7) {
                 show = false;
-                reasons.push(`📄 No post type selected`);
-            } else if (postTypes.length === 7) {
-                // همه انواع انتخاب شده - همه را نشان بده
-                console.log(`[Article ${index + 1}] 📄 Type: ALL selected`);
-            } else {
-                // فقط بعضی انواع انتخاب شده
-                if (articlePostType === '') {
-                    // مقاله نوع ندارد - رد کن
-                    show = false;
-                    reasons.push(`📄 No type, but filter active [${postTypes.join(', ')}]`);
-                } else if (!postTypes.includes(articlePostType)) {
-                    // نوع مقاله در لیست انتخاب شده نیست
-                    show = false;
-                    reasons.push(`📄 Type "${articlePostType}" NOT in [${postTypes.join(', ')}]`);
-                } else {
-                    console.log(`[Article ${index + 1}] 📄 Type "${articlePostType}" OK`);
-                }
+                reasons.push(`Article has no post type, but filter is active`);
             }
             
             // Show or hide article with animation
@@ -177,7 +132,7 @@
             }
         });
         
-        console.log(`[Filter System] ✅ Filter complete. Visible: ${visibleCount}/${articles.length}`);
+        console.log(`[Filter System] Filter complete. Visible: ${visibleCount}/${articles.length}`);
         
         updateFilterResults(visibleCount);
         showNoResultsMessage(visibleCount);

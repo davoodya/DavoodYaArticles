@@ -1,15 +1,16 @@
 +++
 # Basics
-title = "Network Basics-Terminology-Topology"
+title = "مبانی، لغت شناسی و توپولوژی های شبکه"
 slug = "network-basics-terminology-topology"
 date = "2024-03-25T15:41:10+03:30"
-lastmod = "2026-02-09T15:41:10+03:30"
+lastmod = "2026-02-10T15:41:10+03:30"
 draft = false
 
 # Taxonomies
-categories = ["network"]
-tags = ["network"]
-series = ["network"]
+categories = ["Network", "Network+"]
+tags = ["Network", "Network Concepts", "Network Topologies" ,"Network+"]
+series = ["Network", "Network+"]
+
 
 # Badges and Filters 
 readingTime = 10 # integer like 14, 26, 20 ....
@@ -21,8 +22,9 @@ post_type_fa = "آموزشی" # "آموزشی" | "مقاله" | "اسکریپت"
 toc = true
 math = false
 type = "posts"
+# layout = "single"
 
-
+# SEO
 description = "1. Set IP on Computer 2. Update & Check Drivers(Device Manager) 3. Set Password on User & Change Admin Username 4. Set Computer Name 5. Uninstall a..."
 keywords = ["Network Basics-Terminology-Topology", "network", "network-basics-terminology-topology"]
 author = "Davood Yahay"
@@ -44,18 +46,9 @@ images = ["/images/network/NetworkBasics-Terminology-Topology-1.png"]
   title = "Network Basics-Terminology-Topology"
   description = "1. Set IP on Computer 2. Update & Check Drivers(Device Manager) 3. Set Password on User & Change Admin Username 4. Set Computer Name 5. Uninstall a..."
   image = "/images/network/NetworkBasics-Terminology-Topology-1.png"
-
-
-
-# layout = "single"
+  
 +++
 ----
-### Level Testing
-1. Set IP on Computer
-2. Update & Check Drivers(Device Manager)
-3. Set Password on User & Change Admin Username
-4. Set Computer Name
-5. Uninstall a Program
 ### Network Concepts, Terminology & Topologies
 #### Network Basics & Concepts(Need Notebook)
 1. **What is Computer Network?**

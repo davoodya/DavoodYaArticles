@@ -30,7 +30,7 @@
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/command_line/</loc>
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
@@ -63,7 +63,7 @@
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/linux/</loc>
-    <lastmod>2026-02-09T13:50:09+03:30</lastmod>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/metasploit/</loc>
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
@@ -138,7 +138,7 @@
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/tools/</loc>
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
@@ -180,7 +180,22 @@
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/network/1.5-virtualization-mini-moduleh10-to-h12-1/</loc>
+    <lastmod>2024-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/network/</loc>
+    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/network-pentest/</loc>
+    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/network-security/</loc>
+    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/network/</loc>
+    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/cyber-security/cryptography/basic-encryption/</loc>
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
@@ -203,16 +218,76 @@
     <loc>http://localhost:1313/cyber-security/sans-401/sans-401-introduction-prepare-lab/</loc>
     <lastmod>2026-02-09T13:50:09+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/network/ip-mac-address-basic-and-concepts/</loc>
+    <loc>http://localhost:1313/tags/dhcp/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/dns/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ip/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mac/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/network/</loc>
+    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/network-commands/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/network/</loc>
+    <loc>http://localhost:1313/tags/network-components/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/network/network-basics-terminology-topology/</loc>
+    <loc>http://localhost:1313/tags/network-concepts/</loc>
+    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/network-models/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/network-topologies/</loc>
+    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/network-services/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/network-services/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/network&#43;/</loc>
+    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/network&#43;/</loc>
+    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/osi/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tcpip/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/virtualization/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/virtualization/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/network/virtualization-networking/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/vlan/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/vmware/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/windows/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/windows/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/network/windows-networking/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/network/network-cable-and-components/</loc>
@@ -221,25 +296,16 @@
     <loc>http://localhost:1313/network/network-commands-file-printer-sharing/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
+    <loc>http://localhost:1313/network/ip-mac-address-basic-and-concepts/</loc>
+    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/network/network-basics-terminology-topology/</loc>
+    <lastmod>2026-02-10T15:41:10+03:30</lastmod>
+  </url><url>
     <loc>http://localhost:1313/network/network-models-osi-and-tcpip/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/network-pentest/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/network-security/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/network/network-servicesdhcp-dns-vlan/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/network/virtualization-networking/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/network/windows-networking/</loc>
-    <lastmod>2026-02-09T15:41:10+03:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/network/</loc>
     <lastmod>2026-02-09T15:41:10+03:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/all-articles/readme/</loc>

@@ -1,14 +1,29 @@
 +++
-title = "Network Cable and Components"
+# Basics
+title = "انواع دیوایس ها و کابل های شبکه"
 slug = "network-cable-and-components"
 date = "2024-03-25T15:41:10+03:30"
 lastmod = "2026-02-09T15:41:10+03:30"
 draft = false
 
-categories = ["network"]
-tags = ["network"]
-series = ["network"]
+# Taxonomies
+categories = ["Network", "Network+"]
+tags = ["Network", "Network Components" ,"Network+"]
+series = ["Network", "Network+"]
 
+# Badges and Filters
+readingTime = 12
+difficulty = "beginner" # beginner | medium | intermediate | advanced
+lab_required = true 
+post_type_fa = "آموزشی" # "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
+
+# Options
+toc = true
+math = false
+type = "posts"
+# layout = "single"
+
+# SEO
 description = "1. Network Cables 1. Coaxial Cables & Connectors 2. Twisted Pair Cables & Connectors 3. Fiber Optic Cables & Connectors 1. Single Mode 2. Multi Mode..."
 keywords = ["Network Cable and Components", "network", "network-cable-and-components"]
 author = "Davood Yahay"
@@ -31,15 +46,6 @@ images = ["/images/network/NetworkCableandComponents-1.png"]
   description = "1. Network Cables 1. Coaxial Cables & Connectors 2. Twisted Pair Cables & Connectors 3. Fiber Optic Cables & Connectors 1. Single Mode 2. Multi Mode..."
   image = "/images/network/NetworkCableandComponents-1.png"
 
-readingTime = 5
-difficulty = "medium"
-toc = true
-math = false
-lab_required = true
-post_type_fa = "مقاله"
-
-# layout = "single"
-type = "posts"
 +++
 ### Network Cables
 #### Network Cable Types

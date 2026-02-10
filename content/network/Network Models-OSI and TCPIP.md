@@ -1,14 +1,30 @@
 +++
-title = "Network Models-OSI and TCPIP"
+# Basics
+#title = "Network Models-OSI and TCPIP"
+title = "مدل های شبکه - OSI و TCPIP"
 slug = "network-models-osi-and-tcpip"
 date = "2024-03-25T15:41:10+03:30"
 lastmod = "2026-02-09T15:41:10+03:30"
 draft = false
 
-categories = ["network"]
-tags = ["network"]
-series = ["network"]
+# Taxonomies
+categories = ["Network", "Network+"]
+tags = ["Network", "Network Models" ,"OSI", "TCPIP", "Network+"]
+series = ["Network", "Network+"]
 
+# Badges and Filters
+readingTime = 7
+difficulty = "medium" # beginner | medium | intermediate | advanced
+lab_required = true 
+post_type_fa = "آموزشی" # "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
+
+# Options
+toc = true
+math = false
+type = "posts"
+# layout = "single"
+
+# SEO
 description = "1. Port & Protocol Definitions 2. Whats OSI(Open System Interconnection) Model? 1. Physical 2. Data Link (Switches-Ethernet) 3. Network (Routers-IP)..."
 keywords = ["Network Models-OSI and TCPIP", "network", "network-models-osi-and-tcpip"]
 author = "Davood Yahay"
@@ -31,15 +47,6 @@ images = ["/images/network/NetworkModels-OSIandTCPIP-1.png"]
   description = "1. Port & Protocol Definitions 2. Whats OSI(Open System Interconnection) Model? 1. Physical 2. Data Link (Switches-Ethernet) 3. Network (Routers-IP)..."
   image = "/images/network/NetworkModels-OSIandTCPIP-1.png"
 
-readingTime = 7
-difficulty = "medium"
-toc = true
-math = false
-lab_required = true
-post_type_fa = "مقاله"
-
-# layout = "single"
-type = "posts"
 +++
 ### OSI Model
 #### OSI Models Concept(Need Notebook) 

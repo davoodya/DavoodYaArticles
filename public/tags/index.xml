@@ -6,7 +6,7 @@
     <description>Recent content in Tags on مقالات داوود یاحی – Davood Yahay Articles</description>
     <generator>Hugo</generator>
     <language>fa</language>
-    <lastBuildDate>Mon, 09 Feb 2026 15:41:10 +0330</lastBuildDate>
+    <lastBuildDate>Tue, 10 Feb 2026 15:41:10 +0330</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>0-SEO-Theories</title>
@@ -184,6 +184,27 @@
       <description></description>
     </item>
     <item>
+      <title>Network</title>
+      <link>http://localhost:1313/tags/network/</link>
+      <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network Pentest</title>
+      <link>http://localhost:1313/tags/network-pentest/</link>
+      <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/network-pentest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network Security</title>
+      <link>http://localhost:1313/tags/network-security/</link>
+      <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/network-security/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Cryptography</title>
       <link>http://localhost:1313/tags/cryptography/</link>
       <pubDate>Thu, 20 Jun 2024 13:50:09 +0330</pubDate>
@@ -205,24 +226,122 @@
       <description></description>
     </item>
     <item>
-      <title>Network</title>
-      <link>http://localhost:1313/tags/network/</link>
+      <title>DHCP</title>
+      <link>http://localhost:1313/tags/dhcp/</link>
       <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
-      <guid>http://localhost:1313/tags/network/</guid>
+      <guid>http://localhost:1313/tags/dhcp/</guid>
       <description></description>
     </item>
     <item>
-      <title>Network Pentest</title>
-      <link>http://localhost:1313/tags/network-pentest/</link>
+      <title>DNS</title>
+      <link>http://localhost:1313/tags/dns/</link>
       <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
-      <guid>http://localhost:1313/tags/network-pentest/</guid>
+      <guid>http://localhost:1313/tags/dns/</guid>
       <description></description>
     </item>
     <item>
-      <title>Network Security</title>
-      <link>http://localhost:1313/tags/network-security/</link>
+      <title>IP</title>
+      <link>http://localhost:1313/tags/ip/</link>
       <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
-      <guid>http://localhost:1313/tags/network-security/</guid>
+      <guid>http://localhost:1313/tags/ip/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MAC</title>
+      <link>http://localhost:1313/tags/mac/</link>
+      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
+      <guid>http://localhost:1313/tags/mac/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network Commands</title>
+      <link>http://localhost:1313/tags/network-commands/</link>
+      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
+      <guid>http://localhost:1313/tags/network-commands/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network Components</title>
+      <link>http://localhost:1313/tags/network-components/</link>
+      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
+      <guid>http://localhost:1313/tags/network-components/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network Concepts</title>
+      <link>http://localhost:1313/tags/network-concepts/</link>
+      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
+      <guid>http://localhost:1313/tags/network-concepts/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network Models</title>
+      <link>http://localhost:1313/tags/network-models/</link>
+      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
+      <guid>http://localhost:1313/tags/network-models/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network Topologies</title>
+      <link>http://localhost:1313/tags/network-topologies/</link>
+      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
+      <guid>http://localhost:1313/tags/network-topologies/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network-Services</title>
+      <link>http://localhost:1313/tags/network-services/</link>
+      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
+      <guid>http://localhost:1313/tags/network-services/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network&#43;</title>
+      <link>http://localhost:1313/tags/network&#43;/</link>
+      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
+      <guid>http://localhost:1313/tags/network&#43;/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OSI</title>
+      <link>http://localhost:1313/tags/osi/</link>
+      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
+      <guid>http://localhost:1313/tags/osi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TCPIP</title>
+      <link>http://localhost:1313/tags/tcpip/</link>
+      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
+      <guid>http://localhost:1313/tags/tcpip/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virtualization</title>
+      <link>http://localhost:1313/tags/virtualization/</link>
+      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
+      <guid>http://localhost:1313/tags/virtualization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VLAN</title>
+      <link>http://localhost:1313/tags/vlan/</link>
+      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
+      <guid>http://localhost:1313/tags/vlan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VMWare</title>
+      <link>http://localhost:1313/tags/vmware/</link>
+      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
+      <guid>http://localhost:1313/tags/vmware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>http://localhost:1313/tags/windows/</link>
+      <pubDate>Mon, 25 Mar 2024 15:41:10 +0330</pubDate>
+      <guid>http://localhost:1313/tags/windows/</guid>
       <description></description>
     </item>
   </channel>

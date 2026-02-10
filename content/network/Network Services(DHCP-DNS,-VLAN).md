@@ -1,14 +1,29 @@
 +++
-title = "Network Services(DHCP-DNS,-VLAN)"
+# title = "Network Services(DHCP-DNS,-VLAN)"
+title = "مطالبی که برای یادگیری VLAN , DHCP , DNS باید آموخت؟"
 slug = "network-servicesdhcp-dns-vlan"
 date = "2024-03-25T15:41:10+03:30"
 lastmod = "2026-02-09T15:41:10+03:30"
 draft = false
 
-categories = ["network"]
-tags = ["network"]
-series = ["network"]
+# Taxonomies
+categories = ["Network", "Network-Services"]
+tags = ["Network", "Network-Services" ,"DHCP", "DNS", "VLAN", "Network+"]
+series = ["Network", "Network-Services"]
 
+# Badges and Filters
+readingTime = 4
+difficulty = "beginner" # beginner | medium | intermediate | advanced
+lab_required = false 
+post_type_fa = "دستور العمل" # "آموزشی" | "مقاله" | "اسکریپت" | "خبر" | "دستور العمل" | "معرفی" | "ابزار"
+
+# Options
+toc = true
+math = false
+type = "posts"
+# layout = "single"
+
+# SEO
 description = "1. Broadcast Domain 2. Collision 3. V-Lan 1. V-Lan Definition 2. V-Lan Notes 3. Default V-Lan 4. Normal V-Lan 4. Routing Protocols 1. Definition of..."
 keywords = ["Network Services(DHCP-DNS,-VLAN)", "network", "network-servicesdhcp-dns-vlan"]
 author = "Davood Yahay"
@@ -31,15 +46,7 @@ images = ["/images/network/NetworkServices(DHCP-DNS,-VLAN)-1.png"]
   description = "1. Broadcast Domain 2. Collision 3. V-Lan 1. V-Lan Definition 2. V-Lan Notes 3. Default V-Lan 4. Normal V-Lan 4. Routing Protocols 1. Definition of..."
   image = "/images/network/NetworkServices(DHCP-DNS,-VLAN)-1.png"
 
-readingTime = 2
-difficulty = "medium"
-toc = true
-math = false
-lab_required = true
-post_type_fa = "مقاله"
 
-# layout = "single"
-type = "posts"
 +++
 ---
 ### V-Lan
