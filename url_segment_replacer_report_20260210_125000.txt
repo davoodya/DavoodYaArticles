@@ -1,0 +1,30 @@
+================================================================================
+URL Segment Replacer - Detail Report
+================================================================================
+
+Directory: H:\Repo\Hugo\davoodya\test\test-segment-replacer
+URL Segment: knowledge
+Replace Mode: all
+Date & Time: 2026-02-10 12:50:00
+Search Pattern: https://davoodya.ir/
+Replace Pattern: https://davoodya.ir/knowledge/
+
+--------------------------------------------------------------------------------
+General Statistics:
+--------------------------------------------------------------------------------
+Total files found: 1
+Files processed: 1
+Files skipped: 0
+Files with errors: 0
+
+Total replacements: 5
+Front matter replacements: 0
+Body replacements: 0
+
+================================================================================
+Processed Files (1 items):
+================================================================================
+
+📄 test-article-1.md
+   - Mode: all
+   - Total replacements: 5

@@ -1,0 +1,44 @@
+================================================================================
+URL & Canonical Processing Detail Report
+================================================================================
+
+Directory: H:\Repo\Hugo\davoodya-articles-backup\2-7-2026\python
+Date & Time: 2026-02-10 12:42:38
+Search Pattern: https://davoodya.ir/
+Replace Pattern: https://davoodya.ir/knowledge/
+
+--------------------------------------------------------------------------------
+General Statistics:
+--------------------------------------------------------------------------------
+Total files found: 4
+Files processed: 2
+Files skipped: 2
+Files with errors: 0
+
+Total replacements: 4
+URL replacements: 2
+Canonical replacements: 2
+
+================================================================================
+Processed Files (2 items):
+================================================================================
+
+📄 60 Commands Hacker Should Know it.md
+   - Total replacements: 2
+   - URL: 1
+   - Canonical: 1
+
+📄 Kali Linux Installing Guide.md
+   - Total replacements: 2
+   - URL: 1
+   - Canonical: 1
+
+================================================================================
+Skipped Files (2 items):
+================================================================================
+
+⚠ Dir-Buster-Module.md
+   Reason: Old URL does not exist
+
+⚠ _index.md
+   Reason: Old URL does not exist

@@ -1,0 +1,50 @@
+2026-02-10 12:42:38,845 - INFO - ================================================================================
+2026-02-10 12:42:38,846 - INFO - URL & Canonical Updater - Starting Process
+2026-02-10 12:42:38,846 - INFO - ================================================================================
+2026-02-10 12:42:38,846 - INFO - Base Directory: H:\Repo\Hugo\davoodya-articles-backup\2-7-2026\python
+2026-02-10 12:42:38,846 - INFO - Search Pattern: https://davoodya.ir/
+2026-02-10 12:42:38,846 - INFO - Replace Pattern: https://davoodya.ir/knowledge/
+2026-02-10 12:42:38,846 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:42:38,847 - INFO - ✓ Directory is valid: H:\Repo\Hugo\davoodya-articles-backup\2-7-2026\python
+2026-02-10 12:42:38,847 - INFO - Searching for Markdown files...
+2026-02-10 12:42:38,847 - INFO - ✓ Found 4 Markdown files
+2026-02-10 12:42:38,847 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:42:38,847 - INFO - Starting file processing...
+2026-02-10 12:42:38,847 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:42:38,847 - INFO - 
+[1/4] 
+2026-02-10 12:42:38,847 - INFO - Processing: 60 Commands Hacker Should Know it.md
+2026-02-10 12:42:38,848 - INFO -   ✓ Success: 2 replacement(s) made (url: 1, canonical: 1)
+2026-02-10 12:42:38,848 - INFO - 
+[2/4] 
+2026-02-10 12:42:38,848 - INFO - Processing: Dir-Buster-Module.md
+2026-02-10 12:42:38,849 - INFO -   ℹ Info: Old URL not found - File skipped
+2026-02-10 12:42:38,849 - INFO - 
+[3/4] 
+2026-02-10 12:42:38,849 - INFO - Processing: Kali Linux Installing Guide.md
+2026-02-10 12:42:38,850 - INFO -   ✓ Success: 2 replacement(s) made (url: 1, canonical: 1)
+2026-02-10 12:42:38,850 - INFO - 
+[4/4] 
+2026-02-10 12:42:38,850 - INFO - Processing: _index.md
+2026-02-10 12:42:38,858 - INFO -   ℹ Info: Old URL not found - File skipped
+2026-02-10 12:42:38,858 - INFO - 
+================================================================================
+2026-02-10 12:42:38,858 - INFO - Final Processing Report
+2026-02-10 12:42:38,858 - INFO - ================================================================================
+2026-02-10 12:42:38,858 - INFO - Processed Directory: H:\Repo\Hugo\davoodya-articles-backup\2-7-2026\python
+2026-02-10 12:42:38,858 - INFO - Date & Time: 2026-02-10 12:42:38
+2026-02-10 12:42:38,858 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:42:38,858 - INFO - General Statistics:
+2026-02-10 12:42:38,858 - INFO -   • Total files found: 4
+2026-02-10 12:42:38,858 - INFO -   • Files processed: 2
+2026-02-10 12:42:38,858 - INFO -   • Files skipped: 2
+2026-02-10 12:42:38,858 - INFO -   • Files with errors: 0
+2026-02-10 12:42:38,858 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:42:38,858 - INFO - Replacement Statistics:
+2026-02-10 12:42:38,858 - INFO -   • Total replacements: 4
+2026-02-10 12:42:38,858 - INFO -   • URL replacements: 2
+2026-02-10 12:42:38,859 - INFO -   • Canonical replacements: 2
+2026-02-10 12:42:38,859 - INFO - ================================================================================
+2026-02-10 12:42:38,859 - INFO - 
+✓ Detail report saved to file: url_canonical_updater_report_20260210_124238.txt
+2026-02-10 12:42:38,859 - INFO - ✓ Complete log saved to file: url_canonical_updater_20260210_124236.log

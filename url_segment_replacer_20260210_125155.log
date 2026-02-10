@@ -1,0 +1,43 @@
+2026-02-10 12:51:55,583 - INFO - ================================================================================
+2026-02-10 12:51:55,583 - INFO - URL Segment Replacer - Starting Process
+2026-02-10 12:51:55,583 - INFO - ================================================================================
+2026-02-10 12:51:55,583 - INFO - Base Directory: H:\Repo\Hugo\davoodya\test\test-segment-replacer
+2026-02-10 12:51:55,583 - INFO - URL Segment: knowledge
+2026-02-10 12:51:55,583 - INFO - Replace Mode: front
+2026-02-10 12:51:55,584 - INFO - Search Pattern: https://davoodya.ir/
+2026-02-10 12:51:55,584 - INFO - Replace Pattern: https://davoodya.ir/knowledge/
+2026-02-10 12:51:55,584 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:51:55,584 - INFO - ✓ Directory is valid: H:\Repo\Hugo\davoodya\test\test-segment-replacer
+2026-02-10 12:51:55,584 - INFO - Searching for Markdown files...
+2026-02-10 12:51:55,585 - INFO - ✓ Found 1 Markdown files
+2026-02-10 12:51:55,585 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:51:55,585 - INFO - Starting file processing...
+2026-02-10 12:51:55,585 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:51:55,585 - INFO - 
+[1/1] 
+2026-02-10 12:51:55,585 - INFO - Processing: test-article-1.md
+2026-02-10 12:51:55,585 - INFO -   → Mode: FRONT - Replacing only in front matter
+2026-02-10 12:51:55,586 - INFO -   ✓ Success: 2 replacement(s) made
+2026-02-10 12:51:55,586 - INFO -      (Front matter: 2)
+2026-02-10 12:51:55,586 - INFO - 
+================================================================================
+2026-02-10 12:51:55,586 - INFO - Final Processing Report
+2026-02-10 12:51:55,586 - INFO - ================================================================================
+2026-02-10 12:51:55,586 - INFO - Processed Directory: H:\Repo\Hugo\davoodya\test\test-segment-replacer
+2026-02-10 12:51:55,587 - INFO - URL Segment: knowledge
+2026-02-10 12:51:55,587 - INFO - Replace Mode: front
+2026-02-10 12:51:55,587 - INFO - Date & Time: 2026-02-10 12:51:55
+2026-02-10 12:51:55,587 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:51:55,587 - INFO - General Statistics:
+2026-02-10 12:51:55,587 - INFO -   • Total files found: 1
+2026-02-10 12:51:55,587 - INFO -   • Files processed: 1
+2026-02-10 12:51:55,587 - INFO -   • Files skipped: 0
+2026-02-10 12:51:55,587 - INFO -   • Files with errors: 0
+2026-02-10 12:51:55,587 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:51:55,588 - INFO - Replacement Statistics:
+2026-02-10 12:51:55,588 - INFO -   • Total replacements: 2
+2026-02-10 12:51:55,588 - INFO -   • Front matter replacements: 2
+2026-02-10 12:51:55,588 - INFO - ================================================================================
+2026-02-10 12:51:55,588 - INFO - 
+✓ Detail report saved to file: url_segment_replacer_report_20260210_125155.txt
+2026-02-10 12:51:55,589 - INFO - ✓ Complete log saved to file: url_segment_replacer_20260210_125155.log

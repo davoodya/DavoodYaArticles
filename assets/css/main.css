@@ -3050,6 +3050,43 @@ a.article-tag:active {
     font-weight: 500;
 }
 
+/* Radio Filter Styles */
+.filter-radios {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.filter-radio {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(0, 255, 65, 0.02);
+}
+
+.filter-radio:hover {
+    background: rgba(0, 255, 65, 0.08);
+    transform: translateX(-3px);
+}
+
+.filter-radio input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--accent-green);
+}
+
+.radio-label {
+    color: var(--main-text);
+    font-family: var(--persian-text);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
 /* Filter Actions */
 .filter-actions {
     display: flex;

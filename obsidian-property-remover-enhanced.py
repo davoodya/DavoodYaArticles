@@ -46,6 +46,9 @@ MAX_LINE_CHECK = 20  # Maximum line number to check for closing ---
 SITE_URL = "https://davoodya.ir"
 AUTHOR_NAME = "Davood Yahay"
 
+# Excluded directories - these will not be processed
+EXCLUDED_DIRS = ["all-articles"]  # List of directory names to exclude
+
 # Regex pattern to find E-numbers (from title-adder.py)
 # Matches: E3, E45, E46, E47 (comma separated), E1 to E5 (range), E10-E11 (hyphen)
 E_NUMBER_PATTERN = r'E\d+(?:\s*(?:,\s*E\d+|to\s+E\d+|-\s*E?\d+|-))*\s*[-,]?\s*'
@@ -834,6 +837,27 @@ def remove_obsidian_properties_and_add_hugo_frontmatter(file_path):
         return False
 
 
+def is_excluded_path(file_path):
+    """
+    Check if file path contains any excluded directory.
+    
+    Args:
+        file_path: Path object of the file
+    
+    Returns:
+        bool: True if path should be excluded, False otherwise
+    """
+    # Get all parent directory names in the path
+    path_parts = file_path.parts
+    
+    # Check if any excluded directory is in the path
+    for excluded_dir in EXCLUDED_DIRS:
+        if excluded_dir in path_parts:
+            return True
+    
+    return False
+
+
 def process_articles():
     """Process all markdown files recursively in content directory and subdirectories."""
     
@@ -847,7 +871,15 @@ def process_articles():
     processed_files = set(tracking_data.get("processed_files", []))
     
     # Get all markdown files recursively from content directory
-    markdown_files = list(CONTENT_DIR.rglob("*.md"))  # rglob for recursive search
+    all_markdown_files = list(CONTENT_DIR.rglob("*.md"))  # rglob for recursive search
+    
+    # Filter out excluded directories
+    markdown_files = [f for f in all_markdown_files if not is_excluded_path(f)]
+    
+    # Count excluded files for statistics
+    excluded_count = len(all_markdown_files) - len(markdown_files)
+    if excluded_count > 0:
+        logger.info(f"Excluded {excluded_count} files from {EXCLUDED_DIRS} directories")
     
     if not markdown_files:
         logger.warning(f"No markdown files found in {CONTENT_DIR}")
@@ -859,6 +891,7 @@ def process_articles():
     # Statistics
     stats = {
         "total_files": len(markdown_files),
+        "excluded_files": excluded_count,
         "skipped_index_files": 0,
         "already_processed": 0,
         "newly_processed": 0,
@@ -870,6 +903,11 @@ def process_articles():
     for file_path in markdown_files:
         # Use relative path as unique identifier
         relative_path = str(file_path.relative_to(CONTENT_DIR))
+        
+        # Double-check: Skip if in excluded directory (safety check)
+        if is_excluded_path(file_path):
+            logger.info(f"⊗ Skipping excluded directory file: {relative_path}")
+            continue
         
         # Skip _index.md files (category index files)
         if file_path.name.lower() == '_index.md':
@@ -906,6 +944,7 @@ def process_articles():
     logger.info("SUMMARY")
     logger.info(f"{'='*60}")
     logger.info(f"Total files found: {stats['total_files']}")
+    logger.info(f"Excluded files (all-articles): {stats['excluded_files']}")
     logger.info(f"Skipped _index.md files: {stats['skipped_index_files']}")
     logger.info(f"Already processed (skipped): {stats['already_processed']}")
     logger.info(f"Newly processed (modified): {stats['newly_processed']}")
@@ -935,6 +974,7 @@ def generate_report(stats, tracking_data):
             f.write("STATISTICS\n")
             f.write("-" * 70 + "\n")
             f.write(f"Total files found: {stats['total_files']}\n")
+            f.write(f"Excluded files (all-articles): {stats['excluded_files']}\n")
             f.write(f"Skipped _index.md files (category index): {stats['skipped_index_files']}\n")
             f.write(f"Already processed (skipped): {stats['already_processed']}\n")
             f.write(f"Newly processed (modified): {stats['newly_processed']}\n")

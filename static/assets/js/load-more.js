@@ -14,6 +14,7 @@
     let filteredArticlesData = []; // مقالات فیلتر شده
     let displayedCount = 0; // تعداد مقالات نمایش داده شده
     let isFilterActive = false; // آیا فیلتر فعال است؟
+    let currentSortOrder = 'newest'; // ترتیب مرتب‌سازی: 'newest' یا 'oldest'
     
     // Initialize on page load
     document.addEventListener('DOMContentLoaded', function() {
@@ -56,9 +57,12 @@
             }
             
             allArticlesData = parseArticlesFromJSON(data);
+            
+            // مرتب‌سازی پیش‌فرض: جدیدترین اول
+            allArticlesData = sortArticles(allArticlesData, currentSortOrder);
             filteredArticlesData = [...allArticlesData];
             
-            console.log(`[Load More] ✅ Loaded ${allArticlesData.length} articles from JSON`);
+            console.log(`[Load More] ✅ Loaded ${allArticlesData.length} articles from JSON (sorted: ${currentSortOrder})`);
             
             // اگر هیچ مقاله‌ای نیست، به HTML fallback کن
             if (allArticlesData.length === 0) {
@@ -119,7 +123,9 @@
             labRequired: item.labRequired || item.lab_required || false,
             postType: item.postType || item.post_type_fa || '',
             categoryTitle: item.categoryTitle || '',
-            categoryUrl: item.categoryUrl || ''
+            categoryUrl: item.categoryUrl || '',
+            date: item.date || '',
+            dateUnix: item.dateUnix || 0
         };
     }
     
@@ -451,11 +457,35 @@
     // API برای فیلترها
     // ===========================
     
+    // تابع مرتب‌سازی مقالات
+    function sortArticles(articles, order = 'newest') {
+        console.log(`[Load More] 📊 Sorting articles by: ${order}`);
+        
+        const sorted = [...articles].sort((a, b) => {
+            if (order === 'newest') {
+                // جدیدترین اول
+                return (b.dateUnix || 0) - (a.dateUnix || 0);
+            } else {
+                // قدیمی‌ترین اول
+                return (a.dateUnix || 0) - (b.dateUnix || 0);
+            }
+        });
+        
+        console.log(`[Load More] ✅ Sorted ${sorted.length} articles`);
+        return sorted;
+    }
+    
     // اعمال فیلتر روی تمام مقالات
-    window.applyLoadMoreFilter = function(filterFunction) {
+    window.applyLoadMoreFilter = function(filterFunction, sortOrder = null) {
         console.log('[Load More] 🔍 Applying filter to all articles...');
         
         isFilterActive = true;
+        
+        // اگر ترتیب مرتب‌سازی داده شده، ذخیره کن
+        if (sortOrder) {
+            currentSortOrder = sortOrder;
+            console.log(`[Load More] 📊 Sort order set to: ${currentSortOrder}`);
+        }
         
         // فیلتر کردن تمام مقالات
         filteredArticlesData = allArticlesData.filter(article => {
@@ -466,6 +496,9 @@
                 postType: article.postType
             });
         });
+        
+        // مرتب‌سازی مقالات فیلتر شده
+        filteredArticlesData = sortArticles(filteredArticlesData, currentSortOrder);
         
         console.log(`[Load More] ✅ Filtered: ${filteredArticlesData.length} of ${allArticlesData.length} articles`);
         

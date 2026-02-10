@@ -1,0 +1,43 @@
+2026-02-10 12:52:35,482 - INFO - ================================================================================
+2026-02-10 12:52:35,482 - INFO - URL Segment Replacer - Starting Process
+2026-02-10 12:52:35,482 - INFO - ================================================================================
+2026-02-10 12:52:35,482 - INFO - Base Directory: H:\Repo\Hugo\davoodya\test\test-segment-replacer
+2026-02-10 12:52:35,483 - INFO - URL Segment: knowledge
+2026-02-10 12:52:35,483 - INFO - Replace Mode: body
+2026-02-10 12:52:35,483 - INFO - Search Pattern: https://davoodya.ir/
+2026-02-10 12:52:35,483 - INFO - Replace Pattern: https://davoodya.ir/knowledge/
+2026-02-10 12:52:35,483 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:52:35,484 - INFO - ✓ Directory is valid: H:\Repo\Hugo\davoodya\test\test-segment-replacer
+2026-02-10 12:52:35,484 - INFO - Searching for Markdown files...
+2026-02-10 12:52:35,484 - INFO - ✓ Found 1 Markdown files
+2026-02-10 12:52:35,484 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:52:35,484 - INFO - Starting file processing...
+2026-02-10 12:52:35,484 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:52:35,484 - INFO - 
+[1/1] 
+2026-02-10 12:52:35,485 - INFO - Processing: test-article-1.md
+2026-02-10 12:52:35,485 - INFO -   → Mode: BODY - Replacing only in body (after front matter)
+2026-02-10 12:52:35,485 - INFO -   ✓ Success: 3 replacement(s) made
+2026-02-10 12:52:35,486 - INFO -      (Body: 3)
+2026-02-10 12:52:35,486 - INFO - 
+================================================================================
+2026-02-10 12:52:35,486 - INFO - Final Processing Report
+2026-02-10 12:52:35,486 - INFO - ================================================================================
+2026-02-10 12:52:35,486 - INFO - Processed Directory: H:\Repo\Hugo\davoodya\test\test-segment-replacer
+2026-02-10 12:52:35,486 - INFO - URL Segment: knowledge
+2026-02-10 12:52:35,486 - INFO - Replace Mode: body
+2026-02-10 12:52:35,486 - INFO - Date & Time: 2026-02-10 12:52:35
+2026-02-10 12:52:35,486 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:52:35,486 - INFO - General Statistics:
+2026-02-10 12:52:35,486 - INFO -   • Total files found: 1
+2026-02-10 12:52:35,486 - INFO -   • Files processed: 1
+2026-02-10 12:52:35,486 - INFO -   • Files skipped: 0
+2026-02-10 12:52:35,487 - INFO -   • Files with errors: 0
+2026-02-10 12:52:35,487 - INFO - --------------------------------------------------------------------------------
+2026-02-10 12:52:35,487 - INFO - Replacement Statistics:
+2026-02-10 12:52:35,487 - INFO -   • Total replacements: 3
+2026-02-10 12:52:35,487 - INFO -   • Body replacements: 3
+2026-02-10 12:52:35,487 - INFO - ================================================================================
+2026-02-10 12:52:35,488 - INFO - 
+✓ Detail report saved to file: url_segment_replacer_report_20260210_125235.txt
+2026-02-10 12:52:35,488 - INFO - ✓ Complete log saved to file: url_segment_replacer_20260210_125235.log

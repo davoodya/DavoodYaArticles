@@ -362,12 +362,17 @@
         const selectedPostTypes = Array.from(document.querySelectorAll('input[name="post_type"]:checked'))
             .map(input => input.value);
         
+        // دریافت ترتیب مرتب‌سازی
+        const sortOrderElement = document.querySelector('input[name="sort_order"]:checked');
+        const sortOrder = sortOrderElement ? sortOrderElement.value : 'newest';
+        
         console.log('[Filter System] Filter criteria:', {
             minTime,
             maxTime,
             selectedDifficulties,
             selectedLabRequired,
-            selectedPostTypes
+            selectedPostTypes,
+            sortOrder
         });
         
         // بررسی اینکه کدام سیستم در دسترس است
@@ -376,7 +381,7 @@
             console.log('[Filter System] Using Load More filter system');
             const count = window.applyLoadMoreFilter(function(article) {
                 return matchesFilter(article, minTime, maxTime, selectedDifficulties, selectedLabRequired, selectedPostTypes);
-            });
+            }, sortOrder);
             updateFilterResults(count);
             showNoResultsMessage(count);
         } else if (typeof window.applyArticlesFilter === 'function') {

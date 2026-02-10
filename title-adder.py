@@ -23,6 +23,9 @@ CONTENT_DIR = "content"
 OUTPUT_JSON = "article_titles.json"
 LOG_FILE = "title_adder.log"
 
+# Excluded directories - these will not be processed
+EXCLUDED_DIRS = ["all-articles"]  # List of directory names to exclude
+
 # Regex pattern to find E-numbers: E3, E45, E46, E47, etc.
 # Matches various patterns:
 # - E3, E45, E46, E47 (comma separated)
@@ -169,6 +172,28 @@ def add_title_to_file(file_path):
         stats['errors'] += 1
         return False, None
 
+def is_excluded_path(file_path):
+    """
+    Check if file path contains any excluded directory.
+    
+    Args:
+        file_path: String path of the file
+    
+    Returns:
+        bool: True if path should be excluded, False otherwise
+    """
+    # Normalize path separators
+    normalized_path = file_path.replace('\\', '/')
+    path_parts = normalized_path.split('/')
+    
+    # Check if any excluded directory is in the path
+    for excluded_dir in EXCLUDED_DIRS:
+        if excluded_dir in path_parts:
+            return True
+    
+    return False
+
+
 def scan_and_process():
     """Scan all markdown files and add titles"""
     log_message("="*60)
@@ -179,11 +204,26 @@ def scan_and_process():
         log_message(f"X Directory {CONTENT_DIR} not found!", "ERROR")
         return
     
+    # Track excluded files
+    excluded_count = 0
+    
     # Walk through all .md files
     for root, dirs, files in os.walk(CONTENT_DIR):
+        # Skip excluded directories at the walk level (more efficient)
+        # This prevents os.walk from even entering excluded directories
+        dirs[:] = [d for d in dirs if d not in EXCLUDED_DIRS]
+        
         for file in files:
             if file.endswith('.md') and not file.startswith('_'):
                 file_path = os.path.join(root, file)
+                
+                # Double-check: Skip if in excluded directory (safety check)
+                if is_excluded_path(file_path):
+                    excluded_count += 1
+                    rel_path = os.path.relpath(file_path, CONTENT_DIR)
+                    log_message(f"\n[Excluded] {rel_path}")
+                    continue
+                
                 stats['files_scanned'] += 1
                 
                 # Get relative path for better logging
@@ -197,6 +237,13 @@ def scan_and_process():
                 # Store title in dictionary
                 if title:
                     article_titles[rel_path] = title
+    
+    # Log excluded count
+    if excluded_count > 0:
+        log_message(f"\n[INFO] Excluded {excluded_count} files from {EXCLUDED_DIRS} directories")
+    
+    # Store excluded count in stats
+    stats['excluded_files'] = excluded_count
 
 def save_titles_to_json():
     """Save all article titles to JSON"""
@@ -218,6 +265,7 @@ def print_statistics():
     log_message("FINAL STATISTICS:")
     log_message("="*60)
     log_message(f"Files scanned: {stats['files_scanned']}")
+    log_message(f"Excluded files (all-articles): {stats.get('excluded_files', 0)}")
     log_message(f"Files modified: {stats['files_modified']}")
     log_message(f"Titles added: {stats['titles_added']}")
     log_message(f"Titles already existed: {stats['titles_existed']}")
@@ -246,6 +294,7 @@ def create_summary_report():
             
             f.write("Statistics:\n")
             f.write(f"- Files scanned: {stats['files_scanned']}\n")
+            f.write(f"- Excluded files (all-articles): {stats.get('excluded_files', 0)}\n")
             f.write(f"- Files modified: {stats['files_modified']}\n")
             f.write(f"- Titles added: {stats['titles_added']}\n")
             f.write(f"- Titles existed: {stats['titles_existed']}\n")
