@@ -76,6 +76,10 @@
     {{ $search := resources.Get "css/search.css" | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}">
     
+    <!-- Article Features (Share, Copy Link, Short Link) -->
+    {{ $articleFeatures := resources.Get "css/article-features.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $articleFeatures.RelPermalink }}" integrity="{{ $articleFeatures.Data.Integrity }}">
+    
     <!-- Font Fixes - Load Last to Override -->
     {{ $fontFixes := resources.Get "css/font-fixes.css" | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $fontFixes.RelPermalink }}" integrity="{{ $fontFixes.Data.Integrity }}">
@@ -258,6 +262,9 @@
 
 <!-- Heading IDs Generator -->
 <script src="{{ "assets/js/heading-ids.js" | relURL }}"></script>
+
+<!-- Article Share & Link Management -->
+<script src="{{ "assets/js/article-share.js" | relURL }}"></script>
 
 </body>
 </html>
