@@ -2973,6 +2973,8 @@ a.article-tag:active {
     font-family: var(--persian-text);
     font-size: 1rem;
     transition: all 0.3s ease;
+    margin-bottom: 15px;
+    margin-top: -25px;
 }
 
 .stat-item svg {
