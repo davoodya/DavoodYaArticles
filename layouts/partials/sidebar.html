@@ -26,10 +26,11 @@
                     </a>
                 </li>
                 
-                {{/* فیلتر کردن دسته‌بندی‌ها و حذف all-articles */}}
+                {{/* فیلتر کردن دسته‌بندی‌ها - حذف taxonomy sections */}}
+                {{ $excludedSections := slice "all-articles" "difficulty" "lab_required" "type" }}
                 {{ $categories := slice }}
                 {{ range .Site.Sections }}
-                    {{ if ne .Section "all-articles" }}
+                    {{ if not (in $excludedSections .Section) }}
                         {{ $categories = $categories | append . }}
                     {{ end }}
                 {{ end }}
@@ -141,42 +142,6 @@
             {{ else }}
                 <p class="no-items">هیچ نوشته‌ای موجود نیست</p>
             {{ end }}
-        </div>
-    </div>
-
-
-    <!-- مرتب‌سازی مقالات - در سایدبار -->
-    <div class="sidebar-widget">
-        <h3 class="sidebar-widget-title">🔄 مرتب‌سازی بر اساس</h3>
-        <div class="sidebar-widget-content">
-            <div class="sort-dropdown-container">
-                <button class="sort-dropdown-toggle" id="sidebarSortToggle" onclick="toggleSidebarSortDropdown()">
-                    <span class="sort-current-label" id="sidebarSortLabel">جدیدترین</span>
-                    <svg class="dropdown-arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 10l5 5 5-5z"/>
-                    </svg>
-                </button>
-                <ul class="sort-dropdown-menu" id="sidebarSortMenu">
-                    <li class="sort-option active" data-value="newest" onclick="applySidebarSort('newest')">
-                        <svg class="option-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
-                        </svg>
-                        <span class="option-label">جدیدترین</span>
-                        <svg class="check-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                        </svg>
-                    </li>
-                    <li class="sort-option" data-value="oldest" onclick="applySidebarSort('oldest')">
-                        <svg class="option-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/>
-                        </svg>
-                        <span class="option-label">قدیمی‌ترین</span>
-                        <svg class="check-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                        </svg>
-                    </li>
-                </ul>
-            </div>
         </div>
     </div>
 

@@ -150,5 +150,3 @@ By following these steps, you can block automatic updates in Windows registry. B
 	6. if don't see => `Devices & Printer => Add new Printer Manulay`
 		1. ![راه اندازی شبکه ویندوز-2](/images/network/WindowsNetworking-2.png)
 	7. Additional Printer Driver
-
-### !

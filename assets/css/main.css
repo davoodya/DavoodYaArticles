@@ -956,7 +956,8 @@ body {
     margin-bottom: 1.2rem;
     flex-grow: 1;
     flex-shrink: 1;
-    font-size: 0.95rem;
+    /* font-size: 0.95rem; */
+    font-size: 1.1rem;
     overflow: hidden;
     max-height: 10rem;
     position: relative;
@@ -3707,14 +3708,14 @@ a.article-tag:active {
         background: white;
         color: black;
     }
-    
+
     .category-card,
     .article-card,
     .article-wrapper {
         border: 1px solid #ccc;
         box-shadow: none;
     }
-    
+
     .view-all-btn,
     .view-all-articles-footer,
     .floating-filter-btn,
@@ -3724,3 +3725,257 @@ a.article-tag:active {
     }
 }
 
+/* ============================= */
+/* Three Column Layout - Left Sidebar + Content + Right Sidebar */
+/* ============================= */
+
+/* Three Column Layout - فقط برای صفحات مشخص شده */
+.three-column-layout {
+    display: grid;
+    /* grid-template-columns: 350px 1fr 320px; */
+    grid-template-columns: 0.45fr 1fr 0.45fr;
+    gap: 2rem;
+    align-items: start;
+    margin-top: 80px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    direction: rtl;
+}
+
+/* در RTL: Right Sidebar سمت راست (column 1), Content وسط (column 2), Left Sidebar سمت چپ (column 3) */
+.three-column-layout .sidebar {
+    grid-column: 1;
+    order: 1;
+}
+
+.three-column-layout .main-content {
+    grid-column: 2;
+    order: 2;
+    direction: rtl;
+}
+
+.three-column-layout .sidebar-left {
+    grid-column: 3;
+    order: 3;
+}
+
+/* ============================= */
+/* Left Sidebar Styles */
+/* ============================= */
+
+.sidebar-left {
+    position: sticky;
+    /* top -30px; */
+    /* background: rgba(15, 15, 15, 0.95); */
+    /* border: 1px solid rgba(0, 255, 65, 0.2); */
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-height: calc(100vh - 120px);
+    margin-top: -24px !important;
+    /* margin-bottom: 2rem; */
+    /* overflow-y: auto; */
+}
+
+/* استایل‌های Widget - مشابه Right Sidebar */
+.sidebar-widget {
+    margin-bottom: 2rem;
+    
+}
+
+.sidebar-left .sidebar-widget:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-left .sidebar-widget-title {
+    color: var(--accent-green);
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: var(--persian-heading);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(0, 255, 65, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sidebar-left .widget-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-left .widget-item {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-left .widget-item:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-left .widget-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0.75rem;
+    color: var(--secondary-text);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: var(--persian-text);
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+}
+
+.sidebar-left .widget-icon {
+    color: var(--accent-green);
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.sidebar-left .widget-text {
+    flex: 1;
+}
+
+/* Hover State */
+.sidebar-left .widget-link:hover {
+    background: rgba(0, 255, 65, 0.05);
+    color: var(--accent-green);
+    border-color: rgba(0, 255, 65, 0.2);
+    transform: translateX(-3px);
+}
+
+.sidebar-left .widget-link:hover .widget-icon {
+    transform: translateX(3px);
+}
+
+/* Active State */
+.sidebar-left .widget-item.active .widget-link {
+    background: rgba(0, 255, 65, 0.1);
+    color: var(--accent-green);
+    border-color: var(--accent-green);
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+}
+
+.sidebar-left .widget-item.active .widget-icon {
+    filter: drop-shadow(0 0 5px var(--accent-green));
+}
+
+/* Scrollbar برای Left Sidebar */
+.sidebar-left::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-left::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.sidebar-left::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 65, 0.3);
+    border-radius: 3px;
+}
+
+.sidebar-left::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 65, 0.5);
+}
+
+/* ============================= */
+/* Responsive Design */
+/* ============================= */
+
+/* Tablet (1024px - 768px) */
+@media (max-width: 1024px) {
+    .three-column-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .three-column-layout .sidebar-left {
+        grid-column: 1;
+        order: 3;
+        position: relative;
+        top: 0;
+        max-height: none;
+    }
+    
+    .three-column-layout .main-content {
+        grid-column: 1;
+        order: 1;
+    }
+    
+    .three-column-layout .sidebar {
+        grid-column: 1;
+        order: 2;
+        position: relative;
+        top: 0;
+    }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 768px) {
+    .three-column-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 60px;
+    }
+    
+    .sidebar-left {
+        width: 100%;
+        padding: 1rem;
+        order: 3;
+    }
+    
+    .main-content {
+        order: 1;
+    }
+    
+    .sidebar {
+        order: 2;
+    }
+    
+    .sidebar-left .widget-link {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    .sidebar-left .sidebar-widget-title {
+        font-size: 1rem;
+    }
+}
+
+/* Small Mobile (< 480px) */
+@media (max-width: 480px) {
+    .three-column-layout {
+        gap: 1rem;
+    }
+    
+    .sidebar-left {
+        padding: 0.75rem;
+        border-radius: 8px;
+    }
+    
+    .sidebar-left .widget-link {
+        padding: 0.4rem 0.5rem;
+        font-size: 0.85rem;
+        gap: 0.5rem;
+    }
+    
+    .sidebar-left .sidebar-widget {
+        margin-bottom: 1.5rem;
+    }
+    
+    .sidebar-left .sidebar-widget-title {
+        font-size: 0.95rem;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+}
+
+\

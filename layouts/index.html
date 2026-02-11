@@ -1,14 +1,17 @@
 {{ define "main" }}
 
-<div class="container">L
-  <div class="main-content-wrapper">
-    {{ partial "sidebar.html" . }}
+<div class="container">
+  <div class="main-content-wrapper three-column-layout">
+    {{ partial "sidebar-left.html" . }}
     
     <div class="main-content">
       <h1 class="page-title">دسته‌بندی مقالات</h1>
 
       <div class="home-grid">
+        {{/* فیلتر کردن Sections - حذف taxonomy sections */}}
+        {{ $excludedSections := slice "all-articles" "difficulty" "lab_required" "type" }}
         {{ range .Site.Sections }}
+        {{ if not (in $excludedSections .Section) }}
         <article class="category-card">
           {{ $featuredImage := .Params.featured_image }}
           {{ $images := .Params.images }}
@@ -37,6 +40,7 @@
           </div>
         </article>
         {{ end }}
+        {{ end }}
       </div>
       
       {{/* دکمه مشاهده تمام مطالب در انتهای صفحه */}}
@@ -52,6 +56,8 @@
         </a>
       </div>
     </div>
+    
+    {{ partial "sidebar.html" . }}
   </div>
 </div>
 

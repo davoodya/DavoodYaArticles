@@ -69,8 +69,8 @@
 {{ else }}
 
 <div class="container">
-    <div class="main-content-wrapper">
-        {{ partial "sidebar.html" . }}
+    <div class="main-content-wrapper three-column-layout">
+        {{ partial "sidebar-left.html" . }}
         
         <div class="main-content">
             <h1 class="category-title">{{ $pageTitle }}</h1>
@@ -276,6 +276,8 @@
                 {{ end }}
             </div>
         </div>
+        
+        {{ partial "sidebar.html" . }}
     </div>
 </div>
 

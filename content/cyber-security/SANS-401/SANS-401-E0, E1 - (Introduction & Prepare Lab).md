@@ -41,6 +41,7 @@ images = ["/images/cyber-security/SANS-401.0Introduction&PrepareLab-1.png"]
   title = "SANS-401-(Introduction & Prepare Lab)"
   description = "نقشه راه دوره های SANS به شرح زیر است: هر دوره از مجموعه SANS از چندین دامنه تقسیم شده است که این دامنه ها بصورت زیر شماره در دامنه مشخص میشود. مثلا..."
   image = "/images/cyber-security/SANS-401.0Introduction&PrepareLab-1.png"
+  
 
 
 # layout = "single"
