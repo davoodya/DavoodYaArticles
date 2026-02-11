@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Cards Single Column Test</title>
+    <style>
+        /* Import main variables */
+        :root {
+            --dark-bg: #0a0a0a;
+            --darker-bg: #050505;
+            --card-bg: #0f0f0f;
+            --main-text: #e0e0e0;
+            --secondary-text: #b0b0b0;
+            --muted-text: #808080;
+            --accent-green: #00ff41;
+            --accent-blue: #3aaddf;
+            --accent-orange: #e06c11;
+            --accent-purple: #c678dd;
+            --accent-yellow: #e5c07b;
+            --persian-heading: 'Shabnam', 'Vazir', sans-serif;
+            --persian-text: 'Vazir', 'Shabnam', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--dark-bg);
+            color: var(--main-text);
+            font-family: var(--persian-text);
+            padding: 2rem;
+            direction: rtl;
+        }
+
+        h1 {
+            color: var(--accent-green);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .test-info {
+            background: rgba(0, 255, 65, 0.1);
+            border: 2px solid rgba(0, 255, 65, 0.3);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .test-info h2 {
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+        }
+
+        .test-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .screen-size {
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Articles Grid - SINGLE COLUMN ONLY */
+        .articles-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        /* Article Card */
+        .article-card {
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--card-bg) 100%);
+            border: 2px solid rgba(58, 173, 223, 0.15);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            
+            position: relative;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .article-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 8px 35px rgba(58, 173, 223, 0.3);
+        }
+
+        .article-card-title {
+            font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+            margin-bottom: 1rem;
+            font-family: var(--persian-heading);
+            font-weight: 600;
+            line-height: 1.5;
+            color: var(--accent-green);
+        }
+
+        .article-card-image {
+            width: 100%;
+            height: 200px;
+            margin: 1rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(0, 255, 65, 0.05) 0%, rgba(58, 173, 223, 0.05) 100%);
+            border: 2px solid rgba(0, 255, 65, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted-text);
+        }
+
+        .article-card-summary {
+            color: var(--secondary-text);
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+            flex-grow: 1;
+            font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+            overflow: hidden;
+            max-height: 9rem;
+        }
+
+        .article-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+
+        .article-tag {
+            padding: 0.3rem 0.7rem;
+            background: rgba(58, 173, 223, 0.08);
+            border: 1px solid rgba(58, 173, 223, 0.2);
+            border-radius: 12px;
+            color: var(--accent-blue);
+            font-size: clamp(0.7rem, 0.95vw, 0.85rem);
+        }
+
+        .article-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin-top: auto;
+            flex-shrink: 0;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .read-more-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-green) 100%);
+            color: #000;
+            padding: 0.7rem 1.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: clamp(0.85rem, 1.1vw, 1rem);
+            margin-top: auto;
+            flex-shrink: 0;
+            width: auto;
+            max-width: 100%;
+            white-space: nowrap;
+        }
+
+        .article-card-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            flex: 1;
+            justify-content: flex-end;
+            align-items: center;
+            max-width: 100%;
+        }
+
+        .article-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 0.85rem;
+            background: rgba(10, 10, 10, 0.85);
+            border: 1.5px solid rgba(0, 255, 65, 0.22);
+            border-radius: 16px;
+            font-size: clamp(0.7rem, 1vw, 0.85rem);
+            font-weight: 600;
+            color: var(--accent-green);
+            white-space: nowrap;
+        }
+
+        /* Resolution indicator */
+        .resolution-indicator {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent-green);
+            color: #000;
+            padding: 1rem;
+            border-radius: 10px;
+            font-weight: bold;
+            font-family: monospace;
+            z-index: 9999;
+            box-shadow: 0 4px 15px rgba(0, 255, 65, 0.5);
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 769px) and (max-width: 992px) {
+            .article-card {
+                padding: 1.7rem;
+            }
+            .article-card-image {
+                height: 170px;
+            }
+        }
+
+        @media (min-width: 481px) and (max-width: 768px) {
+            .article-card {
+                padding: 1.5rem;
+            }
+            .article-card-image {
+                height: 160px;
+            }
+            .article-card-footer {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .read-more-btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-card {
+                padding: 1.3rem;
+            }
+            .article-card-image {
+                height: 150px;
+            }
+            .article-card-footer {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .read-more-btn {
+                width: 100%;
+            }
+            .article-card-badges {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Article Cards - Single Column Test</h1>
+    
+    <div class="test-info">
+        <h2>✅ معیارهای تست</h2>
+        <p>✔️ فقط یک Card در هر سطر (در تمام Resolutionها)</p>
+        <p>✔️ دکمه "ادامه مطلب" داخل Card</p>
+        <p>✔️ بدون Horizontal Scroll</p>
+        <p>✔️ Typography خوانا و متناسب</p>
+        <p class="screen-size">Current Resolution: <span id="resolution">...</span></p>
+    </div>
+
+    <div class="articles-grid">
+        <!-- Card 1 -->
+        <article class="article-card">
+            <h2 class="article-card-title">
+                آموزش مبانی امنیت سایبری و هک اخلاقی
+            </h2>
+            <div class="article-card-image">
+                [تصویر شاخص]
+            </div>
+            <div class="article-card-summary">
+                این مقاله شامل آموزش جامع مبانی امنیت سایبری، هک اخلاقی و تکنیک‌های دفاعی در برابر حملات سایبری است. در این دوره با مفاهیم اصلی امنیت شبکه، تست نفوذ و ابزارهای مختلف آشنا خواهید شد.
+            </div>
+            <div class="article-card-tags">
+                <span class="article-tag">Cybersecurity</span>
+                <span class="article-tag">Ethical Hacking</span>
+                <span class="article-tag">Network Security</span>
+            </div>
+            <div class="article-card-footer">
+                <a href="#" class="read-more-btn">ادامه مطلب ←</a>
+                <div class="article-card-badges">
+                    <span class="article-badge">⏱️ 15 دقیقه</span>
+                    <span class="article-badge">📊 مبتدی</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="article-card">
+            <h2 class="article-card-title">
+                نصب و راه‌اندازی Kali Linux برای تست نفوذ
+            </h2>
+            <div class="article-card-image">
+                [تصویر شاخص]
+            </div>
+            <div class="article-card-summary">
+                راهنمای کامل نصب Kali Linux به همراه تنظیمات اولیه و معرفی ابزارهای ضروری برای تست نفوذ و امنیت شبکه. این مقاله برای افرادی که می‌خواهند با Penetration Testing آشنا شوند مناسب است.
+            </div>
+            <div class="article-card-tags">
+                <span class="article-tag">Kali Linux</span>
+                <span class="article-tag">Penetration Testing</span>
+                <span class="article-tag">Linux</span>
+            </div>
+            <div class="article-card-footer">
+                <a href="#" class="read-more-btn">ادامه مطلب ←</a>
+                <div class="article-card-badges">
+                    <span class="article-badge">⏱️ 20 دقیقه</span>
+                    <span class="article-badge">📊 متوسط</span>
+                    <span class="article-badge">⚡ تمرین عملی</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="article-card">
+            <h2 class="article-card-title">
+                60 دستور لینوکس که هر هکر باید بداند
+            </h2>
+            <div class="article-card-image">
+                [تصویر شاخص]
+            </div>
+            <div class="article-card-summary">
+                لیست کامل و جامع دستورات خط فرمان لینوکس که برای تست نفوذ، امنیت سایبری و مدیریت سرورها ضروری هستند. شامل مثال‌های عملی و کاربردی برای هر دستور.
+            </div>
+            <div class="article-card-tags">
+                <span class="article-tag">Linux Commands</span>
+                <span class="article-tag">Command Line</span>
+                <span class="article-tag">Hacking</span>
+            </div>
+            <div class="article-card-footer">
+                <a href="#" class="read-more-btn">ادامه مطلب ←</a>
+                <div class="article-card-badges">
+                    <span class="article-badge">⏱️ 25 دقیقه</span>
+                    <span class="article-badge">📊 حرفه‌ای</span>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!-- Resolution Indicator -->
+    <div class="resolution-indicator" id="resolutionIndicator">
+        <div>Width: <span id="widthDisplay">0</span>px</div>
+        <div>Height: <span id="heightDisplay">0</span>px</div>
+    </div>
+
+    <script>
+        function updateResolution() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            document.getElementById('widthDisplay').textContent = width;
+            document.getElementById('heightDisplay').textContent = height;
+            document.getElementById('resolution').textContent = `${width} × ${height}`;
+            
+            // Add breakpoint indicator
+            let breakpoint = '';
+            if (width >= 1441) breakpoint = 'Desktop بزرگ (>1441px)';
+            else if (width >= 1201) breakpoint = 'Desktop متوسط (1201-1440px)';
+            else if (width >= 993) breakpoint = 'Laptop (993-1200px)';
+            else if (width >= 769) breakpoint = 'Tablet (769-992px)';
+            else if (width >= 481) breakpoint = 'Mobile بزرگ (481-768px)';
+            else if (width >= 321) breakpoint = 'Mobile (321-480px)';
+            else breakpoint = 'Mobile کوچک (<320px)';
+            
+            document.getElementById('resolutionIndicator').innerHTML = `
+                <div>Width: ${width}px</div>
+                <div>Height: ${height}px</div>
+                <div style="margin-top: 0.5rem; border-top: 1px solid #000; padding-top: 0.5rem;">
+                    ${breakpoint}
+                </div>
+            `;
+        }
+
+        // Update on load and resize
+        updateResolution();
+        window.addEventListener('resize', updateResolution);
+
+        // Test horizontal scroll
+        function checkHorizontalScroll() {
+            const hasHorizontalScroll = document.documentElement.scrollWidth > document.documentElement.clientWidth;
+            if (hasHorizontalScroll) {
+                console.error('❌ FAIL: Horizontal scroll detected!');
+                console.log('ScrollWidth:', document.documentElement.scrollWidth);
+                console.log('ClientWidth:', document.documentElement.clientWidth);
+            } else {
+                console.log('✅ PASS: No horizontal scroll');
+            }
+        }
+
+        window.addEventListener('load', () => {
+            setTimeout(checkHorizontalScroll, 500);
+        });
+        window.addEventListener('resize', () => {
+            setTimeout(checkHorizontalScroll, 500);
+        });
+    </script>
+</body>
+</html>

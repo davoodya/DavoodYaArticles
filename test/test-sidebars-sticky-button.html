@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebars as Sticky Button Test</title>
+    <style>
+        :root {
+            --dark-bg: #0a0a0a;
+            --darker-bg: #050505;
+            --card-bg: #0f0f0f;
+            --main-text: #e0e0e0;
+            --secondary-text: #b0b0b0;
+            --accent-green: #00ff41;
+            --accent-blue: #3aaddf;
+            --persian-heading: 'Shabnam', 'Vazir', sans-serif;
+            --persian-text: 'Vazir', 'Shabnam', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--dark-bg);
+            color: var(--main-text);
+            font-family: var(--persian-text);
+            padding: 2rem;
+            direction: rtl;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            color: var(--accent-green);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .test-info {
+            background: rgba(58, 173, 223, 0.1);
+            border: 2px solid rgba(58, 173, 223, 0.3);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .test-info h2 {
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+        }
+
+        .test-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .screen-size {
+            color: var(--accent-blue);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .content {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            min-height: 400px;
+        }
+
+        /* Floating Categories Button */
+        .floating-categories-btn {
+            position: fixed;
+            bottom: 160px;
+            left: 20px;
+            z-index: 999;
+            display: none;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 1.3rem;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, rgba(58, 173, 223, 0.9) 100%);
+            color: #000;
+            border: none;
+            border-radius: 25px;
+            font-family: var(--persian-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(58, 173, 223, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .floating-categories-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .floating-categories-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(58, 173, 223, 0.6);
+        }
+
+        /* Floating Filter Button */
+        .floating-filter-btn {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            z-index: 999;
+            display: none;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 1.3rem;
+            background: linear-gradient(135deg, var(--accent-green) 0%, rgba(0, 255, 65, 0.9) 100%);
+            color: #000;
+            border: none;
+            border-radius: 25px;
+            font-family: var(--persian-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(0, 255, 65, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .floating-filter-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .floating-filter-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 255, 65, 0.6);
+        }
+
+        /* Show buttons on width <= 1100px */
+        @media (max-width: 1100px) {
+            .floating-categories-btn,
+            .floating-filter-btn {
+                display: flex;
+            }
+        }
+
+        /* Categories Modal */
+        .categories-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .categories-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .categories-modal-content {
+            position: relative;
+            background: var(--darker-bg);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            transform: scale(0.9);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            max-height: 90vh;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        @media (max-width: 1100px) {
+            .categories-modal-content {
+                width: 100%;
+                height: 100%;
+                max-width: none;
+                max-height: none;
+                border-radius: 0;
+                transform: translateY(100%);
+            }
+            
+            .categories-modal.active .categories-modal-content {
+                transform: translateY(0);
+            }
+        }
+
+        .categories-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--card-bg) 100%);
+            border-bottom: 2px solid rgba(58, 173, 223, 0.2);
+        }
+
+        .categories-modal-header h3 {
+            color: var(--accent-blue);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .categories-modal-close {
+            background: none;
+            border: none;
+            color: var(--accent-blue);
+            font-size: 2rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+        }
+
+        .categories-modal-close:hover {
+            color: var(--accent-green);
+            transform: scale(1.2) rotate(90deg);
+            background: rgba(0, 255, 65, 0.1);
+        }
+
+        .categories-modal-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+        }
+
+        .categories-modal-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .categories-modal-body::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .categories-modal-body::-webkit-scrollbar-thumb {
+            background: rgba(58, 173, 223, 0.3);
+            border-radius: 4px;
+        }
+
+        .sidebar-widget {
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--card-bg) 100%);
+            border: 2px solid rgba(58, 173, 223, 0.15);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-widget-title {
+            color: var(--accent-blue);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid rgba(58, 173, 223, 0.2);
+        }
+
+        .widget-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .widget-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .widget-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem;
+            color: var(--main-text);
+            text-decoration: none;
+            border-radius: 8px;
+            background: rgba(58, 173, 223, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .widget-link:hover {
+            background: rgba(58, 173, 223, 0.1);
+            color: var(--accent-blue);
+            transform: translateX(-3px);
+        }
+
+        .categories-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(5px);
+            z-index: 9998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .categories-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .resolution-indicator {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent-blue);
+            color: #000;
+            padding: 1rem;
+            border-radius: 10px;
+            font-weight: bold;
+            font-family: monospace;
+            z-index: 9999;
+            box-shadow: 0 4px 15px rgba(58, 173, 223, 0.5);
+        }
+
+        .status-panel {
+            background: rgba(0, 255, 65, 0.1);
+            border: 2px solid rgba(0, 255, 65, 0.3);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+        }
+
+        .status-label {
+            color: var(--secondary-text);
+        }
+
+        .status-value {
+            font-weight: bold;
+        }
+
+        .status-value.active {
+            color: var(--accent-green);
+        }
+
+        .status-value.inactive {
+            color: #ff4444;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Sidebars as Sticky Button - Test</h1>
+    
+    <div class="test-info">
+        <h2>✅ معیارهای تست</h2>
+        <p>✔️ Width > 1100px: Buttons مخفی</p>
+        <p>✔️ Width <= 1100px: Buttons نمایش داده شوند</p>
+        <p>✔️ Categories Button بالای Filter Button</p>
+        <p>✔️ Modal Slide from bottom</p>
+        <p>✔️ Body scroll قفل شود</p>
+        <p class="screen-size">Current Resolution: <span id="resolution">...</span></p>
+    </div>
+
+    <div class="status-panel">
+        <h3 style="color: var(--accent-green); margin-bottom: 1rem;">📊 وضعیت فعلی</h3>
+        <div class="status-item">
+            <span class="status-label">Categories Button:</span>
+            <span class="status-value" id="categoriesStatus">...</span>
+        </div>
+        <div class="status-item">
+            <span class="status-label">Filter Button:</span>
+            <span class="status-value" id="filterStatus">...</span>
+        </div>
+        <div class="status-item">
+            <span class="status-label">Modal Status:</span>
+            <span class="status-value" id="modalStatus">بسته</span>
+        </div>
+        <div class="status-item">
+            <span class="status-label">Body Scroll:</span>
+            <span class="status-value" id="scrollStatus">فعال</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>محتوای اصلی صفحه</h2>
+        <p>این یک صفحه تست برای بررسی عملکرد Floating Buttons است.</p>
+        <p>برای تست:</p>
+        <ul style="padding-right: 2rem; margin-top: 1rem; line-height: 2;">
+            <li>سایز پنجره را تغییر دهید</li>
+            <li>در Width <= 1100px دکمه‌ها باید ظاهر شوند</li>
+            <li>روی دکمه "دسته‌بندی" کلیک کنید</li>
+            <li>Modal باید از پایین بالا بیاید</li>
+            <li>با Escape یا کلیک روی Overlay بسته شود</li>
+        </ul>
+    </div>
+
+    <!-- Floating Buttons -->
+    <button class="floating-categories-btn" onclick="openCategoriesModal()">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/>
+        </svg>
+        <span>دسته‌بندی</span>
+    </button>
+
+    <button class="floating-filter-btn" onclick="alert('Filter Button Clicked')">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+        </svg>
+        <span>فیلتر</span>
+    </button>
+
+    <!-- Categories Modal -->
+    <div class="categories-modal" id="categoriesModal">
+        <div class="categories-modal-content">
+            <div class="categories-modal-header">
+                <h3>📚 دسته‌بندی و فیلترها</h3>
+                <button class="categories-modal-close" onclick="closeCategoriesModal()">×</button>
+            </div>
+            
+            <div class="categories-modal-body">
+                <!-- Right Sidebar Widgets -->
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-widget-title">📚 دسته‌بندی‌ها</h3>
+                    <div class="sidebar-widget-content">
+                        <ul class="widget-list">
+                            <li class="widget-item">
+                                <a href="#" class="widget-link">
+                                    <span>▸</span>
+                                    <span>امنیت سایبری</span>
+                                </a>
+                            </li>
+                            <li class="widget-item">
+                                <a href="#" class="widget-link">
+                                    <span>▸</span>
+                                    <span>شبکه</span>
+                                </a>
+                            </li>
+                            <li class="widget-item">
+                                <a href="#" class="widget-link">
+                                    <span>▸</span>
+                                    <span>لینوکس</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-widget-title">🏷️ تگ‌ها</h3>
+                    <div class="sidebar-widget-content">
+                        <ul class="widget-list">
+                            <li class="widget-item">
+                                <a href="#" class="widget-link">
+                                    <span>▸</span>
+                                    <span>Hacking</span>
+                                </a>
+                            </li>
+                            <li class="widget-item">
+                                <a href="#" class="widget-link">
+                                    <span>▸</span>
+                                    <span>Penetration Testing</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Left Sidebar Widgets -->
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-widget-title">📊 سطح دشواری</h3>
+                    <div class="sidebar-widget-content">
+                        <ul class="widget-list">
+                            <li class="widget-item">
+                                <a href="#" class="widget-link">
+                                    <span>▸</span>
+                                    <span>مبتدی</span>
+                                </a>
+                            </li>
+                            <li class="widget-item">
+                                <a href="#" class="widget-link">
+                                    <span>▸</span>
+                                    <span>متوسط</span>
+                                </a>
+                            </li>
+                            <li class="widget-item">
+                                <a href="#" class="widget-link">
+                                    <span>▸</span>
+                                    <span>حرفه‌ای</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-widget-title">📄 نوع مطالب</h3>
+                    <div class="sidebar-widget-content">
+                        <ul class="widget-list">
+                            <li class="widget-item">
+                                <a href="#" class="widget-link">
+                                    <span>▸</span>
+                                    <span>مقاله</span>
+                                </a>
+                            </li>
+                            <li class="widget-item">
+                                <a href="#" class="widget-link">
+                                    <span>▸</span>
+                                    <span>آموزشی</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="categories-modal-overlay" id="categoriesModalOverlay" onclick="closeCategoriesModal()"></div>
+
+    <!-- Resolution Indicator -->
+    <div class="resolution-indicator" id="resolutionIndicator">
+        <div>Width: <span id="widthDisplay">0</span>px</div>
+        <div>Height: <span id="heightDisplay">0</span>px</div>
+    </div>
+
+    <script>
+        function updateResolution() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            document.getElementById('widthDisplay').textContent = width;
+            document.getElementById('heightDisplay').textContent = height;
+            document.getElementById('resolution').textContent = `${width} × ${height}`;
+            
+            // Update button status
+            const categoriesBtn = document.querySelector('.floating-categories-btn');
+            const filterBtn = document.querySelector('.floating-filter-btn');
+            const categoriesStatus = document.getElementById('categoriesStatus');
+            const filterStatus = document.getElementById('filterStatus');
+            
+            const isVisible = width <= 1100;
+            
+            if (isVisible) {
+                categoriesStatus.textContent = 'نمایش داده می‌شود';
+                categoriesStatus.className = 'status-value active';
+                filterStatus.textContent = 'نمایش داده می‌شود';
+                filterStatus.className = 'status-value active';
+            } else {
+                categoriesStatus.textContent = 'مخفی';
+                categoriesStatus.className = 'status-value inactive';
+                filterStatus.textContent = 'مخفی';
+                filterStatus.className = 'status-value inactive';
+            }
+            
+            // Add breakpoint indicator
+            let breakpoint = '';
+            if (width > 1100) breakpoint = 'Desktop (>1100px) - Buttons مخفی';
+            else if (width > 768) breakpoint = 'Tablet (769-1100px) - Buttons نمایش';
+            else if (width > 480) breakpoint = 'Mobile بزرگ (481-768px) - Buttons نمایش';
+            else breakpoint = 'Mobile (≤480px) - Buttons نمایش';
+            
+            document.getElementById('resolutionIndicator').innerHTML = `
+                <div>Width: ${width}px</div>
+                <div>Height: ${height}px</div>
+                <div style="margin-top: 0.5rem; border-top: 1px solid #000; padding-top: 0.5rem;">
+                    ${breakpoint}
+                </div>
+            `;
+        }
+
+        function openCategoriesModal() {
+            const modal = document.getElementById('categoriesModal');
+            const overlay = document.getElementById('categoriesModalOverlay');
+            const modalStatus = document.getElementById('modalStatus');
+            const scrollStatus = document.getElementById('scrollStatus');
+            
+            modal.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            modalStatus.textContent = 'باز';
+            modalStatus.className = 'status-value active';
+            scrollStatus.textContent = 'قفل';
+            scrollStatus.className = 'status-value inactive';
+            
+            console.log('✅ Modal opened');
+        }
+
+        function closeCategoriesModal() {
+            const modal = document.getElementById('categoriesModal');
+            const overlay = document.getElementById('categoriesModalOverlay');
+            const modalStatus = document.getElementById('modalStatus');
+            const scrollStatus = document.getElementById('scrollStatus');
+            
+            modal.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            modalStatus.textContent = 'بسته';
+            modalStatus.className = 'status-value inactive';
+            scrollStatus.textContent = 'فعال';
+            scrollStatus.className = 'status-value active';
+            
+            console.log('✅ Modal closed');
+        }
+
+        // Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeCategoriesModal();
+                console.log('✅ Closed with Escape');
+            }
+        });
+
+        // Update on load and resize
+        updateResolution();
+        window.addEventListener('resize', updateResolution);
+
+        // Log button positions
+        function logButtonPositions() {
+            const categoriesBtn = document.querySelector('.floating-categories-btn');
+            const filterBtn = document.querySelector('.floating-filter-btn');
+            
+            if (window.innerWidth <= 1100) {
+                const categoriesRect = categoriesBtn.getBoundingClientRect();
+                const filterRect = filterBtn.getBoundingClientRect();
+                
+                console.log('Button Positions:');
+                console.log('Categories Button bottom:', window.innerHeight - categoriesRect.bottom, 'px from bottom');
+                console.log('Filter Button bottom:', window.innerHeight - filterRect.bottom, 'px from bottom');
+                console.log('Gap:', categoriesRect.bottom - filterRect.top, 'px');
+            }
+        }
+
+        window.addEventListener('load', () => {
+            setTimeout(logButtonPositions, 500);
+        });
+        
+        window.addEventListener('resize', () => {
+            setTimeout(logButtonPositions, 500);
+        });
+    </script>
+</body>
+</html>

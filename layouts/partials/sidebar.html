@@ -147,6 +147,14 @@
 
 </aside>
 
+<!-- Floating Categories Button (Mobile & Tablet <= 1100px) -->
+<button class="floating-categories-btn" onclick="openCategoriesModal()" aria-label="دسته‌بندی">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/>
+    </svg>
+    <span>دسته‌بندی</span>
+</button>
+
 <!-- Floating Filter Button (All Devices) -->
 <button class="floating-filter-btn" onclick="openFilterModal()" aria-label="فیلترها">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -304,11 +312,320 @@
 <!-- Filter Modal Overlay -->
 <div class="filter-modal-overlay" id="filterModalOverlay" onclick="closeFilterModal()"></div>
 
+<!-- ============================= -->
+<!-- Categories Modal (Mobile & Tablet <= 1100px) -->
+<!-- ============================= -->
+<div class="categories-modal" id="categoriesModal">
+    <div class="categories-modal-content">
+        <div class="categories-modal-header">
+            <h3>📚 دسته‌بندی و فیلترها</h3>
+            <button class="categories-modal-close" onclick="closeCategoriesModal()" aria-label="بستن">×</button>
+        </div>
+        
+        <div class="categories-modal-body">
+            <!-- ============================= -->
+            <!-- ترتیب صحیح Widgets -->
+            <!-- ============================= -->
+            
+            <!-- 1. جستجو -->
+            <div class="sidebar-widget">
+                <h3 class="sidebar-widget-title">🔍 جستجو</h3>
+                <div class="sidebar-widget-content">
+                    {{ partial "search.html" (dict "inline" true) }}
+                </div>
+            </div>
+            
+            <!-- 2. دسته‌بندی‌ها -->
+            <div class="sidebar-widget">
+                <h3 class="sidebar-widget-title">📚 دسته‌بندی‌ها</h3>
+                <div class="sidebar-widget-content">
+                    <ul class="category-list">
+                        {{/* دسته بندی تمام مقالات */}}
+                        {{ $realArticles := where site.RegularPages "Section" "!=" "all-articles" }}
+                        {{ $realArticles = where $realArticles "Draft" false }}
+                        <li class="category-item all-articles-item">
+                            <a href="/all-articles/" class="category-link all-articles-link">
+                                <span class="category-icon">📋</span>
+                                <span class="category-name">تمام مقالات</span>
+                                <span class="category-badge">{{ len $realArticles }}</span>
+                            </a>
+                        </li>
+                        
+                        {{/* فیلتر کردن دسته‌بندی‌ها */}}
+                        {{ $excludedSections := slice "all-articles" "difficulty" "lab_required" "type" }}
+                        {{ $categories := slice }}
+                        {{ range .Site.Sections }}
+                            {{ if not (in $excludedSections .Section) }}
+                                {{ $categories = $categories | append . }}
+                            {{ end }}
+                        {{ end }}
+                        
+                        {{ range $categories }}
+                            <li class="category-item">
+                                <a href="{{ .RelPermalink }}" class="category-link">
+                                    <span class="category-icon">▸</span>
+                                    <span class="category-name">{{ .Title }}</span>
+                                    <span class="category-badge">{{ len .Pages }}</span>
+                                </a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. نوشته‌های تازه -->
+            <div class="sidebar-widget">
+                <h3 class="sidebar-widget-title">📝 نوشته‌های تازه</h3>
+                <div class="sidebar-widget-content">
+                    {{ $recentPosts := .Site.RegularPages }}
+                    {{ $recentPosts = where $recentPosts "Draft" false }}
+                    {{ $recentPosts = first 5 (sort $recentPosts "Lastmod" "desc") }}
+                    
+                    {{ if gt (len $recentPosts) 0 }}
+                        <ul class="recent-posts-list">
+                            {{ range $recentPosts }}
+                                <li class="recent-post-item">
+                                    <a href="{{ .RelPermalink }}" class="recent-post-link">
+                                        <span class="recent-post-icon">📄</span>
+                                        <div class="recent-post-info">
+                                            <h4 class="recent-post-title">{{ .Title }}</h4>
+                                            {{ if ne .Lastmod .Date }}
+                                                <span class="recent-post-date" title="آخرین بروزرسانی">🔄 {{ .Lastmod.Format "2006/01/02" }}</span>
+                                            {{ else }}
+                                                <span class="recent-post-date">{{ .Date.Format "2006/01/02" }}</span>
+                                            {{ end }}
+                                        </div>
+                                    </a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    {{ else }}
+                        <p class="no-items">هیچ نوشته‌ای موجود نیست</p>
+                    {{ end }}
+                </div>
+            </div>
+            
+            <!-- ============================= -->
+            <!-- Left Sidebar Widgets با استایل صحیح -->
+            <!-- ============================= -->
+            
+            {{ $taxonomies := site.Data.taxonomies }}
+            {{ $currentPath := .RelPermalink }}
+            
+            <!-- 4. نوع مطالب -->
+            <div class="sidebar-widget">
+                <h3 class="sidebar-widget-title">📄 نوع مطالب</h3>
+                <div class="sidebar-widget-content">
+                    <ul class="widget-list">
+                        {{ $postTypeFa := index $taxonomies "post_type_fa" }}
+                        {{ if $postTypeFa }}
+                            {{ $mapping := $postTypeFa.mapping }}
+                            {{ $slug := $postTypeFa.slug }}
+                            {{ $orderedTypes := slice "مقاله" "آموزشی" "دستور العمل" "ابزار" "اسکریپت" "خبر" "معرفی" }}
+                            
+                            {{ range $orderedTypes }}
+                                {{ $faValue := . }}
+                                {{ $enValue := index $mapping $faValue }}
+                                {{ if $enValue }}
+                                    {{ $url := printf "/%s/%s/" $slug $enValue }}
+                                    {{ $isActive := eq $currentPath $url }}
+                                    
+                                    <li class="widget-item{{ if $isActive }} active{{ end }}">
+                                        <a href="{{ $url }}" class="widget-link">
+                                            <span class="widget-icon">▸</span>
+                                            <span class="widget-text">{{ $faValue }}</span>
+                                        </a>
+                                    </li>
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 5. سطح دشواری -->
+            <div class="sidebar-widget">
+                <h3 class="sidebar-widget-title">📊 سطح دشواری</h3>
+                <div class="sidebar-widget-content">
+                    <ul class="widget-list">
+                        {{ $difficulty := index $taxonomies "difficulty" }}
+                        {{ if $difficulty }}
+                            {{ $labels := $difficulty.labels }}
+                            {{ $slug := $difficulty.slug }}
+                            {{ $values := $difficulty.values }}
+                            
+                            {{ range $values }}
+                                {{ $value := . }}
+                                {{ $label := index $labels $value }}
+                                {{ $url := printf "/%s/%s/" $slug $value }}
+                                {{ $isActive := eq $currentPath $url }}
+                                
+                                <li class="widget-item{{ if $isActive }} active{{ end }}">
+                                    <a href="{{ $url }}" class="widget-link">
+                                        <span class="widget-icon">▸</span>
+                                        <span class="widget-text">{{ $label }}</span>
+                                    </a>
+                                </li>
+                            {{ end }}
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 6. نیاز به آزمایشگاه -->
+            <div class="sidebar-widget">
+                <h3 class="sidebar-widget-title">🔬 نیاز به آزمایشگاه</h3>
+                <div class="sidebar-widget-content">
+                    <ul class="widget-list">
+                        {{ $labRequired := index $taxonomies "lab_required" }}
+                        {{ if $labRequired }}
+                            {{ $labels := $labRequired.labels }}
+                            {{ $slug := $labRequired.slug }}
+                            {{ $orderedValues := slice "true" "false" }}
+                            
+                            {{ range $orderedValues }}
+                                {{ $value := . }}
+                                {{ $label := index $labels $value }}
+                                {{ $url := printf "/%s/%s/" $slug $value }}
+                                {{ $isActive := eq $currentPath $url }}
+                                
+                                <li class="widget-item{{ if $isActive }} active{{ end }}">
+                                    <a href="{{ $url }}" class="widget-link">
+                                        <span class="widget-icon">▸</span>
+                                        <span class="widget-text">{{ $label }}</span>
+                                    </a>
+                                </li>
+                            {{ end }}
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 7. تگ‌ها با دکمه "مشاهده تمام تگ‌ها" -->
+            <div class="sidebar-widget">
+                <h3 class="sidebar-widget-title">🏷️ تگ‌ها</h3>
+                <div class="sidebar-widget-content">
+                    {{ with .Site.Taxonomies.tags }}
+                        {{ $tags := . }}
+                        <div class="tags-container" id="modalTagsContainer">
+                            {{ $visibleTagsCount := 10 }}
+                            {{ $count := 0 }}
+                            {{ range $name, $taxonomy := $tags }}
+                                {{ if lt $count $visibleTagsCount }}
+                                    <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" class="tag-badge">
+                                        {{ $name }} <span class="tag-count">{{ len $taxonomy.Pages }}</span>
+                                    </a>
+                                    {{ $count = add $count 1 }}
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                        
+                        {{ if gt (len $tags) $visibleTagsCount }}
+                            <button class="view-all-tags-btn" onclick="toggleAllTags()" id="viewAllTagsBtn">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 10l5 5 5-5z"/>
+                                </svg>
+                                <span>مشاهده تمام تگ‌ها ({{ len $tags }})</span>
+                            </button>
+                            
+                            <div class="tags-container hidden-tags" id="modalHiddenTags" style="display: none;">
+                                {{ $count = 0 }}
+                                {{ range $name, $taxonomy := $tags }}
+                                    {{ if ge $count $visibleTagsCount }}
+                                        <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" class="tag-badge">
+                                            {{ $name }} <span class="tag-count">{{ len $taxonomy.Pages }}</span>
+                                        </a>
+                                    {{ end }}
+                                    {{ $count = add $count 1 }}
+                                {{ end }}
+                            </div>
+                        {{ end }}
+                    {{ else }}
+                        <p class="no-items">هیچ تگی موجود نیست</p>
+                    {{ end }}
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Categories Modal Overlay -->
+<div class="categories-modal-overlay" id="categoriesModalOverlay" onclick="closeCategoriesModal()"></div>
+
 <script>
 function toggleDropdown(type) {
     const dropdown = document.getElementById(type + '-dropdown');
     if (dropdown) {
         dropdown.classList.toggle('active');
+    }
+}
+
+// ============================= //
+// Categories Modal Functions
+// ============================= //
+
+function openCategoriesModal() {
+    const modal = document.getElementById('categoriesModal');
+    const overlay = document.getElementById('categoriesModalOverlay');
+    
+    if (modal && overlay) {
+        modal.classList.add('active');
+        overlay.classList.add('active');
+        // قفل کردن scroll صفحه
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeCategoriesModal() {
+    const modal = document.getElementById('categoriesModal');
+    const overlay = document.getElementById('categoriesModalOverlay');
+    
+    if (modal && overlay) {
+        modal.classList.remove('active');
+        overlay.classList.remove('active');
+        // بازگرداندن scroll صفحه
+        document.body.style.overflow = '';
+    }
+}
+
+// بستن با کلید Escape
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeCategoriesModal();
+    }
+});
+
+// ============================= //
+// Toggle All Tags Function
+// ============================= //
+
+function toggleAllTags() {
+    const hiddenTags = document.getElementById('modalHiddenTags');
+    const button = document.getElementById('viewAllTagsBtn');
+    
+    if (hiddenTags && button) {
+        const isVisible = hiddenTags.style.display !== 'none';
+        
+        if (isVisible) {
+            // مخفی کردن
+            hiddenTags.style.display = 'none';
+            button.innerHTML = `
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 10l5 5 5-5z"/>
+                </svg>
+                <span>مشاهده تمام تگ‌ها</span>
+            `;
+        } else {
+            // نمایش دادن
+            hiddenTags.style.display = 'flex';
+            button.innerHTML = `
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
+                    <path d="M7 10l5 5 5-5z"/>
+                </svg>
+                <span>بستن تگ‌ها</span>
+            `;
+        }
     }
 }
 </script>

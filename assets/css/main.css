@@ -255,14 +255,18 @@ body {
     gap: 3rem;
     align-items: start;
     margin-top: 80px;
-    overflow-x: hidden; /* مخفی کردن scrollbar افقی اضافه */
+    overflow-x: hidden;
     overflow-y: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 .main-content {
     min-width: 0;
-    overflow-x: hidden; /* مخفی کردن scrollbar افقی در محتوا */
+    overflow-x: hidden;
     overflow-y: visible;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* در حالت دسکتاپ: Grid با ترتیب عادی (Sidebar سمت راست، محتوا سمت چپ) */
@@ -598,174 +602,68 @@ body {
 
 }
 
+/* ============================= */
+/* Articles Grid - SINGLE COLUMN ONLY */
+/* ============================= */
+
 .articles-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 2.5rem;
     margin-bottom: 3rem;
+    width: 100%;
+    max-width: 100%;
 }
 
-
-@media (max-width: 1200px) {
+/* در تمام Resolutionها فقط یک ستون */
+@media (min-width: 1441px) {
     .articles-grid {
-        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .articles-grid {
+        gap: 2.3rem;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .articles-grid {
         gap: 2rem;
     }
-    
-    .article-card {
-        height: 600px;
-        min-height: 600px;
-        max-height: 600px;
-    }
-    
-    .article-card-image {
-        height: 170px;
-    }
-    
-    .article-card-summary {
-        max-height: 7rem;
-        font-size: 0.92rem;
-    }
-    
-    .article-badge {
-        font-size: 0.72rem;
-        padding: 0.38rem 0.65rem;
-    }
-    
-    .article-badge svg {
-        width: 13px;
-        height: 13px;
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .articles-grid {
+        gap: 1.8rem;
     }
 }
 
 @media (max-width: 768px) {
     .articles-grid {
-        grid-template-columns: 1fr;
         gap: 1.5rem;
-    }
-    
-    .article-card {
-        height: 580px;
-        min-height: 580px;
-        max-height: 580px;
-        padding: 1.8rem;
-    }
-    
-    .article-card-image {
-        height: 170px;
-        margin: 0.8rem 0;
-        border-radius: 10px;
-    }
-    
-    .article-card-summary {
-        max-height: 6rem;
-        font-size: 0.9rem;
-    }
-    
-    .article-card-title {
-        font-size: 1.3rem;
-        margin-bottom: 0.9rem;
-    }
-    
-    .article-card-tags {
-        gap: 0.4rem;
-        margin-bottom: 0.8rem;
-    }
-    
-    .article-tag {
-        font-size: 0.75rem;
-        padding: 0.25rem 0.6rem;
-    }
-    
-    .article-card-footer {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.8rem;
-    }
-    
-    .article-card-badges {
-        width: 100%;
-        justify-content: flex-start;
-    }
-    
-    .article-badge {
-        font-size: 0.7rem;
-        padding: 0.35rem 0.6rem;
-    }
-    
-    .article-badge svg {
-        width: 12px;
-        height: 12px;
     }
 }
 
 @media (max-width: 480px) {
-    .article-card {
-        padding: 1.5rem;
-        height: 560px;
-        min-height: 560px;
-        max-height: 560px;
+    .articles-grid {
+        gap: 1.3rem;
     }
-    
-    .article-card-image {
-        height: 150px;
-        margin: 0.7rem 0;
-        border-radius: 8px;
-    }
-    
-    .article-card-summary {
-        font-size: 0.85rem;
-        line-height: 1.5;
-        max-height: 5.5rem;
-    }
-    
-    .article-card-title {
-        font-size: 1.2rem;
-        margin-bottom: 0.8rem;
-    }
-    
-    .article-card-tags {
-        gap: 0.35rem;
-        margin-bottom: 0.7rem;
-    }
-    
-    .article-tag {
-        font-size: 0.7rem;
-        padding: 0.2rem 0.5rem;
-    }
-    
-    .article-card-footer {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.7rem;
-    }
-    
-    .article-card-badges {
-        width: 100%;
-        justify-content: flex-start;
-        gap: 0.4rem;
-    }
-    
-    .article-badge {
-        font-size: 0.65rem;
-        padding: 0.3rem 0.5rem;
-    }
-    
-    .article-badge svg {
-        width: 11px;
-        height: 11px;
-    }
-    
-    .read-more-btn {
-        padding: 0.6rem 1.3rem;
-        font-size: 0.9rem;
-        width: 100%;
-        justify-content: center;
+}
+
+@media (max-width: 320px) {
+    .articles-grid {
+        gap: 1rem;
     }
 }
 
 /* ============================= */
 /* Article Card (List Pages) */
+/* ============================= */
+
+/* ============================= */
+/* Article Card - Fixed Height & Flex Layout */
 /* ============================= */
 
 .article-card {
@@ -774,15 +672,21 @@ body {
     border-radius: 16px;
     padding: 2rem;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* Flex Layout - حذف Absolute Positioning */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 540px;
-    max-height: 540px;
-    height: 540px;
+    height: 100%;
+    
+    /* جلوگیری از Overflow افقی */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
     position: relative;
-    overflow: hidden;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .article-card::before {
@@ -809,7 +713,8 @@ body {
 }
 
 .article-card-title {
-    font-size: 1.4rem;
+    /* استفاده از clamp برای Typography */
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
     margin-bottom: 1rem;
     font-family: var(--persian-heading);
     font-weight: 600;
@@ -820,7 +725,9 @@ body {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    max-height: 4.2rem;
+    max-height: 4.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .article-card-title a {
@@ -954,16 +861,22 @@ body {
     color: var(--secondary-text);
     line-height: 1.6;
     margin-bottom: 1.2rem;
+    
+    /* Flex-grow برای پر کردن فضای باقیمانده */
     flex-grow: 1;
     flex-shrink: 1;
-    /* font-size: 0.95rem; */
-    font-size: 1.1rem;
+    
+    /* Typography با clamp */
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+    
     overflow: hidden;
-    max-height: 10rem;
+    max-height: 9rem;
     position: relative;
     display: -webkit-box;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Fade effect at bottom if content is too long */
@@ -1080,9 +993,14 @@ body {
     margin-bottom: 0.2rem;
 }
 
+/* ============================= */
+/* Read More Button - با margin-top: auto برای قرار گرفتن در پایین */
+/* ============================= */
+
 .read-more-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-green) 100%);
     color: #000;
@@ -1094,10 +1012,21 @@ body {
     transition: all 0.3s ease;
     text-align: center;
     align-self: flex-start;
-    font-size: 0.95rem;
+    
+    /* Typography با clamp */
+    font-size: clamp(0.85rem, 1.1vw, 1rem);
+    
     box-shadow: 0 4px 15px rgba(0, 255, 65, 0.3);
+    
+    /* حذف absolute positioning */
+    /* قرارگیری در پایین Card */
     margin-top: auto;
     flex-shrink: 0;
+    
+    /* جلوگیری از بیرون زدگی */
+    width: auto;
+    max-width: 100%;
+    white-space: nowrap;
 }
 
 .read-more-btn:hover {
@@ -1945,6 +1874,11 @@ a.article-tag-item:active {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1rem;
+    
+    /* جلوگیری از Overflow */
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .article-tag {
@@ -1955,12 +1889,16 @@ a.article-tag-item:active {
     border-radius: 12px;
     color: var(--accent-blue);
     font-family: var(--english-font);
-    font-size: 0.8rem;
+    
+    /* Typography با clamp */
+    font-size: clamp(0.7rem, 0.95vw, 0.85rem);
+    
     font-weight: 500;
     transition: all 0.3s ease;
     letter-spacing: 0.3px;
     text-decoration: none;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .article-tag:hover {
@@ -1989,8 +1927,15 @@ a.article-tag:active {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    
+    /* Footer در پایین کارت */
     margin-top: auto;
     flex-shrink: 0;
+    
+    /* جلوگیری از Overflow */
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 
 /* ============================= */
@@ -2004,6 +1949,10 @@ a.article-tag:active {
     flex: 1;
     justify-content: flex-end;
     align-items: center;
+    
+    /* جلوگیری از Overflow */
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .article-badge {
@@ -2015,12 +1964,16 @@ a.article-tag:active {
     border: 1.5px solid rgba(0, 255, 65, 0.22);
     border-radius: 16px;
     font-family: var(--persian-text);
-    font-size: 0.8rem;
+    
+    /* Typography با clamp */
+    font-size: clamp(0.7rem, 1vw, 0.85rem);
+    
     font-weight: 600;
     color: var(--main-text);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     white-space: nowrap;
     backdrop-filter: blur(5px);
+    flex-shrink: 0;
 }
 
 .article-badge svg {
@@ -2720,7 +2673,190 @@ a.article-tag:active {
 }
 
 /* ============================= */
-/* Responsive: Article Meta Badges & Tags */
+/* Responsive: Article Cards - SINGLE COLUMN در تمام Resolutionها */
+/* ============================= */
+
+/* Desktop بزرگ: 1441px+ */
+@media (min-width: 1441px) {
+    .article-card {
+        padding: 2rem;
+    }
+    
+    .article-card-title {
+        margin-bottom: 1rem;
+    }
+    
+    .article-card-image {
+        height: 200px;
+        margin: 1rem 0;
+    }
+    
+    .article-card-summary {
+        margin-bottom: 1.2rem;
+    }
+}
+
+/* Desktop متوسط: 1201px - 1440px */
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .article-card {
+        padding: 1.9rem;
+    }
+    
+    .article-card-image {
+        height: 190px;
+        margin: 0.95rem 0;
+    }
+}
+
+/* Laptop / Desktop کوچک: 993px - 1200px */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .article-card {
+        padding: 1.8rem;
+    }
+    
+    .article-card-image {
+        height: 180px;
+        margin: 0.9rem 0;
+    }
+    
+    .article-card-summary {
+        max-height: 8.5rem;
+    }
+}
+
+/* Tablet: 769px - 992px */
+@media (min-width: 769px) and (max-width: 992px) {
+    .article-card {
+        padding: 1.7rem;
+    }
+    
+    .article-card-image {
+        height: 170px;
+        margin: 0.85rem 0;
+    }
+    
+    .article-card-summary {
+        max-height: 8rem;
+    }
+}
+
+/* Tablet کوچک / Mobile بزرگ: 481px - 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .article-card {
+        padding: 1.5rem;
+    }
+    
+    .article-card-image {
+        height: 160px;
+        margin: 0.8rem 0;
+        border-radius: 10px;
+    }
+    
+    .article-card-summary {
+        max-height: 7.5rem;
+    }
+    
+    .article-card-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.9rem;
+    }
+    
+    .article-card-badges {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .read-more-btn {
+        width: 100%;
+        align-self: stretch;
+    }
+}
+
+/* Mobile: 321px - 480px */
+@media (min-width: 321px) and (max-width: 480px) {
+    .article-card {
+        padding: 1.3rem;
+    }
+    
+    .article-card-image {
+        height: 150px;
+        margin: 0.7rem 0;
+        border-radius: 8px;
+    }
+    
+    .article-card-summary {
+        max-height: 7rem;
+        line-height: 1.5;
+    }
+    
+    .article-card-tags {
+        gap: 0.4rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .article-card-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+    }
+    
+    .article-card-badges {
+        width: 100%;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .read-more-btn {
+        width: 100%;
+        align-self: stretch;
+        padding: 0.65rem 1.2rem;
+    }
+}
+
+/* Mobile کوچک: < 320px */
+@media (max-width: 320px) {
+    .article-card {
+        padding: 1rem;
+    }
+    
+    .article-card-image {
+        height: 140px;
+        margin: 0.6rem 0;
+        border-radius: 6px;
+    }
+    
+    .article-card-summary {
+        max-height: 6.5rem;
+        line-height: 1.4;
+    }
+    
+    .article-card-tags {
+        gap: 0.35rem;
+        margin-bottom: 0.7rem;
+    }
+    
+    .article-card-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.7rem;
+    }
+    
+    .article-card-badges {
+        width: 100%;
+        justify-content: center;
+        gap: 0.4rem;
+    }
+    
+    .read-more-btn {
+        width: 100%;
+        align-self: stretch;
+        padding: 0.6rem 1rem;
+    }
+}
+
+/* ============================= */
+/* Responsive: Article Meta Badges & Tags (Single Page) */
 /* ============================= */
 
 @media (max-width: 768px) {
@@ -2740,23 +2876,6 @@ a.article-tag:active {
     .meta-badge svg {
         width: 18px;
         height: 18px;
-    }
-    
-    /* Card Badges */
-    .article-card-badges {
-        gap: 0.5rem;
-        flex-wrap: wrap;
-    }
-    
-    .article-badge {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.75rem;
-        gap: 0.35rem;
-    }
-    
-    .article-badge svg {
-        width: 14px;
-        height: 14px;
     }
     
     .article-tags-section {
@@ -2787,7 +2906,6 @@ a.article-tag:active {
         margin-bottom: 1.5rem;
         flex-direction: column;
         align-items: stretch;
-        flex-direction: column;
     }
     
     .meta-badge {
@@ -2801,35 +2919,6 @@ a.article-tag:active {
     .meta-badge svg {
         width: 16px;
         height: 16px;
-    }
-    
-    /* Card Badges */
-    .article-card-badges {
-        width: 100%;
-        gap: 0.4rem;
-        justify-content: center;
-    }
-    
-    .article-badge {
-        font-size: 0.7rem;
-        padding: 0.35rem 0.65rem;
-        gap: 0.3rem;
-    }
-    
-    .article-badge svg {
-        width: 13px;
-        height: 13px;
-    }
-    
-    .article-card-footer {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-    
-    .read-more-btn {
-        width: 100%;
-        text-align: center;
-        justify-content: center;
     }
     
     .article-tags-section {
@@ -2884,7 +2973,7 @@ a.article-tag:active {
     color: var(--accent-green);
     text-decoration: none;
     font-family: var(--persian-heading);
-    font-weight: 600;
+    font-weight: 600; 
     font-size: 1rem;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
@@ -3401,6 +3490,393 @@ a.article-tag:active {
     display: flex;
 }
 
+/* ============================= */
+/* Floating Categories Button (Mobile & Tablet) */
+/* ============================= */
+
+.floating-categories-btn {
+    position: fixed;
+    bottom: 160px; /* بالای دکمه فیلتر (80px) + فاصله (80px) */
+    left: 20px;
+    z-index: 999;
+    display: none; /* پیش‌فرض مخفی */
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.3rem;
+    /* رنگ متفاوت اما هماهنگ - آبی به جای سبز */
+    background: linear-gradient(135deg, var(--accent-blue) 0%, rgba(58, 173, 223, 0.9) 100%);
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-family: var(--persian-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(58, 173, 223, 0.4);
+    transition: all 0.3s ease;
+}
+
+.floating-categories-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.floating-categories-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(58, 173, 223, 0.6);
+}
+
+.floating-categories-btn:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* Show categories button on width <= 1100px */
+@media (max-width: 1100px) {
+    .floating-categories-btn {
+        display: flex;
+    }
+}
+
+/* ============================= */
+/* Categories Modal (Drawer) */
+/* ============================= */
+
+.categories-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.categories-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.categories-modal-content {
+    position: relative;
+    background: var(--darker-bg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    max-height: 90vh;
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Mobile/Tablet: Full screen slide from bottom */
+@media (max-width: 1100px) {
+    .categories-modal-content {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+        border-radius: 0;
+        transform: translateY(100%);
+    }
+    
+    .categories-modal.active .categories-modal-content {
+        transform: translateY(0);
+    }
+}
+
+/* Desktop: Centered modal (در صورت باز شدن اتفاقی) */
+@media (min-width: 1101px) {
+    .categories-modal.active .categories-modal-content {
+        transform: scale(1);
+    }
+}
+
+.categories-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--darker-bg) 0%, var(--card-bg) 100%);
+    border-bottom: 2px solid rgba(58, 173, 223, 0.2);
+}
+
+.categories-modal-header h3 {
+    color: var(--accent-blue);
+    font-family: var(--persian-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.categories-modal-close {
+    background: none;
+    border: none;
+    color: var(--accent-blue);
+    font-size: 2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+
+.categories-modal-close:hover {
+    color: var(--accent-green);
+    transform: scale(1.2) rotate(90deg);
+    background: rgba(0, 255, 65, 0.1);
+}
+
+.categories-modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+.categories-modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.categories-modal-body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.categories-modal-body::-webkit-scrollbar-thumb {
+    background: rgba(58, 173, 223, 0.3);
+    border-radius: 4px;
+}
+
+.categories-modal-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(58, 173, 223, 0.5);
+}
+
+/* Sidebar widgets در Modal - حفظ استایل اصلی */
+.categories-modal-body .sidebar-widget {
+    background: linear-gradient(135deg, var(--darker-bg) 0%, var(--card-bg) 100%);
+    border: 2px solid rgba(58, 173, 223, 0.15);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.categories-modal-body .sidebar-widget:hover {
+    border-color: rgba(58, 173, 223, 0.3);
+    box-shadow: 0 5px 20px rgba(58, 173, 223, 0.15);
+}
+
+.categories-modal-body .sidebar-widget-title {
+    color: var(--accent-blue);
+    font-family: var(--persian-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(58, 173, 223, 0.2);
+    text-shadow: 0 0 10px rgba(58, 173, 223, 0.3);
+}
+
+/* Left Sidebar Widgets استایل در Modal */
+.categories-modal-body .widget-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories-modal-body .widget-item {
+    margin-bottom: 0.5rem;
+}
+
+.categories-modal-body .widget-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0.75rem;
+    color: var(--secondary-text);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: var(--persian-text);
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.categories-modal-body .widget-icon {
+    color: var(--accent-green);
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.categories-modal-body .widget-text {
+    flex: 1;
+}
+
+.categories-modal-body .widget-link:hover {
+    background: rgba(0, 255, 65, 0.05);
+    color: var(--accent-green);
+    border-color: rgba(0, 255, 65, 0.2);
+    transform: translateX(-3px);
+}
+
+.categories-modal-body .widget-link:hover .widget-icon {
+    transform: translateX(3px);
+}
+
+.categories-modal-body .widget-item.active .widget-link {
+    background: rgba(0, 255, 65, 0.1);
+    color: var(--accent-green);
+    border-color: var(--accent-green);
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+}
+
+.categories-modal-body .widget-item.active .widget-icon {
+    filter: drop-shadow(0 0 5px var(--accent-green));
+}
+
+/* دکمه "مشاهده تمام تگ‌ها" */
+.view-all-tags-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1rem;
+    margin-top: 1rem;
+    background: rgba(58, 173, 223, 0.1);
+    border: 1px solid rgba(58, 173, 223, 0.3);
+    border-radius: 8px;
+    color: var(--accent-blue);
+    font-family: var(--persian-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-all-tags-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.view-all-tags-btn:hover {
+    background: rgba(58, 173, 223, 0.2);
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(58, 173, 223, 0.3);
+}
+
+.view-all-tags-btn:active {
+    transform: translateY(0);
+}
+
+/* Hidden tags container */
+.hidden-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(58, 173, 223, 0.2);
+}
+
+/* Categories Modal Overlay */
+.categories-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.categories-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ============================= */
+/* Hide Sidebars on Mobile/Tablet (width <= 1100px) */
+/* ============================= */
+
+@media (max-width: 1100px) {
+    /* مخفی کردن Right Sidebar */
+    .main-content-wrapper .sidebar:not(.sidebar-left) {
+        display: none !important;
+    }
+    
+    /* مخفی کردن Left Sidebar */
+    .main-content-wrapper .sidebar-left {
+        display: none !important;
+    }
+    
+    /* تنظیم Layout برای محتوای اصلی - Single Column */
+    .main-content-wrapper {
+        display: block !important;
+        grid-template-columns: unset !important;
+        gap: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .three-column-layout {
+        display: block !important;
+        grid-template-columns: unset !important;
+        gap: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .main-content {
+        grid-column: unset;
+        order: 1;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* اطمینان از Container کامل */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Specific fix for 1024px - 1100px range */
+@media (min-width: 1025px) and (max-width: 1100px) {
+    .main-content-wrapper,
+    .three-column-layout {
+        display: flex !important;
+        flex-direction: column;
+    }
+    
+    .main-content {
+        width: 100%;
+        order: 1;
+    }
+}
+
 /* Universal Filter Modal (Desktop, Tablet, Mobile) */
 .filter-modal {
     position: fixed;
@@ -3636,6 +4112,14 @@ a.article-tag:active {
         font-size: 0.95rem;
     }
     
+    /* Categories button تنظیم موقعیت در موبایل */
+    .floating-categories-btn {
+        bottom: 145px; /* بالاتر از فیلتر */
+        left: 15px;
+        padding: 0.8rem 1.1rem;
+        font-size: 0.95rem;
+    }
+    
     .filter-no-results {
         padding: 3rem 1.5rem;
     }
@@ -3650,6 +4134,38 @@ a.article-tag:active {
     
     .filter-no-results p {
         font-size: 0.95rem;
+    }
+    
+    /* Categories modal header & body */
+    .categories-modal-header {
+        padding: 1.2rem;
+    }
+    
+    .categories-modal-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .categories-modal-body {
+        padding: 1rem;
+    }
+    
+    .categories-modal-body .sidebar-widget {
+        padding: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .categories-modal-body .sidebar-widget-title {
+        font-size: 1.1rem;
+    }
+    
+    .view-all-tags-btn {
+        padding: 0.7rem 0.9rem;
+        font-size: 0.9rem;
+    }
+    
+    .view-all-tags-btn svg {
+        width: 16px;
+        height: 16px;
     }
 }
 
@@ -3684,6 +4200,14 @@ a.article-tag:active {
         font-size: 0.9rem;
     }
     
+    /* Categories button موقعیت در موبایل کوچک */
+    .floating-categories-btn {
+        bottom: 130px; /* بالاتر از فیلتر */
+        left: 10px;
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+    
     .filter-modal-header {
         padding: 1.2rem;
     }
@@ -3698,6 +4222,38 @@ a.article-tag:active {
     
     .filter-modal-footer {
         padding: 1rem;
+    }
+    
+    /* Categories modal */
+    .categories-modal-header {
+        padding: 1rem;
+    }
+    
+    .categories-modal-header h3 {
+        font-size: 1rem;
+    }
+    
+    .categories-modal-body {
+        padding: 0.75rem;
+    }
+    
+    .categories-modal-body .sidebar-widget {
+        padding: 1rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .categories-modal-body .sidebar-widget-title {
+        font-size: 1rem;
+    }
+    
+    .view-all-tags-btn {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    .view-all-tags-btn svg {
+        width: 14px;
+        height: 14px;
     }
 }
 
@@ -3721,8 +4277,11 @@ a.article-tag:active {
     .view-all-btn,
     .view-all-articles-footer,
     .floating-filter-btn,
+    .floating-categories-btn,
     .filter-modal,
-    .filter-modal-overlay {
+    .filter-modal-overlay,
+    .categories-modal,
+    .categories-modal-overlay {
         display: none;
     }
 }
