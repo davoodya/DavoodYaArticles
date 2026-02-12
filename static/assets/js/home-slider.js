@@ -174,12 +174,12 @@
     handleKeyboard(e) {
       if (!this.isInView) return;
       
-      // Right arrow or 'ArrowLeft' in RTL context
-      if (e.key === 'ArrowRight') {
+      // In RTL: Left arrow goes to previous slide (visual right)
+      if (e.key === 'ArrowLeft') {
         this.prev();
       }
-      // Left arrow or 'ArrowRight' in RTL context
-      else if (e.key === 'ArrowLeft') {
+      // In RTL: Right arrow goes to next slide (visual left)
+      else if (e.key === 'ArrowRight') {
         this.next();
       }
     }
@@ -196,13 +196,13 @@
     handleSwipe() {
       const diff = this.touchStartX - this.touchEndX;
       
-      // Swipe left (next in RTL)
+      // Swipe right to left (next slide in RTL)
       if (diff > CONFIG.swipeThreshold) {
-        this.prev();
-      }
-      // Swipe right (prev in RTL)
-      else if (diff < -CONFIG.swipeThreshold) {
         this.next();
+      }
+      // Swipe left to right (previous slide in RTL)
+      else if (diff < -CONFIG.swipeThreshold) {
+        this.prev();
       }
     }
     

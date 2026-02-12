@@ -1,18 +1,21 @@
 /* ============================= */
-/* Home Slider - Premium Hero Carousel */
+/* Home Slider - Premium Full-Width Hero Carousel */
 /* ============================= */
 
 .home-slider {
   position: relative;
-  width: 100%;
-  height: 85vh;
-  min-height: 550px;
-  max-height: 800px;
+  width: 100vw;
+  height: 750px;
+  max-height: 750px;
+  min-height: 600px;
   overflow: hidden;
   margin-bottom: 4rem;
   background: var(--darker-bg);
-  border-radius: 20px;
+  /* Remove border-radius for true full-width effect */
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  /* Break out of container */
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 }
 
 .slider-container {
@@ -75,6 +78,8 @@
   object-position: center;
   display: block;
   transition: transform 8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* تصویر روشن‌تر - افزایش brightness و contrast */
+  filter: brightness(1.1) contrast(1.05);
 }
 
 /* Subtle zoom animation on active slide */
@@ -82,24 +87,26 @@
   transform: scale(1.05);
 }
 
-/* Dark gradient overlay for better text readability */
+/* Overlay کمتر - تصویر واضح‌تر */
+/* از overlay موبایل الگو گرفته شده */
 .slide-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.85) 0%,
-    rgba(0, 0, 0, 0.65) 50%,
-    rgba(0, 0, 0, 0.75) 100%
-  );
+  background: 
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.65) 100%
+    );
   z-index: 1;
 }
 
 /* ============================= */
-/* Slide Content Wrapper */
+/* Slide Content Wrapper - CENTER ALIGNED */
 /* ============================= */
 
 .slide-content {
@@ -110,6 +117,7 @@
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;  /* وسط چین */
   padding: 0 5%;
   z-index: 2;
   direction: rtl;
@@ -118,6 +126,11 @@
 .slide-content-inner {
   max-width: 900px;
   width: 100%;
+  /* تمام المان‌ها وسط‌چین */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s,
@@ -130,18 +143,24 @@
 }
 
 /* ============================= */
-/* Slide Title */
+/* Slide Title - CENTER ALIGNED */
 /* ============================= */
 
 .slide-title {
   font-family: var(--persian-heading);
-  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
   font-weight: 700;
   color: var(--accent-green);
   margin-bottom: 1.5rem;
-  line-height: 1.2;
-  text-shadow: 0 4px 20px rgba(0, 255, 65, 0.4),
-               0 0 40px rgba(0, 255, 65, 0.2);
+  line-height: 1.25;
+  text-align: center;  /* وسط‌چین */
+  width: 100%;
+  /* Enhanced text shadow for better readability */
+  text-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.9),
+    0 4px 20px rgba(0, 255, 65, 0.4),
+    0 0 40px rgba(0, 255, 65, 0.2),
+    2px 2px 4px rgba(0, 0, 0, 0.8);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
@@ -154,17 +173,23 @@
 }
 
 /* ============================= */
-/* Slide Description */
+/* Slide Description - CENTER ALIGNED */
 /* ============================= */
 
 .slide-description {
   font-family: var(--persian-text);
-  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
   font-weight: 400;
-  color: var(--secondary-text);
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 2rem;
   line-height: 1.8;
   max-width: 650px;
+  text-align: center;  /* وسط‌چین */
+  /* Enhanced text shadow for readability on any background */
+  text-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.9),
+    1px 1px 3px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 0, 0, 0.5);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.4s,
@@ -177,16 +202,17 @@
 }
 
 /* ============================= */
-/* Meta Row - Tags & Categories */
+/* Meta Row - Tags & Categories - CENTER ALIGNED */
 /* ============================= */
 
 .slide-meta-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;  /* وسط‌چین */
   gap: 1.5rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  width: 100%;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.5s,
@@ -198,11 +224,12 @@
   transform: translateY(0);
 }
 
-/* Categories (Right) */
+/* Categories - Centered */
 .slide-categories {
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
+  justify-content: center;  /* وسط‌چین */
 }
 
 .slide-category-badge {
@@ -210,8 +237,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.6rem 1.2rem;
-  background: linear-gradient(135deg, rgba(58, 173, 223, 0.2) 0%, rgba(58, 173, 223, 0.1) 100%);
-  border: 2px solid rgba(58, 173, 223, 0.4);
+  background: linear-gradient(135deg, rgba(58, 173, 223, 0.25) 0%, rgba(58, 173, 223, 0.15) 100%);
+  border: 2px solid rgba(58, 173, 223, 0.5);
   border-radius: 20px;
   color: var(--accent-blue);
   font-family: var(--persian-text);
@@ -219,6 +246,8 @@
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .slide-category-badge svg {
@@ -228,49 +257,53 @@
 }
 
 .slide-category-badge:hover {
-  background: rgba(58, 173, 223, 0.3);
+  background: rgba(58, 173, 223, 0.35);
   border-color: var(--accent-blue);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(58, 173, 223, 0.4);
+  box-shadow: 0 6px 20px rgba(58, 173, 223, 0.5);
 }
 
-/* Tags (Left) */
+/* Tags - Centered */
 .slide-tags {
   display: flex;
   gap: 0.7rem;
   flex-wrap: wrap;
+  justify-content: center;  /* وسط‌چین */
 }
 
 .slide-tag {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: rgba(0, 255, 65, 0.1);
-  border: 1px solid rgba(0, 255, 65, 0.3);
+  background: rgba(0, 255, 65, 0.15);
+  border: 1px solid rgba(0, 255, 65, 0.35);
   border-radius: 15px;
   color: var(--accent-green);
   font-family: var(--english-font);
   font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .slide-tag:hover {
-  background: rgba(0, 255, 65, 0.2);
+  background: rgba(0, 255, 65, 0.25);
   border-color: var(--accent-green);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 255, 65, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 255, 65, 0.4);
 }
 
 /* ============================= */
-/* Actions Row - Button & Badges */
+/* Actions Row - Button & Badges - CENTER ALIGNED */
 /* ============================= */
 
 .slide-actions-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;  /* وسط‌چین */
   gap: 2rem;
   flex-wrap: wrap;
+  width: 100%;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.6s,
@@ -282,7 +315,7 @@
   transform: translateY(0);
 }
 
-/* Read Article Button (Right) */
+/* Read Article Button - Centered */
 .slide-btn {
   display: inline-flex;
   align-items: center;
@@ -341,12 +374,13 @@
   transform: translateY(-1px) scale(1.01);
 }
 
-/* Badges (Left) */
+/* Badges - Centered */
 .slide-badges {
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;  /* وسط‌چین */
 }
 
 .slide-badge {
@@ -354,7 +388,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.65rem 1.1rem;
-  background: rgba(10, 10, 10, 0.9);
+  background: rgba(10, 10, 10, 0.85);
   border: 2px solid rgba(0, 255, 65, 0.25);
   border-radius: 18px;
   color: var(--main-text);
@@ -362,8 +396,9 @@
   font-size: 0.9rem;
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .slide-badge svg {
@@ -458,10 +493,10 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  width: 55px;
-  height: 55px;
-  background: rgba(0, 0, 0, 0.7);
-  border: 2px solid rgba(0, 255, 65, 0.3);
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 2px solid rgba(0, 255, 65, 0.35);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -479,8 +514,8 @@
 }
 
 .slider-arrow svg {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   fill: var(--accent-green);
   transition: transform 0.3s ease;
 }
@@ -488,7 +523,7 @@
 .slider-arrow:hover {
   background: rgba(0, 255, 65, 0.15);
   border-color: var(--accent-green);
-  box-shadow: 0 4px 20px rgba(0, 255, 65, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 255, 65, 0.5);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -500,12 +535,13 @@
   transform: translateY(-50%) scale(1.05);
 }
 
+/* Fixed: Previous arrow on LEFT, Next arrow on RIGHT (RTL context) */
 .slider-arrow-prev {
-  right: 2rem;
+  left: 3rem;
 }
 
 .slider-arrow-next {
-  left: 2rem;
+  right: 3rem;
 }
 
 /* ============================= */
@@ -572,12 +608,33 @@
 /* Responsive Design */
 /* ============================= */
 
-/* Tablet (1024px - 768px) */
-@media (max-width: 1024px) {
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
   .home-slider {
-    height: 75vh;
+    height: 750px;
+    max-height: 750px;
+  }
+}
+
+/* Desktop (1024px - 1439px) */
+@media (max-width: 1439px) and (min-width: 1024px) {
+  .home-slider {
+    height: 650px;
+    max-height: 650px;
+    min-height: 550px;
+  }
+  
+  .slide-content {
+    padding: 0 5%;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+  .home-slider {
+    height: 600px;
+    max-height: 600px;
     min-height: 500px;
-    max-height: 700px;
     margin-bottom: 3rem;
   }
   
@@ -587,65 +644,73 @@
   
   .slide-title {
     font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 1.2rem;
   }
   
   .slide-description {
     font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+    margin-bottom: 1.5rem;
   }
   
   .slider-arrow {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
   }
   
   .slider-arrow svg {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
   }
   
   .slider-arrow-prev {
-    right: 1.5rem;
+    left: 2rem;
   }
   
   .slider-arrow-next {
-    left: 1.5rem;
+    right: 2rem;
   }
 }
 
 /* Mobile (< 768px) */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .home-slider {
-    height: auto;
-    min-height: 600px;
-    max-height: none;
+    height: 500px;
+    min-height: 450px;
+    max-height: 550px;
     margin-bottom: 2rem;
-    border-radius: 16px;
+    margin-left: 0;
+    margin-right: 0;
   }
   
   .slide-content {
     padding: 2rem 1.5rem;
     align-items: flex-start;
-    padding-top: 4rem;
+    padding-top: 3rem;
   }
   
   .slide-content-inner {
     max-width: 100%;
+    /* حفظ وسط‌چینی در موبایل */
+    text-align: center;
+    align-items: center;
   }
   
   .slide-title {
     font-size: clamp(1.5rem, 5vw, 2.2rem);
     margin-bottom: 1rem;
+    text-align: center;
   }
   
   .slide-description {
     font-size: clamp(0.9rem, 3vw, 1.1rem);
     margin-bottom: 1.5rem;
+    text-align: center;
   }
   
   /* Stack meta row items */
   .slide-meta-row {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;  /* وسط‌چین */
     gap: 1rem;
     margin-bottom: 1.5rem;
   }
@@ -653,12 +718,13 @@
   .slide-categories,
   .slide-tags {
     width: 100%;
+    justify-content: center;  /* وسط‌چین */
   }
   
   /* Stack action row items */
   .slide-actions-row {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;  /* وسط‌چین */
     gap: 1.2rem;
   }
   
@@ -671,7 +737,7 @@
   
   .slide-badges {
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;  /* وسط‌چین */
     gap: 0.6rem;
   }
   
@@ -705,15 +771,16 @@
 }
 
 /* Small Mobile (< 480px) */
-@media (max-width: 480px) {
+@media (max-width: 479px) {
   .home-slider {
-    min-height: 550px;
-    border-radius: 12px;
+    height: 450px;
+    min-height: 400px;
+    max-height: 500px;
   }
   
   .slide-content {
     padding: 1.5rem 1rem;
-    padding-top: 3rem;
+    padding-top: 2.5rem;
   }
   
   .slide-title {

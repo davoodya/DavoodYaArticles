@@ -10,6 +10,9 @@
     border-bottom: 2px solid rgba(58, 173, 223, 0.15);
     position: relative;
     overflow: hidden;
+    clear: both;
+    width: 100%;
+    max-width: 100%;
 }
 
 .article-slider::before {

@@ -2,7 +2,7 @@
   {
     "title": "راهنمای جامع نصب Kali Linux",
     "description": "آموزش کامل نصب و راه‌اندازی Kali Linux برای تست نفوذ و امنیت سایبری",
-    "image": "/images/linux/kali-linux-installing-guide.jpg",
+    "image": "/images/linux/KaliLinuxInstallingGuide-14.png",
     "url": "/linux/kali-linux-installing-guide/",
     "readingTime": 12,
     "difficulty": "beginner",
@@ -14,7 +14,7 @@
   {
     "title": "60 دستور لینوکس که هکرها باید بدانند",
     "description": "مجموعه کامل دستورات ضروری لینوکس برای تست نفوذ و امنیت شبکه",
-    "image": "/images/linux/60-commands-hacker-should-know-it.jpg",
+    "image": "/images/tools/MSFConsoleCommands-28.png",
     "url": "/linux/60-commands-hacker-should-know-it/",
     "readingTime": 25,
     "difficulty": "intermediate",
@@ -24,9 +24,9 @@
     "categories": ["linux"]
   },
   {
-    "title": "معرفی Burp Suite و قابلیت‌های آن",
+    "title": "آموزش MSFConsole پر استفاده ترین ابزار تست نفوذ",
     "description": "ابزار قدرتمند تست نفوذ وب و تحلیل ترافیک HTTP/HTTPS",
-    "image": "/images/tools/burpsuite/burpsuite-intro.jpg",
+    "image": "/images/tools/MSFConsoleCommands-13.png",
     "url": "/tools/burpsuite/burpsuite-intro/",
     "readingTime": 18,
     "difficulty": "intermediate",
@@ -39,7 +39,7 @@
     "title": "مبانی رمزنگاری و امنیت اطلاعات",
     "description": "آشنایی با اصول رمزنگاری، الگوریتم‌ها و کاربردهای عملی در امنیت سایبری",
     "image": "/images/cyber-security/cryptography/cryptography-basics.jpg",
-    "url": "/cyber-security/cryptography/cryptography-basics/",
+    "url": "/cyber-security/Basic-Encryption-1.png",
     "readingTime": 20,
     "difficulty": "medium",
     "lab_required": false,
@@ -50,7 +50,7 @@
   {
     "title": "مدل‌های شبکه OSI و TCP/IP",
     "description": "درک عمیق لایه‌های شبکه و نحوه ارتباط پروتکل‌ها",
-    "image": "/images/network/network-models-osi-tcpip.jpg",
+    "image": "/images/network/NetworkModels-OSIandTCPIP-2.png",
     "url": "/network/network-models-osi-and-tcpip/",
     "readingTime": 15,
     "difficulty": "beginner",
