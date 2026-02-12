@@ -124,6 +124,32 @@
   transform: scale(1.05);
 }
 
+/* Placeholder for missing images */
+.suggestion-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 255, 65, 0.1) 0%, rgba(58, 173, 223, 0.1) 100%);
+  border: 2px dashed rgba(0, 255, 65, 0.3);
+}
+
+.suggestion-image-placeholder .placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--secondary-text);
+  opacity: 0.6;
+}
+
+.suggestion-image-placeholder svg {
+  width: 48px;
+  height: 48px;
+  fill: var(--accent-green);
+  opacity: 0.5;
+}
+
 .suggestion-body {
   display: flex;
   flex-direction: column;

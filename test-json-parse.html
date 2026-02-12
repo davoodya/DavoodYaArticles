@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Parse Test</title>
+</head>
+<body>
+    <h1>JSON Parse Test</h1>
+    <pre id="output"></pre>
+    
+    <script>
+        const jsonString = `[{
+        "title": "\\"Virtualization Concepts\\"",
+        "url": "\\"https://davoodya.ir/network/virtualization-concepts/\\"",
+        "description": "\\"Test description\\"",
+        "readingTime":  9 ,
+        "difficulty": "\\"medium\\"",
+        "post_type_fa": "\\"مقاله\\"",
+        "image": "\\"https://davoodya.ir/images/network/VirtualizationConcepts-1.png\\"",
+        "category": "\\"network\\""
+    }]`;
+        
+        try {
+            const parsed = JSON.parse(jsonString);
+            document.getElementById('output').textContent = 'Parsed successfully:\n' + JSON.stringify(parsed, null, 2);
+            console.log('Title:', parsed[0].title);
+            console.log('Image:', parsed[0].image);
+        } catch (e) {
+            document.getElementById('output').textContent = 'Error: ' + e.message;
+        }
+    </script>
+</body>
+</html>

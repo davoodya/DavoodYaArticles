@@ -27,51 +27,27 @@
     {{ $sortedArticles = $allArticles.ByDate }}
 {{ end }}
 
-{{/* Find current article index */}}
-{{ $currentIndex := -1 }}
-{{ range $index, $article := $sortedArticles }}
-    {{ if eq $article.RelPermalink $currentArticle.RelPermalink }}
-        {{ $currentIndex = $index }}
-    {{ end }}
+{{/* Target: 6 articles total */}}
+{{ $targetCount := 6 }}
+{{ $sliderArticles := slice }}
+
+{{/* First, try to get articles from same category */}}
+{{ if gt (len $sortedArticles) 0 }}
+    {{ $sliderArticles = first $targetCount $sortedArticles }}
 {{ end }}
 
-{{/* Get 2 previous and 2 next articles */}}
-{{ $previousArticles := slice }}
-{{ $nextArticles := slice }}
-
-{{ if ge $currentIndex 0 }}
-    {{/* Get previous articles (older) */}}
-    {{ if gt $currentIndex 1 }}
-        {{ $previousArticles = first 2 (after (sub $currentIndex 2) $sortedArticles | first 2) }}
-    {{ else if eq $currentIndex 1 }}
-        {{ $previousArticles = first 1 $sortedArticles }}
-    {{ end }}
-    
-    {{/* Get next articles (newer) */}}
-    {{ $remainingCount := sub (len $sortedArticles) (add $currentIndex 1) }}
-    {{ if ge $remainingCount 2 }}
-        {{ $nextArticles = first 2 (after (add $currentIndex 1) $sortedArticles) }}
-    {{ else if eq $remainingCount 1 }}
-        {{ $nextArticles = first 1 (after (add $currentIndex 1) $sortedArticles) }}
-    {{ end }}
-{{ end }}
-
-{{/* Combine previous and next articles */}}
-{{ $sliderArticles := $previousArticles | append $nextArticles }}
-
-{{/* If we don't have enough articles, add random ones */}}
-{{ $targetCount := 4 }}
+{{/* If we don't have enough articles from same category, add random ones from other categories */}}
 {{ if lt (len $sliderArticles) $targetCount }}
     {{ $needed := sub $targetCount (len $sliderArticles) }}
-    {{ $availableArticles := $sortedArticles | complement $sliderArticles }}
-    {{ $availableArticles = shuffle $availableArticles }}
-    {{ $randomArticles := first $needed $availableArticles }}
+    {{ $otherArticles := $allArticles | complement $sliderArticles }}
+    {{ $otherArticles = shuffle $otherArticles }}
+    {{ $randomArticles := first $needed $otherArticles }}
     {{ $sliderArticles = $sliderArticles | append $randomArticles }}
 {{ end }}
 
 {{/* Only render slider if we have at least 2 articles */}}
 {{ if ge (len $sliderArticles) 2 }}
-<section class="article-slider" aria-label="مقالات مرتبط">
+<section class="article-slider" aria-label="مقالات مرتبط" data-total-slides="{{ len $sliderArticles }}">
     <div class="slider-container">
         <h2 class="slider-title">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -81,7 +57,7 @@
         </h2>
         
         <div class="slider-wrapper">
-            <button class="slider-nav slider-nav-prev" aria-label="مقاله قبلی" disabled>
+            <button class="slider-nav slider-nav-prev" aria-label="مقاله قبلی">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
                 </svg>
@@ -222,13 +198,14 @@
             </button>
         </div>
         
-        <div class="slider-dots" role="tablist" aria-label="انتخاب مقاله">
-            {{ range $index, $article := $sliderArticles }}
-                <button class="slider-dot{{ if eq $index 0 }} active{{ end }}" 
-                        data-slide="{{ $index }}" 
+        <div class="slider-dots" role="tablist" aria-label="انتخاب صفحه">
+            {{ $totalPages := div (add (len $sliderArticles) 1) 2 }}
+            {{ range $pageIndex := seq 0 (sub $totalPages 1) }}
+                <button class="slider-dot{{ if eq $pageIndex 0 }} active{{ end }}" 
+                        data-page="{{ $pageIndex }}" 
                         role="tab"
-                        aria-label="مقاله {{ add $index 1 }}"
-                        aria-selected="{{ cond (eq $index 0) "true" "false" }}"></button>
+                        aria-label="صفحه {{ add $pageIndex 1 }}"
+                        aria-selected="{{ cond (eq $pageIndex 0) "true" "false" }}"></button>
             {{ end }}
         </div>
     </div>

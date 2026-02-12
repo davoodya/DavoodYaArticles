@@ -54,7 +54,7 @@
         "readingTime": {{ with .Params.readingTime }}{{ . }}{{ else }}0{{ end }},
         "difficulty": {{ with .Params.difficulty }}{{ . | jsonify }}{{ else }}""{{ end }},
         "post_type_fa": {{ with .Params.post_type_fa }}{{ . | jsonify }}{{ else }}""{{ end }},
-        "image": {{ with .Params.featured_image }}{{ . | jsonify }}{{ else }}{{ with .Params.images }}{{ index . 0 | jsonify }}{{ else }}""{{ end }}{{ end }},
+        "image": {{ if .Params.featured_image }}{{ if ne .Params.featured_image "" }}{{ .Params.featured_image | absURL | jsonify }}{{ else }}""{{ end }}{{ else if .Params.images }}{{ if gt (len .Params.images) 0 }}{{ $firstImg := index .Params.images 0 }}{{ if ne $firstImg "" }}{{ $firstImg | absURL | jsonify }}{{ else }}""{{ end }}{{ else }}""{{ end }}{{ else }}""{{ end }},
         "category": {{ $currentSection | jsonify }}
     }
 {{- end -}}
@@ -350,6 +350,19 @@
     }
     
     /**
+     * Clean JSON artifacts (Hugo jsonify adds extra quotes)
+     */
+    function cleanValue(val) {
+        if (typeof val === 'string') {
+            // Remove surrounding quotes if present
+            if (val.startsWith('"') && val.endsWith('"')) {
+                return val.slice(1, -1);
+            }
+        }
+        return val || '';
+    }
+    
+    /**
      * Render article content
      */
     function renderArticle(index) {
@@ -363,58 +376,82 @@
         
         if (!content) return;
         
+        // Clean article data (Hugo jsonify adds extra quotes)
+        const title = cleanValue(article.title);
+        const url = cleanValue(article.url);
+        const description = cleanValue(article.description);
+        const image = cleanValue(article.image);
+        const difficulty = cleanValue(article.difficulty);
+        const post_type_fa = cleanValue(article.post_type_fa);
+        const category = cleanValue(article.category);
+        const readingTime = article.readingTime || 0;
+        
         // Build difficulty badge
         let difficultyBadge = '';
-        if (article.difficulty) {
+        if (difficulty) {
             const difficultyMap = {
                 'beginner': { label: 'مبتدی', class: 'badge-beginner' },
                 'medium': { label: 'متوسط', class: 'badge-medium' },
                 'intermediate': { label: 'حرفه‌ای', class: 'badge-intermediate' },
                 'advanced': { label: 'تخصصی', class: 'badge-advanced' }
             };
-            const diff = difficultyMap[article.difficulty] || { label: article.difficulty, class: '' };
+            const diff = difficultyMap[difficulty] || { label: difficulty, class: '' };
             difficultyBadge = `
                 <span class="suggestion-badge ${diff.class}">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                     </svg>
-                    ${diff.label}
+                    ${escapeHtml(diff.label)}
                 </span>
             `;
         }
         
         // Build reading time badge
         let timeBadge = '';
-        if (article.readingTime > 0) {
+        if (readingTime > 0) {
             timeBadge = `
                 <span class="suggestion-badge badge-time">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
                     </svg>
-                    ${article.readingTime} دقیقه
+                    ${readingTime} دقیقه
                 </span>
             `;
         }
         
         // Build post type badge
         let typeBadge = '';
-        if (article.post_type_fa) {
+        if (post_type_fa) {
             typeBadge = `
                 <span class="suggestion-badge badge-type">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
                     </svg>
-                    ${article.post_type_fa}
+                    ${escapeHtml(post_type_fa)}
                 </span>
             `;
         }
         
         // Build image
         let imageHtml = '';
-        if (article.image) {
+        if (image && image.trim() !== '') {
             imageHtml = `
                 <div class="suggestion-image">
-                    <img src="${escapeHtml(article.image)}" alt="${escapeHtml(article.title)}" loading="lazy">
+                    <img src="${escapeHtml(image)}" 
+                         alt="${escapeHtml(title)}" 
+                         loading="lazy"
+                         onerror="this.parentElement.style.display='none'">
+                </div>
+            `;
+        } else {
+            // Fallback: Show colored gradient placeholder if no image
+            imageHtml = `
+                <div class="suggestion-image suggestion-image-placeholder">
+                    <div class="placeholder-content">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                        </svg>
+                    </div>
                 </div>
             `;
         }
@@ -423,15 +460,15 @@
             ${imageHtml}
             <div class="suggestion-body">
                 <h4 class="suggestion-article-title">
-                    <a href="${escapeHtml(article.url)}" onclick="trackSuggestionClick('${escapeHtml(article.title, true)}')">${escapeHtml(article.title)}</a>
+                    <a href="${escapeHtml(url)}" onclick="trackSuggestionClick('${escapeHtml(title, true)}')">${escapeHtml(title)}</a>
                 </h4>
-                <p class="suggestion-description">${escapeHtml(article.description)}</p>
+                <p class="suggestion-description">${escapeHtml(description)}</p>
                 <div class="suggestion-badges">
                     ${difficultyBadge}
                     ${timeBadge}
                     ${typeBadge}
                 </div>
-                <a href="${escapeHtml(article.url)}" class="suggestion-read-btn" onclick="trackSuggestionClick('${escapeHtml(article.title, true)}')">
+                <a href="${escapeHtml(url)}" class="suggestion-read-btn" onclick="trackSuggestionClick('${escapeHtml(title, true)}')">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
                     </svg>
