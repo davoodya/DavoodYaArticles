@@ -14,8 +14,9 @@
     // ===========================
     
     const CONFIG = {
-        // Use Netlify Function (serverless)
-        API_ENDPOINT: '/.netlify/functions/comments',
+        // Use PHP Backend (for local development and PHP hosting)
+        // When deploying to Netlify, change to: '/.netlify/functions/comments'
+        API_ENDPOINT: '/api/comments.php',
         MAX_RETRIES: 3,
         RETRY_DELAY: 1000,
         RATE_LIMIT_WINDOW: 60000, // 1 minute
@@ -192,15 +193,26 @@
                 },
             });
             
-            const data = await response.json();
+            // Read response text first
+            const text = await response.text();
+            
+            // Try to parse as JSON
+            let data;
+            try {
+                data = JSON.parse(text);
+            } catch (parseError) {
+                console.error('JSON Parse Error:', parseError);
+                console.error('Response text:', text);
+                throw new Error('سرور پاسخ نامعتبری ارسال کرد. لطفاً دوباره تلاش کنید.');
+            }
             
             if (!response.ok) {
-                throw new Error(data.error || `HTTP ${response.status}`);
+                throw new Error(data.error || data.message || `خطای سرور: ${response.status}`);
             }
             
             return data;
         } catch (error) {
-            if (retries > 0) {
+            if (retries > 0 && !error.message.includes('نامعتبر')) {
                 await new Promise(resolve => setTimeout(resolve, CONFIG.RETRY_DELAY));
                 return fetchWithRetry(url, options, retries - 1);
             }

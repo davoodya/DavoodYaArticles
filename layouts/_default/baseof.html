@@ -314,10 +314,7 @@
 <script src="{{ "assets/js/home-slider.js" | relURL }}" defer></script>
 {{ end }}
 
-<!-- Article Slider (Single Pages Only) -->
-{{ if and .IsPage (not .IsHome) }}
-<script src="{{ "assets/js/article-slider.js" | relURL }}" defer></script>
-{{ end }}
+<!-- Article Slider removed - Now using simple CSS Grid layout (no JS needed) -->
 
 </body>
 </html>

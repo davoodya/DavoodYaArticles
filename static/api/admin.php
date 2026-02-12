@@ -1,3 +1,199 @@
+<?php
+/**
+ * Admin Panel for Comments Management
+ * با سیستم ورود ساده
+ */
+
+// Load configuration
+require_once __DIR__ . '/config.php';
+
+// Check if password submitted
+$authenticated = false;
+$error = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password'])) {
+    if ($_POST['password'] === ADMIN_PASSWORD) {
+        session_start();
+        $_SESSION['admin_authenticated'] = true;
+        $authenticated = true;
+    } else {
+        $error = 'رمز عبور اشتباه است';
+    }
+} elseif (isset($_GET['logout'])) {
+    session_start();
+    session_destroy();
+    header('Location: admin.php');
+    exit;
+} else {
+    session_start();
+    $authenticated = isset($_SESSION['admin_authenticated']) && $_SESSION['admin_authenticated'] === true;
+}
+
+// Show login form if not authenticated
+if (!$authenticated) {
+?>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود به پنل مدیریت</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tahoma', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-container {
+            background: #0f0f0f;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 10px 40px rgba(0, 255, 65, 0.1);
+        }
+
+        .login-title {
+            color: #00ff41;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+        }
+
+        .login-subtitle {
+            text-align: center;
+            color: #808080;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            color: #b0b0b0;
+            margin-bottom: 8px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            color: #e0e0e0;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #00ff41;
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background: rgba(0, 255, 65, 0.1);
+            border: 1px solid #00ff41;
+            color: #00ff41;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .btn-submit:hover {
+            background: rgba(0, 255, 65, 0.2);
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .error-message {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #ff0000;
+            color: #ff0000;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .info-box {
+            background: rgba(58, 173, 223, 0.1);
+            border: 1px solid #3aaddf;
+            color: #3aaddf;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .info-box strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="login-title">🛡️ پنل مدیریت کامنت‌ها</h1>
+        <p class="login-subtitle">لطفاً رمز عبور را وارد کنید</p>
+        
+        <?php if ($error): ?>
+            <div class="error-message">
+                ⚠️ <?php echo htmlspecialchars($error); ?>
+            </div>
+        <?php endif; ?>
+        
+        <form method="POST" action="">
+            <div class="form-group">
+                <label class="form-label" for="password">رمز عبور:</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    class="form-input" 
+                    placeholder="رمز عبور را وارد کنید"
+                    required
+                    autofocus
+                />
+            </div>
+            
+            <button type="submit" class="btn-submit">ورود به پنل</button>
+        </form>
+
+        <div class="info-box">
+            <strong>📝 راهنما:</strong>
+            رمز عبور پیش‌فرض: <code>admin123</code><br>
+            برای تغییر رمز، فایل <code>api/config.php</code> را ویرایش کنید.
+        </div>
+    </div>
+</body>
+</html>
+<?php
+    exit;
+}
+
+// If authenticated, show admin panel
+?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -24,11 +220,35 @@
             margin: 0 auto;
         }
 
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
         h1 {
             color: #00ff41;
-            margin-bottom: 30px;
-            text-align: center;
             text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+        }
+
+        .logout-btn {
+            padding: 10px 20px;
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #ff0000;
+            color: #ff0000;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .logout-btn:hover {
+            background: rgba(255, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
         }
 
         .stats {
@@ -241,7 +461,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>🛡️ پنل مدیریت کامنت‌ها</h1>
+        <div class="header">
+            <h1>🛡️ پنل مدیریت کامنت‌ها</h1>
+            <a href="?logout" class="logout-btn">خروج از پنل</a>
+        </div>
 
         <div class="stats" id="stats">
             <div class="stat-card">
