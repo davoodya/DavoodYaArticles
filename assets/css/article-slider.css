@@ -133,6 +133,8 @@
 /* Slider Card */
 .slider-card {
     flex: 0 0 calc(50% - 0.75rem);
+    min-width: calc(50% - 0.75rem);
+    max-width: calc(50% - 0.75rem);
     background: linear-gradient(135deg, var(--darker-bg) 0%, var(--card-bg) 100%);
     border: 2px solid rgba(58, 173, 223, 0.15);
     border-radius: 16px;
@@ -508,6 +510,8 @@
 @media (max-width: 1024px) {
     .slider-card {
         flex: 0 0 100%;
+        min-width: 100%;
+        max-width: 100%;
     }
     
     .slider-title {

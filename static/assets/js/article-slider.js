@@ -1,7 +1,7 @@
 /**
  * Article Slider - Previous & Next Articles
  * Enhanced version with loop navigation, dots navigation, and middle start
- * Version: 2.0.0
+ * Version: 2.1.0 - Fixed card display issue
  */
 
 (function() {
@@ -30,6 +30,12 @@
     let prevTranslate = 0;
     let animationID = 0;
     
+    console.log('Initial state:', {
+        totalCards: cards.length,
+        cardsPerView: cardsPerView,
+        totalPages: totalPages
+    });
+    
     // Calculate cards per view based on viewport width
     function updateCardsPerView() {
         const width = window.innerWidth;
@@ -43,14 +49,40 @@
             if (currentPage >= totalPages) {
                 currentPage = totalPages - 1;
             }
+            
+            console.log('Cards per view updated:', {
+                cardsPerView: cardsPerView,
+                totalPages: totalPages,
+                currentPage: currentPage
+            });
         }
+    }
+    
+    // Get card width including gap
+    function getCardWidthWithGap() {
+        if (cards.length === 0) return 0;
+        
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 24; // 1.5rem = 24px
+        
+        return cardWidth + gap;
     }
     
     // Update slider position based on current page
     function updateSliderPosition(animated = true) {
-        const cardWidth = cards[0].offsetWidth;
-        const gap = 24; // 1.5rem
-        const offset = -(currentPage * cardsPerView * (cardWidth + gap));
+        const cardWidthWithGap = getCardWidthWithGap();
+        
+        // Calculate offset: number of cards to skip * card width
+        const cardsToSkip = currentPage * cardsPerView;
+        const offset = -(cardsToSkip * cardWidthWithGap);
+        
+        console.log('Updating position:', {
+            currentPage: currentPage,
+            cardsPerView: cardsPerView,
+            cardsToSkip: cardsToSkip,
+            cardWidthWithGap: cardWidthWithGap,
+            offset: offset
+        });
         
         if (animated) {
             track.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
@@ -71,10 +103,14 @@
         // In loop mode, buttons are always enabled
         if (prevBtn) {
             prevBtn.disabled = false;
+            prevBtn.style.opacity = '1';
+            prevBtn.style.cursor = 'pointer';
         }
         
         if (nextBtn) {
             nextBtn.disabled = false;
+            nextBtn.style.opacity = '1';
+            nextBtn.style.cursor = 'pointer';
         }
     }
     
@@ -84,6 +120,11 @@
             const isActive = index === currentPage;
             dot.classList.toggle('active', isActive);
             dot.setAttribute('aria-selected', isActive);
+        });
+        
+        console.log('Dots updated:', {
+            totalDots: dots.length,
+            activeDot: currentPage
         });
     }
     
@@ -98,16 +139,24 @@
             currentPage = pageIndex;
         }
         
+        console.log('Going to page:', {
+            requestedPage: pageIndex,
+            actualPage: currentPage,
+            totalPages: totalPages
+        });
+        
         updateSliderPosition(animated);
     }
     
     // Next page (with loop)
     function nextPage() {
+        console.log('Next page clicked');
         goToPage(currentPage + 1);
     }
     
     // Previous page (with loop)
     function prevPage() {
+        console.log('Previous page clicked');
         goToPage(currentPage - 1);
     }
     
@@ -121,7 +170,10 @@
         startPos = getPositionX(event);
         animationID = requestAnimationFrame(animation);
         
-        track.style.cursor = 'grabbing';
+        const trackContainer = slider.querySelector('.slider-track-container');
+        if (trackContainer) {
+            trackContainer.style.cursor = 'grabbing';
+        }
         track.style.transition = 'none';
     }
     
@@ -147,7 +199,10 @@
             updateSliderPosition();
         }
         
-        track.style.cursor = 'grab';
+        const trackContainer = slider.querySelector('.slider-track-container');
+        if (trackContainer) {
+            trackContainer.style.cursor = 'grab';
+        }
         track.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
     }
     
@@ -205,15 +260,24 @@
     // Initialize button events
     function initButtonEvents() {
         if (prevBtn) {
-            prevBtn.addEventListener('click', prevPage);
+            prevBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                prevPage();
+            });
         }
         
         if (nextBtn) {
-            nextBtn.addEventListener('click', nextPage);
+            nextBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                nextPage();
+            });
         }
         
         dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => goToPage(index));
+            dot.addEventListener('click', () => {
+                console.log('Dot clicked:', index);
+                goToPage(index);
+            });
             dot.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     goToPage(index);
@@ -236,6 +300,7 @@
     function handleResize() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
+            console.log('Window resized');
             updateCardsPerView();
             updateSliderPosition(false);
         }, 250);
@@ -247,18 +312,46 @@
             // Calculate middle page (rounded down)
             const middlePage = Math.floor(totalPages / 2);
             currentPage = middlePage;
+            
+            console.log('Starting from middle:', {
+                totalPages: totalPages,
+                middlePage: middlePage
+            });
+            
+            updateSliderPosition(false);
+        } else {
+            // If only 1 page, start from 0
+            currentPage = 0;
             updateSliderPosition(false);
         }
     }
     
     // Initialize slider
     function init() {
+        console.log('=== Article Slider Initializing ===');
+        console.log('Total cards found:', cards.length);
+        
+        // Set initial cards per view
         updateCardsPerView();
-        startFromMiddle(); // Start from middle instead of first page
+        
+        // Calculate and log initial state
+        console.log('Initial calculation:', {
+            totalCards: cards.length,
+            cardsPerView: cardsPerView,
+            totalPages: totalPages,
+            cardWidth: cards[0]?.offsetWidth,
+            gap: 24
+        });
+        
+        // Start from middle
+        startFromMiddle();
+        
+        // Initialize events
         initTouchEvents();
         initButtonEvents();
         initKeyboardNav();
         
+        // Add resize listener
         window.addEventListener('resize', handleResize);
         
         // Set cursor style
@@ -272,13 +365,9 @@
             slider.classList.add('slider-loaded');
         }, 100);
         
-        // Log info for debugging
-        console.log('Article Slider initialized:', {
-            totalCards: cards.length,
-            cardsPerView: cardsPerView,
-            totalPages: totalPages,
-            startPage: currentPage
-        });
+        console.log('=== Article Slider Initialized ===');
+        console.log('Starting page:', currentPage);
+        console.log('Total pages:', totalPages);
     }
     
     // Auto-play (optional - disabled by default)
@@ -300,9 +389,6 @@
     // Pause autoplay on interaction
     function pauseOnInteraction() {
         stopAutoplay();
-        
-        // Optional: Resume after inactivity
-        // setTimeout(() => startAutoplay(), 10000);
     }
     
     slider.addEventListener('mouseenter', pauseOnInteraction);
@@ -327,7 +413,19 @@
         nextPage: nextPage,
         prevPage: prevPage,
         getCurrentPage: () => currentPage,
-        getTotalPages: () => totalPages
+        getTotalPages: () => totalPages,
+        getCardsPerView: () => cardsPerView,
+        getTotalCards: () => cards.length,
+        debug: () => {
+            console.log('=== Debug Info ===');
+            console.log('Current page:', currentPage);
+            console.log('Total pages:', totalPages);
+            console.log('Cards per view:', cardsPerView);
+            console.log('Total cards:', cards.length);
+            console.log('Card width:', cards[0]?.offsetWidth);
+            console.log('Current translate:', currentTranslate);
+            console.log('Track transform:', track.style.transform);
+        }
     };
     
 })();
