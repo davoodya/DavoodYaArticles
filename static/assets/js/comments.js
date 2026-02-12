@@ -14,8 +14,8 @@
     // ===========================
     
     const CONFIG = {
-        // استفاده از مسیر نسبی
-        API_ENDPOINT: '/api/comments.php',
+        // Use Netlify Function (serverless)
+        API_ENDPOINT: '/.netlify/functions/comments',
         MAX_RETRIES: 3,
         RETRY_DELAY: 1000,
         RATE_LIMIT_WINDOW: 60000, // 1 minute

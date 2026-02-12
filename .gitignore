@@ -1,2 +1,6 @@
 /static/images/
 /public/
+/node_modules/
+/.netlify/
+.env
+*.log

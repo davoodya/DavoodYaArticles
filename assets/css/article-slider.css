@@ -133,7 +133,17 @@
     width: fit-content;
 }
 
-/* Ensure all cards are visible */
+/* Slider Slide - Container for 2 cards */
+.slider-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+/* Ensure all slides are visible */
 .slider-track > * {
     display: flex !important;
     visibility: visible !important;
@@ -142,9 +152,8 @@
 
 /* Slider Card */
 .slider-card {
-    flex: 0 0 calc(50% - 0.75rem);
-    min-width: calc(50% - 0.75rem);
-    max-width: calc(50% - 0.75rem);
+    flex: 1 1 0;
+    min-width: 0;
     background: linear-gradient(135deg, var(--darker-bg) 0%, var(--card-bg) 100%);
     border: 2px solid rgba(58, 173, 223, 0.15);
     border-radius: 16px;
@@ -516,12 +525,15 @@
 /* Responsive Design */
 /* ============================= */
 
-/* Tablet - 1 card per view */
+/* Tablet - 1 card per slide */
 @media (max-width: 1024px) {
+    .slider-slide {
+        flex-direction: column;
+    }
+    
     .slider-card {
-        flex: 0 0 100%;
+        flex: 1 1 auto;
         min-width: 100%;
-        max-width: 100%;
     }
     
     .slider-title {

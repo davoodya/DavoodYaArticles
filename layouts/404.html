@@ -41,14 +41,14 @@
                 
                 <!-- Action Buttons -->
                 <div class="error-actions">
-                    <a href="/all-articles/" class="error-action-btn btn-primary">
+                    <a href="{{ "/all-articles/" | absURL }}" class="error-action-btn btn-primary">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
                         </svg>
                         <span>صفحه مقالات</span>
                     </a>
                     
-                    <a href="/" class="error-action-btn btn-secondary">
+                    <a href="{{ "/" | absURL }}" class="error-action-btn btn-secondary">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
                         </svg>
@@ -69,7 +69,7 @@
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                             </svg>
-                            از <a href="/">صفحه اصلی</a> دسته‌بندی مورد نظر را انتخاب کنید
+                            از <a href="{{ "/" | absURL }}">صفحه اصلی</a> دسته‌بندی مورد نظر را انتخاب کنید
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -211,7 +211,7 @@
         
         if (query) {
             // Redirect to main search with query
-            window.location.href = '/?search=' + encodeURIComponent(query);
+            window.location.href = '{{ "/" | absURL }}?search=' + encodeURIComponent(query);
         } else {
             searchInput.focus();
         }

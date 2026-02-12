@@ -18,6 +18,7 @@ const CONFIG = {
     MIN_COMMENT_LENGTH: 10,
     RATE_LIMIT_WINDOW: 60000, // 1 minute
     MAX_REQUESTS_PER_WINDOW: 10,
+    ADMIN_EMAIL: 'davoodya40@gmail.com', // Auto-approve admin comments
 };
 
 // ===========================
@@ -141,22 +142,31 @@ async function handleGet(event, store) {
     if (!articleSlug) {
         return {
             statusCode: 400,
-            body: JSON.stringify({ error: 'Article slug is required' }),
+            body: JSON.stringify({ 
+                success: false,
+                error: 'Article slug is required' 
+            }),
         };
     }
     
     const data = await getComments(store, articleSlug);
     
-    // Filter only approved comments
-    const approvedComments = (data.comments || [])
-        .filter(c => c.status === 'approved')
-        .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+    // Filter only confirmed comments (matching PHP backend behavior)
+    const confirmedComments = (data.comments || [])
+        .filter(c => c.confirmed === true)
+        .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+        .map(c => {
+            // Remove email from public response
+            const { email, ip_address, ...publicComment } = c;
+            return publicComment;
+        });
     
     return {
         statusCode: 200,
         body: JSON.stringify({ 
-            comments: approvedComments,
-            count: approvedComments.length 
+            success: true,
+            comments: confirmedComments,
+            count: confirmedComments.length 
         }),
     };
 }
@@ -177,9 +187,10 @@ async function handlePost(event, store) {
     }
     
     // Validate required fields
-    const { article_slug, name, email, comment_text, website } = body;
+    // Frontend sends: article_slug, name, email, comment (NOT comment_text), website
+    const { article_slug, name, email, comment, website } = body;
     
-    if (!article_slug || !name || !email || !comment_text) {
+    if (!article_slug || !name || !email || !comment) {
         return {
             statusCode: 400,
             body: JSON.stringify({ error: 'Missing required fields' }),
@@ -192,7 +203,7 @@ async function handlePost(event, store) {
         name: sanitizeInput(name),
         email: sanitizeInput(email).toLowerCase(),
         website: sanitizeInput(website),
-        comment_text: sanitizeInput(comment_text),
+        comment: sanitizeInput(comment),
     };
     
     // Validate name
@@ -220,31 +231,34 @@ async function handlePost(event, store) {
     }
     
     // Validate comment length
-    if (sanitizedData.comment_text.length < CONFIG.MIN_COMMENT_LENGTH) {
+    if (sanitizedData.comment.length < CONFIG.MIN_COMMENT_LENGTH) {
         return {
             statusCode: 400,
             body: JSON.stringify({ error: `Comment must be at least ${CONFIG.MIN_COMMENT_LENGTH} characters` }),
         };
     }
     
-    if (sanitizedData.comment_text.length > CONFIG.MAX_COMMENT_LENGTH) {
+    if (sanitizedData.comment.length > CONFIG.MAX_COMMENT_LENGTH) {
         return {
             statusCode: 400,
             body: JSON.stringify({ error: `Comment must be less than ${CONFIG.MAX_COMMENT_LENGTH} characters` }),
         };
     }
     
+    // Check if admin email - auto-approve
+    const isAdmin = sanitizedData.email.toLowerCase() === CONFIG.ADMIN_EMAIL.toLowerCase();
+    
     // Create comment object
-    const comment = {
+    const newComment = {
         id: generateId(),
         article_slug: sanitizedData.article_slug,
         name: sanitizedData.name,
-        email: sanitizedData.email, // Not exposed in API
-        website: sanitizedData.website || null,
-        comment_text: sanitizedData.comment_text,
+        email: sanitizedData.email, // Not exposed in GET API
+        website: sanitizedData.website || '',
+        comment: sanitizedData.comment,
         created_at: new Date().toISOString(),
-        status: 'approved', // Change to 'pending' if you want manual approval
-        parent_id: null, // For future nested comments support
+        confirmed: isAdmin, // Auto-approve admin, pending for others
+        ip_address: event.headers['x-forwarded-for'] || event.headers['client-ip'] || 'unknown',
     };
     
     // Get existing comments
@@ -252,7 +266,7 @@ async function handlePost(event, store) {
     
     // Add new comment
     data.comments = data.comments || [];
-    data.comments.push(comment);
+    data.comments.push(newComment);
     
     // Save
     const saved = await saveComments(store, sanitizedData.article_slug, data);
@@ -264,14 +278,17 @@ async function handlePost(event, store) {
         };
     }
     
-    // Return success (without email)
-    const { email: _email, ...commentWithoutEmail } = comment;
+    // Return success message
+    const message = isAdmin 
+        ? 'دیدگاه شما با موفقیت ثبت و منتشر شد.'
+        : 'دیدگاه شما با موفقیت ثبت شد و پس از بررسی نمایش داده خواهد شد.';
     
     return {
         statusCode: 201,
         body: JSON.stringify({
-            message: 'Comment submitted successfully',
-            comment: commentWithoutEmail,
+            success: true,
+            message: message,
+            is_admin: isAdmin,
         }),
     };
 }

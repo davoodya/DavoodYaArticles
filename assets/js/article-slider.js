@@ -1,7 +1,7 @@
 /**
  * Article Slider - Previous & Next Articles
- * Version: 3.0.0 - Complete Rewrite with Visible Cards Fix
- * Using simple transform-based sliding with guaranteed visibility
+ * Version: 4.0.0 - Slide-based Structure with 2 Cards Per Slide
+ * Fixed: Empty slides bug by restructuring HTML to use slide containers
  */
 
 (function() {
@@ -9,11 +9,9 @@
     
     // Configuration
     const CONFIG = {
-        CARDS_PER_VIEW_DESKTOP: 2,
-        CARDS_PER_VIEW_MOBILE: 1,
         BREAKPOINT: 1024,
-        GAP: 24, // pixels
-        ANIMATION_DURATION: 500 // ms
+        ANIMATION_DURATION: 500, // ms
+        SWIPE_THRESHOLD: 50 // pixels
     };
     
     // Check if slider exists
@@ -24,25 +22,24 @@
     }
     
     const track = slider.querySelector('.slider-track');
-    const cards = slider.querySelectorAll('.slider-card');
+    const slides = slider.querySelectorAll('.slider-slide');
     const prevBtn = slider.querySelector('.slider-nav-prev');
     const nextBtn = slider.querySelector('.slider-nav-next');
     const dots = slider.querySelectorAll('.slider-dot');
     
     // Validation
-    if (!track || cards.length < 2) {
-        console.warn('Not enough slider cards or track missing');
+    if (!track || slides.length === 0) {
+        console.warn('No slider slides found');
         return;
     }
     
-    console.log('🚀 Article Slider V3.0 Initializing...');
-    console.log('📊 Total cards:', cards.length);
+    console.log('🚀 Article Slider V4.0 Initializing...');
+    console.log('📊 Total slides:', slides.length);
     
     // State
     let state = {
-        currentPage: 0,
-        cardsPerView: CONFIG.CARDS_PER_VIEW_DESKTOP,
-        totalPages: 0,
+        currentSlide: 0,
+        totalSlides: slides.length,
         isAnimating: false,
         isDragging: false,
         startX: 0,
@@ -51,50 +48,34 @@
     };
     
     /**
-     * Calculate cards per view based on window width
+     * Get slide width including gap
      */
-    function updateCardsPerView() {
-        const width = window.innerWidth;
-        state.cardsPerView = width <= CONFIG.BREAKPOINT ? 
-            CONFIG.CARDS_PER_VIEW_MOBILE : 
-            CONFIG.CARDS_PER_VIEW_DESKTOP;
+    function getSlideWidth() {
+        if (slides.length === 0) return 0;
         
-        state.totalPages = Math.ceil(cards.length / state.cardsPerView);
-        
-        console.log('📱 Screen width:', width);
-        console.log('🎴 Cards per view:', state.cardsPerView);
-        console.log('📄 Total pages:', state.totalPages);
-    }
-    
-    /**
-     * Get card width including gap
-     */
-    function getCardWidth() {
-        if (cards.length === 0) return 0;
-        
-        // Get computed width of first card
-        const card = cards[0];
-        const rect = card.getBoundingClientRect();
+        const slide = slides[0];
+        const rect = slide.getBoundingClientRect();
         const width = rect.width;
         
-        console.log('📏 Card width:', width, 'Gap:', CONFIG.GAP);
+        // Get gap from CSS (1.5rem = 24px typically)
+        const trackStyles = window.getComputedStyle(track);
+        const gap = parseFloat(trackStyles.gap) || 24;
         
-        return width + CONFIG.GAP;
+        console.log('📏 Slide width:', width, 'Gap:', gap);
+        
+        return width + gap;
     }
     
     /**
-     * Calculate translate value for current page
+     * Calculate translate value for current slide
      */
     function calculateTranslate() {
-        const cardWidth = getCardWidth();
-        const cardsToSkip = state.currentPage * state.cardsPerView;
-        const translate = -(cardsToSkip * cardWidth);
+        const slideWidth = getSlideWidth();
+        const translate = -(state.currentSlide * slideWidth);
         
         console.log('🔢 Calculate:', {
-            page: state.currentPage,
-            cardsPerView: state.cardsPerView,
-            cardsToSkip: cardsToSkip,
-            cardWidth: cardWidth,
+            currentSlide: state.currentSlide,
+            slideWidth: slideWidth,
             translate: translate
         });
         
@@ -105,7 +86,7 @@
      * Update slider position
      */
     function updatePosition(animated = true) {
-        if (state.isAnimating) return;
+        if (state.isAnimating && animated) return;
         
         const translate = calculateTranslate();
         state.translateX = translate;
@@ -125,7 +106,7 @@
         track.style.transform = `translate3d(${translate}px, 0, 0)`;
         
         console.log('✅ Position updated:', {
-            page: state.currentPage,
+            slide: state.currentSlide,
             translate: translate,
             animated: animated
         });
@@ -139,7 +120,7 @@
      */
     function updateDots() {
         dots.forEach((dot, index) => {
-            const isActive = index === state.currentPage;
+            const isActive = index === state.currentSlide;
             dot.classList.toggle('active', isActive);
             dot.setAttribute('aria-selected', isActive);
         });
@@ -149,6 +130,7 @@
      * Update buttons (always enabled for loop)
      */
     function updateButtons() {
+        // Always enable buttons for infinite loop
         if (prevBtn) {
             prevBtn.disabled = false;
             prevBtn.style.opacity = '1';
@@ -160,48 +142,48 @@
     }
     
     /**
-     * Go to specific page
+     * Go to specific slide
      */
-    function goToPage(pageIndex, animated = true) {
+    function goToSlide(slideIndex, animated = true) {
         // Loop logic
-        if (pageIndex < 0) {
-            state.currentPage = state.totalPages - 1;
-        } else if (pageIndex >= state.totalPages) {
-            state.currentPage = 0;
+        if (slideIndex < 0) {
+            state.currentSlide = state.totalSlides - 1;
+        } else if (slideIndex >= state.totalSlides) {
+            state.currentSlide = 0;
         } else {
-            state.currentPage = pageIndex;
+            state.currentSlide = slideIndex;
         }
         
-        console.log('📄 Going to page:', state.currentPage);
+        console.log('📄 Going to slide:', state.currentSlide);
         updatePosition(animated);
     }
     
     /**
-     * Next page
+     * Next slide - Fixed direction
      */
-    function nextPage() {
-        console.log('➡️ Next page');
-        goToPage(state.currentPage + 1);
+    function nextSlide() {
+        console.log('➡️ Next slide (Right arrow)');
+        goToSlide(state.currentSlide + 1);
     }
     
     /**
-     * Previous page
+     * Previous slide - Fixed direction
      */
-    function prevPage() {
-        console.log('⬅️ Previous page');
-        goToPage(state.currentPage - 1);
+    function prevSlide() {
+        console.log('⬅️ Previous slide (Left arrow)');
+        goToSlide(state.currentSlide - 1);
     }
     
     /**
-     * Start from middle page
+     * Start from middle slide
      */
     function startFromMiddle() {
-        if (state.totalPages > 1) {
-            const middlePage = Math.floor(state.totalPages / 2);
-            state.currentPage = middlePage;
-            console.log('🎯 Starting from middle page:', middlePage);
+        if (state.totalSlides > 1) {
+            const middleSlide = Math.floor(state.totalSlides / 2);
+            state.currentSlide = middleSlide;
+            console.log('🎯 Starting from middle slide:', middleSlide, 'of', state.totalSlides);
         } else {
-            state.currentPage = 0;
+            state.currentSlide = 0;
         }
         updatePosition(false);
     }
@@ -233,13 +215,13 @@
         track.style.cursor = 'grab';
         
         const diff = state.currentX - state.startX;
-        const threshold = 50;
         
-        if (Math.abs(diff) > threshold) {
+        if (Math.abs(diff) > CONFIG.SWIPE_THRESHOLD) {
+            // Swipe right = previous, Swipe left = next
             if (diff > 0) {
-                prevPage();
+                prevSlide();
             } else {
-                nextPage();
+                nextSlide();
             }
         } else {
             updatePosition(true);
@@ -251,10 +233,11 @@
      */
     function handleKeyboard(e) {
         if (e.key === 'ArrowLeft') {
-            prevPage();
+            // In RTL context, left might mean next, but for standard behavior:
+            prevSlide();
             e.preventDefault();
         } else if (e.key === 'ArrowRight') {
-            nextPage();
+            nextSlide();
             e.preventDefault();
         }
     }
@@ -263,18 +246,18 @@
      * Initialize events
      */
     function initEvents() {
-        // Button clicks
+        // Button clicks - Fixed direction mapping
         if (prevBtn) {
             prevBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                prevPage();
+                prevSlide();
             });
         }
         
         if (nextBtn) {
             nextBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                nextPage();
+                nextSlide();
             });
         }
         
@@ -282,7 +265,7 @@
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 console.log('⭕ Dot clicked:', index);
-                goToPage(index);
+                goToSlide(index);
             });
         });
         
@@ -306,11 +289,9 @@
         slider.setAttribute('tabindex', '0');
         
         // Prevent image drag
-        cards.forEach(card => {
-            const images = card.querySelectorAll('img');
-            images.forEach(img => {
-                img.addEventListener('dragstart', (e) => e.preventDefault());
-            });
+        const images = slider.querySelectorAll('img');
+        images.forEach(img => {
+            img.addEventListener('dragstart', (e) => e.preventDefault());
         });
         
         // Window resize
@@ -319,48 +300,53 @@
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
                 console.log('📐 Window resized');
-                updateCardsPerView();
                 updatePosition(false);
             }, 250);
         });
     }
     
     /**
-     * Force card visibility
+     * Verify slide structure
      */
-    function forceCardVisibility() {
-        cards.forEach((card, index) => {
-            // Remove any display:none
-            card.style.display = 'flex';
-            card.style.visibility = 'visible';
-            card.style.opacity = '1';
+    function verifySlideStructure() {
+        let isValid = true;
+        
+        slides.forEach((slide, index) => {
+            const cards = slide.querySelectorAll('.slider-card');
+            console.log(`🎴 Slide ${index + 1}: ${cards.length} card(s)`);
             
-            // Ensure proper flex properties
-            if (window.innerWidth > CONFIG.BREAKPOINT) {
-                card.style.flex = '0 0 calc(50% - 12px)';
-                card.style.minWidth = 'calc(50% - 12px)';
-                card.style.maxWidth = 'calc(50% - 12px)';
-            } else {
-                card.style.flex = '0 0 100%';
-                card.style.minWidth = '100%';
-                card.style.maxWidth = '100%';
+            if (cards.length === 0) {
+                console.error(`❌ Slide ${index + 1} has NO cards!`);
+                isValid = false;
             }
             
-            console.log(`🎴 Card ${index + 1} forced visible`);
+            // Force visibility
+            slide.style.display = 'flex';
+            cards.forEach(card => {
+                card.style.display = 'flex';
+            });
         });
+        
+        if (!isValid) {
+            console.error('❌ Slider structure validation FAILED');
+        } else {
+            console.log('✅ Slider structure validated successfully');
+        }
+        
+        return isValid;
     }
     
     /**
      * Initialize slider
      */
     function init() {
-        console.log('🔧 Initializing Article Slider V3.0...');
+        console.log('🔧 Initializing Article Slider V4.0...');
         
-        // Calculate initial state
-        updateCardsPerView();
-        
-        // Force all cards to be visible
-        forceCardVisibility();
+        // Verify structure
+        if (!verifySlideStructure()) {
+            console.error('❌ Cannot initialize slider - structure invalid');
+            return;
+        }
         
         // Start from middle
         startFromMiddle();
@@ -384,31 +370,26 @@
     
     // Expose API for debugging
     window.articleSlider = {
-        goToPage: goToPage,
-        nextPage: nextPage,
-        prevPage: prevPage,
+        goToSlide: goToSlide,
+        nextSlide: nextSlide,
+        prevSlide: prevSlide,
         getState: () => ({ ...state }),
-        forceVisibility: forceCardVisibility,
+        verify: verifySlideStructure,
         debug: () => {
             console.log('🐛 === Debug Info ===');
-            console.log('Current page:', state.currentPage);
-            console.log('Total pages:', state.totalPages);
-            console.log('Cards per view:', state.cardsPerView);
-            console.log('Total cards:', cards.length);
+            console.log('Current slide:', state.currentSlide);
+            console.log('Total slides:', state.totalSlides);
             console.log('Translate X:', state.translateX);
             console.log('Track transform:', track.style.transform);
-            console.log('Track styles:', {
-                display: track.style.display,
-                visibility: track.style.visibility,
-                opacity: track.style.opacity
-            });
-            cards.forEach((card, i) => {
-                const rect = card.getBoundingClientRect();
-                console.log(`Card ${i + 1}:`, {
+            
+            slides.forEach((slide, i) => {
+                const rect = slide.getBoundingClientRect();
+                const cards = slide.querySelectorAll('.slider-card');
+                console.log(`Slide ${i + 1}:`, {
                     visible: rect.width > 0 && rect.height > 0,
-                    rect: rect,
-                    display: card.style.display,
-                    visibility: card.style.visibility
+                    width: rect.width,
+                    cards: cards.length,
+                    display: slide.style.display
                 });
             });
         }

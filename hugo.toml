@@ -4,7 +4,7 @@ title = "مقالات داوود یاحی – Davood Yahay Articles"
 defaultContentLanguage = "fa"
 theme = 'ananke'
 enableRobotsTXT = true
-relativeURLs = true
+relativeURLs = false
 canonifyURLs = false
 
 # Summary settings
