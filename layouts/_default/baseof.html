@@ -80,9 +80,43 @@
     {{ $articleFeatures := resources.Get "css/article-features.css" | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $articleFeatures.RelPermalink }}" integrity="{{ $articleFeatures.Data.Integrity }}">
     
+    <!-- Comments Styles -->
+    {{ $comments := resources.Get "css/comments.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $comments.RelPermalink }}" integrity="{{ $comments.Data.Integrity }}">
+    
     <!-- Font Fixes - Load Last to Override -->
     {{ $fontFixes := resources.Get "css/font-fixes.css" | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $fontFixes.RelPermalink }}" integrity="{{ $fontFixes.Data.Integrity }}">
+    
+    <!-- Home Slider Styles (Homepage Only) -->
+    {{ if .IsHome }}
+    {{ $homeSlider := resources.Get "css/home-slider.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $homeSlider.RelPermalink }}" integrity="{{ $homeSlider.Data.Integrity }}">
+    {{ end }}
+    
+    <!-- Article Slider Styles (Single Pages Only) -->
+    {{ if and .IsPage (not .IsHome) }}
+    {{ $articleSlider := resources.Get "css/article-slider.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $articleSlider.RelPermalink }}" integrity="{{ $articleSlider.Data.Integrity }}">
+    {{ end }}
+    
+    <!-- Random Article Suggestion Styles (Single Pages Only) -->
+    {{ if and .IsPage (not .IsHome) }}
+    {{ $randomSuggestion := resources.Get "css/random-suggestion.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $randomSuggestion.RelPermalink }}" integrity="{{ $randomSuggestion.Data.Integrity }}">
+    {{ end }}
+    
+    <!-- Preload First Slide Image (Critical LCP Optimization - Homepage Only) -->
+    {{ if .IsHome }}
+      {{ with site.Data.main_slide }}
+        {{ if gt (len .) 0 }}
+          {{ $firstSlide := index . 0 }}
+          {{ with $firstSlide.image }}
+            <link rel="preload" as="image" href="{{ . | relURL }}" fetchpriority="high">
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
 
     <!-- ========================= -->
     <!-- SCHEMA STRUCTURED DATA -->
@@ -265,6 +299,19 @@
 
 <!-- Article Share & Link Management -->
 <script src="{{ "assets/js/article-share.js" | relURL }}"></script>
+
+<!-- Comments System -->
+<script defer src="{{ "assets/js/comments.js" | relURL }}"></script>
+
+<!-- Home Slider (Homepage Only) -->
+{{ if .IsHome }}
+<script src="{{ "assets/js/home-slider.js" | relURL }}" defer></script>
+{{ end }}
+
+<!-- Article Slider (Single Pages Only) -->
+{{ if and .IsPage (not .IsHome) }}
+<script src="{{ "assets/js/article-slider.js" | relURL }}" defer></script>
+{{ end }}
 
 </body>
 </html>

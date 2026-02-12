@@ -301,6 +301,8 @@
   </url><url>
     <loc>http://localhost:1313/s/</loc>
   </url><url>
+    <loc>http://localhost:1313/s/test/</loc>
+  </url><url>
     <loc>http://localhost:1313/type/tool/</loc>
   </url><url>
     <loc>http://localhost:1313/type/news/</loc>

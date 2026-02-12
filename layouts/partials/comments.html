@@ -1,0 +1,180 @@
+{{/* ============================= */}}
+{{/* Comments Section Partial */}}
+{{/* ============================= */}}
+
+{{ $slug := .File.UniqueID }}
+{{ if not $slug }}
+    {{ $slug = .RelPermalink | urlize }}
+{{ end }}
+
+<section class="comments-section" id="comments" data-article-slug="{{ $slug }}">
+    <div class="comments-container">
+        
+        {{/* Comments Header */}}
+        <div class="comments-header">
+            <h2 class="comments-title">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                </svg>
+                <span class="comments-title-text">دیدگاه‌ها</span>
+                <span class="comments-count" id="commentsCount" data-count="0">(0)</span>
+            </h2>
+            <p class="comments-subtitle">نظرات و سوالات خود را با ما در میان بگذارید</p>
+        </div>
+
+        {{/* Comment Form */}}
+        <div class="comment-form-wrapper">
+            <h3 class="comment-form-title">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z"/>
+                </svg>
+                ارسال دیدگاه جدید
+            </h3>
+            
+            <form id="commentForm" class="comment-form" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="commentName" class="form-label">
+                            نام
+                            <span class="required-mark">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="commentName" 
+                            name="name" 
+                            class="form-input" 
+                            placeholder="نام شما..."
+                            required
+                            autocomplete="name"
+                            aria-required="true"
+                            aria-describedby="nameError"
+                        />
+                        <span class="form-error" id="nameError" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="commentEmail" class="form-label">
+                            ایمیل
+                            <span class="required-mark">*</span>
+                        </label>
+                        <input 
+                            type="email" 
+                            id="commentEmail" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="email@example.com"
+                            required
+                            autocomplete="email"
+                            aria-required="true"
+                            aria-describedby="emailError"
+                        />
+                        <span class="form-error" id="emailError" role="alert"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="commentWebsite" class="form-label">
+                        وبسایت
+                        <span class="optional-mark">(اختیاری)</span>
+                    </label>
+                    <input 
+                        type="url" 
+                        id="commentWebsite" 
+                        name="website" 
+                        class="form-input" 
+                        placeholder="https://example.com"
+                        autocomplete="url"
+                        aria-describedby="websiteError"
+                    />
+                    <span class="form-error" id="websiteError" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="commentText" class="form-label">
+                        دیدگاه
+                        <span class="required-mark">*</span>
+                    </label>
+                    <textarea 
+                        id="commentText" 
+                        name="comment" 
+                        class="form-textarea" 
+                        rows="6" 
+                        placeholder="دیدگاه خود را بنویسید..."
+                        required
+                        aria-required="true"
+                        aria-describedby="commentError"
+                    ></textarea>
+                    <span class="form-error" id="commentError" role="alert"></span>
+                </div>
+
+                {{/* Honeypot field - hidden anti-spam */}}
+                <input 
+                    type="text" 
+                    name="honeypot" 
+                    id="honeypot" 
+                    class="honeypot-field" 
+                    tabindex="-1" 
+                    autocomplete="off"
+                    aria-hidden="true"
+                />
+
+                <div class="form-actions">
+                    <button 
+                        type="submit" 
+                        class="submit-btn" 
+                        id="submitCommentBtn"
+                        aria-label="ارسال دیدگاه"
+                    >
+                        <svg class="submit-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                        </svg>
+                        <span class="submit-text">ارسال دیدگاه</span>
+                        <span class="submit-loading" style="display: none;">
+                            <svg class="loading-spinner" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10" stroke-width="4" fill="none"/>
+                            </svg>
+                            در حال ارسال...
+                        </span>
+                    </button>
+                </div>
+
+                <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+            </form>
+        </div>
+
+        {{/* Comments List */}}
+        <div class="comments-list-wrapper">
+            <div class="comments-list-header">
+                <h3 class="comments-list-title">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                    </svg>
+                    <span id="commentsListTitle">همه دیدگاه‌ها</span>
+                </h3>
+            </div>
+
+            {{/* Loading State */}}
+            <div class="comments-loading" id="commentsLoading">
+                <svg class="loading-spinner" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke-width="4" fill="none"/>
+                </svg>
+                <span>در حال بارگذاری دیدگاه‌ها...</span>
+            </div>
+
+            {{/* Empty State */}}
+            <div class="comments-empty" id="commentsEmpty" style="display: none;">
+                <svg class="empty-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2z"/>
+                </svg>
+                <p>هنوز دیدگاهی ثبت نشده است.</p>
+                <p class="empty-subtitle">اولین نفری باشید که نظر می‌دهید!</p>
+            </div>
+
+            {{/* Comments Container */}}
+            <div class="comments-list" id="commentsList" role="list">
+                {{/* Comments will be rendered here by JavaScript */}}
+            </div>
+        </div>
+
+    </div>
+</section>

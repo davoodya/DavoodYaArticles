@@ -1,0 +1,213 @@
+{{- $slides := site.Data.main_slide -}}
+{{- if $slides -}}
+
+<!-- ============================= -->
+<!-- Schema.org JSON-LD for Featured Articles -->
+<!-- ============================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "مقالات ویژه",
+  "itemListElement": [
+    {{- range $index, $slide := $slides -}}
+    {
+      "@type": "ListItem",
+      "position": {{ add $index 1 }},
+      "item": {
+        "@type": "Article",
+        "headline": "{{ $slide.title }}",
+        "description": "{{ $slide.description }}",
+        "url": "{{ site.BaseURL }}{{ strings.TrimPrefix "/" $slide.url }}",
+        "image": "{{ site.BaseURL }}{{ strings.TrimPrefix "/" $slide.image }}",
+        "author": {
+          "@type": "Person",
+          "name": "Davood Yahya"
+        }{{ if $slide.readingTime }},
+        "timeRequired": "PT{{ $slide.readingTime }}M"{{ end }}{{ if $slide.tags }},
+        "keywords": "{{ delimit $slide.tags ", " }}"{{ end }}
+      }
+    }{{ if ne $index (sub (len $slides) 1) }},{{ end }}
+    {{- end -}}
+  ]
+}
+</script>
+
+<!-- ============================= -->
+<!-- Hero Slider Section -->
+<!-- ============================= -->
+<section class="home-slider" role="region" aria-label="مقالات ویژه" data-slider>
+  <div class="slider-container">
+    
+    <!-- Slider Wrapper -->
+    <div class="slider-wrapper" data-slider-track>
+      {{- range $index, $slide := $slides -}}
+      <div class="slider-slide{{ if eq $index 0 }} active{{ end }}" 
+           data-slide="{{ $index }}"
+           {{ if eq $index 0 }}aria-hidden="false"{{ else }}aria-hidden="true"{{ end }}>
+        
+        <!-- Slide Background Image -->
+        <div class="slide-bg">
+          {{- if eq $index 0 -}}
+          <img src="{{ $slide.image | relURL }}" 
+               alt="{{ $slide.title }}"
+               width="1920"
+               height="1080"
+               fetchpriority="high"
+               decoding="async">
+          {{- else -}}
+          <img src="{{ $slide.image | relURL }}" 
+               alt="{{ $slide.title }}"
+               width="1920"
+               height="1080"
+               loading="lazy"
+               decoding="async">
+          {{- end -}}
+          <div class="slide-overlay"></div>
+        </div>
+        
+        <!-- Slide Content -->
+        <div class="slide-content">
+          <div class="slide-content-inner">
+            
+            <!-- Title -->
+            <h2 class="slide-title">{{ $slide.title }}</h2>
+            
+            <!-- Description -->
+            <p class="slide-description">{{ $slide.description }}</p>
+            
+            <!-- Tags & Categories Row -->
+            <div class="slide-meta-row">
+              <!-- Categories (Right) -->
+              {{- if $slide.categories -}}
+              <div class="slide-categories">
+                {{- range $slide.categories -}}
+                <a href="/{{ . }}/" class="slide-category-badge">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>
+                  </svg>
+                  <span>{{ . }}</span>
+                </a>
+                {{- end -}}
+              </div>
+              {{- end -}}
+              
+              <!-- Tags (Left) -->
+              {{- if $slide.tags -}}
+              <div class="slide-tags">
+                {{- range $slide.tags -}}
+                <span class="slide-tag">{{ . }}</span>
+                {{- end -}}
+              </div>
+              {{- end -}}
+            </div>
+            
+            <!-- Button & Badges Row -->
+            <div class="slide-actions-row">
+              <!-- Read Article Button (Right) -->
+              <a href="{{ $slide.url }}" class="slide-btn" aria-label="مشاهده {{ $slide.title }}">
+                <span>مشاهده مقاله</span>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                </svg>
+              </a>
+              
+              <!-- Badges (Left) -->
+              <div class="slide-badges">
+                <!-- Reading Time -->
+                {{- if $slide.readingTime -}}
+                <span class="slide-badge badge-time">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                  </svg>
+                  <span>{{ $slide.readingTime }} دقیقه</span>
+                </span>
+                {{- end -}}
+                
+                <!-- Difficulty -->
+                {{- if $slide.difficulty -}}
+                {{- $difficultyClass := "" -}}
+                {{- $difficultyLabel := "" -}}
+                {{- if eq $slide.difficulty "beginner" -}}
+                  {{- $difficultyClass = "badge-beginner" -}}
+                  {{- $difficultyLabel = "مبتدی" -}}
+                {{- else if eq $slide.difficulty "medium" -}}
+                  {{- $difficultyClass = "badge-medium" -}}
+                  {{- $difficultyLabel = "متوسط" -}}
+                {{- else if eq $slide.difficulty "intermediate" -}}
+                  {{- $difficultyClass = "badge-intermediate" -}}
+                  {{- $difficultyLabel = "حرفه‌ای" -}}
+                {{- else if eq $slide.difficulty "advanced" -}}
+                  {{- $difficultyClass = "badge-advanced" -}}
+                  {{- $difficultyLabel = "تخصصی" -}}
+                {{- end -}}
+                <span class="slide-badge {{ $difficultyClass }}">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                  </svg>
+                  <span>{{ $difficultyLabel }}</span>
+                </span>
+                {{- end -}}
+                
+                <!-- Lab Required -->
+                {{- if $slide.lab_required -}}
+                <span class="slide-badge badge-lab">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.06-4.09l-2.6-1.53C16.17 17.98 14.21 19 12 19z"/>
+                  </svg>
+                  <span>نیاز به تمرین عملی</span>
+                </span>
+                {{- end -}}
+                
+                <!-- Post Type -->
+                {{- if $slide.post_type_fa -}}
+                <span class="slide-badge badge-type">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                  </svg>
+                  <span>{{ $slide.post_type_fa }}</span>
+                </span>
+                {{- end -}}
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+      {{- end -}}
+    </div>
+    
+    <!-- Navigation Arrows -->
+    {{- if gt (len $slides) 1 -}}
+    <button class="slider-arrow slider-arrow-prev" 
+            aria-label="اسلاید قبلی" 
+            data-slider-prev>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
+      </svg>
+    </button>
+    <button class="slider-arrow slider-arrow-next" 
+            aria-label="اسلاید بعدی" 
+            data-slider-next>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+      </svg>
+    </button>
+    {{- end -}}
+    
+    <!-- Pagination Dots -->
+    {{- if gt (len $slides) 1 -}}
+    <div class="slider-pagination" data-slider-pagination>
+      {{- range $index, $slide := $slides -}}
+      <button class="slider-dot{{ if eq $index 0 }} active{{ end }}" 
+              aria-label="اسلاید {{ add $index 1 }}"
+              data-slide-to="{{ $index }}"></button>
+      {{- end -}}
+    </div>
+    {{- end -}}
+    
+  </div>
+</section>
+
+{{- end -}}

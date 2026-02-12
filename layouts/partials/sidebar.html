@@ -115,14 +115,16 @@
         <h3 class="sidebar-widget-title">📝 نوشته‌های تازه</h3>
         <div class="sidebar-widget-content">
             {{/* گرفتن همه صفحات معمولی (نه section pages) و مرتب‌سازی بر اساس تاریخ آخرین بروزرسانی یا تاریخ انتشار */}}
-            {{ $recentPosts := .Site.RegularPages }}
-            {{ $recentPosts = where $recentPosts "Draft" false }}
+            {{ $allRecentPosts := .Site.RegularPages }}
+            {{ $allRecentPosts = where $allRecentPosts "Draft" false }}
             {{/* مرتب‌سازی بر اساس Lastmod (تاریخ آخرین بروزرسانی) - مقالات تازه‌تر در بالا */}}
-            {{ $recentPosts = first 5 (sort $recentPosts "Lastmod" "desc") }}
+            {{ $allRecentPosts = sort $allRecentPosts "Lastmod" "desc" }}
+            {{ $totalPosts := len $allRecentPosts }}
+            {{ $initialCount := 5 }}
             
-            {{ if gt (len $recentPosts) 0 }}
-                <ul class="recent-posts-list">
-                    {{ range $recentPosts }}
+            {{ if gt $totalPosts 0 }}
+                <ul class="recent-posts-list" id="recentPostsList" data-total="{{ $totalPosts }}" data-current="{{ $initialCount }}">
+                    {{ range first $initialCount $allRecentPosts }}
                         <li class="recent-post-item">
                             <a href="{{ .RelPermalink }}" class="recent-post-link">
                                 <span class="recent-post-icon">📄</span>
@@ -139,6 +141,33 @@
                         </li>
                     {{ end }}
                 </ul>
+                
+                {{/* دکمه مشاهده بیشتر - فقط اگر پست‌های بیشتری وجود داشته باشد */}}
+                {{ if gt $totalPosts $initialCount }}
+                    <button class="recent-posts-load-more" id="recentPostsLoadMore" onclick="loadMoreRecentPosts()">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="load-more-icon">
+                            <path d="M7 10l5 5 5-5z"/>
+                        </svg>
+                        <span class="load-more-text">مشاهده بیشتر</span>
+                        <span class="load-more-count">({{ sub $totalPosts $initialCount }} مطلب دیگر)</span>
+                    </button>
+                {{ end }}
+                
+                {{/* ذخیره همه پست‌ها در data attribute برای JavaScript */}}
+                <script id="allRecentPostsData" type="application/json">
+                [
+                    {{ range $index, $post := $allRecentPosts }}
+                        {{ if gt $index 0 }},{{ end }}
+                        {
+                            "title": {{ $post.Title | jsonify }},
+                            "url": {{ $post.RelPermalink | jsonify }},
+                            "date": {{ $post.Date.Format "2006/01/02" | jsonify }},
+                            "lastmod": {{ $post.Lastmod.Format "2006/01/02" | jsonify }},
+                            "isUpdated": {{ ne $post.Lastmod $post.Date }}
+                        }
+                    {{ end }}
+                ]
+                </script>
             {{ else }}
                 <p class="no-items">هیچ نوشته‌ای موجود نیست</p>
             {{ end }}
@@ -377,13 +406,15 @@
             <div class="sidebar-widget">
                 <h3 class="sidebar-widget-title">📝 نوشته‌های تازه</h3>
                 <div class="sidebar-widget-content">
-                    {{ $recentPosts := .Site.RegularPages }}
-                    {{ $recentPosts = where $recentPosts "Draft" false }}
-                    {{ $recentPosts = first 5 (sort $recentPosts "Lastmod" "desc") }}
+                    {{ $allRecentPosts := .Site.RegularPages }}
+                    {{ $allRecentPosts = where $allRecentPosts "Draft" false }}
+                    {{ $allRecentPosts = sort $allRecentPosts "Lastmod" "desc" }}
+                    {{ $totalPosts := len $allRecentPosts }}
+                    {{ $initialCount := 5 }}
                     
-                    {{ if gt (len $recentPosts) 0 }}
-                        <ul class="recent-posts-list">
-                            {{ range $recentPosts }}
+                    {{ if gt $totalPosts 0 }}
+                        <ul class="recent-posts-list" id="modalRecentPostsList" data-total="{{ $totalPosts }}" data-current="{{ $initialCount }}">
+                            {{ range first $initialCount $allRecentPosts }}
                                 <li class="recent-post-item">
                                     <a href="{{ .RelPermalink }}" class="recent-post-link">
                                         <span class="recent-post-icon">📄</span>
@@ -399,6 +430,33 @@
                                 </li>
                             {{ end }}
                         </ul>
+                        
+                        {{/* دکمه مشاهده بیشتر - فقط اگر پست‌های بیشتری وجود داشته باشد */}}
+                        {{ if gt $totalPosts $initialCount }}
+                            <button class="recent-posts-load-more" id="modalRecentPostsLoadMore" onclick="loadMoreModalRecentPosts()">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="load-more-icon">
+                                    <path d="M7 10l5 5 5-5z"/>
+                                </svg>
+                                <span class="load-more-text">مشاهده بیشتر</span>
+                                <span class="load-more-count">({{ sub $totalPosts $initialCount }} مطلب دیگر)</span>
+                            </button>
+                        {{ end }}
+                        
+                        {{/* ذخیره همه پست‌ها در data attribute برای JavaScript */}}
+                        <script id="allModalRecentPostsData" type="application/json">
+                        [
+                            {{ range $index, $post := $allRecentPosts }}
+                                {{ if gt $index 0 }},{{ end }}
+                                {
+                                    "title": {{ $post.Title | jsonify }},
+                                    "url": {{ $post.RelPermalink | jsonify }},
+                                    "date": {{ $post.Date.Format "2006/01/02" | jsonify }},
+                                    "lastmod": {{ $post.Lastmod.Format "2006/01/02" | jsonify }},
+                                    "isUpdated": {{ ne $post.Lastmod $post.Date }}
+                                }
+                            {{ end }}
+                        ]
+                        </script>
                     {{ else }}
                         <p class="no-items">هیچ نوشته‌ای موجود نیست</p>
                     {{ end }}
@@ -626,6 +684,125 @@ function toggleAllTags() {
                 <span>بستن تگ‌ها</span>
             `;
         }
+    }
+}
+
+// ============================= //
+// Load More Recent Posts Function
+// ============================= //
+
+function loadMoreRecentPosts() {
+    const list = document.getElementById('recentPostsList');
+    const button = document.getElementById('recentPostsLoadMore');
+    const dataScript = document.getElementById('allRecentPostsData');
+    
+    if (!list || !button || !dataScript) return;
+    
+    try {
+        const allPosts = JSON.parse(dataScript.textContent);
+        const currentCount = parseInt(list.getAttribute('data-current')) || 5;
+        const totalPosts = parseInt(list.getAttribute('data-total')) || allPosts.length;
+        
+        // محاسبه تعداد جدید (دو برابر کردن)
+        const newCount = Math.min(currentCount * 2, totalPosts);
+        
+        // اضافه کردن پست‌های جدید
+        for (let i = currentCount; i < newCount; i++) {
+            const post = allPosts[i];
+            const listItem = document.createElement('li');
+            listItem.className = 'recent-post-item';
+            listItem.style.animation = 'fadeInUp 0.3s ease forwards';
+            listItem.style.animationDelay = `${(i - currentCount) * 0.05}s`;
+            listItem.style.opacity = '0';
+            
+            const dateLabel = post.isUpdated 
+                ? `<span class="recent-post-date" title="آخرین بروزرسانی">🔄 ${post.lastmod}</span>`
+                : `<span class="recent-post-date">${post.date}</span>`;
+            
+            listItem.innerHTML = `
+                <a href="${post.url}" class="recent-post-link">
+                    <span class="recent-post-icon">📄</span>
+                    <div class="recent-post-info">
+                        <h4 class="recent-post-title">${post.title}</h4>
+                        ${dateLabel}
+                    </div>
+                </a>
+            `;
+            
+            list.appendChild(listItem);
+        }
+        
+        // بروزرسانی شمارنده
+        list.setAttribute('data-current', newCount);
+        
+        // بروزرسانی یا مخفی کردن دکمه
+        if (newCount >= totalPosts) {
+            button.style.display = 'none';
+        } else {
+            const remaining = totalPosts - newCount;
+            button.querySelector('.load-more-count').textContent = `(${remaining} مطلب دیگر)`;
+        }
+        
+    } catch (error) {
+        console.error('Error loading more recent posts:', error);
+    }
+}
+
+// Load More for Modal Recent Posts
+function loadMoreModalRecentPosts() {
+    const list = document.getElementById('modalRecentPostsList');
+    const button = document.getElementById('modalRecentPostsLoadMore');
+    const dataScript = document.getElementById('allModalRecentPostsData');
+    
+    if (!list || !button || !dataScript) return;
+    
+    try {
+        const allPosts = JSON.parse(dataScript.textContent);
+        const currentCount = parseInt(list.getAttribute('data-current')) || 5;
+        const totalPosts = parseInt(list.getAttribute('data-total')) || allPosts.length;
+        
+        // محاسبه تعداد جدید (دو برابر کردن)
+        const newCount = Math.min(currentCount * 2, totalPosts);
+        
+        // اضافه کردن پست‌های جدید
+        for (let i = currentCount; i < newCount; i++) {
+            const post = allPosts[i];
+            const listItem = document.createElement('li');
+            listItem.className = 'recent-post-item';
+            listItem.style.animation = 'fadeInUp 0.3s ease forwards';
+            listItem.style.animationDelay = `${(i - currentCount) * 0.05}s`;
+            listItem.style.opacity = '0';
+            
+            const dateLabel = post.isUpdated 
+                ? `<span class="recent-post-date" title="آخرین بروزرسانی">🔄 ${post.lastmod}</span>`
+                : `<span class="recent-post-date">${post.date}</span>`;
+            
+            listItem.innerHTML = `
+                <a href="${post.url}" class="recent-post-link">
+                    <span class="recent-post-icon">📄</span>
+                    <div class="recent-post-info">
+                        <h4 class="recent-post-title">${post.title}</h4>
+                        ${dateLabel}
+                    </div>
+                </a>
+            `;
+            
+            list.appendChild(listItem);
+        }
+        
+        // بروزرسانی شمارنده
+        list.setAttribute('data-current', newCount);
+        
+        // بروزرسانی یا مخفی کردن دکمه
+        if (newCount >= totalPosts) {
+            button.style.display = 'none';
+        } else {
+            const remaining = totalPosts - newCount;
+            button.querySelector('.load-more-count').textContent = `(${remaining} مطلب دیگر)`;
+        }
+        
+    } catch (error) {
+        console.error('Error loading more modal recent posts:', error);
     }
 }
 </script>

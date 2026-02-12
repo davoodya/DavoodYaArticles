@@ -209,8 +209,19 @@
                 </div>
             {{ end }}
         </article>
+        
+        {{/* Article Slider - Previous & Next Articles */}}
+        {{ partial "article-slider.html" . }}
+        
+        {{/* Comments Section */}}
+        <div class="article-wrapper">
+            {{ partial "comments.html" . }}
+        </div>
     </div>
 </div>
+
+{{/* Random Article Suggestion Popup */}}
+{{ partial "random-suggestion.html" . }}
 
 {{/* Floating TOC Button - دکمه شناور برای همه دیوایس‌ها */}}
 {{ if .TableOfContents }}

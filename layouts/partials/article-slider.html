@@ -1,0 +1,267 @@
+{{/* Article Slider - Previous & Next Articles */}}
+
+{{/* Get current article's primary category */}}
+{{ $currentArticle := . }}
+{{ $currentCategory := "" }}
+{{ if .Params.categories }}
+    {{ $currentCategory = index .Params.categories 0 }}
+{{ end }}
+
+{{/* Get all published regular pages excluding current article */}}
+{{ $allArticles := where .Site.RegularPages "Type" "in" (slice "cyber-security" "linux" "network" "python" "seo" "tools") }}
+{{ $allArticles = where $allArticles "Draft" false }}
+{{ $allArticles = where $allArticles "Date" "le" now }}
+{{ $allArticles = $allArticles | complement (slice $currentArticle) }}
+
+{{/* Get articles from the same category */}}
+{{ $sameCategoryArticles := slice }}
+{{ if $currentCategory }}
+    {{ $sameCategoryArticles = where $allArticles ".Params.categories" "intersect" (slice $currentCategory) }}
+{{ end }}
+
+{{/* Sort articles by date */}}
+{{ $sortedArticles := slice }}
+{{ if gt (len $sameCategoryArticles) 0 }}
+    {{ $sortedArticles = $sameCategoryArticles.ByDate }}
+{{ else }}
+    {{ $sortedArticles = $allArticles.ByDate }}
+{{ end }}
+
+{{/* Find current article index */}}
+{{ $currentIndex := -1 }}
+{{ range $index, $article := $sortedArticles }}
+    {{ if eq $article.RelPermalink $currentArticle.RelPermalink }}
+        {{ $currentIndex = $index }}
+    {{ end }}
+{{ end }}
+
+{{/* Get 2 previous and 2 next articles */}}
+{{ $previousArticles := slice }}
+{{ $nextArticles := slice }}
+
+{{ if ge $currentIndex 0 }}
+    {{/* Get previous articles (older) */}}
+    {{ if gt $currentIndex 1 }}
+        {{ $previousArticles = first 2 (after (sub $currentIndex 2) $sortedArticles | first 2) }}
+    {{ else if eq $currentIndex 1 }}
+        {{ $previousArticles = first 1 $sortedArticles }}
+    {{ end }}
+    
+    {{/* Get next articles (newer) */}}
+    {{ $remainingCount := sub (len $sortedArticles) (add $currentIndex 1) }}
+    {{ if ge $remainingCount 2 }}
+        {{ $nextArticles = first 2 (after (add $currentIndex 1) $sortedArticles) }}
+    {{ else if eq $remainingCount 1 }}
+        {{ $nextArticles = first 1 (after (add $currentIndex 1) $sortedArticles) }}
+    {{ end }}
+{{ end }}
+
+{{/* Combine previous and next articles */}}
+{{ $sliderArticles := $previousArticles | append $nextArticles }}
+
+{{/* If we don't have enough articles, add random ones */}}
+{{ $targetCount := 4 }}
+{{ if lt (len $sliderArticles) $targetCount }}
+    {{ $needed := sub $targetCount (len $sliderArticles) }}
+    {{ $availableArticles := $sortedArticles | complement $sliderArticles }}
+    {{ $availableArticles = shuffle $availableArticles }}
+    {{ $randomArticles := first $needed $availableArticles }}
+    {{ $sliderArticles = $sliderArticles | append $randomArticles }}
+{{ end }}
+
+{{/* Only render slider if we have at least 2 articles */}}
+{{ if ge (len $sliderArticles) 2 }}
+<section class="article-slider" aria-label="مقالات مرتبط">
+    <div class="slider-container">
+        <h2 class="slider-title">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+            </svg>
+            مقالات پیشنهادی
+        </h2>
+        
+        <div class="slider-wrapper">
+            <button class="slider-nav slider-nav-prev" aria-label="مقاله قبلی" disabled>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+            </button>
+            
+            <div class="slider-track-container">
+                <div class="slider-track" role="list">
+                    {{ range $index, $article := $sliderArticles }}
+                        <article class="slider-card" data-slide="{{ $index }}" role="listitem">
+                            <h3 class="slider-card-title">
+                                <a href="{{ $article.RelPermalink }}">{{ $article.Title }}</a>
+                            </h3>
+
+                            {{/* Featured Image */}}
+                            {{ $featuredImage := "" }}
+                            {{ if $article.Params.featured_image }}
+                                {{ $featuredImage = $article.Params.featured_image }}
+                            {{ else if $article.Params.images }}
+                                {{ if reflect.IsSlice $article.Params.images }}
+                                    {{ $featuredImage = index $article.Params.images 0 }}
+                                {{ else }}
+                                    {{ $featuredImage = $article.Params.images }}
+                                {{ end }}
+                            {{ end }}
+                            
+                            {{ if $featuredImage }}
+                                <div class="slider-card-image">
+                                    <a href="{{ $article.RelPermalink }}">
+                                        <img src="{{ $featuredImage | relURL }}" 
+                                             alt="{{ $article.Title }}" 
+                                             loading="{{ cond (lt $index 2) "eager" "lazy" }}">
+                                    </a>
+                                </div>
+                            {{ end }}
+                            
+                            <div class="slider-card-summary">
+                                {{ if $article.Params.description }}
+                                    {{ $article.Params.description | truncate 150 }}
+                                {{ else if $article.Summary }}
+                                    {{ $article.Summary | truncate 150 }}
+                                {{ else }}
+                                    {{ $article.Content | truncate 150 }}
+                                {{ end }}
+                            </div>
+                            
+                            {{/* Tags */}}
+                            {{ if $article.Params.tags }}
+                                <div class="slider-card-tags">
+                                    <div class="tags-label">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
+                                        </svg>
+                                        <span>تگ‌ها:</span>
+                                    </div>
+                                    {{ range first 3 $article.Params.tags }}
+                                        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="slider-tag" title="مشاهده همه مقالات با تگ {{ . }}">{{ . }}</a>
+                                    {{ end }}
+                                </div>
+                            {{ end }}
+                            
+                            <div class="slider-card-footer">
+                                <a href="{{ $article.RelPermalink }}" class="slider-read-more-btn">
+                                    مشاهده مطلب ←
+                                </a>
+                                
+                                {{/* Badges */}}
+                                {{ if or $article.Params.readingTime $article.Params.difficulty $article.Params.lab_required $article.Params.post_type_fa }}
+                                    <div class="slider-card-badges">
+                                        {{/* Reading Time */}}
+                                        {{ if $article.Params.readingTime }}
+                                            <span class="slider-badge badge-time" title="مدت زمان مطالعه">
+                                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                                                </svg>
+                                                <span class="badge-text">{{ $article.Params.readingTime }}د</span>
+                                            </span>
+                                        {{ end }}
+                                        
+                                        {{/* Difficulty */}}
+                                        {{ if $article.Params.difficulty }}
+                                            {{ $difficultyText := "" }}
+                                            {{ $difficultyClass := "" }}
+                                            {{ if eq $article.Params.difficulty "beginner" }}
+                                                {{ $difficultyText = "مبتدی" }}
+                                                {{ $difficultyClass = "badge-beginner" }}
+                                            {{ else if eq $article.Params.difficulty "medium" }}
+                                                {{ $difficultyText = "متوسط" }}
+                                                {{ $difficultyClass = "badge-medium" }}
+                                            {{ else if eq $article.Params.difficulty "intermediate" }}
+                                                {{ $difficultyText = "حرفه‌ای" }}
+                                                {{ $difficultyClass = "badge-intermediate" }}
+                                            {{ else if eq $article.Params.difficulty "advanced" }}
+                                                {{ $difficultyText = "تخصصی" }}
+                                                {{ $difficultyClass = "badge-advanced" }}
+                                            {{ end }}
+                                            {{ $difficultyUrl := partial "taxonomy-url.html" (dict "taxonomy" "difficulty" "value" $article.Params.difficulty "context" $article) }}
+                                            <a href="{{ $difficultyUrl }}" class="slider-badge badge-difficulty {{ $difficultyClass }}" title="مشاهده همه مقالات {{ $difficultyText }}">
+                                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                                </svg>
+                                                <span class="badge-text">{{ $difficultyText }}</span>
+                                            </a>
+                                        {{ end }}
+                                        
+                                        {{/* Lab Required */}}
+                                        {{ if $article.Params.lab_required }}
+                                            {{ $labUrl := partial "taxonomy-url.html" (dict "taxonomy" "lab_required" "value" "true" "context" $article) }}
+                                            <a href="{{ $labUrl }}" class="slider-badge badge-lab" title="مشاهده همه مقالات نیازمند تمرین عملی">
+                                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                                                </svg>
+                                                <span class="badge-text">تمرین</span>
+                                            </a>
+                                        {{ end }}
+                                        
+                                        {{/* Post Type */}}
+                                        {{ if $article.Params.post_type_fa }}
+                                            {{ $typeUrl := partial "taxonomy-url.html" (dict "taxonomy" "post_type_fa" "value" $article.Params.post_type_fa "context" $article) }}
+                                            <a href="{{ $typeUrl }}" class="slider-badge badge-type" title="مشاهده همه مقالات {{ $article.Params.post_type_fa }}">
+                                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                                                </svg>
+                                                <span class="badge-text">{{ $article.Params.post_type_fa }}</span>
+                                            </a>
+                                        {{ end }}
+                                    </div>
+                                {{ end }}
+                            </div>
+                        </article>
+                    {{ end }}
+                </div>
+            </div>
+            
+            <button class="slider-nav slider-nav-next" aria-label="مقاله بعدی">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="slider-dots" role="tablist" aria-label="انتخاب مقاله">
+            {{ range $index, $article := $sliderArticles }}
+                <button class="slider-dot{{ if eq $index 0 }} active{{ end }}" 
+                        data-slide="{{ $index }}" 
+                        role="tab"
+                        aria-label="مقاله {{ add $index 1 }}"
+                        aria-selected="{{ cond (eq $index 0) "true" "false" }}"></button>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{/* Structured Data - JSON-LD for related articles */}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "مقالات پیشنهادی",
+    "itemListElement": [
+        {{ range $index, $article := $sliderArticles }}
+        {
+            "@type": "ListItem",
+            "position": {{ add $index 1 }},
+            "item": {
+                "@type": "Article",
+                "name": "{{ $article.Title }}",
+                "url": "{{ $article.Permalink }}",
+                {{ if $article.Params.description }}
+                "description": "{{ $article.Params.description }}",
+                {{ end }}
+                {{ if $article.Date }}
+                "datePublished": "{{ $article.Date.Format "2006-01-02" }}",
+                {{ end }}
+                {{ if $article.Lastmod }}
+                "dateModified": "{{ $article.Lastmod.Format "2006-01-02" }}"
+                {{ end }}
+            }
+        }{{ if ne $index (sub (len $sliderArticles) 1) }},{{ end }}
+        {{ end }}
+    ]
+}
+</script>
+{{ end }}

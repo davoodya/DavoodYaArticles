@@ -1,9 +1,13 @@
+{{ $baseURL := .Site.BaseURL }}
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بارگذاری... | {{ .Site.Title }}</title>
+    <meta name="robots" content="noindex, nofollow">
+    <title>انتقال به مقاله... | {{ .Site.Title }}</title>
+    
+    <!-- Inline Critical CSS -->
     <style>
         * {
             margin: 0;
@@ -13,18 +17,49 @@
         
         body {
             font-family: 'Vazir', 'Shabnam', sans-serif;
-            background: #0a0a0a;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
             color: #00ff41;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             overflow: hidden;
+            position: relative;
+        }
+        
+        /* Animated Background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+                linear-gradient(0deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: grid-move 20s linear infinite;
+            z-index: 0;
+        }
+        
+        @keyframes grid-move {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
         }
         
         .loading-container {
             text-align: center;
-            padding: 2rem;
+            padding: 3rem 2rem;
+            background: rgba(15, 15, 15, 0.95);
+            border-radius: 20px;
+            border: 2px solid rgba(0, 255, 65, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5),
+                        0 0 20px rgba(0, 255, 65, 0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 1;
+            max-width: 500px;
         }
         
         .loading-icon {
@@ -35,24 +70,63 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
             margin: 0 auto 2rem;
-        }
-        
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
-        }
-        
-        p {
-            font-size: 1.1rem;
-            color: #b0b0b0;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
         }
         
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
         
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+            font-weight: 700;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            line-height: 1.6;
+        }
+        
+        .error-state h1 {
+            color: #ff416d;
+            text-shadow: 0 0 20px rgba(255, 65, 108, 0.5);
+        }
+        
+        .error-state .loading-icon {
+            border-color: rgba(255, 65, 108, 0.1);
+            border-top-color: #ff416d;
+            box-shadow: 0 0 20px rgba(255, 65, 108, 0.3);
+        }
+        
+        .back-home-btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, rgba(0, 255, 65, 0.1) 0%, rgba(58, 173, 223, 0.1) 100%);
+            border: 2px solid rgba(0, 255, 65, 0.3);
+            border-radius: 10px;
+            color: #00ff41;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .back-home-btn:hover {
+            background: rgba(0, 255, 65, 0.2);
+            border-color: #00ff41;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 255, 65, 0.3);
+        }
+        
         @media (max-width: 768px) {
+            .loading-container {
+                padding: 2rem 1.5rem;
+                margin: 1rem;
+            }
+            
             h1 {
                 font-size: 1.5rem;
             }
@@ -69,15 +143,67 @@
     </style>
 </head>
 <body>
-    <div class="loading-container">
+    <div class="loading-container" id="loadingContainer">
         <div class="loading-icon"></div>
-        <h1>در حال انتقال...</h1>
-        <p>لطفاً صبر کنید</p>
+        <h1>در حال انتقال به مقاله...</h1>
+        <p>لطفاً یک لحظه صبر کنید</p>
     </div>
     
     <script>
-        // This page will be handled by article-share.js
-        // The JavaScript will detect /s/:slug and redirect to the full article
+        (function() {
+            'use strict';
+            
+            const container = document.getElementById('loadingContainer');
+            
+            // Get short slug from URL path
+            const pathname = window.location.pathname;
+            const pathParts = pathname.split('/').filter(Boolean);
+            const shortSlug = pathParts[pathParts.length - 1];
+            
+            console.log('Short Link Redirect - Slug:', shortSlug);
+            
+            // Function to show error state
+            function showError(message) {
+                container.classList.add('error-state');
+                container.innerHTML = `
+                    <div class="loading-icon"></div>
+                    <h1>⚠️ خطا در بارگذاری</h1>
+                    <p>${message}</p>
+                    <a href="{{ $baseURL }}" class="back-home-btn">بازگشت به صفحه اصلی</a>
+                `;
+            }
+            
+            // Try to get mapping from localStorage
+            try {
+                const mappingsStr = localStorage.getItem('shortlink_mappings');
+                
+                if (!mappingsStr) {
+                    console.warn('No shortlink mappings found in localStorage');
+                    showError('لینک کوتاه در سیستم ثبت نشده است. لطفاً از لینک اصلی استفاده کنید.');
+                    return;
+                }
+                
+                const mappings = JSON.parse(mappingsStr);
+                console.log('Available mappings:', Object.keys(mappings));
+                
+                if (mappings[shortSlug]) {
+                    const targetUrl = mappings[shortSlug];
+                    console.log('Redirecting to:', targetUrl);
+                    
+                    // Add small delay to ensure smooth transition
+                    setTimeout(function() {
+                        // Use href instead of replace to allow back button
+                        window.location.href = targetUrl;
+                    }, 500);
+                } else {
+                    console.error('Short link not found:', shortSlug);
+                    showError(`لینک کوتاه "${shortSlug}" یافت نشد. ممکن است منقضی شده باشد.`);
+                }
+            } catch (error) {
+                console.error('Error reading localStorage:', error);
+                showError('خطا در خواندن اطلاعات. لطفاً cache مرورگر را پاک کنید.');
+            }
+        })();
     </script>
 </body>
 </html>

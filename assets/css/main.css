@@ -4195,6 +4195,109 @@ a.article-tag:active {
     
     .floating-filter-btn {
         bottom: 60px;
+    }
+}
+
+/* ============================= */
+/* Recent Posts Load More Button */
+/* ============================= */
+
+.recent-posts-load-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-top: 1rem;
+    background: rgba(0, 255, 65, 0.05);
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    border-radius: 8px;
+    color: var(--accent-green);
+    font-family: var(--persian-heading);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.recent-posts-load-more::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.1), transparent);
+    transition: right 0.6s ease;
+}
+
+.recent-posts-load-more:hover::before {
+    right: 100%;
+}
+
+.recent-posts-load-more:hover {
+    background: rgba(0, 255, 65, 0.1);
+    border-color: var(--accent-green);
+    box-shadow: 0 4px 12px rgba(0, 255, 65, 0.2),
+                0 0 15px rgba(0, 255, 65, 0.1);
+    transform: translateY(-2px);
+}
+
+.recent-posts-load-more:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 255, 65, 0.2);
+}
+
+.load-more-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.recent-posts-load-more:hover .load-more-icon {
+    transform: translateY(3px);
+}
+
+.load-more-text {
+    font-weight: 600;
+}
+
+.load-more-count {
+    color: var(--secondary-text);
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+/* Animation for new posts */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .recent-posts-load-more {
+        padding: 0.65rem 0.85rem;
+        font-size: 0.9rem;
+    }
+    
+    .load-more-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .load-more-count {
+        font-size: 0.8rem;
         left: 10px;
         padding: 0.7rem 1rem;
         font-size: 0.9rem;

@@ -1,0 +1,62 @@
+[
+  {
+    "title": "راهنمای جامع نصب Kali Linux",
+    "description": "آموزش کامل نصب و راه‌اندازی Kali Linux برای تست نفوذ و امنیت سایبری",
+    "image": "/images/linux/kali-linux-installing-guide.jpg",
+    "url": "/linux/kali-linux-installing-guide/",
+    "readingTime": 12,
+    "difficulty": "beginner",
+    "lab_required": true,
+    "post_type_fa": "آموزشی",
+    "tags": ["linux", "cybersecurity", "pentest"],
+    "categories": ["linux"]
+  },
+  {
+    "title": "60 دستور لینوکس که هکرها باید بدانند",
+    "description": "مجموعه کامل دستورات ضروری لینوکس برای تست نفوذ و امنیت شبکه",
+    "image": "/images/linux/60-commands-hacker-should-know-it.jpg",
+    "url": "/linux/60-commands-hacker-should-know-it/",
+    "readingTime": 25,
+    "difficulty": "intermediate",
+    "lab_required": true,
+    "post_type_fa": "آموزشی",
+    "tags": ["linux", "command_line", "pentest"],
+    "categories": ["linux"]
+  },
+  {
+    "title": "معرفی Burp Suite و قابلیت‌های آن",
+    "description": "ابزار قدرتمند تست نفوذ وب و تحلیل ترافیک HTTP/HTTPS",
+    "image": "/images/tools/burpsuite/burpsuite-intro.jpg",
+    "url": "/tools/burpsuite/burpsuite-intro/",
+    "readingTime": 18,
+    "difficulty": "intermediate",
+    "lab_required": true,
+    "post_type_fa": "معرفی",
+    "tags": ["burpsuite", "web_pentest", "pentest_tools"],
+    "categories": ["tools"]
+  },
+  {
+    "title": "مبانی رمزنگاری و امنیت اطلاعات",
+    "description": "آشنایی با اصول رمزنگاری، الگوریتم‌ها و کاربردهای عملی در امنیت سایبری",
+    "image": "/images/cyber-security/cryptography/cryptography-basics.jpg",
+    "url": "/cyber-security/cryptography/cryptography-basics/",
+    "readingTime": 20,
+    "difficulty": "medium",
+    "lab_required": false,
+    "post_type_fa": "آموزشی",
+    "tags": ["cryptography", "encryption", "cybersecurity"],
+    "categories": ["cyber-security"]
+  },
+  {
+    "title": "مدل‌های شبکه OSI و TCP/IP",
+    "description": "درک عمیق لایه‌های شبکه و نحوه ارتباط پروتکل‌ها",
+    "image": "/images/network/network-models-osi-tcpip.jpg",
+    "url": "/network/network-models-osi-and-tcpip/",
+    "readingTime": 15,
+    "difficulty": "beginner",
+    "lab_required": false,
+    "post_type_fa": "آموزشی",
+    "tags": ["network", "osi", "tcpip"],
+    "categories": ["network"]
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "name": "davoodya-hugo-site",
+  "version": "1.0.0",
+  "description": "Davood Yahya - Cyber Security Technical Articles",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hugo server -D",
+    "build": "hugo --gc --minify",
+    "clean": "rm -rf public resources"
+  },
+  "keywords": [
+    "hugo",
+    "static-site",
+    "cybersecurity"
+  ],
+  "author": "Davood Yahya",
+  "license": "MIT",
+  "dependencies": {
+    "@netlify/blobs": "^7.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
