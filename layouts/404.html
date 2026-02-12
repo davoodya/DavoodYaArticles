@@ -16,7 +16,7 @@
                     </p>
                 </div>
                 
-                <!-- Search Box -->
+                <!-- Search Box with Live Results -->
                 <div class="error-search-box">
                     <h3 class="search-title">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,8 @@
                                id="error404Search" 
                                class="search-input-404" 
                                placeholder="دنبال چه مطلبی می‌گردید؟"
-                               aria-label="جستجو در سایت">
+                               aria-label="جستجو در سایت"
+                               autocomplete="off">
                         <button class="search-btn-404" onclick="performSearch404()">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
@@ -37,6 +38,9 @@
                             جستجو
                         </button>
                     </div>
+                    
+                    <!-- Live Search Results -->
+                    <div id="error404SearchResults" class="error404-search-results" style="display: none;"></div>
                 </div>
                 
                 <!-- Action Buttons -->
@@ -202,30 +206,173 @@
     }
     
     // ===========================
-    // Search Functionality
+    // Search Functionality (AJAX)
     // ===========================
     
+    // Variables for 404 search
+    let search404Data = [];
+    let search404DataLoaded = false;
+    let search404Timeout;
+    
+    // Load search data
+    async function loadSearch404Data() {
+        if (search404DataLoaded) return;
+        
+        try {
+            const baseURL = document.querySelector('meta[name="base-url"]')?.content || '';
+            const indexURL = baseURL ? `${baseURL}index.json` : '/index.json';
+            
+            const response = await fetch(indexURL);
+            search404Data = await response.json();
+            search404DataLoaded = true;
+            console.log('404 Search data loaded:', search404Data.length, 'articles');
+        } catch (error) {
+            console.error('Error loading 404 search data:', error);
+        }
+    }
+    
+    // Search articles for 404 page
+    function search404Articles(query) {
+        const resultsEl = document.getElementById('error404SearchResults');
+        
+        if (!resultsEl) return;
+        
+        // Hide results if query is empty or too short
+        if (!query || query.length < 2) {
+            resultsEl.style.display = 'none';
+            resultsEl.innerHTML = '';
+            return;
+        }
+        
+        const searchTerm = query.toLowerCase().trim();
+        
+        // Search in title and tags
+        const results = search404Data.filter(item => {
+            const titleMatch = item.title.toLowerCase().includes(searchTerm);
+            const tagsMatch = item.tags && item.tags.some(tag => 
+                tag.toLowerCase().includes(searchTerm)
+            );
+            return titleMatch || tagsMatch;
+        });
+        
+        display404SearchResults(results, resultsEl);
+    }
+    
+    // Display search results for 404 page
+    function display404SearchResults(results, resultsEl) {
+        if (results.length === 0) {
+            resultsEl.style.display = 'block';
+            resultsEl.innerHTML = '<p class="error404-no-results">😔 نتیجه‌ای یافت نشد</p>';
+            return;
+        }
+        
+        const categoryMap = {
+            'cyber-security': 'امنیت سایبری',
+            'python': 'پایتون',
+            'seo': 'سئو',
+            'tools': 'ابزارها',
+            'linux': 'لینوکس',
+            'network': 'شبکه'
+        };
+        
+        // Limit to top 6 results
+        const limitedResults = results.slice(0, 6);
+        
+        let html = '<div class="error404-results-count">🎯 ' + results.length + ' نتیجه یافت شد</div>';
+        html += '<div class="error404-results-list">';
+        
+        limitedResults.forEach(item => {
+            const categoryName = categoryMap[item.category] || item.category;
+            
+            html += `
+                <a href="${item.permalink}" class="error404-result-item">
+                    <div class="error404-result-header">
+                        <span class="error404-result-category">${categoryName}</span>
+                        ${item.date ? `<span class="error404-result-date">${item.date}</span>` : ''}
+                    </div>
+                    <h4 class="error404-result-title">${item.title}</h4>
+                    ${item.summary ? `<p class="error404-result-summary">${item.summary}</p>` : ''}
+                </a>
+            `;
+        });
+        
+        html += '</div>';
+        
+        if (results.length > 6) {
+            html += `<p class="error404-more-results">و ${results.length - 6} نتیجه دیگر...</p>`;
+        }
+        
+        resultsEl.innerHTML = html;
+        resultsEl.style.display = 'block';
+    }
+    
+    // Search button click handler
     window.performSearch404 = function() {
         const searchInput = document.getElementById('error404Search');
         const query = searchInput.value.trim();
         
-        if (query) {
-            // Redirect to main search with query
-            window.location.href = '{{ "/" | absURL }}?search=' + encodeURIComponent(query);
+        if (query && query.length >= 2) {
+            // If data loaded, show results, otherwise redirect
+            if (search404DataLoaded) {
+                search404Articles(query);
+            } else {
+                // Fallback to redirect if data not loaded yet
+                window.location.href = '{{ "/" | absURL }}?search=' + encodeURIComponent(query);
+            }
         } else {
             searchInput.focus();
         }
     };
     
-    // Enter key support
+    // Initialize 404 search
     const searchInput = document.getElementById('error404Search');
+    const searchResults = document.getElementById('error404SearchResults');
+    
     if (searchInput) {
+        // Load data on first focus
+        searchInput.addEventListener('focus', function() {
+            loadSearch404Data();
+        }, { once: true });
+        
+        // Live search on input
+        searchInput.addEventListener('input', function() {
+            clearTimeout(search404Timeout);
+            
+            const query = this.value.trim();
+            
+            if (!query || query.length < 2) {
+                if (searchResults) {
+                    searchResults.style.display = 'none';
+                    searchResults.innerHTML = '';
+                }
+                return;
+            }
+            
+            // Debounce search
+            search404Timeout = setTimeout(() => {
+                if (search404DataLoaded) {
+                    search404Articles(query);
+                }
+            }, 300);
+        });
+        
+        // Enter key support
         searchInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
+                e.preventDefault();
                 performSearch404();
             }
         });
     }
+    
+    // Close results when clicking outside
+    document.addEventListener('click', function(e) {
+        if (searchInput && searchResults) {
+            if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                searchResults.style.display = 'none';
+            }
+        }
+    });
     
 })();
 </script>

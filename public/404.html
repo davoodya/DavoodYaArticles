@@ -74,7 +74,7 @@
     
     
     
-    <link rel="stylesheet" href="/css/404-page.ee32661a96fa95eacdc607c4f95e5cb16872dcd791f6e6109ffc791aa0f57c7b.css" integrity="sha256-7jJmGpb6lerNxgfE&#43;V5csWhy3NeR9uYQn/x5GqD1fHs=">
+    <link rel="stylesheet" href="/css/404-page.1748d931535ac396207ef09c39a5e345e41fc47c24a9003add9d33831bd36aae.css" integrity="sha256-F0jZMVNaw5YgfvCcOaXjReQfxHwkqQA63Z0zgxvTaq4=">
     
     
     
@@ -585,7 +585,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                id="error404Search" 
                                class="search-input-404" 
                                placeholder="دنبال چه مطلبی می‌گردید؟"
-                               aria-label="جستجو در سایت">
+                               aria-label="جستجو در سایت"
+                               autocomplete="off">
                         <button class="search-btn-404" onclick="performSearch404()">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
@@ -593,6 +594,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             جستجو
                         </button>
                     </div>
+                    
+                    
+                    <div id="error404SearchResults" class="error404-search-results" style="display: none;"></div>
                 </div>
                 
                 
@@ -3668,13 +3672,116 @@ function loadMoreModalRecentPosts() {
     
     
     
+    
+    let search404Data = [];
+    let search404DataLoaded = false;
+    let search404Timeout;
+    
+    
+    async function loadSearch404Data() {
+        if (search404DataLoaded) return;
+        
+        try {
+            const baseURL = document.querySelector('meta[name="base-url"]')?.content || '';
+            const indexURL = baseURL ? `${baseURL}index.json` : '/index.json';
+            
+            const response = await fetch(indexURL);
+            search404Data = await response.json();
+            search404DataLoaded = true;
+            console.log('404 Search data loaded:', search404Data.length, 'articles');
+        } catch (error) {
+            console.error('Error loading 404 search data:', error);
+        }
+    }
+    
+    
+    function search404Articles(query) {
+        const resultsEl = document.getElementById('error404SearchResults');
+        
+        if (!resultsEl) return;
+        
+        
+        if (!query || query.length < 2) {
+            resultsEl.style.display = 'none';
+            resultsEl.innerHTML = '';
+            return;
+        }
+        
+        const searchTerm = query.toLowerCase().trim();
+        
+        
+        const results = search404Data.filter(item => {
+            const titleMatch = item.title.toLowerCase().includes(searchTerm);
+            const tagsMatch = item.tags && item.tags.some(tag => 
+                tag.toLowerCase().includes(searchTerm)
+            );
+            return titleMatch || tagsMatch;
+        });
+        
+        display404SearchResults(results, resultsEl);
+    }
+    
+    
+    function display404SearchResults(results, resultsEl) {
+        if (results.length === 0) {
+            resultsEl.style.display = 'block';
+            resultsEl.innerHTML = '<p class="error404-no-results">😔 نتیجه‌ای یافت نشد</p>';
+            return;
+        }
+        
+        const categoryMap = {
+            'cyber-security': 'امنیت سایبری',
+            'python': 'پایتون',
+            'seo': 'سئو',
+            'tools': 'ابزارها',
+            'linux': 'لینوکس',
+            'network': 'شبکه'
+        };
+        
+        
+        const limitedResults = results.slice(0, 6);
+        
+        let html = '<div class="error404-results-count">🎯 ' + results.length + ' نتیجه یافت شد</div>';
+        html += '<div class="error404-results-list">';
+        
+        limitedResults.forEach(item => {
+            const categoryName = categoryMap[item.category] || item.category;
+            
+            html += `
+                <a href="${item.permalink}" class="error404-result-item">
+                    <div class="error404-result-header">
+                        <span class="error404-result-category">${categoryName}</span>
+                        ${item.date ? `<span class="error404-result-date">${item.date}</span>` : ''}
+                    </div>
+                    <h4 class="error404-result-title">${item.title}</h4>
+                    ${item.summary ? `<p class="error404-result-summary">${item.summary}</p>` : ''}
+                </a>
+            `;
+        });
+        
+        html += '</div>';
+        
+        if (results.length > 6) {
+            html += `<p class="error404-more-results">و ${results.length - 6} نتیجه دیگر...</p>`;
+        }
+        
+        resultsEl.innerHTML = html;
+        resultsEl.style.display = 'block';
+    }
+    
+    
     window.performSearch404 = function() {
         const searchInput = document.getElementById('error404Search');
         const query = searchInput.value.trim();
         
-        if (query) {
+        if (query && query.length >= 2) {
             
-            window.location.href = 'http:\/\/localhost:1313\/?search=' + encodeURIComponent(query);
+            if (search404DataLoaded) {
+                search404Articles(query);
+            } else {
+                
+                window.location.href = 'http:\/\/localhost:1313\/?search=' + encodeURIComponent(query);
+            }
         } else {
             searchInput.focus();
         }
@@ -3682,13 +3789,53 @@ function loadMoreModalRecentPosts() {
     
     
     const searchInput = document.getElementById('error404Search');
+    const searchResults = document.getElementById('error404SearchResults');
+    
     if (searchInput) {
+        
+        searchInput.addEventListener('focus', function() {
+            loadSearch404Data();
+        }, { once: true });
+        
+        
+        searchInput.addEventListener('input', function() {
+            clearTimeout(search404Timeout);
+            
+            const query = this.value.trim();
+            
+            if (!query || query.length < 2) {
+                if (searchResults) {
+                    searchResults.style.display = 'none';
+                    searchResults.innerHTML = '';
+                }
+                return;
+            }
+            
+            
+            search404Timeout = setTimeout(() => {
+                if (search404DataLoaded) {
+                    search404Articles(query);
+                }
+            }, 300);
+        });
+        
+        
         searchInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
+                e.preventDefault();
                 performSearch404();
             }
         });
     }
+    
+    
+    document.addEventListener('click', function(e) {
+        if (searchInput && searchResults) {
+            if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                searchResults.style.display = 'none';
+            }
+        }
+    });
     
 })();
 </script>
@@ -3831,7 +3978,6 @@ function loadMoreModalRecentPosts() {
 
 
 <script src="/assets/js/comments.js" defer></script>
-
 
 
 
