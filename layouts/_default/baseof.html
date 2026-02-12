@@ -84,6 +84,12 @@
     {{ $comments := resources.Get "css/comments.css" | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $comments.RelPermalink }}" integrity="{{ $comments.Data.Integrity }}">
     
+    <!-- 404 Page Styles - Only load on 404 -->
+    {{ if eq .Kind "404" }}
+    {{ $error404 := resources.Get "css/404-page.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $error404.RelPermalink }}" integrity="{{ $error404.Data.Integrity }}">
+    {{ end }}
+    
     <!-- Font Fixes - Load Last to Override -->
     {{ $fontFixes := resources.Get "css/font-fixes.css" | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $fontFixes.RelPermalink }}" integrity="{{ $fontFixes.Data.Integrity }}">
