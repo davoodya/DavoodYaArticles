@@ -2,8 +2,8 @@
  * ===========================
  * Comments System
  * ===========================
- * Production-ready comment system for Hugo static site
- * Supports API-based backend for persistence
+ * سیستم کامنت برای Hugo Static Site
+ * با استفاده از PHP Backend
  */
 
 (function() {
@@ -14,7 +14,7 @@
     // ===========================
     
     const CONFIG = {
-        API_ENDPOINT: '/api/comments',
+        API_ENDPOINT: '/api/comments.php',
         MAX_RETRIES: 3,
         RETRY_DELAY: 1000,
         RATE_LIMIT_WINDOW: 60000, // 1 minute
@@ -99,9 +99,7 @@
         const options = { 
             year: 'numeric', 
             month: 'long', 
-            day: 'numeric',
-            calendar: 'persian',
-            numberingSystem: 'arab'
+            day: 'numeric'
         };
         
         try {
@@ -193,11 +191,13 @@
                 },
             });
             
+            const data = await response.json();
+            
             if (!response.ok) {
-                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                throw new Error(data.error || `HTTP ${response.status}`);
             }
             
-            return await response.json();
+            return data;
         } catch (error) {
             if (retries > 0) {
                 await new Promise(resolve => setTimeout(resolve, CONFIG.RETRY_DELAY));
@@ -244,7 +244,7 @@
         
         const initials = getInitials(comment.name);
         const formattedDate = formatDate(comment.created_at);
-        const sanitizedComment = sanitizeHTML(comment.comment_text);
+        const sanitizedComment = sanitizeHTML(comment.comment);
         
         let authorHTML;
         if (comment.website && validateURL(comment.website)) {
@@ -365,7 +365,7 @@
             name: formData.get('name')?.trim(),
             email: formData.get('email')?.trim(),
             website: formData.get('website')?.trim(),
-            comment_text: formData.get('comment')?.trim(),
+            comment: formData.get('comment')?.trim(),
         };
         
         // Honeypot check
@@ -415,7 +415,7 @@
         } catch (error) {
             console.error('Comment submission error:', error);
             showFormMessage(
-                'خطا در ارسال دیدگاه. لطفاً دوباره تلاش کنید.',
+                error.message || 'خطا در ارسال دیدگاه. لطفاً دوباره تلاش کنید.',
                 'error'
             );
         } finally {
