@@ -1,15 +1,27 @@
 /**
  * Article Slider - Previous & Next Articles
- * Enhanced version with loop navigation, dots navigation, and middle start
- * Version: 2.1.0 - Fixed card display issue
+ * Version: 3.0.0 - Complete Rewrite with Visible Cards Fix
+ * Using simple transform-based sliding with guaranteed visibility
  */
 
 (function() {
     'use strict';
     
-    // Check if slider exists on the page
+    // Configuration
+    const CONFIG = {
+        CARDS_PER_VIEW_DESKTOP: 2,
+        CARDS_PER_VIEW_MOBILE: 1,
+        BREAKPOINT: 1024,
+        GAP: 24, // pixels
+        ANIMATION_DURATION: 500 // ms
+    };
+    
+    // Check if slider exists
     const slider = document.querySelector('.article-slider');
-    if (!slider) return;
+    if (!slider) {
+        console.warn('Article slider not found on page');
+        return;
+    }
     
     const track = slider.querySelector('.slider-track');
     const cards = slider.querySelectorAll('.slider-card');
@@ -17,248 +29,241 @@
     const nextBtn = slider.querySelector('.slider-nav-next');
     const dots = slider.querySelectorAll('.slider-dot');
     
-    // Exit if not enough cards
-    if (!track || cards.length < 2) return;
+    // Validation
+    if (!track || cards.length < 2) {
+        console.warn('Not enough slider cards or track missing');
+        return;
+    }
+    
+    console.log('🚀 Article Slider V3.0 Initializing...');
+    console.log('📊 Total cards:', cards.length);
     
     // State
-    let currentPage = 0;
-    let cardsPerView = 2;
-    let totalPages = Math.ceil(cards.length / cardsPerView);
-    let isDragging = false;
-    let startPos = 0;
-    let currentTranslate = 0;
-    let prevTranslate = 0;
-    let animationID = 0;
+    let state = {
+        currentPage: 0,
+        cardsPerView: CONFIG.CARDS_PER_VIEW_DESKTOP,
+        totalPages: 0,
+        isAnimating: false,
+        isDragging: false,
+        startX: 0,
+        currentX: 0,
+        translateX: 0
+    };
     
-    console.log('Initial state:', {
-        totalCards: cards.length,
-        cardsPerView: cardsPerView,
-        totalPages: totalPages
-    });
-    
-    // Calculate cards per view based on viewport width
+    /**
+     * Calculate cards per view based on window width
+     */
     function updateCardsPerView() {
         const width = window.innerWidth;
-        const oldCardsPerView = cardsPerView;
-        cardsPerView = width <= 1024 ? 1 : 2;
+        state.cardsPerView = width <= CONFIG.BREAKPOINT ? 
+            CONFIG.CARDS_PER_VIEW_MOBILE : 
+            CONFIG.CARDS_PER_VIEW_DESKTOP;
         
-        // Recalculate total pages if cards per view changed
-        if (oldCardsPerView !== cardsPerView) {
-            totalPages = Math.ceil(cards.length / cardsPerView);
-            // Adjust current page if needed
-            if (currentPage >= totalPages) {
-                currentPage = totalPages - 1;
-            }
-            
-            console.log('Cards per view updated:', {
-                cardsPerView: cardsPerView,
-                totalPages: totalPages,
-                currentPage: currentPage
-            });
-        }
+        state.totalPages = Math.ceil(cards.length / state.cardsPerView);
+        
+        console.log('📱 Screen width:', width);
+        console.log('🎴 Cards per view:', state.cardsPerView);
+        console.log('📄 Total pages:', state.totalPages);
     }
     
-    // Get card width including gap
-    function getCardWidthWithGap() {
+    /**
+     * Get card width including gap
+     */
+    function getCardWidth() {
         if (cards.length === 0) return 0;
         
-        const cardWidth = cards[0].offsetWidth;
-        const gap = 24; // 1.5rem = 24px
+        // Get computed width of first card
+        const card = cards[0];
+        const rect = card.getBoundingClientRect();
+        const width = rect.width;
         
-        return cardWidth + gap;
+        console.log('📏 Card width:', width, 'Gap:', CONFIG.GAP);
+        
+        return width + CONFIG.GAP;
     }
     
-    // Update slider position based on current page
-    function updateSliderPosition(animated = true) {
-        const cardWidthWithGap = getCardWidthWithGap();
+    /**
+     * Calculate translate value for current page
+     */
+    function calculateTranslate() {
+        const cardWidth = getCardWidth();
+        const cardsToSkip = state.currentPage * state.cardsPerView;
+        const translate = -(cardsToSkip * cardWidth);
         
-        // Calculate offset: number of cards to skip * card width
-        const cardsToSkip = currentPage * cardsPerView;
-        const offset = -(cardsToSkip * cardWidthWithGap);
-        
-        console.log('Updating position:', {
-            currentPage: currentPage,
-            cardsPerView: cardsPerView,
+        console.log('🔢 Calculate:', {
+            page: state.currentPage,
+            cardsPerView: state.cardsPerView,
             cardsToSkip: cardsToSkip,
-            cardWidthWithGap: cardWidthWithGap,
-            offset: offset
+            cardWidth: cardWidth,
+            translate: translate
         });
         
+        return translate;
+    }
+    
+    /**
+     * Update slider position
+     */
+    function updatePosition(animated = true) {
+        if (state.isAnimating) return;
+        
+        const translate = calculateTranslate();
+        state.translateX = translate;
+        
+        // Apply transform
         if (animated) {
-            track.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            track.style.transition = `transform ${CONFIG.ANIMATION_DURATION}ms cubic-bezier(0.4, 0, 0.2, 1)`;
+            state.isAnimating = true;
+            
+            setTimeout(() => {
+                state.isAnimating = false;
+            }, CONFIG.ANIMATION_DURATION);
         } else {
             track.style.transition = 'none';
         }
         
-        track.style.transform = `translateX(${offset}px)`;
-        currentTranslate = offset;
-        prevTranslate = offset;
+        track.style.transform = `translate3d(${translate}px, 0, 0)`;
         
-        updateNavButtons();
+        console.log('✅ Position updated:', {
+            page: state.currentPage,
+            translate: translate,
+            animated: animated
+        });
+        
         updateDots();
+        updateButtons();
     }
     
-    // Update navigation button states (no disable for loop)
-    function updateNavButtons() {
-        // In loop mode, buttons are always enabled
-        if (prevBtn) {
-            prevBtn.disabled = false;
-            prevBtn.style.opacity = '1';
-            prevBtn.style.cursor = 'pointer';
-        }
-        
-        if (nextBtn) {
-            nextBtn.disabled = false;
-            nextBtn.style.opacity = '1';
-            nextBtn.style.cursor = 'pointer';
-        }
-    }
-    
-    // Update dots
+    /**
+     * Update dots
+     */
     function updateDots() {
         dots.forEach((dot, index) => {
-            const isActive = index === currentPage;
+            const isActive = index === state.currentPage;
             dot.classList.toggle('active', isActive);
             dot.setAttribute('aria-selected', isActive);
         });
-        
-        console.log('Dots updated:', {
-            totalDots: dots.length,
-            activeDot: currentPage
-        });
     }
     
-    // Go to specific page
+    /**
+     * Update buttons (always enabled for loop)
+     */
+    function updateButtons() {
+        if (prevBtn) {
+            prevBtn.disabled = false;
+            prevBtn.style.opacity = '1';
+        }
+        if (nextBtn) {
+            nextBtn.disabled = false;
+            nextBtn.style.opacity = '1';
+        }
+    }
+    
+    /**
+     * Go to specific page
+     */
     function goToPage(pageIndex, animated = true) {
-        // Loop around if out of bounds
+        // Loop logic
         if (pageIndex < 0) {
-            currentPage = totalPages - 1;
-        } else if (pageIndex >= totalPages) {
-            currentPage = 0;
+            state.currentPage = state.totalPages - 1;
+        } else if (pageIndex >= state.totalPages) {
+            state.currentPage = 0;
         } else {
-            currentPage = pageIndex;
+            state.currentPage = pageIndex;
         }
         
-        console.log('Going to page:', {
-            requestedPage: pageIndex,
-            actualPage: currentPage,
-            totalPages: totalPages
-        });
-        
-        updateSliderPosition(animated);
+        console.log('📄 Going to page:', state.currentPage);
+        updatePosition(animated);
     }
     
-    // Next page (with loop)
+    /**
+     * Next page
+     */
     function nextPage() {
-        console.log('Next page clicked');
-        goToPage(currentPage + 1);
+        console.log('➡️ Next page');
+        goToPage(state.currentPage + 1);
     }
     
-    // Previous page (with loop)
+    /**
+     * Previous page
+     */
     function prevPage() {
-        console.log('Previous page clicked');
-        goToPage(currentPage - 1);
+        console.log('⬅️ Previous page');
+        goToPage(state.currentPage - 1);
     }
     
-    // Touch/Mouse handlers
-    function getPositionX(event) {
-        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
-    }
-    
-    function touchStart(event) {
-        isDragging = true;
-        startPos = getPositionX(event);
-        animationID = requestAnimationFrame(animation);
-        
-        const trackContainer = slider.querySelector('.slider-track-container');
-        if (trackContainer) {
-            trackContainer.style.cursor = 'grabbing';
-        }
-        track.style.transition = 'none';
-    }
-    
-    function touchMove(event) {
-        if (isDragging) {
-            const currentPosition = getPositionX(event);
-            currentTranslate = prevTranslate + currentPosition - startPos;
-        }
-    }
-    
-    function touchEnd() {
-        isDragging = false;
-        cancelAnimationFrame(animationID);
-        
-        const movedBy = currentTranslate - prevTranslate;
-        
-        // Swipe threshold: 50px
-        if (movedBy < -50) {
-            nextPage();
-        } else if (movedBy > 50) {
-            prevPage();
+    /**
+     * Start from middle page
+     */
+    function startFromMiddle() {
+        if (state.totalPages > 1) {
+            const middlePage = Math.floor(state.totalPages / 2);
+            state.currentPage = middlePage;
+            console.log('🎯 Starting from middle page:', middlePage);
         } else {
-            updateSliderPosition();
+            state.currentPage = 0;
         }
+        updatePosition(false);
+    }
+    
+    /**
+     * Touch/Drag handlers
+     */
+    function handleTouchStart(e) {
+        state.isDragging = true;
+        state.startX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+        track.style.transition = 'none';
+        track.style.cursor = 'grabbing';
+    }
+    
+    function handleTouchMove(e) {
+        if (!state.isDragging) return;
         
-        const trackContainer = slider.querySelector('.slider-track-container');
-        if (trackContainer) {
-            trackContainer.style.cursor = 'grab';
-        }
-        track.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        state.currentX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+        const diff = state.currentX - state.startX;
+        const newTranslate = state.translateX + diff;
+        
+        track.style.transform = `translate3d(${newTranslate}px, 0, 0)`;
     }
     
-    function animation() {
-        if (isDragging) {
-            track.style.transform = `translateX(${currentTranslate}px)`;
-            requestAnimationFrame(animation);
-        }
-    }
-    
-    // Keyboard navigation
-    function handleKeyboard(event) {
-        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-            const direction = document.dir === 'rtl' ? -1 : 1;
-            
-            if (event.key === 'ArrowLeft') {
-                direction === 1 ? prevPage() : nextPage();
+    function handleTouchEnd() {
+        if (!state.isDragging) return;
+        
+        state.isDragging = false;
+        track.style.cursor = 'grab';
+        
+        const diff = state.currentX - state.startX;
+        const threshold = 50;
+        
+        if (Math.abs(diff) > threshold) {
+            if (diff > 0) {
+                prevPage();
             } else {
-                direction === 1 ? nextPage() : prevPage();
+                nextPage();
             }
-            
-            event.preventDefault();
+        } else {
+            updatePosition(true);
         }
     }
     
-    // Initialize touch events
-    function initTouchEvents() {
-        // Touch events on track container
-        const trackContainer = slider.querySelector('.slider-track-container');
-        
-        if (trackContainer) {
-            // Touch events
-            trackContainer.addEventListener('touchstart', touchStart, { passive: true });
-            trackContainer.addEventListener('touchmove', touchMove, { passive: true });
-            trackContainer.addEventListener('touchend', touchEnd);
-            
-            // Mouse events
-            trackContainer.addEventListener('mousedown', touchStart);
-            trackContainer.addEventListener('mousemove', touchMove);
-            trackContainer.addEventListener('mouseup', touchEnd);
-            trackContainer.addEventListener('mouseleave', () => {
-                if (isDragging) touchEnd();
-            });
+    /**
+     * Keyboard navigation
+     */
+    function handleKeyboard(e) {
+        if (e.key === 'ArrowLeft') {
+            prevPage();
+            e.preventDefault();
+        } else if (e.key === 'ArrowRight') {
+            nextPage();
+            e.preventDefault();
         }
-        
-        // Prevent image dragging
-        cards.forEach(card => {
-            const images = card.querySelectorAll('img');
-            images.forEach(img => {
-                img.addEventListener('dragstart', (e) => e.preventDefault());
-            });
-        });
     }
     
-    // Initialize button events
-    function initButtonEvents() {
+    /**
+     * Initialize events
+     */
+    function initEvents() {
+        // Button clicks
         if (prevBtn) {
             prevBtn.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -273,158 +278,139 @@
             });
         }
         
+        // Dot clicks
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
-                console.log('Dot clicked:', index);
+                console.log('⭕ Dot clicked:', index);
                 goToPage(index);
             });
-            dot.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    goToPage(index);
-                    e.preventDefault();
-                }
+        });
+        
+        // Touch/Mouse events
+        const container = slider.querySelector('.slider-track-container');
+        if (container) {
+            container.addEventListener('touchstart', handleTouchStart, { passive: true });
+            container.addEventListener('touchmove', handleTouchMove, { passive: true });
+            container.addEventListener('touchend', handleTouchEnd);
+            
+            container.addEventListener('mousedown', handleTouchStart);
+            container.addEventListener('mousemove', handleTouchMove);
+            container.addEventListener('mouseup', handleTouchEnd);
+            container.addEventListener('mouseleave', handleTouchEnd);
+            
+            container.style.cursor = 'grab';
+        }
+        
+        // Keyboard
+        slider.addEventListener('keydown', handleKeyboard);
+        slider.setAttribute('tabindex', '0');
+        
+        // Prevent image drag
+        cards.forEach(card => {
+            const images = card.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('dragstart', (e) => e.preventDefault());
             });
+        });
+        
+        // Window resize
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                console.log('📐 Window resized');
+                updateCardsPerView();
+                updatePosition(false);
+            }, 250);
         });
     }
     
-    // Initialize keyboard navigation
-    function initKeyboardNav() {
-        slider.addEventListener('keydown', handleKeyboard);
-        
-        // Focus management
-        slider.setAttribute('tabindex', '0');
-    }
-    
-    // Handle window resize
-    let resizeTimer;
-    function handleResize() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            console.log('Window resized');
-            updateCardsPerView();
-            updateSliderPosition(false);
-        }, 250);
-    }
-    
-    // Start from middle page
-    function startFromMiddle() {
-        if (totalPages > 1) {
-            // Calculate middle page (rounded down)
-            const middlePage = Math.floor(totalPages / 2);
-            currentPage = middlePage;
+    /**
+     * Force card visibility
+     */
+    function forceCardVisibility() {
+        cards.forEach((card, index) => {
+            // Remove any display:none
+            card.style.display = 'flex';
+            card.style.visibility = 'visible';
+            card.style.opacity = '1';
             
-            console.log('Starting from middle:', {
-                totalPages: totalPages,
-                middlePage: middlePage
-            });
+            // Ensure proper flex properties
+            if (window.innerWidth > CONFIG.BREAKPOINT) {
+                card.style.flex = '0 0 calc(50% - 12px)';
+                card.style.minWidth = 'calc(50% - 12px)';
+                card.style.maxWidth = 'calc(50% - 12px)';
+            } else {
+                card.style.flex = '0 0 100%';
+                card.style.minWidth = '100%';
+                card.style.maxWidth = '100%';
+            }
             
-            updateSliderPosition(false);
-        } else {
-            // If only 1 page, start from 0
-            currentPage = 0;
-            updateSliderPosition(false);
-        }
+            console.log(`🎴 Card ${index + 1} forced visible`);
+        });
     }
     
-    // Initialize slider
+    /**
+     * Initialize slider
+     */
     function init() {
-        console.log('=== Article Slider Initializing ===');
-        console.log('Total cards found:', cards.length);
+        console.log('🔧 Initializing Article Slider V3.0...');
         
-        // Set initial cards per view
+        // Calculate initial state
         updateCardsPerView();
         
-        // Calculate and log initial state
-        console.log('Initial calculation:', {
-            totalCards: cards.length,
-            cardsPerView: cardsPerView,
-            totalPages: totalPages,
-            cardWidth: cards[0]?.offsetWidth,
-            gap: 24
-        });
+        // Force all cards to be visible
+        forceCardVisibility();
         
         // Start from middle
         startFromMiddle();
         
         // Initialize events
-        initTouchEvents();
-        initButtonEvents();
-        initKeyboardNav();
+        initEvents();
         
-        // Add resize listener
-        window.addEventListener('resize', handleResize);
+        // Mark as loaded
+        slider.classList.add('slider-loaded');
         
-        // Set cursor style
-        const trackContainer = slider.querySelector('.slider-track-container');
-        if (trackContainer) {
-            trackContainer.style.cursor = 'grab';
-        }
-        
-        // Add loaded class for animation
-        setTimeout(() => {
-            slider.classList.add('slider-loaded');
-        }, 100);
-        
-        console.log('=== Article Slider Initialized ===');
-        console.log('Starting page:', currentPage);
-        console.log('Total pages:', totalPages);
+        console.log('✅ Article Slider initialized successfully!');
+        console.log('📊 State:', state);
     }
     
-    // Auto-play (optional - disabled by default)
-    let autoplayInterval;
-    function startAutoplay(interval = 5000) {
-        stopAutoplay();
-        autoplayInterval = setInterval(() => {
-            nextPage();
-        }, interval);
-    }
-    
-    function stopAutoplay() {
-        if (autoplayInterval) {
-            clearInterval(autoplayInterval);
-            autoplayInterval = null;
-        }
-    }
-    
-    // Pause autoplay on interaction
-    function pauseOnInteraction() {
-        stopAutoplay();
-    }
-    
-    slider.addEventListener('mouseenter', pauseOnInteraction);
-    slider.addEventListener('touchstart', pauseOnInteraction, { passive: true });
-    
-    // Initialize on DOM ready
+    // Start initialization
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
     
-    // Cleanup on page unload
-    window.addEventListener('beforeunload', () => {
-        stopAutoplay();
-        window.removeEventListener('resize', handleResize);
-    });
-    
-    // Expose public methods for debugging (optional)
+    // Expose API for debugging
     window.articleSlider = {
         goToPage: goToPage,
         nextPage: nextPage,
         prevPage: prevPage,
-        getCurrentPage: () => currentPage,
-        getTotalPages: () => totalPages,
-        getCardsPerView: () => cardsPerView,
-        getTotalCards: () => cards.length,
+        getState: () => ({ ...state }),
+        forceVisibility: forceCardVisibility,
         debug: () => {
-            console.log('=== Debug Info ===');
-            console.log('Current page:', currentPage);
-            console.log('Total pages:', totalPages);
-            console.log('Cards per view:', cardsPerView);
+            console.log('🐛 === Debug Info ===');
+            console.log('Current page:', state.currentPage);
+            console.log('Total pages:', state.totalPages);
+            console.log('Cards per view:', state.cardsPerView);
             console.log('Total cards:', cards.length);
-            console.log('Card width:', cards[0]?.offsetWidth);
-            console.log('Current translate:', currentTranslate);
+            console.log('Translate X:', state.translateX);
             console.log('Track transform:', track.style.transform);
+            console.log('Track styles:', {
+                display: track.style.display,
+                visibility: track.style.visibility,
+                opacity: track.style.opacity
+            });
+            cards.forEach((card, i) => {
+                const rect = card.getBoundingClientRect();
+                console.log(`Card ${i + 1}:`, {
+                    visible: rect.width > 0 && rect.height > 0,
+                    rect: rect,
+                    display: card.style.display,
+                    visibility: card.style.visibility
+                });
+            });
         }
     };
     

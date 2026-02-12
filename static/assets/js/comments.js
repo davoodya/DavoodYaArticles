@@ -14,7 +14,8 @@
     // ===========================
     
     const CONFIG = {
-        API_ENDPOINT: '/api/comments.php',
+        // استفاده از PHP Server روی پورت 8080
+        API_ENDPOINT: 'http://localhost:8080/api/comments.php',
         MAX_RETRIES: 3,
         RETRY_DELAY: 1000,
         RATE_LIMIT_WINDOW: 60000, // 1 minute

@@ -1,6 +1,54 @@
-{{ define "main" }}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - صفحه یافت نشد | {{ .Site.Title }}</title>
+    
+    <meta name="description" content="صفحه مورد نظر یافت نشد">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Fonts -->
+    {{ $fonts := resources.Get "css/fonts.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $fonts.RelPermalink }}" integrity="{{ $fonts.Data.Integrity }}">
+    
+    <!-- Header & Footer Styles -->
+    {{ $headerFooter := resources.Get "css/header-footer.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $headerFooter.RelPermalink }}" integrity="{{ $headerFooter.Data.Integrity }}">
+    
+    <!-- Main Styles -->
+    {{ $main := resources.Get "css/main.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}">
+    
+    <!-- Code Highlighting Styles -->
+    {{ $codeHighlight := resources.Get "css/code-highlighting.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $codeHighlight.RelPermalink }}" integrity="{{ $codeHighlight.Data.Integrity }}">
+    
+    <!-- Table of Contents Styles -->
+    {{ $toc := resources.Get "css/toc.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $toc.RelPermalink }}" integrity="{{ $toc.Data.Integrity }}">
+    
+    <!-- Custom Page Styles -->
+    {{ $customPages := resources.Get "css/custom-pages.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $customPages.RelPermalink }}" integrity="{{ $customPages.Data.Integrity }}">
+    
+    <!-- Search Styles -->
+    {{ $search := resources.Get "css/search.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}">
+    
+    <!-- Font Fixes - Load Last to Override -->
+    {{ $fontFixes := resources.Get "css/font-fixes.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $fontFixes.RelPermalink }}" integrity="{{ $fontFixes.Data.Integrity }}">
+</head>
 
-<div class="container">
+<body class="error-404-page">
+
+<header>
+    {{ partial "header.html" . }}
+</header>
+
+<main>
+    <div class="container">
     <div class="main-content-wrapper three-column-layout">
         {{ partial "sidebar-left.html" . }}
         
@@ -145,9 +193,17 @@
         
         {{ partial "sidebar.html" . }}
     </div>
-</div>
+    </div>
+</main>
 
-<!-- Custom CSS for 404 Page -->
+<footer>
+    {{ partial "footer.html" . }}
+</footer>
+
+<!-- Search JavaScript -->
+<script src="{{ "assets/js/search.js" | relURL }}"></script>
+
+<!-- Custom CSS for 404 Page - Embedded to ensure it loads -->
 <style>
 /* ============================= */
 /* 404 Error Page Styles */
@@ -654,7 +710,7 @@
 }
 </style>
 
-<!-- JavaScript for Search and Shortlink Handling -->
+<!-- JavaScript for Search and Shortlink Handling - Embedded to ensure it runs -->
 <script>
 (function() {
     'use strict';
@@ -725,4 +781,5 @@
 })();
 </script>
 
-{{ end }}
+</body>
+</html>

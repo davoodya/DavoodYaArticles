@@ -121,13 +121,23 @@
     flex: 1;
     overflow: hidden;
     position: relative;
+    width: 100%;
 }
 
 .slider-track {
     display: flex;
     gap: 1.5rem;
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     will-change: transform;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    width: fit-content;
+}
+
+/* Ensure all cards are visible */
+.slider-track > * {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 /* Slider Card */
