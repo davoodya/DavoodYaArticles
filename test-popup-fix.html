@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Fix Validation Test</title>
+    <style>
+        :root {
+            --darker-bg: #0a0e14;
+            --card-bg: #161b22;
+            --main-text: #e6edf3;
+            --secondary-text: #8b949e;
+            --accent-green: #00ff41;
+            --accent-blue: #3aaddf;
+            --accent-yellow: #e5c07b;
+            --accent-orange: #e06c11;
+            --accent-purple: #c678dd;
+            --persian-heading: 'Vazir', 'Tahoma', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: var(--darker-bg);
+            color: var(--main-text);
+            font-family: var(--persian-heading);
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: var(--accent-green);
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        .test-section {
+            background: var(--card-bg);
+            border: 2px solid rgba(0, 255, 65, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .test-item {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+        
+        .test-item h3 {
+            color: var(--accent-yellow);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .test-result {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+        
+        .test-result.pass {
+            background: rgba(0, 255, 65, 0.2);
+            border: 1px solid var(--accent-green);
+            color: var(--accent-green);
+        }
+        
+        .test-result.fail {
+            background: rgba(255, 65, 108, 0.2);
+            border: 1px solid #ff416d;
+            color: #ff416d;
+        }
+        
+        .test-result.pending {
+            background: rgba(229, 192, 123, 0.2);
+            border: 1px solid var(--accent-yellow);
+            color: var(--accent-yellow);
+        }
+        
+        button {
+            background: var(--accent-green);
+            color: #000;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 255, 65, 0.4);
+        }
+        
+        button.secondary {
+            background: var(--accent-blue);
+        }
+        
+        button.danger {
+            background: #ff416d;
+            color: white;
+        }
+        
+        code {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: var(--accent-green);
+        }
+        
+        .storage-viewer {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .storage-viewer div {
+            padding: 0.3rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .storage-viewer .key {
+            color: var(--accent-yellow);
+            font-weight: bold;
+        }
+        
+        .storage-viewer .value {
+            color: var(--accent-green);
+            margin-left: 1rem;
+        }
+        
+        .log {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(58, 173, 223, 0.3);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            max-height: 200px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+        }
+        
+        .log-entry {
+            padding: 0.2rem 0;
+            color: var(--secondary-text);
+        }
+        
+        .log-entry.success {
+            color: var(--accent-green);
+        }
+        
+        .log-entry.error {
+            color: #ff416d;
+        }
+        
+        .log-entry.info {
+            color: var(--accent-blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Popup Fix Validation Test</h1>
+        
+        <!-- Test Section 1: Storage Detection -->
+        <div class="test-section">
+            <h2>1️⃣ Storage API Detection</h2>
+            <div class="test-grid">
+                <div class="test-item">
+                    <h3>sessionStorage</h3>
+                    <p>Required for page-scoped popup control</p>
+                    <div class="test-result pending" id="sessionStorageTest">Testing...</div>
+                </div>
+                <div class="test-item">
+                    <h3>localStorage</h3>
+                    <p>Required for global rate limiting</p>
+                    <div class="test-result pending" id="localStorageTest">Testing...</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Test Section 2: Page Identifier -->
+        <div class="test-section">
+            <h2>2️⃣ Page Identifier Simulation</h2>
+            <p>Simulating different article pages:</p>
+            <div class="test-grid">
+                <div class="test-item">
+                    <h3>Article A</h3>
+                    <button onclick="simulatePage('/cyber-security/article-a/')">Visit Article A</button>
+                    <div class="test-result pending" id="articleA">Not visited</div>
+                </div>
+                <div class="test-item">
+                    <h3>Article B</h3>
+                    <button onclick="simulatePage('/network/article-b/')">Visit Article B</button>
+                    <div class="test-result pending" id="articleB">Not visited</div>
+                </div>
+                <div class="test-item">
+                    <h3>Article C</h3>
+                    <button onclick="simulatePage('/linux/article-c/')">Visit Article C</button>
+                    <div class="test-result pending" id="articleC">Not visited</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Test Section 3: Rate Limiting -->
+        <div class="test-section">
+            <h2>3️⃣ Rate Limiting Test</h2>
+            <p>Testing global counter (max 20 popups per day):</p>
+            <button onclick="testRateLimit()">Simulate 25 Popup Views</button>
+            <button class="secondary" onclick="resetRateLimit()">Reset Rate Limit</button>
+            <div class="test-result pending" id="rateLimitTest">Not tested</div>
+            <div id="rateLimitLog" class="log"></div>
+        </div>
+        
+        <!-- Test Section 4: Storage Viewer -->
+        <div class="test-section">
+            <h2>4️⃣ Storage Inspector</h2>
+            <button onclick="refreshStorage()">Refresh Storage</button>
+            <button class="danger" onclick="clearAllStorage()">Clear All Storage</button>
+            
+            <h3 style="margin-top: 1rem; color: var(--accent-yellow);">sessionStorage:</h3>
+            <div id="sessionStorageViewer" class="storage-viewer">
+                <div style="color: var(--secondary-text);">Click "Refresh Storage" to view</div>
+            </div>
+            
+            <h3 style="margin-top: 1rem; color: var(--accent-yellow);">localStorage:</h3>
+            <div id="localStorageViewer" class="storage-viewer">
+                <div style="color: var(--secondary-text);">Click "Refresh Storage" to view</div>
+            </div>
+        </div>
+        
+        <!-- Test Section 5: Cross-Page Behavior -->
+        <div class="test-section">
+            <h2>5️⃣ Cross-Page Behavior Test</h2>
+            <p>Test the expected behavior:</p>
+            <ol style="margin: 1rem 0; padding-right: 1.5rem; color: var(--secondary-text);">
+                <li>Visit Article A → popup should show</li>
+                <li>Close popup on Article A</li>
+                <li>Visit Article B → popup should show again</li>
+                <li>Refresh Article A → popup should NOT show (session persists)</li>
+            </ol>
+            <button onclick="runFullTest()">Run Full Test</button>
+            <div id="fullTestLog" class="log"></div>
+        </div>
+    </div>
+    
+    <script>
+        const CONFIG = {
+            storagePrefix: 'popup_',
+            maxPopupsPerDay: 20,
+            globalCooldownHours: 24
+        };
+        
+        let testLog = [];
+        
+        // Test 1: Storage Detection
+        function testStorageAPIs() {
+            try {
+                sessionStorage.setItem('test', 'test');
+                sessionStorage.removeItem('test');
+                document.getElementById('sessionStorageTest').className = 'test-result pass';
+                document.getElementById('sessionStorageTest').textContent = '✅ Available';
+            } catch (e) {
+                document.getElementById('sessionStorageTest').className = 'test-result fail';
+                document.getElementById('sessionStorageTest').textContent = '❌ Not Available';
+            }
+            
+            try {
+                localStorage.setItem('test', 'test');
+                localStorage.removeItem('test');
+                document.getElementById('localStorageTest').className = 'test-result pass';
+                document.getElementById('localStorageTest').textContent = '✅ Available';
+            } catch (e) {
+                document.getElementById('localStorageTest').className = 'test-result fail';
+                document.getElementById('localStorageTest').textContent = '❌ Not Available';
+            }
+        }
+        
+        // Test 2: Simulate Page Visit
+        function simulatePage(permalink) {
+            const key = CONFIG.storagePrefix + permalink;
+            
+            // Check if already visited
+            const isVisited = sessionStorage.getItem(key) === 'shown';
+            
+            let resultElement;
+            if (permalink.includes('article-a')) {
+                resultElement = document.getElementById('articleA');
+            } else if (permalink.includes('article-b')) {
+                resultElement = document.getElementById('articleB');
+            } else if (permalink.includes('article-c')) {
+                resultElement = document.getElementById('articleC');
+            }
+            
+            if (isVisited) {
+                resultElement.className = 'test-result fail';
+                resultElement.textContent = '❌ Popup blocked (already shown in session)';
+            } else {
+                // Mark as shown
+                sessionStorage.setItem(key, 'shown');
+                
+                // Update counter
+                updateGlobalCounter();
+                
+                resultElement.className = 'test-result pass';
+                resultElement.textContent = '✅ Popup shown';
+            }
+            
+            refreshStorage();
+        }
+        
+        // Update global counter
+        function updateGlobalCounter() {
+            const timestampKey = CONFIG.storagePrefix + 'global_timestamp';
+            const counterKey = CONFIG.storagePrefix + 'global_counter';
+            
+            const timestamp = localStorage.getItem(timestampKey);
+            const counter = parseInt(localStorage.getItem(counterKey) || '0', 10);
+            
+            if (!timestamp) {
+                localStorage.setItem(timestampKey, Date.now().toString());
+                localStorage.setItem(counterKey, '1');
+            } else {
+                localStorage.setItem(counterKey, (counter + 1).toString());
+            }
+        }
+        
+        // Test 3: Rate Limit
+        function testRateLimit() {
+            const log = document.getElementById('rateLimitLog');
+            log.innerHTML = '';
+            
+            // Clear previous test
+            localStorage.removeItem(CONFIG.storagePrefix + 'global_timestamp');
+            localStorage.removeItem(CONFIG.storagePrefix + 'global_counter');
+            
+            let html = '';
+            
+            // Simulate 25 popup attempts
+            for (let i = 1; i <= 25; i++) {
+                const canShow = checkRateLimit();
+                
+                if (canShow) {
+                    updateGlobalCounter();
+                    html += `<div class="log-entry success">Popup ${i}: ✅ Shown</div>`;
+                } else {
+                    html += `<div class="log-entry error">Popup ${i}: ❌ Blocked (rate limit)</div>`;
+                }
+            }
+            
+            log.innerHTML = html;
+            
+            const counter = parseInt(localStorage.getItem(CONFIG.storagePrefix + 'global_counter') || '0', 10);
+            const resultEl = document.getElementById('rateLimitTest');
+            
+            if (counter === 20) {
+                resultEl.className = 'test-result pass';
+                resultEl.textContent = `✅ Rate limit working (${counter} shown, 5 blocked)`;
+            } else {
+                resultEl.className = 'test-result fail';
+                resultEl.textContent = `❌ Rate limit failed (${counter} shown)`;
+            }
+            
+            refreshStorage();
+        }
+        
+        function checkRateLimit() {
+            const timestampKey = CONFIG.storagePrefix + 'global_timestamp';
+            const counterKey = CONFIG.storagePrefix + 'global_counter';
+            
+            const timestamp = localStorage.getItem(timestampKey);
+            const counter = parseInt(localStorage.getItem(counterKey) || '0', 10);
+            
+            if (!timestamp) {
+                return true;
+            }
+            
+            const elapsed = Date.now() - parseInt(timestamp, 10);
+            const hours = elapsed / (1000 * 60 * 60);
+            
+            if (hours >= CONFIG.globalCooldownHours) {
+                localStorage.removeItem(timestampKey);
+                localStorage.removeItem(counterKey);
+                return true;
+            }
+            
+            if (counter >= CONFIG.maxPopupsPerDay) {
+                return false;
+            }
+            
+            return true;
+        }
+        
+        function resetRateLimit() {
+            localStorage.removeItem(CONFIG.storagePrefix + 'global_timestamp');
+            localStorage.removeItem(CONFIG.storagePrefix + 'global_counter');
+            document.getElementById('rateLimitTest').className = 'test-result pending';
+            document.getElementById('rateLimitTest').textContent = 'Reset complete';
+            document.getElementById('rateLimitLog').innerHTML = '<div class="log-entry info">Rate limit reset. Test again.</div>';
+            refreshStorage();
+        }
+        
+        // Test 4: Storage Viewer
+        function refreshStorage() {
+            // sessionStorage
+            const sessionViewer = document.getElementById('sessionStorageViewer');
+            let sessionHtml = '';
+            
+            for (let i = 0; i < sessionStorage.length; i++) {
+                const key = sessionStorage.key(i);
+                const value = sessionStorage.getItem(key);
+                sessionHtml += `<div><span class="key">${key}:</span><span class="value">${value}</span></div>`;
+            }
+            
+            sessionViewer.innerHTML = sessionHtml || '<div style="color: var(--secondary-text);">Empty</div>';
+            
+            // localStorage
+            const localViewer = document.getElementById('localStorageViewer');
+            let localHtml = '';
+            
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key.startsWith(CONFIG.storagePrefix)) {
+                    const value = localStorage.getItem(key);
+                    localHtml += `<div><span class="key">${key}:</span><span class="value">${value}</span></div>`;
+                }
+            }
+            
+            localViewer.innerHTML = localHtml || '<div style="color: var(--secondary-text);">Empty</div>';
+        }
+        
+        function clearAllStorage() {
+            if (confirm('Clear all popup-related storage? This will reset all tests.')) {
+                // Clear sessionStorage
+                const sessionKeys = [];
+                for (let i = 0; i < sessionStorage.length; i++) {
+                    const key = sessionStorage.key(i);
+                    if (key.startsWith(CONFIG.storagePrefix)) {
+                        sessionKeys.push(key);
+                    }
+                }
+                sessionKeys.forEach(key => sessionStorage.removeItem(key));
+                
+                // Clear localStorage
+                const localKeys = [];
+                for (let i = 0; i < localStorage.length; i++) {
+                    const key = localStorage.key(i);
+                    if (key.startsWith(CONFIG.storagePrefix)) {
+                        localKeys.push(key);
+                    }
+                }
+                localKeys.forEach(key => localStorage.removeItem(key));
+                
+                // Reset test results
+                document.getElementById('articleA').className = 'test-result pending';
+                document.getElementById('articleA').textContent = 'Not visited';
+                document.getElementById('articleB').className = 'test-result pending';
+                document.getElementById('articleB').textContent = 'Not visited';
+                document.getElementById('articleC').className = 'test-result pending';
+                document.getElementById('articleC').textContent = 'Not visited';
+                document.getElementById('rateLimitTest').className = 'test-result pending';
+                document.getElementById('rateLimitTest').textContent = 'Not tested';
+                document.getElementById('rateLimitLog').innerHTML = '';
+                document.getElementById('fullTestLog').innerHTML = '';
+                
+                refreshStorage();
+            }
+        }
+        
+        // Test 5: Full Workflow
+        function runFullTest() {
+            const log = document.getElementById('fullTestLog');
+            log.innerHTML = '';
+            
+            // Reset everything first
+            for (let i = 0; i < sessionStorage.length; i++) {
+                const key = sessionStorage.key(i);
+                if (key && key.startsWith(CONFIG.storagePrefix)) {
+                    sessionStorage.removeItem(key);
+                }
+            }
+            localStorage.removeItem(CONFIG.storagePrefix + 'global_timestamp');
+            localStorage.removeItem(CONFIG.storagePrefix + 'global_counter');
+            
+            let html = '<div class="log-entry info">Starting full test...</div>';
+            log.innerHTML = html;
+            
+            setTimeout(() => {
+                // Step 1: Visit Article A
+                html += '<div class="log-entry info">Step 1: Visit Article A</div>';
+                const keyA = CONFIG.storagePrefix + '/article-a/';
+                const isVisitedA1 = sessionStorage.getItem(keyA) === 'shown';
+                
+                if (!isVisitedA1) {
+                    sessionStorage.setItem(keyA, 'shown');
+                    updateGlobalCounter();
+                    html += '<div class="log-entry success">✅ Popup shown on Article A</div>';
+                } else {
+                    html += '<div class="log-entry error">❌ FAILED: Popup blocked on first visit</div>';
+                }
+                log.innerHTML = html;
+                
+                setTimeout(() => {
+                    // Step 2: Visit Article B
+                    html += '<div class="log-entry info">Step 2: Visit Article B</div>';
+                    const keyB = CONFIG.storagePrefix + '/article-b/';
+                    const isVisitedB = sessionStorage.getItem(keyB) === 'shown';
+                    
+                    if (!isVisitedB) {
+                        sessionStorage.setItem(keyB, 'shown');
+                        updateGlobalCounter();
+                        html += '<div class="log-entry success">✅ Popup shown on Article B (independent from A)</div>';
+                    } else {
+                        html += '<div class="log-entry error">❌ FAILED: Popup incorrectly blocked on Article B</div>';
+                    }
+                    log.innerHTML = html;
+                    
+                    setTimeout(() => {
+                        // Step 3: Return to Article A
+                        html += '<div class="log-entry info">Step 3: Return to Article A (same session)</div>';
+                        const isVisitedA2 = sessionStorage.getItem(keyA) === 'shown';
+                        
+                        if (isVisitedA2) {
+                            html += '<div class="log-entry success">✅ Popup correctly blocked on Article A (session persists)</div>';
+                        } else {
+                            html += '<div class="log-entry error">❌ FAILED: Popup showed again on Article A</div>';
+                        }
+                        log.innerHTML = html;
+                        
+                        setTimeout(() => {
+                            // Step 4: Check counter
+                            html += '<div class="log-entry info">Step 4: Check global counter</div>';
+                            const counter = parseInt(localStorage.getItem(CONFIG.storagePrefix + 'global_counter') || '0', 10);
+                            
+                            if (counter === 2) {
+                                html += '<div class="log-entry success">✅ Counter correct: 2 popups shown</div>';
+                            } else {
+                                html += `<div class="log-entry error">❌ FAILED: Counter is ${counter}, expected 2</div>`;
+                            }
+                            
+                            html += '<div class="log-entry success" style="margin-top: 1rem; font-weight: bold;">🎉 Full test complete!</div>';
+                            log.innerHTML = html;
+                            
+                            refreshStorage();
+                        }, 500);
+                    }, 500);
+                }, 500);
+            }, 500);
+        }
+        
+        // Initialize
+        window.addEventListener('load', function() {
+            testStorageAPIs();
+            refreshStorage();
+        });
+    </script>
+</body>
+</html>

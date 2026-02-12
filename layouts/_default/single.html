@@ -5,7 +5,7 @@
         {{ partial "sidebar.html" . }}
         
         <article class="article-wrapper{{ if .Params.custom_class }} {{ .Params.custom_class }}{{ end }}">
-            <h1 class="article-title">{{ .Title }}</h1>
+            <h1 class="article-title" style="text-align: center;">{{ .Title }}</h1>
             
             {{/* ویژگی‌های مقاله - Badge ها بعد از TOC و قبل از محتوا */}}
             {{ if or .Params.readingTime .Params.difficulty .Params.lab_required .Params.post_type_fa }}
@@ -209,11 +209,15 @@
                 </div>
             {{ end }}
         </article>
-        
-        {{/* Comments Section */}}
+    </div>
+    
+    {{/* Comments Section - بیرون از main-content-wrapper */}}
+    <div class="full-width-section">
         {{ partial "comments.html" . }}
-        
-        {{/* Article Slider - Previous & Next Articles */}}
+    </div>
+    
+    {{/* Article Slider - Previous & Next Articles */}}
+    <div class="full-width-section">
         {{ partial "article-slider.html" . }}
     </div>
 </div>

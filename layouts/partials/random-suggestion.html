@@ -8,14 +8,14 @@
 
 {{- if gt (len $relatedPages) 0 -}}
 {{/* Shuffle and get random articles (Hugo doesn't have random, so we'll use JavaScript) */}}
-<div class="random-suggestion-popup" id="randomSuggestionPopup" style="display: none;">
+<div class="random-suggestion-popup" id="randomSuggestionPopup" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="suggestionTitle">
     <div class="suggestion-header">
         <button class="suggestion-close" onclick="closeRandomSuggestion()" aria-label="بستن">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
             </svg>
         </button>
-        <h3 class="suggestion-title">
+        <h3 class="suggestion-title" id="suggestionTitle">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
             </svg>
@@ -61,25 +61,182 @@
 ]
 </script>
 
+{{/* Page-specific identifier for storage */}}
+<script id="page-identifier" type="application/json">
+{
+    "permalink": {{ .Permalink | jsonify }},
+    "relPermalink": {{ .RelPermalink | jsonify }}
+}
+</script>
+
 <script>
 (function() {
     'use strict';
     
-    // Configuration
+    // ============================================================
+    // CONFIGURATION
+    // ============================================================
     const CONFIG = {
-        showDelay: 15000,           // Show after 15 seconds
-        minScrollPercent: 30,       // Or after scrolling 30%
-        cookieName: 'suggestion_shown',
-        cookieExpireDays: 1         // Show once per day
+        showDelay: 15000,                    // Show after 15 seconds
+        minScrollPercent: 30,                // Or after scrolling 30%
+        globalCooldownHours: 24,             // Global rate limit (24 hours)
+        maxPopupsPerDay: 20,                 // Max popups per day (safety)
+        storagePrefix: 'popup_',             // Storage key prefix
+        disableBelowWidth: 0                 // 0 = always show, 768 = disable on mobile
     };
     
+    // ============================================================
+    // STATE
+    // ============================================================
     let articles = [];
     let currentIndex = 0;
     let isShown = false;
     let hasInteracted = false;
+    let pageIdentifier = '';
+    let scrollTriggerBound = false;
     
-    // Initialize
+    // ============================================================
+    // STORAGE UTILITIES
+    // ============================================================
+    
+    /**
+     * Get page-specific storage key
+     */
+    function getPageKey() {
+        return CONFIG.storagePrefix + pageIdentifier;
+    }
+    
+    /**
+     * Get global counter key
+     */
+    function getGlobalCounterKey() {
+        return CONFIG.storagePrefix + 'global_counter';
+    }
+    
+    /**
+     * Get global timestamp key
+     */
+    function getGlobalTimestampKey() {
+        return CONFIG.storagePrefix + 'global_timestamp';
+    }
+    
+    /**
+     * Check if popup was shown on current page (this session)
+     */
+    function wasShownOnThisPage() {
+        try {
+            return sessionStorage.getItem(getPageKey()) === 'shown';
+        } catch (e) {
+            console.warn('sessionStorage not available:', e);
+            return false;
+        }
+    }
+    
+    /**
+     * Mark popup as shown for current page (this session only)
+     */
+    function markPageAsShown() {
+        try {
+            sessionStorage.setItem(getPageKey(), 'shown');
+        } catch (e) {
+            console.warn('Failed to set sessionStorage:', e);
+        }
+    }
+    
+    /**
+     * Check global rate limit (24-hour cooldown)
+     * Returns true if rate limit exceeded
+     */
+    function isGlobalRateLimited() {
+        try {
+            const timestamp = localStorage.getItem(getGlobalTimestampKey());
+            const counter = parseInt(localStorage.getItem(getGlobalCounterKey()) || '0', 10);
+            
+            if (!timestamp) {
+                return false;
+            }
+            
+            const elapsed = Date.now() - parseInt(timestamp, 10);
+            const hours = elapsed / (1000 * 60 * 60);
+            
+            // Reset counter after cooldown period
+            if (hours >= CONFIG.globalCooldownHours) {
+                localStorage.removeItem(getGlobalTimestampKey());
+                localStorage.removeItem(getGlobalCounterKey());
+                return false;
+            }
+            
+            // Check if exceeded max per day
+            if (counter >= CONFIG.maxPopupsPerDay) {
+                return true;
+            }
+            
+            return false;
+        } catch (e) {
+            console.warn('localStorage not available:', e);
+            return false;
+        }
+    }
+    
+    /**
+     * Update global counter and timestamp
+     */
+    function updateGlobalCounter() {
+        try {
+            const timestamp = localStorage.getItem(getGlobalTimestampKey());
+            const counter = parseInt(localStorage.getItem(getGlobalCounterKey()) || '0', 10);
+            
+            if (!timestamp) {
+                // First popup of the day
+                localStorage.setItem(getGlobalTimestampKey(), Date.now().toString());
+                localStorage.setItem(getGlobalCounterKey(), '1');
+            } else {
+                // Increment counter
+                localStorage.setItem(getGlobalCounterKey(), (counter + 1).toString());
+            }
+        } catch (e) {
+            console.warn('Failed to update global counter:', e);
+        }
+    }
+    
+    // ============================================================
+    // INITIALIZATION
+    // ============================================================
+    
+    /**
+     * Initialize the popup system
+     */
     function init() {
+        // Check viewport width
+        if (CONFIG.disableBelowWidth > 0 && window.innerWidth < CONFIG.disableBelowWidth) {
+            return;
+        }
+        
+        // Load page identifier
+        const identifierScript = document.getElementById('page-identifier');
+        if (!identifierScript) {
+            console.warn('Page identifier not found');
+            return;
+        }
+        
+        try {
+            const pageData = JSON.parse(identifierScript.textContent);
+            pageIdentifier = pageData.relPermalink || pageData.permalink;
+        } catch (error) {
+            console.error('Error parsing page identifier:', error);
+            return;
+        }
+        
+        // Check if already shown on this page (this session)
+        if (wasShownOnThisPage()) {
+            return;
+        }
+        
+        // Check global rate limit
+        if (isGlobalRateLimited()) {
+            return;
+        }
+        
         // Load articles data
         const dataScript = document.getElementById('random-articles-data');
         if (!dataScript) return;
@@ -91,11 +248,6 @@
             // Shuffle articles
             shuffleArray(articles);
             
-            // Check if already shown today
-            if (getCookie(CONFIG.cookieName)) {
-                return;
-            }
-            
             // Setup triggers
             setupTriggers();
             
@@ -104,7 +256,13 @@
         }
     }
     
-    // Setup show triggers
+    // ============================================================
+    // TRIGGER LOGIC
+    // ============================================================
+    
+    /**
+     * Setup show triggers (time + scroll)
+     */
     function setupTriggers() {
         // Trigger 1: After time delay
         setTimeout(() => {
@@ -114,24 +272,43 @@
         }, CONFIG.showDelay);
         
         // Trigger 2: After scroll percentage
-        window.addEventListener('scroll', checkScrollTrigger);
+        const scrollHandler = debounce(checkScrollTrigger, 100);
+        window.addEventListener('scroll', scrollHandler, { passive: true });
+        scrollTriggerBound = true;
     }
     
+    /**
+     * Check if scroll trigger threshold reached
+     */
     function checkScrollTrigger() {
         if (isShown || hasInteracted) {
-            window.removeEventListener('scroll', checkScrollTrigger);
+            if (scrollTriggerBound) {
+                window.removeEventListener('scroll', checkScrollTrigger);
+                scrollTriggerBound = false;
+            }
             return;
         }
         
-        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
         
         if (scrollPercent >= CONFIG.minScrollPercent) {
             showSuggestion();
-            window.removeEventListener('scroll', checkScrollTrigger);
+            if (scrollTriggerBound) {
+                window.removeEventListener('scroll', checkScrollTrigger);
+                scrollTriggerBound = false;
+            }
         }
     }
     
-    // Show suggestion popup
+    // ============================================================
+    // POPUP DISPLAY
+    // ============================================================
+    
+    /**
+     * Show suggestion popup
+     */
     function showSuggestion() {
         if (isShown || articles.length === 0) return;
         
@@ -145,17 +322,36 @@
         popup.style.display = 'block';
         
         // Animate in
-        setTimeout(() => {
-            popup.classList.add('active');
-        }, 10);
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                popup.classList.add('active');
+            });
+        });
         
         isShown = true;
         
-        // Set cookie
-        setCookie(CONFIG.cookieName, 'true', CONFIG.cookieExpireDays);
+        // Mark page as shown (session)
+        markPageAsShown();
+        
+        // Update global counter
+        updateGlobalCounter();
+        
+        // Setup ESC key listener
+        document.addEventListener('keydown', handleEscapeKey);
     }
     
-    // Render article content
+    /**
+     * Handle ESC key press
+     */
+    function handleEscapeKey(e) {
+        if (e.key === 'Escape' || e.key === 'Esc') {
+            closeRandomSuggestion();
+        }
+    }
+    
+    /**
+     * Render article content
+     */
     function renderArticle(index) {
         if (index >= articles.length) {
             index = 0;
@@ -218,7 +414,7 @@
         if (article.image) {
             imageHtml = `
                 <div class="suggestion-image">
-                    <img src="${article.image}" alt="${escapeHtml(article.title)}" loading="lazy">
+                    <img src="${escapeHtml(article.image)}" alt="${escapeHtml(article.title)}" loading="lazy">
                 </div>
             `;
         }
@@ -227,7 +423,7 @@
             ${imageHtml}
             <div class="suggestion-body">
                 <h4 class="suggestion-article-title">
-                    <a href="${article.url}" onclick="trackSuggestionClick('${article.title}')">${escapeHtml(article.title)}</a>
+                    <a href="${escapeHtml(article.url)}" onclick="trackSuggestionClick('${escapeHtml(article.title, true)}')">${escapeHtml(article.title)}</a>
                 </h4>
                 <p class="suggestion-description">${escapeHtml(article.description)}</p>
                 <div class="suggestion-badges">
@@ -235,7 +431,7 @@
                     ${timeBadge}
                     ${typeBadge}
                 </div>
-                <a href="${article.url}" class="suggestion-read-btn" onclick="trackSuggestionClick('${article.title}')">
+                <a href="${escapeHtml(article.url)}" class="suggestion-read-btn" onclick="trackSuggestionClick('${escapeHtml(article.title, true)}')">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
                     </svg>
@@ -245,14 +441,22 @@
         `;
     }
     
-    // Show next suggestion
+    // ============================================================
+    // USER ACTIONS
+    // ============================================================
+    
+    /**
+     * Show next suggestion
+     */
     window.showNextSuggestion = function() {
         hasInteracted = true;
         currentIndex = (currentIndex + 1) % articles.length;
         renderArticle(currentIndex);
     };
     
-    // Close suggestion
+    /**
+     * Close suggestion popup
+     */
     window.closeRandomSuggestion = function() {
         hasInteracted = true;
         const popup = document.getElementById('randomSuggestionPopup');
@@ -262,15 +466,46 @@
                 popup.style.display = 'none';
             }, 300);
         }
+        
+        // Remove ESC listener
+        document.removeEventListener('keydown', handleEscapeKey);
     };
     
-    // Track click for analytics
+    /**
+     * Track click for analytics
+     */
     function trackSuggestionClick(title) {
-        console.log('Suggestion clicked:', title);
         // Add analytics tracking here if needed
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'suggestion_click', {
+                'event_category': 'Engagement',
+                'event_label': title
+            });
+        }
     }
     
-    // Utility: Shuffle array
+    // ============================================================
+    // UTILITY FUNCTIONS
+    // ============================================================
+    
+    /**
+     * Debounce function
+     */
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+    
+    /**
+     * Shuffle array in place
+     */
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -278,8 +513,11 @@
         }
     }
     
-    // Utility: Escape HTML
-    function escapeHtml(text) {
+    /**
+     * Escape HTML to prevent XSS
+     */
+    function escapeHtml(text, forAttribute = false) {
+        if (!text) return '';
         const map = {
             '&': '&amp;',
             '<': '&lt;',
@@ -287,28 +525,39 @@
             '"': '&quot;',
             "'": '&#039;'
         };
-        return text.replace(/[&<>"']/g, m => map[m]);
+        const escaped = String(text).replace(/[&<>"']/g, m => map[m]);
+        
+        // Additional escaping for attributes to prevent breaking onclick handlers
+        if (forAttribute) {
+            return escaped.replace(/'/g, '\\\'');
+        }
+        
+        return escaped;
     }
     
-    // Cookie utilities
-    function setCookie(name, value, days) {
-        const expires = new Date(Date.now() + days * 864e5).toUTCString();
-        document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires + '; path=/';
-    }
+    // ============================================================
+    // INITIALIZATION
+    // ============================================================
     
-    function getCookie(name) {
-        return document.cookie.split('; ').reduce((r, v) => {
-            const parts = v.split('=');
-            return parts[0] === name ? decodeURIComponent(parts[1]) : r;
-        }, '');
-    }
-    
-    // Initialize on page load
+    /**
+     * Start initialization when DOM is ready
+     */
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
+    
+    // ============================================================
+    // CLEANUP ON PAGE UNLOAD
+    // ============================================================
+    
+    window.addEventListener('beforeunload', () => {
+        if (scrollTriggerBound) {
+            window.removeEventListener('scroll', checkScrollTrigger);
+        }
+        document.removeEventListener('keydown', handleEscapeKey);
+    });
     
 })();
 </script>

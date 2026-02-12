@@ -4,16 +4,21 @@
 
 .comments-section {
     width: 100%;
-    margin: 4rem 0 2rem;
-    padding: 0;
+    max-width: 100%;
+    margin: 4rem auto 2rem;
+    padding: 2rem;
     clear: both;
     position: relative;
     z-index: 1;
+    background: rgba(0, 255, 65, 0.02);
+    border-top: 2px solid rgba(0, 255, 65, 0.15);
+    border-bottom: 2px solid rgba(0, 255, 65, 0.15);
 }
 
 .comments-container {
     width: 100%;
-    max-width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* ============================= */

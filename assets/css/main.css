@@ -4816,15 +4816,53 @@ a.article-tag:active {
         gap: 0.6rem;
         padding: 0.25rem 0;
     }
-    
+
     .social-link {
         width: 40px;
         height: 40px;
     }
-    
+
     .social-link svg {
         width: 19px;
         height: 19px;
+    }
+}
+
+/* ============================= */
+/* Full Width Section Layout */
+/* ============================= */
+
+.full-width-section {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+.full-width-section .comments-section,
+.full-width-section .article-slider {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .full-width-section .comments-section,
+    .full-width-section .article-slider {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .full-width-section .comments-section,
+    .full-width-section .article-slider {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 

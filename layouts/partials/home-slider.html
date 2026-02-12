@@ -102,17 +102,9 @@
               {{- end -}}
             </div>
             
-            <!-- Button & Badges Row -->
+            <!-- Badges Row (فقط بادج‌ها - دکمه جدا شد) -->
             <div class="slide-actions-row">
-              <!-- Read Article Button (Right) -->
-              <a href="{{ $slide.url }}" class="slide-btn" aria-label="مشاهده {{ $slide.title }}">
-                <span>مشاهده مقاله</span>
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
-                </svg>
-              </a>
-              
-              <!-- Badges (Left) -->
+              <!-- Badges -->
               <div class="slide-badges">
                 <!-- Reading Time -->
                 {{- if $slide.readingTime -}}
@@ -169,6 +161,16 @@
                 </span>
                 {{- end -}}
               </div>
+            </div>
+            
+            <!-- Button Container - خط جداگانه زیر Badges -->
+            <div class="slide-button-container">
+              <a href="{{ $slide.url }}" class="slide-btn" aria-label="مشاهده {{ $slide.title }}">
+                <span>مشاهده مقاله</span>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                </svg>
+              </a>
             </div>
             
           </div>

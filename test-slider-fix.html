@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تست اسلایدر و Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --dark-bg: #0a0a0a;
+            --darker-bg: #050505;
+            --card-bg: #0f0f0f;
+            --main-text: #e0e0e0;
+            --secondary-text: #b0b0b0;
+            --muted-text: #808080;
+            --accent-green: #00ff41;
+            --accent-blue: #3aaddf;
+            --accent-orange: #e06c11;
+            --persian-heading: 'Shabnam', 'Vazir', sans-serif;
+            --persian-text: 'Vazir', 'Shabnam', sans-serif;
+        }
+        
+        body {
+            background: var(--dark-bg);
+            color: var(--main-text);
+            font-family: var(--persian-text);
+            direction: rtl;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        .article-title {
+            text-align: center;
+            color: var(--accent-green);
+            font-size: 2rem;
+            padding: 2rem;
+            background: var(--card-bg);
+            margin-bottom: 2rem;
+        }
+        
+        .section-divider {
+            text-align: center;
+            color: var(--accent-blue);
+            font-size: 1.5rem;
+            padding: 2rem;
+            background: rgba(58, 173, 223, 0.1);
+            margin: 2rem 0;
+            border: 2px solid var(--accent-blue);
+        }
+        
+        .full-width-section {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            clear: both;
+        }
+        
+        .comments-section {
+            width: 100%;
+            max-width: 100%;
+            margin: 4rem auto 2rem;
+            padding: 2rem;
+            clear: both;
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 255, 65, 0.05);
+            border-top: 2px solid rgba(0, 255, 65, 0.3);
+            border-bottom: 2px solid rgba(0, 255, 65, 0.3);
+        }
+        
+        .comments-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .article-slider {
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, rgba(0, 255, 65, 0.05) 0%, rgba(58, 173, 223, 0.05) 100%);
+            border-top: 2px solid rgba(58, 173, 223, 0.3);
+            border-bottom: 2px solid rgba(58, 173, 223, 0.3);
+            position: relative;
+            overflow: hidden;
+            clear: both;
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .slider-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .slider-title {
+            color: var(--accent-green);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .slider-track-container {
+            background: rgba(58, 173, 223, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+        
+        .test-info {
+            background: rgba(0, 255, 65, 0.1);
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid var(--accent-green);
+            border-radius: 8px;
+        }
+        
+        .error-info {
+            background: rgba(224, 108, 17, 0.1);
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid var(--accent-orange);
+            border-radius: 8px;
+            color: var(--accent-orange);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="article-title">✅ تست چیدمان صفحه مقاله</h1>
+        
+        <div class="section-divider">1️⃣ عنوان مقاله - وسط چین شده ✓</div>
+        
+        <div class="section-divider">2️⃣ Badges مقاله</div>
+        
+        <div class="section-divider">3️⃣ Table of Content</div>
+        
+        <div class="section-divider">4️⃣ بدنه مقاله</div>
+        
+        <div class="section-divider">5️⃣ تگ‌های مقاله</div>
+        
+        <div class="section-divider">6️⃣ اشتراک‌گذاری شبکه‌های اجتماعی</div>
+        
+        <div class="section-divider">7️⃣ دکمه‌های کپی لینک</div>
+    </div>
+    
+    <!-- Comments Section - بیرون از main-content-wrapper -->
+    <div class="full-width-section">
+        <section class="comments-section">
+            <div class="comments-container">
+                <h2 class="slider-title">8️⃣ بخش نظرات مقاله</h2>
+                <div class="test-info">
+                    ✅ این بخش حالا در سمت راست سایدبار نیست<br>
+                    ✅ در قسمت اصلی صفحه و بیرون از wrapper قرار دارد<br>
+                    ✅ عرض کامل صفحه را دارد
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Article Slider -->
+    <div class="full-width-section">
+        <section class="article-slider">
+            <div class="slider-container">
+                <h2 class="slider-title">9️⃣ مقالات پیشنهادی (Slideshow)</h2>
+                <div class="slider-track-container">
+                    <div class="test-info">
+                        ✅ اسلایدر در انتهای صفحه قرار دارد<br>
+                        ✅ پس از بخش نظرات می‌آید<br>
+                        ✅ عرض کامل صفحه را دارد
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div class="container">
+        <div class="section-divider" style="margin-top: 3rem;">
+            <h3>خلاصه تغییرات اعمال شده:</h3>
+            <div style="text-align: right; padding: 1rem; margin-top: 1rem;">
+                <p>✅ 1. عنوان مقاله وسط چین شد</p>
+                <p>✅ 2. بخش Comments از sidebar بیرون آمد</p>
+                <p>✅ 3. بخش Comments حالا در قسمت اصلی است</p>
+                <p>✅ 4. اسلایدر در انتها قرار دارد</p>
+                <p>✅ 5. JavaScript اسلایدر به صورت defer لود می‌شود</p>
+                <p>✅ 6. ترتیب صحیح: محتوا → نظرات → اسلایدر</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
