@@ -1,4 +1,5 @@
-baseURL = "https://davoodya.ir/"
+# baseURL = "https://davoodya.ir/"
+# baseURL = "http://localhost:8080/"
 languageCode = "fa"
 title = "مقالات داوود یاحی – Davood Yahay Articles"
 defaultContentLanguage = "fa"

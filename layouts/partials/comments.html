@@ -7,7 +7,7 @@
     {{ $slug = .RelPermalink | urlize }}
 {{ end }}
 
-<section class="comments-section" id="comments" data-article-slug="{{ $slug }}">
+<section class="comments-section" id="comments" data-article-slug="{{ $slug }}" data-article-title="{{ .Title }}" data-article-url="{{ .RelPermalink }}">
     <div class="comments-container">
         
         {{/* Comments Header */}}

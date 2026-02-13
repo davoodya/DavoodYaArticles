@@ -30,6 +30,8 @@
     
     const state = {
         articleSlug: null,
+        articleTitle: null,
+        articleUrl: null,
         comments: [],
         isLoading: false,
         isSubmitting: false,
@@ -378,6 +380,8 @@
         const formData = new FormData(elements.form);
         const data = {
             article_slug: state.articleSlug,
+            article_title: state.articleTitle,
+            article_url: state.articleUrl,
             name: formData.get('name')?.trim(),
             email: formData.get('email')?.trim(),
             website: formData.get('website')?.trim(),
@@ -558,6 +562,8 @@
         
         // Get article slug
         state.articleSlug = commentsSection.getAttribute('data-article-slug');
+        state.articleTitle = commentsSection.getAttribute('data-article-title');
+        state.articleUrl = commentsSection.getAttribute('data-article-url');
         if (!state.articleSlug) {
             console.error('Article slug not found');
             return;

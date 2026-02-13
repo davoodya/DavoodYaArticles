@@ -12,8 +12,8 @@
       <h1 class="page-title">دسته‌بندی مقالات</h1>
 
       <div class="home-grid">
-        {{/* فیلتر کردن Sections - حذف taxonomy sections */}}
-        {{ $excludedSections := slice "all-articles" "difficulty" "lab_required" "type" }}
+        {{/* فیلتر کردن Sections - حذف taxonomy sections و short links */}}
+        {{ $excludedSections := slice "all-articles" "difficulty" "lab_required" "type" "s" }}
         {{ range .Site.Sections }}
         {{ if not (in $excludedSections .Section) }}
         <article class="category-card">

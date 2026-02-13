@@ -16,10 +16,11 @@
                 {{ $realArticles := where site.RegularPages "Section" "!=" "all-articles" }}
                 {{ $realArticles = where $realArticles "Draft" false }}
                 
-                {{/* محاسبه تعداد واقعی section ها (بدون all-articles) */}}
+                {{/* محاسبه تعداد واقعی section ها (بدون all-articles و short links) */}}
+                {{ $excludedSections := slice "all-articles" "s" }}
                 {{ $realSections := slice }}
                 {{ range site.Sections }}
-                    {{ if ne .Section "all-articles" }}
+                    {{ if not (in $excludedSections .Section) }}
                         {{ $realSections = $realSections | append . }}
                     {{ end }}
                 {{ end }}

@@ -50,6 +50,11 @@ function loadAdminComments(&$error) {
     flock($fp, LOCK_UN);
     fclose($fp);
 
+    $contents = trim($contents);
+    if (substr($contents, 0, 3) === "\xEF\xBB\xBF") {
+        $contents = substr($contents, 3);
+    }
+
     $data = json_decode($contents, true);
     if (!is_array($data) || !isset($data['comments']) || !is_array($data['comments'])) {
         $data = ['comments' => []];
@@ -555,7 +560,7 @@ if (!$authenticated) {
         <div class="tabs">
             <button class="tab active" data-tab="pending">در انتظار تایید</button>
             <button class="tab" data-tab="approved">تایید شده</button>
-            <button class="tab" data-tab="all">همه</button>
+            <button class="tab" data-tab="all">کل کامنت‌ها</button>
         </div>
 
         <div id="commentsContainer">
@@ -634,7 +639,11 @@ if (!$authenticated) {
                                 🌐 IP: ${comment.ip_address || 'N/A'}
                             </div>
                             <div class="comment-article">
-                                📄 مقاله: ${escapeHtml(comment.article_slug)}
+                                📄 مقاله:
+                                ${comment.article_url
+                                    ? `<a href="${escapeHtml(comment.article_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(comment.article_title || comment.article_slug)}</a>`
+                                    : `${escapeHtml(comment.article_title || comment.article_slug)}`
+                                }
                             </div>
                             ${comment.website ? `<div class="comment-meta">🔗 ${escapeHtml(comment.website)}</div>` : ''}
                         </div>

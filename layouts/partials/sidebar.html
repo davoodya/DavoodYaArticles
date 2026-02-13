@@ -26,8 +26,8 @@
                     </a>
                 </li>
                 
-                {{/* فیلتر کردن دسته‌بندی‌ها - حذف taxonomy sections */}}
-                {{ $excludedSections := slice "all-articles" "difficulty" "lab_required" "type" }}
+                {{/* فیلتر کردن دسته‌بندی‌ها - حذف taxonomy sections و short links */}}
+                {{ $excludedSections := slice "all-articles" "difficulty" "lab_required" "type" "s" }}
                 {{ $categories := slice }}
                 {{ range .Site.Sections }}
                     {{ if not (in $excludedSections .Section) }}
@@ -380,8 +380,8 @@
                             </a>
                         </li>
                         
-                        {{/* فیلتر کردن دسته‌بندی‌ها */}}
-                        {{ $excludedSections := slice "all-articles" "difficulty" "lab_required" "type" }}
+                        {{/* فیلتر کردن دسته‌بندی‌ها - حذف taxonomy sections و short links */}}
+                        {{ $excludedSections := slice "all-articles" "difficulty" "lab_required" "type" "s" }}
                         {{ $categories := slice }}
                         {{ range .Site.Sections }}
                             {{ if not (in $excludedSections .Section) }}

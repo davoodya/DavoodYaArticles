@@ -87,6 +87,11 @@ function loadComments(&$error) {
     flock($fp, LOCK_UN);
     fclose($fp);
 
+    $contents = trim($contents);
+    if (substr($contents, 0, 3) === "\xEF\xBB\xBF") {
+        $contents = substr($contents, 3);
+    }
+
     $data = json_decode($contents, true);
     if (!is_array($data) || !isset($data['comments']) || !is_array($data['comments'])) {
         $data = ['comments' => []];
@@ -120,6 +125,10 @@ function appendComment($comment, &$error) {
     }
 
     $contents = stream_get_contents($fp);
+    $contents = trim($contents);
+    if (substr($contents, 0, 3) === "\xEF\xBB\xBF") {
+        $contents = substr($contents, 3);
+    }
     $data = json_decode($contents, true);
     if (!is_array($data) || !isset($data['comments']) || !is_array($data['comments'])) {
         $data = ['comments' => []];
@@ -251,6 +260,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $articleSlug = cleanText($post['article_slug'], 200);
+    $articleTitle = cleanText($post['article_title'] ?? '', 200);
+    $articleUrl = cleanText($post['article_url'] ?? '', 300);
     $name = cleanText($post['name'], 100);
     $email = trim((string) $post['email']);
     $website = trim((string) ($post['website'] ?? ''));
@@ -271,6 +282,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!validateURL($website)) {
         respondJson(400, ['success' => false, 'error' => 'Invalid website URL']);
     }
+    if ($articleUrl !== '' && !filter_var($articleUrl, FILTER_VALIDATE_URL) && strpos($articleUrl, '/') !== 0) {
+        respondJson(400, ['success' => false, 'error' => 'Invalid article URL']);
+    }
 
     if ($commentText === '' || (function_exists('mb_strlen') ? mb_strlen($commentText, 'UTF-8') : strlen($commentText)) > 2000) {
         respondJson(400, ['success' => false, 'error' => 'Invalid comment']);
@@ -281,6 +295,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $comment = [
         'id' => generateID(),
         'article_slug' => $articleSlug,
+        'article_title' => $articleTitle,
+        'article_url' => $articleUrl,
         'name' => $name,
         'email' => $email,
         'website' => $website,
@@ -294,7 +310,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (appendComment($comment, $error)) {
         $message = $isAdmin
             ? 'دیدگاه شما با موفقیت ثبت و منتشر شد.'
-            : 'دیدگاه شما با موفقیت ثبت شد و پس از بررسی نمایش داده خواهد شد.';
+            : 'پیام شما پس از تایید مدیر در قسمت دیدگاه ها نمایش داده خواهد شد.';
 
         respondJson(200, [
             'success' => true,

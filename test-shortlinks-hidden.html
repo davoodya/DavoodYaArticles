@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تست مخفی کردن Short Links</title>
+    <style>
+        :root {
+            --bg-dark: #1a1a2e;
+            --card-bg: #16213e;
+            --text-main: #e4e4e4;
+            --text-secondary: #a0a0a0;
+            --accent-green: #00ff41;
+            --accent-red: #ff416d;
+            --accent-blue: #3aaddf;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: var(--text-main);
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+        }
+        
+        .test-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(0, 255, 65, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .test-section h2 {
+            color: var(--accent-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        
+        .before, .after {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .before h3 {
+            color: var(--accent-red);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .after h3 {
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .category-list {
+            list-style: none;
+        }
+        
+        .category-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .category-item.shortlinks {
+            border-color: var(--accent-red);
+            background: rgba(255, 65, 108, 0.1);
+        }
+        
+        .category-item.hidden {
+            opacity: 0.3;
+            text-decoration: line-through;
+        }
+        
+        .icon {
+            font-size: 1.2rem;
+        }
+        
+        .code-block {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: var(--accent-green);
+            overflow-x: auto;
+            direction: ltr;
+            text-align: left;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+        
+        .status-badge.error {
+            background: rgba(255, 65, 108, 0.2);
+            color: var(--accent-red);
+            border: 1px solid var(--accent-red);
+        }
+        
+        .status-badge.success {
+            background: rgba(0, 255, 65, 0.2);
+            color: var(--accent-green);
+            border: 1px solid var(--accent-green);
+        }
+        
+        .files-modified {
+            background: rgba(58, 173, 223, 0.1);
+            border: 1px solid var(--accent-blue);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .files-modified h3 {
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .file-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .file-item:last-child {
+            border-bottom: none;
+        }
+        
+        .checkmark {
+            color: var(--accent-green);
+            margin-right: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 تست مخفی کردن Short Links</h1>
+        <p class="subtitle">بررسی اصلاحات انجام شده برای مخفی کردن دسته‌بندی Short Links</p>
+        
+        <!-- Test 1: Home Page -->
+        <div class="test-section">
+            <h2>1️⃣ صفحه اصلی (Home Page)</h2>
+            <p>دسته‌بندی‌های نمایش داده شده در صفحه اصلی</p>
+            
+            <div class="comparison">
+                <div class="before">
+                    <h3>
+                        <span>❌</span>
+                        قبل از اصلاح
+                        <span class="status-badge error">مشکل</span>
+                    </h3>
+                    <ul class="category-list">
+                        <li class="category-item">
+                            <span class="icon">📁</span>
+                            <span>Cyber Security</span>
+                        </li>
+                        <li class="category-item">
+                            <span class="icon">📁</span>
+                            <span>Network</span>
+                        </li>
+                        <li class="category-item">
+                            <span class="icon">📁</span>
+                            <span>Linux</span>
+                        </li>
+                        <li class="category-item shortlinks">
+                            <span class="icon">🔗</span>
+                            <span>Short Links</span>
+                            <span class="status-badge error">نباید نمایش داده شود</span>
+                        </li>
+                        <li class="category-item">
+                            <span class="icon">📁</span>
+                            <span>Tools</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="after">
+                    <h3>
+                        <span>✅</span>
+                        بعد از اصلاح
+                        <span class="status-badge success">درست شد</span>
+                    </h3>
+                    <ul class="category-list">
+                        <li class="category-item">
+                            <span class="icon">📁</span>
+                            <span>Cyber Security</span>
+                        </li>
+                        <li class="category-item">
+                            <span class="icon">📁</span>
+                            <span>Network</span>
+                        </li>
+                        <li class="category-item">
+                            <span class="icon">📁</span>
+                            <span>Linux</span>
+                        </li>
+                        <li class="category-item shortlinks hidden">
+                            <span class="icon">🔗</span>
+                            <span>Short Links</span>
+                            <span class="status-badge success">مخفی شد</span>
+                        </li>
+                        <li class="category-item">
+                            <span class="icon">📁</span>
+                            <span>Tools</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="code-block">
+// File: layouts/index.html
+{{ $excludedSections := slice "all-articles" "difficulty" "lab_required" "type" "s" }}
+            </div>
+        </div>
+        
+        <!-- Test 2: Sidebar -->
+        <div class="test-section">
+            <h2>2️⃣ نوار کناری راست (Right Sidebar)</h2>
+            <p>ویجت دسته‌بندی‌ها در نوار کناری</p>
+            
+            <div class="comparison">
+                <div class="before">
+                    <h3>
+                        <span>❌</span>
+                        قبل از اصلاح
+                        <span class="status-badge error">مشکل</span>
+                    </h3>
+                    <ul class="category-list">
+                        <li class="category-item">
+                            <span class="icon">📋</span>
+                            <span>تمام مقالات</span>
+                        </li>
+                        <li class="category-item">
+                            <span class="icon">▸</span>
+                            <span>Cyber Security</span>
+                        </li>
+                        <li class="category-item">
+                            <span class="icon">▸</span>
+                            <span>Network</span>
+                        </li>
+                        <li class="category-item shortlinks">
+                            <span class="icon">🔗</span>
+                            <span>Short Links</span>
+                            <span class="status-badge error">نباید باشد</span>
+                        </li>
+                        <li class="category-item">
+                            <span class="icon">▸</span>
+                            <span>Linux</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="after">
+                    <h3>
+                        <span>✅</span>
+                        بعد از اصلاح
+                        <span class="status-badge success">درست شد</span>
+                    </h3>
+                    <ul class="category-list">
+                        <li class="category-item">
+                            <span class="icon">📋</span>
+                            <span>تمام مقالات</span>
+                        </li>
+                        <li class="category-item">
+                            <span class="icon">▸</span>
+                            <span>Cyber Security</span>
+                        </li>
+                        <li class="category-item">
+                            <span class="icon">▸</span>
+                            <span>Network</span>
+                        </li>
+                        <li class="category-item shortlinks hidden">
+                            <span class="icon">🔗</span>
+                            <span>Short Links</span>
+                            <span class="status-badge success">مخفی شد</span>
+                        </li>
+                        <li class="category-item">
+                            <span class="icon">▸</span>
+                            <span>Linux</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="code-block">
+// File: layouts/partials/sidebar.html (Line ~26)
+{{ $excludedSections := slice "all-articles" "difficulty" "lab_required" "type" "s" }}
+            </div>
+        </div>
+        
+        <!-- Test 3: Mobile Modal -->
+        <div class="test-section">
+            <h2>3️⃣ مودال دسته‌بندی‌ها (Mobile/Tablet)</h2>
+            <p>نمایش دسته‌بندی‌ها در حالت موبایل</p>
+            
+            <div class="comparison">
+                <div class="before">
+                    <h3>
+                        <span>❌</span>
+                        قبل از اصلاح
+                        <span class="status-badge error">مشکل</span>
+                    </h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                        در مودال موبایل نیز Short Links نمایش داده می‌شد
+                    </p>
+                    <ul class="category-list">
+                        <li class="category-item shortlinks">
+                            <span class="icon">🔗</span>
+                            <span>Short Links</span>
+                            <span class="status-badge error">مشکل</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="after">
+                    <h3>
+                        <span>✅</span>
+                        بعد از اصلاح
+                        <span class="status-badge success">درست شد</span>
+                    </h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                        Short Links از مودال موبایل نیز حذف شد
+                    </p>
+                    <ul class="category-list">
+                        <li class="category-item shortlinks hidden">
+                            <span class="icon">🔗</span>
+                            <span>Short Links</span>
+                            <span class="status-badge success">مخفی شد</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="code-block">
+// File: layouts/partials/sidebar.html (Line ~259)
+{{ $excludedSections := slice "all-articles" "difficulty" "lab_required" "type" "s" }}
+            </div>
+        </div>
+        
+        <!-- Test 4: All Articles Stats -->
+        <div class="test-section">
+            <h2>4️⃣ شمارش دسته‌بندی‌ها (All Articles Page)</h2>
+            <p>تعداد دسته‌بندی‌ها در صفحه تمام مقالات</p>
+            
+            <div class="comparison">
+                <div class="before">
+                    <h3>
+                        <span>❌</span>
+                        قبل از اصلاح
+                        <span class="status-badge error">اشتباه</span>
+                    </h3>
+                    <div style="background: rgba(255, 65, 108, 0.1); padding: 1rem; border-radius: 6px; border: 1px solid var(--accent-red);">
+                        <p style="font-size: 1.2rem;">
+                            📁 تعداد دسته‌بندی‌ها: <strong>8</strong>
+                        </p>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 0.9rem;">
+                            (شامل Short Links که نباید محاسبه شود)
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="after">
+                    <h3>
+                        <span>✅</span>
+                        بعد از اصلاح
+                        <span class="status-badge success">صحیح</span>
+                    </h3>
+                    <div style="background: rgba(0, 255, 65, 0.1); padding: 1rem; border-radius: 6px; border: 1px solid var(--accent-green);">
+                        <p style="font-size: 1.2rem;">
+                            📁 تعداد دسته‌بندی‌ها: <strong>7</strong>
+                        </p>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 0.9rem;">
+                            (Short Links از شمارش حذف شد)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="code-block">
+// File: layouts/_default/all-articles.html
+{{ $excludedSections := slice "all-articles" "s" }}
+{{ $realSections := slice }}
+{{ range site.Sections }}
+    {{ if not (in $excludedSections .Section) }}
+        {{ $realSections = $realSections | append . }}
+    {{ end }}
+{{ end }}
+            </div>
+        </div>
+        
+        <!-- Files Modified -->
+        <div class="files-modified">
+            <h3>📁 فایل‌های تغییر یافته</h3>
+            <div class="file-item">
+                <span class="checkmark">✅</span>
+                <strong>layouts/index.html</strong> - صفحه اصلی
+            </div>
+            <div class="file-item">
+                <span class="checkmark">✅</span>
+                <strong>layouts/partials/sidebar.html</strong> - نوار کناری (2 مکان)
+            </div>
+            <div class="file-item">
+                <span class="checkmark">✅</span>
+                <strong>layouts/_default/all-articles.html</strong> - شمارش دسته‌بندی‌ها
+            </div>
+            <div class="file-item">
+                <span class="checkmark">✅</span>
+                <strong>SHORTLINKS_CATEGORY_HIDE_FIX.md</strong> - مستندات
+            </div>
+        </div>
+        
+        <!-- Important Note -->
+        <div class="test-section" style="border-color: var(--accent-blue);">
+            <h2>⚠️ نکته مهم</h2>
+            <p style="line-height: 1.8; color: var(--text-secondary);">
+                ✅ دسته‌بندی Short Links <strong style="color: var(--accent-green);">حذف نشده</strong> است<br>
+                ✅ فقط از لیست نمایش دسته‌بندی‌ها <strong style="color: var(--accent-green);">مخفی</strong> شده است<br>
+                ✅ عملکرد short link ها <strong style="color: var(--accent-green);">بدون تغییر</strong> است<br>
+                ✅ URL های <code style="background: rgba(0,0,0,0.3); padding: 0.2rem 0.5rem; border-radius: 3px;">/s/...</code> همچنان <strong style="color: var(--accent-green);">کار می‌کنند</strong>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
