@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CyberSecurity on مقالات داوود یاحی – Davood Yahay Articles</title>
-    <link>//localhost:1313/tags/cybersecurity/</link>
+    <link>/tags/cybersecurity/</link>
     <description>Recent content in CyberSecurity on مقالات داوود یاحی – Davood Yahay Articles</description>
     <generator>Hugo</generator>
     <language>fa</language>
     <lastBuildDate>Mon, 09 Feb 2026 13:50:09 +0330</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/cybersecurity/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/cybersecurity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SANS-401-Networking and Protocols (401.1)</title>
-      <link>//localhost:1313/cyber-security/sans-401/sans-401-networking-and-protocols-4011/</link>
+      <link>/cyber-security/sans-401/sans-401-networking-and-protocols-4011/</link>
       <pubDate>Mon, 09 Feb 2026 13:50:09 +0330</pubDate>
-      <guid>//localhost:1313/cyber-security/sans-401/sans-401-networking-and-protocols-4011/</guid>
-      <description>&lt;hr&gt;&#xA;&lt;h3 id=&#34;basic--concepts&#34;&gt;Basic &amp;amp; Concepts&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;از پروتکل هایی که بیشترین استفاده در شبکه را دارند میتوان به IP , ICMP در لایه سوم و TCP, UDP در لایه چهارم اشاره کرد.&lt;/li&gt;&#xA;&lt;li&gt;اگر بخواهیم این پروتکل ها را بصورت تخصصی آنالیز کنیم و یا داده هایی که در این پروتکل های جابجا میشوند را مشاهده و بررسی کنیم باید از ابزار های خاص بررسی مانند، &lt;code&gt;tcpdump&lt;/code&gt; در ترمینال و یا &lt;code&gt;Wireshark&lt;/code&gt; که نسخه GUI دارد استفاده کنیم.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;img src=&#34;//localhost:1313/images/cyber-security/SANS-401-NetworkingandProtocols(401.1)-1.png&#34; alt=&#34;SANS-401-Networking and Protocols (401.1)-1&#34;&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;در واقع بوسیله ابزار هایی مانند &lt;code&gt;Wireshark&lt;/code&gt; یا &lt;code&gt;tcpdump&lt;/code&gt; میتوانیم به Sniffing داده های رد و بدل شده بپردازیم.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;tcpdump&#34;&gt;tcpdump&lt;/h3&gt;&#xA;&lt;h4 id=&#34;definitions--installation&#34;&gt;Definitions &amp;amp; Installation&lt;/h4&gt;&#xA;&lt;p&gt;یکی از بهترین ابزار هایی که برای شنود داده های شبکه در خط فرمان استفاده میشود &lt;code&gt;tcpdump&lt;/code&gt; نام دارد. بصورت پیشفرض این ابزار بر روی kali نصب است اما بر روی سایر نسخه ها باید بصورت دستی نصب شود:&lt;/p&gt;</description>
+      <guid>/cyber-security/sans-401/sans-401-networking-and-protocols-4011/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h3 id=&#34;basic--concepts&#34;&gt;Basic &amp;amp; Concepts&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;از پروتکل هایی که بیشترین استفاده در شبکه را دارند میتوان به IP , ICMP در لایه سوم و TCP, UDP در لایه چهارم اشاره کرد.&lt;/li&gt;&#xA;&lt;li&gt;اگر بخواهیم این پروتکل ها را بصورت تخصصی آنالیز کنیم و یا داده هایی که در این پروتکل های جابجا میشوند را مشاهده و بررسی کنیم باید از ابزار های خاص بررسی مانند، &lt;code&gt;tcpdump&lt;/code&gt; در ترمینال و یا &lt;code&gt;Wireshark&lt;/code&gt; که نسخه GUI دارد استفاده کنیم.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;img src=&#34;/images/cyber-security/SANS-401-NetworkingandProtocols(401.1)-1.png&#34; alt=&#34;SANS-401-Networking and Protocols (401.1)-1&#34;&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;در واقع بوسیله ابزار هایی مانند &lt;code&gt;Wireshark&lt;/code&gt; یا &lt;code&gt;tcpdump&lt;/code&gt; میتوانیم به Sniffing داده های رد و بدل شده بپردازیم.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;tcpdump&#34;&gt;tcpdump&lt;/h3&gt;&#xA;&lt;h4 id=&#34;definitions--installation&#34;&gt;Definitions &amp;amp; Installation&lt;/h4&gt;&#xA;&lt;p&gt;یکی از بهترین ابزار هایی که برای شنود داده های شبکه در خط فرمان استفاده میشود &lt;code&gt;tcpdump&lt;/code&gt; نام دارد. بصورت پیشفرض این ابزار بر روی kali نصب است اما بر روی سایر نسخه ها باید بصورت دستی نصب شود:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

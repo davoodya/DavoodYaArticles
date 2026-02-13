@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تست صفحه 404 با PHP Server</title>
+    <style>
+        :root {
+            --bg-dark: #1a1a2e;
+            --card-bg: #16213e;
+            --text-main: #e4e4e4;
+            --text-secondary: #a0a0a0;
+            --accent-green: #00ff41;
+            --accent-red: #ff416d;
+            --accent-blue: #3aaddf;
+            --accent-yellow: #e5c07b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: var(--text-main);
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+        }
+        
+        .test-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(0, 255, 65, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .test-section h2 {
+            color: var(--accent-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .test-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .test-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+        
+        .test-card h3 {
+            color: var(--accent-yellow);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .test-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .test-btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, var(--accent-green) 0%, rgba(0, 255, 65, 0.8) 100%);
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .test-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 255, 65, 0.5);
+        }
+        
+        .test-btn.secondary {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, rgba(58, 173, 223, 0.8) 100%);
+        }
+        
+        .code-block {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: var(--accent-green);
+            overflow-x: auto;
+            direction: ltr;
+            text-align: left;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+        }
+        
+        .status-badge.success {
+            background: rgba(0, 255, 65, 0.2);
+            color: var(--accent-green);
+            border: 1px solid var(--accent-green);
+        }
+        
+        .status-badge.error {
+            background: rgba(255, 65, 108, 0.2);
+            color: var(--accent-red);
+            border: 1px solid var(--accent-red);
+        }
+        
+        .status-badge.info {
+            background: rgba(58, 173, 223, 0.2);
+            color: var(--accent-blue);
+            border: 1px solid var(--accent-blue);
+        }
+        
+        .checklist {
+            background: rgba(58, 173, 223, 0.1);
+            border: 1px solid var(--accent-blue);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .checklist-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+        
+        .check-icon {
+            color: var(--accent-green);
+            font-size: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .test-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 تست صفحه 404 با PHP Server</h1>
+        <p class="subtitle">راهنمای تست و اجرای صحیح سرور PHP با Router</p>
+        
+        <!-- Problem & Solution -->
+        <div class="test-section">
+            <h2>❌ مشکل و ✅ راه‌حل</h2>
+            <div class="test-grid">
+                <div class="test-card">
+                    <h3>❌ مشکل قبلی</h3>
+                    <p>با اجرای دستور زیر، صفحه 404 شخصی‌سازی شده نمایش داده نمی‌شد:</p>
+                    <div class="code-block">cd public
+php -S localhost:8080 -t .</div>
+                    <span class="status-badge error">404 پیش‌فرض PHP</span>
+                </div>
+                
+                <div class="test-card">
+                    <h3>✅ راه‌حل جدید</h3>
+                    <p>با استفاده از Router Script، صفحه 404 شخصی نمایش داده می‌شود:</p>
+                    <div class="code-block">cd public
+php -S localhost:8080 router.php</div>
+                    <span class="status-badge success">404 شخصی‌سازی شده</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Setup Instructions -->
+        <div class="test-section">
+            <h2>🚀 دستورات راه‌اندازی</h2>
+            
+            <h3 style="color: var(--accent-yellow); margin: 1rem 0;">روش 1: استفاده از Batch File (ساده)</h3>
+            <div class="code-block"># در Windows
+start-server.bat
+
+# سرور روی http://localhost:1313 اجرا می‌شود</div>
+            
+            <h3 style="color: var(--accent-yellow); margin: 1rem 0;">روش 2: دستورات دستی</h3>
+            <div class="code-block"># 1. Build کردن سایت
+hugo --cleanDestinationDir
+
+# 2. رفتن به پوشه public
+cd public
+
+# 3. اجرای سرور با Router
+php -S localhost:8080 router.php
+
+# سرور روی http://localhost:8080 اجرا می‌شود</div>
+        </div>
+        
+        <!-- Test Links -->
+        <div class="test-section">
+            <h2>🧪 لینک‌های تست</h2>
+            <div class="test-grid">
+                <div class="test-card">
+                    <h3>✅ صفحه اصلی</h3>
+                    <p>تست بارگذاری صفحه اصلی</p>
+                    <a href="http://localhost:8080/" class="test-btn" target="_blank">
+                        باز کردن صفحه اصلی
+                    </a>
+                </div>
+                
+                <div class="test-card">
+                    <h3>🔍 تست 404</h3>
+                    <p>باز کردن صفحه‌ای که وجود ندارد</p>
+                    <a href="http://localhost:8080/this-page-does-not-exist" class="test-btn secondary" target="_blank">
+                        تست صفحه 404
+                    </a>
+                </div>
+                
+                <div class="test-card">
+                    <h3>📝 مقاله نمونه</h3>
+                    <p>تست بارگذاری یک مقاله</p>
+                    <a href="http://localhost:8080/network/network-basics-terminology-topology/" class="test-btn secondary" target="_blank">
+                        باز کردن مقاله
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Checklist -->
+        <div class="test-section">
+            <h2>✅ چک‌لیست تست</h2>
+            <div class="checklist">
+                <div class="checklist-item">
+                    <span class="check-icon">☐</span>
+                    <span>Build موفق: <code>hugo --cleanDestinationDir</code></span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">☐</span>
+                    <span>فایل <code>public/router.php</code> وجود دارد</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">☐</span>
+                    <span>فایل <code>public/404.html</code> وجود دارد</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">☐</span>
+                    <span>سرور با Router اجرا شد: <code>php -S localhost:8080 router.php</code></span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">☐</span>
+                    <span>صفحه اصلی بارگذاری می‌شود: <code>http://localhost:8080/</code></span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">☐</span>
+                    <span>صفحه 404 شخصی نمایش داده می‌شود: <code>http://localhost:8080/test</code></span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">☐</span>
+                    <span>CSS بارگذاری می‌شود (استایل‌ها اعمال شده)</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">☐</span>
+                    <span>JS بارگذاری می‌شود (بدون error در Console)</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">☐</span>
+                    <span>تصاویر نمایش داده می‌شوند</span>
+                </div>
+                <div class="checklist-item">
+                    <span class="check-icon">☐</span>
+                    <span>فونت‌ها بارگذاری می‌شوند</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Expected Results -->
+        <div class="test-section">
+            <h2>🎯 نتایج مورد انتظار</h2>
+            <div class="test-grid">
+                <div class="test-card">
+                    <h3>صفحه 404 باید شامل:</h3>
+                    <ul style="list-style: none; padding: 0; color: var(--text-secondary);">
+                        <li>✓ عدد بزرگ "404"</li>
+                        <li>✓ عنوان "صفحه یافت نشد!"</li>
+                        <li>✓ فیلد جستجو با نتایج زنده</li>
+                        <li>✓ دکمه‌های "صفحه مقالات" و "صفحه اصلی"</li>
+                        <li>✓ پیشنهادات</li>
+                        <li>✓ آخرین مقالات (6 مقاله)</li>
+                        <li>✓ استایل‌دهی کامل</li>
+                        <li>✓ Sidebar راست و چپ</li>
+                    </ul>
+                </div>
+                
+                <div class="test-card">
+                    <h3>نباید اتفاق بیفتد:</h3>
+                    <ul style="list-style: none; padding: 0; color: var(--accent-red);">
+                        <li>✗ صفحه سفید خالی</li>
+                        <li>✗ پیام "404 Not Found" ساده PHP</li>
+                        <li>✗ عدم بارگذاری CSS/JS</li>
+                        <li>✗ Error در Console مرورگر</li>
+                        <li>✗ تصاویر شکسته</li>
+                        <li>✗ فونت‌های بارگذاری نشده</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Troubleshooting -->
+        <div class="test-section">
+            <h2>🐛 رفع مشکلات</h2>
+            <div class="test-card">
+                <h3>مشکل: Router.php یافت نشد</h3>
+                <p style="color: var(--accent-red);">Error: No such file or directory</p>
+                <p><strong>راه‌حل:</strong></p>
+                <div class="code-block">hugo --cleanDestinationDir
+cd public
+php -S localhost:8080 router.php</div>
+            </div>
+            
+            <div class="test-card">
+                <h3>مشکل: صفحه 404 شخصی نمایش داده نمی‌شود</h3>
+                <p style="color: var(--accent-red);">هنوز صفحه 404 پیش‌فرض PHP نمایش داده می‌شود</p>
+                <p><strong>راه‌حل:</strong></p>
+                <ol style="color: var(--text-secondary); line-height: 1.8;">
+                    <li>مطمئن شوید از <code>router.php</code> استفاده می‌کنید (نه <code>-t .</code>)</li>
+                    <li>بررسی کنید که <code>public/404.html</code> وجود دارد</li>
+                    <li>Hard refresh: Ctrl+Shift+R</li>
+                    <li>سرور را restart کنید</li>
+                </ol>
+            </div>
+            
+            <div class="test-card">
+                <h3>مشکل: CSS/JS بارگذاری نمی‌شود</h3>
+                <p style="color: var(--accent-red);">صفحه بدون استایل نمایش داده می‌شود</p>
+                <p><strong>راه‌حل:</strong></p>
+                <ol style="color: var(--text-secondary); line-height: 1.8;">
+                    <li>F12 → Network Tab → بررسی فایل‌های قرمز (404)</li>
+                    <li>بررسی مسیرهای فایل در کد HTML</li>
+                    <li>Hugo را rebuild کنید</li>
+                    <li>مطمئن شوید Router MIME types صحیح را برمی‌گرداند</li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- Documentation -->
+        <div class="test-section">
+            <h2>📚 مستندات</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
+                برای اطلاعات بیشتر، فایل‌های زیر را مطالعه کنید:
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <span class="status-badge info">📄 404_PHP_SERVER_FIX.md - راهنمای کامل</span>
+                <span class="status-badge info">📄 static/router.php - کد Router</span>
+                <span class="status-badge info">📄 layouts/404.html - صفحه 404</span>
+                <span class="status-badge info">📄 start-server.bat - Batch File</span>
+            </div>
+        </div>
+        
+        <!-- Quick Commands -->
+        <div class="test-section" style="background: rgba(0, 255, 65, 0.1); border-color: var(--accent-green);">
+            <h2>⚡ دستورات سریع</h2>
+            <div class="code-block"># Build + Run با یک دستور
+start-server.bat
+
+# یا دستورات جداگانه:
+hugo --cleanDestinationDir && cd public && php -S localhost:8080 router.php
+
+# تست 404:
+curl http://localhost:8080/test-404
+
+# بررسی Router:
+ls public/router.php
+
+# بررسی 404.html:
+ls public/404.html</div>
+        </div>
+    </div>
+</body>
+</html>
