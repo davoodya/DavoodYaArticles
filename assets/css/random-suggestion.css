@@ -102,6 +102,7 @@
 /* Content */
 .suggestion-content {
   padding: 1.5rem;
+  transition: opacity 0.2s ease;
 }
 
 .suggestion-image {
@@ -331,6 +332,24 @@
   border-color: var(--accent-blue);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(58, 173, 223, 0.3);
+}
+
+.suggestion-next-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.suggestion-next-btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.suggestion-next-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.suggestion-next-btn:hover:not(:disabled) svg {
+  transform: rotate(180deg);
 }
 
 .suggestion-close-btn {

@@ -29,6 +29,77 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password'])) {
     $authenticated = isset($_SESSION['admin_authenticated']) && $_SESSION['admin_authenticated'] === true;
 }
 
+function loadAdminComments(&$error) {
+    if (!file_exists(COMMENTS_FILE)) {
+        return ['comments' => []];
+    }
+
+    $fp = fopen(COMMENTS_FILE, 'c+');
+    if (!$fp) {
+        $error = 'خطا در باز کردن فایل';
+        return null;
+    }
+
+    if (!flock($fp, LOCK_SH)) {
+        fclose($fp);
+        $error = 'خطا در قفل فایل';
+        return null;
+    }
+
+    $contents = stream_get_contents($fp);
+    flock($fp, LOCK_UN);
+    fclose($fp);
+
+    $data = json_decode($contents, true);
+    if (!is_array($data) || !isset($data['comments']) || !is_array($data['comments'])) {
+        $data = ['comments' => []];
+    }
+
+    foreach ($data['comments'] as &$comment) {
+        if (is_array($comment)) {
+            if (isset($comment['confrim']) && !isset($comment['confirm'])) {
+                $comment['confirm'] = (bool) $comment['confrim'];
+                unset($comment['confrim']);
+            }
+            if (isset($comment['confirmed']) && !isset($comment['confirm'])) {
+                $comment['confirm'] = (bool) $comment['confirmed'];
+                unset($comment['confirmed']);
+            }
+            if (isset($comment['created_at']) && !isset($comment['datetime'])) {
+                $comment['datetime'] = $comment['created_at'];
+                unset($comment['created_at']);
+            }
+            if (!isset($comment['confirm'])) {
+                $comment['confirm'] = false;
+            }
+        }
+    }
+    unset($comment);
+
+    return $data;
+}
+
+if (isset($_GET['action']) && $_GET['action'] === 'load') {
+    header('Content-Type: application/json; charset=utf-8');
+
+    if (!$authenticated) {
+        http_response_code(401);
+        echo json_encode(['success' => false, 'error' => 'Unauthorized'], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+
+    $error = '';
+    $data = loadAdminComments($error);
+    if ($data === null) {
+        http_response_code(500);
+        echo json_encode(['success' => false, 'error' => $error], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+
+    echo json_encode(['success' => true, 'comments' => $data['comments']], JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
 // Show login form if not authenticated
 if (!$authenticated) {
 ?>
@@ -502,14 +573,19 @@ if (!$authenticated) {
         // Load comments
         async function loadComments() {
             try {
-                const response = await fetch('../data/user_comments.json?' + Date.now());
+                const response = await fetch('admin.php?action=load&ts=' + Date.now(), {
+                    credentials: 'same-origin'
+                });
                 const data = await response.json();
+                if (!data.success) {
+                    throw new Error(data.error || 'Load failed');
+                }
                 allComments = data.comments || [];
                 updateStats();
                 renderComments();
             } catch (error) {
                 console.error('Error loading comments:', error);
-                document.getElementById('commentsContainer').innerHTML = 
+                document.getElementById('commentsContainer').innerHTML =
                     '<div class="empty-state">خطا در بارگذاری کامنت‌ها</div>';
             }
         }
@@ -517,8 +593,8 @@ if (!$authenticated) {
         // Update statistics
         function updateStats() {
             const total = allComments.length;
-            const pending = allComments.filter(c => !c.confirmed).length;
-            const approved = allComments.filter(c => c.confirmed).length;
+            const pending = allComments.filter(c => !c.confirm).length;
+            const approved = allComments.filter(c => c.confirm).length;
 
             document.getElementById('totalComments').textContent = total;
             document.getElementById('pendingComments').textContent = pending;
@@ -530,9 +606,9 @@ if (!$authenticated) {
             let filtered = [];
             
             if (currentTab === 'pending') {
-                filtered = allComments.filter(c => !c.confirmed);
+                filtered = allComments.filter(c => !c.confirm);
             } else if (currentTab === 'approved') {
-                filtered = allComments.filter(c => c.confirmed);
+                filtered = allComments.filter(c => c.confirm);
             } else {
                 filtered = allComments;
             }
@@ -545,7 +621,7 @@ if (!$authenticated) {
             }
 
             // Sort by date (newest first)
-            filtered.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+            filtered.sort((a, b) => new Date(b.datetime) - new Date(a.datetime));
 
             container.innerHTML = filtered.map(comment => `
                 <div class="comment-card">
@@ -554,21 +630,21 @@ if (!$authenticated) {
                             <div class="comment-author">${escapeHtml(comment.name)}</div>
                             <div class="comment-meta">
                                 📧 ${escapeHtml(comment.email)} | 
-                                🕒 ${new Date(comment.created_at).toLocaleString('fa-IR')} |
+                                🕒 ${new Date(comment.datetime).toLocaleString('fa-IR')} |
                                 🌐 IP: ${comment.ip_address || 'N/A'}
                             </div>
                             <div class="comment-article">
-                                📄 مقاله: ${comment.article_slug}
+                                📄 مقاله: ${escapeHtml(comment.article_slug)}
                             </div>
                             ${comment.website ? `<div class="comment-meta">🔗 ${escapeHtml(comment.website)}</div>` : ''}
                         </div>
-                        <span class="status-badge ${comment.confirmed ? 'status-approved' : 'status-pending'}">
-                            ${comment.confirmed ? '✓ تایید شده' : '⏳ در انتظار'}
+                        <span class="status-badge ${comment.confirm ? 'status-approved' : 'status-pending'}">
+                            ${comment.confirm ? '✓ تایید شده' : '⏳ در انتظار'}
                         </span>
                     </div>
                     <div class="comment-body">${escapeHtml(comment.comment)}</div>
                     <div class="comment-actions">
-                        ${!comment.confirmed ? 
+                        ${!comment.confirm ? 
                             `<button class="btn btn-approve" onclick="approveComment('${comment.id}')">
                                 ✓ تایید
                             </button>
@@ -593,7 +669,7 @@ if (!$authenticated) {
 
             const comment = allComments.find(c => c.id === id);
             if (comment) {
-                comment.confirmed = true;
+                comment.confirm = true;
                 await saveComments();
             }
         }
@@ -604,7 +680,7 @@ if (!$authenticated) {
 
             const comment = allComments.find(c => c.id === id);
             if (comment) {
-                comment.confirmed = false;
+                comment.confirm = false;
                 await saveComments();
             }
         }

@@ -1,3 +1,270 @@
+<?php
+/**
+ * Admin Panel for Comments Management
+ * با سیستم ورود ساده
+ */
+
+// Load configuration
+require_once __DIR__ . '/config.php';
+
+// Check if password submitted
+$authenticated = false;
+$error = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password'])) {
+    if ($_POST['password'] === ADMIN_PASSWORD) {
+        session_start();
+        $_SESSION['admin_authenticated'] = true;
+        $authenticated = true;
+    } else {
+        $error = 'رمز عبور اشتباه است';
+    }
+} elseif (isset($_GET['logout'])) {
+    session_start();
+    session_destroy();
+    header('Location: admin.php');
+    exit;
+} else {
+    session_start();
+    $authenticated = isset($_SESSION['admin_authenticated']) && $_SESSION['admin_authenticated'] === true;
+}
+
+function loadAdminComments(&$error) {
+    if (!file_exists(COMMENTS_FILE)) {
+        return ['comments' => []];
+    }
+
+    $fp = fopen(COMMENTS_FILE, 'c+');
+    if (!$fp) {
+        $error = 'خطا در باز کردن فایل';
+        return null;
+    }
+
+    if (!flock($fp, LOCK_SH)) {
+        fclose($fp);
+        $error = 'خطا در قفل فایل';
+        return null;
+    }
+
+    $contents = stream_get_contents($fp);
+    flock($fp, LOCK_UN);
+    fclose($fp);
+
+    $data = json_decode($contents, true);
+    if (!is_array($data) || !isset($data['comments']) || !is_array($data['comments'])) {
+        $data = ['comments' => []];
+    }
+
+    foreach ($data['comments'] as &$comment) {
+        if (is_array($comment)) {
+            if (isset($comment['confrim']) && !isset($comment['confirm'])) {
+                $comment['confirm'] = (bool) $comment['confrim'];
+                unset($comment['confrim']);
+            }
+            if (isset($comment['confirmed']) && !isset($comment['confirm'])) {
+                $comment['confirm'] = (bool) $comment['confirmed'];
+                unset($comment['confirmed']);
+            }
+            if (isset($comment['created_at']) && !isset($comment['datetime'])) {
+                $comment['datetime'] = $comment['created_at'];
+                unset($comment['created_at']);
+            }
+            if (!isset($comment['confirm'])) {
+                $comment['confirm'] = false;
+            }
+        }
+    }
+    unset($comment);
+
+    return $data;
+}
+
+if (isset($_GET['action']) && $_GET['action'] === 'load') {
+    header('Content-Type: application/json; charset=utf-8');
+
+    if (!$authenticated) {
+        http_response_code(401);
+        echo json_encode(['success' => false, 'error' => 'Unauthorized'], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+
+    $error = '';
+    $data = loadAdminComments($error);
+    if ($data === null) {
+        http_response_code(500);
+        echo json_encode(['success' => false, 'error' => $error], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
+
+    echo json_encode(['success' => true, 'comments' => $data['comments']], JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
+// Show login form if not authenticated
+if (!$authenticated) {
+?>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود به پنل مدیریت</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tahoma', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-container {
+            background: #0f0f0f;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 10px 40px rgba(0, 255, 65, 0.1);
+        }
+
+        .login-title {
+            color: #00ff41;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+        }
+
+        .login-subtitle {
+            text-align: center;
+            color: #808080;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            color: #b0b0b0;
+            margin-bottom: 8px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            color: #e0e0e0;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #00ff41;
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background: rgba(0, 255, 65, 0.1);
+            border: 1px solid #00ff41;
+            color: #00ff41;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .btn-submit:hover {
+            background: rgba(0, 255, 65, 0.2);
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .error-message {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #ff0000;
+            color: #ff0000;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .info-box {
+            background: rgba(58, 173, 223, 0.1);
+            border: 1px solid #3aaddf;
+            color: #3aaddf;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .info-box strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="login-title">🛡️ پنل مدیریت کامنت‌ها</h1>
+        <p class="login-subtitle">لطفاً رمز عبور را وارد کنید</p>
+        
+        <?php if ($error): ?>
+            <div class="error-message">
+                ⚠️ <?php echo htmlspecialchars($error); ?>
+            </div>
+        <?php endif; ?>
+        
+        <form method="POST" action="">
+            <div class="form-group">
+                <label class="form-label" for="password">رمز عبور:</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    class="form-input" 
+                    placeholder="رمز عبور را وارد کنید"
+                    required
+                    autofocus
+                />
+            </div>
+            
+            <button type="submit" class="btn-submit">ورود به پنل</button>
+        </form>
+
+        <div class="info-box">
+            <strong>📝 راهنما:</strong>
+            رمز عبور پیش‌فرض: <code>admin123</code><br>
+            برای تغییر رمز، فایل <code>api/config.php</code> را ویرایش کنید.
+        </div>
+    </div>
+</body>
+</html>
+<?php
+    exit;
+}
+
+// If authenticated, show admin panel
+?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -24,11 +291,35 @@
             margin: 0 auto;
         }
 
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
         h1 {
             color: #00ff41;
-            margin-bottom: 30px;
-            text-align: center;
             text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+        }
+
+        .logout-btn {
+            padding: 10px 20px;
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #ff0000;
+            color: #ff0000;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .logout-btn:hover {
+            background: rgba(255, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
         }
 
         .stats {
@@ -241,7 +532,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>🛡️ پنل مدیریت کامنت‌ها</h1>
+        <div class="header">
+            <h1>🛡️ پنل مدیریت کامنت‌ها</h1>
+            <a href="?logout" class="logout-btn">خروج از پنل</a>
+        </div>
 
         <div class="stats" id="stats">
             <div class="stat-card">
@@ -279,14 +573,19 @@
         // Load comments
         async function loadComments() {
             try {
-                const response = await fetch('../data/user_comments.json?' + Date.now());
+                const response = await fetch('admin.php?action=load&ts=' + Date.now(), {
+                    credentials: 'same-origin'
+                });
                 const data = await response.json();
+                if (!data.success) {
+                    throw new Error(data.error || 'Load failed');
+                }
                 allComments = data.comments || [];
                 updateStats();
                 renderComments();
             } catch (error) {
                 console.error('Error loading comments:', error);
-                document.getElementById('commentsContainer').innerHTML = 
+                document.getElementById('commentsContainer').innerHTML =
                     '<div class="empty-state">خطا در بارگذاری کامنت‌ها</div>';
             }
         }
@@ -294,8 +593,8 @@
         // Update statistics
         function updateStats() {
             const total = allComments.length;
-            const pending = allComments.filter(c => !c.confirmed).length;
-            const approved = allComments.filter(c => c.confirmed).length;
+            const pending = allComments.filter(c => !c.confirm).length;
+            const approved = allComments.filter(c => c.confirm).length;
 
             document.getElementById('totalComments').textContent = total;
             document.getElementById('pendingComments').textContent = pending;
@@ -307,9 +606,9 @@
             let filtered = [];
             
             if (currentTab === 'pending') {
-                filtered = allComments.filter(c => !c.confirmed);
+                filtered = allComments.filter(c => !c.confirm);
             } else if (currentTab === 'approved') {
-                filtered = allComments.filter(c => c.confirmed);
+                filtered = allComments.filter(c => c.confirm);
             } else {
                 filtered = allComments;
             }
@@ -322,7 +621,7 @@
             }
 
             // Sort by date (newest first)
-            filtered.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+            filtered.sort((a, b) => new Date(b.datetime) - new Date(a.datetime));
 
             container.innerHTML = filtered.map(comment => `
                 <div class="comment-card">
@@ -331,21 +630,21 @@
                             <div class="comment-author">${escapeHtml(comment.name)}</div>
                             <div class="comment-meta">
                                 📧 ${escapeHtml(comment.email)} | 
-                                🕒 ${new Date(comment.created_at).toLocaleString('fa-IR')} |
+                                🕒 ${new Date(comment.datetime).toLocaleString('fa-IR')} |
                                 🌐 IP: ${comment.ip_address || 'N/A'}
                             </div>
                             <div class="comment-article">
-                                📄 مقاله: ${comment.article_slug}
+                                📄 مقاله: ${escapeHtml(comment.article_slug)}
                             </div>
                             ${comment.website ? `<div class="comment-meta">🔗 ${escapeHtml(comment.website)}</div>` : ''}
                         </div>
-                        <span class="status-badge ${comment.confirmed ? 'status-approved' : 'status-pending'}">
-                            ${comment.confirmed ? '✓ تایید شده' : '⏳ در انتظار'}
+                        <span class="status-badge ${comment.confirm ? 'status-approved' : 'status-pending'}">
+                            ${comment.confirm ? '✓ تایید شده' : '⏳ در انتظار'}
                         </span>
                     </div>
                     <div class="comment-body">${escapeHtml(comment.comment)}</div>
                     <div class="comment-actions">
-                        ${!comment.confirmed ? 
+                        ${!comment.confirm ? 
                             `<button class="btn btn-approve" onclick="approveComment('${comment.id}')">
                                 ✓ تایید
                             </button>
@@ -370,7 +669,7 @@
 
             const comment = allComments.find(c => c.id === id);
             if (comment) {
-                comment.confirmed = true;
+                comment.confirm = true;
                 await saveComments();
             }
         }
@@ -381,7 +680,7 @@
 
             const comment = allComments.find(c => c.id === id);
             if (comment) {
-                comment.confirmed = false;
+                comment.confirm = false;
                 await saveComments();
             }
         }

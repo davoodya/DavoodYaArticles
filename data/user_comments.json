@@ -1,3 +1,48 @@
 {
-  "comments": []
+    "comments": [
+        {
+            "id": "comment_698ed68273a233.53720928_1770968706",
+            "article_slug": "1d04778c04f2795e8e6c3bbf618565c0",
+            "name": "davoodya",
+            "email": "davoodya40@gmail.com",
+            "website": "https:\/\/davoodya.ir",
+            "comment": "سرور پاسخ نامعتبری ارسال کرد. لطفاً دوباره تلاش کنید.",
+            "datetime": "2026-02-13 07:45:06",
+            "confirm": true,
+            "ip_address": "::1"
+        },
+        {
+            "id": "comment_698ed6ae226ea3.49702864_1770968750",
+            "article_slug": "1d04778c04f2795e8e6c3bbf618565c0",
+            "name": "امنیت سایبری",
+            "email": "davoodya42@gmail.com",
+            "website": "https:\/\/davoodya.ir",
+            "comment": "سرور پاسخ نامعتبری ارسال کرد. لطفاً دوباره تلاش کنید.",
+            "datetime": "2026-02-13 07:45:50",
+            "confirm": true,
+            "ip_address": "::1"
+        },
+        {
+            "id": "comment_698ed945d14047.95202695_1770969413",
+            "article_slug": "d4a651eb506cd91c4c77b2e971f92868",
+            "name": "davoodya",
+            "email": "ali@gmail.com",
+            "website": "https:\/\/davoodya.ir",
+            "comment": "http:\/\/localhost:1313\/linux\/60-commands-hacker-should-know-it\/",
+            "datetime": "2026-02-13 07:56:53",
+            "confirm": true,
+            "ip_address": "::1"
+        },
+        {
+            "id": "comment_698ed954aab1b7.35476559_1770969428",
+            "article_slug": "d4a651eb506cd91c4c77b2e971f92868",
+            "name": "davoodya",
+            "email": "davoodya40@gmail.com",
+            "website": "https:\/\/davoodya.ir",
+            "comment": "http:\/\/localhost:1313\/linux\/60-commands-hacker-should-know-it\/",
+            "datetime": "2026-02-13 07:57:08",
+            "confirm": true,
+            "ip_address": "::1"
+        }
+    ]
 }

@@ -3,43 +3,174 @@
  * Comments API
  */
 
-// Clean output buffer
-if (ob_get_level()) ob_end_clean();
+while (ob_get_level()) {
+    ob_end_clean();
+}
 
-// CORS Headers
+ob_start();
+
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json; charset=utf-8');
 
-// Preflight
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit;
 }
 
-// Config
 define('COMMENTS_FILE', __DIR__ . '/../../data/user_comments.json');
 define('ADMIN_EMAIL', 'davoodya40@gmail.com');
 
-function loadComments() {
-    if (!file_exists(COMMENTS_FILE)) {
-        $data = ['comments' => []];
-        file_put_contents(COMMENTS_FILE, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-        return $data;
+function respondJson($status, $payload) {
+    http_response_code($status);
+    echo json_encode($payload, JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
+function ensureCommentsFile(&$error) {
+    $dir = dirname(COMMENTS_FILE);
+    if (!is_dir($dir)) {
+        if (!mkdir($dir, 0755, true)) {
+            $error = 'Failed to create data directory';
+            return false;
+        }
     }
-    $content = file_get_contents(COMMENTS_FILE);
-    $data = json_decode($content, true);
-    return $data ?: ['comments' => []];
+
+    if (!file_exists(COMMENTS_FILE)) {
+        $empty = json_encode(['comments' => []], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        if (file_put_contents(COMMENTS_FILE, $empty) === false) {
+            $error = 'Failed to initialize comments file';
+            return false;
+        }
+    }
+
+    return true;
 }
 
-function saveComments($data) {
+function normalizeComment(&$comment) {
+    if (isset($comment['confrim']) && !isset($comment['confirm'])) {
+        $comment['confirm'] = (bool) $comment['confrim'];
+        unset($comment['confrim']);
+    }
+    if (isset($comment['confirmed']) && !isset($comment['confirm'])) {
+        $comment['confirm'] = (bool) $comment['confirmed'];
+        unset($comment['confirmed']);
+    }
+    if (isset($comment['created_at']) && !isset($comment['datetime'])) {
+        $comment['datetime'] = $comment['created_at'];
+        unset($comment['created_at']);
+    }
+    if (!isset($comment['confirm'])) {
+        $comment['confirm'] = false;
+    }
+}
+
+function loadComments(&$error) {
+    if (!ensureCommentsFile($error)) {
+        return null;
+    }
+
+    $fp = fopen(COMMENTS_FILE, 'c+');
+    if (!$fp) {
+        $error = 'Failed to open comments file';
+        return null;
+    }
+
+    if (!flock($fp, LOCK_SH)) {
+        fclose($fp);
+        $error = 'Failed to lock comments file';
+        return null;
+    }
+
+    $contents = stream_get_contents($fp);
+    flock($fp, LOCK_UN);
+    fclose($fp);
+
+    $data = json_decode($contents, true);
+    if (!is_array($data) || !isset($data['comments']) || !is_array($data['comments'])) {
+        $data = ['comments' => []];
+    }
+
+    foreach ($data['comments'] as &$comment) {
+        if (is_array($comment)) {
+            normalizeComment($comment);
+        }
+    }
+    unset($comment);
+
+    return $data;
+}
+
+function appendComment($comment, &$error) {
+    if (!ensureCommentsFile($error)) {
+        return false;
+    }
+
+    $fp = fopen(COMMENTS_FILE, 'c+');
+    if (!$fp) {
+        $error = 'Failed to open comments file';
+        return false;
+    }
+
+    if (!flock($fp, LOCK_EX)) {
+        fclose($fp);
+        $error = 'Failed to lock comments file';
+        return false;
+    }
+
+    $contents = stream_get_contents($fp);
+    $data = json_decode($contents, true);
+    if (!is_array($data) || !isset($data['comments']) || !is_array($data['comments'])) {
+        $data = ['comments' => []];
+    }
+
+    foreach ($data['comments'] as &$existing) {
+        if (is_array($existing)) {
+            normalizeComment($existing);
+        }
+    }
+    unset($existing);
+
+    $data['comments'][] = $comment;
+
     $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-    return file_put_contents(COMMENTS_FILE, $json) !== false;
+    if ($json === false) {
+        flock($fp, LOCK_UN);
+        fclose($fp);
+        $error = 'Failed to encode comments';
+        return false;
+    }
+
+    rewind($fp);
+    if (!ftruncate($fp, 0)) {
+        flock($fp, LOCK_UN);
+        fclose($fp);
+        $error = 'Failed to truncate comments file';
+        return false;
+    }
+
+    if (fwrite($fp, $json) === false) {
+        flock($fp, LOCK_UN);
+        fclose($fp);
+        $error = 'Failed to write comments file';
+        return false;
+    }
+
+    fflush($fp);
+    flock($fp, LOCK_UN);
+    fclose($fp);
+
+    return true;
 }
 
-function sanitize($input) {
-    return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8');
+function cleanText($value, $maxLen) {
+    $value = trim((string) $value);
+    $value = strip_tags($value);
+    if (function_exists('mb_substr')) {
+        return mb_substr($value, 0, $maxLen, 'UTF-8');
+    }
+    return substr($value, 0, $maxLen);
 }
 
 function validateEmail($email) {
@@ -47,93 +178,106 @@ function validateEmail($email) {
 }
 
 function validateURL($url) {
-    return empty($url) || filter_var($url, FILTER_VALIDATE_URL) !== false;
+    if ($url === '') {
+        return true;
+    }
+    return filter_var($url, FILTER_VALIDATE_URL) !== false;
 }
 
 function generateID() {
     return uniqid('comment_', true) . '_' . time();
 }
 
-// GET - Retrieve comments
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (!isset($_GET['article'])) {
-        http_response_code(400);
-        die(json_encode(['success' => false, 'error' => 'Missing article parameter']));
+        respondJson(400, ['success' => false, 'error' => 'Missing article parameter']);
     }
-    
-    $articleSlug = sanitize($_GET['article']);
-    $data = loadComments();
-    
-    $approved = array_filter($data['comments'], function($c) use ($articleSlug) {
-        return isset($c['article_slug'], $c['confirmed']) && 
-               $c['article_slug'] === $articleSlug && 
-               $c['confirmed'] === true;
+
+    $articleSlug = cleanText($_GET['article'], 200);
+    if ($articleSlug === '') {
+        respondJson(400, ['success' => false, 'error' => 'Missing article parameter']);
+    }
+
+    $error = '';
+    $data = loadComments($error);
+    if ($data === null) {
+        respondJson(500, ['success' => false, 'error' => $error]);
+    }
+
+    $approved = array_filter($data['comments'], function ($comment) use ($articleSlug) {
+        return isset($comment['article_slug'], $comment['confirm']) &&
+            $comment['article_slug'] === $articleSlug &&
+            $comment['confirm'] === true;
     });
-    
-    usort($approved, function($a, $b) {
-        return strtotime($b['created_at']) - strtotime($a['created_at']);
+
+    usort($approved, function ($a, $b) {
+        return strtotime($b['datetime']) - strtotime($a['datetime']);
     });
-    
-    $approved = array_map(function($c) {
-        unset($c['email']);
-        return $c;
+
+    $approved = array_map(function ($comment) {
+        unset($comment['email']);
+        return $comment;
     }, $approved);
-    
-    die(json_encode([
+
+    respondJson(200, [
         'success' => true,
         'comments' => array_values($approved),
-        'count' => count($approved)
-    ]));
+        'count' => count($approved),
+    ]);
 }
 
-// POST - Submit comment
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $input = file_get_contents('php://input');
-    $post = json_decode($input, true) ?: $_POST;
-    
-    $required = ['article_slug', 'name', 'email', 'comment'];
-    foreach ($required as $field) {
-        if (!isset($post[$field]) || empty(trim($post[$field]))) {
-            http_response_code(400);
-            die(json_encode(['success' => false, 'error' => "Missing $field"]));
+    $raw = file_get_contents('php://input');
+    $post = [];
+    if ($raw !== '') {
+        $post = json_decode($raw, true);
+        if ($post === null && json_last_error() !== JSON_ERROR_NONE) {
+            respondJson(400, ['success' => false, 'error' => 'Invalid JSON payload']);
         }
     }
-    
-    $articleSlug = sanitize($post['article_slug']);
-    $name = sanitize($post['name']);
-    $email = sanitize($post['email']);
-    $website = sanitize($post['website'] ?? '');
-    $commentText = sanitize($post['comment']);
-    
-    // Honeypot
+    if (!is_array($post) || empty($post)) {
+        $post = $_POST;
+    }
+
+    $required = ['article_slug', 'name', 'email', 'comment'];
+    foreach ($required as $field) {
+        if (!isset($post[$field]) || trim((string) $post[$field]) === '') {
+            respondJson(400, ['success' => false, 'error' => "Missing {$field}"]);
+        }
+    }
+
     if (!empty($post['honeypot'])) {
-        die(json_encode(['success' => true, 'message' => 'Thank you!']));
+        respondJson(200, ['success' => true, 'message' => 'Thank you!']);
     }
-    
-    // Validate
-    if (strlen($name) < 2 || strlen($name) > 100) {
-        http_response_code(400);
-        die(json_encode(['success' => false, 'error' => 'Invalid name length']));
+
+    $articleSlug = cleanText($post['article_slug'], 200);
+    $name = cleanText($post['name'], 100);
+    $email = trim((string) $post['email']);
+    $website = trim((string) ($post['website'] ?? ''));
+    $commentText = cleanText($post['comment'], 2000);
+
+    if ($articleSlug === '') {
+        respondJson(400, ['success' => false, 'error' => 'Missing article_slug']);
     }
-    
+
+    if ($name === '' || (function_exists('mb_strlen') ? mb_strlen($name, 'UTF-8') : strlen($name)) > 100) {
+        respondJson(400, ['success' => false, 'error' => 'Invalid name']);
+    }
+
     if (!validateEmail($email)) {
-        http_response_code(400);
-        die(json_encode(['success' => false, 'error' => 'Invalid email']));
+        respondJson(400, ['success' => false, 'error' => 'Invalid email']);
     }
-    
+
     if (!validateURL($website)) {
-        http_response_code(400);
-        die(json_encode(['success' => false, 'error' => 'Invalid website URL']));
+        respondJson(400, ['success' => false, 'error' => 'Invalid website URL']);
     }
-    
-    $length = mb_strlen($commentText, 'UTF-8');
-    if ($length < 10 || $length > 2000) {
-        http_response_code(400);
-        die(json_encode(['success' => false, 'error' => 'Invalid comment length']));
+
+    if ($commentText === '' || (function_exists('mb_strlen') ? mb_strlen($commentText, 'UTF-8') : strlen($commentText)) > 2000) {
+        respondJson(400, ['success' => false, 'error' => 'Invalid comment']);
     }
-    
-    $isAdmin = (strtolower($email) === strtolower(ADMIN_EMAIL));
-    
+
+    $isAdmin = ($email === ADMIN_EMAIL);
+
     $comment = [
         'id' => generateID(),
         'article_slug' => $articleSlug,
@@ -141,29 +285,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'email' => $email,
         'website' => $website,
         'comment' => $commentText,
-        'created_at' => date('Y-m-d H:i:s'),
-        'confirmed' => $isAdmin,
-        'ip_address' => $_SERVER['REMOTE_ADDR'] ?? 'unknown'
+        'datetime' => date('Y-m-d H:i:s'),
+        'confirm' => $isAdmin,
+        'ip_address' => $_SERVER['REMOTE_ADDR'] ?? 'unknown',
     ];
-    
-    $data = loadComments();
-    $data['comments'][] = $comment;
-    
-    if (saveComments($data)) {
-        $message = $isAdmin 
-            ? 'دیدگاه شما با موفقیت ثبت و منتشر شد.' 
+
+    $error = '';
+    if (appendComment($comment, $error)) {
+        $message = $isAdmin
+            ? 'دیدگاه شما با موفقیت ثبت و منتشر شد.'
             : 'دیدگاه شما با موفقیت ثبت شد و پس از بررسی نمایش داده خواهد شد.';
-        
-        die(json_encode([
+
+        respondJson(200, [
             'success' => true,
             'message' => $message,
-            'is_admin' => $isAdmin
-        ]));
+            'is_admin' => $isAdmin,
+        ]);
     }
-    
-    http_response_code(500);
-    die(json_encode(['success' => false, 'error' => 'Failed to save']));
+
+    respondJson(500, ['success' => false, 'error' => $error ?: 'Failed to save']);
 }
 
-http_response_code(405);
-die(json_encode(['success' => false, 'error' => 'Method not allowed']));
+respondJson(405, ['success' => false, 'error' => 'Method not allowed']);

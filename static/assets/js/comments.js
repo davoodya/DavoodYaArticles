@@ -256,7 +256,7 @@
         card.setAttribute('data-comment-id', comment.id);
         
         const initials = getInitials(comment.name);
-        const formattedDate = formatDate(comment.created_at);
+        const formattedDate = formatDate(comment.datetime);
         const sanitizedComment = sanitizeHTML(comment.comment);
         
         let authorHTML;
@@ -273,7 +273,7 @@
                     <div class="comment-author-row">
                         ${authorHTML}
                     </div>
-                    <time class="comment-date" datetime="${comment.created_at}">${formattedDate}</time>
+                    <time class="comment-date" datetime="${comment.datetime}">${formattedDate}</time>
                 </div>
             </div>
             <div class="comment-body">${sanitizedComment}</div>
@@ -325,8 +325,11 @@
         const errors = [];
         
         // Name validation
-        if (!formData.name || formData.name.trim().length < 2) {
-            showFieldError('commentName', 'لطفاً نام خود را وارد کنید (حداقل ۲ حرف)');
+        if (!formData.name || formData.name.trim().length === 0) {
+            showFieldError('commentName', 'لطفاً نام خود را وارد کنید');
+            errors.push('name');
+        } else if (formData.name.trim().length > 100) {
+            showFieldError('commentName', 'نام شما بیش از حد طولانی است (حداکثر ۱۰۰ کاراکتر)');
             errors.push('name');
         }
         
@@ -343,8 +346,8 @@
         }
         
         // Comment validation
-        if (!formData.comment || formData.comment.trim().length < 10) {
-            showFieldError('commentText', 'لطفاً دیدگاه خود را وارد کنید (حداقل ۱۰ حرف)');
+        if (!formData.comment || formData.comment.trim().length === 0) {
+            showFieldError('commentText', 'لطفاً دیدگاه خود را وارد کنید');
             errors.push('comment');
         }
         
@@ -476,15 +479,16 @@
         
         if (nameInput) {
             nameInput.addEventListener('blur', () => {
-                if (nameInput.value.trim().length > 0 && nameInput.value.trim().length < 2) {
-                    showFieldError('commentName', 'نام باید حداقل ۲ حرف باشد');
+                const length = nameInput.value.trim().length;
+                if (length > 100) {
+                    showFieldError('commentName', 'نام شما بیش از حد طولانی است (حداکثر ۱۰۰ کاراکتر)');
                 } else {
                     clearFieldError('commentName');
                 }
             });
             
             nameInput.addEventListener('input', () => {
-                if (nameInput.classList.contains('error') && nameInput.value.trim().length >= 2) {
+                if (nameInput.classList.contains('error') && nameInput.value.trim().length <= 100) {
                     clearFieldError('commentName');
                 }
             });
@@ -525,9 +529,7 @@
         if (commentInput) {
             commentInput.addEventListener('blur', () => {
                 const length = commentInput.value.trim().length;
-                if (length > 0 && length < 10) {
-                    showFieldError('commentText', 'دیدگاه باید حداقل ۱۰ حرف باشد');
-                } else if (length > 2000) {
+                if (length > 2000) {
                     showFieldError('commentText', 'دیدگاه خیلی طولانی است (حداکثر ۲۰۰۰ حرف)');
                 } else {
                     clearFieldError('commentText');
@@ -537,7 +539,7 @@
             commentInput.addEventListener('input', () => {
                 const length = commentInput.value.trim().length;
                 if (commentInput.classList.contains('error')) {
-                    if (length >= 10 && length <= 2000) {
+                    if (length <= 2000) {
                         clearFieldError('commentText');
                     }
                 }
